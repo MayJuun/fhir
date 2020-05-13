@@ -43,9 +43,9 @@ class _$MetadataTypesTearOff {
 
   ContactDetail contactDetail(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String name,
-      List<dynamic> telecom}) {
+      List<ContactPoint> telecom}) {
     return ContactDetail(
       id: id,
       fhirExtension: fhirExtension,
@@ -56,10 +56,10 @@ class _$MetadataTypesTearOff {
 
   Contributor contributor(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      ContributorType type,
       String name,
-      List<dynamic> contact}) {
+      List<ContactDetail> contact}) {
     return Contributor(
       id: id,
       fhirExtension: fhirExtension,
@@ -71,16 +71,16 @@ class _$MetadataTypesTearOff {
 
   DataRequirement dataRequirement(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code type,
       List<Canonical> profile,
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<String> mustSupport,
-      List<dynamic> codeFilter,
-      List<dynamic> dateFilter,
+      List<DataRequirementCodeFilter> codeFilter,
+      List<DataRequirementDateFilter> dateFilter,
       int limit,
-      List<dynamic> sort}) {
+      List<DataRequirementSort> sort}) {
     return DataRequirement(
       id: id,
       fhirExtension: fhirExtension,
@@ -98,12 +98,12 @@ class _$MetadataTypesTearOff {
 
   DataRequirementCodeFilter dataRequirementCodeFilter(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       String path,
       String searchParam,
       Canonical valueSet,
-      List<dynamic> code}) {
+      List<Coding> code}) {
     return DataRequirementCodeFilter(
       id: id,
       fhirExtension: fhirExtension,
@@ -117,8 +117,8 @@ class _$MetadataTypesTearOff {
 
   DataRequirementDateFilter dataRequirementDateFilter(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       String path,
       String searchParam,
       FhirDateTime valueDateTime,
@@ -138,12 +138,10 @@ class _$MetadataTypesTearOff {
 
   DataRequirementSort dataRequirementSort(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       String path,
-      @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          DataRequirementSortDirection direction}) {
+      DataRequirementSortDirection direction}) {
     return DataRequirementSort(
       id: id,
       fhirExtension: fhirExtension,
@@ -155,12 +153,10 @@ class _$MetadataTypesTearOff {
 
   Expression expression(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String description,
       Id name,
-      @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-          ExpressionLanguage language,
+      ExpressionLanguage language,
       String expression,
       FhirUri reference}) {
     return Expression(
@@ -176,7 +172,7 @@ class _$MetadataTypesTearOff {
 
   ParameterDefinition parameterDefinition(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code name,
       Code use,
       int min,
@@ -199,10 +195,8 @@ class _$MetadataTypesTearOff {
 
   RelatedArtifact relatedArtifact(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-          RelatedArtifactType type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      RelatedArtifactType type,
       String label,
       String display,
       Markdown citation,
@@ -224,16 +218,14 @@ class _$MetadataTypesTearOff {
 
   TriggerDefinition triggerDefinition(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-          TriggerDefinitionType type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      TriggerDefinitionType type,
       String name,
       Timing timingTiming,
       Reference timingReference,
       Date timingDate,
       FhirDateTime timingDateTime,
-      List<dynamic> data,
+      List<DataRequirement> data,
       Expression condition}) {
     return TriggerDefinition(
       id: id,
@@ -251,7 +243,7 @@ class _$MetadataTypesTearOff {
 
   UsageContext usageContext(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Coding code,
       CodeableConcept valueCodeableConcept,
       Quantity valueQuantity,
@@ -275,52 +267,50 @@ const $MetadataTypes = _$MetadataTypesTearOff();
 mixin _$MetadataTypes {
   String get id;
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -329,27 +319,23 @@ mixin _$MetadataTypes {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -360,10 +346,8 @@ mixin _$MetadataTypes {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -373,21 +357,19 @@ mixin _$MetadataTypes {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -398,41 +380,39 @@ mixin _$MetadataTypes {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -440,25 +420,21 @@ mixin _$MetadataTypes {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -468,10 +444,8 @@ mixin _$MetadataTypes {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -480,20 +454,18 @@ mixin _$MetadataTypes {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -539,7 +511,8 @@ abstract class $MetadataTypesCopyWith<$Res> {
           MetadataTypes value, $Res Function(MetadataTypes) then) =
       _$MetadataTypesCopyWithImpl<$Res>;
   $Res call(
-      {String id, @JsonKey(name: 'extension') List<dynamic> fhirExtension});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension});
 }
 
 class _$MetadataTypesCopyWithImpl<$Res>
@@ -559,7 +532,7 @@ class _$MetadataTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
     ));
   }
 }
@@ -572,9 +545,9 @@ abstract class $ContactDetailCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String name,
-      List<dynamic> telecom});
+      List<ContactPoint> telecom});
 }
 
 class _$ContactDetailCopyWithImpl<$Res>
@@ -598,9 +571,10 @@ class _$ContactDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 }
@@ -620,11 +594,11 @@ class _$ContactDetail implements ContactDetail {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final String name;
   @override
-  final List<dynamic> telecom;
+  final List<ContactPoint> telecom;
 
   @override
   String toString() {
@@ -664,45 +638,43 @@ class _$ContactDetail implements ContactDetail {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -711,27 +683,23 @@ class _$ContactDetail implements ContactDetail {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -742,10 +710,8 @@ class _$ContactDetail implements ContactDetail {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -755,21 +721,19 @@ class _$ContactDetail implements ContactDetail {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -795,41 +759,39 @@ class _$ContactDetail implements ContactDetail {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -837,25 +799,21 @@ class _$ContactDetail implements ContactDetail {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -865,10 +823,8 @@ class _$ContactDetail implements ContactDetail {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -877,20 +833,18 @@ class _$ContactDetail implements ContactDetail {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -966,9 +920,9 @@ class _$ContactDetail implements ContactDetail {
 abstract class ContactDetail implements MetadataTypes {
   const factory ContactDetail(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String name,
-      List<dynamic> telecom}) = _$ContactDetail;
+      List<ContactPoint> telecom}) = _$ContactDetail;
 
   factory ContactDetail.fromJson(Map<String, dynamic> json) =
       _$ContactDetail.fromJson;
@@ -977,9 +931,9 @@ abstract class ContactDetail implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   String get name;
-  List<dynamic> get telecom;
+  List<ContactPoint> get telecom;
   @override
   $ContactDetailCopyWith<ContactDetail> get copyWith;
 }
@@ -992,10 +946,10 @@ abstract class $ContributorCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      ContributorType type,
       String name,
-      List<dynamic> contact});
+      List<ContactDetail> contact});
 }
 
 class _$ContributorCopyWithImpl<$Res> extends _$MetadataTypesCopyWithImpl<$Res>
@@ -1019,10 +973,11 @@ class _$ContributorCopyWithImpl<$Res> extends _$MetadataTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as ContributorType,
       name: name == freezed ? _value.name : name as String,
-      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>,
     ));
   }
 }
@@ -1032,7 +987,7 @@ class _$Contributor implements Contributor {
   const _$Contributor(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
-      @JsonKey(unknownEnumValue: ContributorType.unknown) this.type,
+      this.type,
       this.name,
       this.contact});
 
@@ -1043,14 +998,13 @@ class _$Contributor implements Contributor {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  @JsonKey(unknownEnumValue: ContributorType.unknown)
   final ContributorType type;
   @override
   final String name;
   @override
-  final List<dynamic> contact;
+  final List<ContactDetail> contact;
 
   @override
   String toString() {
@@ -1093,45 +1047,43 @@ class _$Contributor implements Contributor {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -1140,27 +1092,23 @@ class _$Contributor implements Contributor {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -1171,10 +1119,8 @@ class _$Contributor implements Contributor {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -1184,21 +1130,19 @@ class _$Contributor implements Contributor {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -1224,41 +1168,39 @@ class _$Contributor implements Contributor {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -1266,25 +1208,21 @@ class _$Contributor implements Contributor {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -1294,10 +1232,8 @@ class _$Contributor implements Contributor {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -1306,20 +1242,18 @@ class _$Contributor implements Contributor {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -1395,10 +1329,10 @@ class _$Contributor implements Contributor {
 abstract class Contributor implements MetadataTypes {
   const factory Contributor(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      ContributorType type,
       String name,
-      List<dynamic> contact}) = _$Contributor;
+      List<ContactDetail> contact}) = _$Contributor;
 
   factory Contributor.fromJson(Map<String, dynamic> json) =
       _$Contributor.fromJson;
@@ -1407,11 +1341,10 @@ abstract class Contributor implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  @JsonKey(unknownEnumValue: ContributorType.unknown)
+  List<FhirExtension> get fhirExtension;
   ContributorType get type;
   String get name;
-  List<dynamic> get contact;
+  List<ContactDetail> get contact;
   @override
   $ContributorCopyWith<Contributor> get copyWith;
 }
@@ -1424,16 +1357,16 @@ abstract class $DataRequirementCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code type,
       List<Canonical> profile,
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<String> mustSupport,
-      List<dynamic> codeFilter,
-      List<dynamic> dateFilter,
+      List<DataRequirementCodeFilter> codeFilter,
+      List<DataRequirementDateFilter> dateFilter,
       int limit,
-      List<dynamic> sort});
+      List<DataRequirementSort> sort});
 }
 
 class _$DataRequirementCopyWithImpl<$Res>
@@ -1464,7 +1397,7 @@ class _$DataRequirementCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as Code,
       profile: profile == freezed ? _value.profile : profile as List<Canonical>,
       subjectCodeableConcept: subjectCodeableConcept == freezed
@@ -1478,12 +1411,12 @@ class _$DataRequirementCopyWithImpl<$Res>
           : mustSupport as List<String>,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
-          : codeFilter as List<dynamic>,
+          : codeFilter as List<DataRequirementCodeFilter>,
       dateFilter: dateFilter == freezed
           ? _value.dateFilter
-          : dateFilter as List<dynamic>,
+          : dateFilter as List<DataRequirementDateFilter>,
       limit: limit == freezed ? _value.limit : limit as int,
-      sort: sort == freezed ? _value.sort : sort as List<dynamic>,
+      sort: sort == freezed ? _value.sort : sort as List<DataRequirementSort>,
     ));
   }
 }
@@ -1510,7 +1443,7 @@ class _$DataRequirement implements DataRequirement {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final Code type;
   @override
@@ -1522,13 +1455,13 @@ class _$DataRequirement implements DataRequirement {
   @override
   final List<String> mustSupport;
   @override
-  final List<dynamic> codeFilter;
+  final List<DataRequirementCodeFilter> codeFilter;
   @override
-  final List<dynamic> dateFilter;
+  final List<DataRequirementDateFilter> dateFilter;
   @override
   final int limit;
   @override
-  final List<dynamic> sort;
+  final List<DataRequirementSort> sort;
 
   @override
   String toString() {
@@ -1595,45 +1528,43 @@ class _$DataRequirement implements DataRequirement {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -1642,27 +1573,23 @@ class _$DataRequirement implements DataRequirement {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -1673,10 +1600,8 @@ class _$DataRequirement implements DataRequirement {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -1686,21 +1611,19 @@ class _$DataRequirement implements DataRequirement {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -1737,41 +1660,39 @@ class _$DataRequirement implements DataRequirement {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -1779,25 +1700,21 @@ class _$DataRequirement implements DataRequirement {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -1807,10 +1724,8 @@ class _$DataRequirement implements DataRequirement {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -1819,20 +1734,18 @@ class _$DataRequirement implements DataRequirement {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -1919,16 +1832,16 @@ class _$DataRequirement implements DataRequirement {
 abstract class DataRequirement implements MetadataTypes {
   const factory DataRequirement(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code type,
       List<Canonical> profile,
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<String> mustSupport,
-      List<dynamic> codeFilter,
-      List<dynamic> dateFilter,
+      List<DataRequirementCodeFilter> codeFilter,
+      List<DataRequirementDateFilter> dateFilter,
       int limit,
-      List<dynamic> sort}) = _$DataRequirement;
+      List<DataRequirementSort> sort}) = _$DataRequirement;
 
   factory DataRequirement.fromJson(Map<String, dynamic> json) =
       _$DataRequirement.fromJson;
@@ -1937,16 +1850,16 @@ abstract class DataRequirement implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   Code get type;
   List<Canonical> get profile;
   CodeableConcept get subjectCodeableConcept;
   Reference get subjectReference;
   List<String> get mustSupport;
-  List<dynamic> get codeFilter;
-  List<dynamic> get dateFilter;
+  List<DataRequirementCodeFilter> get codeFilter;
+  List<DataRequirementDateFilter> get dateFilter;
   int get limit;
-  List<dynamic> get sort;
+  List<DataRequirementSort> get sort;
   @override
   $DataRequirementCopyWith<DataRequirement> get copyWith;
 }
@@ -1959,12 +1872,12 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       String path,
       String searchParam,
       Canonical valueSet,
-      List<dynamic> code});
+      List<Coding> code});
 }
 
 class _$DataRequirementCodeFilterCopyWithImpl<$Res>
@@ -1992,15 +1905,15 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       searchParam:
           searchParam == freezed ? _value.searchParam : searchParam as String,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
-      code: code == freezed ? _value.code : code as List<dynamic>,
+      code: code == freezed ? _value.code : code as List<Coding>,
     ));
   }
 }
@@ -2023,9 +1936,9 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final String path;
   @override
@@ -2033,7 +1946,7 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
   @override
   final Canonical valueSet;
   @override
-  final List<dynamic> code;
+  final List<Coding> code;
 
   @override
   String toString() {
@@ -2086,45 +1999,43 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -2133,27 +2044,23 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -2164,10 +2071,8 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -2177,21 +2082,19 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -2218,41 +2121,39 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -2260,25 +2161,21 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -2288,10 +2185,8 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -2300,20 +2195,18 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -2391,12 +2284,12 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
 abstract class DataRequirementCodeFilter implements MetadataTypes {
   const factory DataRequirementCodeFilter(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       String path,
       String searchParam,
       Canonical valueSet,
-      List<dynamic> code}) = _$DataRequirementCodeFilter;
+      List<Coding> code}) = _$DataRequirementCodeFilter;
 
   factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
       _$DataRequirementCodeFilter.fromJson;
@@ -2405,12 +2298,12 @@ abstract class DataRequirementCodeFilter implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get fhirExtension;
+  List<FhirExtension> get modifierExtension;
   String get path;
   String get searchParam;
   Canonical get valueSet;
-  List<dynamic> get code;
+  List<Coding> get code;
   @override
   $DataRequirementCodeFilterCopyWith<DataRequirementCodeFilter> get copyWith;
 }
@@ -2423,8 +2316,8 @@ abstract class $DataRequirementDateFilterCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       String path,
       String searchParam,
       FhirDateTime valueDateTime,
@@ -2458,10 +2351,10 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       searchParam:
           searchParam == freezed ? _value.searchParam : searchParam as String,
@@ -2496,9 +2389,9 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final String path;
   @override
@@ -2566,45 +2459,43 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -2613,27 +2504,23 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -2644,10 +2531,8 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -2657,21 +2542,19 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -2698,41 +2581,39 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -2740,25 +2621,21 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -2768,10 +2645,8 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -2780,20 +2655,18 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -2871,8 +2744,8 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
 abstract class DataRequirementDateFilter implements MetadataTypes {
   const factory DataRequirementDateFilter(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       String path,
       String searchParam,
       FhirDateTime valueDateTime,
@@ -2886,8 +2759,8 @@ abstract class DataRequirementDateFilter implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get fhirExtension;
+  List<FhirExtension> get modifierExtension;
   String get path;
   String get searchParam;
   FhirDateTime get valueDateTime;
@@ -2905,12 +2778,10 @@ abstract class $DataRequirementSortCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       String path,
-      @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          DataRequirementSortDirection direction});
+      DataRequirementSortDirection direction});
 }
 
 class _$DataRequirementSortCopyWithImpl<$Res>
@@ -2935,10 +2806,10 @@ class _$DataRequirementSortCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       direction: direction == freezed
           ? _value.direction
@@ -2951,12 +2822,10 @@ class _$DataRequirementSortCopyWithImpl<$Res>
 class _$DataRequirementSort implements DataRequirementSort {
   const _$DataRequirementSort(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.fhirExtension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.path,
-      @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          this.direction});
+      this.direction});
 
   factory _$DataRequirementSort.fromJson(Map<String, dynamic> json) =>
       _$_$DataRequirementSortFromJson(json);
@@ -2965,13 +2834,12 @@ class _$DataRequirementSort implements DataRequirementSort {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final String path;
   @override
-  @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
   final DataRequirementSortDirection direction;
 
   @override
@@ -3017,45 +2885,43 @@ class _$DataRequirementSort implements DataRequirementSort {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -3064,27 +2930,23 @@ class _$DataRequirementSort implements DataRequirementSort {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -3095,10 +2957,8 @@ class _$DataRequirementSort implements DataRequirementSort {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -3108,21 +2968,19 @@ class _$DataRequirementSort implements DataRequirementSort {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -3149,41 +3007,39 @@ class _$DataRequirementSort implements DataRequirementSort {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -3191,25 +3047,21 @@ class _$DataRequirementSort implements DataRequirementSort {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -3219,10 +3071,8 @@ class _$DataRequirementSort implements DataRequirementSort {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -3231,20 +3081,18 @@ class _$DataRequirementSort implements DataRequirementSort {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -3322,12 +3170,10 @@ class _$DataRequirementSort implements DataRequirementSort {
 abstract class DataRequirementSort implements MetadataTypes {
   const factory DataRequirementSort(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       String path,
-      @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          DataRequirementSortDirection direction}) = _$DataRequirementSort;
+      DataRequirementSortDirection direction}) = _$DataRequirementSort;
 
   factory DataRequirementSort.fromJson(Map<String, dynamic> json) =
       _$DataRequirementSort.fromJson;
@@ -3336,10 +3182,9 @@ abstract class DataRequirementSort implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get fhirExtension;
+  List<FhirExtension> get modifierExtension;
   String get path;
-  @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
   DataRequirementSortDirection get direction;
   @override
   $DataRequirementSortCopyWith<DataRequirementSort> get copyWith;
@@ -3353,12 +3198,10 @@ abstract class $ExpressionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String description,
       Id name,
-      @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-          ExpressionLanguage language,
+      ExpressionLanguage language,
       String expression,
       FhirUri reference});
 }
@@ -3385,7 +3228,7 @@ class _$ExpressionCopyWithImpl<$Res> extends _$MetadataTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       description:
           description == freezed ? _value.description : description as String,
       name: name == freezed ? _value.name : name as Id,
@@ -3406,7 +3249,7 @@ class _$Expression implements Expression {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.description,
       this.name,
-      @JsonKey(unknownEnumValue: ExpressionLanguage.unknown) this.language,
+      this.language,
       this.expression,
       this.reference});
 
@@ -3417,13 +3260,12 @@ class _$Expression implements Expression {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final String description;
   @override
   final Id name;
   @override
-  @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
   final ExpressionLanguage language;
   @override
   final String expression;
@@ -3481,45 +3323,43 @@ class _$Expression implements Expression {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -3528,27 +3368,23 @@ class _$Expression implements Expression {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -3559,10 +3395,8 @@ class _$Expression implements Expression {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -3572,21 +3406,19 @@ class _$Expression implements Expression {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -3613,41 +3445,39 @@ class _$Expression implements Expression {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -3655,25 +3485,21 @@ class _$Expression implements Expression {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -3683,10 +3509,8 @@ class _$Expression implements Expression {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -3695,20 +3519,18 @@ class _$Expression implements Expression {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -3785,12 +3607,10 @@ class _$Expression implements Expression {
 abstract class Expression implements MetadataTypes {
   const factory Expression(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String description,
       Id name,
-      @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-          ExpressionLanguage language,
+      ExpressionLanguage language,
       String expression,
       FhirUri reference}) = _$Expression;
 
@@ -3801,10 +3621,9 @@ abstract class Expression implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   String get description;
   Id get name;
-  @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
   ExpressionLanguage get language;
   String get expression;
   FhirUri get reference;
@@ -3820,7 +3639,7 @@ abstract class $ParameterDefinitionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code name,
       Code use,
       int min,
@@ -3856,7 +3675,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as Code,
       use: use == freezed ? _value.use : use as Code,
       min: min == freezed ? _value.min : min as int,
@@ -3890,7 +3709,7 @@ class _$ParameterDefinition implements ParameterDefinition {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final Code name;
   @override
@@ -3960,45 +3779,43 @@ class _$ParameterDefinition implements ParameterDefinition {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -4007,27 +3824,23 @@ class _$ParameterDefinition implements ParameterDefinition {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -4038,10 +3851,8 @@ class _$ParameterDefinition implements ParameterDefinition {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -4051,21 +3862,19 @@ class _$ParameterDefinition implements ParameterDefinition {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -4092,41 +3901,39 @@ class _$ParameterDefinition implements ParameterDefinition {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -4134,25 +3941,21 @@ class _$ParameterDefinition implements ParameterDefinition {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -4162,10 +3965,8 @@ class _$ParameterDefinition implements ParameterDefinition {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -4174,20 +3975,18 @@ class _$ParameterDefinition implements ParameterDefinition {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -4265,7 +4064,7 @@ class _$ParameterDefinition implements ParameterDefinition {
 abstract class ParameterDefinition implements MetadataTypes {
   const factory ParameterDefinition(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code name,
       Code use,
       int min,
@@ -4281,7 +4080,7 @@ abstract class ParameterDefinition implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   Code get name;
   Code get use;
   int get min;
@@ -4301,10 +4100,8 @@ abstract class $RelatedArtifactCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-          RelatedArtifactType type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      RelatedArtifactType type,
       String label,
       String display,
       Markdown citation,
@@ -4339,7 +4136,7 @@ class _$RelatedArtifactCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as RelatedArtifactType,
       label: label == freezed ? _value.label : label as String,
       display: display == freezed ? _value.display : display as String,
@@ -4356,7 +4153,7 @@ class _$RelatedArtifact implements RelatedArtifact {
   const _$RelatedArtifact(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
-      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown) this.type,
+      this.type,
       this.label,
       this.display,
       this.citation,
@@ -4371,9 +4168,8 @@ class _$RelatedArtifact implements RelatedArtifact {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
   final RelatedArtifactType type;
   @override
   final String label;
@@ -4445,45 +4241,43 @@ class _$RelatedArtifact implements RelatedArtifact {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -4492,27 +4286,23 @@ class _$RelatedArtifact implements RelatedArtifact {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -4523,10 +4313,8 @@ class _$RelatedArtifact implements RelatedArtifact {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -4536,21 +4324,19 @@ class _$RelatedArtifact implements RelatedArtifact {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -4577,41 +4363,39 @@ class _$RelatedArtifact implements RelatedArtifact {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -4619,25 +4403,21 @@ class _$RelatedArtifact implements RelatedArtifact {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -4647,10 +4427,8 @@ class _$RelatedArtifact implements RelatedArtifact {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -4659,20 +4437,18 @@ class _$RelatedArtifact implements RelatedArtifact {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -4749,10 +4525,8 @@ class _$RelatedArtifact implements RelatedArtifact {
 abstract class RelatedArtifact implements MetadataTypes {
   const factory RelatedArtifact(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-          RelatedArtifactType type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      RelatedArtifactType type,
       String label,
       String display,
       Markdown citation,
@@ -4767,8 +4541,7 @@ abstract class RelatedArtifact implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
+  List<FhirExtension> get fhirExtension;
   RelatedArtifactType get type;
   String get label;
   String get display;
@@ -4788,16 +4561,14 @@ abstract class $TriggerDefinitionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-          TriggerDefinitionType type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      TriggerDefinitionType type,
       String name,
       Timing timingTiming,
       Reference timingReference,
       Date timingDate,
       FhirDateTime timingDateTime,
-      List<dynamic> data,
+      List<DataRequirement> data,
       Expression condition});
 }
 
@@ -4828,7 +4599,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as TriggerDefinitionType,
       name: name == freezed ? _value.name : name as String,
       timingTiming: timingTiming == freezed
@@ -4842,7 +4613,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime,
-      data: data == freezed ? _value.data : data as List<dynamic>,
+      data: data == freezed ? _value.data : data as List<DataRequirement>,
       condition:
           condition == freezed ? _value.condition : condition as Expression,
     ));
@@ -4854,7 +4625,7 @@ class _$TriggerDefinition implements TriggerDefinition {
   const _$TriggerDefinition(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
-      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown) this.type,
+      this.type,
       this.name,
       this.timingTiming,
       this.timingReference,
@@ -4870,9 +4641,8 @@ class _$TriggerDefinition implements TriggerDefinition {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
   final TriggerDefinitionType type;
   @override
   final String name;
@@ -4885,7 +4655,7 @@ class _$TriggerDefinition implements TriggerDefinition {
   @override
   final FhirDateTime timingDateTime;
   @override
-  final List<dynamic> data;
+  final List<DataRequirement> data;
   @override
   final Expression condition;
 
@@ -4950,45 +4720,43 @@ class _$TriggerDefinition implements TriggerDefinition {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -4997,27 +4765,23 @@ class _$TriggerDefinition implements TriggerDefinition {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -5028,10 +4792,8 @@ class _$TriggerDefinition implements TriggerDefinition {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -5041,21 +4803,19 @@ class _$TriggerDefinition implements TriggerDefinition {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -5082,41 +4842,39 @@ class _$TriggerDefinition implements TriggerDefinition {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -5124,25 +4882,21 @@ class _$TriggerDefinition implements TriggerDefinition {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -5152,10 +4906,8 @@ class _$TriggerDefinition implements TriggerDefinition {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -5164,20 +4916,18 @@ class _$TriggerDefinition implements TriggerDefinition {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -5255,16 +5005,14 @@ class _$TriggerDefinition implements TriggerDefinition {
 abstract class TriggerDefinition implements MetadataTypes {
   const factory TriggerDefinition(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-          TriggerDefinitionType type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      TriggerDefinitionType type,
       String name,
       Timing timingTiming,
       Reference timingReference,
       Date timingDate,
       FhirDateTime timingDateTime,
-      List<dynamic> data,
+      List<DataRequirement> data,
       Expression condition}) = _$TriggerDefinition;
 
   factory TriggerDefinition.fromJson(Map<String, dynamic> json) =
@@ -5274,15 +5022,14 @@ abstract class TriggerDefinition implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
+  List<FhirExtension> get fhirExtension;
   TriggerDefinitionType get type;
   String get name;
   Timing get timingTiming;
   Reference get timingReference;
   Date get timingDate;
   FhirDateTime get timingDateTime;
-  List<dynamic> get data;
+  List<DataRequirement> get data;
   Expression get condition;
   @override
   $TriggerDefinitionCopyWith<TriggerDefinition> get copyWith;
@@ -5296,7 +5043,7 @@ abstract class $UsageContextCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Coding code,
       CodeableConcept valueCodeableConcept,
       Quantity valueQuantity,
@@ -5327,7 +5074,7 @@ class _$UsageContextCopyWithImpl<$Res> extends _$MetadataTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Coding,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
@@ -5362,7 +5109,7 @@ class _$UsageContext implements UsageContext {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final Coding code;
   @override
@@ -5425,45 +5172,43 @@ class _$UsageContext implements UsageContext {
     @required
         Result contactDetail(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContributorType.unknown)
-                ContributorType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContributorType type,
             String name,
-            List<dynamic> contact),
+            List<ContactDetail> contact),
     @required
         Result dataRequirement(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code type,
             List<Canonical> profile,
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<String> mustSupport,
-            List<dynamic> codeFilter,
-            List<dynamic> dateFilter,
+            List<DataRequirementCodeFilter> codeFilter,
+            List<DataRequirementDateFilter> dateFilter,
             int limit,
-            List<dynamic> sort),
+            List<DataRequirementSort> sort),
     @required
         Result dataRequirementCodeFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
             String searchParam,
             FhirDateTime valueDateTime,
@@ -5472,27 +5217,23 @@ class _$UsageContext implements UsageContext {
     @required
         Result dataRequirementSort(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             String path,
-            @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-                DataRequirementSortDirection direction),
+            DataRequirementSortDirection direction),
     @required
         Result expression(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             String description,
             Id name,
-            @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-                ExpressionLanguage language,
+            ExpressionLanguage language,
             String expression,
             FhirUri reference),
     @required
         Result parameterDefinition(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code name,
             Code use,
             int min,
@@ -5503,10 +5244,8 @@ class _$UsageContext implements UsageContext {
     @required
         Result relatedArtifact(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-                RelatedArtifactType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            RelatedArtifactType type,
             String label,
             String display,
             Markdown citation,
@@ -5516,21 +5255,19 @@ class _$UsageContext implements UsageContext {
     @required
         Result triggerDefinition(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-                TriggerDefinitionType type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            TriggerDefinitionType type,
             String name,
             Timing timingTiming,
             Reference timingReference,
             Date timingDate,
             FhirDateTime timingDateTime,
-            List<dynamic> data,
+            List<DataRequirement> data,
             Expression condition),
     @required
         Result usageContext(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Coding code,
             CodeableConcept valueCodeableConcept,
             Quantity valueQuantity,
@@ -5557,41 +5294,39 @@ class _$UsageContext implements UsageContext {
   Result maybeWhen<Result extends Object>({
     Result contactDetail(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContributorType.unknown)
-            ContributorType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContributorType type,
         String name,
-        List<dynamic> contact),
+        List<ContactDetail> contact),
     Result dataRequirement(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code type,
         List<Canonical> profile,
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<String> mustSupport,
-        List<dynamic> codeFilter,
-        List<dynamic> dateFilter,
+        List<DataRequirementCodeFilter> codeFilter,
+        List<DataRequirementDateFilter> dateFilter,
         int limit,
-        List<dynamic> sort),
+        List<DataRequirementSort> sort),
     Result dataRequirementCodeFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
         String searchParam,
         FhirDateTime valueDateTime,
@@ -5599,25 +5334,21 @@ class _$UsageContext implements UsageContext {
         Duration valueDuration),
     Result dataRequirementSort(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         String path,
-        @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-            DataRequirementSortDirection direction),
+        DataRequirementSortDirection direction),
     Result expression(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         String description,
         Id name,
-        @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-            ExpressionLanguage language,
+        ExpressionLanguage language,
         String expression,
         FhirUri reference),
     Result parameterDefinition(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code name,
         Code use,
         int min,
@@ -5627,10 +5358,8 @@ class _$UsageContext implements UsageContext {
         Canonical profile),
     Result relatedArtifact(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-            RelatedArtifactType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        RelatedArtifactType type,
         String label,
         String display,
         Markdown citation,
@@ -5639,20 +5368,18 @@ class _$UsageContext implements UsageContext {
         Canonical resource),
     Result triggerDefinition(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-            TriggerDefinitionType type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        TriggerDefinitionType type,
         String name,
         Timing timingTiming,
         Reference timingReference,
         Date timingDate,
         FhirDateTime timingDateTime,
-        List<dynamic> data,
+        List<DataRequirement> data,
         Expression condition),
     Result usageContext(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Coding code,
         CodeableConcept valueCodeableConcept,
         Quantity valueQuantity,
@@ -5729,7 +5456,7 @@ class _$UsageContext implements UsageContext {
 abstract class UsageContext implements MetadataTypes {
   const factory UsageContext(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Coding code,
       CodeableConcept valueCodeableConcept,
       Quantity valueQuantity,
@@ -5743,7 +5470,7 @@ abstract class UsageContext implements MetadataTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   Coding get code;
   CodeableConcept get valueCodeableConcept;
   Quantity get valueQuantity;

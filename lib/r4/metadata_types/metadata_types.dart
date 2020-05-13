@@ -18,12 +18,11 @@ abstract class MetadataTypes with _$MetadataTypes {
   const factory MetadataTypes.contributor({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
+    ContributorType type,
     String name,
     List<ContactDetail> contact,
   }) = Contributor;
 
-  // ********* Data Requirement *********
   const factory MetadataTypes.dataRequirement({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
@@ -64,18 +63,15 @@ abstract class MetadataTypes with _$MetadataTypes {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String path,
-    @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-        DataRequirementSortDirection direction,
+    DataRequirementSortDirection direction,
   }) = DataRequirementSort;
-  // ********* /Data Requirement *********
 
   const factory MetadataTypes.expression({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     String description,
     Id name,
-    @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-        ExpressionLanguage language,
+    ExpressionLanguage language,
     String expression,
     FhirUri reference,
   }) = Expression;
@@ -95,8 +91,7 @@ abstract class MetadataTypes with _$MetadataTypes {
   const factory MetadataTypes.relatedArtifact({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-        RelatedArtifactType type,
+    RelatedArtifactType type,
     String label,
     String display,
     Markdown citation,
@@ -108,8 +103,7 @@ abstract class MetadataTypes with _$MetadataTypes {
   const factory MetadataTypes.triggerDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-        TriggerDefinitionType type,
+    TriggerDefinitionType type,
     String name,
     Timing timingTiming,
     Reference timingReference,

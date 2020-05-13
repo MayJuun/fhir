@@ -23,6 +23,7 @@ abstract class DraftTypes with _$DraftTypes {
     Period dateRange,
     FhirDateTime restoreDate,
   }) = MarketingStatus;
+
   const factory DraftTypes.population({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
@@ -33,6 +34,7 @@ abstract class DraftTypes with _$DraftTypes {
     CodeableConcept race,
     CodeableConcept physiologicalCondition,
   }) = Population;
+
   const factory DraftTypes.prodCharacteristic({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
@@ -49,6 +51,7 @@ abstract class DraftTypes with _$DraftTypes {
     List<Attachment> image,
     CodeableConcept scoring,
   }) = ProdCharacteristic;
+
   const factory DraftTypes.productShelfLife({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
@@ -59,7 +62,6 @@ abstract class DraftTypes with _$DraftTypes {
     List<CodeableConcept> specialPrecautionsForStorage,
   }) = ProductShelfLife;
 
-  /// Substance Amount
   const factory DraftTypes.substanceAmount({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,

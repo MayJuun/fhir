@@ -63,7 +63,7 @@ class _$GeneralTypesTearOff {
 
   Address address(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       String text,
@@ -92,7 +92,7 @@ class _$GeneralTypesTearOff {
 
   Age age(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
       @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
@@ -111,7 +111,7 @@ class _$GeneralTypesTearOff {
 
   Annotation annotation(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Reference authorReference,
       String authorString,
       FhirDateTime time,
@@ -128,7 +128,7 @@ class _$GeneralTypesTearOff {
 
   Attachment attachment(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -153,8 +153,8 @@ class _$GeneralTypesTearOff {
 
   CodeableConcept codeableConcept(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> coding,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<Coding> coding,
       String text}) {
     return CodeableConcept(
       id: id,
@@ -166,7 +166,7 @@ class _$GeneralTypesTearOff {
 
   Coding coding(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirUri system,
       String version,
       Code code,
@@ -185,13 +185,10 @@ class _$GeneralTypesTearOff {
 
   ContactPoint contactPoint(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-          ContactPointSystem system,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      ContactPointSystem system,
       String value,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-          ContactPointUse use,
+      ContactPointUse use,
       int rank,
       Period period}) {
     return ContactPoint(
@@ -207,9 +204,9 @@ class _$GeneralTypesTearOff {
 
   Count count(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) {
@@ -226,9 +223,9 @@ class _$GeneralTypesTearOff {
 
   Distance distance(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) {
@@ -245,9 +242,9 @@ class _$GeneralTypesTearOff {
 
   Duration duration(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) {
@@ -264,8 +261,8 @@ class _$GeneralTypesTearOff {
 
   HumanName humanName(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      HumanNameUse use,
       String text,
       String family,
       List<String> given,
@@ -287,7 +284,7 @@ class _$GeneralTypesTearOff {
 
   Identifier identifier(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       IdentifierUse use,
       CodeableConcept type,
       FhirUri system,
@@ -308,7 +305,7 @@ class _$GeneralTypesTearOff {
 
   Money money(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
       Code currency}) {
     return Money(
@@ -321,7 +318,7 @@ class _$GeneralTypesTearOff {
 
   Period period(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirDateTime start,
       FhirDateTime end}) {
     return Period(
@@ -334,9 +331,9 @@ class _$GeneralTypesTearOff {
 
   Quantity quantity(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) {
@@ -353,7 +350,7 @@ class _$GeneralTypesTearOff {
 
   Range range(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity low,
       Quantity high}) {
     return Range(
@@ -366,7 +363,7 @@ class _$GeneralTypesTearOff {
 
   Ratio ratio(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity numerator,
       Quantity denominator}) {
     return Ratio(
@@ -379,7 +376,7 @@ class _$GeneralTypesTearOff {
 
   SampledData sampledData(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity origin,
       double period,
       double factor,
@@ -402,8 +399,8 @@ class _$GeneralTypesTearOff {
 
   Signature signature(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<Coding> type,
       @JsonKey(name: 'when') Instant whenInstant,
       Reference who,
       Reference onBehalfOf,
@@ -425,8 +422,8 @@ class _$GeneralTypesTearOff {
 
   Timing timing(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       List<DateTime> event,
       TimingRepeat repeat,
       CodeableConcept code}) {
@@ -442,9 +439,8 @@ class _$GeneralTypesTearOff {
 
   TimingRepeat timingRepeat(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Duration boundsDuration,
       Range boundsRange,
       Period boundsPeriod,
@@ -452,18 +448,15 @@ class _$GeneralTypesTearOff {
       int countMax,
       double duration,
       double durationMax,
-      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-          TimingRepeatUnit durationUnit,
+      TimingRepeatUnit durationUnit,
       int frequency,
       int frequencyMax,
       double period,
       double periodMax,
-      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-          TimingRepeatUnit periodUnit,
+      TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
-      @JsonKey(name: 'when')
-          List<TimingRepeatWhen> timingRepeatWhenList,
+      @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
       int offset}) {
     return TimingRepeat(
       id: id,
@@ -496,14 +489,14 @@ const $GeneralTypes = _$GeneralTypesTearOff();
 mixin _$GeneralTypes {
   String get id;
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -518,7 +511,7 @@ mixin _$GeneralTypes {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -528,7 +521,7 @@ mixin _$GeneralTypes {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -536,7 +529,7 @@ mixin _$GeneralTypes {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -548,13 +541,13 @@ mixin _$GeneralTypes {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -563,53 +556,44 @@ mixin _$GeneralTypes {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -619,7 +603,7 @@ mixin _$GeneralTypes {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -629,42 +613,40 @@ mixin _$GeneralTypes {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -675,8 +657,8 @@ mixin _$GeneralTypes {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -686,17 +668,16 @@ mixin _$GeneralTypes {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -704,25 +685,22 @@ mixin _$GeneralTypes {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -735,7 +713,7 @@ mixin _$GeneralTypes {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -743,14 +721,14 @@ mixin _$GeneralTypes {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -761,12 +739,12 @@ mixin _$GeneralTypes {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -774,43 +752,40 @@ mixin _$GeneralTypes {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -819,7 +794,7 @@ mixin _$GeneralTypes {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -828,35 +803,35 @@ mixin _$GeneralTypes {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -866,8 +841,8 @@ mixin _$GeneralTypes {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -876,16 +851,15 @@ mixin _$GeneralTypes {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -893,18 +867,15 @@ mixin _$GeneralTypes {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   });
@@ -966,7 +937,8 @@ abstract class $GeneralTypesCopyWith<$Res> {
           GeneralTypes value, $Res Function(GeneralTypes) then) =
       _$GeneralTypesCopyWithImpl<$Res>;
   $Res call(
-      {String id, @JsonKey(name: 'extension') List<dynamic> fhirExtension});
+      {String id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension});
 }
 
 class _$GeneralTypesCopyWithImpl<$Res> implements $GeneralTypesCopyWith<$Res> {
@@ -985,7 +957,7 @@ class _$GeneralTypesCopyWithImpl<$Res> implements $GeneralTypesCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
     ));
   }
 }
@@ -996,7 +968,7 @@ abstract class $AddressCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       String text,
@@ -1036,7 +1008,7 @@ class _$AddressCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       use: use == freezed ? _value.use : use as AddressUse,
       type: type == freezed ? _value.type : type as AddressType,
       text: text == freezed ? _value.text : text as String,
@@ -1075,7 +1047,7 @@ class _$Address implements Address {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   final AddressUse use;
@@ -1164,7 +1136,7 @@ class _$Address implements Address {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -1179,7 +1151,7 @@ class _$Address implements Address {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -1189,7 +1161,7 @@ class _$Address implements Address {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -1197,7 +1169,7 @@ class _$Address implements Address {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -1209,13 +1181,13 @@ class _$Address implements Address {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -1224,53 +1196,44 @@ class _$Address implements Address {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -1280,7 +1243,7 @@ class _$Address implements Address {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -1290,42 +1253,40 @@ class _$Address implements Address {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -1336,8 +1297,8 @@ class _$Address implements Address {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -1347,17 +1308,16 @@ class _$Address implements Address {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -1365,18 +1325,15 @@ class _$Address implements Address {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -1409,7 +1366,7 @@ class _$Address implements Address {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -1422,7 +1379,7 @@ class _$Address implements Address {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -1430,14 +1387,14 @@ class _$Address implements Address {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -1448,12 +1405,12 @@ class _$Address implements Address {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -1461,43 +1418,40 @@ class _$Address implements Address {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -1506,7 +1460,7 @@ class _$Address implements Address {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -1515,35 +1469,35 @@ class _$Address implements Address {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -1553,8 +1507,8 @@ class _$Address implements Address {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -1563,16 +1517,15 @@ class _$Address implements Address {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -1580,18 +1533,15 @@ class _$Address implements Address {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -1694,7 +1644,7 @@ class _$Address implements Address {
 abstract class Address implements GeneralTypes {
   const factory Address(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       String text,
@@ -1712,7 +1662,7 @@ abstract class Address implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   AddressUse get use;
   @JsonKey(unknownEnumValue: AddressType.unknown)
@@ -1735,7 +1685,7 @@ abstract class $AgeCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
       @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
@@ -1765,7 +1715,7 @@ class _$AgeCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       value: value == freezed ? _value.value : value as double,
       comparator:
           comparator == freezed ? _value.comparator : comparator as Comparator,
@@ -1793,7 +1743,7 @@ class _$Age implements Age {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final double value;
   @override
@@ -1853,7 +1803,7 @@ class _$Age implements Age {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -1868,7 +1818,7 @@ class _$Age implements Age {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -1878,7 +1828,7 @@ class _$Age implements Age {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -1886,7 +1836,7 @@ class _$Age implements Age {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -1898,13 +1848,13 @@ class _$Age implements Age {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -1913,53 +1863,44 @@ class _$Age implements Age {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -1969,7 +1910,7 @@ class _$Age implements Age {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -1979,42 +1920,40 @@ class _$Age implements Age {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -2025,8 +1964,8 @@ class _$Age implements Age {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -2036,17 +1975,16 @@ class _$Age implements Age {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -2054,18 +1992,15 @@ class _$Age implements Age {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -2097,7 +2032,7 @@ class _$Age implements Age {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -2110,7 +2045,7 @@ class _$Age implements Age {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -2118,14 +2053,14 @@ class _$Age implements Age {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -2136,12 +2071,12 @@ class _$Age implements Age {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -2149,43 +2084,40 @@ class _$Age implements Age {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -2194,7 +2126,7 @@ class _$Age implements Age {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -2203,35 +2135,35 @@ class _$Age implements Age {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -2241,8 +2173,8 @@ class _$Age implements Age {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -2251,16 +2183,15 @@ class _$Age implements Age {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -2268,18 +2199,15 @@ class _$Age implements Age {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -2381,7 +2309,7 @@ class _$Age implements Age {
 abstract class Age implements GeneralTypes {
   const factory Age(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
       @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
@@ -2394,7 +2322,7 @@ abstract class Age implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   double get value;
   @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
@@ -2413,7 +2341,7 @@ abstract class $AnnotationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Reference authorReference,
       String authorString,
       FhirDateTime time,
@@ -2441,7 +2369,7 @@ class _$AnnotationCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       authorReference: authorReference == freezed
           ? _value.authorReference
           : authorReference as Reference,
@@ -2471,7 +2399,7 @@ class _$Annotation implements Annotation {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final Reference authorReference;
   @override
@@ -2527,7 +2455,7 @@ class _$Annotation implements Annotation {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -2542,7 +2470,7 @@ class _$Annotation implements Annotation {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -2552,7 +2480,7 @@ class _$Annotation implements Annotation {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -2560,7 +2488,7 @@ class _$Annotation implements Annotation {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -2572,13 +2500,13 @@ class _$Annotation implements Annotation {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -2587,53 +2515,44 @@ class _$Annotation implements Annotation {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -2643,7 +2562,7 @@ class _$Annotation implements Annotation {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -2653,42 +2572,40 @@ class _$Annotation implements Annotation {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -2699,8 +2616,8 @@ class _$Annotation implements Annotation {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -2710,17 +2627,16 @@ class _$Annotation implements Annotation {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -2728,18 +2644,15 @@ class _$Annotation implements Annotation {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -2772,7 +2685,7 @@ class _$Annotation implements Annotation {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -2785,7 +2698,7 @@ class _$Annotation implements Annotation {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -2793,14 +2706,14 @@ class _$Annotation implements Annotation {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -2811,12 +2724,12 @@ class _$Annotation implements Annotation {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -2824,43 +2737,40 @@ class _$Annotation implements Annotation {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -2869,7 +2779,7 @@ class _$Annotation implements Annotation {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -2878,35 +2788,35 @@ class _$Annotation implements Annotation {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -2916,8 +2826,8 @@ class _$Annotation implements Annotation {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -2926,16 +2836,15 @@ class _$Annotation implements Annotation {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -2943,18 +2852,15 @@ class _$Annotation implements Annotation {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -3057,7 +2963,7 @@ class _$Annotation implements Annotation {
 abstract class Annotation implements GeneralTypes {
   const factory Annotation(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Reference authorReference,
       String authorString,
       FhirDateTime time,
@@ -3070,7 +2976,7 @@ abstract class Annotation implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   Reference get authorReference;
   String get authorString;
   FhirDateTime get time;
@@ -3087,7 +2993,7 @@ abstract class $AttachmentCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -3123,7 +3029,7 @@ class _$AttachmentCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code,
       language: language == freezed ? _value.language : language as Code,
@@ -3159,7 +3065,7 @@ class _$Attachment implements Attachment {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final Code contentType;
   @override
@@ -3236,7 +3142,7 @@ class _$Attachment implements Attachment {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -3251,7 +3157,7 @@ class _$Attachment implements Attachment {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -3261,7 +3167,7 @@ class _$Attachment implements Attachment {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -3269,7 +3175,7 @@ class _$Attachment implements Attachment {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -3281,13 +3187,13 @@ class _$Attachment implements Attachment {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -3296,53 +3202,44 @@ class _$Attachment implements Attachment {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -3352,7 +3249,7 @@ class _$Attachment implements Attachment {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -3362,42 +3259,40 @@ class _$Attachment implements Attachment {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -3408,8 +3303,8 @@ class _$Attachment implements Attachment {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -3419,17 +3314,16 @@ class _$Attachment implements Attachment {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -3437,18 +3331,15 @@ class _$Attachment implements Attachment {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -3481,7 +3372,7 @@ class _$Attachment implements Attachment {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -3494,7 +3385,7 @@ class _$Attachment implements Attachment {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -3502,14 +3393,14 @@ class _$Attachment implements Attachment {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -3520,12 +3411,12 @@ class _$Attachment implements Attachment {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -3533,43 +3424,40 @@ class _$Attachment implements Attachment {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -3578,7 +3466,7 @@ class _$Attachment implements Attachment {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -3587,35 +3475,35 @@ class _$Attachment implements Attachment {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -3625,8 +3513,8 @@ class _$Attachment implements Attachment {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -3635,16 +3523,15 @@ class _$Attachment implements Attachment {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -3652,18 +3539,15 @@ class _$Attachment implements Attachment {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -3766,7 +3650,7 @@ class _$Attachment implements Attachment {
 abstract class Attachment implements GeneralTypes {
   const factory Attachment(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -3783,7 +3667,7 @@ abstract class Attachment implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   Code get contentType;
   Code get language;
   Base64Binary get data;
@@ -3804,8 +3688,8 @@ abstract class $CodeableConceptCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> coding,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<Coding> coding,
       String text});
 }
 
@@ -3830,8 +3714,8 @@ class _$CodeableConceptCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
-      coding: coding == freezed ? _value.coding : coding as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
+      coding: coding == freezed ? _value.coding : coding as List<Coding>,
       text: text == freezed ? _value.text : text as String,
     ));
   }
@@ -3852,9 +3736,9 @@ class _$CodeableConcept implements CodeableConcept {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> coding;
+  final List<Coding> coding;
   @override
   final String text;
 
@@ -3896,7 +3780,7 @@ class _$CodeableConcept implements CodeableConcept {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -3911,7 +3795,7 @@ class _$CodeableConcept implements CodeableConcept {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -3921,7 +3805,7 @@ class _$CodeableConcept implements CodeableConcept {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -3929,7 +3813,7 @@ class _$CodeableConcept implements CodeableConcept {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -3941,13 +3825,13 @@ class _$CodeableConcept implements CodeableConcept {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -3956,53 +3840,44 @@ class _$CodeableConcept implements CodeableConcept {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -4012,7 +3887,7 @@ class _$CodeableConcept implements CodeableConcept {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -4022,42 +3897,40 @@ class _$CodeableConcept implements CodeableConcept {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -4068,8 +3941,8 @@ class _$CodeableConcept implements CodeableConcept {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -4079,17 +3952,16 @@ class _$CodeableConcept implements CodeableConcept {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -4097,18 +3969,15 @@ class _$CodeableConcept implements CodeableConcept {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -4140,7 +4009,7 @@ class _$CodeableConcept implements CodeableConcept {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -4153,7 +4022,7 @@ class _$CodeableConcept implements CodeableConcept {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -4161,14 +4030,14 @@ class _$CodeableConcept implements CodeableConcept {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -4179,12 +4048,12 @@ class _$CodeableConcept implements CodeableConcept {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -4192,43 +4061,40 @@ class _$CodeableConcept implements CodeableConcept {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -4237,7 +4103,7 @@ class _$CodeableConcept implements CodeableConcept {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -4246,35 +4112,35 @@ class _$CodeableConcept implements CodeableConcept {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -4284,8 +4150,8 @@ class _$CodeableConcept implements CodeableConcept {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -4294,16 +4160,15 @@ class _$CodeableConcept implements CodeableConcept {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -4311,18 +4176,15 @@ class _$CodeableConcept implements CodeableConcept {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -4424,8 +4286,8 @@ class _$CodeableConcept implements CodeableConcept {
 abstract class CodeableConcept implements GeneralTypes {
   const factory CodeableConcept(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> coding,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<Coding> coding,
       String text}) = _$CodeableConcept;
 
   factory CodeableConcept.fromJson(Map<String, dynamic> json) =
@@ -4435,8 +4297,8 @@ abstract class CodeableConcept implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  List<dynamic> get coding;
+  List<FhirExtension> get fhirExtension;
+  List<Coding> get coding;
   String get text;
   @override
   $CodeableConceptCopyWith<CodeableConcept> get copyWith;
@@ -4448,7 +4310,7 @@ abstract class $CodingCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirUri system,
       String version,
       Code code,
@@ -4478,7 +4340,7 @@ class _$CodingCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       system: system == freezed ? _value.system : system as FhirUri,
       version: version == freezed ? _value.version : version as String,
       code: code == freezed ? _value.code : code as Code,
@@ -4507,7 +4369,7 @@ class _$Coding implements Coding {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final FhirUri system;
   @override
@@ -4569,7 +4431,7 @@ class _$Coding implements Coding {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -4584,7 +4446,7 @@ class _$Coding implements Coding {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -4594,7 +4456,7 @@ class _$Coding implements Coding {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -4602,7 +4464,7 @@ class _$Coding implements Coding {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -4614,13 +4476,13 @@ class _$Coding implements Coding {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -4629,53 +4491,44 @@ class _$Coding implements Coding {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -4685,7 +4538,7 @@ class _$Coding implements Coding {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -4695,42 +4548,40 @@ class _$Coding implements Coding {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -4741,8 +4592,8 @@ class _$Coding implements Coding {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -4752,17 +4603,16 @@ class _$Coding implements Coding {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -4770,18 +4620,15 @@ class _$Coding implements Coding {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -4814,7 +4661,7 @@ class _$Coding implements Coding {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -4827,7 +4674,7 @@ class _$Coding implements Coding {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -4835,14 +4682,14 @@ class _$Coding implements Coding {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -4853,12 +4700,12 @@ class _$Coding implements Coding {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -4866,43 +4713,40 @@ class _$Coding implements Coding {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -4911,7 +4755,7 @@ class _$Coding implements Coding {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -4920,35 +4764,35 @@ class _$Coding implements Coding {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -4958,8 +4802,8 @@ class _$Coding implements Coding {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -4968,16 +4812,15 @@ class _$Coding implements Coding {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -4985,18 +4828,15 @@ class _$Coding implements Coding {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -5099,7 +4939,7 @@ class _$Coding implements Coding {
 abstract class Coding implements GeneralTypes {
   const factory Coding(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirUri system,
       String version,
       Code code,
@@ -5112,7 +4952,7 @@ abstract class Coding implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   FhirUri get system;
   String get version;
   Code get code;
@@ -5130,13 +4970,10 @@ abstract class $ContactPointCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-          ContactPointSystem system,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      ContactPointSystem system,
       String value,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-          ContactPointUse use,
+      ContactPointUse use,
       int rank,
       Period period});
 }
@@ -5164,7 +5001,7 @@ class _$ContactPointCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       system: system == freezed ? _value.system : system as ContactPointSystem,
       value: value == freezed ? _value.value : value as String,
       use: use == freezed ? _value.use : use as ContactPointUse,
@@ -5179,9 +5016,9 @@ class _$ContactPoint implements ContactPoint {
   const _$ContactPoint(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
-      @JsonKey(unknownEnumValue: ContactPointSystem.unknown) this.system,
+      this.system,
       this.value,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown) this.use,
+      this.use,
       this.rank,
       this.period});
 
@@ -5192,14 +5029,12 @@ class _$ContactPoint implements ContactPoint {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   final ContactPointSystem system;
   @override
   final String value;
   @override
-  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
   final ContactPointUse use;
   @override
   final int rank;
@@ -5253,7 +5088,7 @@ class _$ContactPoint implements ContactPoint {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -5268,7 +5103,7 @@ class _$ContactPoint implements ContactPoint {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -5278,7 +5113,7 @@ class _$ContactPoint implements ContactPoint {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -5286,7 +5121,7 @@ class _$ContactPoint implements ContactPoint {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -5298,13 +5133,13 @@ class _$ContactPoint implements ContactPoint {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -5313,53 +5148,44 @@ class _$ContactPoint implements ContactPoint {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -5369,7 +5195,7 @@ class _$ContactPoint implements ContactPoint {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -5379,42 +5205,40 @@ class _$ContactPoint implements ContactPoint {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -5425,8 +5249,8 @@ class _$ContactPoint implements ContactPoint {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -5436,17 +5260,16 @@ class _$ContactPoint implements ContactPoint {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -5454,18 +5277,15 @@ class _$ContactPoint implements ContactPoint {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -5498,7 +5318,7 @@ class _$ContactPoint implements ContactPoint {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -5511,7 +5331,7 @@ class _$ContactPoint implements ContactPoint {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -5519,14 +5339,14 @@ class _$ContactPoint implements ContactPoint {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -5537,12 +5357,12 @@ class _$ContactPoint implements ContactPoint {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -5550,43 +5370,40 @@ class _$ContactPoint implements ContactPoint {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -5595,7 +5412,7 @@ class _$ContactPoint implements ContactPoint {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -5604,35 +5421,35 @@ class _$ContactPoint implements ContactPoint {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -5642,8 +5459,8 @@ class _$ContactPoint implements ContactPoint {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -5652,16 +5469,15 @@ class _$ContactPoint implements ContactPoint {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -5669,18 +5485,15 @@ class _$ContactPoint implements ContactPoint {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -5783,13 +5596,10 @@ class _$ContactPoint implements ContactPoint {
 abstract class ContactPoint implements GeneralTypes {
   const factory ContactPoint(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-          ContactPointSystem system,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      ContactPointSystem system,
       String value,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-          ContactPointUse use,
+      ContactPointUse use,
       int rank,
       Period period}) = _$ContactPoint;
 
@@ -5800,11 +5610,9 @@ abstract class ContactPoint implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
+  List<FhirExtension> get fhirExtension;
   ContactPointSystem get system;
   String get value;
-  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
   ContactPointUse get use;
   int get rank;
   Period get period;
@@ -5818,9 +5626,9 @@ abstract class $CountCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -5848,7 +5656,7 @@ class _$CountCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       value: value == freezed ? _value.value : value as double,
       comparator:
           comparator == freezed ? _value.comparator : comparator as Comparator,
@@ -5865,7 +5673,7 @@ class _$Count implements Count {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
+      this.comparator,
       this.unit,
       this.system,
       this.code});
@@ -5877,11 +5685,10 @@ class _$Count implements Count {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final double value;
   @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
   final Comparator comparator;
   @override
   final String unit;
@@ -5938,7 +5745,7 @@ class _$Count implements Count {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -5953,7 +5760,7 @@ class _$Count implements Count {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -5963,7 +5770,7 @@ class _$Count implements Count {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -5971,7 +5778,7 @@ class _$Count implements Count {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -5983,13 +5790,13 @@ class _$Count implements Count {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -5998,53 +5805,44 @@ class _$Count implements Count {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -6054,7 +5852,7 @@ class _$Count implements Count {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -6064,42 +5862,40 @@ class _$Count implements Count {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -6110,8 +5906,8 @@ class _$Count implements Count {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -6121,17 +5917,16 @@ class _$Count implements Count {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -6139,18 +5934,15 @@ class _$Count implements Count {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -6182,7 +5974,7 @@ class _$Count implements Count {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -6195,7 +5987,7 @@ class _$Count implements Count {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -6203,14 +5995,14 @@ class _$Count implements Count {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -6221,12 +6013,12 @@ class _$Count implements Count {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -6234,43 +6026,40 @@ class _$Count implements Count {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -6279,7 +6068,7 @@ class _$Count implements Count {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -6288,35 +6077,35 @@ class _$Count implements Count {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -6326,8 +6115,8 @@ class _$Count implements Count {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -6336,16 +6125,15 @@ class _$Count implements Count {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -6353,18 +6141,15 @@ class _$Count implements Count {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -6466,9 +6251,9 @@ class _$Count implements Count {
 abstract class Count implements GeneralTypes {
   const factory Count(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) = _$Count;
@@ -6479,9 +6264,8 @@ abstract class Count implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   double get value;
-  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   String get unit;
   FhirUri get system;
@@ -6496,9 +6280,9 @@ abstract class $DistanceCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -6526,7 +6310,7 @@ class _$DistanceCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       value: value == freezed ? _value.value : value as double,
       comparator:
           comparator == freezed ? _value.comparator : comparator as Comparator,
@@ -6543,7 +6327,7 @@ class _$Distance implements Distance {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
+      this.comparator,
       this.unit,
       this.system,
       this.code});
@@ -6555,11 +6339,10 @@ class _$Distance implements Distance {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final double value;
   @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
   final Comparator comparator;
   @override
   final String unit;
@@ -6616,7 +6399,7 @@ class _$Distance implements Distance {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -6631,7 +6414,7 @@ class _$Distance implements Distance {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -6641,7 +6424,7 @@ class _$Distance implements Distance {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -6649,7 +6432,7 @@ class _$Distance implements Distance {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -6661,13 +6444,13 @@ class _$Distance implements Distance {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -6676,53 +6459,44 @@ class _$Distance implements Distance {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -6732,7 +6506,7 @@ class _$Distance implements Distance {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -6742,42 +6516,40 @@ class _$Distance implements Distance {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -6788,8 +6560,8 @@ class _$Distance implements Distance {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -6799,17 +6571,16 @@ class _$Distance implements Distance {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -6817,18 +6588,15 @@ class _$Distance implements Distance {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -6860,7 +6628,7 @@ class _$Distance implements Distance {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -6873,7 +6641,7 @@ class _$Distance implements Distance {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -6881,14 +6649,14 @@ class _$Distance implements Distance {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -6899,12 +6667,12 @@ class _$Distance implements Distance {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -6912,43 +6680,40 @@ class _$Distance implements Distance {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -6957,7 +6722,7 @@ class _$Distance implements Distance {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -6966,35 +6731,35 @@ class _$Distance implements Distance {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -7004,8 +6769,8 @@ class _$Distance implements Distance {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -7014,16 +6779,15 @@ class _$Distance implements Distance {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -7031,18 +6795,15 @@ class _$Distance implements Distance {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -7144,9 +6905,9 @@ class _$Distance implements Distance {
 abstract class Distance implements GeneralTypes {
   const factory Distance(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) = _$Distance;
@@ -7157,9 +6918,8 @@ abstract class Distance implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   double get value;
-  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   String get unit;
   FhirUri get system;
@@ -7174,9 +6934,9 @@ abstract class $DurationCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -7204,7 +6964,7 @@ class _$DurationCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       value: value == freezed ? _value.value : value as double,
       comparator:
           comparator == freezed ? _value.comparator : comparator as Comparator,
@@ -7221,7 +6981,7 @@ class _$Duration implements Duration {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
+      this.comparator,
       this.unit,
       this.system,
       this.code});
@@ -7233,11 +6993,10 @@ class _$Duration implements Duration {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final double value;
   @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
   final Comparator comparator;
   @override
   final String unit;
@@ -7294,7 +7053,7 @@ class _$Duration implements Duration {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -7309,7 +7068,7 @@ class _$Duration implements Duration {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -7319,7 +7078,7 @@ class _$Duration implements Duration {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -7327,7 +7086,7 @@ class _$Duration implements Duration {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -7339,13 +7098,13 @@ class _$Duration implements Duration {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -7354,53 +7113,44 @@ class _$Duration implements Duration {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -7410,7 +7160,7 @@ class _$Duration implements Duration {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -7420,42 +7170,40 @@ class _$Duration implements Duration {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -7466,8 +7214,8 @@ class _$Duration implements Duration {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -7477,17 +7225,16 @@ class _$Duration implements Duration {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -7495,18 +7242,15 @@ class _$Duration implements Duration {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -7538,7 +7282,7 @@ class _$Duration implements Duration {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -7551,7 +7295,7 @@ class _$Duration implements Duration {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -7559,14 +7303,14 @@ class _$Duration implements Duration {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -7577,12 +7321,12 @@ class _$Duration implements Duration {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -7590,43 +7334,40 @@ class _$Duration implements Duration {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -7635,7 +7376,7 @@ class _$Duration implements Duration {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -7644,35 +7385,35 @@ class _$Duration implements Duration {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -7682,8 +7423,8 @@ class _$Duration implements Duration {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -7692,16 +7433,15 @@ class _$Duration implements Duration {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -7709,18 +7449,15 @@ class _$Duration implements Duration {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -7822,9 +7559,9 @@ class _$Duration implements Duration {
 abstract class Duration implements GeneralTypes {
   const factory Duration(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) = _$Duration;
@@ -7835,9 +7572,8 @@ abstract class Duration implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   double get value;
-  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   String get unit;
   FhirUri get system;
@@ -7852,8 +7588,8 @@ abstract class $HumanNameCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      HumanNameUse use,
       String text,
       String family,
       List<String> given,
@@ -7886,7 +7622,7 @@ class _$HumanNameCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       use: use == freezed ? _value.use : use as HumanNameUse,
       text: text == freezed ? _value.text : text as String,
       family: family == freezed ? _value.family : family as String,
@@ -7903,7 +7639,7 @@ class _$HumanName implements HumanName {
   const _$HumanName(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
-      @JsonKey(unknownEnumValue: HumanNameUse.unknown) this.use,
+      this.use,
       this.text,
       this.family,
       this.given,
@@ -7918,9 +7654,8 @@ class _$HumanName implements HumanName {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  @JsonKey(unknownEnumValue: HumanNameUse.unknown)
   final HumanNameUse use;
   @override
   final String text;
@@ -7988,7 +7723,7 @@ class _$HumanName implements HumanName {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -8003,7 +7738,7 @@ class _$HumanName implements HumanName {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -8013,7 +7748,7 @@ class _$HumanName implements HumanName {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -8021,7 +7756,7 @@ class _$HumanName implements HumanName {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -8033,13 +7768,13 @@ class _$HumanName implements HumanName {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -8048,53 +7783,44 @@ class _$HumanName implements HumanName {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -8104,7 +7830,7 @@ class _$HumanName implements HumanName {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -8114,42 +7840,40 @@ class _$HumanName implements HumanName {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -8160,8 +7884,8 @@ class _$HumanName implements HumanName {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -8171,17 +7895,16 @@ class _$HumanName implements HumanName {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -8189,18 +7912,15 @@ class _$HumanName implements HumanName {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -8233,7 +7953,7 @@ class _$HumanName implements HumanName {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -8246,7 +7966,7 @@ class _$HumanName implements HumanName {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -8254,14 +7974,14 @@ class _$HumanName implements HumanName {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -8272,12 +7992,12 @@ class _$HumanName implements HumanName {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -8285,43 +8005,40 @@ class _$HumanName implements HumanName {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -8330,7 +8047,7 @@ class _$HumanName implements HumanName {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -8339,35 +8056,35 @@ class _$HumanName implements HumanName {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -8377,8 +8094,8 @@ class _$HumanName implements HumanName {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -8387,16 +8104,15 @@ class _$HumanName implements HumanName {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -8404,18 +8120,15 @@ class _$HumanName implements HumanName {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -8518,8 +8231,8 @@ class _$HumanName implements HumanName {
 abstract class HumanName implements GeneralTypes {
   const factory HumanName(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      HumanNameUse use,
       String text,
       String family,
       List<String> given,
@@ -8533,8 +8246,7 @@ abstract class HumanName implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  @JsonKey(unknownEnumValue: HumanNameUse.unknown)
+  List<FhirExtension> get fhirExtension;
   HumanNameUse get use;
   String get text;
   String get family;
@@ -8554,7 +8266,7 @@ abstract class $IdentifierCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       IdentifierUse use,
       CodeableConcept type,
       FhirUri system,
@@ -8586,7 +8298,7 @@ class _$IdentifierCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       use: use == freezed ? _value.use : use as IdentifierUse,
       type: type == freezed ? _value.type : type as CodeableConcept,
       system: system == freezed ? _value.system : system as FhirUri,
@@ -8616,7 +8328,7 @@ class _$Identifier implements Identifier {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final IdentifierUse use;
   @override
@@ -8681,7 +8393,7 @@ class _$Identifier implements Identifier {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -8696,7 +8408,7 @@ class _$Identifier implements Identifier {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -8706,7 +8418,7 @@ class _$Identifier implements Identifier {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -8714,7 +8426,7 @@ class _$Identifier implements Identifier {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -8726,13 +8438,13 @@ class _$Identifier implements Identifier {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -8741,53 +8453,44 @@ class _$Identifier implements Identifier {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -8797,7 +8500,7 @@ class _$Identifier implements Identifier {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -8807,42 +8510,40 @@ class _$Identifier implements Identifier {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -8853,8 +8554,8 @@ class _$Identifier implements Identifier {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -8864,17 +8565,16 @@ class _$Identifier implements Identifier {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -8882,18 +8582,15 @@ class _$Identifier implements Identifier {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -8926,7 +8623,7 @@ class _$Identifier implements Identifier {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -8939,7 +8636,7 @@ class _$Identifier implements Identifier {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -8947,14 +8644,14 @@ class _$Identifier implements Identifier {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -8965,12 +8662,12 @@ class _$Identifier implements Identifier {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -8978,43 +8675,40 @@ class _$Identifier implements Identifier {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -9023,7 +8717,7 @@ class _$Identifier implements Identifier {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -9032,35 +8726,35 @@ class _$Identifier implements Identifier {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -9070,8 +8764,8 @@ class _$Identifier implements Identifier {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -9080,16 +8774,15 @@ class _$Identifier implements Identifier {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -9097,18 +8790,15 @@ class _$Identifier implements Identifier {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -9211,7 +8901,7 @@ class _$Identifier implements Identifier {
 abstract class Identifier implements GeneralTypes {
   const factory Identifier(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       IdentifierUse use,
       CodeableConcept type,
       FhirUri system,
@@ -9226,7 +8916,7 @@ abstract class Identifier implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   IdentifierUse get use;
   CodeableConcept get type;
   FhirUri get system;
@@ -9243,7 +8933,7 @@ abstract class $MoneyCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
       Code currency});
 }
@@ -9267,7 +8957,7 @@ class _$MoneyCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       value: value == freezed ? _value.value : value as double,
       currency: currency == freezed ? _value.currency : currency as Code,
     ));
@@ -9289,7 +8979,7 @@ class _$Money implements Money {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final double value;
   @override
@@ -9334,7 +9024,7 @@ class _$Money implements Money {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -9349,7 +9039,7 @@ class _$Money implements Money {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -9359,7 +9049,7 @@ class _$Money implements Money {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -9367,7 +9057,7 @@ class _$Money implements Money {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -9379,13 +9069,13 @@ class _$Money implements Money {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -9394,53 +9084,44 @@ class _$Money implements Money {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -9450,7 +9131,7 @@ class _$Money implements Money {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -9460,42 +9141,40 @@ class _$Money implements Money {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -9506,8 +9185,8 @@ class _$Money implements Money {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -9517,17 +9196,16 @@ class _$Money implements Money {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -9535,18 +9213,15 @@ class _$Money implements Money {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -9578,7 +9253,7 @@ class _$Money implements Money {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -9591,7 +9266,7 @@ class _$Money implements Money {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -9599,14 +9274,14 @@ class _$Money implements Money {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -9617,12 +9292,12 @@ class _$Money implements Money {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -9630,43 +9305,40 @@ class _$Money implements Money {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -9675,7 +9347,7 @@ class _$Money implements Money {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -9684,35 +9356,35 @@ class _$Money implements Money {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -9722,8 +9394,8 @@ class _$Money implements Money {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -9732,16 +9404,15 @@ class _$Money implements Money {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -9749,18 +9420,15 @@ class _$Money implements Money {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -9862,7 +9530,7 @@ class _$Money implements Money {
 abstract class Money implements GeneralTypes {
   const factory Money(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
       Code currency}) = _$Money;
 
@@ -9872,7 +9540,7 @@ abstract class Money implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   double get value;
   Code get currency;
   @override
@@ -9885,7 +9553,7 @@ abstract class $PeriodCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirDateTime start,
       FhirDateTime end});
 }
@@ -9909,7 +9577,7 @@ class _$PeriodCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       start: start == freezed ? _value.start : start as FhirDateTime,
       end: end == freezed ? _value.end : end as FhirDateTime,
     ));
@@ -9931,7 +9599,7 @@ class _$Period implements Period {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final FhirDateTime start;
   @override
@@ -9975,7 +9643,7 @@ class _$Period implements Period {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -9990,7 +9658,7 @@ class _$Period implements Period {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -10000,7 +9668,7 @@ class _$Period implements Period {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -10008,7 +9676,7 @@ class _$Period implements Period {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -10020,13 +9688,13 @@ class _$Period implements Period {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -10035,53 +9703,44 @@ class _$Period implements Period {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -10091,7 +9750,7 @@ class _$Period implements Period {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -10101,42 +9760,40 @@ class _$Period implements Period {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -10147,8 +9804,8 @@ class _$Period implements Period {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -10158,17 +9815,16 @@ class _$Period implements Period {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -10176,18 +9832,15 @@ class _$Period implements Period {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -10219,7 +9872,7 @@ class _$Period implements Period {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -10232,7 +9885,7 @@ class _$Period implements Period {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -10240,14 +9893,14 @@ class _$Period implements Period {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -10258,12 +9911,12 @@ class _$Period implements Period {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -10271,43 +9924,40 @@ class _$Period implements Period {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -10316,7 +9966,7 @@ class _$Period implements Period {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -10325,35 +9975,35 @@ class _$Period implements Period {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -10363,8 +10013,8 @@ class _$Period implements Period {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -10373,16 +10023,15 @@ class _$Period implements Period {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -10390,18 +10039,15 @@ class _$Period implements Period {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -10503,7 +10149,7 @@ class _$Period implements Period {
 abstract class Period implements GeneralTypes {
   const factory Period(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirDateTime start,
       FhirDateTime end}) = _$Period;
 
@@ -10513,7 +10159,7 @@ abstract class Period implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   FhirDateTime get start;
   FhirDateTime get end;
   @override
@@ -10526,9 +10172,9 @@ abstract class $QuantityCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -10556,7 +10202,7 @@ class _$QuantityCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       value: value == freezed ? _value.value : value as double,
       comparator:
           comparator == freezed ? _value.comparator : comparator as Comparator,
@@ -10573,7 +10219,7 @@ class _$Quantity implements Quantity {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
+      this.comparator,
       this.unit,
       this.system,
       this.code});
@@ -10585,11 +10231,10 @@ class _$Quantity implements Quantity {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final double value;
   @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
   final Comparator comparator;
   @override
   final String unit;
@@ -10646,7 +10291,7 @@ class _$Quantity implements Quantity {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -10661,7 +10306,7 @@ class _$Quantity implements Quantity {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -10671,7 +10316,7 @@ class _$Quantity implements Quantity {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -10679,7 +10324,7 @@ class _$Quantity implements Quantity {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -10691,13 +10336,13 @@ class _$Quantity implements Quantity {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -10706,53 +10351,44 @@ class _$Quantity implements Quantity {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -10762,7 +10398,7 @@ class _$Quantity implements Quantity {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -10772,42 +10408,40 @@ class _$Quantity implements Quantity {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -10818,8 +10452,8 @@ class _$Quantity implements Quantity {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -10829,17 +10463,16 @@ class _$Quantity implements Quantity {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -10847,18 +10480,15 @@ class _$Quantity implements Quantity {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -10890,7 +10520,7 @@ class _$Quantity implements Quantity {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -10903,7 +10533,7 @@ class _$Quantity implements Quantity {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -10911,14 +10541,14 @@ class _$Quantity implements Quantity {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -10929,12 +10559,12 @@ class _$Quantity implements Quantity {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -10942,43 +10572,40 @@ class _$Quantity implements Quantity {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -10987,7 +10614,7 @@ class _$Quantity implements Quantity {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -10996,35 +10623,35 @@ class _$Quantity implements Quantity {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -11034,8 +10661,8 @@ class _$Quantity implements Quantity {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -11044,16 +10671,15 @@ class _$Quantity implements Quantity {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -11061,18 +10687,15 @@ class _$Quantity implements Quantity {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -11174,9 +10797,9 @@ class _$Quantity implements Quantity {
 abstract class Quantity implements GeneralTypes {
   const factory Quantity(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+      Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) = _$Quantity;
@@ -11187,9 +10810,8 @@ abstract class Quantity implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   double get value;
-  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   String get unit;
   FhirUri get system;
@@ -11204,7 +10826,7 @@ abstract class $RangeCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity low,
       Quantity high});
 }
@@ -11228,7 +10850,7 @@ class _$RangeCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       low: low == freezed ? _value.low : low as Quantity,
       high: high == freezed ? _value.high : high as Quantity,
     ));
@@ -11250,7 +10872,7 @@ class _$Range implements Range {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final Quantity low;
   @override
@@ -11294,7 +10916,7 @@ class _$Range implements Range {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -11309,7 +10931,7 @@ class _$Range implements Range {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -11319,7 +10941,7 @@ class _$Range implements Range {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -11327,7 +10949,7 @@ class _$Range implements Range {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -11339,13 +10961,13 @@ class _$Range implements Range {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -11354,53 +10976,44 @@ class _$Range implements Range {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -11410,7 +11023,7 @@ class _$Range implements Range {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -11420,42 +11033,40 @@ class _$Range implements Range {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -11466,8 +11077,8 @@ class _$Range implements Range {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -11477,17 +11088,16 @@ class _$Range implements Range {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -11495,18 +11105,15 @@ class _$Range implements Range {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -11538,7 +11145,7 @@ class _$Range implements Range {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -11551,7 +11158,7 @@ class _$Range implements Range {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -11559,14 +11166,14 @@ class _$Range implements Range {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -11577,12 +11184,12 @@ class _$Range implements Range {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -11590,43 +11197,40 @@ class _$Range implements Range {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -11635,7 +11239,7 @@ class _$Range implements Range {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -11644,35 +11248,35 @@ class _$Range implements Range {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -11682,8 +11286,8 @@ class _$Range implements Range {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -11692,16 +11296,15 @@ class _$Range implements Range {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -11709,18 +11312,15 @@ class _$Range implements Range {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -11822,7 +11422,7 @@ class _$Range implements Range {
 abstract class Range implements GeneralTypes {
   const factory Range(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity low,
       Quantity high}) = _$Range;
 
@@ -11832,7 +11432,7 @@ abstract class Range implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   Quantity get low;
   Quantity get high;
   @override
@@ -11845,7 +11445,7 @@ abstract class $RatioCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity numerator,
       Quantity denominator});
 }
@@ -11869,7 +11469,7 @@ class _$RatioCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       numerator:
           numerator == freezed ? _value.numerator : numerator as Quantity,
       denominator:
@@ -11893,7 +11493,7 @@ class _$Ratio implements Ratio {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final Quantity numerator;
   @override
@@ -11939,7 +11539,7 @@ class _$Ratio implements Ratio {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -11954,7 +11554,7 @@ class _$Ratio implements Ratio {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -11964,7 +11564,7 @@ class _$Ratio implements Ratio {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -11972,7 +11572,7 @@ class _$Ratio implements Ratio {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -11984,13 +11584,13 @@ class _$Ratio implements Ratio {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -11999,53 +11599,44 @@ class _$Ratio implements Ratio {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -12055,7 +11646,7 @@ class _$Ratio implements Ratio {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -12065,42 +11656,40 @@ class _$Ratio implements Ratio {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -12111,8 +11700,8 @@ class _$Ratio implements Ratio {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -12122,17 +11711,16 @@ class _$Ratio implements Ratio {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -12140,18 +11728,15 @@ class _$Ratio implements Ratio {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -12183,7 +11768,7 @@ class _$Ratio implements Ratio {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -12196,7 +11781,7 @@ class _$Ratio implements Ratio {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -12204,14 +11789,14 @@ class _$Ratio implements Ratio {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -12222,12 +11807,12 @@ class _$Ratio implements Ratio {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -12235,43 +11820,40 @@ class _$Ratio implements Ratio {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -12280,7 +11862,7 @@ class _$Ratio implements Ratio {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -12289,35 +11871,35 @@ class _$Ratio implements Ratio {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -12327,8 +11909,8 @@ class _$Ratio implements Ratio {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -12337,16 +11919,15 @@ class _$Ratio implements Ratio {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -12354,18 +11935,15 @@ class _$Ratio implements Ratio {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -12467,7 +12045,7 @@ class _$Ratio implements Ratio {
 abstract class Ratio implements GeneralTypes {
   const factory Ratio(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity numerator,
       Quantity denominator}) = _$Ratio;
 
@@ -12477,7 +12055,7 @@ abstract class Ratio implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   Quantity get numerator;
   Quantity get denominator;
   @override
@@ -12492,7 +12070,7 @@ abstract class $SampledDataCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity origin,
       double period,
       double factor,
@@ -12527,7 +12105,7 @@ class _$SampledDataCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       origin: origin == freezed ? _value.origin : origin as Quantity,
       period: period == freezed ? _value.period : period as double,
       factor: factor == freezed ? _value.factor : factor as double,
@@ -12561,7 +12139,7 @@ class _$SampledData implements SampledData {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
   final Quantity origin;
   @override
@@ -12633,7 +12211,7 @@ class _$SampledData implements SampledData {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -12648,7 +12226,7 @@ class _$SampledData implements SampledData {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -12658,7 +12236,7 @@ class _$SampledData implements SampledData {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -12666,7 +12244,7 @@ class _$SampledData implements SampledData {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -12678,13 +12256,13 @@ class _$SampledData implements SampledData {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -12693,53 +12271,44 @@ class _$SampledData implements SampledData {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -12749,7 +12318,7 @@ class _$SampledData implements SampledData {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -12759,42 +12328,40 @@ class _$SampledData implements SampledData {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -12805,8 +12372,8 @@ class _$SampledData implements SampledData {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -12816,17 +12383,16 @@ class _$SampledData implements SampledData {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -12834,18 +12400,15 @@ class _$SampledData implements SampledData {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -12878,7 +12441,7 @@ class _$SampledData implements SampledData {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -12891,7 +12454,7 @@ class _$SampledData implements SampledData {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -12899,14 +12462,14 @@ class _$SampledData implements SampledData {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -12917,12 +12480,12 @@ class _$SampledData implements SampledData {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -12930,43 +12493,40 @@ class _$SampledData implements SampledData {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -12975,7 +12535,7 @@ class _$SampledData implements SampledData {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -12984,35 +12544,35 @@ class _$SampledData implements SampledData {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -13022,8 +12582,8 @@ class _$SampledData implements SampledData {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -13032,16 +12592,15 @@ class _$SampledData implements SampledData {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -13049,18 +12608,15 @@ class _$SampledData implements SampledData {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -13163,7 +12719,7 @@ class _$SampledData implements SampledData {
 abstract class SampledData implements GeneralTypes {
   const factory SampledData(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity origin,
       double period,
       double factor,
@@ -13179,7 +12735,7 @@ abstract class SampledData implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   Quantity get origin;
   double get period;
   double get factor;
@@ -13197,8 +12753,8 @@ abstract class $SignatureCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<Coding> type,
       @JsonKey(name: 'when') Instant whenInstant,
       Reference who,
       Reference onBehalfOf,
@@ -13231,8 +12787,8 @@ class _$SignatureCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
+      type: type == freezed ? _value.type : type as List<Coding>,
       whenInstant:
           whenInstant == freezed ? _value.whenInstant : whenInstant as Instant,
       who: who == freezed ? _value.who : who as Reference,
@@ -13266,9 +12822,9 @@ class _$Signature implements Signature {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> type;
+  final List<Coding> type;
   @override
   @JsonKey(name: 'when')
   final Instant whenInstant;
@@ -13340,7 +12896,7 @@ class _$Signature implements Signature {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -13355,7 +12911,7 @@ class _$Signature implements Signature {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -13365,7 +12921,7 @@ class _$Signature implements Signature {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -13373,7 +12929,7 @@ class _$Signature implements Signature {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -13385,13 +12941,13 @@ class _$Signature implements Signature {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -13400,53 +12956,44 @@ class _$Signature implements Signature {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -13456,7 +13003,7 @@ class _$Signature implements Signature {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -13466,42 +13013,40 @@ class _$Signature implements Signature {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -13512,8 +13057,8 @@ class _$Signature implements Signature {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -13523,17 +13068,16 @@ class _$Signature implements Signature {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -13541,18 +13085,15 @@ class _$Signature implements Signature {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -13585,7 +13126,7 @@ class _$Signature implements Signature {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -13598,7 +13139,7 @@ class _$Signature implements Signature {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -13606,14 +13147,14 @@ class _$Signature implements Signature {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -13624,12 +13165,12 @@ class _$Signature implements Signature {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -13637,43 +13178,40 @@ class _$Signature implements Signature {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -13682,7 +13220,7 @@ class _$Signature implements Signature {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -13691,35 +13229,35 @@ class _$Signature implements Signature {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -13729,8 +13267,8 @@ class _$Signature implements Signature {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -13739,16 +13277,15 @@ class _$Signature implements Signature {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -13756,18 +13293,15 @@ class _$Signature implements Signature {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -13870,8 +13404,8 @@ class _$Signature implements Signature {
 abstract class Signature implements GeneralTypes {
   const factory Signature(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> type,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<Coding> type,
       @JsonKey(name: 'when') Instant whenInstant,
       Reference who,
       Reference onBehalfOf,
@@ -13885,8 +13419,8 @@ abstract class Signature implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  List<dynamic> get type;
+  List<FhirExtension> get fhirExtension;
+  List<Coding> get type;
   @JsonKey(name: 'when')
   Instant get whenInstant;
   Reference get who;
@@ -13904,8 +13438,8 @@ abstract class $TimingCopyWith<$Res> implements $GeneralTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       List<DateTime> event,
       TimingRepeat repeat,
       CodeableConcept code});
@@ -13932,10 +13466,10 @@ class _$TimingCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       event: event == freezed ? _value.event : event as List<DateTime>,
       repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat,
       code: code == freezed ? _value.code : code as CodeableConcept,
@@ -13960,9 +13494,9 @@ class _$Timing implements Timing {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final List<DateTime> event;
   @override
@@ -14015,7 +13549,7 @@ class _$Timing implements Timing {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -14030,7 +13564,7 @@ class _$Timing implements Timing {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -14040,7 +13574,7 @@ class _$Timing implements Timing {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -14048,7 +13582,7 @@ class _$Timing implements Timing {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -14060,13 +13594,13 @@ class _$Timing implements Timing {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -14075,53 +13609,44 @@ class _$Timing implements Timing {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -14131,7 +13656,7 @@ class _$Timing implements Timing {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -14141,42 +13666,40 @@ class _$Timing implements Timing {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -14187,8 +13710,8 @@ class _$Timing implements Timing {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -14198,17 +13721,16 @@ class _$Timing implements Timing {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -14216,18 +13738,15 @@ class _$Timing implements Timing {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -14259,7 +13778,7 @@ class _$Timing implements Timing {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -14272,7 +13791,7 @@ class _$Timing implements Timing {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -14280,14 +13799,14 @@ class _$Timing implements Timing {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -14298,12 +13817,12 @@ class _$Timing implements Timing {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -14311,43 +13830,40 @@ class _$Timing implements Timing {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -14356,7 +13872,7 @@ class _$Timing implements Timing {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -14365,35 +13881,35 @@ class _$Timing implements Timing {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -14403,8 +13919,8 @@ class _$Timing implements Timing {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -14413,16 +13929,15 @@ class _$Timing implements Timing {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -14430,18 +13945,15 @@ class _$Timing implements Timing {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -14543,8 +14055,8 @@ class _$Timing implements Timing {
 abstract class Timing implements GeneralTypes {
   const factory Timing(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       List<DateTime> event,
       TimingRepeat repeat,
       CodeableConcept code}) = _$Timing;
@@ -14555,8 +14067,8 @@ abstract class Timing implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get fhirExtension;
+  List<FhirExtension> get modifierExtension;
   List<DateTime> get event;
   TimingRepeat get repeat;
   CodeableConcept get code;
@@ -14572,9 +14084,8 @@ abstract class $TimingRepeatCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Duration boundsDuration,
       Range boundsRange,
       Period boundsPeriod,
@@ -14582,18 +14093,15 @@ abstract class $TimingRepeatCopyWith<$Res>
       int countMax,
       double duration,
       double durationMax,
-      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-          TimingRepeatUnit durationUnit,
+      TimingRepeatUnit durationUnit,
       int frequency,
       int frequencyMax,
       double period,
       double periodMax,
-      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-          TimingRepeatUnit periodUnit,
+      TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
-      @JsonKey(name: 'when')
-          List<TimingRepeatWhen> timingRepeatWhenList,
+      @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
       int offset});
 }
 
@@ -14633,10 +14141,10 @@ class _$TimingRepeatCopyWithImpl<$Res> extends _$GeneralTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       boundsDuration: boundsDuration == freezed
           ? _value.boundsDuration
           : boundsDuration as Duration,
@@ -14686,12 +14194,12 @@ class _$TimingRepeat implements TimingRepeat {
       this.countMax,
       this.duration,
       this.durationMax,
-      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown) this.durationUnit,
+      this.durationUnit,
       this.frequency,
       this.frequencyMax,
       this.period,
       this.periodMax,
-      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown) this.periodUnit,
+      this.periodUnit,
       this.dayOfWeek,
       this.timeOfDay,
       @JsonKey(name: 'when') this.timingRepeatWhenList,
@@ -14704,9 +14212,9 @@ class _$TimingRepeat implements TimingRepeat {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final Duration boundsDuration;
   @override
@@ -14722,7 +14230,6 @@ class _$TimingRepeat implements TimingRepeat {
   @override
   final double durationMax;
   @override
-  @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
   final TimingRepeatUnit durationUnit;
   @override
   final int frequency;
@@ -14733,7 +14240,6 @@ class _$TimingRepeat implements TimingRepeat {
   @override
   final double periodMax;
   @override
-  @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
   final TimingRepeatUnit periodUnit;
   @override
   final List<Code> dayOfWeek;
@@ -14846,7 +14352,7 @@ class _$TimingRepeat implements TimingRepeat {
     @required
         Result address(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
             @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
             String text,
@@ -14861,7 +14367,7 @@ class _$TimingRepeat implements TimingRepeat {
         Result age(
             String id,
             @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+                List<FhirExtension> fhirExtension,
             double value,
             @JsonKey(unknownEnumValue: Comparator.unknown)
                 Comparator comparator,
@@ -14871,7 +14377,7 @@ class _$TimingRepeat implements TimingRepeat {
     @required
         Result annotation(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Reference authorReference,
             String authorString,
             FhirDateTime time,
@@ -14879,7 +14385,7 @@ class _$TimingRepeat implements TimingRepeat {
     @required
         Result attachment(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Code contentType,
             Code language,
             Base64Binary data,
@@ -14891,13 +14397,13 @@ class _$TimingRepeat implements TimingRepeat {
     @required
         Result codeableConcept(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> coding,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> coding,
             String text),
     @required
         Result coding(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirUri system,
             String version,
             Code code,
@@ -14906,53 +14412,44 @@ class _$TimingRepeat implements TimingRepeat {
     @required
         Result contactPoint(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-                ContactPointSystem system,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            ContactPointSystem system,
             String value,
-            @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-                ContactPointUse use,
+            ContactPointUse use,
             int rank,
             Period period),
     @required
         Result count(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result distance(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result duration(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result humanName(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            HumanNameUse use,
             String text,
             String family,
             List<String> given,
@@ -14962,7 +14459,7 @@ class _$TimingRepeat implements TimingRepeat {
     @required
         Result identifier(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             IdentifierUse use,
             CodeableConcept type,
             FhirUri system,
@@ -14972,42 +14469,40 @@ class _$TimingRepeat implements TimingRepeat {
     @required
         Result money(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
             Code currency),
     @required
         Result period(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             FhirDateTime start,
             FhirDateTime end),
     @required
         Result quantity(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             double value,
-            @JsonKey(unknownEnumValue: Comparator.unknown)
-                Comparator comparator,
+            Comparator comparator,
             String unit,
             FhirUri system,
             Code code),
     @required
         Result range(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity low,
             Quantity high),
     @required
         Result ratio(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity numerator,
             Quantity denominator),
     @required
         Result sampledData(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
             Quantity origin,
             double period,
             double factor,
@@ -15018,8 +14513,8 @@ class _$TimingRepeat implements TimingRepeat {
     @required
         Result signature(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> type,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<Coding> type,
             @JsonKey(name: 'when') Instant whenInstant,
             Reference who,
             Reference onBehalfOf,
@@ -15029,17 +14524,16 @@ class _$TimingRepeat implements TimingRepeat {
     @required
         Result timing(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             List<DateTime> event,
             TimingRepeat repeat,
             CodeableConcept code),
     @required
         Result timingRepeat(
             String id,
-            @JsonKey(name: 'extension')
-                List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Duration boundsDuration,
             Range boundsRange,
             Period boundsPeriod,
@@ -15047,18 +14541,15 @@ class _$TimingRepeat implements TimingRepeat {
             int countMax,
             double duration,
             double durationMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit durationUnit,
+            TimingRepeatUnit durationUnit,
             int frequency,
             int frequencyMax,
             double period,
             double periodMax,
-            @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-                TimingRepeatUnit periodUnit,
+            TimingRepeatUnit periodUnit,
             List<Code> dayOfWeek,
             List<Time> timeOfDay,
-            @JsonKey(name: 'when')
-                List<TimingRepeatWhen> timingRepeatWhenList,
+            @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
             int offset),
   }) {
     assert(address != null);
@@ -15110,7 +14601,7 @@ class _$TimingRepeat implements TimingRepeat {
   Result maybeWhen<Result extends Object>({
     Result address(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
         @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
         String text,
@@ -15123,7 +14614,7 @@ class _$TimingRepeat implements TimingRepeat {
         Period period),
     Result age(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
         String unit,
@@ -15131,14 +14622,14 @@ class _$TimingRepeat implements TimingRepeat {
         Code code),
     Result annotation(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Reference authorReference,
         String authorString,
         FhirDateTime time,
         Markdown text),
     Result attachment(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Code contentType,
         Code language,
         Base64Binary data,
@@ -15149,12 +14640,12 @@ class _$TimingRepeat implements TimingRepeat {
         FhirDateTime creation),
     Result codeableConcept(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> coding,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> coding,
         String text),
     Result coding(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirUri system,
         String version,
         Code code,
@@ -15162,43 +14653,40 @@ class _$TimingRepeat implements TimingRepeat {
         bool userSelected),
     Result contactPoint(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-            ContactPointSystem system,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        ContactPointSystem system,
         String value,
-        @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-            ContactPointUse use,
+        ContactPointUse use,
         int rank,
         Period period),
     Result count(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result distance(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result duration(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result humanName(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        HumanNameUse use,
         String text,
         String family,
         List<String> given,
@@ -15207,7 +14695,7 @@ class _$TimingRepeat implements TimingRepeat {
         Period period),
     Result identifier(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         IdentifierUse use,
         CodeableConcept type,
         FhirUri system,
@@ -15216,35 +14704,35 @@ class _$TimingRepeat implements TimingRepeat {
         Reference assigner),
     Result money(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
         Code currency),
     Result period(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         FhirDateTime start,
         FhirDateTime end),
     Result quantity(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         double value,
-        @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
+        Comparator comparator,
         String unit,
         FhirUri system,
         Code code),
     Result range(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity low,
         Quantity high),
     Result ratio(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity numerator,
         Quantity denominator),
     Result sampledData(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
         Quantity origin,
         double period,
         double factor,
@@ -15254,8 +14742,8 @@ class _$TimingRepeat implements TimingRepeat {
         String data),
     Result signature(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> type,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<Coding> type,
         @JsonKey(name: 'when') Instant whenInstant,
         Reference who,
         Reference onBehalfOf,
@@ -15264,16 +14752,15 @@ class _$TimingRepeat implements TimingRepeat {
         Base64Binary data),
     Result timing(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         List<DateTime> event,
         TimingRepeat repeat,
         CodeableConcept code),
     Result timingRepeat(
         String id,
-        @JsonKey(name: 'extension')
-            List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Duration boundsDuration,
         Range boundsRange,
         Period boundsPeriod,
@@ -15281,18 +14768,15 @@ class _$TimingRepeat implements TimingRepeat {
         int countMax,
         double duration,
         double durationMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit durationUnit,
+        TimingRepeatUnit durationUnit,
         int frequency,
         int frequencyMax,
         double period,
         double periodMax,
-        @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-            TimingRepeatUnit periodUnit,
+        TimingRepeatUnit periodUnit,
         List<Code> dayOfWeek,
         List<Time> timeOfDay,
-        @JsonKey(name: 'when')
-            List<TimingRepeatWhen> timingRepeatWhenList,
+        @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
         int offset),
     @required Result orElse(),
   }) {
@@ -15414,9 +14898,8 @@ class _$TimingRepeat implements TimingRepeat {
 abstract class TimingRepeat implements GeneralTypes {
   const factory TimingRepeat(
       {String id,
-      @JsonKey(name: 'extension')
-          List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Duration boundsDuration,
       Range boundsRange,
       Period boundsPeriod,
@@ -15424,18 +14907,15 @@ abstract class TimingRepeat implements GeneralTypes {
       int countMax,
       double duration,
       double durationMax,
-      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-          TimingRepeatUnit durationUnit,
+      TimingRepeatUnit durationUnit,
       int frequency,
       int frequencyMax,
       double period,
       double periodMax,
-      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
-          TimingRepeatUnit periodUnit,
+      TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
-      @JsonKey(name: 'when')
-          List<TimingRepeatWhen> timingRepeatWhenList,
+      @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
       int offset}) = _$TimingRepeat;
 
   factory TimingRepeat.fromJson(Map<String, dynamic> json) =
@@ -15445,8 +14925,8 @@ abstract class TimingRepeat implements GeneralTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get fhirExtension;
+  List<FhirExtension> get modifierExtension;
   Duration get boundsDuration;
   Range get boundsRange;
   Period get boundsPeriod;
@@ -15454,13 +14934,11 @@ abstract class TimingRepeat implements GeneralTypes {
   int get countMax;
   double get duration;
   double get durationMax;
-  @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
   TimingRepeatUnit get durationUnit;
   int get frequency;
   int get frequencyMax;
   double get period;
   double get periodMax;
-  @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
   TimingRepeatUnit get periodUnit;
   List<Code> get dayOfWeek;
   List<Time> get timeOfDay;

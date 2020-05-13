@@ -9,7 +9,7 @@ part 'entities1.freezed.dart';
 @freezed
 abstract class Entities1 with _$Entities1 {
   const factory Entities1.healthcareService({
-    String resourceType,
+    @Default('HealthcareService') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -71,7 +71,7 @@ abstract class Entities1 with _$Entities1 {
   }) = HealthcareServiceNotAvailable;
 
   const factory Entities1.location({
-    String resourceType,
+    @Default('Location') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -119,7 +119,7 @@ abstract class Entities1 with _$Entities1 {
   }) = LocationHoursOfOperation;
 
   const factory Entities1.organizationAffiliation({
-    String resourceType,
+    @Default('OrganizationAffiliation') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -143,7 +143,7 @@ abstract class Entities1 with _$Entities1 {
   }) = OrganizationAffiliation;
 
   const factory Entities1.organization({
-    String resourceType,
+    @Default('Organization') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -175,7 +175,7 @@ abstract class Entities1 with _$Entities1 {
   }) = OrganizationContact;
 
   const factory Entities1.endpoint({
-    String resourceType,
+    @Default('Endpoint') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

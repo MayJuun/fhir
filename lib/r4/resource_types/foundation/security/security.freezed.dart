@@ -57,19 +57,19 @@ class _$SecurityTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       Coding type,
-      List<dynamic> subtype,
+      List<Coding> subtype,
       AuditEventAction action,
       Period period,
       Instant recorded,
       AuditEventOutcome outcome,
       String outcomeDesc,
-      List<dynamic> purposeOfEvent,
-      List<dynamic> agent,
+      List<CodeableConcept> purposeOfEvent,
+      List<AuditEventAgent> agent,
       AuditEventSource source,
-      List<dynamic> entity}) {
+      List<AuditEventEntity> entity}) {
     return AuditEvent(
       resourceType: resourceType,
       id: id,
@@ -96,10 +96,10 @@ class _$SecurityTearOff {
 
   AuditEventAgent auditEventAgent(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       String altId,
       String name,
@@ -108,7 +108,7 @@ class _$SecurityTearOff {
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      List<dynamic> purposeOfUse}) {
+      List<CodeableConcept> purposeOfUse}) {
     return AuditEventAgent(
       id: id,
       extension: extension,
@@ -129,8 +129,8 @@ class _$SecurityTearOff {
 
   AuditEventNetwork auditEventNetwork(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String address,
       AuditEventNetworkType type}) {
     return AuditEventNetwork(
@@ -144,11 +144,11 @@ class _$SecurityTearOff {
 
   AuditEventSource auditEventSource(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String site,
       Reference observer,
-      List<dynamic> type}) {
+      List<Coding> type}) {
     return AuditEventSource(
       id: id,
       extension: extension,
@@ -161,17 +161,17 @@ class _$SecurityTearOff {
 
   AuditEventEntity auditEventEntity(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       Reference what,
       Coding type,
       Coding role,
       Coding lifecycle,
-      List<dynamic> securityLabel,
+      List<Coding> securityLabel,
       String name,
       String description,
       Base64Binary query,
-      List<dynamic> detail}) {
+      List<AuditEventDetail> detail}) {
     return AuditEventEntity(
       id: id,
       extension: extension,
@@ -190,8 +190,8 @@ class _$SecurityTearOff {
 
   AuditEventDetail auditEventDetail(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String type,
       Markdown valueString,
       Base64Binary valueBase64Binary}) {
@@ -213,21 +213,21 @@ class _$SecurityTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       ConsentStatus status,
       CodeableConcept scope,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference patient,
       FhirDateTime dateTime,
-      List<dynamic> performer,
-      List<dynamic> organization,
+      List<Reference> performer,
+      List<Reference> organization,
       Attachment sourceAttachment,
       Reference sourceReference,
-      List<dynamic> policy,
+      List<ConsentPolicy> policy,
       CodeableConcept policyRule,
-      List<dynamic> verification,
+      List<ConsentVerification> verification,
       ConsentProvision provision}) {
     return Consent(
       resourceType: resourceType,
@@ -258,8 +258,8 @@ class _$SecurityTearOff {
 
   ConsentPolicy consentPolicy(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       FhirUri authority,
       FhirUri uri}) {
     return ConsentPolicy(
@@ -273,8 +273,8 @@ class _$SecurityTearOff {
 
   ConsentVerification consentVerification(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       bool verified,
       Reference verifiedWith,
       FhirDateTime verificationDate}) {
@@ -290,19 +290,19 @@ class _$SecurityTearOff {
 
   ConsentProvision consentProvision(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       ConsentProvisionType type,
       Period period,
-      List<dynamic> actor,
-      List<dynamic> action,
-      List<dynamic> securityLabel,
-      List<dynamic> purpose,
-      List<dynamic> clas,
-      List<dynamic> code,
+      List<ConsentActor> actor,
+      List<CodeableConcept> action,
+      List<Coding> securityLabel,
+      List<Coding> purpose,
+      List<Coding> clas,
+      List<CodeableConcept> code,
       Period dataPeriod,
-      List<dynamic> data,
-      List<dynamic> provision}) {
+      List<ConsentData> data,
+      List<ConsentProvision> provision}) {
     return ConsentProvision(
       id: id,
       extension: extension,
@@ -323,8 +323,8 @@ class _$SecurityTearOff {
 
   ConsentActor consentActor(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept role,
       Reference reference}) {
     return ConsentActor(
@@ -338,8 +338,8 @@ class _$SecurityTearOff {
 
   ConsentData consentData(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       ConsentDataMeaning meaning,
       Reference reference}) {
     return ConsentData(
@@ -359,19 +359,19 @@ class _$SecurityTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> target,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Reference> target,
       Period occurredPeriod,
       FhirDateTime occurredDateTime,
       Instant recorded,
       List<FhirUri> policy,
       Reference location,
-      List<dynamic> reason,
+      List<CodeableConcept> reason,
       CodeableConcept activity,
-      List<dynamic> agent,
-      List<dynamic> entity,
-      List<dynamic> signature}) {
+      List<ProvenanceAgent> agent,
+      List<ProvenanceEntity> entity,
+      List<Signature> signature}) {
     return Provenance(
       resourceType: resourceType,
       id: id,
@@ -398,10 +398,10 @@ class _$SecurityTearOff {
 
   ProvenanceAgent provenanceAgent(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       Reference onBehalfOf}) {
     return ProvenanceAgent(
@@ -417,11 +417,11 @@ class _$SecurityTearOff {
 
   ProvenanceEntity provenanceEntity(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       ProvenanceEntityRole role,
       Reference what,
-      List<dynamic> agent}) {
+      List<ProvenanceAgent> agent}) {
     return ProvenanceEntity(
       id: id,
       extension: extension,
@@ -437,8 +437,8 @@ class _$SecurityTearOff {
 const $Security = _$SecurityTearOff();
 
 mixin _$Security {
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -451,26 +451,26 @@ mixin _$Security {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -479,41 +479,41 @@ mixin _$Security {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -526,61 +526,65 @@ mixin _$Security {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -592,36 +596,36 @@ mixin _$Security {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -633,25 +637,25 @@ mixin _$Security {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -660,37 +664,37 @@ mixin _$Security {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -702,56 +706,56 @@ mixin _$Security {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -762,34 +766,34 @@ mixin _$Security {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -836,7 +840,8 @@ mixin _$Security {
 abstract class $SecurityCopyWith<$Res> {
   factory $SecurityCopyWith(Security value, $Res Function(Security) then) =
       _$SecurityCopyWithImpl<$Res>;
-  $Res call({List<dynamic> extension, List<dynamic> modifierExtension});
+  $Res call(
+      {List<FhirExtension> extension, List<FhirExtension> modifierExtension});
 }
 
 class _$SecurityCopyWithImpl<$Res> implements $SecurityCopyWith<$Res> {
@@ -852,11 +857,12 @@ class _$SecurityCopyWithImpl<$Res> implements $SecurityCopyWith<$Res> {
     Object modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
     ));
   }
 }
@@ -874,19 +880,19 @@ abstract class $AuditEventCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       Coding type,
-      List<dynamic> subtype,
+      List<Coding> subtype,
       AuditEventAction action,
       Period period,
       Instant recorded,
       AuditEventOutcome outcome,
       String outcomeDesc,
-      List<dynamic> purposeOfEvent,
-      List<dynamic> agent,
+      List<CodeableConcept> purposeOfEvent,
+      List<AuditEventAgent> agent,
       AuditEventSource source,
-      List<dynamic> entity});
+      List<AuditEventEntity> entity});
 }
 
 class _$AuditEventCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -933,13 +939,14 @@ class _$AuditEventCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as Coding,
-      subtype: subtype == freezed ? _value.subtype : subtype as List<dynamic>,
+      subtype: subtype == freezed ? _value.subtype : subtype as List<Coding>,
       action: action == freezed ? _value.action : action as AuditEventAction,
       period: period == freezed ? _value.period : period as Period,
       recorded: recorded == freezed ? _value.recorded : recorded as Instant,
@@ -949,10 +956,11 @@ class _$AuditEventCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           outcomeDesc == freezed ? _value.outcomeDesc : outcomeDesc as String,
       purposeOfEvent: purposeOfEvent == freezed
           ? _value.purposeOfEvent
-          : purposeOfEvent as List<dynamic>,
-      agent: agent == freezed ? _value.agent : agent as List<dynamic>,
+          : purposeOfEvent as List<CodeableConcept>,
+      agent: agent == freezed ? _value.agent : agent as List<AuditEventAgent>,
       source: source == freezed ? _value.source : source as AuditEventSource,
-      entity: entity == freezed ? _value.entity : entity as List<dynamic>,
+      entity:
+          entity == freezed ? _value.entity : entity as List<AuditEventEntity>,
     ));
   }
 }
@@ -999,13 +1007,13 @@ class _$AuditEvent implements AuditEvent {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final Coding type;
   @override
-  final List<dynamic> subtype;
+  final List<Coding> subtype;
   @override
   final AuditEventAction action;
   @override
@@ -1017,13 +1025,13 @@ class _$AuditEvent implements AuditEvent {
   @override
   final String outcomeDesc;
   @override
-  final List<dynamic> purposeOfEvent;
+  final List<CodeableConcept> purposeOfEvent;
   @override
-  final List<dynamic> agent;
+  final List<AuditEventAgent> agent;
   @override
   final AuditEventSource source;
   @override
-  final List<dynamic> entity;
+  final List<AuditEventEntity> entity;
 
   @override
   String toString() {
@@ -1127,26 +1135,26 @@ class _$AuditEvent implements AuditEvent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -1155,41 +1163,41 @@ class _$AuditEvent implements AuditEvent {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -1202,61 +1210,65 @@ class _$AuditEvent implements AuditEvent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -1268,36 +1280,36 @@ class _$AuditEvent implements AuditEvent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -1348,25 +1360,25 @@ class _$AuditEvent implements AuditEvent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -1375,37 +1387,37 @@ class _$AuditEvent implements AuditEvent {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -1417,56 +1429,56 @@ class _$AuditEvent implements AuditEvent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -1477,34 +1489,34 @@ class _$AuditEvent implements AuditEvent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1613,19 +1625,19 @@ abstract class AuditEvent implements Security {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       Coding type,
-      List<dynamic> subtype,
+      List<Coding> subtype,
       AuditEventAction action,
       Period period,
       Instant recorded,
       AuditEventOutcome outcome,
       String outcomeDesc,
-      List<dynamic> purposeOfEvent,
-      List<dynamic> agent,
+      List<CodeableConcept> purposeOfEvent,
+      List<AuditEventAgent> agent,
       AuditEventSource source,
-      List<dynamic> entity}) = _$AuditEvent;
+      List<AuditEventEntity> entity}) = _$AuditEvent;
 
   factory AuditEvent.fromJson(Map<String, dynamic> json) =
       _$AuditEvent.fromJson;
@@ -1638,20 +1650,20 @@ abstract class AuditEvent implements Security {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   Coding get type;
-  List<dynamic> get subtype;
+  List<Coding> get subtype;
   AuditEventAction get action;
   Period get period;
   Instant get recorded;
   AuditEventOutcome get outcome;
   String get outcomeDesc;
-  List<dynamic> get purposeOfEvent;
-  List<dynamic> get agent;
+  List<CodeableConcept> get purposeOfEvent;
+  List<AuditEventAgent> get agent;
   AuditEventSource get source;
-  List<dynamic> get entity;
+  List<AuditEventEntity> get entity;
   @override
   $AuditEventCopyWith<AuditEvent> get copyWith;
 }
@@ -1664,10 +1676,10 @@ abstract class $AuditEventAgentCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       String altId,
       String name,
@@ -1676,7 +1688,7 @@ abstract class $AuditEventAgentCopyWith<$Res>
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      List<dynamic> purposeOfUse});
+      List<CodeableConcept> purposeOfUse});
 }
 
 class _$AuditEventAgentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -1707,13 +1719,14 @@ class _$AuditEventAgentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(AuditEventAgent(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      role: role == freezed ? _value.role : role as List<dynamic>,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
       who: who == freezed ? _value.who : who as Reference,
       altId: altId == freezed ? _value.altId : altId as String,
       name: name == freezed ? _value.name : name as String,
@@ -1725,7 +1738,7 @@ class _$AuditEventAgentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           network == freezed ? _value.network : network as AuditEventNetwork,
       purposeOfUse: purposeOfUse == freezed
           ? _value.purposeOfUse
-          : purposeOfUse as List<dynamic>,
+          : purposeOfUse as List<CodeableConcept>,
     ));
   }
 }
@@ -1754,13 +1767,13 @@ class _$AuditEventAgent implements AuditEventAgent {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept type;
   @override
-  final List<dynamic> role;
+  final List<CodeableConcept> role;
   @override
   final Reference who;
   @override
@@ -1778,7 +1791,7 @@ class _$AuditEventAgent implements AuditEventAgent {
   @override
   final AuditEventNetwork network;
   @override
-  final List<dynamic> purposeOfUse;
+  final List<CodeableConcept> purposeOfUse;
 
   @override
   String toString() {
@@ -1859,26 +1872,26 @@ class _$AuditEventAgent implements AuditEventAgent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -1887,41 +1900,41 @@ class _$AuditEventAgent implements AuditEventAgent {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -1934,61 +1947,65 @@ class _$AuditEventAgent implements AuditEventAgent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -2000,36 +2017,36 @@ class _$AuditEventAgent implements AuditEventAgent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -2061,25 +2078,25 @@ class _$AuditEventAgent implements AuditEventAgent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -2088,37 +2105,37 @@ class _$AuditEventAgent implements AuditEventAgent {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -2130,56 +2147,56 @@ class _$AuditEventAgent implements AuditEventAgent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -2190,34 +2207,34 @@ class _$AuditEventAgent implements AuditEventAgent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2314,10 +2331,10 @@ class _$AuditEventAgent implements AuditEventAgent {
 abstract class AuditEventAgent implements Security {
   const factory AuditEventAgent(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       String altId,
       String name,
@@ -2326,18 +2343,18 @@ abstract class AuditEventAgent implements Security {
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      List<dynamic> purposeOfUse}) = _$AuditEventAgent;
+      List<CodeableConcept> purposeOfUse}) = _$AuditEventAgent;
 
   factory AuditEventAgent.fromJson(Map<String, dynamic> json) =
       _$AuditEventAgent.fromJson;
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
-  List<dynamic> get role;
+  List<CodeableConcept> get role;
   Reference get who;
   String get altId;
   String get name;
@@ -2346,7 +2363,7 @@ abstract class AuditEventAgent implements Security {
   List<FhirUri> get policy;
   Coding get media;
   AuditEventNetwork get network;
-  List<dynamic> get purposeOfUse;
+  List<CodeableConcept> get purposeOfUse;
   @override
   $AuditEventAgentCopyWith<AuditEventAgent> get copyWith;
 }
@@ -2359,8 +2376,8 @@ abstract class $AuditEventNetworkCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String address,
       AuditEventNetworkType type});
 }
@@ -2384,11 +2401,12 @@ class _$AuditEventNetworkCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(AuditEventNetwork(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       address: address == freezed ? _value.address : address as String,
       type: type == freezed ? _value.type : type as AuditEventNetworkType,
     ));
@@ -2410,9 +2428,9 @@ class _$AuditEventNetwork implements AuditEventNetwork {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final String address;
   @override
@@ -2467,26 +2485,26 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -2495,41 +2513,41 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -2542,61 +2560,65 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -2608,36 +2630,36 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -2668,25 +2690,25 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -2695,37 +2717,37 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -2737,56 +2759,56 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -2797,34 +2819,34 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2908,8 +2930,8 @@ class _$AuditEventNetwork implements AuditEventNetwork {
 abstract class AuditEventNetwork implements Security {
   const factory AuditEventNetwork(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String address,
       AuditEventNetworkType type}) = _$AuditEventNetwork;
 
@@ -2918,9 +2940,9 @@ abstract class AuditEventNetwork implements Security {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   String get address;
   AuditEventNetworkType get type;
   @override
@@ -2935,11 +2957,11 @@ abstract class $AuditEventSourceCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String site,
       Reference observer,
-      List<dynamic> type});
+      List<Coding> type});
 }
 
 class _$AuditEventSourceCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -2962,14 +2984,15 @@ class _$AuditEventSourceCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(AuditEventSource(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       site: site == freezed ? _value.site : site as String,
       observer: observer == freezed ? _value.observer : observer as Reference,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<Coding>,
     ));
   }
 }
@@ -2990,15 +3013,15 @@ class _$AuditEventSource implements AuditEventSource {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final String site;
   @override
   final Reference observer;
   @override
-  final List<dynamic> type;
+  final List<Coding> type;
 
   @override
   String toString() {
@@ -3052,26 +3075,26 @@ class _$AuditEventSource implements AuditEventSource {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -3080,41 +3103,41 @@ class _$AuditEventSource implements AuditEventSource {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -3127,61 +3150,65 @@ class _$AuditEventSource implements AuditEventSource {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -3193,36 +3220,36 @@ class _$AuditEventSource implements AuditEventSource {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -3254,25 +3281,25 @@ class _$AuditEventSource implements AuditEventSource {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -3281,37 +3308,37 @@ class _$AuditEventSource implements AuditEventSource {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -3323,56 +3350,56 @@ class _$AuditEventSource implements AuditEventSource {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -3383,34 +3410,34 @@ class _$AuditEventSource implements AuditEventSource {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3495,23 +3522,23 @@ class _$AuditEventSource implements AuditEventSource {
 abstract class AuditEventSource implements Security {
   const factory AuditEventSource(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String site,
       Reference observer,
-      List<dynamic> type}) = _$AuditEventSource;
+      List<Coding> type}) = _$AuditEventSource;
 
   factory AuditEventSource.fromJson(Map<String, dynamic> json) =
       _$AuditEventSource.fromJson;
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   String get site;
   Reference get observer;
-  List<dynamic> get type;
+  List<Coding> get type;
   @override
   $AuditEventSourceCopyWith<AuditEventSource> get copyWith;
 }
@@ -3524,17 +3551,17 @@ abstract class $AuditEventEntityCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       Reference what,
       Coding type,
       Coding role,
       Coding lifecycle,
-      List<dynamic> securityLabel,
+      List<Coding> securityLabel,
       String name,
       String description,
       Base64Binary query,
-      List<dynamic> detail});
+      List<AuditEventDetail> detail});
 }
 
 class _$AuditEventEntityCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -3563,23 +3590,25 @@ class _$AuditEventEntityCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(AuditEventEntity(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       what: what == freezed ? _value.what : what as Reference,
       type: type == freezed ? _value.type : type as Coding,
       role: role == freezed ? _value.role : role as Coding,
       lifecycle: lifecycle == freezed ? _value.lifecycle : lifecycle as Coding,
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
-          : securityLabel as List<dynamic>,
+          : securityLabel as List<Coding>,
       name: name == freezed ? _value.name : name as String,
       description:
           description == freezed ? _value.description : description as String,
       query: query == freezed ? _value.query : query as Base64Binary,
-      detail: detail == freezed ? _value.detail : detail as List<dynamic>,
+      detail:
+          detail == freezed ? _value.detail : detail as List<AuditEventDetail>,
     ));
   }
 }
@@ -3606,9 +3635,9 @@ class _$AuditEventEntity implements AuditEventEntity {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final Reference what;
   @override
@@ -3618,7 +3647,7 @@ class _$AuditEventEntity implements AuditEventEntity {
   @override
   final Coding lifecycle;
   @override
-  final List<dynamic> securityLabel;
+  final List<Coding> securityLabel;
   @override
   final String name;
   @override
@@ -3626,7 +3655,7 @@ class _$AuditEventEntity implements AuditEventEntity {
   @override
   final Base64Binary query;
   @override
-  final List<dynamic> detail;
+  final List<AuditEventDetail> detail;
 
   @override
   String toString() {
@@ -3700,26 +3729,26 @@ class _$AuditEventEntity implements AuditEventEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -3728,41 +3757,41 @@ class _$AuditEventEntity implements AuditEventEntity {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -3775,61 +3804,65 @@ class _$AuditEventEntity implements AuditEventEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -3841,36 +3874,36 @@ class _$AuditEventEntity implements AuditEventEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -3902,25 +3935,25 @@ class _$AuditEventEntity implements AuditEventEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -3929,37 +3962,37 @@ class _$AuditEventEntity implements AuditEventEntity {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -3971,56 +4004,56 @@ class _$AuditEventEntity implements AuditEventEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -4031,34 +4064,34 @@ class _$AuditEventEntity implements AuditEventEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4143,35 +4176,35 @@ class _$AuditEventEntity implements AuditEventEntity {
 abstract class AuditEventEntity implements Security {
   const factory AuditEventEntity(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       Reference what,
       Coding type,
       Coding role,
       Coding lifecycle,
-      List<dynamic> securityLabel,
+      List<Coding> securityLabel,
       String name,
       String description,
       Base64Binary query,
-      List<dynamic> detail}) = _$AuditEventEntity;
+      List<AuditEventDetail> detail}) = _$AuditEventEntity;
 
   factory AuditEventEntity.fromJson(Map<String, dynamic> json) =
       _$AuditEventEntity.fromJson;
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   Reference get what;
   Coding get type;
   Coding get role;
   Coding get lifecycle;
-  List<dynamic> get securityLabel;
+  List<Coding> get securityLabel;
   String get name;
   String get description;
   Base64Binary get query;
-  List<dynamic> get detail;
+  List<AuditEventDetail> get detail;
   @override
   $AuditEventEntityCopyWith<AuditEventEntity> get copyWith;
 }
@@ -4184,8 +4217,8 @@ abstract class $AuditEventDetailCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String type,
       Markdown valueString,
       Base64Binary valueBase64Binary});
@@ -4211,11 +4244,12 @@ class _$AuditEventDetailCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(AuditEventDetail(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as String,
       valueString:
           valueString == freezed ? _value.valueString : valueString as Markdown,
@@ -4242,9 +4276,9 @@ class _$AuditEventDetail implements AuditEventDetail {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final String type;
   @override
@@ -4305,26 +4339,26 @@ class _$AuditEventDetail implements AuditEventDetail {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -4333,41 +4367,41 @@ class _$AuditEventDetail implements AuditEventDetail {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -4380,61 +4414,65 @@ class _$AuditEventDetail implements AuditEventDetail {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -4446,36 +4484,36 @@ class _$AuditEventDetail implements AuditEventDetail {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -4507,25 +4545,25 @@ class _$AuditEventDetail implements AuditEventDetail {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -4534,37 +4572,37 @@ class _$AuditEventDetail implements AuditEventDetail {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -4576,56 +4614,56 @@ class _$AuditEventDetail implements AuditEventDetail {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -4636,34 +4674,34 @@ class _$AuditEventDetail implements AuditEventDetail {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4748,8 +4786,8 @@ class _$AuditEventDetail implements AuditEventDetail {
 abstract class AuditEventDetail implements Security {
   const factory AuditEventDetail(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String type,
       Markdown valueString,
       Base64Binary valueBase64Binary}) = _$AuditEventDetail;
@@ -4759,9 +4797,9 @@ abstract class AuditEventDetail implements Security {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   String get type;
   Markdown get valueString;
   Base64Binary get valueBase64Binary;
@@ -4781,21 +4819,21 @@ abstract class $ConsentCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       ConsentStatus status,
       CodeableConcept scope,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference patient,
       FhirDateTime dateTime,
-      List<dynamic> performer,
-      List<dynamic> organization,
+      List<Reference> performer,
+      List<Reference> organization,
       Attachment sourceAttachment,
       Reference sourceReference,
-      List<dynamic> policy,
+      List<ConsentPolicy> policy,
       CodeableConcept policyRule,
-      List<dynamic> verification,
+      List<ConsentVerification> verification,
       ConsentProvision provision});
 }
 
@@ -4846,39 +4884,42 @@ class _$ConsentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as ConsentStatus,
       scope: scope == freezed ? _value.scope : scope as CodeableConcept,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       dateTime:
           dateTime == freezed ? _value.dateTime : dateTime as FhirDateTime,
-      performer:
-          performer == freezed ? _value.performer : performer as List<dynamic>,
+      performer: performer == freezed
+          ? _value.performer
+          : performer as List<Reference>,
       organization: organization == freezed
           ? _value.organization
-          : organization as List<dynamic>,
+          : organization as List<Reference>,
       sourceAttachment: sourceAttachment == freezed
           ? _value.sourceAttachment
           : sourceAttachment as Attachment,
       sourceReference: sourceReference == freezed
           ? _value.sourceReference
           : sourceReference as Reference,
-      policy: policy == freezed ? _value.policy : policy as List<dynamic>,
+      policy: policy == freezed ? _value.policy : policy as List<ConsentPolicy>,
       policyRule: policyRule == freezed
           ? _value.policyRule
           : policyRule as CodeableConcept,
       verification: verification == freezed
           ? _value.verification
-          : verification as List<dynamic>,
+          : verification as List<ConsentVerification>,
       provision: provision == freezed
           ? _value.provision
           : provision as ConsentProvision,
@@ -4931,35 +4972,35 @@ class _$Consent implements Consent {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final ConsentStatus status;
   @override
   final CodeableConcept scope;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final Reference patient;
   @override
   final FhirDateTime dateTime;
   @override
-  final List<dynamic> performer;
+  final List<Reference> performer;
   @override
-  final List<dynamic> organization;
+  final List<Reference> organization;
   @override
   final Attachment sourceAttachment;
   @override
   final Reference sourceReference;
   @override
-  final List<dynamic> policy;
+  final List<ConsentPolicy> policy;
   @override
   final CodeableConcept policyRule;
   @override
-  final List<dynamic> verification;
+  final List<ConsentVerification> verification;
   @override
   final ConsentProvision provision;
 
@@ -5080,26 +5121,26 @@ class _$Consent implements Consent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -5108,41 +5149,41 @@ class _$Consent implements Consent {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -5155,61 +5196,65 @@ class _$Consent implements Consent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -5221,36 +5266,36 @@ class _$Consent implements Consent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -5304,25 +5349,25 @@ class _$Consent implements Consent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -5331,37 +5376,37 @@ class _$Consent implements Consent {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -5373,56 +5418,56 @@ class _$Consent implements Consent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -5433,34 +5478,34 @@ class _$Consent implements Consent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5572,21 +5617,21 @@ abstract class Consent implements Security {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       ConsentStatus status,
       CodeableConcept scope,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference patient,
       FhirDateTime dateTime,
-      List<dynamic> performer,
-      List<dynamic> organization,
+      List<Reference> performer,
+      List<Reference> organization,
       Attachment sourceAttachment,
       Reference sourceReference,
-      List<dynamic> policy,
+      List<ConsentPolicy> policy,
       CodeableConcept policyRule,
-      List<dynamic> verification,
+      List<ConsentVerification> verification,
       ConsentProvision provision}) = _$Consent;
 
   factory Consent.fromJson(Map<String, dynamic> json) = _$Consent.fromJson;
@@ -5599,22 +5644,22 @@ abstract class Consent implements Security {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   ConsentStatus get status;
   CodeableConcept get scope;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   Reference get patient;
   FhirDateTime get dateTime;
-  List<dynamic> get performer;
-  List<dynamic> get organization;
+  List<Reference> get performer;
+  List<Reference> get organization;
   Attachment get sourceAttachment;
   Reference get sourceReference;
-  List<dynamic> get policy;
+  List<ConsentPolicy> get policy;
   CodeableConcept get policyRule;
-  List<dynamic> get verification;
+  List<ConsentVerification> get verification;
   ConsentProvision get provision;
   @override
   $ConsentCopyWith<Consent> get copyWith;
@@ -5627,8 +5672,8 @@ abstract class $ConsentPolicyCopyWith<$Res> implements $SecurityCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       FhirUri authority,
       FhirUri uri});
 }
@@ -5652,11 +5697,12 @@ class _$ConsentPolicyCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(ConsentPolicy(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       authority: authority == freezed ? _value.authority : authority as FhirUri,
       uri: uri == freezed ? _value.uri : uri as FhirUri,
     ));
@@ -5678,9 +5724,9 @@ class _$ConsentPolicy implements ConsentPolicy {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final FhirUri authority;
   @override
@@ -5735,26 +5781,26 @@ class _$ConsentPolicy implements ConsentPolicy {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -5763,41 +5809,41 @@ class _$ConsentPolicy implements ConsentPolicy {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -5810,61 +5856,65 @@ class _$ConsentPolicy implements ConsentPolicy {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -5876,36 +5926,36 @@ class _$ConsentPolicy implements ConsentPolicy {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -5936,25 +5986,25 @@ class _$ConsentPolicy implements ConsentPolicy {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -5963,37 +6013,37 @@ class _$ConsentPolicy implements ConsentPolicy {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -6005,56 +6055,56 @@ class _$ConsentPolicy implements ConsentPolicy {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -6065,34 +6115,34 @@ class _$ConsentPolicy implements ConsentPolicy {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6175,8 +6225,8 @@ class _$ConsentPolicy implements ConsentPolicy {
 abstract class ConsentPolicy implements Security {
   const factory ConsentPolicy(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       FhirUri authority,
       FhirUri uri}) = _$ConsentPolicy;
 
@@ -6185,9 +6235,9 @@ abstract class ConsentPolicy implements Security {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   FhirUri get authority;
   FhirUri get uri;
   @override
@@ -6202,8 +6252,8 @@ abstract class $ConsentVerificationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       bool verified,
       Reference verifiedWith,
       FhirDateTime verificationDate});
@@ -6230,11 +6280,12 @@ class _$ConsentVerificationCopyWithImpl<$Res>
   }) {
     return _then(ConsentVerification(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       verified: verified == freezed ? _value.verified : verified as bool,
       verifiedWith: verifiedWith == freezed
           ? _value.verifiedWith
@@ -6262,9 +6313,9 @@ class _$ConsentVerification implements ConsentVerification {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final bool verified;
   @override
@@ -6326,26 +6377,26 @@ class _$ConsentVerification implements ConsentVerification {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -6354,41 +6405,41 @@ class _$ConsentVerification implements ConsentVerification {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -6401,61 +6452,65 @@ class _$ConsentVerification implements ConsentVerification {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -6467,36 +6522,36 @@ class _$ConsentVerification implements ConsentVerification {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -6528,25 +6583,25 @@ class _$ConsentVerification implements ConsentVerification {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -6555,37 +6610,37 @@ class _$ConsentVerification implements ConsentVerification {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -6597,56 +6652,56 @@ class _$ConsentVerification implements ConsentVerification {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -6657,34 +6712,34 @@ class _$ConsentVerification implements ConsentVerification {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6769,8 +6824,8 @@ class _$ConsentVerification implements ConsentVerification {
 abstract class ConsentVerification implements Security {
   const factory ConsentVerification(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       bool verified,
       Reference verifiedWith,
       FhirDateTime verificationDate}) = _$ConsentVerification;
@@ -6780,9 +6835,9 @@ abstract class ConsentVerification implements Security {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   bool get verified;
   Reference get verifiedWith;
   FhirDateTime get verificationDate;
@@ -6798,19 +6853,19 @@ abstract class $ConsentProvisionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       ConsentProvisionType type,
       Period period,
-      List<dynamic> actor,
-      List<dynamic> action,
-      List<dynamic> securityLabel,
-      List<dynamic> purpose,
-      List<dynamic> clas,
-      List<dynamic> code,
+      List<ConsentActor> actor,
+      List<CodeableConcept> action,
+      List<Coding> securityLabel,
+      List<Coding> purpose,
+      List<Coding> clas,
+      List<CodeableConcept> code,
       Period dataPeriod,
-      List<dynamic> data,
-      List<dynamic> provision});
+      List<ConsentData> data,
+      List<ConsentProvision> provision});
 }
 
 class _$ConsentProvisionCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -6841,26 +6896,29 @@ class _$ConsentProvisionCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(ConsentProvision(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as ConsentProvisionType,
       period: period == freezed ? _value.period : period as Period,
-      actor: actor == freezed ? _value.actor : actor as List<dynamic>,
-      action: action == freezed ? _value.action : action as List<dynamic>,
+      actor: actor == freezed ? _value.actor : actor as List<ConsentActor>,
+      action:
+          action == freezed ? _value.action : action as List<CodeableConcept>,
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
-          : securityLabel as List<dynamic>,
-      purpose: purpose == freezed ? _value.purpose : purpose as List<dynamic>,
-      clas: clas == freezed ? _value.clas : clas as List<dynamic>,
-      code: code == freezed ? _value.code : code as List<dynamic>,
+          : securityLabel as List<Coding>,
+      purpose: purpose == freezed ? _value.purpose : purpose as List<Coding>,
+      clas: clas == freezed ? _value.clas : clas as List<Coding>,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>,
       dataPeriod:
           dataPeriod == freezed ? _value.dataPeriod : dataPeriod as Period,
-      data: data == freezed ? _value.data : data as List<dynamic>,
-      provision:
-          provision == freezed ? _value.provision : provision as List<dynamic>,
+      data: data == freezed ? _value.data : data as List<ConsentData>,
+      provision: provision == freezed
+          ? _value.provision
+          : provision as List<ConsentProvision>,
     ));
   }
 }
@@ -6889,31 +6947,31 @@ class _$ConsentProvision implements ConsentProvision {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final ConsentProvisionType type;
   @override
   final Period period;
   @override
-  final List<dynamic> actor;
+  final List<ConsentActor> actor;
   @override
-  final List<dynamic> action;
+  final List<CodeableConcept> action;
   @override
-  final List<dynamic> securityLabel;
+  final List<Coding> securityLabel;
   @override
-  final List<dynamic> purpose;
+  final List<Coding> purpose;
   @override
-  final List<dynamic> clas;
+  final List<Coding> clas;
   @override
-  final List<dynamic> code;
+  final List<CodeableConcept> code;
   @override
   final Period dataPeriod;
   @override
-  final List<dynamic> data;
+  final List<ConsentData> data;
   @override
-  final List<dynamic> provision;
+  final List<ConsentProvision> provision;
 
   @override
   String toString() {
@@ -6994,26 +7052,26 @@ class _$ConsentProvision implements ConsentProvision {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -7022,41 +7080,41 @@ class _$ConsentProvision implements ConsentProvision {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -7069,61 +7127,65 @@ class _$ConsentProvision implements ConsentProvision {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -7135,36 +7197,36 @@ class _$ConsentProvision implements ConsentProvision {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -7209,25 +7271,25 @@ class _$ConsentProvision implements ConsentProvision {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -7236,37 +7298,37 @@ class _$ConsentProvision implements ConsentProvision {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -7278,56 +7340,56 @@ class _$ConsentProvision implements ConsentProvision {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -7338,34 +7400,34 @@ class _$ConsentProvision implements ConsentProvision {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7463,39 +7525,39 @@ class _$ConsentProvision implements ConsentProvision {
 abstract class ConsentProvision implements Security {
   const factory ConsentProvision(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       ConsentProvisionType type,
       Period period,
-      List<dynamic> actor,
-      List<dynamic> action,
-      List<dynamic> securityLabel,
-      List<dynamic> purpose,
-      List<dynamic> clas,
-      List<dynamic> code,
+      List<ConsentActor> actor,
+      List<CodeableConcept> action,
+      List<Coding> securityLabel,
+      List<Coding> purpose,
+      List<Coding> clas,
+      List<CodeableConcept> code,
       Period dataPeriod,
-      List<dynamic> data,
-      List<dynamic> provision}) = _$ConsentProvision;
+      List<ConsentData> data,
+      List<ConsentProvision> provision}) = _$ConsentProvision;
 
   factory ConsentProvision.fromJson(Map<String, dynamic> json) =
       _$ConsentProvision.fromJson;
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   ConsentProvisionType get type;
   Period get period;
-  List<dynamic> get actor;
-  List<dynamic> get action;
-  List<dynamic> get securityLabel;
-  List<dynamic> get purpose;
-  List<dynamic> get clas;
-  List<dynamic> get code;
+  List<ConsentActor> get actor;
+  List<CodeableConcept> get action;
+  List<Coding> get securityLabel;
+  List<Coding> get purpose;
+  List<Coding> get clas;
+  List<CodeableConcept> get code;
   Period get dataPeriod;
-  List<dynamic> get data;
-  List<dynamic> get provision;
+  List<ConsentData> get data;
+  List<ConsentProvision> get provision;
   @override
   $ConsentProvisionCopyWith<ConsentProvision> get copyWith;
 }
@@ -7507,8 +7569,8 @@ abstract class $ConsentActorCopyWith<$Res> implements $SecurityCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept role,
       Reference reference});
 }
@@ -7532,11 +7594,12 @@ class _$ConsentActorCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(ConsentActor(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       role: role == freezed ? _value.role : role as CodeableConcept,
       reference:
           reference == freezed ? _value.reference : reference as Reference,
@@ -7559,9 +7622,9 @@ class _$ConsentActor implements ConsentActor {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept role;
   @override
@@ -7616,26 +7679,26 @@ class _$ConsentActor implements ConsentActor {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -7644,41 +7707,41 @@ class _$ConsentActor implements ConsentActor {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -7691,61 +7754,65 @@ class _$ConsentActor implements ConsentActor {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -7757,36 +7824,36 @@ class _$ConsentActor implements ConsentActor {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -7817,25 +7884,25 @@ class _$ConsentActor implements ConsentActor {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -7844,37 +7911,37 @@ class _$ConsentActor implements ConsentActor {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -7886,56 +7953,56 @@ class _$ConsentActor implements ConsentActor {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -7946,34 +8013,34 @@ class _$ConsentActor implements ConsentActor {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8056,8 +8123,8 @@ class _$ConsentActor implements ConsentActor {
 abstract class ConsentActor implements Security {
   const factory ConsentActor(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept role,
       Reference reference}) = _$ConsentActor;
 
@@ -8066,9 +8133,9 @@ abstract class ConsentActor implements Security {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get role;
   Reference get reference;
   @override
@@ -8082,8 +8149,8 @@ abstract class $ConsentDataCopyWith<$Res> implements $SecurityCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       ConsentDataMeaning meaning,
       Reference reference});
 }
@@ -8107,11 +8174,12 @@ class _$ConsentDataCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(ConsentData(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       meaning:
           meaning == freezed ? _value.meaning : meaning as ConsentDataMeaning,
       reference:
@@ -8135,9 +8203,9 @@ class _$ConsentData implements ConsentData {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final ConsentDataMeaning meaning;
   @override
@@ -8193,26 +8261,26 @@ class _$ConsentData implements ConsentData {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -8221,41 +8289,41 @@ class _$ConsentData implements ConsentData {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -8268,61 +8336,65 @@ class _$ConsentData implements ConsentData {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -8334,36 +8406,36 @@ class _$ConsentData implements ConsentData {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -8394,25 +8466,25 @@ class _$ConsentData implements ConsentData {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -8421,37 +8493,37 @@ class _$ConsentData implements ConsentData {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -8463,56 +8535,56 @@ class _$ConsentData implements ConsentData {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -8523,34 +8595,34 @@ class _$ConsentData implements ConsentData {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8633,8 +8705,8 @@ class _$ConsentData implements ConsentData {
 abstract class ConsentData implements Security {
   const factory ConsentData(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       ConsentDataMeaning meaning,
       Reference reference}) = _$ConsentData;
 
@@ -8643,9 +8715,9 @@ abstract class ConsentData implements Security {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   ConsentDataMeaning get meaning;
   Reference get reference;
   @override
@@ -8665,19 +8737,19 @@ abstract class $ProvenanceCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> target,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Reference> target,
       Period occurredPeriod,
       FhirDateTime occurredDateTime,
       Instant recorded,
       List<FhirUri> policy,
       Reference location,
-      List<dynamic> reason,
+      List<CodeableConcept> reason,
       CodeableConcept activity,
-      List<dynamic> agent,
-      List<dynamic> entity,
-      List<dynamic> signature});
+      List<ProvenanceAgent> agent,
+      List<ProvenanceEntity> entity,
+      List<Signature> signature});
 }
 
 class _$ProvenanceCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -8724,12 +8796,13 @@ class _$ProvenanceCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
-      target: target == freezed ? _value.target : target as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
+      target: target == freezed ? _value.target : target as List<Reference>,
       occurredPeriod: occurredPeriod == freezed
           ? _value.occurredPeriod
           : occurredPeriod as Period,
@@ -8739,13 +8812,16 @@ class _$ProvenanceCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       recorded: recorded == freezed ? _value.recorded : recorded as Instant,
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>,
       location: location == freezed ? _value.location : location as Reference,
-      reason: reason == freezed ? _value.reason : reason as List<dynamic>,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>,
       activity:
           activity == freezed ? _value.activity : activity as CodeableConcept,
-      agent: agent == freezed ? _value.agent : agent as List<dynamic>,
-      entity: entity == freezed ? _value.entity : entity as List<dynamic>,
-      signature:
-          signature == freezed ? _value.signature : signature as List<dynamic>,
+      agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent>,
+      entity:
+          entity == freezed ? _value.entity : entity as List<ProvenanceEntity>,
+      signature: signature == freezed
+          ? _value.signature
+          : signature as List<Signature>,
     ));
   }
 }
@@ -8792,11 +8868,11 @@ class _$Provenance implements Provenance {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> target;
+  final List<Reference> target;
   @override
   final Period occurredPeriod;
   @override
@@ -8808,15 +8884,15 @@ class _$Provenance implements Provenance {
   @override
   final Reference location;
   @override
-  final List<dynamic> reason;
+  final List<CodeableConcept> reason;
   @override
   final CodeableConcept activity;
   @override
-  final List<dynamic> agent;
+  final List<ProvenanceAgent> agent;
   @override
-  final List<dynamic> entity;
+  final List<ProvenanceEntity> entity;
   @override
-  final List<dynamic> signature;
+  final List<Signature> signature;
 
   @override
   String toString() {
@@ -8921,26 +8997,26 @@ class _$Provenance implements Provenance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -8949,41 +9025,41 @@ class _$Provenance implements Provenance {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -8996,61 +9072,65 @@ class _$Provenance implements Provenance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -9062,36 +9142,36 @@ class _$Provenance implements Provenance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -9142,25 +9222,25 @@ class _$Provenance implements Provenance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -9169,37 +9249,37 @@ class _$Provenance implements Provenance {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -9211,56 +9291,56 @@ class _$Provenance implements Provenance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -9271,34 +9351,34 @@ class _$Provenance implements Provenance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -9407,19 +9487,19 @@ abstract class Provenance implements Security {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> target,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Reference> target,
       Period occurredPeriod,
       FhirDateTime occurredDateTime,
       Instant recorded,
       List<FhirUri> policy,
       Reference location,
-      List<dynamic> reason,
+      List<CodeableConcept> reason,
       CodeableConcept activity,
-      List<dynamic> agent,
-      List<dynamic> entity,
-      List<dynamic> signature}) = _$Provenance;
+      List<ProvenanceAgent> agent,
+      List<ProvenanceEntity> entity,
+      List<Signature> signature}) = _$Provenance;
 
   factory Provenance.fromJson(Map<String, dynamic> json) =
       _$Provenance.fromJson;
@@ -9432,20 +9512,20 @@ abstract class Provenance implements Security {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
-  List<dynamic> get target;
+  List<FhirExtension> get modifierExtension;
+  List<Reference> get target;
   Period get occurredPeriod;
   FhirDateTime get occurredDateTime;
   Instant get recorded;
   List<FhirUri> get policy;
   Reference get location;
-  List<dynamic> get reason;
+  List<CodeableConcept> get reason;
   CodeableConcept get activity;
-  List<dynamic> get agent;
-  List<dynamic> get entity;
-  List<dynamic> get signature;
+  List<ProvenanceAgent> get agent;
+  List<ProvenanceEntity> get entity;
+  List<Signature> get signature;
   @override
   $ProvenanceCopyWith<Provenance> get copyWith;
 }
@@ -9458,10 +9538,10 @@ abstract class $ProvenanceAgentCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       Reference onBehalfOf});
 }
@@ -9487,13 +9567,14 @@ class _$ProvenanceAgentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(ProvenanceAgent(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      role: role == freezed ? _value.role : role as List<dynamic>,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
       who: who == freezed ? _value.who : who as Reference,
       onBehalfOf:
           onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference,
@@ -9518,13 +9599,13 @@ class _$ProvenanceAgent implements ProvenanceAgent {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept type;
   @override
-  final List<dynamic> role;
+  final List<CodeableConcept> role;
   @override
   final Reference who;
   @override
@@ -9585,26 +9666,26 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -9613,41 +9694,41 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -9660,61 +9741,65 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -9726,36 +9811,36 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -9787,25 +9872,25 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -9814,37 +9899,37 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -9856,56 +9941,56 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -9916,34 +10001,34 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -10027,10 +10112,10 @@ class _$ProvenanceAgent implements ProvenanceAgent {
 abstract class ProvenanceAgent implements Security {
   const factory ProvenanceAgent(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       Reference onBehalfOf}) = _$ProvenanceAgent;
 
@@ -10039,11 +10124,11 @@ abstract class ProvenanceAgent implements Security {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
-  List<dynamic> get role;
+  List<CodeableConcept> get role;
   Reference get who;
   Reference get onBehalfOf;
   @override
@@ -10058,11 +10143,11 @@ abstract class $ProvenanceEntityCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       ProvenanceEntityRole role,
       Reference what,
-      List<dynamic> agent});
+      List<ProvenanceAgent> agent});
 }
 
 class _$ProvenanceEntityCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -10085,14 +10170,15 @@ class _$ProvenanceEntityCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
   }) {
     return _then(ProvenanceEntity(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       role: role == freezed ? _value.role : role as ProvenanceEntityRole,
       what: what == freezed ? _value.what : what as Reference,
-      agent: agent == freezed ? _value.agent : agent as List<dynamic>,
+      agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent>,
     ));
   }
 }
@@ -10113,15 +10199,15 @@ class _$ProvenanceEntity implements ProvenanceEntity {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final ProvenanceEntityRole role;
   @override
   final Reference what;
   @override
-  final List<dynamic> agent;
+  final List<ProvenanceAgent> agent;
 
   @override
   String toString() {
@@ -10174,26 +10260,26 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
-            List<dynamic> agent,
+            List<CodeableConcept> purposeOfEvent,
+            List<AuditEventAgent> agent,
             AuditEventSource source,
-            List<dynamic> entity),
+            List<AuditEventEntity> entity),
     @required
         Result auditEventAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -10202,41 +10288,41 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String address,
             AuditEventNetworkType type),
     @required
         Result auditEventSource(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference what,
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
-            List<dynamic> detail),
+            List<AuditEventDetail> detail),
     @required
         Result auditEventDetail(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             String type,
             Markdown valueString,
             Base64Binary valueBase64Binary),
@@ -10249,61 +10335,65 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
-            List<dynamic> performer,
-            List<dynamic> organization,
+            List<Reference> performer,
+            List<Reference> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<dynamic> policy,
+            List<ConsentPolicy> policy,
             CodeableConcept policyRule,
-            List<dynamic> verification,
+            List<ConsentVerification> verification,
             ConsentProvision provision),
     @required
-        Result consentPolicy(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+        Result consentPolicy(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            FhirUri authority,
+            FhirUri uri),
     @required
         Result consentVerification(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool verified,
             Reference verifiedWith,
             FhirDateTime verificationDate),
     @required
         Result consentProvision(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            List<dynamic> clas,
-            List<dynamic> code,
+            List<ConsentActor> actor,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
-            List<dynamic> data,
-            List<dynamic> provision),
+            List<ConsentData> data,
+            List<ConsentProvision> provision),
     @required
         Result consentActor(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept role,
             Reference reference),
     @required
         Result consentData(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ConsentDataMeaning meaning,
             Reference reference),
     @required
@@ -10315,36 +10405,36 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> target,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Reference> target,
             Period occurredPeriod,
             FhirDateTime occurredDateTime,
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
-            List<dynamic> agent,
-            List<dynamic> entity,
-            List<dynamic> signature),
+            List<ProvenanceAgent> agent,
+            List<ProvenanceEntity> entity,
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
         Result provenanceEntity(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<dynamic> agent),
+            List<ProvenanceAgent> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -10376,25 +10466,25 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
-        List<dynamic> agent,
+        List<CodeableConcept> purposeOfEvent,
+        List<AuditEventAgent> agent,
         AuditEventSource source,
-        List<dynamic> entity),
+        List<AuditEventEntity> entity),
     Result auditEventAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -10403,37 +10493,37 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String address,
         AuditEventNetworkType type),
     Result auditEventSource(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference what,
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
-        List<dynamic> detail),
+        List<AuditEventDetail> detail),
     Result auditEventDetail(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         String type,
         Markdown valueString,
         Base64Binary valueBase64Binary),
@@ -10445,56 +10535,56 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
-        List<dynamic> performer,
-        List<dynamic> organization,
+        List<Reference> performer,
+        List<Reference> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<dynamic> policy,
+        List<ConsentPolicy> policy,
         CodeableConcept policyRule,
-        List<dynamic> verification,
+        List<ConsentVerification> verification,
         ConsentProvision provision),
-    Result consentPolicy(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
+    Result consentPolicy(String id, List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension, FhirUri authority, FhirUri uri),
     Result consentVerification(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool verified,
         Reference verifiedWith,
         FhirDateTime verificationDate),
     Result consentProvision(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        List<dynamic> clas,
-        List<dynamic> code,
+        List<ConsentActor> actor,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
-        List<dynamic> data,
-        List<dynamic> provision),
+        List<ConsentData> data,
+        List<ConsentProvision> provision),
     Result consentActor(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept role,
         Reference reference),
     Result consentData(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ConsentDataMeaning meaning,
         Reference reference),
     Result provenance(
@@ -10505,34 +10595,34 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> target,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Reference> target,
         Period occurredPeriod,
         FhirDateTime occurredDateTime,
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
-        List<dynamic> agent,
-        List<dynamic> entity,
-        List<dynamic> signature),
+        List<ProvenanceAgent> agent,
+        List<ProvenanceEntity> entity,
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<dynamic> agent),
+        List<ProvenanceAgent> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -10617,23 +10707,23 @@ class _$ProvenanceEntity implements ProvenanceEntity {
 abstract class ProvenanceEntity implements Security {
   const factory ProvenanceEntity(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       ProvenanceEntityRole role,
       Reference what,
-      List<dynamic> agent}) = _$ProvenanceEntity;
+      List<ProvenanceAgent> agent}) = _$ProvenanceEntity;
 
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =
       _$ProvenanceEntity.fromJson;
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   ProvenanceEntityRole get role;
   Reference get what;
-  List<dynamic> get agent;
+  List<ProvenanceAgent> get agent;
   @override
   $ProvenanceEntityCopyWith<ProvenanceEntity> get copyWith;
 }

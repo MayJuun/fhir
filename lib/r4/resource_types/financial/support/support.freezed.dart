@@ -59,9 +59,9 @@ class _$SupportTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       FhirDateTime created,
       Reference insurer,
@@ -95,9 +95,9 @@ class _$SupportTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       Reference request,
       EnrollmentResponseOutcome outcome,
@@ -133,8 +133,8 @@ class _$SupportTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<Identifier> identifier,
       Code status,
       List<String> purpose,
       Reference patient,
@@ -146,10 +146,10 @@ class _$SupportTearOff {
       CoverageEligibilityResponseOutcome outcome,
       String disposition,
       Reference insurer,
-      List<dynamic> insurance,
+      List<CoverageEligibilityResponseInsurance> insurance,
       String preAuthRef,
       CodeableConcept form,
-      List<dynamic> error}) {
+      List<CoverageEligibilityResponseError> error}) {
     return CoverageEligibilityResponse(
       resourceType: resourceType,
       id: id,
@@ -180,11 +180,11 @@ class _$SupportTearOff {
 
   CoverageEligibilityResponseInsurance coverageEligibilityResponseInsurance(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       Reference coverage,
       bool inforce,
-      List<dynamic> item}) {
+      List<CoverageEligibilityResponseItem> item}) {
     return CoverageEligibilityResponseInsurance(
       id: id,
       extension: extension,
@@ -197,11 +197,11 @@ class _$SupportTearOff {
 
   CoverageEligibilityResponseItem coverageEligibilityResponseItem(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       bool excluded,
       String name,
@@ -209,9 +209,9 @@ class _$SupportTearOff {
       CodeableConcept network,
       CodeableConcept unit,
       CodeableConcept term,
-      List<dynamic> benefit,
+      List<CoverageEligibilityResponseBenefit> benefit,
       bool authorizationRequired,
-      List<dynamic> authorizationSupporting,
+      List<CodeableConcept> authorizationSupporting,
       FhirUri authorizationUrl}) {
     return CoverageEligibilityResponseItem(
       id: id,
@@ -236,8 +236,8 @@ class _$SupportTearOff {
 
   CoverageEligibilityResponseBenefit coverageEligibilityResponseBenefit(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       int allowedUnsignedInt,
       String allowedString,
@@ -261,8 +261,8 @@ class _$SupportTearOff {
 
   CoverageEligibilityResponseError coverageEligibilityResponseError(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept code}) {
     return CoverageEligibilityResponseError(
       id: id,
@@ -280,9 +280,9 @@ class _$SupportTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept priority,
       List<String> purpose,
@@ -294,9 +294,9 @@ class _$SupportTearOff {
       Reference provider,
       Reference insurer,
       Reference facility,
-      List<dynamic> supportingInfo,
-      List<dynamic> insurance,
-      List<dynamic> item}) {
+      List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+      List<CoverageEligibilityRequestInsurance> insurance,
+      List<CoverageEligibilityRequestItem> item}) {
     return CoverageEligibilityRequest(
       resourceType: resourceType,
       id: id,
@@ -328,8 +328,8 @@ class _$SupportTearOff {
   CoverageEligibilityRequestSupportingInfo
       coverageEligibilityRequestSupportingInfo(
           {String id,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
+          List<FhirExtension> extension,
+          List<FhirExtension> modifierExtension,
           int sequence,
           Reference information,
           bool appliesToAll}) {
@@ -345,8 +345,8 @@ class _$SupportTearOff {
 
   CoverageEligibilityRequestInsurance coverageEligibilityRequestInsurance(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       bool focal,
       Reference coverage,
       String businessArrangement}) {
@@ -362,18 +362,18 @@ class _$SupportTearOff {
 
   CoverageEligibilityRequestItem coverageEligibilityRequestItem(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       List<int> supportingInfoSequence,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       Quantity quantity,
       Money unitPrice,
       Reference facility,
-      List<dynamic> diagnosis,
-      List<dynamic> detail}) {
+      List<CoverageEligibilityRequestDiagnosis> diagnosis,
+      List<Reference> detail}) {
     return CoverageEligibilityRequestItem(
       id: id,
       extension: extension,
@@ -393,8 +393,8 @@ class _$SupportTearOff {
 
   CoverageEligibilityRequestDiagnosis coverageEligibilityRequestDiagnosis(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference}) {
     return CoverageEligibilityRequestDiagnosis(
@@ -414,9 +414,9 @@ class _$SupportTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       Reference policyHolder,
@@ -426,13 +426,13 @@ class _$SupportTearOff {
       String dependent,
       CodeableConcept relationship,
       Period period,
-      List<dynamic> payor,
-      List<dynamic> clas,
+      List<Reference> payor,
+      List<CoverageClass> clas,
       int order,
       String network,
-      List<dynamic> costToBeneficiary,
+      List<CoverageCostToBeneficiary> costToBeneficiary,
       bool subrogation,
-      List<dynamic> contract}) {
+      List<Reference> contract}) {
     return Coverage(
       resourceType: resourceType,
       id: id,
@@ -465,8 +465,8 @@ class _$SupportTearOff {
 
   CoverageClass coverageClass(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       String value,
       String name}) {
@@ -482,12 +482,12 @@ class _$SupportTearOff {
 
   CoverageCostToBeneficiary coverageCostToBeneficiary(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       Quantity valueQuantity,
       Money valueMoney,
-      List<dynamic> exception}) {
+      List<CoverageException> exception}) {
     return CoverageCostToBeneficiary(
       id: id,
       extension: extension,
@@ -501,8 +501,8 @@ class _$SupportTearOff {
 
   CoverageException coverageException(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       Period period}) {
     return CoverageException(
@@ -519,7 +519,7 @@ class _$SupportTearOff {
 const $Support = _$SupportTearOff();
 
 mixin _$Support {
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -532,9 +532,9 @@ mixin _$Support {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -549,9 +549,9 @@ mixin _$Support {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -568,8 +568,8 @@ mixin _$Support {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -581,26 +581,26 @@ mixin _$Support {
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -608,15 +608,15 @@ mixin _$Support {
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -627,8 +627,8 @@ mixin _$Support {
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -639,9 +639,9 @@ mixin _$Support {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -653,45 +653,45 @@ mixin _$Support {
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -703,9 +703,9 @@ mixin _$Support {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -715,35 +715,35 @@ mixin _$Support {
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   });
@@ -757,9 +757,9 @@ mixin _$Support {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -773,9 +773,9 @@ mixin _$Support {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -791,8 +791,8 @@ mixin _$Support {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -804,24 +804,24 @@ mixin _$Support {
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -829,14 +829,14 @@ mixin _$Support {
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -844,8 +844,11 @@ mixin _$Support {
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -854,9 +857,9 @@ mixin _$Support {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -868,41 +871,41 @@ mixin _$Support {
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -913,9 +916,9 @@ mixin _$Support {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -925,30 +928,34 @@ mixin _$Support {
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -1022,7 +1029,7 @@ mixin _$Support {
 abstract class $SupportCopyWith<$Res> {
   factory $SupportCopyWith(Support value, $Res Function(Support) then) =
       _$SupportCopyWithImpl<$Res>;
-  $Res call({List<dynamic> extension});
+  $Res call({List<FhirExtension> extension});
 }
 
 class _$SupportCopyWithImpl<$Res> implements $SupportCopyWith<$Res> {
@@ -1037,8 +1044,9 @@ class _$SupportCopyWithImpl<$Res> implements $SupportCopyWith<$Res> {
     Object extension = freezed,
   }) {
     return _then(_value.copyWith(
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
     ));
   }
 }
@@ -1057,9 +1065,9 @@ abstract class $EnrollmentRequestCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       FhirDateTime created,
       Reference insurer,
@@ -1109,14 +1117,15 @@ class _$EnrollmentRequestCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       created: created == freezed ? _value.created : created as FhirDateTime,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
@@ -1166,11 +1175,11 @@ class _$EnrollmentRequest implements EnrollmentRequest {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -1275,9 +1284,9 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -1292,9 +1301,9 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -1311,8 +1320,8 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -1324,26 +1333,26 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -1351,15 +1360,15 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -1370,8 +1379,8 @@ class _$EnrollmentRequest implements EnrollmentRequest {
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -1382,9 +1391,9 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -1396,45 +1405,45 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -1446,9 +1455,9 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -1458,35 +1467,35 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -1536,9 +1545,9 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -1552,9 +1561,9 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -1570,8 +1579,8 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -1583,24 +1592,24 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -1608,14 +1617,14 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -1623,8 +1632,11 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -1633,9 +1645,9 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -1647,41 +1659,41 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -1692,9 +1704,9 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -1704,30 +1716,34 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1861,9 +1877,9 @@ abstract class EnrollmentRequest implements Support {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       FhirDateTime created,
       Reference insurer,
@@ -1882,9 +1898,9 @@ abstract class EnrollmentRequest implements Support {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   Code get status;
   FhirDateTime get created;
   Reference get insurer;
@@ -1908,9 +1924,9 @@ abstract class $EnrollmentResponseCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       Reference request,
       EnrollmentResponseOutcome outcome,
@@ -1960,14 +1976,15 @@ class _$EnrollmentResponseCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       request: request == freezed ? _value.request : request as Reference,
       outcome: outcome == freezed
@@ -2022,11 +2039,11 @@ class _$EnrollmentResponse implements EnrollmentResponse {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -2134,9 +2151,9 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -2151,9 +2168,9 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -2170,8 +2187,8 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -2183,26 +2200,26 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -2210,15 +2227,15 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -2229,8 +2246,8 @@ class _$EnrollmentResponse implements EnrollmentResponse {
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -2241,9 +2258,9 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -2255,45 +2272,45 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -2305,9 +2322,9 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -2317,35 +2334,35 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -2395,9 +2412,9 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -2411,9 +2428,9 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -2429,8 +2446,8 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -2442,24 +2459,24 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -2467,14 +2484,14 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -2482,8 +2499,11 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -2492,9 +2512,9 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -2506,41 +2526,41 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -2551,9 +2571,9 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -2563,30 +2583,34 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2719,9 +2743,9 @@ abstract class EnrollmentResponse implements Support {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       Reference request,
       EnrollmentResponseOutcome outcome,
@@ -2740,9 +2764,9 @@ abstract class EnrollmentResponse implements Support {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   Code get status;
   Reference get request;
   EnrollmentResponseOutcome get outcome;
@@ -2769,8 +2793,8 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<Identifier> identifier,
       Code status,
       List<String> purpose,
       Reference patient,
@@ -2782,10 +2806,10 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res>
       CoverageEligibilityResponseOutcome outcome,
       String disposition,
       Reference insurer,
-      List<dynamic> insurance,
+      List<CoverageEligibilityResponseInsurance> insurance,
       String preAuthRef,
       CodeableConcept form,
-      List<dynamic> error});
+      List<CoverageEligibilityResponseError> error});
 }
 
 class _$CoverageEligibilityResponseCopyWithImpl<$Res>
@@ -2839,11 +2863,12 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       purpose: purpose == freezed ? _value.purpose : purpose as List<String>,
       patient: patient == freezed ? _value.patient : patient as Reference,
@@ -2862,12 +2887,15 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
-      insurance:
-          insurance == freezed ? _value.insurance : insurance as List<dynamic>,
+      insurance: insurance == freezed
+          ? _value.insurance
+          : insurance as List<CoverageEligibilityResponseInsurance>,
       preAuthRef:
           preAuthRef == freezed ? _value.preAuthRef : preAuthRef as String,
       form: form == freezed ? _value.form : form as CodeableConcept,
-      error: error == freezed ? _value.error : error as List<dynamic>,
+      error: error == freezed
+          ? _value.error
+          : error as List<CoverageEligibilityResponseError>,
     ));
   }
 }
@@ -2918,9 +2946,9 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -2944,13 +2972,13 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
   @override
   final Reference insurer;
   @override
-  final List<dynamic> insurance;
+  final List<CoverageEligibilityResponseInsurance> insurance;
   @override
   final String preAuthRef;
   @override
   final CodeableConcept form;
   @override
-  final List<dynamic> error;
+  final List<CoverageEligibilityResponseError> error;
 
   @override
   String toString() {
@@ -3074,9 +3102,9 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -3091,9 +3119,9 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -3110,8 +3138,8 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -3123,26 +3151,26 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -3150,15 +3178,15 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -3169,8 +3197,8 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -3181,9 +3209,9 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -3195,45 +3223,45 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -3245,9 +3273,9 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -3257,35 +3285,35 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -3343,9 +3371,9 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -3359,9 +3387,9 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -3377,8 +3405,8 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -3390,24 +3418,24 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -3415,14 +3443,14 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -3430,8 +3458,11 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -3440,9 +3471,9 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -3454,41 +3485,41 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -3499,9 +3530,9 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -3511,30 +3542,34 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3669,30 +3704,31 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
 
 abstract class CoverageEligibilityResponse implements Support {
   const factory CoverageEligibilityResponse(
-      {String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> identifier,
-      Code status,
-      List<String> purpose,
-      Reference patient,
-      Date servicedDate,
-      Period servicedPeriod,
-      FhirDateTime created,
-      Reference requestor,
-      Reference request,
-      CoverageEligibilityResponseOutcome outcome,
-      String disposition,
-      Reference insurer,
-      List<dynamic> insurance,
-      String preAuthRef,
-      CodeableConcept form,
-      List<dynamic> error}) = _$CoverageEligibilityResponse;
+          {String resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          Code language,
+          Narrative text,
+          List<dynamic> contained,
+          List<FhirExtension> extension,
+          List<Identifier> identifier,
+          Code status,
+          List<String> purpose,
+          Reference patient,
+          Date servicedDate,
+          Period servicedPeriod,
+          FhirDateTime created,
+          Reference requestor,
+          Reference request,
+          CoverageEligibilityResponseOutcome outcome,
+          String disposition,
+          Reference insurer,
+          List<CoverageEligibilityResponseInsurance> insurance,
+          String preAuthRef,
+          CodeableConcept form,
+          List<CoverageEligibilityResponseError> error}) =
+      _$CoverageEligibilityResponse;
 
   factory CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$CoverageEligibilityResponse.fromJson;
@@ -3705,8 +3741,8 @@ abstract class CoverageEligibilityResponse implements Support {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get extension;
+  List<Identifier> get identifier;
   Code get status;
   List<String> get purpose;
   Reference get patient;
@@ -3718,10 +3754,10 @@ abstract class CoverageEligibilityResponse implements Support {
   CoverageEligibilityResponseOutcome get outcome;
   String get disposition;
   Reference get insurer;
-  List<dynamic> get insurance;
+  List<CoverageEligibilityResponseInsurance> get insurance;
   String get preAuthRef;
   CodeableConcept get form;
-  List<dynamic> get error;
+  List<CoverageEligibilityResponseError> get error;
   @override
   $CoverageEligibilityResponseCopyWith<CoverageEligibilityResponse>
       get copyWith;
@@ -3736,11 +3772,11 @@ abstract class $CoverageEligibilityResponseInsuranceCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       Reference coverage,
       bool inforce,
-      List<dynamic> item});
+      List<CoverageEligibilityResponseItem> item});
 }
 
 class _$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
@@ -3766,14 +3802,17 @@ class _$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
   }) {
     return _then(CoverageEligibilityResponseInsurance(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       coverage: coverage == freezed ? _value.coverage : coverage as Reference,
       inforce: inforce == freezed ? _value.inforce : inforce as bool,
-      item: item == freezed ? _value.item : item as List<dynamic>,
+      item: item == freezed
+          ? _value.item
+          : item as List<CoverageEligibilityResponseItem>,
     ));
   }
 }
@@ -3796,15 +3835,15 @@ class _$CoverageEligibilityResponseInsurance
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final Reference coverage;
   @override
   final bool inforce;
   @override
-  final List<dynamic> item;
+  final List<CoverageEligibilityResponseItem> item;
 
   @override
   String toString() {
@@ -3861,9 +3900,9 @@ class _$CoverageEligibilityResponseInsurance
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -3878,9 +3917,9 @@ class _$CoverageEligibilityResponseInsurance
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -3897,8 +3936,8 @@ class _$CoverageEligibilityResponseInsurance
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -3910,26 +3949,26 @@ class _$CoverageEligibilityResponseInsurance
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -3937,15 +3976,15 @@ class _$CoverageEligibilityResponseInsurance
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -3956,8 +3995,8 @@ class _$CoverageEligibilityResponseInsurance
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -3968,9 +4007,9 @@ class _$CoverageEligibilityResponseInsurance
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -3982,45 +4021,45 @@ class _$CoverageEligibilityResponseInsurance
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -4032,9 +4071,9 @@ class _$CoverageEligibilityResponseInsurance
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -4044,35 +4083,35 @@ class _$CoverageEligibilityResponseInsurance
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -4107,9 +4146,9 @@ class _$CoverageEligibilityResponseInsurance
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -4123,9 +4162,9 @@ class _$CoverageEligibilityResponseInsurance
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -4141,8 +4180,8 @@ class _$CoverageEligibilityResponseInsurance
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -4154,24 +4193,24 @@ class _$CoverageEligibilityResponseInsurance
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -4179,14 +4218,14 @@ class _$CoverageEligibilityResponseInsurance
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -4194,8 +4233,11 @@ class _$CoverageEligibilityResponseInsurance
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -4204,9 +4246,9 @@ class _$CoverageEligibilityResponseInsurance
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -4218,41 +4260,41 @@ class _$CoverageEligibilityResponseInsurance
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -4263,9 +4305,9 @@ class _$CoverageEligibilityResponseInsurance
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -4275,30 +4317,34 @@ class _$CoverageEligibilityResponseInsurance
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4410,12 +4456,13 @@ class _$CoverageEligibilityResponseInsurance
 
 abstract class CoverageEligibilityResponseInsurance implements Support {
   const factory CoverageEligibilityResponseInsurance(
-      {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      Reference coverage,
-      bool inforce,
-      List<dynamic> item}) = _$CoverageEligibilityResponseInsurance;
+          {String id,
+          List<FhirExtension> extension,
+          List<FhirExtension> modifierExtension,
+          Reference coverage,
+          bool inforce,
+          List<CoverageEligibilityResponseItem> item}) =
+      _$CoverageEligibilityResponseInsurance;
 
   factory CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =
@@ -4423,11 +4470,11 @@ abstract class CoverageEligibilityResponseInsurance implements Support {
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   Reference get coverage;
   bool get inforce;
-  List<dynamic> get item;
+  List<CoverageEligibilityResponseItem> get item;
   @override
   $CoverageEligibilityResponseInsuranceCopyWith<
       CoverageEligibilityResponseInsurance> get copyWith;
@@ -4442,11 +4489,11 @@ abstract class $CoverageEligibilityResponseItemCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       bool excluded,
       String name,
@@ -4454,9 +4501,9 @@ abstract class $CoverageEligibilityResponseItemCopyWith<$Res>
       CodeableConcept network,
       CodeableConcept unit,
       CodeableConcept term,
-      List<dynamic> benefit,
+      List<CoverageEligibilityResponseBenefit> benefit,
       bool authorizationRequired,
-      List<dynamic> authorizationSupporting,
+      List<CodeableConcept> authorizationSupporting,
       FhirUri authorizationUrl});
 }
 
@@ -4494,18 +4541,20 @@ class _$CoverageEligibilityResponseItemCopyWithImpl<$Res>
   }) {
     return _then(CoverageEligibilityResponseItem(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept,
-      modifier:
-          modifier == freezed ? _value.modifier : modifier as List<dynamic>,
+      modifier: modifier == freezed
+          ? _value.modifier
+          : modifier as List<CodeableConcept>,
       provider: provider == freezed ? _value.provider : provider as Reference,
       excluded: excluded == freezed ? _value.excluded : excluded as bool,
       name: name == freezed ? _value.name : name as String,
@@ -4514,13 +4563,15 @@ class _$CoverageEligibilityResponseItemCopyWithImpl<$Res>
       network: network == freezed ? _value.network : network as CodeableConcept,
       unit: unit == freezed ? _value.unit : unit as CodeableConcept,
       term: term == freezed ? _value.term : term as CodeableConcept,
-      benefit: benefit == freezed ? _value.benefit : benefit as List<dynamic>,
+      benefit: benefit == freezed
+          ? _value.benefit
+          : benefit as List<CoverageEligibilityResponseBenefit>,
       authorizationRequired: authorizationRequired == freezed
           ? _value.authorizationRequired
           : authorizationRequired as bool,
       authorizationSupporting: authorizationSupporting == freezed
           ? _value.authorizationSupporting
-          : authorizationSupporting as List<dynamic>,
+          : authorizationSupporting as List<CodeableConcept>,
       authorizationUrl: authorizationUrl == freezed
           ? _value.authorizationUrl
           : authorizationUrl as FhirUri,
@@ -4557,15 +4608,15 @@ class _$CoverageEligibilityResponseItem
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept category;
   @override
   final CodeableConcept productOrService;
   @override
-  final List<dynamic> modifier;
+  final List<CodeableConcept> modifier;
   @override
   final Reference provider;
   @override
@@ -4581,11 +4632,11 @@ class _$CoverageEligibilityResponseItem
   @override
   final CodeableConcept term;
   @override
-  final List<dynamic> benefit;
+  final List<CoverageEligibilityResponseBenefit> benefit;
   @override
   final bool authorizationRequired;
   @override
-  final List<dynamic> authorizationSupporting;
+  final List<CodeableConcept> authorizationSupporting;
   @override
   final FhirUri authorizationUrl;
 
@@ -4686,9 +4737,9 @@ class _$CoverageEligibilityResponseItem
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -4703,9 +4754,9 @@ class _$CoverageEligibilityResponseItem
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -4722,8 +4773,8 @@ class _$CoverageEligibilityResponseItem
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -4735,26 +4786,26 @@ class _$CoverageEligibilityResponseItem
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -4762,15 +4813,15 @@ class _$CoverageEligibilityResponseItem
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -4781,8 +4832,8 @@ class _$CoverageEligibilityResponseItem
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -4793,9 +4844,9 @@ class _$CoverageEligibilityResponseItem
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -4807,45 +4858,45 @@ class _$CoverageEligibilityResponseItem
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -4857,9 +4908,9 @@ class _$CoverageEligibilityResponseItem
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -4869,35 +4920,35 @@ class _$CoverageEligibilityResponseItem
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -4948,9 +4999,9 @@ class _$CoverageEligibilityResponseItem
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -4964,9 +5015,9 @@ class _$CoverageEligibilityResponseItem
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -4982,8 +5033,8 @@ class _$CoverageEligibilityResponseItem
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -4995,24 +5046,24 @@ class _$CoverageEligibilityResponseItem
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -5020,14 +5071,14 @@ class _$CoverageEligibilityResponseItem
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -5035,8 +5086,11 @@ class _$CoverageEligibilityResponseItem
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -5045,9 +5099,9 @@ class _$CoverageEligibilityResponseItem
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -5059,41 +5113,41 @@ class _$CoverageEligibilityResponseItem
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -5104,9 +5158,9 @@ class _$CoverageEligibilityResponseItem
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -5116,30 +5170,34 @@ class _$CoverageEligibilityResponseItem
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5268,11 +5326,11 @@ class _$CoverageEligibilityResponseItem
 abstract class CoverageEligibilityResponseItem implements Support {
   const factory CoverageEligibilityResponseItem(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       bool excluded,
       String name,
@@ -5280,9 +5338,9 @@ abstract class CoverageEligibilityResponseItem implements Support {
       CodeableConcept network,
       CodeableConcept unit,
       CodeableConcept term,
-      List<dynamic> benefit,
+      List<CoverageEligibilityResponseBenefit> benefit,
       bool authorizationRequired,
-      List<dynamic> authorizationSupporting,
+      List<CodeableConcept> authorizationSupporting,
       FhirUri authorizationUrl}) = _$CoverageEligibilityResponseItem;
 
   factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =
@@ -5290,11 +5348,11 @@ abstract class CoverageEligibilityResponseItem implements Support {
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get category;
   CodeableConcept get productOrService;
-  List<dynamic> get modifier;
+  List<CodeableConcept> get modifier;
   Reference get provider;
   bool get excluded;
   String get name;
@@ -5302,9 +5360,9 @@ abstract class CoverageEligibilityResponseItem implements Support {
   CodeableConcept get network;
   CodeableConcept get unit;
   CodeableConcept get term;
-  List<dynamic> get benefit;
+  List<CoverageEligibilityResponseBenefit> get benefit;
   bool get authorizationRequired;
-  List<dynamic> get authorizationSupporting;
+  List<CodeableConcept> get authorizationSupporting;
   FhirUri get authorizationUrl;
   @override
   $CoverageEligibilityResponseItemCopyWith<CoverageEligibilityResponseItem>
@@ -5320,8 +5378,8 @@ abstract class $CoverageEligibilityResponseBenefitCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       int allowedUnsignedInt,
       String allowedString,
@@ -5358,11 +5416,12 @@ class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
   }) {
     return _then(CoverageEligibilityResponseBenefit(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       allowedUnsignedInt: allowedUnsignedInt == freezed
           ? _value.allowedUnsignedInt
@@ -5404,9 +5463,9 @@ class _$CoverageEligibilityResponseBenefit
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -5493,9 +5552,9 @@ class _$CoverageEligibilityResponseBenefit
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -5510,9 +5569,9 @@ class _$CoverageEligibilityResponseBenefit
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -5529,8 +5588,8 @@ class _$CoverageEligibilityResponseBenefit
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -5542,26 +5601,26 @@ class _$CoverageEligibilityResponseBenefit
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -5569,15 +5628,15 @@ class _$CoverageEligibilityResponseBenefit
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -5588,8 +5647,8 @@ class _$CoverageEligibilityResponseBenefit
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -5600,9 +5659,9 @@ class _$CoverageEligibilityResponseBenefit
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -5614,45 +5673,45 @@ class _$CoverageEligibilityResponseBenefit
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -5664,9 +5723,9 @@ class _$CoverageEligibilityResponseBenefit
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -5676,35 +5735,35 @@ class _$CoverageEligibilityResponseBenefit
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -5748,9 +5807,9 @@ class _$CoverageEligibilityResponseBenefit
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -5764,9 +5823,9 @@ class _$CoverageEligibilityResponseBenefit
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -5782,8 +5841,8 @@ class _$CoverageEligibilityResponseBenefit
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -5795,24 +5854,24 @@ class _$CoverageEligibilityResponseBenefit
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -5820,14 +5879,14 @@ class _$CoverageEligibilityResponseBenefit
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -5835,8 +5894,11 @@ class _$CoverageEligibilityResponseBenefit
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -5845,9 +5907,9 @@ class _$CoverageEligibilityResponseBenefit
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -5859,41 +5921,41 @@ class _$CoverageEligibilityResponseBenefit
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -5904,9 +5966,9 @@ class _$CoverageEligibilityResponseBenefit
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -5916,30 +5978,34 @@ class _$CoverageEligibilityResponseBenefit
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6061,8 +6127,8 @@ class _$CoverageEligibilityResponseBenefit
 abstract class CoverageEligibilityResponseBenefit implements Support {
   const factory CoverageEligibilityResponseBenefit(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       int allowedUnsignedInt,
       String allowedString,
@@ -6077,8 +6143,8 @@ abstract class CoverageEligibilityResponseBenefit implements Support {
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
   int get allowedUnsignedInt;
   String get allowedString;
@@ -6100,8 +6166,8 @@ abstract class $CoverageEligibilityResponseErrorCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept code});
 }
 
@@ -6126,11 +6192,12 @@ class _$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
   }) {
     return _then(CoverageEligibilityResponseError(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as CodeableConcept,
     ));
   }
@@ -6149,9 +6216,9 @@ class _$CoverageEligibilityResponseError
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept code;
 
@@ -6201,9 +6268,9 @@ class _$CoverageEligibilityResponseError
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -6218,9 +6285,9 @@ class _$CoverageEligibilityResponseError
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -6237,8 +6304,8 @@ class _$CoverageEligibilityResponseError
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -6250,26 +6317,26 @@ class _$CoverageEligibilityResponseError
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -6277,15 +6344,15 @@ class _$CoverageEligibilityResponseError
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -6296,8 +6363,8 @@ class _$CoverageEligibilityResponseError
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -6308,9 +6375,9 @@ class _$CoverageEligibilityResponseError
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -6322,45 +6389,45 @@ class _$CoverageEligibilityResponseError
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -6372,9 +6439,9 @@ class _$CoverageEligibilityResponseError
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -6384,35 +6451,35 @@ class _$CoverageEligibilityResponseError
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -6447,9 +6514,9 @@ class _$CoverageEligibilityResponseError
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -6463,9 +6530,9 @@ class _$CoverageEligibilityResponseError
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -6481,8 +6548,8 @@ class _$CoverageEligibilityResponseError
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -6494,24 +6561,24 @@ class _$CoverageEligibilityResponseError
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -6519,14 +6586,14 @@ class _$CoverageEligibilityResponseError
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -6534,8 +6601,11 @@ class _$CoverageEligibilityResponseError
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -6544,9 +6614,9 @@ class _$CoverageEligibilityResponseError
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -6558,41 +6628,41 @@ class _$CoverageEligibilityResponseError
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -6603,9 +6673,9 @@ class _$CoverageEligibilityResponseError
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -6615,30 +6685,34 @@ class _$CoverageEligibilityResponseError
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6751,8 +6825,8 @@ class _$CoverageEligibilityResponseError
 abstract class CoverageEligibilityResponseError implements Support {
   const factory CoverageEligibilityResponseError(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept code}) = _$CoverageEligibilityResponseError;
 
   factory CoverageEligibilityResponseError.fromJson(Map<String, dynamic> json) =
@@ -6760,8 +6834,8 @@ abstract class CoverageEligibilityResponseError implements Support {
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get code;
   @override
   $CoverageEligibilityResponseErrorCopyWith<CoverageEligibilityResponseError>
@@ -6782,9 +6856,9 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept priority,
       List<String> purpose,
@@ -6796,9 +6870,9 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res>
       Reference provider,
       Reference insurer,
       Reference facility,
-      List<dynamic> supportingInfo,
-      List<dynamic> insurance,
-      List<dynamic> item});
+      List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+      List<CoverageEligibilityRequestInsurance> insurance,
+      List<CoverageEligibilityRequestItem> item});
 }
 
 class _$CoverageEligibilityRequestCopyWithImpl<$Res>
@@ -6852,14 +6926,15 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept,
@@ -6877,10 +6952,13 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
       facility: facility == freezed ? _value.facility : facility as Reference,
       supportingInfo: supportingInfo == freezed
           ? _value.supportingInfo
-          : supportingInfo as List<dynamic>,
-      insurance:
-          insurance == freezed ? _value.insurance : insurance as List<dynamic>,
-      item: item == freezed ? _value.item : item as List<dynamic>,
+          : supportingInfo as List<CoverageEligibilityRequestSupportingInfo>,
+      insurance: insurance == freezed
+          ? _value.insurance
+          : insurance as List<CoverageEligibilityRequestInsurance>,
+      item: item == freezed
+          ? _value.item
+          : item as List<CoverageEligibilityRequestItem>,
     ));
   }
 }
@@ -6931,11 +7009,11 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -6959,11 +7037,11 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
   @override
   final Reference facility;
   @override
-  final List<dynamic> supportingInfo;
+  final List<CoverageEligibilityRequestSupportingInfo> supportingInfo;
   @override
-  final List<dynamic> insurance;
+  final List<CoverageEligibilityRequestInsurance> insurance;
   @override
-  final List<dynamic> item;
+  final List<CoverageEligibilityRequestItem> item;
 
   @override
   String toString() {
@@ -7089,9 +7167,9 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -7106,9 +7184,9 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -7125,8 +7203,8 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -7138,26 +7216,26 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -7165,15 +7243,15 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -7184,8 +7262,8 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -7196,9 +7274,9 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -7210,45 +7288,45 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -7260,9 +7338,9 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -7272,35 +7350,35 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -7358,9 +7436,9 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -7374,9 +7452,9 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -7392,8 +7470,8 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -7405,24 +7483,24 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -7430,14 +7508,14 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -7445,8 +7523,11 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -7455,9 +7536,9 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -7469,41 +7550,41 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -7514,9 +7595,9 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -7526,30 +7607,34 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7684,30 +7769,31 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
 
 abstract class CoverageEligibilityRequest implements Support {
   const factory CoverageEligibilityRequest(
-      {String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
-      Code status,
-      CodeableConcept priority,
-      List<String> purpose,
-      Reference patient,
-      Date servicedDate,
-      Period servicedPeriod,
-      FhirDateTime created,
-      Reference enterer,
-      Reference provider,
-      Reference insurer,
-      Reference facility,
-      List<dynamic> supportingInfo,
-      List<dynamic> insurance,
-      List<dynamic> item}) = _$CoverageEligibilityRequest;
+          {String resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          Code language,
+          Narrative text,
+          List<dynamic> contained,
+          List<FhirExtension> extension,
+          List<FhirExtension> modifierExtension,
+          List<Identifier> identifier,
+          Code status,
+          CodeableConcept priority,
+          List<String> purpose,
+          Reference patient,
+          Date servicedDate,
+          Period servicedPeriod,
+          FhirDateTime created,
+          Reference enterer,
+          Reference provider,
+          Reference insurer,
+          Reference facility,
+          List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+          List<CoverageEligibilityRequestInsurance> insurance,
+          List<CoverageEligibilityRequestItem> item}) =
+      _$CoverageEligibilityRequest;
 
   factory CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =
       _$CoverageEligibilityRequest.fromJson;
@@ -7720,9 +7806,9 @@ abstract class CoverageEligibilityRequest implements Support {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   Code get status;
   CodeableConcept get priority;
   List<String> get purpose;
@@ -7734,9 +7820,9 @@ abstract class CoverageEligibilityRequest implements Support {
   Reference get provider;
   Reference get insurer;
   Reference get facility;
-  List<dynamic> get supportingInfo;
-  List<dynamic> get insurance;
-  List<dynamic> get item;
+  List<CoverageEligibilityRequestSupportingInfo> get supportingInfo;
+  List<CoverageEligibilityRequestInsurance> get insurance;
+  List<CoverageEligibilityRequestItem> get item;
   @override
   $CoverageEligibilityRequestCopyWith<CoverageEligibilityRequest> get copyWith;
 }
@@ -7750,8 +7836,8 @@ abstract class $CoverageEligibilityRequestSupportingInfoCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       int sequence,
       Reference information,
       bool appliesToAll});
@@ -7781,11 +7867,12 @@ class _$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
   }) {
     return _then(CoverageEligibilityRequestSupportingInfo(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       sequence: sequence == freezed ? _value.sequence : sequence as int,
       information: information == freezed
           ? _value.information
@@ -7814,9 +7901,9 @@ class _$CoverageEligibilityRequestSupportingInfo
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final int sequence;
   @override
@@ -7880,9 +7967,9 @@ class _$CoverageEligibilityRequestSupportingInfo
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -7897,9 +7984,9 @@ class _$CoverageEligibilityRequestSupportingInfo
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -7916,8 +8003,8 @@ class _$CoverageEligibilityRequestSupportingInfo
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -7929,26 +8016,26 @@ class _$CoverageEligibilityRequestSupportingInfo
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -7956,15 +8043,15 @@ class _$CoverageEligibilityRequestSupportingInfo
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -7975,8 +8062,8 @@ class _$CoverageEligibilityRequestSupportingInfo
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -7987,9 +8074,9 @@ class _$CoverageEligibilityRequestSupportingInfo
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -8001,45 +8088,45 @@ class _$CoverageEligibilityRequestSupportingInfo
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -8051,9 +8138,9 @@ class _$CoverageEligibilityRequestSupportingInfo
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -8063,35 +8150,35 @@ class _$CoverageEligibilityRequestSupportingInfo
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -8126,9 +8213,9 @@ class _$CoverageEligibilityRequestSupportingInfo
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -8142,9 +8229,9 @@ class _$CoverageEligibilityRequestSupportingInfo
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -8160,8 +8247,8 @@ class _$CoverageEligibilityRequestSupportingInfo
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -8173,24 +8260,24 @@ class _$CoverageEligibilityRequestSupportingInfo
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -8198,14 +8285,14 @@ class _$CoverageEligibilityRequestSupportingInfo
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -8213,8 +8300,11 @@ class _$CoverageEligibilityRequestSupportingInfo
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -8223,9 +8313,9 @@ class _$CoverageEligibilityRequestSupportingInfo
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -8237,41 +8327,41 @@ class _$CoverageEligibilityRequestSupportingInfo
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -8282,9 +8372,9 @@ class _$CoverageEligibilityRequestSupportingInfo
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -8294,30 +8384,34 @@ class _$CoverageEligibilityRequestSupportingInfo
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8430,8 +8524,8 @@ class _$CoverageEligibilityRequestSupportingInfo
 abstract class CoverageEligibilityRequestSupportingInfo implements Support {
   const factory CoverageEligibilityRequestSupportingInfo(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       int sequence,
       Reference information,
       bool appliesToAll}) = _$CoverageEligibilityRequestSupportingInfo;
@@ -8442,8 +8536,8 @@ abstract class CoverageEligibilityRequestSupportingInfo implements Support {
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   int get sequence;
   Reference get information;
   bool get appliesToAll;
@@ -8461,8 +8555,8 @@ abstract class $CoverageEligibilityRequestInsuranceCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       bool focal,
       Reference coverage,
       String businessArrangement});
@@ -8491,11 +8585,12 @@ class _$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
   }) {
     return _then(CoverageEligibilityRequestInsurance(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       focal: focal == freezed ? _value.focal : focal as bool,
       coverage: coverage == freezed ? _value.coverage : coverage as Reference,
       businessArrangement: businessArrangement == freezed
@@ -8523,9 +8618,9 @@ class _$CoverageEligibilityRequestInsurance
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final bool focal;
   @override
@@ -8588,9 +8683,9 @@ class _$CoverageEligibilityRequestInsurance
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -8605,9 +8700,9 @@ class _$CoverageEligibilityRequestInsurance
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -8624,8 +8719,8 @@ class _$CoverageEligibilityRequestInsurance
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -8637,26 +8732,26 @@ class _$CoverageEligibilityRequestInsurance
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -8664,15 +8759,15 @@ class _$CoverageEligibilityRequestInsurance
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -8683,8 +8778,8 @@ class _$CoverageEligibilityRequestInsurance
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -8695,9 +8790,9 @@ class _$CoverageEligibilityRequestInsurance
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -8709,45 +8804,45 @@ class _$CoverageEligibilityRequestInsurance
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -8759,9 +8854,9 @@ class _$CoverageEligibilityRequestInsurance
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -8771,35 +8866,35 @@ class _$CoverageEligibilityRequestInsurance
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -8834,9 +8929,9 @@ class _$CoverageEligibilityRequestInsurance
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -8850,9 +8945,9 @@ class _$CoverageEligibilityRequestInsurance
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -8868,8 +8963,8 @@ class _$CoverageEligibilityRequestInsurance
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -8881,24 +8976,24 @@ class _$CoverageEligibilityRequestInsurance
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -8906,14 +9001,14 @@ class _$CoverageEligibilityRequestInsurance
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -8921,8 +9016,11 @@ class _$CoverageEligibilityRequestInsurance
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -8931,9 +9029,9 @@ class _$CoverageEligibilityRequestInsurance
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -8945,41 +9043,41 @@ class _$CoverageEligibilityRequestInsurance
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -8990,9 +9088,9 @@ class _$CoverageEligibilityRequestInsurance
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -9002,30 +9100,34 @@ class _$CoverageEligibilityRequestInsurance
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -9138,8 +9240,8 @@ class _$CoverageEligibilityRequestInsurance
 abstract class CoverageEligibilityRequestInsurance implements Support {
   const factory CoverageEligibilityRequestInsurance(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       bool focal,
       Reference coverage,
       String businessArrangement}) = _$CoverageEligibilityRequestInsurance;
@@ -9150,8 +9252,8 @@ abstract class CoverageEligibilityRequestInsurance implements Support {
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   bool get focal;
   Reference get coverage;
   String get businessArrangement;
@@ -9169,18 +9271,18 @@ abstract class $CoverageEligibilityRequestItemCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       List<int> supportingInfoSequence,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       Quantity quantity,
       Money unitPrice,
       Reference facility,
-      List<dynamic> diagnosis,
-      List<dynamic> detail});
+      List<CoverageEligibilityRequestDiagnosis> diagnosis,
+      List<Reference> detail});
 }
 
 class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
@@ -9213,11 +9315,12 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
   }) {
     return _then(CoverageEligibilityRequestItem(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       supportingInfoSequence: supportingInfoSequence == freezed
           ? _value.supportingInfoSequence
           : supportingInfoSequence as List<int>,
@@ -9226,15 +9329,17 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept,
-      modifier:
-          modifier == freezed ? _value.modifier : modifier as List<dynamic>,
+      modifier: modifier == freezed
+          ? _value.modifier
+          : modifier as List<CodeableConcept>,
       provider: provider == freezed ? _value.provider : provider as Reference,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
       facility: facility == freezed ? _value.facility : facility as Reference,
-      diagnosis:
-          diagnosis == freezed ? _value.diagnosis : diagnosis as List<dynamic>,
-      detail: detail == freezed ? _value.detail : detail as List<dynamic>,
+      diagnosis: diagnosis == freezed
+          ? _value.diagnosis
+          : diagnosis as List<CoverageEligibilityRequestDiagnosis>,
+      detail: detail == freezed ? _value.detail : detail as List<Reference>,
     ));
   }
 }
@@ -9264,9 +9369,9 @@ class _$CoverageEligibilityRequestItem
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final List<int> supportingInfoSequence;
   @override
@@ -9274,7 +9379,7 @@ class _$CoverageEligibilityRequestItem
   @override
   final CodeableConcept productOrService;
   @override
-  final List<dynamic> modifier;
+  final List<CodeableConcept> modifier;
   @override
   final Reference provider;
   @override
@@ -9284,9 +9389,9 @@ class _$CoverageEligibilityRequestItem
   @override
   final Reference facility;
   @override
-  final List<dynamic> diagnosis;
+  final List<CoverageEligibilityRequestDiagnosis> diagnosis;
   @override
-  final List<dynamic> detail;
+  final List<Reference> detail;
 
   @override
   String toString() {
@@ -9370,9 +9475,9 @@ class _$CoverageEligibilityRequestItem
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -9387,9 +9492,9 @@ class _$CoverageEligibilityRequestItem
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -9406,8 +9511,8 @@ class _$CoverageEligibilityRequestItem
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -9419,26 +9524,26 @@ class _$CoverageEligibilityRequestItem
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -9446,15 +9551,15 @@ class _$CoverageEligibilityRequestItem
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -9465,8 +9570,8 @@ class _$CoverageEligibilityRequestItem
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -9477,9 +9582,9 @@ class _$CoverageEligibilityRequestItem
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -9491,45 +9596,45 @@ class _$CoverageEligibilityRequestItem
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -9541,9 +9646,9 @@ class _$CoverageEligibilityRequestItem
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -9553,35 +9658,35 @@ class _$CoverageEligibilityRequestItem
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -9628,9 +9733,9 @@ class _$CoverageEligibilityRequestItem
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -9644,9 +9749,9 @@ class _$CoverageEligibilityRequestItem
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -9662,8 +9767,8 @@ class _$CoverageEligibilityRequestItem
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -9675,24 +9780,24 @@ class _$CoverageEligibilityRequestItem
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -9700,14 +9805,14 @@ class _$CoverageEligibilityRequestItem
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -9715,8 +9820,11 @@ class _$CoverageEligibilityRequestItem
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -9725,9 +9833,9 @@ class _$CoverageEligibilityRequestItem
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -9739,41 +9847,41 @@ class _$CoverageEligibilityRequestItem
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -9784,9 +9892,9 @@ class _$CoverageEligibilityRequestItem
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -9796,30 +9904,34 @@ class _$CoverageEligibilityRequestItem
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -9944,36 +10056,36 @@ class _$CoverageEligibilityRequestItem
 abstract class CoverageEligibilityRequestItem implements Support {
   const factory CoverageEligibilityRequestItem(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       List<int> supportingInfoSequence,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       Quantity quantity,
       Money unitPrice,
       Reference facility,
-      List<dynamic> diagnosis,
-      List<dynamic> detail}) = _$CoverageEligibilityRequestItem;
+      List<CoverageEligibilityRequestDiagnosis> diagnosis,
+      List<Reference> detail}) = _$CoverageEligibilityRequestItem;
 
   factory CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =
       _$CoverageEligibilityRequestItem.fromJson;
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   List<int> get supportingInfoSequence;
   CodeableConcept get category;
   CodeableConcept get productOrService;
-  List<dynamic> get modifier;
+  List<CodeableConcept> get modifier;
   Reference get provider;
   Quantity get quantity;
   Money get unitPrice;
   Reference get facility;
-  List<dynamic> get diagnosis;
-  List<dynamic> get detail;
+  List<CoverageEligibilityRequestDiagnosis> get diagnosis;
+  List<Reference> get detail;
   @override
   $CoverageEligibilityRequestItemCopyWith<CoverageEligibilityRequestItem>
       get copyWith;
@@ -9988,8 +10100,8 @@ abstract class $CoverageEligibilityRequestDiagnosisCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference});
 }
@@ -10016,11 +10128,12 @@ class _$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
   }) {
     return _then(CoverageEligibilityRequestDiagnosis(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       diagnosisCodeableConcept: diagnosisCodeableConcept == freezed
           ? _value.diagnosisCodeableConcept
           : diagnosisCodeableConcept as CodeableConcept,
@@ -10048,9 +10161,9 @@ class _$CoverageEligibilityRequestDiagnosis
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept diagnosisCodeableConcept;
   @override
@@ -10110,9 +10223,9 @@ class _$CoverageEligibilityRequestDiagnosis
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -10127,9 +10240,9 @@ class _$CoverageEligibilityRequestDiagnosis
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -10146,8 +10259,8 @@ class _$CoverageEligibilityRequestDiagnosis
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -10159,26 +10272,26 @@ class _$CoverageEligibilityRequestDiagnosis
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -10186,15 +10299,15 @@ class _$CoverageEligibilityRequestDiagnosis
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -10205,8 +10318,8 @@ class _$CoverageEligibilityRequestDiagnosis
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -10217,9 +10330,9 @@ class _$CoverageEligibilityRequestDiagnosis
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -10231,45 +10344,45 @@ class _$CoverageEligibilityRequestDiagnosis
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -10281,9 +10394,9 @@ class _$CoverageEligibilityRequestDiagnosis
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -10293,35 +10406,35 @@ class _$CoverageEligibilityRequestDiagnosis
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -10356,9 +10469,9 @@ class _$CoverageEligibilityRequestDiagnosis
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -10372,9 +10485,9 @@ class _$CoverageEligibilityRequestDiagnosis
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -10390,8 +10503,8 @@ class _$CoverageEligibilityRequestDiagnosis
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -10403,24 +10516,24 @@ class _$CoverageEligibilityRequestDiagnosis
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -10428,14 +10541,14 @@ class _$CoverageEligibilityRequestDiagnosis
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -10443,8 +10556,11 @@ class _$CoverageEligibilityRequestDiagnosis
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -10453,9 +10569,9 @@ class _$CoverageEligibilityRequestDiagnosis
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -10467,41 +10583,41 @@ class _$CoverageEligibilityRequestDiagnosis
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -10512,9 +10628,9 @@ class _$CoverageEligibilityRequestDiagnosis
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -10524,30 +10640,34 @@ class _$CoverageEligibilityRequestDiagnosis
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -10660,8 +10780,8 @@ class _$CoverageEligibilityRequestDiagnosis
 abstract class CoverageEligibilityRequestDiagnosis implements Support {
   const factory CoverageEligibilityRequestDiagnosis(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference}) = _$CoverageEligibilityRequestDiagnosis;
 
@@ -10671,8 +10791,8 @@ abstract class CoverageEligibilityRequestDiagnosis implements Support {
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get diagnosisCodeableConcept;
   Reference get diagnosisReference;
   @override
@@ -10692,9 +10812,9 @@ abstract class $CoverageCopyWith<$Res> implements $SupportCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       Reference policyHolder,
@@ -10704,13 +10824,13 @@ abstract class $CoverageCopyWith<$Res> implements $SupportCopyWith<$Res> {
       String dependent,
       CodeableConcept relationship,
       Period period,
-      List<dynamic> payor,
-      List<dynamic> clas,
+      List<Reference> payor,
+      List<CoverageClass> clas,
       int order,
       String network,
-      List<dynamic> costToBeneficiary,
+      List<CoverageCostToBeneficiary> costToBeneficiary,
       bool subrogation,
-      List<dynamic> contract});
+      List<Reference> contract});
 }
 
 class _$CoverageCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
@@ -10763,14 +10883,15 @@ class _$CoverageCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       type: type == freezed ? _value.type : type as CodeableConcept,
       policyHolder: policyHolder == freezed
@@ -10789,17 +10910,17 @@ class _$CoverageCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
           ? _value.relationship
           : relationship as CodeableConcept,
       period: period == freezed ? _value.period : period as Period,
-      payor: payor == freezed ? _value.payor : payor as List<dynamic>,
-      clas: clas == freezed ? _value.clas : clas as List<dynamic>,
+      payor: payor == freezed ? _value.payor : payor as List<Reference>,
+      clas: clas == freezed ? _value.clas : clas as List<CoverageClass>,
       order: order == freezed ? _value.order : order as int,
       network: network == freezed ? _value.network : network as String,
       costToBeneficiary: costToBeneficiary == freezed
           ? _value.costToBeneficiary
-          : costToBeneficiary as List<dynamic>,
+          : costToBeneficiary as List<CoverageCostToBeneficiary>,
       subrogation:
           subrogation == freezed ? _value.subrogation : subrogation as bool,
       contract:
-          contract == freezed ? _value.contract : contract as List<dynamic>,
+          contract == freezed ? _value.contract : contract as List<Reference>,
     ));
   }
 }
@@ -10852,11 +10973,11 @@ class _$Coverage implements Coverage {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -10876,19 +10997,19 @@ class _$Coverage implements Coverage {
   @override
   final Period period;
   @override
-  final List<dynamic> payor;
+  final List<Reference> payor;
   @override
-  final List<dynamic> clas;
+  final List<CoverageClass> clas;
   @override
   final int order;
   @override
   final String network;
   @override
-  final List<dynamic> costToBeneficiary;
+  final List<CoverageCostToBeneficiary> costToBeneficiary;
   @override
   final bool subrogation;
   @override
-  final List<dynamic> contract;
+  final List<Reference> contract;
 
   @override
   String toString() {
@@ -11016,9 +11137,9 @@ class _$Coverage implements Coverage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -11033,9 +11154,9 @@ class _$Coverage implements Coverage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -11052,8 +11173,8 @@ class _$Coverage implements Coverage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -11065,26 +11186,26 @@ class _$Coverage implements Coverage {
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -11092,15 +11213,15 @@ class _$Coverage implements Coverage {
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -11111,8 +11232,8 @@ class _$Coverage implements Coverage {
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -11123,9 +11244,9 @@ class _$Coverage implements Coverage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -11137,45 +11258,45 @@ class _$Coverage implements Coverage {
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -11187,9 +11308,9 @@ class _$Coverage implements Coverage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -11199,35 +11320,35 @@ class _$Coverage implements Coverage {
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -11287,9 +11408,9 @@ class _$Coverage implements Coverage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -11303,9 +11424,9 @@ class _$Coverage implements Coverage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -11321,8 +11442,8 @@ class _$Coverage implements Coverage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -11334,24 +11455,24 @@ class _$Coverage implements Coverage {
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -11359,14 +11480,14 @@ class _$Coverage implements Coverage {
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -11374,8 +11495,11 @@ class _$Coverage implements Coverage {
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -11384,9 +11508,9 @@ class _$Coverage implements Coverage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -11398,41 +11522,41 @@ class _$Coverage implements Coverage {
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -11443,9 +11567,9 @@ class _$Coverage implements Coverage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -11455,30 +11579,34 @@ class _$Coverage implements Coverage {
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -11621,9 +11749,9 @@ abstract class Coverage implements Support {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       Reference policyHolder,
@@ -11633,13 +11761,13 @@ abstract class Coverage implements Support {
       String dependent,
       CodeableConcept relationship,
       Period period,
-      List<dynamic> payor,
-      List<dynamic> clas,
+      List<Reference> payor,
+      List<CoverageClass> clas,
       int order,
       String network,
-      List<dynamic> costToBeneficiary,
+      List<CoverageCostToBeneficiary> costToBeneficiary,
       bool subrogation,
-      List<dynamic> contract}) = _$Coverage;
+      List<Reference> contract}) = _$Coverage;
 
   factory Coverage.fromJson(Map<String, dynamic> json) = _$Coverage.fromJson;
 
@@ -11651,9 +11779,9 @@ abstract class Coverage implements Support {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   Code get status;
   CodeableConcept get type;
   Reference get policyHolder;
@@ -11663,13 +11791,13 @@ abstract class Coverage implements Support {
   String get dependent;
   CodeableConcept get relationship;
   Period get period;
-  List<dynamic> get payor;
-  List<dynamic> get clas;
+  List<Reference> get payor;
+  List<CoverageClass> get clas;
   int get order;
   String get network;
-  List<dynamic> get costToBeneficiary;
+  List<CoverageCostToBeneficiary> get costToBeneficiary;
   bool get subrogation;
-  List<dynamic> get contract;
+  List<Reference> get contract;
   @override
   $CoverageCopyWith<Coverage> get copyWith;
 }
@@ -11681,8 +11809,8 @@ abstract class $CoverageClassCopyWith<$Res> implements $SupportCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       String value,
       String name});
@@ -11708,11 +11836,12 @@ class _$CoverageClassCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
   }) {
     return _then(CoverageClass(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       value: value == freezed ? _value.value : value as String,
       name: name == freezed ? _value.name : name as String,
@@ -11736,9 +11865,9 @@ class _$CoverageClass implements CoverageClass {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -11797,9 +11926,9 @@ class _$CoverageClass implements CoverageClass {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -11814,9 +11943,9 @@ class _$CoverageClass implements CoverageClass {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -11833,8 +11962,8 @@ class _$CoverageClass implements CoverageClass {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -11846,26 +11975,26 @@ class _$CoverageClass implements CoverageClass {
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -11873,15 +12002,15 @@ class _$CoverageClass implements CoverageClass {
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -11892,8 +12021,8 @@ class _$CoverageClass implements CoverageClass {
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -11904,9 +12033,9 @@ class _$CoverageClass implements CoverageClass {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -11918,45 +12047,45 @@ class _$CoverageClass implements CoverageClass {
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -11968,9 +12097,9 @@ class _$CoverageClass implements CoverageClass {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -11980,35 +12109,35 @@ class _$CoverageClass implements CoverageClass {
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -12042,9 +12171,9 @@ class _$CoverageClass implements CoverageClass {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -12058,9 +12187,9 @@ class _$CoverageClass implements CoverageClass {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -12076,8 +12205,8 @@ class _$CoverageClass implements CoverageClass {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -12089,24 +12218,24 @@ class _$CoverageClass implements CoverageClass {
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -12114,14 +12243,14 @@ class _$CoverageClass implements CoverageClass {
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -12129,8 +12258,11 @@ class _$CoverageClass implements CoverageClass {
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -12139,9 +12271,9 @@ class _$CoverageClass implements CoverageClass {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -12153,41 +12285,41 @@ class _$CoverageClass implements CoverageClass {
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -12198,9 +12330,9 @@ class _$CoverageClass implements CoverageClass {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -12210,30 +12342,34 @@ class _$CoverageClass implements CoverageClass {
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -12344,8 +12480,8 @@ class _$CoverageClass implements CoverageClass {
 abstract class CoverageClass implements Support {
   const factory CoverageClass(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       String value,
       String name}) = _$CoverageClass;
@@ -12355,8 +12491,8 @@ abstract class CoverageClass implements Support {
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
   String get value;
   String get name;
@@ -12372,12 +12508,12 @@ abstract class $CoverageCostToBeneficiaryCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       Quantity valueQuantity,
       Money valueMoney,
-      List<dynamic> exception});
+      List<CoverageException> exception});
 }
 
 class _$CoverageCostToBeneficiaryCopyWithImpl<$Res>
@@ -12403,19 +12539,21 @@ class _$CoverageCostToBeneficiaryCopyWithImpl<$Res>
   }) {
     return _then(CoverageCostToBeneficiary(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as Quantity,
       valueMoney:
           valueMoney == freezed ? _value.valueMoney : valueMoney as Money,
-      exception:
-          exception == freezed ? _value.exception : exception as List<dynamic>,
+      exception: exception == freezed
+          ? _value.exception
+          : exception as List<CoverageException>,
     ));
   }
 }
@@ -12437,9 +12575,9 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -12447,7 +12585,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
   @override
   final Money valueMoney;
   @override
-  final List<dynamic> exception;
+  final List<CoverageException> exception;
 
   @override
   String toString() {
@@ -12507,9 +12645,9 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -12524,9 +12662,9 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -12543,8 +12681,8 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -12556,26 +12694,26 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -12583,15 +12721,15 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -12602,8 +12740,8 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -12614,9 +12752,9 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -12628,45 +12766,45 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -12678,9 +12816,9 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -12690,35 +12828,35 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -12753,9 +12891,9 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -12769,9 +12907,9 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -12787,8 +12925,8 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -12800,24 +12938,24 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -12825,14 +12963,14 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -12840,8 +12978,11 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -12850,9 +12991,9 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -12864,41 +13005,41 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -12909,9 +13050,9 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -12921,30 +13062,34 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -13057,24 +13202,24 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
 abstract class CoverageCostToBeneficiary implements Support {
   const factory CoverageCostToBeneficiary(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       Quantity valueQuantity,
       Money valueMoney,
-      List<dynamic> exception}) = _$CoverageCostToBeneficiary;
+      List<CoverageException> exception}) = _$CoverageCostToBeneficiary;
 
   factory CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =
       _$CoverageCostToBeneficiary.fromJson;
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
   Quantity get valueQuantity;
   Money get valueMoney;
-  List<dynamic> get exception;
+  List<CoverageException> get exception;
   @override
   $CoverageCostToBeneficiaryCopyWith<CoverageCostToBeneficiary> get copyWith;
 }
@@ -13087,8 +13232,8 @@ abstract class $CoverageExceptionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       Period period});
 }
@@ -13112,11 +13257,12 @@ class _$CoverageExceptionCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
   }) {
     return _then(CoverageException(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       period: period == freezed ? _value.period : period as Period,
     ));
@@ -13138,9 +13284,9 @@ class _$CoverageException implements CoverageException {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -13194,9 +13340,9 @@ class _$CoverageException implements CoverageException {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -13211,9 +13357,9 @@ class _$CoverageException implements CoverageException {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -13230,8 +13376,8 @@ class _$CoverageException implements CoverageException {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -13243,26 +13389,26 @@ class _$CoverageException implements CoverageException {
             CoverageEligibilityResponseOutcome outcome,
             String disposition,
             Reference insurer,
-            List<dynamic> insurance,
+            List<CoverageEligibilityResponseInsurance> insurance,
             String preAuthRef,
             CodeableConcept form,
-            List<dynamic> error),
+            List<CoverageEligibilityResponseError> error),
     @required
         Result coverageEligibilityResponseInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             Reference coverage,
             bool inforce,
-            List<dynamic> item),
+            List<CoverageEligibilityResponseItem> item),
     @required
         Result coverageEligibilityResponseItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -13270,15 +13416,15 @@ class _$CoverageException implements CoverageException {
             CodeableConcept network,
             CodeableConcept unit,
             CodeableConcept term,
-            List<dynamic> benefit,
+            List<CoverageEligibilityResponseBenefit> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             int allowedUnsignedInt,
             String allowedString,
@@ -13289,8 +13435,8 @@ class _$CoverageException implements CoverageException {
     @required
         Result coverageEligibilityResponseError(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code),
     @required
         Result coverageEligibilityRequest(
@@ -13301,9 +13447,9 @@ class _$CoverageException implements CoverageException {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -13315,45 +13461,45 @@ class _$CoverageException implements CoverageException {
             Reference provider,
             Reference insurer,
             Reference facility,
-            List<dynamic> supportingInfo,
-            List<dynamic> insurance,
-            List<dynamic> item),
+            List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+            List<CoverageEligibilityRequestInsurance> insurance,
+            List<CoverageEligibilityRequestItem> item),
     @required
         Result coverageEligibilityRequestSupportingInfo(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             int sequence,
             Reference information,
             bool appliesToAll),
     @required
         Result coverageEligibilityRequestInsurance(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             bool focal,
             Reference coverage,
             String businessArrangement),
     @required
         Result coverageEligibilityRequestItem(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
             Reference facility,
-            List<dynamic> diagnosis,
-            List<dynamic> detail),
+            List<CoverageEligibilityRequestDiagnosis> diagnosis,
+            List<Reference> detail),
     @required
         Result coverageEligibilityRequestDiagnosis(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference),
     @required
@@ -13365,9 +13511,9 @@ class _$CoverageException implements CoverageException {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -13377,35 +13523,35 @@ class _$CoverageException implements CoverageException {
             String dependent,
             CodeableConcept relationship,
             Period period,
-            List<dynamic> payor,
-            List<dynamic> clas,
+            List<Reference> payor,
+            List<CoverageClass> clas,
             int order,
             String network,
-            List<dynamic> costToBeneficiary,
+            List<CoverageCostToBeneficiary> costToBeneficiary,
             bool subrogation,
-            List<dynamic> contract),
+            List<Reference> contract),
     @required
         Result coverageClass(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             String value,
             String name),
     @required
         Result coverageCostToBeneficiary(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Quantity valueQuantity,
             Money valueMoney,
-            List<dynamic> exception),
+            List<CoverageException> exception),
     @required
         Result coverageException(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept type,
             Period period),
   }) {
@@ -13439,9 +13585,9 @@ class _$CoverageException implements CoverageException {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -13455,9 +13601,9 @@ class _$CoverageException implements CoverageException {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -13473,8 +13619,8 @@ class _$CoverageException implements CoverageException {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -13486,24 +13632,24 @@ class _$CoverageException implements CoverageException {
         CoverageEligibilityResponseOutcome outcome,
         String disposition,
         Reference insurer,
-        List<dynamic> insurance,
+        List<CoverageEligibilityResponseInsurance> insurance,
         String preAuthRef,
         CodeableConcept form,
-        List<dynamic> error),
+        List<CoverageEligibilityResponseError> error),
     Result coverageEligibilityResponseInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         Reference coverage,
         bool inforce,
-        List<dynamic> item),
+        List<CoverageEligibilityResponseItem> item),
     Result coverageEligibilityResponseItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -13511,14 +13657,14 @@ class _$CoverageException implements CoverageException {
         CodeableConcept network,
         CodeableConcept unit,
         CodeableConcept term,
-        List<dynamic> benefit,
+        List<CoverageEligibilityResponseBenefit> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         int allowedUnsignedInt,
         String allowedString,
@@ -13526,8 +13672,11 @@ class _$CoverageException implements CoverageException {
         int usedUnsignedInt,
         String usedString,
         Money usedMoney),
-    Result coverageEligibilityResponseError(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept code),
+    Result coverageEligibilityResponseError(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept code),
     Result coverageEligibilityRequest(
         String resourceType,
         Id id,
@@ -13536,9 +13685,9 @@ class _$CoverageException implements CoverageException {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -13550,41 +13699,41 @@ class _$CoverageException implements CoverageException {
         Reference provider,
         Reference insurer,
         Reference facility,
-        List<dynamic> supportingInfo,
-        List<dynamic> insurance,
-        List<dynamic> item),
+        List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
+        List<CoverageEligibilityRequestInsurance> insurance,
+        List<CoverageEligibilityRequestItem> item),
     Result coverageEligibilityRequestSupportingInfo(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         int sequence,
         Reference information,
         bool appliesToAll),
     Result coverageEligibilityRequestInsurance(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         bool focal,
         Reference coverage,
         String businessArrangement),
     Result coverageEligibilityRequestItem(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
         Reference facility,
-        List<dynamic> diagnosis,
-        List<dynamic> detail),
+        List<CoverageEligibilityRequestDiagnosis> diagnosis,
+        List<Reference> detail),
     Result coverageEligibilityRequestDiagnosis(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference),
     Result coverage(
@@ -13595,9 +13744,9 @@ class _$CoverageException implements CoverageException {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -13607,30 +13756,34 @@ class _$CoverageException implements CoverageException {
         String dependent,
         CodeableConcept relationship,
         Period period,
-        List<dynamic> payor,
-        List<dynamic> clas,
+        List<Reference> payor,
+        List<CoverageClass> clas,
         int order,
         String network,
-        List<dynamic> costToBeneficiary,
+        List<CoverageCostToBeneficiary> costToBeneficiary,
         bool subrogation,
-        List<dynamic> contract),
+        List<Reference> contract),
     Result coverageClass(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         String value,
         String name),
     Result coverageCostToBeneficiary(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept type,
         Quantity valueQuantity,
         Money valueMoney,
-        List<dynamic> exception),
-    Result coverageException(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, CodeableConcept type, Period period),
+        List<CoverageException> exception),
+    Result coverageException(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        CodeableConcept type,
+        Period period),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -13742,8 +13895,8 @@ class _$CoverageException implements CoverageException {
 abstract class CoverageException implements Support {
   const factory CoverageException(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept type,
       Period period}) = _$CoverageException;
 
@@ -13752,8 +13905,8 @@ abstract class CoverageException implements Support {
 
   String get id;
   @override
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get type;
   Period get period;
   @override

@@ -42,39 +42,39 @@ class _$Entities1TearOff {
   const _$Entities1TearOff();
 
   HealthcareService healthcareService(
-      {String resourceType,
+      {String resourceType = 'HealthcareService',
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       bool active,
       Reference providedBy,
-      List<dynamic> category,
-      List<dynamic> type,
-      List<dynamic> specialty,
-      List<dynamic> location,
+      List<CodeableConcept> category,
+      List<CodeableConcept> type,
+      List<CodeableConcept> specialty,
+      List<Reference> location,
       String name,
       String comment,
       Markdown extraDetails,
       Attachment photo,
-      List<dynamic> telecom,
-      List<dynamic> coverageArea,
-      List<dynamic> serviceProvisionCode,
-      List<dynamic> eligibility,
-      List<dynamic> program,
-      List<dynamic> characteristic,
-      List<dynamic> communication,
-      List<dynamic> referralMethod,
+      List<ContactPoint> telecom,
+      List<Reference> coverageArea,
+      List<CodeableConcept> serviceProvisionCode,
+      List<HealthcareServiceEligibility> eligibility,
+      List<CodeableConcept> program,
+      List<CodeableConcept> characteristic,
+      List<CodeableConcept> communication,
+      List<CodeableConcept> referralMethod,
       bool appointmentRequired,
-      List<dynamic> availableTime,
-      List<dynamic> notAvailable,
+      List<HealthcareServiceAvailableTime> availableTime,
+      List<HealthcareServiceNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<dynamic> endpoint}) {
+      List<Reference> endpoint}) {
     return HealthcareService(
       resourceType: resourceType,
       id: id,
@@ -114,8 +114,8 @@ class _$Entities1TearOff {
 
   HealthcareServiceEligibility healthcareServiceEligibility(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Markdown comment}) {
     return HealthcareServiceEligibility(
@@ -129,8 +129,8 @@ class _$Entities1TearOff {
 
   HealthcareServiceAvailableTime healthcareServiceAvailableTime(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       List<String> daysOfWeek,
       bool allDay,
       Time availableStartTime,
@@ -148,8 +148,8 @@ class _$Entities1TearOff {
 
   HealthcareServiceNotAvailable healthcareServiceNotAvailable(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String description,
       Period during}) {
     return HealthcareServiceNotAvailable(
@@ -162,32 +162,32 @@ class _$Entities1TearOff {
   }
 
   Location location(
-      {String resourceType,
+      {String resourceType = 'Location',
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       LocationStatus status,
       Coding operationalStatus,
       String name,
       List<String> alias,
       String description,
       LocationMode mode,
-      List<dynamic> type,
-      List<dynamic> telecom,
+      List<CodeableConcept> type,
+      List<ContactPoint> telecom,
       Address address,
       CodeableConcept physicalType,
       LocationPosition position,
       Reference managingOrganization,
       Reference partOf,
-      List<dynamic> hoursOfOperation,
+      List<LocationHoursOfOperation> hoursOfOperation,
       String availabilityExceptions,
-      List<dynamic> endpoint}) {
+      List<Reference> endpoint}) {
     return Location(
       resourceType: resourceType,
       id: id,
@@ -220,8 +220,8 @@ class _$Entities1TearOff {
 
   LocationPosition locationPosition(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       double longitude,
       double latitude,
       double altitude}) {
@@ -237,8 +237,8 @@ class _$Entities1TearOff {
 
   LocationHoursOfOperation locationHoursOfOperation(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       List<Code> daysOfWeek,
       bool allDay,
       Time openingTime,
@@ -255,27 +255,27 @@ class _$Entities1TearOff {
   }
 
   OrganizationAffiliation organizationAffiliation(
-      {String resourceType,
+      {String resourceType = 'OrganizationAffiliation',
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       bool active,
       Period period,
       Reference organization,
       Reference participatingOrganization,
-      List<dynamic> network,
-      List<dynamic> code,
-      List<dynamic> specialty,
-      List<dynamic> location,
-      List<dynamic> healthcareService,
-      List<dynamic> telecom,
-      List<dynamic> endpoint}) {
+      List<Reference> network,
+      List<CodeableConcept> code,
+      List<CodeableConcept> specialty,
+      List<Reference> location,
+      List<Reference> healthcareService,
+      List<ContactPoint> telecom,
+      List<Reference> endpoint}) {
     return OrganizationAffiliation(
       resourceType: resourceType,
       id: id,
@@ -302,25 +302,25 @@ class _$Entities1TearOff {
   }
 
   Organization organization(
-      {String resourceType,
+      {String resourceType = 'Organization',
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       bool active,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       String name,
       List<String> alias,
-      List<dynamic> telecom,
-      List<dynamic> address,
+      List<ContactPoint> telecom,
+      List<Address> address,
       Reference partOf,
-      List<dynamic> contact,
-      List<dynamic> endpoint}) {
+      List<OrganizationContact> contact,
+      List<Reference> endpoint}) {
     return Organization(
       resourceType: resourceType,
       id: id,
@@ -346,11 +346,11 @@ class _$Entities1TearOff {
 
   OrganizationContact organizationContact(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept purpose,
       HumanName name,
-      List<dynamic> telecom,
+      List<ContactPoint> telecom,
       Address address}) {
     return OrganizationContact(
       id: id,
@@ -364,23 +364,23 @@ class _$Entities1TearOff {
   }
 
   Endpoint endpoint(
-      {String resourceType,
+      {String resourceType = 'Endpoint',
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       EndpointStatus status,
       Coding connectionType,
       String name,
       Reference managingOrganization,
-      List<dynamic> contact,
+      List<ContactPoint> contact,
       Period period,
-      List<dynamic> payloadType,
+      List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
       FhirUrl address,
       List<String> header}) {
@@ -413,8 +413,8 @@ class _$Entities1TearOff {
 const $Entities1 = _$Entities1TearOff();
 
 mixin _$Entities1 {
-  List<dynamic> get extension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get extension;
+  List<FhirExtension> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -427,51 +427,55 @@ mixin _$Entities1 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -481,38 +485,38 @@ mixin _$Entities1 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -526,20 +530,20 @@ mixin _$Entities1 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -549,26 +553,26 @@ mixin _$Entities1 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -579,16 +583,16 @@ mixin _$Entities1 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -603,48 +607,52 @@ mixin _$Entities1 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -653,36 +661,36 @@ mixin _$Entities1 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -695,20 +703,20 @@ mixin _$Entities1 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -717,25 +725,25 @@ mixin _$Entities1 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -745,16 +753,16 @@ mixin _$Entities1 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -801,7 +809,8 @@ mixin _$Entities1 {
 abstract class $Entities1CopyWith<$Res> {
   factory $Entities1CopyWith(Entities1 value, $Res Function(Entities1) then) =
       _$Entities1CopyWithImpl<$Res>;
-  $Res call({List<dynamic> extension, List<dynamic> modifierExtension});
+  $Res call(
+      {List<FhirExtension> extension, List<FhirExtension> modifierExtension});
 }
 
 class _$Entities1CopyWithImpl<$Res> implements $Entities1CopyWith<$Res> {
@@ -817,11 +826,12 @@ class _$Entities1CopyWithImpl<$Res> implements $Entities1CopyWith<$Res> {
     Object modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
     ));
   }
 }
@@ -840,32 +850,32 @@ abstract class $HealthcareServiceCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       bool active,
       Reference providedBy,
-      List<dynamic> category,
-      List<dynamic> type,
-      List<dynamic> specialty,
-      List<dynamic> location,
+      List<CodeableConcept> category,
+      List<CodeableConcept> type,
+      List<CodeableConcept> specialty,
+      List<Reference> location,
       String name,
       String comment,
       Markdown extraDetails,
       Attachment photo,
-      List<dynamic> telecom,
-      List<dynamic> coverageArea,
-      List<dynamic> serviceProvisionCode,
-      List<dynamic> eligibility,
-      List<dynamic> program,
-      List<dynamic> characteristic,
-      List<dynamic> communication,
-      List<dynamic> referralMethod,
+      List<ContactPoint> telecom,
+      List<Reference> coverageArea,
+      List<CodeableConcept> serviceProvisionCode,
+      List<HealthcareServiceEligibility> eligibility,
+      List<CodeableConcept> program,
+      List<CodeableConcept> characteristic,
+      List<CodeableConcept> communication,
+      List<CodeableConcept> referralMethod,
       bool appointmentRequired,
-      List<dynamic> availableTime,
-      List<dynamic> notAvailable,
+      List<HealthcareServiceAvailableTime> availableTime,
+      List<HealthcareServiceNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<dynamic> endpoint});
+      List<Reference> endpoint});
 }
 
 class _$HealthcareServiceCopyWithImpl<$Res>
@@ -927,64 +937,70 @@ class _$HealthcareServiceCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       active: active == freezed ? _value.active : active as bool,
       providedBy:
           providedBy == freezed ? _value.providedBy : providedBy as Reference,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
-      type: type == freezed ? _value.type : type as List<dynamic>,
-      specialty:
-          specialty == freezed ? _value.specialty : specialty as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+      specialty: specialty == freezed
+          ? _value.specialty
+          : specialty as List<CodeableConcept>,
       location:
-          location == freezed ? _value.location : location as List<dynamic>,
+          location == freezed ? _value.location : location as List<Reference>,
       name: name == freezed ? _value.name : name as String,
       comment: comment == freezed ? _value.comment : comment as String,
       extraDetails: extraDetails == freezed
           ? _value.extraDetails
           : extraDetails as Markdown,
       photo: photo == freezed ? _value.photo : photo as Attachment,
-      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       coverageArea: coverageArea == freezed
           ? _value.coverageArea
-          : coverageArea as List<dynamic>,
+          : coverageArea as List<Reference>,
       serviceProvisionCode: serviceProvisionCode == freezed
           ? _value.serviceProvisionCode
-          : serviceProvisionCode as List<dynamic>,
+          : serviceProvisionCode as List<CodeableConcept>,
       eligibility: eligibility == freezed
           ? _value.eligibility
-          : eligibility as List<dynamic>,
-      program: program == freezed ? _value.program : program as List<dynamic>,
+          : eligibility as List<HealthcareServiceEligibility>,
+      program: program == freezed
+          ? _value.program
+          : program as List<CodeableConcept>,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<dynamic>,
+          : characteristic as List<CodeableConcept>,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<dynamic>,
+          : communication as List<CodeableConcept>,
       referralMethod: referralMethod == freezed
           ? _value.referralMethod
-          : referralMethod as List<dynamic>,
+          : referralMethod as List<CodeableConcept>,
       appointmentRequired: appointmentRequired == freezed
           ? _value.appointmentRequired
           : appointmentRequired as bool,
       availableTime: availableTime == freezed
           ? _value.availableTime
-          : availableTime as List<dynamic>,
+          : availableTime as List<HealthcareServiceAvailableTime>,
       notAvailable: notAvailable == freezed
           ? _value.notAvailable
-          : notAvailable as List<dynamic>,
+          : notAvailable as List<HealthcareServiceNotAvailable>,
       availabilityExceptions: availabilityExceptions == freezed
           ? _value.availabilityExceptions
           : availabilityExceptions as String,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<dynamic>,
+          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
     ));
   }
 }
@@ -992,7 +1008,7 @@ class _$HealthcareServiceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$HealthcareService implements HealthcareService {
   const _$HealthcareService(
-      {this.resourceType,
+      {this.resourceType = 'HealthcareService',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1024,11 +1040,13 @@ class _$HealthcareService implements HealthcareService {
       this.availableTime,
       this.notAvailable,
       this.availabilityExceptions,
-      this.endpoint});
+      this.endpoint})
+      : assert(resourceType != null);
 
   factory _$HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$_$HealthcareServiceFromJson(json);
 
+  @JsonKey(defaultValue: 'HealthcareService')
   @override
   final String resourceType;
   @override
@@ -1044,23 +1062,23 @@ class _$HealthcareService implements HealthcareService {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final bool active;
   @override
   final Reference providedBy;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
-  final List<dynamic> specialty;
+  final List<CodeableConcept> specialty;
   @override
-  final List<dynamic> location;
+  final List<Reference> location;
   @override
   final String name;
   @override
@@ -1070,31 +1088,31 @@ class _$HealthcareService implements HealthcareService {
   @override
   final Attachment photo;
   @override
-  final List<dynamic> telecom;
+  final List<ContactPoint> telecom;
   @override
-  final List<dynamic> coverageArea;
+  final List<Reference> coverageArea;
   @override
-  final List<dynamic> serviceProvisionCode;
+  final List<CodeableConcept> serviceProvisionCode;
   @override
-  final List<dynamic> eligibility;
+  final List<HealthcareServiceEligibility> eligibility;
   @override
-  final List<dynamic> program;
+  final List<CodeableConcept> program;
   @override
-  final List<dynamic> characteristic;
+  final List<CodeableConcept> characteristic;
   @override
-  final List<dynamic> communication;
+  final List<CodeableConcept> communication;
   @override
-  final List<dynamic> referralMethod;
+  final List<CodeableConcept> referralMethod;
   @override
   final bool appointmentRequired;
   @override
-  final List<dynamic> availableTime;
+  final List<HealthcareServiceAvailableTime> availableTime;
   @override
-  final List<dynamic> notAvailable;
+  final List<HealthcareServiceNotAvailable> notAvailable;
   @override
   final String availabilityExceptions;
   @override
-  final List<dynamic> endpoint;
+  final List<Reference> endpoint;
 
   @override
   String toString() {
@@ -1235,51 +1253,55 @@ class _$HealthcareService implements HealthcareService {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -1289,38 +1311,38 @@ class _$HealthcareService implements HealthcareService {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -1334,20 +1356,20 @@ class _$HealthcareService implements HealthcareService {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -1357,26 +1379,26 @@ class _$HealthcareService implements HealthcareService {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -1387,16 +1409,16 @@ class _$HealthcareService implements HealthcareService {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -1459,48 +1481,52 @@ class _$HealthcareService implements HealthcareService {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -1509,36 +1535,36 @@ class _$HealthcareService implements HealthcareService {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -1551,20 +1577,20 @@ class _$HealthcareService implements HealthcareService {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -1573,25 +1599,25 @@ class _$HealthcareService implements HealthcareService {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -1601,16 +1627,16 @@ class _$HealthcareService implements HealthcareService {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -1729,32 +1755,32 @@ abstract class HealthcareService implements Entities1 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       bool active,
       Reference providedBy,
-      List<dynamic> category,
-      List<dynamic> type,
-      List<dynamic> specialty,
-      List<dynamic> location,
+      List<CodeableConcept> category,
+      List<CodeableConcept> type,
+      List<CodeableConcept> specialty,
+      List<Reference> location,
       String name,
       String comment,
       Markdown extraDetails,
       Attachment photo,
-      List<dynamic> telecom,
-      List<dynamic> coverageArea,
-      List<dynamic> serviceProvisionCode,
-      List<dynamic> eligibility,
-      List<dynamic> program,
-      List<dynamic> characteristic,
-      List<dynamic> communication,
-      List<dynamic> referralMethod,
+      List<ContactPoint> telecom,
+      List<Reference> coverageArea,
+      List<CodeableConcept> serviceProvisionCode,
+      List<HealthcareServiceEligibility> eligibility,
+      List<CodeableConcept> program,
+      List<CodeableConcept> characteristic,
+      List<CodeableConcept> communication,
+      List<CodeableConcept> referralMethod,
       bool appointmentRequired,
-      List<dynamic> availableTime,
-      List<dynamic> notAvailable,
+      List<HealthcareServiceAvailableTime> availableTime,
+      List<HealthcareServiceNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<dynamic> endpoint}) = _$HealthcareService;
+      List<Reference> endpoint}) = _$HealthcareService;
 
   factory HealthcareService.fromJson(Map<String, dynamic> json) =
       _$HealthcareService.fromJson;
@@ -1767,33 +1793,33 @@ abstract class HealthcareService implements Entities1 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   bool get active;
   Reference get providedBy;
-  List<dynamic> get category;
-  List<dynamic> get type;
-  List<dynamic> get specialty;
-  List<dynamic> get location;
+  List<CodeableConcept> get category;
+  List<CodeableConcept> get type;
+  List<CodeableConcept> get specialty;
+  List<Reference> get location;
   String get name;
   String get comment;
   Markdown get extraDetails;
   Attachment get photo;
-  List<dynamic> get telecom;
-  List<dynamic> get coverageArea;
-  List<dynamic> get serviceProvisionCode;
-  List<dynamic> get eligibility;
-  List<dynamic> get program;
-  List<dynamic> get characteristic;
-  List<dynamic> get communication;
-  List<dynamic> get referralMethod;
+  List<ContactPoint> get telecom;
+  List<Reference> get coverageArea;
+  List<CodeableConcept> get serviceProvisionCode;
+  List<HealthcareServiceEligibility> get eligibility;
+  List<CodeableConcept> get program;
+  List<CodeableConcept> get characteristic;
+  List<CodeableConcept> get communication;
+  List<CodeableConcept> get referralMethod;
   bool get appointmentRequired;
-  List<dynamic> get availableTime;
-  List<dynamic> get notAvailable;
+  List<HealthcareServiceAvailableTime> get availableTime;
+  List<HealthcareServiceNotAvailable> get notAvailable;
   String get availabilityExceptions;
-  List<dynamic> get endpoint;
+  List<Reference> get endpoint;
   @override
   $HealthcareServiceCopyWith<HealthcareService> get copyWith;
 }
@@ -1807,8 +1833,8 @@ abstract class $HealthcareServiceEligibilityCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Markdown comment});
 }
@@ -1835,11 +1861,12 @@ class _$HealthcareServiceEligibilityCopyWithImpl<$Res>
   }) {
     return _then(HealthcareServiceEligibility(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       comment: comment == freezed ? _value.comment : comment as Markdown,
     ));
@@ -1861,9 +1888,9 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept code;
   @override
@@ -1918,51 +1945,55 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -1972,38 +2003,38 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -2017,20 +2048,20 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -2040,26 +2071,26 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -2070,16 +2101,16 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -2110,48 +2141,52 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -2160,36 +2195,36 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -2202,20 +2237,20 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -2224,25 +2259,25 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -2252,16 +2287,16 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -2342,8 +2377,8 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
 abstract class HealthcareServiceEligibility implements Entities1 {
   const factory HealthcareServiceEligibility(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Markdown comment}) = _$HealthcareServiceEligibility;
 
@@ -2352,9 +2387,9 @@ abstract class HealthcareServiceEligibility implements Entities1 {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get code;
   Markdown get comment;
   @override
@@ -2371,8 +2406,8 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       List<String> daysOfWeek,
       bool allDay,
       Time availableStartTime,
@@ -2403,11 +2438,12 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
   }) {
     return _then(HealthcareServiceAvailableTime(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       daysOfWeek: daysOfWeek == freezed
           ? _value.daysOfWeek
           : daysOfWeek as List<String>,
@@ -2441,9 +2477,9 @@ class _$HealthcareServiceAvailableTime
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final List<String> daysOfWeek;
   @override
@@ -2511,51 +2547,55 @@ class _$HealthcareServiceAvailableTime
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -2565,38 +2605,38 @@ class _$HealthcareServiceAvailableTime
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -2610,20 +2650,20 @@ class _$HealthcareServiceAvailableTime
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -2633,26 +2673,26 @@ class _$HealthcareServiceAvailableTime
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -2663,16 +2703,16 @@ class _$HealthcareServiceAvailableTime
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -2703,48 +2743,52 @@ class _$HealthcareServiceAvailableTime
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -2753,36 +2797,36 @@ class _$HealthcareServiceAvailableTime
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -2795,20 +2839,20 @@ class _$HealthcareServiceAvailableTime
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -2817,25 +2861,25 @@ class _$HealthcareServiceAvailableTime
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -2845,16 +2889,16 @@ class _$HealthcareServiceAvailableTime
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -2935,8 +2979,8 @@ class _$HealthcareServiceAvailableTime
 abstract class HealthcareServiceAvailableTime implements Entities1 {
   const factory HealthcareServiceAvailableTime(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       List<String> daysOfWeek,
       bool allDay,
       Time availableStartTime,
@@ -2947,9 +2991,9 @@ abstract class HealthcareServiceAvailableTime implements Entities1 {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   List<String> get daysOfWeek;
   bool get allDay;
   Time get availableStartTime;
@@ -2968,8 +3012,8 @@ abstract class $HealthcareServiceNotAvailableCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String description,
       Period during});
 }
@@ -2996,11 +3040,12 @@ class _$HealthcareServiceNotAvailableCopyWithImpl<$Res>
   }) {
     return _then(HealthcareServiceNotAvailable(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       description:
           description == freezed ? _value.description : description as String,
       during: during == freezed ? _value.during : during as Period,
@@ -3023,9 +3068,9 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final String description;
   @override
@@ -3081,51 +3126,55 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -3135,38 +3184,38 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -3180,20 +3229,20 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -3203,26 +3252,26 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -3233,16 +3282,16 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -3273,48 +3322,52 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -3323,36 +3376,36 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -3365,20 +3418,20 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -3387,25 +3440,25 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -3415,16 +3468,16 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -3505,8 +3558,8 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
 abstract class HealthcareServiceNotAvailable implements Entities1 {
   const factory HealthcareServiceNotAvailable(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       String description,
       Period during}) = _$HealthcareServiceNotAvailable;
 
@@ -3515,9 +3568,9 @@ abstract class HealthcareServiceNotAvailable implements Entities1 {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   String get description;
   Period get during;
   @override
@@ -3537,25 +3590,25 @@ abstract class $LocationCopyWith<$Res> implements $Entities1CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       LocationStatus status,
       Coding operationalStatus,
       String name,
       List<String> alias,
       String description,
       LocationMode mode,
-      List<dynamic> type,
-      List<dynamic> telecom,
+      List<CodeableConcept> type,
+      List<ContactPoint> telecom,
       Address address,
       CodeableConcept physicalType,
       LocationPosition position,
       Reference managingOrganization,
       Reference partOf,
-      List<dynamic> hoursOfOperation,
+      List<LocationHoursOfOperation> hoursOfOperation,
       String availabilityExceptions,
-      List<dynamic> endpoint});
+      List<Reference> endpoint});
 }
 
 class _$LocationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
@@ -3608,14 +3661,15 @@ class _$LocationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as LocationStatus,
       operationalStatus: operationalStatus == freezed
           ? _value.operationalStatus
@@ -3625,8 +3679,9 @@ class _$LocationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       mode: mode == freezed ? _value.mode : mode as LocationMode,
-      type: type == freezed ? _value.type : type as List<dynamic>,
-      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as Address,
       physicalType: physicalType == freezed
           ? _value.physicalType
@@ -3639,12 +3694,12 @@ class _$LocationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       partOf: partOf == freezed ? _value.partOf : partOf as Reference,
       hoursOfOperation: hoursOfOperation == freezed
           ? _value.hoursOfOperation
-          : hoursOfOperation as List<dynamic>,
+          : hoursOfOperation as List<LocationHoursOfOperation>,
       availabilityExceptions: availabilityExceptions == freezed
           ? _value.availabilityExceptions
           : availabilityExceptions as String,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<dynamic>,
+          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
     ));
   }
 }
@@ -3652,7 +3707,7 @@ class _$LocationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
 @JsonSerializable()
 class _$Location implements Location {
   const _$Location(
-      {this.resourceType,
+      {this.resourceType = 'Location',
       this.id,
       this.meta,
       this.implicitRules,
@@ -3677,11 +3732,13 @@ class _$Location implements Location {
       this.partOf,
       this.hoursOfOperation,
       this.availabilityExceptions,
-      this.endpoint});
+      this.endpoint})
+      : assert(resourceType != null);
 
   factory _$Location.fromJson(Map<String, dynamic> json) =>
       _$_$LocationFromJson(json);
 
+  @JsonKey(defaultValue: 'Location')
   @override
   final String resourceType;
   @override
@@ -3697,11 +3754,11 @@ class _$Location implements Location {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final LocationStatus status;
   @override
@@ -3715,9 +3772,9 @@ class _$Location implements Location {
   @override
   final LocationMode mode;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
-  final List<dynamic> telecom;
+  final List<ContactPoint> telecom;
   @override
   final Address address;
   @override
@@ -3729,11 +3786,11 @@ class _$Location implements Location {
   @override
   final Reference partOf;
   @override
-  final List<dynamic> hoursOfOperation;
+  final List<LocationHoursOfOperation> hoursOfOperation;
   @override
   final String availabilityExceptions;
   @override
-  final List<dynamic> endpoint;
+  final List<Reference> endpoint;
 
   @override
   String toString() {
@@ -3860,51 +3917,55 @@ class _$Location implements Location {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -3914,38 +3975,38 @@ class _$Location implements Location {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -3959,20 +4020,20 @@ class _$Location implements Location {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -3982,26 +4043,26 @@ class _$Location implements Location {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -4012,16 +4073,16 @@ class _$Location implements Location {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -4077,48 +4138,52 @@ class _$Location implements Location {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -4127,36 +4192,36 @@ class _$Location implements Location {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -4169,20 +4234,20 @@ class _$Location implements Location {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -4191,25 +4256,25 @@ class _$Location implements Location {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -4219,16 +4284,16 @@ class _$Location implements Location {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -4339,25 +4404,25 @@ abstract class Location implements Entities1 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       LocationStatus status,
       Coding operationalStatus,
       String name,
       List<String> alias,
       String description,
       LocationMode mode,
-      List<dynamic> type,
-      List<dynamic> telecom,
+      List<CodeableConcept> type,
+      List<ContactPoint> telecom,
       Address address,
       CodeableConcept physicalType,
       LocationPosition position,
       Reference managingOrganization,
       Reference partOf,
-      List<dynamic> hoursOfOperation,
+      List<LocationHoursOfOperation> hoursOfOperation,
       String availabilityExceptions,
-      List<dynamic> endpoint}) = _$Location;
+      List<Reference> endpoint}) = _$Location;
 
   factory Location.fromJson(Map<String, dynamic> json) = _$Location.fromJson;
 
@@ -4369,26 +4434,26 @@ abstract class Location implements Entities1 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   LocationStatus get status;
   Coding get operationalStatus;
   String get name;
   List<String> get alias;
   String get description;
   LocationMode get mode;
-  List<dynamic> get type;
-  List<dynamic> get telecom;
+  List<CodeableConcept> get type;
+  List<ContactPoint> get telecom;
   Address get address;
   CodeableConcept get physicalType;
   LocationPosition get position;
   Reference get managingOrganization;
   Reference get partOf;
-  List<dynamic> get hoursOfOperation;
+  List<LocationHoursOfOperation> get hoursOfOperation;
   String get availabilityExceptions;
-  List<dynamic> get endpoint;
+  List<Reference> get endpoint;
   @override
   $LocationCopyWith<Location> get copyWith;
 }
@@ -4401,8 +4466,8 @@ abstract class $LocationPositionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       double longitude,
       double latitude,
       double altitude});
@@ -4428,11 +4493,12 @@ class _$LocationPositionCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
   }) {
     return _then(LocationPosition(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       longitude: longitude == freezed ? _value.longitude : longitude as double,
       latitude: latitude == freezed ? _value.latitude : latitude as double,
       altitude: altitude == freezed ? _value.altitude : altitude as double,
@@ -4456,9 +4522,9 @@ class _$LocationPosition implements LocationPosition {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final double longitude;
   @override
@@ -4520,51 +4586,55 @@ class _$LocationPosition implements LocationPosition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -4574,38 +4644,38 @@ class _$LocationPosition implements LocationPosition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -4619,20 +4689,20 @@ class _$LocationPosition implements LocationPosition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -4642,26 +4712,26 @@ class _$LocationPosition implements LocationPosition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -4672,16 +4742,16 @@ class _$LocationPosition implements LocationPosition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -4712,48 +4782,52 @@ class _$LocationPosition implements LocationPosition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -4762,36 +4836,36 @@ class _$LocationPosition implements LocationPosition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -4804,20 +4878,20 @@ class _$LocationPosition implements LocationPosition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -4826,25 +4900,25 @@ class _$LocationPosition implements LocationPosition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -4854,16 +4928,16 @@ class _$LocationPosition implements LocationPosition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -4944,8 +5018,8 @@ class _$LocationPosition implements LocationPosition {
 abstract class LocationPosition implements Entities1 {
   const factory LocationPosition(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       double longitude,
       double latitude,
       double altitude}) = _$LocationPosition;
@@ -4955,9 +5029,9 @@ abstract class LocationPosition implements Entities1 {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   double get longitude;
   double get latitude;
   double get altitude;
@@ -4973,8 +5047,8 @@ abstract class $LocationHoursOfOperationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       List<Code> daysOfWeek,
       bool allDay,
       Time openingTime,
@@ -5004,11 +5078,12 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res>
   }) {
     return _then(LocationHoursOfOperation(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       daysOfWeek:
           daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
       allDay: allDay == freezed ? _value.allDay : allDay as bool,
@@ -5037,9 +5112,9 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Code> daysOfWeek;
   @override
@@ -5107,51 +5182,55 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -5161,38 +5240,38 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -5206,20 +5285,20 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -5229,26 +5308,26 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -5259,16 +5338,16 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -5299,48 +5378,52 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -5349,36 +5432,36 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -5391,20 +5474,20 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -5413,25 +5496,25 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -5441,16 +5524,16 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -5531,8 +5614,8 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
 abstract class LocationHoursOfOperation implements Entities1 {
   const factory LocationHoursOfOperation(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       List<Code> daysOfWeek,
       bool allDay,
       Time openingTime,
@@ -5543,9 +5626,9 @@ abstract class LocationHoursOfOperation implements Entities1 {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   List<Code> get daysOfWeek;
   bool get allDay;
   Time get openingTime;
@@ -5568,20 +5651,20 @@ abstract class $OrganizationAffiliationCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       bool active,
       Period period,
       Reference organization,
       Reference participatingOrganization,
-      List<dynamic> network,
-      List<dynamic> code,
-      List<dynamic> specialty,
-      List<dynamic> location,
-      List<dynamic> healthcareService,
-      List<dynamic> telecom,
-      List<dynamic> endpoint});
+      List<Reference> network,
+      List<CodeableConcept> code,
+      List<CodeableConcept> specialty,
+      List<Reference> location,
+      List<Reference> healthcareService,
+      List<ContactPoint> telecom,
+      List<Reference> endpoint});
 }
 
 class _$OrganizationAffiliationCopyWithImpl<$Res>
@@ -5631,14 +5714,15 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       active: active == freezed ? _value.active : active as bool,
       period: period == freezed ? _value.period : period as Period,
       organization: organization == freezed
@@ -5647,18 +5731,20 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
       participatingOrganization: participatingOrganization == freezed
           ? _value.participatingOrganization
           : participatingOrganization as Reference,
-      network: network == freezed ? _value.network : network as List<dynamic>,
-      code: code == freezed ? _value.code : code as List<dynamic>,
-      specialty:
-          specialty == freezed ? _value.specialty : specialty as List<dynamic>,
+      network: network == freezed ? _value.network : network as List<Reference>,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>,
+      specialty: specialty == freezed
+          ? _value.specialty
+          : specialty as List<CodeableConcept>,
       location:
-          location == freezed ? _value.location : location as List<dynamic>,
+          location == freezed ? _value.location : location as List<Reference>,
       healthcareService: healthcareService == freezed
           ? _value.healthcareService
-          : healthcareService as List<dynamic>,
-      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
+          : healthcareService as List<Reference>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<dynamic>,
+          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
     ));
   }
 }
@@ -5666,7 +5752,7 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$OrganizationAffiliation implements OrganizationAffiliation {
   const _$OrganizationAffiliation(
-      {this.resourceType,
+      {this.resourceType = 'OrganizationAffiliation',
       this.id,
       this.meta,
       this.implicitRules,
@@ -5686,11 +5772,13 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
       this.location,
       this.healthcareService,
       this.telecom,
-      this.endpoint});
+      this.endpoint})
+      : assert(resourceType != null);
 
   factory _$OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
       _$_$OrganizationAffiliationFromJson(json);
 
+  @JsonKey(defaultValue: 'OrganizationAffiliation')
   @override
   final String resourceType;
   @override
@@ -5706,11 +5794,11 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final bool active;
   @override
@@ -5720,19 +5808,19 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
   @override
   final Reference participatingOrganization;
   @override
-  final List<dynamic> network;
+  final List<Reference> network;
   @override
-  final List<dynamic> code;
+  final List<CodeableConcept> code;
   @override
-  final List<dynamic> specialty;
+  final List<CodeableConcept> specialty;
   @override
-  final List<dynamic> location;
+  final List<Reference> location;
   @override
-  final List<dynamic> healthcareService;
+  final List<Reference> healthcareService;
   @override
-  final List<dynamic> telecom;
+  final List<ContactPoint> telecom;
   @override
-  final List<dynamic> endpoint;
+  final List<Reference> endpoint;
 
   @override
   String toString() {
@@ -5846,51 +5934,55 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -5900,38 +5992,38 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -5945,20 +6037,20 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -5968,26 +6060,26 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -5998,16 +6090,16 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -6058,48 +6150,52 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -6108,36 +6204,36 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -6150,20 +6246,20 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -6172,25 +6268,25 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -6200,16 +6296,16 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -6316,20 +6412,20 @@ abstract class OrganizationAffiliation implements Entities1 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       bool active,
       Period period,
       Reference organization,
       Reference participatingOrganization,
-      List<dynamic> network,
-      List<dynamic> code,
-      List<dynamic> specialty,
-      List<dynamic> location,
-      List<dynamic> healthcareService,
-      List<dynamic> telecom,
-      List<dynamic> endpoint}) = _$OrganizationAffiliation;
+      List<Reference> network,
+      List<CodeableConcept> code,
+      List<CodeableConcept> specialty,
+      List<Reference> location,
+      List<Reference> healthcareService,
+      List<ContactPoint> telecom,
+      List<Reference> endpoint}) = _$OrganizationAffiliation;
 
   factory OrganizationAffiliation.fromJson(Map<String, dynamic> json) =
       _$OrganizationAffiliation.fromJson;
@@ -6342,21 +6438,21 @@ abstract class OrganizationAffiliation implements Entities1 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   bool get active;
   Period get period;
   Reference get organization;
   Reference get participatingOrganization;
-  List<dynamic> get network;
-  List<dynamic> get code;
-  List<dynamic> get specialty;
-  List<dynamic> get location;
-  List<dynamic> get healthcareService;
-  List<dynamic> get telecom;
-  List<dynamic> get endpoint;
+  List<Reference> get network;
+  List<CodeableConcept> get code;
+  List<CodeableConcept> get specialty;
+  List<Reference> get location;
+  List<Reference> get healthcareService;
+  List<ContactPoint> get telecom;
+  List<Reference> get endpoint;
   @override
   $OrganizationAffiliationCopyWith<OrganizationAffiliation> get copyWith;
 }
@@ -6374,18 +6470,18 @@ abstract class $OrganizationCopyWith<$Res> implements $Entities1CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       bool active,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       String name,
       List<String> alias,
-      List<dynamic> telecom,
-      List<dynamic> address,
+      List<ContactPoint> telecom,
+      List<Address> address,
       Reference partOf,
-      List<dynamic> contact,
-      List<dynamic> endpoint});
+      List<OrganizationContact> contact,
+      List<Reference> endpoint});
 }
 
 class _$OrganizationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
@@ -6432,24 +6528,28 @@ class _$OrganizationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       active: active == freezed ? _value.active : active as bool,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       name: name == freezed ? _value.name : name as String,
       alias: alias == freezed ? _value.alias : alias as List<String>,
-      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
-      address: address == freezed ? _value.address : address as List<dynamic>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      address: address == freezed ? _value.address : address as List<Address>,
       partOf: partOf == freezed ? _value.partOf : partOf as Reference,
-      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<OrganizationContact>,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<dynamic>,
+          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
     ));
   }
 }
@@ -6457,7 +6557,7 @@ class _$OrganizationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
 @JsonSerializable()
 class _$Organization implements Organization {
   const _$Organization(
-      {this.resourceType,
+      {this.resourceType = 'Organization',
       this.id,
       this.meta,
       this.implicitRules,
@@ -6475,11 +6575,13 @@ class _$Organization implements Organization {
       this.address,
       this.partOf,
       this.contact,
-      this.endpoint});
+      this.endpoint})
+      : assert(resourceType != null);
 
   factory _$Organization.fromJson(Map<String, dynamic> json) =>
       _$_$OrganizationFromJson(json);
 
+  @JsonKey(defaultValue: 'Organization')
   @override
   final String resourceType;
   @override
@@ -6495,29 +6597,29 @@ class _$Organization implements Organization {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final bool active;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
   final String name;
   @override
   final List<String> alias;
   @override
-  final List<dynamic> telecom;
+  final List<ContactPoint> telecom;
   @override
-  final List<dynamic> address;
+  final List<Address> address;
   @override
   final Reference partOf;
   @override
-  final List<dynamic> contact;
+  final List<OrganizationContact> contact;
   @override
-  final List<dynamic> endpoint;
+  final List<Reference> endpoint;
 
   @override
   String toString() {
@@ -6618,51 +6720,55 @@ class _$Organization implements Organization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -6672,38 +6778,38 @@ class _$Organization implements Organization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -6717,20 +6823,20 @@ class _$Organization implements Organization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -6740,26 +6846,26 @@ class _$Organization implements Organization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -6770,16 +6876,16 @@ class _$Organization implements Organization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -6828,48 +6934,52 @@ class _$Organization implements Organization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -6878,36 +6988,36 @@ class _$Organization implements Organization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -6920,20 +7030,20 @@ class _$Organization implements Organization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -6942,25 +7052,25 @@ class _$Organization implements Organization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -6970,16 +7080,16 @@ class _$Organization implements Organization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -7083,18 +7193,18 @@ abstract class Organization implements Entities1 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       bool active,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       String name,
       List<String> alias,
-      List<dynamic> telecom,
-      List<dynamic> address,
+      List<ContactPoint> telecom,
+      List<Address> address,
       Reference partOf,
-      List<dynamic> contact,
-      List<dynamic> endpoint}) = _$Organization;
+      List<OrganizationContact> contact,
+      List<Reference> endpoint}) = _$Organization;
 
   factory Organization.fromJson(Map<String, dynamic> json) =
       _$Organization.fromJson;
@@ -7107,19 +7217,19 @@ abstract class Organization implements Entities1 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   bool get active;
-  List<dynamic> get type;
+  List<CodeableConcept> get type;
   String get name;
   List<String> get alias;
-  List<dynamic> get telecom;
-  List<dynamic> get address;
+  List<ContactPoint> get telecom;
+  List<Address> get address;
   Reference get partOf;
-  List<dynamic> get contact;
-  List<dynamic> get endpoint;
+  List<OrganizationContact> get contact;
+  List<Reference> get endpoint;
   @override
   $OrganizationCopyWith<Organization> get copyWith;
 }
@@ -7132,11 +7242,11 @@ abstract class $OrganizationContactCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept purpose,
       HumanName name,
-      List<dynamic> telecom,
+      List<ContactPoint> telecom,
       Address address});
 }
 
@@ -7162,14 +7272,16 @@ class _$OrganizationContactCopyWithImpl<$Res>
   }) {
     return _then(OrganizationContact(
       id: id == freezed ? _value.id : id as String,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       purpose: purpose == freezed ? _value.purpose : purpose as CodeableConcept,
       name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as Address,
     ));
   }
@@ -7192,15 +7304,15 @@ class _$OrganizationContact implements OrganizationContact {
   @override
   final String id;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept purpose;
   @override
   final HumanName name;
   @override
-  final List<dynamic> telecom;
+  final List<ContactPoint> telecom;
   @override
   final Address address;
 
@@ -7260,51 +7372,55 @@ class _$OrganizationContact implements OrganizationContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -7314,38 +7430,38 @@ class _$OrganizationContact implements OrganizationContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -7359,20 +7475,20 @@ class _$OrganizationContact implements OrganizationContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -7382,26 +7498,26 @@ class _$OrganizationContact implements OrganizationContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -7412,16 +7528,16 @@ class _$OrganizationContact implements OrganizationContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -7452,48 +7568,52 @@ class _$OrganizationContact implements OrganizationContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -7502,36 +7622,36 @@ class _$OrganizationContact implements OrganizationContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -7544,20 +7664,20 @@ class _$OrganizationContact implements OrganizationContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -7566,25 +7686,25 @@ class _$OrganizationContact implements OrganizationContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -7594,16 +7714,16 @@ class _$OrganizationContact implements OrganizationContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -7684,11 +7804,11 @@ class _$OrganizationContact implements OrganizationContact {
 abstract class OrganizationContact implements Entities1 {
   const factory OrganizationContact(
       {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept purpose,
       HumanName name,
-      List<dynamic> telecom,
+      List<ContactPoint> telecom,
       Address address}) = _$OrganizationContact;
 
   factory OrganizationContact.fromJson(Map<String, dynamic> json) =
@@ -7696,12 +7816,12 @@ abstract class OrganizationContact implements Entities1 {
 
   String get id;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get purpose;
   HumanName get name;
-  List<dynamic> get telecom;
+  List<ContactPoint> get telecom;
   Address get address;
   @override
   $OrganizationContactCopyWith<OrganizationContact> get copyWith;
@@ -7719,16 +7839,16 @@ abstract class $EndpointCopyWith<$Res> implements $Entities1CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       EndpointStatus status,
       Coding connectionType,
       String name,
       Reference managingOrganization,
-      List<dynamic> contact,
+      List<ContactPoint> contact,
       Period period,
-      List<dynamic> payloadType,
+      List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
       FhirUrl address,
       List<String> header});
@@ -7778,14 +7898,15 @@ class _$EndpointCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension:
-          extension == freezed ? _value.extension : extension as List<dynamic>,
+      extension: extension == freezed
+          ? _value.extension
+          : extension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as EndpointStatus,
       connectionType: connectionType == freezed
           ? _value.connectionType
@@ -7794,11 +7915,12 @@ class _$EndpointCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
-      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactPoint>,
       period: period == freezed ? _value.period : period as Period,
       payloadType: payloadType == freezed
           ? _value.payloadType
-          : payloadType as List<dynamic>,
+          : payloadType as List<CodeableConcept>,
       payloadMimeType: payloadMimeType == freezed
           ? _value.payloadMimeType
           : payloadMimeType as List<Code>,
@@ -7811,7 +7933,7 @@ class _$EndpointCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
 @JsonSerializable()
 class _$Endpoint implements Endpoint {
   const _$Endpoint(
-      {this.resourceType,
+      {this.resourceType = 'Endpoint',
       this.id,
       this.meta,
       this.implicitRules,
@@ -7830,11 +7952,13 @@ class _$Endpoint implements Endpoint {
       this.payloadType,
       this.payloadMimeType,
       this.address,
-      this.header});
+      this.header})
+      : assert(resourceType != null);
 
   factory _$Endpoint.fromJson(Map<String, dynamic> json) =>
       _$_$EndpointFromJson(json);
 
+  @JsonKey(defaultValue: 'Endpoint')
   @override
   final String resourceType;
   @override
@@ -7850,11 +7974,11 @@ class _$Endpoint implements Endpoint {
   @override
   final List<dynamic> contained;
   @override
-  final List<dynamic> extension;
+  final List<FhirExtension> extension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final EndpointStatus status;
   @override
@@ -7864,11 +7988,11 @@ class _$Endpoint implements Endpoint {
   @override
   final Reference managingOrganization;
   @override
-  final List<dynamic> contact;
+  final List<ContactPoint> contact;
   @override
   final Period period;
   @override
-  final List<dynamic> payloadType;
+  final List<CodeableConcept> payloadType;
   @override
   final List<Code> payloadMimeType;
   @override
@@ -7980,51 +8104,55 @@ class _$Endpoint implements Endpoint {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Reference providedBy,
-            List<dynamic> category,
-            List<dynamic> type,
-            List<dynamic> specialty,
-            List<dynamic> location,
+            List<CodeableConcept> category,
+            List<CodeableConcept> type,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<dynamic> telecom,
-            List<dynamic> coverageArea,
-            List<dynamic> serviceProvisionCode,
-            List<dynamic> eligibility,
-            List<dynamic> program,
-            List<dynamic> characteristic,
-            List<dynamic> communication,
-            List<dynamic> referralMethod,
+            List<ContactPoint> telecom,
+            List<Reference> coverageArea,
+            List<CodeableConcept> serviceProvisionCode,
+            List<HealthcareServiceEligibility> eligibility,
+            List<CodeableConcept> program,
+            List<CodeableConcept> characteristic,
+            List<CodeableConcept> communication,
+            List<CodeableConcept> referralMethod,
             bool appointmentRequired,
-            List<dynamic> availableTime,
-            List<dynamic> notAvailable,
+            List<HealthcareServiceAvailableTime> availableTime,
+            List<HealthcareServiceNotAvailable> notAvailable,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
             Time availableEndTime),
     @required
-        Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-            List<dynamic> modifierExtension, String description, Period during),
+        Result healthcareServiceNotAvailable(
+            String id,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            String description,
+            Period during),
     @required
         Result location(
             String resourceType,
@@ -8034,38 +8162,38 @@ class _$Endpoint implements Endpoint {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<dynamic> type,
-            List<dynamic> telecom,
+            List<CodeableConcept> type,
+            List<ContactPoint> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<dynamic> hoursOfOperation,
+            List<LocationHoursOfOperation> hoursOfOperation,
             String availabilityExceptions,
-            List<dynamic> endpoint),
+            List<Reference> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -8079,20 +8207,20 @@ class _$Endpoint implements Endpoint {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<dynamic> network,
-            List<dynamic> code,
-            List<dynamic> specialty,
-            List<dynamic> location,
-            List<dynamic> healthcareService,
-            List<dynamic> telecom,
-            List<dynamic> endpoint),
+            List<Reference> network,
+            List<CodeableConcept> code,
+            List<CodeableConcept> specialty,
+            List<Reference> location,
+            List<Reference> healthcareService,
+            List<ContactPoint> telecom,
+            List<Reference> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -8102,26 +8230,26 @@ class _$Endpoint implements Endpoint {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String name,
             List<String> alias,
-            List<dynamic> telecom,
-            List<dynamic> address,
+            List<ContactPoint> telecom,
+            List<Address> address,
             Reference partOf,
-            List<dynamic> contact,
-            List<dynamic> endpoint),
+            List<OrganizationContact> contact,
+            List<Reference> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<dynamic> telecom,
+            List<ContactPoint> telecom,
             Address address),
     @required
         Result endpoint(
@@ -8132,16 +8260,16 @@ class _$Endpoint implements Endpoint {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<dynamic> extension,
-            List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<FhirExtension> extension,
+            List<FhirExtension> modifierExtension,
+            List<Identifier> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Period period,
-            List<dynamic> payloadType,
+            List<CodeableConcept> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -8191,48 +8319,52 @@ class _$Endpoint implements Endpoint {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Reference providedBy,
-        List<dynamic> category,
-        List<dynamic> type,
-        List<dynamic> specialty,
-        List<dynamic> location,
+        List<CodeableConcept> category,
+        List<CodeableConcept> type,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<dynamic> telecom,
-        List<dynamic> coverageArea,
-        List<dynamic> serviceProvisionCode,
-        List<dynamic> eligibility,
-        List<dynamic> program,
-        List<dynamic> characteristic,
-        List<dynamic> communication,
-        List<dynamic> referralMethod,
+        List<ContactPoint> telecom,
+        List<Reference> coverageArea,
+        List<CodeableConcept> serviceProvisionCode,
+        List<HealthcareServiceEligibility> eligibility,
+        List<CodeableConcept> program,
+        List<CodeableConcept> characteristic,
+        List<CodeableConcept> communication,
+        List<CodeableConcept> referralMethod,
         bool appointmentRequired,
-        List<dynamic> availableTime,
-        List<dynamic> notAvailable,
+        List<HealthcareServiceAvailableTime> availableTime,
+        List<HealthcareServiceNotAvailable> notAvailable,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
-    Result healthcareServiceNotAvailable(String id, List<dynamic> extension,
-        List<dynamic> modifierExtension, String description, Period during),
+    Result healthcareServiceNotAvailable(
+        String id,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        String description,
+        Period during),
     Result location(
         String resourceType,
         Id id,
@@ -8241,36 +8373,36 @@ class _$Endpoint implements Endpoint {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<dynamic> type,
-        List<dynamic> telecom,
+        List<CodeableConcept> type,
+        List<ContactPoint> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<dynamic> hoursOfOperation,
+        List<LocationHoursOfOperation> hoursOfOperation,
         String availabilityExceptions,
-        List<dynamic> endpoint),
+        List<Reference> endpoint),
     Result locationPosition(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -8283,20 +8415,20 @@ class _$Endpoint implements Endpoint {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<dynamic> network,
-        List<dynamic> code,
-        List<dynamic> specialty,
-        List<dynamic> location,
-        List<dynamic> healthcareService,
-        List<dynamic> telecom,
-        List<dynamic> endpoint),
+        List<Reference> network,
+        List<CodeableConcept> code,
+        List<CodeableConcept> specialty,
+        List<Reference> location,
+        List<Reference> healthcareService,
+        List<ContactPoint> telecom,
+        List<Reference> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -8305,25 +8437,25 @@ class _$Endpoint implements Endpoint {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String name,
         List<String> alias,
-        List<dynamic> telecom,
-        List<dynamic> address,
+        List<ContactPoint> telecom,
+        List<Address> address,
         Reference partOf,
-        List<dynamic> contact,
-        List<dynamic> endpoint),
+        List<OrganizationContact> contact,
+        List<Reference> endpoint),
     Result organizationContact(
         String id,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<dynamic> telecom,
+        List<ContactPoint> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -8333,16 +8465,16 @@ class _$Endpoint implements Endpoint {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<dynamic> extension,
-        List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<FhirExtension> extension,
+        List<FhirExtension> modifierExtension,
+        List<Identifier> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Period period,
-        List<dynamic> payloadType,
+        List<CodeableConcept> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -8447,16 +8579,16 @@ abstract class Endpoint implements Entities1 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<FhirExtension> extension,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
       EndpointStatus status,
       Coding connectionType,
       String name,
       Reference managingOrganization,
-      List<dynamic> contact,
+      List<ContactPoint> contact,
       Period period,
-      List<dynamic> payloadType,
+      List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
       FhirUrl address,
       List<String> header}) = _$Endpoint;
@@ -8471,17 +8603,17 @@ abstract class Endpoint implements Entities1 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<dynamic> get extension;
+  List<FhirExtension> get extension;
   @override
-  List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<FhirExtension> get modifierExtension;
+  List<Identifier> get identifier;
   EndpointStatus get status;
   Coding get connectionType;
   String get name;
   Reference get managingOrganization;
-  List<dynamic> get contact;
+  List<ContactPoint> get contact;
   Period get period;
-  List<dynamic> get payloadType;
+  List<CodeableConcept> get payloadType;
   List<Code> get payloadMimeType;
   FhirUrl get address;
   List<String> get header;

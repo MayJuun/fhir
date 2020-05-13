@@ -33,8 +33,8 @@ class _$DraftTypesTearOff {
 
   MarketingStatus marketingStatus(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept country,
       CodeableConcept jurisdiction,
       CodeableConcept status,
@@ -54,8 +54,8 @@ class _$DraftTypesTearOff {
 
   Population population(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Range ageRange,
       CodeableConcept ageCodeableConcept,
       CodeableConcept gender,
@@ -75,8 +75,8 @@ class _$DraftTypesTearOff {
 
   ProdCharacteristic prodCharacteristic(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Quantity height,
       Quantity width,
       Quantity depth,
@@ -86,7 +86,7 @@ class _$DraftTypesTearOff {
       String shape,
       List<String> color,
       List<String> imprint,
-      List<dynamic> image,
+      List<Attachment> image,
       CodeableConcept scoring}) {
     return ProdCharacteristic(
       id: id,
@@ -108,12 +108,12 @@ class _$DraftTypesTearOff {
 
   ProductShelfLife productShelfLife(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept type,
       Quantity period,
-      List<dynamic> specialPrecautionsForStorage}) {
+      List<CodeableConcept> specialPrecautionsForStorage}) {
     return ProductShelfLife(
       id: id,
       fhirExtension: fhirExtension,
@@ -127,8 +127,8 @@ class _$DraftTypesTearOff {
 
   SubstanceAmount substanceAmount(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Quantity amountQuantity,
       Range amountRange,
       Markdown amountString,
@@ -150,8 +150,8 @@ class _$DraftTypesTearOff {
 
   SubstanceAmountReferenceRange substanceAmountReferenceRange(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Quantity lowLimit,
       Quantity highLimit}) {
     return SubstanceAmountReferenceRange(
@@ -170,16 +170,16 @@ const $DraftTypes = _$DraftTypesTearOff();
 mixin _$DraftTypes {
   String get id;
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get fhirExtension;
+  List<FhirExtension> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required
         Result marketingStatus(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept country,
             CodeableConcept jurisdiction,
             CodeableConcept status,
@@ -188,8 +188,8 @@ mixin _$DraftTypes {
     @required
         Result population(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Range ageRange,
             CodeableConcept ageCodeableConcept,
             CodeableConcept gender,
@@ -198,8 +198,8 @@ mixin _$DraftTypes {
     @required
         Result prodCharacteristic(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity height,
             Quantity width,
             Quantity depth,
@@ -209,22 +209,22 @@ mixin _$DraftTypes {
             String shape,
             List<String> color,
             List<String> imprint,
-            List<dynamic> image,
+            List<Attachment> image,
             CodeableConcept scoring),
     @required
         Result productShelfLife(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Identifier identifier,
             CodeableConcept type,
             Quantity period,
-            List<dynamic> specialPrecautionsForStorage),
+            List<CodeableConcept> specialPrecautionsForStorage),
     @required
         Result substanceAmount(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity amountQuantity,
             Range amountRange,
             Markdown amountString,
@@ -234,8 +234,8 @@ mixin _$DraftTypes {
     @required
         Result substanceAmountReferenceRange(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity lowLimit,
             Quantity highLimit),
   });
@@ -243,8 +243,8 @@ mixin _$DraftTypes {
   Result maybeWhen<Result extends Object>({
     Result marketingStatus(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept country,
         CodeableConcept jurisdiction,
         CodeableConcept status,
@@ -252,8 +252,8 @@ mixin _$DraftTypes {
         FhirDateTime restoreDate),
     Result population(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Range ageRange,
         CodeableConcept ageCodeableConcept,
         CodeableConcept gender,
@@ -261,8 +261,8 @@ mixin _$DraftTypes {
         CodeableConcept physiologicalCondition),
     Result prodCharacteristic(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity height,
         Quantity width,
         Quantity depth,
@@ -272,20 +272,20 @@ mixin _$DraftTypes {
         String shape,
         List<String> color,
         List<String> imprint,
-        List<dynamic> image,
+        List<Attachment> image,
         CodeableConcept scoring),
     Result productShelfLife(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Identifier identifier,
         CodeableConcept type,
         Quantity period,
-        List<dynamic> specialPrecautionsForStorage),
+        List<CodeableConcept> specialPrecautionsForStorage),
     Result substanceAmount(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity amountQuantity,
         Range amountRange,
         Markdown amountString,
@@ -294,8 +294,8 @@ mixin _$DraftTypes {
         SubstanceAmountReferenceRange referenceRange),
     Result substanceAmountReferenceRange(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity lowLimit,
         Quantity highLimit),
     @required Result orElse(),
@@ -331,8 +331,8 @@ abstract class $DraftTypesCopyWith<$Res> {
       _$DraftTypesCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension});
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension});
 }
 
 class _$DraftTypesCopyWithImpl<$Res> implements $DraftTypesCopyWith<$Res> {
@@ -352,10 +352,10 @@ class _$DraftTypesCopyWithImpl<$Res> implements $DraftTypesCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
     ));
   }
 }
@@ -368,8 +368,8 @@ abstract class $MarketingStatusCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept country,
       CodeableConcept jurisdiction,
       CodeableConcept status,
@@ -401,10 +401,10 @@ class _$MarketingStatusCopyWithImpl<$Res> extends _$DraftTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       country: country == freezed ? _value.country : country as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
@@ -437,9 +437,9 @@ class _$MarketingStatus implements MarketingStatus {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final CodeableConcept country;
   @override
@@ -506,8 +506,8 @@ class _$MarketingStatus implements MarketingStatus {
     @required
         Result marketingStatus(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept country,
             CodeableConcept jurisdiction,
             CodeableConcept status,
@@ -516,8 +516,8 @@ class _$MarketingStatus implements MarketingStatus {
     @required
         Result population(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Range ageRange,
             CodeableConcept ageCodeableConcept,
             CodeableConcept gender,
@@ -526,8 +526,8 @@ class _$MarketingStatus implements MarketingStatus {
     @required
         Result prodCharacteristic(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity height,
             Quantity width,
             Quantity depth,
@@ -537,22 +537,22 @@ class _$MarketingStatus implements MarketingStatus {
             String shape,
             List<String> color,
             List<String> imprint,
-            List<dynamic> image,
+            List<Attachment> image,
             CodeableConcept scoring),
     @required
         Result productShelfLife(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Identifier identifier,
             CodeableConcept type,
             Quantity period,
-            List<dynamic> specialPrecautionsForStorage),
+            List<CodeableConcept> specialPrecautionsForStorage),
     @required
         Result substanceAmount(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity amountQuantity,
             Range amountRange,
             Markdown amountString,
@@ -562,8 +562,8 @@ class _$MarketingStatus implements MarketingStatus {
     @required
         Result substanceAmountReferenceRange(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity lowLimit,
             Quantity highLimit),
   }) {
@@ -582,8 +582,8 @@ class _$MarketingStatus implements MarketingStatus {
   Result maybeWhen<Result extends Object>({
     Result marketingStatus(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept country,
         CodeableConcept jurisdiction,
         CodeableConcept status,
@@ -591,8 +591,8 @@ class _$MarketingStatus implements MarketingStatus {
         FhirDateTime restoreDate),
     Result population(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Range ageRange,
         CodeableConcept ageCodeableConcept,
         CodeableConcept gender,
@@ -600,8 +600,8 @@ class _$MarketingStatus implements MarketingStatus {
         CodeableConcept physiologicalCondition),
     Result prodCharacteristic(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity height,
         Quantity width,
         Quantity depth,
@@ -611,20 +611,20 @@ class _$MarketingStatus implements MarketingStatus {
         String shape,
         List<String> color,
         List<String> imprint,
-        List<dynamic> image,
+        List<Attachment> image,
         CodeableConcept scoring),
     Result productShelfLife(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Identifier identifier,
         CodeableConcept type,
         Quantity period,
-        List<dynamic> specialPrecautionsForStorage),
+        List<CodeableConcept> specialPrecautionsForStorage),
     Result substanceAmount(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity amountQuantity,
         Range amountRange,
         Markdown amountString,
@@ -633,8 +633,8 @@ class _$MarketingStatus implements MarketingStatus {
         SubstanceAmountReferenceRange referenceRange),
     Result substanceAmountReferenceRange(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity lowLimit,
         Quantity highLimit),
     @required Result orElse(),
@@ -695,8 +695,8 @@ class _$MarketingStatus implements MarketingStatus {
 abstract class MarketingStatus implements DraftTypes {
   const factory MarketingStatus(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       CodeableConcept country,
       CodeableConcept jurisdiction,
       CodeableConcept status,
@@ -710,9 +710,9 @@ abstract class MarketingStatus implements DraftTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   CodeableConcept get country;
   CodeableConcept get jurisdiction;
   CodeableConcept get status;
@@ -729,8 +729,8 @@ abstract class $PopulationCopyWith<$Res> implements $DraftTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Range ageRange,
       CodeableConcept ageCodeableConcept,
       CodeableConcept gender,
@@ -761,10 +761,10 @@ class _$PopulationCopyWithImpl<$Res> extends _$DraftTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       ageRange: ageRange == freezed ? _value.ageRange : ageRange as Range,
       ageCodeableConcept: ageCodeableConcept == freezed
           ? _value.ageCodeableConcept
@@ -797,9 +797,9 @@ class _$Population implements Population {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final Range ageRange;
   @override
@@ -865,8 +865,8 @@ class _$Population implements Population {
     @required
         Result marketingStatus(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept country,
             CodeableConcept jurisdiction,
             CodeableConcept status,
@@ -875,8 +875,8 @@ class _$Population implements Population {
     @required
         Result population(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Range ageRange,
             CodeableConcept ageCodeableConcept,
             CodeableConcept gender,
@@ -885,8 +885,8 @@ class _$Population implements Population {
     @required
         Result prodCharacteristic(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity height,
             Quantity width,
             Quantity depth,
@@ -896,22 +896,22 @@ class _$Population implements Population {
             String shape,
             List<String> color,
             List<String> imprint,
-            List<dynamic> image,
+            List<Attachment> image,
             CodeableConcept scoring),
     @required
         Result productShelfLife(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Identifier identifier,
             CodeableConcept type,
             Quantity period,
-            List<dynamic> specialPrecautionsForStorage),
+            List<CodeableConcept> specialPrecautionsForStorage),
     @required
         Result substanceAmount(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity amountQuantity,
             Range amountRange,
             Markdown amountString,
@@ -921,8 +921,8 @@ class _$Population implements Population {
     @required
         Result substanceAmountReferenceRange(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity lowLimit,
             Quantity highLimit),
   }) {
@@ -941,8 +941,8 @@ class _$Population implements Population {
   Result maybeWhen<Result extends Object>({
     Result marketingStatus(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept country,
         CodeableConcept jurisdiction,
         CodeableConcept status,
@@ -950,8 +950,8 @@ class _$Population implements Population {
         FhirDateTime restoreDate),
     Result population(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Range ageRange,
         CodeableConcept ageCodeableConcept,
         CodeableConcept gender,
@@ -959,8 +959,8 @@ class _$Population implements Population {
         CodeableConcept physiologicalCondition),
     Result prodCharacteristic(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity height,
         Quantity width,
         Quantity depth,
@@ -970,20 +970,20 @@ class _$Population implements Population {
         String shape,
         List<String> color,
         List<String> imprint,
-        List<dynamic> image,
+        List<Attachment> image,
         CodeableConcept scoring),
     Result productShelfLife(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Identifier identifier,
         CodeableConcept type,
         Quantity period,
-        List<dynamic> specialPrecautionsForStorage),
+        List<CodeableConcept> specialPrecautionsForStorage),
     Result substanceAmount(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity amountQuantity,
         Range amountRange,
         Markdown amountString,
@@ -992,8 +992,8 @@ class _$Population implements Population {
         SubstanceAmountReferenceRange referenceRange),
     Result substanceAmountReferenceRange(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity lowLimit,
         Quantity highLimit),
     @required Result orElse(),
@@ -1054,8 +1054,8 @@ class _$Population implements Population {
 abstract class Population implements DraftTypes {
   const factory Population(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Range ageRange,
       CodeableConcept ageCodeableConcept,
       CodeableConcept gender,
@@ -1069,9 +1069,9 @@ abstract class Population implements DraftTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   Range get ageRange;
   CodeableConcept get ageCodeableConcept;
   CodeableConcept get gender;
@@ -1089,8 +1089,8 @@ abstract class $ProdCharacteristicCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Quantity height,
       Quantity width,
       Quantity depth,
@@ -1100,7 +1100,7 @@ abstract class $ProdCharacteristicCopyWith<$Res>
       String shape,
       List<String> color,
       List<String> imprint,
-      List<dynamic> image,
+      List<Attachment> image,
       CodeableConcept scoring});
 }
 
@@ -1135,10 +1135,10 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       height: height == freezed ? _value.height : height as Quantity,
       width: width == freezed ? _value.width : width as Quantity,
       depth: depth == freezed ? _value.depth : depth as Quantity,
@@ -1152,7 +1152,7 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
       shape: shape == freezed ? _value.shape : shape as String,
       color: color == freezed ? _value.color : color as List<String>,
       imprint: imprint == freezed ? _value.imprint : imprint as List<String>,
-      image: image == freezed ? _value.image : image as List<dynamic>,
+      image: image == freezed ? _value.image : image as List<Attachment>,
       scoring: scoring == freezed ? _value.scoring : scoring as CodeableConcept,
     ));
   }
@@ -1183,9 +1183,9 @@ class _$ProdCharacteristic implements ProdCharacteristic {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final Quantity height;
   @override
@@ -1205,7 +1205,7 @@ class _$ProdCharacteristic implements ProdCharacteristic {
   @override
   final List<String> imprint;
   @override
-  final List<dynamic> image;
+  final List<Attachment> image;
   @override
   final CodeableConcept scoring;
 
@@ -1281,8 +1281,8 @@ class _$ProdCharacteristic implements ProdCharacteristic {
     @required
         Result marketingStatus(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept country,
             CodeableConcept jurisdiction,
             CodeableConcept status,
@@ -1291,8 +1291,8 @@ class _$ProdCharacteristic implements ProdCharacteristic {
     @required
         Result population(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Range ageRange,
             CodeableConcept ageCodeableConcept,
             CodeableConcept gender,
@@ -1301,8 +1301,8 @@ class _$ProdCharacteristic implements ProdCharacteristic {
     @required
         Result prodCharacteristic(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity height,
             Quantity width,
             Quantity depth,
@@ -1312,22 +1312,22 @@ class _$ProdCharacteristic implements ProdCharacteristic {
             String shape,
             List<String> color,
             List<String> imprint,
-            List<dynamic> image,
+            List<Attachment> image,
             CodeableConcept scoring),
     @required
         Result productShelfLife(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Identifier identifier,
             CodeableConcept type,
             Quantity period,
-            List<dynamic> specialPrecautionsForStorage),
+            List<CodeableConcept> specialPrecautionsForStorage),
     @required
         Result substanceAmount(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity amountQuantity,
             Range amountRange,
             Markdown amountString,
@@ -1337,8 +1337,8 @@ class _$ProdCharacteristic implements ProdCharacteristic {
     @required
         Result substanceAmountReferenceRange(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity lowLimit,
             Quantity highLimit),
   }) {
@@ -1370,8 +1370,8 @@ class _$ProdCharacteristic implements ProdCharacteristic {
   Result maybeWhen<Result extends Object>({
     Result marketingStatus(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept country,
         CodeableConcept jurisdiction,
         CodeableConcept status,
@@ -1379,8 +1379,8 @@ class _$ProdCharacteristic implements ProdCharacteristic {
         FhirDateTime restoreDate),
     Result population(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Range ageRange,
         CodeableConcept ageCodeableConcept,
         CodeableConcept gender,
@@ -1388,8 +1388,8 @@ class _$ProdCharacteristic implements ProdCharacteristic {
         CodeableConcept physiologicalCondition),
     Result prodCharacteristic(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity height,
         Quantity width,
         Quantity depth,
@@ -1399,20 +1399,20 @@ class _$ProdCharacteristic implements ProdCharacteristic {
         String shape,
         List<String> color,
         List<String> imprint,
-        List<dynamic> image,
+        List<Attachment> image,
         CodeableConcept scoring),
     Result productShelfLife(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Identifier identifier,
         CodeableConcept type,
         Quantity period,
-        List<dynamic> specialPrecautionsForStorage),
+        List<CodeableConcept> specialPrecautionsForStorage),
     Result substanceAmount(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity amountQuantity,
         Range amountRange,
         Markdown amountString,
@@ -1421,8 +1421,8 @@ class _$ProdCharacteristic implements ProdCharacteristic {
         SubstanceAmountReferenceRange referenceRange),
     Result substanceAmountReferenceRange(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity lowLimit,
         Quantity highLimit),
     @required Result orElse(),
@@ -1497,8 +1497,8 @@ class _$ProdCharacteristic implements ProdCharacteristic {
 abstract class ProdCharacteristic implements DraftTypes {
   const factory ProdCharacteristic(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Quantity height,
       Quantity width,
       Quantity depth,
@@ -1508,7 +1508,7 @@ abstract class ProdCharacteristic implements DraftTypes {
       String shape,
       List<String> color,
       List<String> imprint,
-      List<dynamic> image,
+      List<Attachment> image,
       CodeableConcept scoring}) = _$ProdCharacteristic;
 
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =
@@ -1518,9 +1518,9 @@ abstract class ProdCharacteristic implements DraftTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   Quantity get height;
   Quantity get width;
   Quantity get depth;
@@ -1530,7 +1530,7 @@ abstract class ProdCharacteristic implements DraftTypes {
   String get shape;
   List<String> get color;
   List<String> get imprint;
-  List<dynamic> get image;
+  List<Attachment> get image;
   CodeableConcept get scoring;
   @override
   $ProdCharacteristicCopyWith<ProdCharacteristic> get copyWith;
@@ -1544,12 +1544,12 @@ abstract class $ProductShelfLifeCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept type,
       Quantity period,
-      List<dynamic> specialPrecautionsForStorage});
+      List<CodeableConcept> specialPrecautionsForStorage});
 }
 
 class _$ProductShelfLifeCopyWithImpl<$Res>
@@ -1576,17 +1576,17 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       type: type == freezed ? _value.type : type as CodeableConcept,
       period: period == freezed ? _value.period : period as Quantity,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
-          : specialPrecautionsForStorage as List<dynamic>,
+          : specialPrecautionsForStorage as List<CodeableConcept>,
     ));
   }
 }
@@ -1609,9 +1609,9 @@ class _$ProductShelfLife implements ProductShelfLife {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final Identifier identifier;
   @override
@@ -1619,7 +1619,7 @@ class _$ProductShelfLife implements ProductShelfLife {
   @override
   final Quantity period;
   @override
-  final List<dynamic> specialPrecautionsForStorage;
+  final List<CodeableConcept> specialPrecautionsForStorage;
 
   @override
   String toString() {
@@ -1673,8 +1673,8 @@ class _$ProductShelfLife implements ProductShelfLife {
     @required
         Result marketingStatus(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept country,
             CodeableConcept jurisdiction,
             CodeableConcept status,
@@ -1683,8 +1683,8 @@ class _$ProductShelfLife implements ProductShelfLife {
     @required
         Result population(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Range ageRange,
             CodeableConcept ageCodeableConcept,
             CodeableConcept gender,
@@ -1693,8 +1693,8 @@ class _$ProductShelfLife implements ProductShelfLife {
     @required
         Result prodCharacteristic(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity height,
             Quantity width,
             Quantity depth,
@@ -1704,22 +1704,22 @@ class _$ProductShelfLife implements ProductShelfLife {
             String shape,
             List<String> color,
             List<String> imprint,
-            List<dynamic> image,
+            List<Attachment> image,
             CodeableConcept scoring),
     @required
         Result productShelfLife(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Identifier identifier,
             CodeableConcept type,
             Quantity period,
-            List<dynamic> specialPrecautionsForStorage),
+            List<CodeableConcept> specialPrecautionsForStorage),
     @required
         Result substanceAmount(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity amountQuantity,
             Range amountRange,
             Markdown amountString,
@@ -1729,8 +1729,8 @@ class _$ProductShelfLife implements ProductShelfLife {
     @required
         Result substanceAmountReferenceRange(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity lowLimit,
             Quantity highLimit),
   }) {
@@ -1749,8 +1749,8 @@ class _$ProductShelfLife implements ProductShelfLife {
   Result maybeWhen<Result extends Object>({
     Result marketingStatus(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept country,
         CodeableConcept jurisdiction,
         CodeableConcept status,
@@ -1758,8 +1758,8 @@ class _$ProductShelfLife implements ProductShelfLife {
         FhirDateTime restoreDate),
     Result population(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Range ageRange,
         CodeableConcept ageCodeableConcept,
         CodeableConcept gender,
@@ -1767,8 +1767,8 @@ class _$ProductShelfLife implements ProductShelfLife {
         CodeableConcept physiologicalCondition),
     Result prodCharacteristic(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity height,
         Quantity width,
         Quantity depth,
@@ -1778,20 +1778,20 @@ class _$ProductShelfLife implements ProductShelfLife {
         String shape,
         List<String> color,
         List<String> imprint,
-        List<dynamic> image,
+        List<Attachment> image,
         CodeableConcept scoring),
     Result productShelfLife(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Identifier identifier,
         CodeableConcept type,
         Quantity period,
-        List<dynamic> specialPrecautionsForStorage),
+        List<CodeableConcept> specialPrecautionsForStorage),
     Result substanceAmount(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity amountQuantity,
         Range amountRange,
         Markdown amountString,
@@ -1800,8 +1800,8 @@ class _$ProductShelfLife implements ProductShelfLife {
         SubstanceAmountReferenceRange referenceRange),
     Result substanceAmountReferenceRange(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity lowLimit,
         Quantity highLimit),
     @required Result orElse(),
@@ -1863,12 +1863,12 @@ class _$ProductShelfLife implements ProductShelfLife {
 abstract class ProductShelfLife implements DraftTypes {
   const factory ProductShelfLife(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept type,
       Quantity period,
-      List<dynamic> specialPrecautionsForStorage}) = _$ProductShelfLife;
+      List<CodeableConcept> specialPrecautionsForStorage}) = _$ProductShelfLife;
 
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =
       _$ProductShelfLife.fromJson;
@@ -1877,13 +1877,13 @@ abstract class ProductShelfLife implements DraftTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   Identifier get identifier;
   CodeableConcept get type;
   Quantity get period;
-  List<dynamic> get specialPrecautionsForStorage;
+  List<CodeableConcept> get specialPrecautionsForStorage;
   @override
   $ProductShelfLifeCopyWith<ProductShelfLife> get copyWith;
 }
@@ -1896,8 +1896,8 @@ abstract class $SubstanceAmountCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Quantity amountQuantity,
       Range amountRange,
       Markdown amountString,
@@ -1931,10 +1931,10 @@ class _$SubstanceAmountCopyWithImpl<$Res> extends _$DraftTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity,
@@ -1975,9 +1975,9 @@ class _$SubstanceAmount implements SubstanceAmount {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final Quantity amountQuantity;
   @override
@@ -2051,8 +2051,8 @@ class _$SubstanceAmount implements SubstanceAmount {
     @required
         Result marketingStatus(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept country,
             CodeableConcept jurisdiction,
             CodeableConcept status,
@@ -2061,8 +2061,8 @@ class _$SubstanceAmount implements SubstanceAmount {
     @required
         Result population(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Range ageRange,
             CodeableConcept ageCodeableConcept,
             CodeableConcept gender,
@@ -2071,8 +2071,8 @@ class _$SubstanceAmount implements SubstanceAmount {
     @required
         Result prodCharacteristic(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity height,
             Quantity width,
             Quantity depth,
@@ -2082,22 +2082,22 @@ class _$SubstanceAmount implements SubstanceAmount {
             String shape,
             List<String> color,
             List<String> imprint,
-            List<dynamic> image,
+            List<Attachment> image,
             CodeableConcept scoring),
     @required
         Result productShelfLife(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Identifier identifier,
             CodeableConcept type,
             Quantity period,
-            List<dynamic> specialPrecautionsForStorage),
+            List<CodeableConcept> specialPrecautionsForStorage),
     @required
         Result substanceAmount(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity amountQuantity,
             Range amountRange,
             Markdown amountString,
@@ -2107,8 +2107,8 @@ class _$SubstanceAmount implements SubstanceAmount {
     @required
         Result substanceAmountReferenceRange(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity lowLimit,
             Quantity highLimit),
   }) {
@@ -2127,8 +2127,8 @@ class _$SubstanceAmount implements SubstanceAmount {
   Result maybeWhen<Result extends Object>({
     Result marketingStatus(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept country,
         CodeableConcept jurisdiction,
         CodeableConcept status,
@@ -2136,8 +2136,8 @@ class _$SubstanceAmount implements SubstanceAmount {
         FhirDateTime restoreDate),
     Result population(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Range ageRange,
         CodeableConcept ageCodeableConcept,
         CodeableConcept gender,
@@ -2145,8 +2145,8 @@ class _$SubstanceAmount implements SubstanceAmount {
         CodeableConcept physiologicalCondition),
     Result prodCharacteristic(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity height,
         Quantity width,
         Quantity depth,
@@ -2156,20 +2156,20 @@ class _$SubstanceAmount implements SubstanceAmount {
         String shape,
         List<String> color,
         List<String> imprint,
-        List<dynamic> image,
+        List<Attachment> image,
         CodeableConcept scoring),
     Result productShelfLife(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Identifier identifier,
         CodeableConcept type,
         Quantity period,
-        List<dynamic> specialPrecautionsForStorage),
+        List<CodeableConcept> specialPrecautionsForStorage),
     Result substanceAmount(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity amountQuantity,
         Range amountRange,
         Markdown amountString,
@@ -2178,8 +2178,8 @@ class _$SubstanceAmount implements SubstanceAmount {
         SubstanceAmountReferenceRange referenceRange),
     Result substanceAmountReferenceRange(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity lowLimit,
         Quantity highLimit),
     @required Result orElse(),
@@ -2248,8 +2248,8 @@ class _$SubstanceAmount implements SubstanceAmount {
 abstract class SubstanceAmount implements DraftTypes {
   const factory SubstanceAmount(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Quantity amountQuantity,
       Range amountRange,
       Markdown amountString,
@@ -2264,9 +2264,9 @@ abstract class SubstanceAmount implements DraftTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   Quantity get amountQuantity;
   Range get amountRange;
   Markdown get amountString;
@@ -2286,8 +2286,8 @@ abstract class $SubstanceAmountReferenceRangeCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Quantity lowLimit,
       Quantity highLimit});
 }
@@ -2316,10 +2316,10 @@ class _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<dynamic>,
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<dynamic>,
+          : modifierExtension as List<FhirExtension>,
       lowLimit: lowLimit == freezed ? _value.lowLimit : lowLimit as Quantity,
       highLimit:
           highLimit == freezed ? _value.highLimit : highLimit as Quantity,
@@ -2343,9 +2343,9 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<dynamic> fhirExtension;
+  final List<FhirExtension> fhirExtension;
   @override
-  final List<dynamic> modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final Quantity lowLimit;
   @override
@@ -2396,8 +2396,8 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
     @required
         Result marketingStatus(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             CodeableConcept country,
             CodeableConcept jurisdiction,
             CodeableConcept status,
@@ -2406,8 +2406,8 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
     @required
         Result population(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Range ageRange,
             CodeableConcept ageCodeableConcept,
             CodeableConcept gender,
@@ -2416,8 +2416,8 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
     @required
         Result prodCharacteristic(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity height,
             Quantity width,
             Quantity depth,
@@ -2427,22 +2427,22 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
             String shape,
             List<String> color,
             List<String> imprint,
-            List<dynamic> image,
+            List<Attachment> image,
             CodeableConcept scoring),
     @required
         Result productShelfLife(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Identifier identifier,
             CodeableConcept type,
             Quantity period,
-            List<dynamic> specialPrecautionsForStorage),
+            List<CodeableConcept> specialPrecautionsForStorage),
     @required
         Result substanceAmount(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity amountQuantity,
             Range amountRange,
             Markdown amountString,
@@ -2452,8 +2452,8 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
     @required
         Result substanceAmountReferenceRange(
             String id,
-            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> modifierExtension,
+            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            List<FhirExtension> modifierExtension,
             Quantity lowLimit,
             Quantity highLimit),
   }) {
@@ -2472,8 +2472,8 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
   Result maybeWhen<Result extends Object>({
     Result marketingStatus(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         CodeableConcept country,
         CodeableConcept jurisdiction,
         CodeableConcept status,
@@ -2481,8 +2481,8 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
         FhirDateTime restoreDate),
     Result population(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Range ageRange,
         CodeableConcept ageCodeableConcept,
         CodeableConcept gender,
@@ -2490,8 +2490,8 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
         CodeableConcept physiologicalCondition),
     Result prodCharacteristic(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity height,
         Quantity width,
         Quantity depth,
@@ -2501,20 +2501,20 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
         String shape,
         List<String> color,
         List<String> imprint,
-        List<dynamic> image,
+        List<Attachment> image,
         CodeableConcept scoring),
     Result productShelfLife(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Identifier identifier,
         CodeableConcept type,
         Quantity period,
-        List<dynamic> specialPrecautionsForStorage),
+        List<CodeableConcept> specialPrecautionsForStorage),
     Result substanceAmount(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity amountQuantity,
         Range amountRange,
         Markdown amountString,
@@ -2523,8 +2523,8 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
         SubstanceAmountReferenceRange referenceRange),
     Result substanceAmountReferenceRange(
         String id,
-        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> modifierExtension,
+        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        List<FhirExtension> modifierExtension,
         Quantity lowLimit,
         Quantity highLimit),
     @required Result orElse(),
@@ -2586,8 +2586,8 @@ class _$SubstanceAmountReferenceRange implements SubstanceAmountReferenceRange {
 abstract class SubstanceAmountReferenceRange implements DraftTypes {
   const factory SubstanceAmountReferenceRange(
       {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
       Quantity lowLimit,
       Quantity highLimit}) = _$SubstanceAmountReferenceRange;
 
@@ -2598,9 +2598,9 @@ abstract class SubstanceAmountReferenceRange implements DraftTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<dynamic> get fhirExtension;
+  List<FhirExtension> get fhirExtension;
   @override
-  List<dynamic> get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   Quantity get lowLimit;
   Quantity get highLimit;
   @override

@@ -45,7 +45,6 @@ abstract class SpecialTypes with _$SpecialTypes {
     Quantity rateQuantity,
   }) = DosageDoseAndRate;
 
-  // ********* Element Definition *********
   const factory SpecialTypes.elementDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
@@ -256,16 +255,14 @@ abstract class SpecialTypes with _$SpecialTypes {
     List<ElementDefinitionDiscriminator> discriminator,
     String description,
     bool ordered,
-    @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-        ElementDefinitionSlicingRules rules,
+    ElementDefinitionSlicingRules rules,
   }) = ElementDefinitionSlicing;
 
   const factory SpecialTypes.elementDefinitionDiscriminator({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-        ElementDefinitionDiscriminatorType type,
+    ElementDefinitionDiscriminatorType type,
     String path,
   }) = ElementDefinitionDiscriminator;
 
@@ -286,8 +283,7 @@ abstract class SpecialTypes with _$SpecialTypes {
     List<Canonical> profile,
     List<Canonical> targetProfile,
     List<ElementDefinitionTypeAggregation> aggregation,
-    @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-        ElementDefinitionTypeVersioning versioning,
+    ElementDefinitionTypeVersioning versioning,
   }) = ElementDefinitionType;
 
   const factory SpecialTypes.elementDefinitionExample({
@@ -353,8 +349,7 @@ abstract class SpecialTypes with _$SpecialTypes {
     List<FhirExtension> modifierExtension,
     Id key,
     String requirements,
-    @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-        ElementDefinitionConstraintSeverity severity,
+    ElementDefinitionConstraintSeverity severity,
     String human,
     String expression,
     String xpath,
@@ -365,8 +360,7 @@ abstract class SpecialTypes with _$SpecialTypes {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-        ElementDefinitionBindingStrength strength,
+    ElementDefinitionBindingStrength strength,
     String description,
     Canonical valueSet,
   }) = ElementDefinitionBinding;
@@ -380,7 +374,6 @@ abstract class SpecialTypes with _$SpecialTypes {
     @JsonKey(name: 'map') String elementMap,
     String comment,
   }) = ElementDefinitionMapping;
-  // ********* /Element Definition *********
 
   const factory SpecialTypes.fhirExtension({
     String id,
@@ -452,17 +445,14 @@ abstract class SpecialTypes with _$SpecialTypes {
   const factory SpecialTypes.narrative({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus status,
+    NarrativeStatus status,
     String div,
   }) = Narrative;
 
   const factory SpecialTypes.reference({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    String reference, //resourceType/id
-    //todo: map to resourceType/id
-    String resourceType, //resourceType
-    //todo: map to resourceType
+    String reference,
     FhirUri type,
     Identifier identifier,
     String display,

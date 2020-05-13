@@ -23,9 +23,20 @@ _$CatalogEntry _$_$CatalogEntryFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -33,8 +44,15 @@ _$CatalogEntry _$_$CatalogEntryFromJson(Map<String, dynamic> json) {
     referencedItem: json['referencedItem'] == null
         ? null
         : Reference.fromJson(json['referencedItem'] as Map<String, dynamic>),
-    additionalIdentifier: json['additionalIdentifier'] as List,
-    classification: json['classification'] as List,
+    additionalIdentifier: (json['additionalIdentifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    classification: (json['classification'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$CatalogEntryStatusEnumMap, json['status']),
     validityPeriod: json['validityPeriod'] == null
         ? null
@@ -45,9 +63,21 @@ _$CatalogEntry _$_$CatalogEntryFromJson(Map<String, dynamic> json) {
     lastUpdated: json['lastUpdated'] == null
         ? null
         : FhirDateTime.fromJson(json['lastUpdated'] as String),
-    additionalCharacteristic: json['additionalCharacteristic'] as List,
-    additionalClassification: json['additionalClassification'] as List,
-    relatedEntry: json['relatedEntry'] as List,
+    additionalCharacteristic: (json['additionalCharacteristic'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    additionalClassification: (json['additionalClassification'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    relatedEntry: (json['relatedEntry'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CatalogEntryRelatedEntry.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -120,8 +150,16 @@ _$CatalogEntryRelatedEntry _$_$CatalogEntryRelatedEntryFromJson(
     Map<String, dynamic> json) {
   return _$CatalogEntryRelatedEntry(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     relationtype: _$enumDecodeNullable(
         _$CatalogEntryRelatedEntryRelationtypeEnumMap, json['relationtype']),
     item: json['item'] == null
@@ -164,8 +202,16 @@ _$Composition _$_$CompositionFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -173,7 +219,11 @@ _$Composition _$_$CompositionFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    category: json['category'] as List,
+    category: (json['category'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -183,18 +233,37 @@ _$Composition _$_$CompositionFromJson(Map<String, dynamic> json) {
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
-    author: json['author'] as List,
+    author: (json['author'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     title: json['title'] as String,
     confidentiality: json['confidentiality'] == null
         ? null
         : Code.fromJson(json['confidentiality'] as String),
-    attester: json['attester'] as List,
+    attester: (json['attester'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CompositionAttester.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     custodian: json['custodian'] == null
         ? null
         : Reference.fromJson(json['custodian'] as Map<String, dynamic>),
-    relatesTo: json['relatesTo'] as List,
-    event: json['event'] as List,
-    section: json['section'] as List,
+    relatesTo: (json['relatesTo'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CompositionRelatesTo.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    event: (json['event'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CompositionEvent.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    section: (json['section'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CompositionSection.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -238,8 +307,16 @@ _$CompositionAttester _$_$CompositionAttesterFromJson(
     Map<String, dynamic> json) {
   return _$CompositionAttester(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     mode: _$enumDecodeNullable(_$CompositionAttesterModeEnumMap, json['mode']),
     time: json['time'] == null
         ? null
@@ -273,8 +350,16 @@ _$CompositionRelatesTo _$_$CompositionRelatesToFromJson(
     Map<String, dynamic> json) {
   return _$CompositionRelatesTo(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     targetIdentifier: json['targetIdentifier'] == null
         ? null
@@ -299,13 +384,28 @@ Map<String, dynamic> _$_$CompositionRelatesToToJson(
 _$CompositionEvent _$_$CompositionEventFromJson(Map<String, dynamic> json) {
   return _$CompositionEvent(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
-    code: json['code'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    code: (json['code'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
-    detail: json['detail'] as List,
+    detail: (json['detail'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -322,13 +422,24 @@ Map<String, dynamic> _$_$CompositionEventToJson(_$CompositionEvent instance) =>
 _$CompositionSection _$_$CompositionSectionFromJson(Map<String, dynamic> json) {
   return _$CompositionSection(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     title: json['title'] as String,
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    author: json['author'] as List,
+    author: (json['author'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     focus: json['focus'] == null
         ? null
         : Reference.fromJson(json['focus'] as Map<String, dynamic>),
@@ -342,7 +453,11 @@ _$CompositionSection _$_$CompositionSectionFromJson(Map<String, dynamic> json) {
     emptyReason: json['emptyReason'] == null
         ? null
         : CodeableConcept.fromJson(json['emptyReason'] as Map<String, dynamic>),
-    section: json['section'] as List,
+    section: (json['section'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CompositionSection.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -380,12 +495,23 @@ _$DocumentManifest _$_$DocumentManifestFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     masterIdentifier: json['masterIdentifier'] == null
         ? null
         : Identifier.fromJson(json['masterIdentifier'] as Map<String, dynamic>),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status:
         _$enumDecodeNullable(_$DocumentManifestStatusEnumMap, json['status']),
     type: json['type'] == null
@@ -397,13 +523,26 @@ _$DocumentManifest _$_$DocumentManifestFromJson(Map<String, dynamic> json) {
     created: json['created'] == null
         ? null
         : FhirDateTime.fromJson(json['created'] as String),
-    author: json['author'] as List,
-    recipient: json['recipient'] as List,
+    author: (json['author'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    recipient: (json['recipient'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     source: json['source'] == null
         ? null
         : FhirUri.fromJson(json['source'] as String),
-    content: json['content'] as List,
-    related: json['related'] as List,
+    content: (json['content'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    related: (json['related'] as List)
+        ?.map((e) => e == null
+            ? null
+            : DocumentManifestRelated.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -442,8 +581,16 @@ _$DocumentManifestRelated _$_$DocumentManifestRelatedFromJson(
     Map<String, dynamic> json) {
   return _$DocumentManifestRelated(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -480,12 +627,23 @@ _$DocumentReference _$_$DocumentReferenceFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     masterIdentifier: json['masterIdentifier'] == null
         ? null
         : Identifier.fromJson(json['masterIdentifier'] as Map<String, dynamic>),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status:
         _$enumDecodeNullable(_$DocumentReferenceStatusEnumMap, json['status']),
     docStatus: json['docStatus'] == null
@@ -494,20 +652,39 @@ _$DocumentReference _$_$DocumentReferenceFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    category: json['category'] as List,
+    category: (json['category'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
     date:
         json['date'] == null ? null : Instant.fromJson(json['date'] as String),
-    author: json['author'] as List,
+    author: (json['author'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     custodian: json['custodian'] == null
         ? null
         : Reference.fromJson(json['custodian'] as Map<String, dynamic>),
-    relatesTo: json['relatesTo'] as List,
+    relatesTo: (json['relatesTo'] as List)
+        ?.map((e) => e == null
+            ? null
+            : DocumentReferenceRelatesTo.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     description: json['description'] as String,
-    securityLabel: json['securityLabel'] as List,
-    content: json['content'] as List,
+    securityLabel: (json['securityLabel'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    content: (json['content'] as List)
+        ?.map((e) => e == null
+            ? null
+            : DocumentReferenceContent.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     context: json['context'] == null
         ? null
         : DocumentReferenceContext.fromJson(
@@ -555,8 +732,16 @@ _$DocumentReferenceRelatesTo _$_$DocumentReferenceRelatesToFromJson(
     Map<String, dynamic> json) {
   return _$DocumentReferenceRelatesTo(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: _$enumDecodeNullable(
         _$DocumentReferenceRelatesToCodeEnumMap, json['code']),
     target: json['target'] == null
@@ -586,8 +771,16 @@ const _$DocumentReferenceRelatesToCodeEnumMap = {
 _$DocumentReferenceContent _$_$DocumentReferenceContentFromJson(
     Map<String, dynamic> json) {
   return _$DocumentReferenceContent(
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
+    extension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     attachment: json['attachment'] == null
         ? null
         : Attachment.fromJson(json['attachment'] as Map<String, dynamic>),
@@ -610,9 +803,20 @@ _$DocumentReferenceContext _$_$DocumentReferenceContextFromJson(
     Map<String, dynamic> json) {
   return _$DocumentReferenceContext(
     id: json['id'] as String,
-    modifierExtension: json['modifierExtension'] as List,
-    encounter: json['encounter'] as List,
-    event: json['event'] as List,
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    encounter: (json['encounter'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    event: (json['event'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -627,7 +831,10 @@ _$DocumentReferenceContext _$_$DocumentReferenceContextFromJson(
     sourcePatientInfo: json['sourcePatientInfo'] == null
         ? null
         : Reference.fromJson(json['sourcePatientInfo'] as Map<String, dynamic>),
-    related: json['related'] as List,
+    related: (json['related'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
