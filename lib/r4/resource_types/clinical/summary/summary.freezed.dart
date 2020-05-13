@@ -65,9 +65,9 @@ class _$SummaryTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       CodeableConcept statusReason,
       CodeableConcept code,
@@ -79,14 +79,14 @@ class _$SummaryTearOff {
       FhirDateTime date,
       Reference assessor,
       Reference previous,
-      List<Reference> problem,
-      List<ClinicalImpressionInvestigation> investigation,
+      List<dynamic> problem,
+      List<dynamic> investigation,
       List<FhirUri> protocol,
-      List<ClinicalImpressionFinding> finding,
-      List<CodeableConcept> prognosisCodeableConcept,
-      List<Reference> prognosisReference,
-      List<Reference> supportingInfo,
-      List<Annotation> note}) {
+      List<dynamic> finding,
+      List<dynamic> prognosisCodeableConcept,
+      List<dynamic> prognosisReference,
+      List<dynamic> supportingInfo,
+      List<dynamic> note}) {
     return ClinicalImpression(
       resourceType: resourceType,
       id: id,
@@ -95,7 +95,7 @@ class _$SummaryTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
@@ -122,13 +122,13 @@ class _$SummaryTearOff {
 
   ClinicalImpressionInvestigation clinicalImpressionInvestigation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
-      List<Reference> item}) {
+      List<dynamic> item}) {
     return ClinicalImpressionInvestigation(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       code: code,
       item: item,
@@ -137,14 +137,14 @@ class _$SummaryTearOff {
 
   ClinicalImpressionFinding clinicalImpressionFinding(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept itemCodeableConcept,
       Reference itemReference,
       String basis}) {
     return ClinicalImpressionFinding(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       itemCodeableConcept: itemCodeableConcept,
       itemReference: itemReference,
@@ -160,8 +160,8 @@ class _$SummaryTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
       AllergyIntoleranceType type,
@@ -179,8 +179,8 @@ class _$SummaryTearOff {
       Reference recorder,
       Reference asserter,
       FhirDateTime lastOccurrence,
-      List<Annotation> note,
-      List<AllergyIntoleranceReaction> reaction}) {
+      List<dynamic> note,
+      List<dynamic> reaction}) {
     return AllergyIntolerance(
       resourceType: resourceType,
       id: id,
@@ -215,17 +215,17 @@ class _$SummaryTearOff {
 
   AllergyIntoleranceReaction allergyIntoleranceReaction(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept substance,
-      List<CodeableConcept> manifestation,
+      List<dynamic> manifestation,
       FhirDateTime onset,
       AllergyIntoleranceReactionSeverity severity,
       CodeableConcept exposureRoute,
-      List<Annotation> note}) {
+      List<dynamic> note}) {
     return AllergyIntoleranceReaction(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       substance: substance,
       manifestation: manifestation,
@@ -243,28 +243,28 @@ class _$SummaryTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       AdverseEventActuality actuality,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept event,
       Reference subject,
       Reference encounter,
       FhirDateTime date,
       FhirDateTime detected,
       FhirDateTime recordedDate,
-      List<Reference> resultingCondition,
+      List<dynamic> resultingCondition,
       Reference location,
       CodeableConcept seriousness,
       CodeableConcept severity,
       CodeableConcept outcome,
       Reference recorder,
-      List<Reference> contributor,
-      List<AdverseEventSuspectEntity> suspectEntity,
-      List<Reference> subjectMedicalHistory,
-      List<Reference> referenceDocument,
-      List<Reference> study}) {
+      List<dynamic> contributor,
+      List<dynamic> suspectEntity,
+      List<dynamic> subjectMedicalHistory,
+      List<dynamic> referenceDocument,
+      List<dynamic> study}) {
     return AdverseEvent(
       resourceType: resourceType,
       id: id,
@@ -272,7 +272,7 @@ class _$SummaryTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       actuality: actuality,
@@ -298,12 +298,12 @@ class _$SummaryTearOff {
   }
 
   AdverseEventSuspectEntity adverseEventSuspectEntity(
-      {List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      {@JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference instance,
-      List<AdverseEventCausality> causality}) {
+      List<dynamic> causality}) {
     return AdverseEventSuspectEntity(
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       instance: instance,
       causality: causality,
@@ -312,15 +312,15 @@ class _$SummaryTearOff {
 
   AdverseEventCausality adverseEventCausality(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept assessment,
       String productRelatedness,
       Reference author,
       CodeableConcept method}) {
     return AdverseEventCausality(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       assessment: assessment,
       productRelatedness: productRelatedness,
@@ -337,9 +337,9 @@ class _$SummaryTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       FamilyMemberHistoryStatus status,
@@ -360,9 +360,9 @@ class _$SummaryTearOff {
       Range deceasedRange,
       Date deceasedDate,
       String deceasedString,
-      List<CodeableConcept> reasonCode,
-      List<Annotation> note,
-      List<FamilyMemberHistoryCondition> condition}) {
+      List<dynamic> reasonCode,
+      List<dynamic> note,
+      List<dynamic> condition}) {
     return FamilyMemberHistory(
       resourceType: resourceType,
       id: id,
@@ -371,7 +371,7 @@ class _$SummaryTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       instantiatesCanonical: instantiatesCanonical,
@@ -402,8 +402,8 @@ class _$SummaryTearOff {
 
   FamilyMemberHistoryCondition familyMemberHistoryCondition(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
       CodeableConcept outcome,
       bool contributedToDeath,
@@ -411,10 +411,10 @@ class _$SummaryTearOff {
       Range onsetRange,
       Period onsetPeriod,
       String onsetString,
-      List<Annotation> note}) {
+      List<dynamic> note}) {
     return FamilyMemberHistoryCondition(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       code: code,
       outcome: outcome,
@@ -435,20 +435,20 @@ class _$SummaryTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       CodeableConcept code,
       DetectedIssueSeverity severity,
       Reference patient,
       Period identifiedPeriod,
       Reference author,
-      List<Reference> implicated,
-      List<DetectedIssueEvidence> evidence,
+      List<dynamic> implicated,
+      List<dynamic> evidence,
       String detail,
       FhirUri reference,
-      List<DetectedIssueMitigation> mitigation}) {
+      List<dynamic> mitigation}) {
     return DetectedIssue(
       resourceType: resourceType,
       id: id,
@@ -457,7 +457,7 @@ class _$SummaryTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
@@ -476,13 +476,13 @@ class _$SummaryTearOff {
 
   DetectedIssueEvidence detectedIssueEvidence(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> code,
-      List<Reference> detail}) {
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> code,
+      List<dynamic> detail}) {
     return DetectedIssueEvidence(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       code: code,
       detail: detail,
@@ -491,14 +491,14 @@ class _$SummaryTearOff {
 
   DetectedIssueMitigation detectedIssueMitigation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept action,
       FhirDateTime date,
       Reference author}) {
     return DetectedIssueMitigation(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       action: action,
       date: date,
@@ -514,12 +514,12 @@ class _$SummaryTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept severity,
       CodeableConcept code,
       Reference subject,
@@ -536,9 +536,9 @@ class _$SummaryTearOff {
       FhirDateTime recordedDate,
       Reference recorder,
       Reference asserter,
-      List<ConditionStage> stage,
-      List<ConditionEvidence> evidence,
-      List<Annotation> note}) {
+      List<dynamic> stage,
+      List<dynamic> evidence,
+      List<dynamic> note}) {
     return Condition(
       resourceType: resourceType,
       id: id,
@@ -547,7 +547,7 @@ class _$SummaryTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       clinicalStatus: clinicalStatus,
@@ -577,14 +577,14 @@ class _$SummaryTearOff {
 
   ConditionStage conditionStage(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept summary,
-      List<Reference> assessment,
+      List<dynamic> assessment,
       CodeableConcept type}) {
     return ConditionStage(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       summary: summary,
       assessment: assessment,
@@ -594,13 +594,13 @@ class _$SummaryTearOff {
 
   ConditionEvidence conditionEvidence(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> code,
-      List<Reference> detail}) {
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> code,
+      List<dynamic> detail}) {
     return ConditionEvidence(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       code: code,
       detail: detail,
@@ -615,13 +615,13 @@ class _$SummaryTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      List<Reference> basedOn,
-      List<Reference> partOf,
+      List<dynamic> basedOn,
+      List<dynamic> partOf,
       Code status,
       CodeableConcept statusReason,
       CodeableConcept category,
@@ -635,20 +635,20 @@ class _$SummaryTearOff {
       Range performedRange,
       Reference recorder,
       Reference asserter,
-      List<ProcedurePerformer> performer,
+      List<dynamic> performer,
       Reference location,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
-      List<CodeableConcept> bodySite,
+      List<dynamic> reasonCode,
+      List<dynamic> reasonReference,
+      List<dynamic> bodySite,
       CodeableConcept outcome,
-      List<Reference> report,
-      List<CodeableConcept> complication,
-      List<Reference> complicationDetail,
-      List<CodeableConcept> followUp,
-      List<Annotation> note,
-      List<ProcedureFocalDevice> focalDevice,
-      List<Reference> usedReference,
-      List<CodeableConcept> usedCode}) {
+      List<dynamic> report,
+      List<dynamic> complication,
+      List<dynamic> complicationDetail,
+      List<dynamic> followUp,
+      List<dynamic> note,
+      List<dynamic> focalDevice,
+      List<dynamic> usedReference,
+      List<dynamic> usedCode}) {
     return Procedure(
       resourceType: resourceType,
       id: id,
@@ -657,7 +657,7 @@ class _$SummaryTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       instantiatesCanonical: instantiatesCanonical,
@@ -696,14 +696,14 @@ class _$SummaryTearOff {
 
   ProcedurePerformer procedurePerformer(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept function,
       Reference actor,
       Reference onBehalfOf}) {
     return ProcedurePerformer(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       function: function,
       actor: actor,
@@ -713,13 +713,13 @@ class _$SummaryTearOff {
 
   ProcedureFocalDevice procedureFocalDevice(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept action,
       Reference manipulated}) {
     return ProcedureFocalDevice(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       action: action,
       manipulated: manipulated,
@@ -731,7 +731,7 @@ class _$SummaryTearOff {
 const $Summary = _$SummaryTearOff();
 
 mixin _$Summary {
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -744,9 +744,9 @@ mixin _$Summary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -758,26 +758,26 @@ mixin _$Summary {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -790,8 +790,8 @@ mixin _$Summary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -809,19 +809,19 @@ mixin _$Summary {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -830,39 +830,39 @@ mixin _$Summary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -876,9 +876,9 @@ mixin _$Summary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -899,14 +899,14 @@ mixin _$Summary {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -914,7 +914,7 @@ mixin _$Summary {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -924,32 +924,32 @@ mixin _$Summary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -962,12 +962,12 @@ mixin _$Summary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -984,24 +984,24 @@ mixin _$Summary {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -1011,13 +1011,13 @@ mixin _$Summary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -1031,33 +1031,33 @@ mixin _$Summary {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   });
@@ -1071,9 +1071,9 @@ mixin _$Summary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -1085,24 +1085,24 @@ mixin _$Summary {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -1114,8 +1114,8 @@ mixin _$Summary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -1133,18 +1133,18 @@ mixin _$Summary {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -1152,37 +1152,37 @@ mixin _$Summary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -1195,9 +1195,9 @@ mixin _$Summary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -1218,13 +1218,13 @@ mixin _$Summary {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -1232,7 +1232,7 @@ mixin _$Summary {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -1241,30 +1241,30 @@ mixin _$Summary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -1276,12 +1276,12 @@ mixin _$Summary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -1298,22 +1298,22 @@ mixin _$Summary {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -1322,13 +1322,13 @@ mixin _$Summary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -1342,31 +1342,31 @@ mixin _$Summary {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -1428,7 +1428,7 @@ mixin _$Summary {
 abstract class $SummaryCopyWith<$Res> {
   factory $SummaryCopyWith(Summary value, $Res Function(Summary) then) =
       _$SummaryCopyWithImpl<$Res>;
-  $Res call({List<FhirExtension> modifierExtension});
+  $Res call({List<dynamic> modifierExtension});
 }
 
 class _$SummaryCopyWithImpl<$Res> implements $SummaryCopyWith<$Res> {
@@ -1445,7 +1445,7 @@ class _$SummaryCopyWithImpl<$Res> implements $SummaryCopyWith<$Res> {
     return _then(_value.copyWith(
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
     ));
   }
 }
@@ -1464,9 +1464,9 @@ abstract class $ClinicalImpressionCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       CodeableConcept statusReason,
       CodeableConcept code,
@@ -1478,14 +1478,14 @@ abstract class $ClinicalImpressionCopyWith<$Res>
       FhirDateTime date,
       Reference assessor,
       Reference previous,
-      List<Reference> problem,
-      List<ClinicalImpressionInvestigation> investigation,
+      List<dynamic> problem,
+      List<dynamic> investigation,
       List<FhirUri> protocol,
-      List<ClinicalImpressionFinding> finding,
-      List<CodeableConcept> prognosisCodeableConcept,
-      List<Reference> prognosisReference,
-      List<Reference> supportingInfo,
-      List<Annotation> note});
+      List<dynamic> finding,
+      List<dynamic> prognosisCodeableConcept,
+      List<dynamic> prognosisReference,
+      List<dynamic> supportingInfo,
+      List<dynamic> note});
 }
 
 class _$ClinicalImpressionCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
@@ -1506,7 +1506,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
@@ -1542,15 +1542,15 @@ class _$ClinicalImpressionCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as Code,
       statusReason: statusReason == freezed
           ? _value.statusReason
@@ -1570,25 +1570,23 @@ class _$ClinicalImpressionCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       date: date == freezed ? _value.date : date as FhirDateTime,
       assessor: assessor == freezed ? _value.assessor : assessor as Reference,
       previous: previous == freezed ? _value.previous : previous as Reference,
-      problem: problem == freezed ? _value.problem : problem as List<Reference>,
+      problem: problem == freezed ? _value.problem : problem as List<dynamic>,
       investigation: investigation == freezed
           ? _value.investigation
-          : investigation as List<ClinicalImpressionInvestigation>,
+          : investigation as List<dynamic>,
       protocol:
           protocol == freezed ? _value.protocol : protocol as List<FhirUri>,
-      finding: finding == freezed
-          ? _value.finding
-          : finding as List<ClinicalImpressionFinding>,
+      finding: finding == freezed ? _value.finding : finding as List<dynamic>,
       prognosisCodeableConcept: prognosisCodeableConcept == freezed
           ? _value.prognosisCodeableConcept
-          : prognosisCodeableConcept as List<CodeableConcept>,
+          : prognosisCodeableConcept as List<dynamic>,
       prognosisReference: prognosisReference == freezed
           ? _value.prognosisReference
-          : prognosisReference as List<Reference>,
+          : prognosisReference as List<dynamic>,
       supportingInfo: supportingInfo == freezed
           ? _value.supportingInfo
-          : supportingInfo as List<Reference>,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+          : supportingInfo as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<dynamic>,
     ));
   }
 }
@@ -1603,7 +1601,7 @@ class _$ClinicalImpression implements ClinicalImpression {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.status,
@@ -1644,11 +1642,12 @@ class _$ClinicalImpression implements ClinicalImpression {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final Code status;
   @override
@@ -1672,25 +1671,25 @@ class _$ClinicalImpression implements ClinicalImpression {
   @override
   final Reference previous;
   @override
-  final List<Reference> problem;
+  final List<dynamic> problem;
   @override
-  final List<ClinicalImpressionInvestigation> investigation;
+  final List<dynamic> investigation;
   @override
   final List<FhirUri> protocol;
   @override
-  final List<ClinicalImpressionFinding> finding;
+  final List<dynamic> finding;
   @override
-  final List<CodeableConcept> prognosisCodeableConcept;
+  final List<dynamic> prognosisCodeableConcept;
   @override
-  final List<Reference> prognosisReference;
+  final List<dynamic> prognosisReference;
   @override
-  final List<Reference> supportingInfo;
+  final List<dynamic> supportingInfo;
   @override
-  final List<Annotation> note;
+  final List<dynamic> note;
 
   @override
   String toString() {
-    return 'Summary.clinicalImpression(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusReason: $statusReason, code: $code, description: $description, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectivePeriod: $effectivePeriod, date: $date, assessor: $assessor, previous: $previous, problem: $problem, investigation: $investigation, protocol: $protocol, finding: $finding, prognosisCodeableConcept: $prognosisCodeableConcept, prognosisReference: $prognosisReference, supportingInfo: $supportingInfo, note: $note)';
+    return 'Summary.clinicalImpression(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusReason: $statusReason, code: $code, description: $description, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectivePeriod: $effectivePeriod, date: $date, assessor: $assessor, previous: $previous, problem: $problem, investigation: $investigation, protocol: $protocol, finding: $finding, prognosisCodeableConcept: $prognosisCodeableConcept, prognosisReference: $prognosisReference, supportingInfo: $supportingInfo, note: $note)';
   }
 
   @override
@@ -1715,9 +1714,9 @@ class _$ClinicalImpression implements ClinicalImpression {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -1781,7 +1780,7 @@ class _$ClinicalImpression implements ClinicalImpression {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
@@ -1820,9 +1819,9 @@ class _$ClinicalImpression implements ClinicalImpression {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -1834,26 +1833,26 @@ class _$ClinicalImpression implements ClinicalImpression {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -1866,8 +1865,8 @@ class _$ClinicalImpression implements ClinicalImpression {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -1885,19 +1884,19 @@ class _$ClinicalImpression implements ClinicalImpression {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -1906,39 +1905,39 @@ class _$ClinicalImpression implements ClinicalImpression {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -1952,9 +1951,9 @@ class _$ClinicalImpression implements ClinicalImpression {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -1975,14 +1974,14 @@ class _$ClinicalImpression implements ClinicalImpression {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -1990,7 +1989,7 @@ class _$ClinicalImpression implements ClinicalImpression {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -2000,32 +1999,32 @@ class _$ClinicalImpression implements ClinicalImpression {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -2038,12 +2037,12 @@ class _$ClinicalImpression implements ClinicalImpression {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -2060,24 +2059,24 @@ class _$ClinicalImpression implements ClinicalImpression {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -2087,13 +2086,13 @@ class _$ClinicalImpression implements ClinicalImpression {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -2107,33 +2106,33 @@ class _$ClinicalImpression implements ClinicalImpression {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -2164,7 +2163,7 @@ class _$ClinicalImpression implements ClinicalImpression {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         status,
@@ -2199,9 +2198,9 @@ class _$ClinicalImpression implements ClinicalImpression {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -2213,24 +2212,24 @@ class _$ClinicalImpression implements ClinicalImpression {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -2242,8 +2241,8 @@ class _$ClinicalImpression implements ClinicalImpression {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -2261,18 +2260,18 @@ class _$ClinicalImpression implements ClinicalImpression {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -2280,37 +2279,37 @@ class _$ClinicalImpression implements ClinicalImpression {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -2323,9 +2322,9 @@ class _$ClinicalImpression implements ClinicalImpression {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -2346,13 +2345,13 @@ class _$ClinicalImpression implements ClinicalImpression {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -2360,7 +2359,7 @@ class _$ClinicalImpression implements ClinicalImpression {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -2369,30 +2368,30 @@ class _$ClinicalImpression implements ClinicalImpression {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -2404,12 +2403,12 @@ class _$ClinicalImpression implements ClinicalImpression {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -2426,22 +2425,22 @@ class _$ClinicalImpression implements ClinicalImpression {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -2450,13 +2449,13 @@ class _$ClinicalImpression implements ClinicalImpression {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -2470,31 +2469,31 @@ class _$ClinicalImpression implements ClinicalImpression {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -2509,7 +2508,7 @@ class _$ClinicalImpression implements ClinicalImpression {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           status,
@@ -2632,9 +2631,9 @@ abstract class ClinicalImpression implements Summary {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       CodeableConcept statusReason,
       CodeableConcept code,
@@ -2646,14 +2645,14 @@ abstract class ClinicalImpression implements Summary {
       FhirDateTime date,
       Reference assessor,
       Reference previous,
-      List<Reference> problem,
-      List<ClinicalImpressionInvestigation> investigation,
+      List<dynamic> problem,
+      List<dynamic> investigation,
       List<FhirUri> protocol,
-      List<ClinicalImpressionFinding> finding,
-      List<CodeableConcept> prognosisCodeableConcept,
-      List<Reference> prognosisReference,
-      List<Reference> supportingInfo,
-      List<Annotation> note}) = _$ClinicalImpression;
+      List<dynamic> finding,
+      List<dynamic> prognosisCodeableConcept,
+      List<dynamic> prognosisReference,
+      List<dynamic> supportingInfo,
+      List<dynamic> note}) = _$ClinicalImpression;
 
   factory ClinicalImpression.fromJson(Map<String, dynamic> json) =
       _$ClinicalImpression.fromJson;
@@ -2665,10 +2664,11 @@ abstract class ClinicalImpression implements Summary {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   Code get status;
   CodeableConcept get statusReason;
   CodeableConcept get code;
@@ -2680,14 +2680,14 @@ abstract class ClinicalImpression implements Summary {
   FhirDateTime get date;
   Reference get assessor;
   Reference get previous;
-  List<Reference> get problem;
-  List<ClinicalImpressionInvestigation> get investigation;
+  List<dynamic> get problem;
+  List<dynamic> get investigation;
   List<FhirUri> get protocol;
-  List<ClinicalImpressionFinding> get finding;
-  List<CodeableConcept> get prognosisCodeableConcept;
-  List<Reference> get prognosisReference;
-  List<Reference> get supportingInfo;
-  List<Annotation> get note;
+  List<dynamic> get finding;
+  List<dynamic> get prognosisCodeableConcept;
+  List<dynamic> get prognosisReference;
+  List<dynamic> get supportingInfo;
+  List<dynamic> get note;
   @override
   $ClinicalImpressionCopyWith<ClinicalImpression> get copyWith;
 }
@@ -2701,10 +2701,10 @@ abstract class $ClinicalImpressionInvestigationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
-      List<Reference> item});
+      List<dynamic> item});
 }
 
 class _$ClinicalImpressionInvestigationCopyWithImpl<$Res>
@@ -2722,21 +2722,21 @@ class _$ClinicalImpressionInvestigationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
     Object item = freezed,
   }) {
     return _then(ClinicalImpressionInvestigation(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       code: code == freezed ? _value.code : code as CodeableConcept,
-      item: item == freezed ? _value.item : item as List<Reference>,
+      item: item == freezed ? _value.item : item as List<dynamic>,
     ));
   }
 }
@@ -2745,7 +2745,11 @@ class _$ClinicalImpressionInvestigationCopyWithImpl<$Res>
 class _$ClinicalImpressionInvestigation
     implements ClinicalImpressionInvestigation {
   const _$ClinicalImpressionInvestigation(
-      {this.id, this.extension, this.modifierExtension, this.code, this.item});
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.modifierExtension,
+      this.code,
+      this.item});
 
   factory _$ClinicalImpressionInvestigation.fromJson(
           Map<String, dynamic> json) =>
@@ -2754,17 +2758,18 @@ class _$ClinicalImpressionInvestigation
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept code;
   @override
-  final List<Reference> item;
+  final List<dynamic> item;
 
   @override
   String toString() {
-    return 'Summary.clinicalImpressionInvestigation(id: $id, extension: $extension, modifierExtension: $modifierExtension, code: $code, item: $item)';
+    return 'Summary.clinicalImpressionInvestigation(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, item: $item)';
   }
 
   @override
@@ -2773,9 +2778,9 @@ class _$ClinicalImpressionInvestigation
         (other is ClinicalImpressionInvestigation &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -2789,7 +2794,7 @@ class _$ClinicalImpressionInvestigation
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(item);
@@ -2811,9 +2816,9 @@ class _$ClinicalImpressionInvestigation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -2825,26 +2830,26 @@ class _$ClinicalImpressionInvestigation
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -2857,8 +2862,8 @@ class _$ClinicalImpressionInvestigation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -2876,19 +2881,19 @@ class _$ClinicalImpressionInvestigation
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -2897,39 +2902,39 @@ class _$ClinicalImpressionInvestigation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -2943,9 +2948,9 @@ class _$ClinicalImpressionInvestigation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -2966,14 +2971,14 @@ class _$ClinicalImpressionInvestigation
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -2981,7 +2986,7 @@ class _$ClinicalImpressionInvestigation
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -2991,32 +2996,32 @@ class _$ClinicalImpressionInvestigation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -3029,12 +3034,12 @@ class _$ClinicalImpressionInvestigation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -3051,24 +3056,24 @@ class _$ClinicalImpressionInvestigation
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -3078,13 +3083,13 @@ class _$ClinicalImpressionInvestigation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -3098,33 +3103,33 @@ class _$ClinicalImpressionInvestigation
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -3148,7 +3153,7 @@ class _$ClinicalImpressionInvestigation
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
     return clinicalImpressionInvestigation(
-        id, extension, modifierExtension, code, item);
+        id, fhirExtension, modifierExtension, code, item);
   }
 
   @override
@@ -3162,9 +3167,9 @@ class _$ClinicalImpressionInvestigation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -3176,24 +3181,24 @@ class _$ClinicalImpressionInvestigation
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -3205,8 +3210,8 @@ class _$ClinicalImpressionInvestigation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -3224,18 +3229,18 @@ class _$ClinicalImpressionInvestigation
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -3243,37 +3248,37 @@ class _$ClinicalImpressionInvestigation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -3286,9 +3291,9 @@ class _$ClinicalImpressionInvestigation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -3309,13 +3314,13 @@ class _$ClinicalImpressionInvestigation
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -3323,7 +3328,7 @@ class _$ClinicalImpressionInvestigation
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -3332,30 +3337,30 @@ class _$ClinicalImpressionInvestigation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -3367,12 +3372,12 @@ class _$ClinicalImpressionInvestigation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -3389,22 +3394,22 @@ class _$ClinicalImpressionInvestigation
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -3413,13 +3418,13 @@ class _$ClinicalImpressionInvestigation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -3433,31 +3438,31 @@ class _$ClinicalImpressionInvestigation
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -3465,7 +3470,7 @@ class _$ClinicalImpressionInvestigation
     assert(orElse != null);
     if (clinicalImpressionInvestigation != null) {
       return clinicalImpressionInvestigation(
-          id, extension, modifierExtension, code, item);
+          id, fhirExtension, modifierExtension, code, item);
     }
     return orElse();
   }
@@ -3561,20 +3566,21 @@ class _$ClinicalImpressionInvestigation
 abstract class ClinicalImpressionInvestigation implements Summary {
   const factory ClinicalImpressionInvestigation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
-      List<Reference> item}) = _$ClinicalImpressionInvestigation;
+      List<dynamic> item}) = _$ClinicalImpressionInvestigation;
 
   factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =
       _$ClinicalImpressionInvestigation.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get code;
-  List<Reference> get item;
+  List<dynamic> get item;
   @override
   $ClinicalImpressionInvestigationCopyWith<ClinicalImpressionInvestigation>
       get copyWith;
@@ -3588,8 +3594,8 @@ abstract class $ClinicalImpressionFindingCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept itemCodeableConcept,
       Reference itemReference,
       String basis});
@@ -3609,7 +3615,7 @@ class _$ClinicalImpressionFindingCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object itemCodeableConcept = freezed,
     Object itemReference = freezed,
@@ -3617,12 +3623,12 @@ class _$ClinicalImpressionFindingCopyWithImpl<$Res>
   }) {
     return _then(ClinicalImpressionFinding(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       itemCodeableConcept: itemCodeableConcept == freezed
           ? _value.itemCodeableConcept
           : itemCodeableConcept as CodeableConcept,
@@ -3638,7 +3644,7 @@ class _$ClinicalImpressionFindingCopyWithImpl<$Res>
 class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
   const _$ClinicalImpressionFinding(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.itemCodeableConcept,
       this.itemReference,
@@ -3650,9 +3656,10 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept itemCodeableConcept;
   @override
@@ -3662,7 +3669,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
 
   @override
   String toString() {
-    return 'Summary.clinicalImpressionFinding(id: $id, extension: $extension, modifierExtension: $modifierExtension, itemCodeableConcept: $itemCodeableConcept, itemReference: $itemReference, basis: $basis)';
+    return 'Summary.clinicalImpressionFinding(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, itemCodeableConcept: $itemCodeableConcept, itemReference: $itemReference, basis: $basis)';
   }
 
   @override
@@ -3671,9 +3678,9 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         (other is ClinicalImpressionFinding &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -3691,7 +3698,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(itemCodeableConcept) ^
       const DeepCollectionEquality().hash(itemReference) ^
@@ -3714,9 +3721,9 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -3728,26 +3735,26 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -3760,8 +3767,8 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -3779,19 +3786,19 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -3800,39 +3807,39 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -3846,9 +3853,9 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -3869,14 +3876,14 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -3884,7 +3891,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -3894,32 +3901,32 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -3932,12 +3939,12 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -3954,24 +3961,24 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -3981,13 +3988,13 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -4001,33 +4008,33 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -4050,7 +4057,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
     assert(procedure != null);
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
-    return clinicalImpressionFinding(id, extension, modifierExtension,
+    return clinicalImpressionFinding(id, fhirExtension, modifierExtension,
         itemCodeableConcept, itemReference, basis);
   }
 
@@ -4065,9 +4072,9 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -4079,24 +4086,24 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -4108,8 +4115,8 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -4127,18 +4134,18 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -4146,37 +4153,37 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -4189,9 +4196,9 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -4212,13 +4219,13 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -4226,7 +4233,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -4235,30 +4242,30 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -4270,12 +4277,12 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -4292,22 +4299,22 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -4316,13 +4323,13 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -4336,38 +4343,38 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (clinicalImpressionFinding != null) {
-      return clinicalImpressionFinding(id, extension, modifierExtension,
+      return clinicalImpressionFinding(id, fhirExtension, modifierExtension,
           itemCodeableConcept, itemReference, basis);
     }
     return orElse();
@@ -4464,8 +4471,8 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
 abstract class ClinicalImpressionFinding implements Summary {
   const factory ClinicalImpressionFinding(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept itemCodeableConcept,
       Reference itemReference,
       String basis}) = _$ClinicalImpressionFinding;
@@ -4474,9 +4481,10 @@ abstract class ClinicalImpressionFinding implements Summary {
       _$ClinicalImpressionFinding.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get itemCodeableConcept;
   Reference get itemReference;
   String get basis;
@@ -4498,8 +4506,8 @@ abstract class $AllergyIntoleranceCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
       AllergyIntoleranceType type,
@@ -4517,8 +4525,8 @@ abstract class $AllergyIntoleranceCopyWith<$Res>
       Reference recorder,
       Reference asserter,
       FhirDateTime lastOccurrence,
-      List<Annotation> note,
-      List<AllergyIntoleranceReaction> reaction});
+      List<dynamic> note,
+      List<dynamic> reaction});
 }
 
 class _$AllergyIntoleranceCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
@@ -4576,10 +4584,10 @@ class _$AllergyIntoleranceCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       clinicalStatus: clinicalStatus == freezed
           ? _value.clinicalStatus
           : clinicalStatus as CodeableConcept,
@@ -4615,10 +4623,9 @@ class _$AllergyIntoleranceCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       lastOccurrence: lastOccurrence == freezed
           ? _value.lastOccurrence
           : lastOccurrence as FhirDateTime,
-      note: note == freezed ? _value.note : note as List<Annotation>,
-      reaction: reaction == freezed
-          ? _value.reaction
-          : reaction as List<AllergyIntoleranceReaction>,
+      note: note == freezed ? _value.note : note as List<dynamic>,
+      reaction:
+          reaction == freezed ? _value.reaction : reaction as List<dynamic>,
     ));
   }
 }
@@ -4673,9 +4680,9 @@ class _$AllergyIntolerance implements AllergyIntolerance {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final CodeableConcept clinicalStatus;
   @override
@@ -4711,9 +4718,9 @@ class _$AllergyIntolerance implements AllergyIntolerance {
   @override
   final FhirDateTime lastOccurrence;
   @override
-  final List<Annotation> note;
+  final List<dynamic> note;
   @override
-  final List<AllergyIntoleranceReaction> reaction;
+  final List<dynamic> reaction;
 
   @override
   String toString() {
@@ -4845,9 +4852,9 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -4859,26 +4866,26 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -4891,8 +4898,8 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -4910,19 +4917,19 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -4931,39 +4938,39 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -4977,9 +4984,9 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -5000,14 +5007,14 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -5015,7 +5022,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -5025,32 +5032,32 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -5063,12 +5070,12 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -5085,24 +5092,24 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -5112,13 +5119,13 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -5132,33 +5139,33 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -5223,9 +5230,9 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -5237,24 +5244,24 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -5266,8 +5273,8 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -5285,18 +5292,18 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -5304,37 +5311,37 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -5347,9 +5354,9 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -5370,13 +5377,13 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -5384,7 +5391,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -5393,30 +5400,30 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -5428,12 +5435,12 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -5450,22 +5457,22 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -5474,13 +5481,13 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -5494,31 +5501,31 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -5655,8 +5662,8 @@ abstract class AllergyIntolerance implements Summary {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
       AllergyIntoleranceType type,
@@ -5674,8 +5681,8 @@ abstract class AllergyIntolerance implements Summary {
       Reference recorder,
       Reference asserter,
       FhirDateTime lastOccurrence,
-      List<Annotation> note,
-      List<AllergyIntoleranceReaction> reaction}) = _$AllergyIntolerance;
+      List<dynamic> note,
+      List<dynamic> reaction}) = _$AllergyIntolerance;
 
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =
       _$AllergyIntolerance.fromJson;
@@ -5688,8 +5695,8 @@ abstract class AllergyIntolerance implements Summary {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   CodeableConcept get clinicalStatus;
   CodeableConcept get verificationStatus;
   AllergyIntoleranceType get type;
@@ -5707,8 +5714,8 @@ abstract class AllergyIntolerance implements Summary {
   Reference get recorder;
   Reference get asserter;
   FhirDateTime get lastOccurrence;
-  List<Annotation> get note;
-  List<AllergyIntoleranceReaction> get reaction;
+  List<dynamic> get note;
+  List<dynamic> get reaction;
   @override
   $AllergyIntoleranceCopyWith<AllergyIntolerance> get copyWith;
 }
@@ -5721,14 +5728,14 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept substance,
-      List<CodeableConcept> manifestation,
+      List<dynamic> manifestation,
       FhirDateTime onset,
       AllergyIntoleranceReactionSeverity severity,
       CodeableConcept exposureRoute,
-      List<Annotation> note});
+      List<dynamic> note});
 }
 
 class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
@@ -5745,7 +5752,7 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object substance = freezed,
     Object manifestation = freezed,
@@ -5756,18 +5763,18 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
   }) {
     return _then(AllergyIntoleranceReaction(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       substance: substance == freezed
           ? _value.substance
           : substance as CodeableConcept,
       manifestation: manifestation == freezed
           ? _value.manifestation
-          : manifestation as List<CodeableConcept>,
+          : manifestation as List<dynamic>,
       onset: onset == freezed ? _value.onset : onset as FhirDateTime,
       severity: severity == freezed
           ? _value.severity
@@ -5775,7 +5782,7 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
       exposureRoute: exposureRoute == freezed
           ? _value.exposureRoute
           : exposureRoute as CodeableConcept,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+      note: note == freezed ? _value.note : note as List<dynamic>,
     ));
   }
 }
@@ -5784,7 +5791,7 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
 class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
   const _$AllergyIntoleranceReaction(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.substance,
       this.manifestation,
@@ -5799,13 +5806,14 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept substance;
   @override
-  final List<CodeableConcept> manifestation;
+  final List<dynamic> manifestation;
   @override
   final FhirDateTime onset;
   @override
@@ -5813,11 +5821,11 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
   @override
   final CodeableConcept exposureRoute;
   @override
-  final List<Annotation> note;
+  final List<dynamic> note;
 
   @override
   String toString() {
-    return 'Summary.allergyIntoleranceReaction(id: $id, extension: $extension, modifierExtension: $modifierExtension, substance: $substance, manifestation: $manifestation, onset: $onset, severity: $severity, exposureRoute: $exposureRoute, note: $note)';
+    return 'Summary.allergyIntoleranceReaction(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, substance: $substance, manifestation: $manifestation, onset: $onset, severity: $severity, exposureRoute: $exposureRoute, note: $note)';
   }
 
   @override
@@ -5826,9 +5834,9 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         (other is AllergyIntoleranceReaction &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -5854,7 +5862,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(substance) ^
       const DeepCollectionEquality().hash(manifestation) ^
@@ -5881,9 +5889,9 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -5895,26 +5903,26 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -5927,8 +5935,8 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -5946,19 +5954,19 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -5967,39 +5975,39 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -6013,9 +6021,9 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -6036,14 +6044,14 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -6051,7 +6059,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -6061,32 +6069,32 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -6099,12 +6107,12 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -6121,24 +6129,24 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -6148,13 +6156,13 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -6168,33 +6176,33 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -6217,7 +6225,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
     assert(procedure != null);
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
-    return allergyIntoleranceReaction(id, extension, modifierExtension,
+    return allergyIntoleranceReaction(id, fhirExtension, modifierExtension,
         substance, manifestation, onset, severity, exposureRoute, note);
   }
 
@@ -6232,9 +6240,9 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -6246,24 +6254,24 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -6275,8 +6283,8 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -6294,18 +6302,18 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -6313,37 +6321,37 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -6356,9 +6364,9 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -6379,13 +6387,13 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -6393,7 +6401,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -6402,30 +6410,30 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -6437,12 +6445,12 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -6459,22 +6467,22 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -6483,13 +6491,13 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -6503,38 +6511,38 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (allergyIntoleranceReaction != null) {
-      return allergyIntoleranceReaction(id, extension, modifierExtension,
+      return allergyIntoleranceReaction(id, fhirExtension, modifierExtension,
           substance, manifestation, onset, severity, exposureRoute, note);
     }
     return orElse();
@@ -6631,28 +6639,29 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
 abstract class AllergyIntoleranceReaction implements Summary {
   const factory AllergyIntoleranceReaction(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept substance,
-      List<CodeableConcept> manifestation,
+      List<dynamic> manifestation,
       FhirDateTime onset,
       AllergyIntoleranceReactionSeverity severity,
       CodeableConcept exposureRoute,
-      List<Annotation> note}) = _$AllergyIntoleranceReaction;
+      List<dynamic> note}) = _$AllergyIntoleranceReaction;
 
   factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =
       _$AllergyIntoleranceReaction.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get substance;
-  List<CodeableConcept> get manifestation;
+  List<dynamic> get manifestation;
   FhirDateTime get onset;
   AllergyIntoleranceReactionSeverity get severity;
   CodeableConcept get exposureRoute;
-  List<Annotation> get note;
+  List<dynamic> get note;
   @override
   $AllergyIntoleranceReactionCopyWith<AllergyIntoleranceReaction> get copyWith;
 }
@@ -6669,28 +6678,28 @@ abstract class $AdverseEventCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       AdverseEventActuality actuality,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept event,
       Reference subject,
       Reference encounter,
       FhirDateTime date,
       FhirDateTime detected,
       FhirDateTime recordedDate,
-      List<Reference> resultingCondition,
+      List<dynamic> resultingCondition,
       Reference location,
       CodeableConcept seriousness,
       CodeableConcept severity,
       CodeableConcept outcome,
       Reference recorder,
-      List<Reference> contributor,
-      List<AdverseEventSuspectEntity> suspectEntity,
-      List<Reference> subjectMedicalHistory,
-      List<Reference> referenceDocument,
-      List<Reference> study});
+      List<dynamic> contributor,
+      List<dynamic> suspectEntity,
+      List<dynamic> subjectMedicalHistory,
+      List<dynamic> referenceDocument,
+      List<dynamic> study});
 }
 
 class _$AdverseEventCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
@@ -6710,7 +6719,7 @@ class _$AdverseEventCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object actuality = freezed,
@@ -6743,20 +6752,19 @@ class _$AdverseEventCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       actuality: actuality == freezed
           ? _value.actuality
           : actuality as AdverseEventActuality,
-      category: category == freezed
-          ? _value.category
-          : category as List<CodeableConcept>,
+      category:
+          category == freezed ? _value.category : category as List<dynamic>,
       event: event == freezed ? _value.event : event as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
@@ -6769,7 +6777,7 @@ class _$AdverseEventCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
           : recordedDate as FhirDateTime,
       resultingCondition: resultingCondition == freezed
           ? _value.resultingCondition
-          : resultingCondition as List<Reference>,
+          : resultingCondition as List<dynamic>,
       location: location == freezed ? _value.location : location as Reference,
       seriousness: seriousness == freezed
           ? _value.seriousness
@@ -6780,17 +6788,17 @@ class _$AdverseEventCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       recorder: recorder == freezed ? _value.recorder : recorder as Reference,
       contributor: contributor == freezed
           ? _value.contributor
-          : contributor as List<Reference>,
+          : contributor as List<dynamic>,
       suspectEntity: suspectEntity == freezed
           ? _value.suspectEntity
-          : suspectEntity as List<AdverseEventSuspectEntity>,
+          : suspectEntity as List<dynamic>,
       subjectMedicalHistory: subjectMedicalHistory == freezed
           ? _value.subjectMedicalHistory
-          : subjectMedicalHistory as List<Reference>,
+          : subjectMedicalHistory as List<dynamic>,
       referenceDocument: referenceDocument == freezed
           ? _value.referenceDocument
-          : referenceDocument as List<Reference>,
-      study: study == freezed ? _value.study : study as List<Reference>,
+          : referenceDocument as List<dynamic>,
+      study: study == freezed ? _value.study : study as List<dynamic>,
     ));
   }
 }
@@ -6804,7 +6812,7 @@ class _$AdverseEvent implements AdverseEvent {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.actuality,
@@ -6843,15 +6851,16 @@ class _$AdverseEvent implements AdverseEvent {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Identifier identifier;
   @override
   final AdverseEventActuality actuality;
   @override
-  final List<CodeableConcept> category;
+  final List<dynamic> category;
   @override
   final CodeableConcept event;
   @override
@@ -6865,7 +6874,7 @@ class _$AdverseEvent implements AdverseEvent {
   @override
   final FhirDateTime recordedDate;
   @override
-  final List<Reference> resultingCondition;
+  final List<dynamic> resultingCondition;
   @override
   final Reference location;
   @override
@@ -6877,19 +6886,19 @@ class _$AdverseEvent implements AdverseEvent {
   @override
   final Reference recorder;
   @override
-  final List<Reference> contributor;
+  final List<dynamic> contributor;
   @override
-  final List<AdverseEventSuspectEntity> suspectEntity;
+  final List<dynamic> suspectEntity;
   @override
-  final List<Reference> subjectMedicalHistory;
+  final List<dynamic> subjectMedicalHistory;
   @override
-  final List<Reference> referenceDocument;
+  final List<dynamic> referenceDocument;
   @override
-  final List<Reference> study;
+  final List<dynamic> study;
 
   @override
   String toString() {
-    return 'Summary.adverseEvent(resourceType: $resourceType, id: $id, meta: $meta, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, actuality: $actuality, category: $category, event: $event, subject: $subject, encounter: $encounter, date: $date, detected: $detected, recordedDate: $recordedDate, resultingCondition: $resultingCondition, location: $location, seriousness: $seriousness, severity: $severity, outcome: $outcome, recorder: $recorder, contributor: $contributor, suspectEntity: $suspectEntity, subjectMedicalHistory: $subjectMedicalHistory, referenceDocument: $referenceDocument, study: $study)';
+    return 'Summary.adverseEvent(resourceType: $resourceType, id: $id, meta: $meta, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, actuality: $actuality, category: $category, event: $event, subject: $subject, encounter: $encounter, date: $date, detected: $detected, recordedDate: $recordedDate, resultingCondition: $resultingCondition, location: $location, seriousness: $seriousness, severity: $severity, outcome: $outcome, recorder: $recorder, contributor: $contributor, suspectEntity: $suspectEntity, subjectMedicalHistory: $subjectMedicalHistory, referenceDocument: $referenceDocument, study: $study)';
   }
 
   @override
@@ -6911,9 +6920,9 @@ class _$AdverseEvent implements AdverseEvent {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -6978,7 +6987,7 @@ class _$AdverseEvent implements AdverseEvent {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(actuality) ^
@@ -7017,9 +7026,9 @@ class _$AdverseEvent implements AdverseEvent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -7031,26 +7040,26 @@ class _$AdverseEvent implements AdverseEvent {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -7063,8 +7072,8 @@ class _$AdverseEvent implements AdverseEvent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -7082,19 +7091,19 @@ class _$AdverseEvent implements AdverseEvent {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -7103,39 +7112,39 @@ class _$AdverseEvent implements AdverseEvent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -7149,9 +7158,9 @@ class _$AdverseEvent implements AdverseEvent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -7172,14 +7181,14 @@ class _$AdverseEvent implements AdverseEvent {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -7187,7 +7196,7 @@ class _$AdverseEvent implements AdverseEvent {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -7197,32 +7206,32 @@ class _$AdverseEvent implements AdverseEvent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -7235,12 +7244,12 @@ class _$AdverseEvent implements AdverseEvent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -7257,24 +7266,24 @@ class _$AdverseEvent implements AdverseEvent {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -7284,13 +7293,13 @@ class _$AdverseEvent implements AdverseEvent {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -7304,33 +7313,33 @@ class _$AdverseEvent implements AdverseEvent {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -7360,7 +7369,7 @@ class _$AdverseEvent implements AdverseEvent {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         actuality,
@@ -7395,9 +7404,9 @@ class _$AdverseEvent implements AdverseEvent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -7409,24 +7418,24 @@ class _$AdverseEvent implements AdverseEvent {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -7438,8 +7447,8 @@ class _$AdverseEvent implements AdverseEvent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -7457,18 +7466,18 @@ class _$AdverseEvent implements AdverseEvent {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -7476,37 +7485,37 @@ class _$AdverseEvent implements AdverseEvent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -7519,9 +7528,9 @@ class _$AdverseEvent implements AdverseEvent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -7542,13 +7551,13 @@ class _$AdverseEvent implements AdverseEvent {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -7556,7 +7565,7 @@ class _$AdverseEvent implements AdverseEvent {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -7565,30 +7574,30 @@ class _$AdverseEvent implements AdverseEvent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -7600,12 +7609,12 @@ class _$AdverseEvent implements AdverseEvent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -7622,22 +7631,22 @@ class _$AdverseEvent implements AdverseEvent {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -7646,13 +7655,13 @@ class _$AdverseEvent implements AdverseEvent {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -7666,31 +7675,31 @@ class _$AdverseEvent implements AdverseEvent {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -7704,7 +7713,7 @@ class _$AdverseEvent implements AdverseEvent {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           actuality,
@@ -7825,28 +7834,28 @@ abstract class AdverseEvent implements Summary {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       AdverseEventActuality actuality,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept event,
       Reference subject,
       Reference encounter,
       FhirDateTime date,
       FhirDateTime detected,
       FhirDateTime recordedDate,
-      List<Reference> resultingCondition,
+      List<dynamic> resultingCondition,
       Reference location,
       CodeableConcept seriousness,
       CodeableConcept severity,
       CodeableConcept outcome,
       Reference recorder,
-      List<Reference> contributor,
-      List<AdverseEventSuspectEntity> suspectEntity,
-      List<Reference> subjectMedicalHistory,
-      List<Reference> referenceDocument,
-      List<Reference> study}) = _$AdverseEvent;
+      List<dynamic> contributor,
+      List<dynamic> suspectEntity,
+      List<dynamic> subjectMedicalHistory,
+      List<dynamic> referenceDocument,
+      List<dynamic> study}) = _$AdverseEvent;
 
   factory AdverseEvent.fromJson(Map<String, dynamic> json) =
       _$AdverseEvent.fromJson;
@@ -7857,29 +7866,30 @@ abstract class AdverseEvent implements Summary {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Identifier get identifier;
   AdverseEventActuality get actuality;
-  List<CodeableConcept> get category;
+  List<dynamic> get category;
   CodeableConcept get event;
   Reference get subject;
   Reference get encounter;
   FhirDateTime get date;
   FhirDateTime get detected;
   FhirDateTime get recordedDate;
-  List<Reference> get resultingCondition;
+  List<dynamic> get resultingCondition;
   Reference get location;
   CodeableConcept get seriousness;
   CodeableConcept get severity;
   CodeableConcept get outcome;
   Reference get recorder;
-  List<Reference> get contributor;
-  List<AdverseEventSuspectEntity> get suspectEntity;
-  List<Reference> get subjectMedicalHistory;
-  List<Reference> get referenceDocument;
-  List<Reference> get study;
+  List<dynamic> get contributor;
+  List<dynamic> get suspectEntity;
+  List<dynamic> get subjectMedicalHistory;
+  List<dynamic> get referenceDocument;
+  List<dynamic> get study;
   @override
   $AdverseEventCopyWith<AdverseEvent> get copyWith;
 }
@@ -7891,10 +7901,10 @@ abstract class $AdverseEventSuspectEntityCopyWith<$Res>
       _$AdverseEventSuspectEntityCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      {@JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference instance,
-      List<AdverseEventCausality> causality});
+      List<dynamic> causality});
 }
 
 class _$AdverseEventSuspectEntityCopyWithImpl<$Res>
@@ -7910,22 +7920,21 @@ class _$AdverseEventSuspectEntityCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object instance = freezed,
     Object causality = freezed,
   }) {
     return _then(AdverseEventSuspectEntity(
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       instance: instance == freezed ? _value.instance : instance as Reference,
-      causality: causality == freezed
-          ? _value.causality
-          : causality as List<AdverseEventCausality>,
+      causality:
+          causality == freezed ? _value.causality : causality as List<dynamic>,
     ));
   }
 }
@@ -7933,32 +7942,36 @@ class _$AdverseEventSuspectEntityCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
   const _$AdverseEventSuspectEntity(
-      {this.extension, this.modifierExtension, this.instance, this.causality});
+      {@JsonKey(name: 'extension') this.fhirExtension,
+      this.modifierExtension,
+      this.instance,
+      this.causality});
 
   factory _$AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
       _$_$AdverseEventSuspectEntityFromJson(json);
 
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Reference instance;
   @override
-  final List<AdverseEventCausality> causality;
+  final List<dynamic> causality;
 
   @override
   String toString() {
-    return 'Summary.adverseEventSuspectEntity(extension: $extension, modifierExtension: $modifierExtension, instance: $instance, causality: $causality)';
+    return 'Summary.adverseEventSuspectEntity(fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, instance: $instance, causality: $causality)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is AdverseEventSuspectEntity &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -7973,7 +7986,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(instance) ^
       const DeepCollectionEquality().hash(causality);
@@ -7995,9 +8008,9 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -8009,26 +8022,26 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -8041,8 +8054,8 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -8060,19 +8073,19 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -8081,39 +8094,39 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -8127,9 +8140,9 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -8150,14 +8163,14 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -8165,7 +8178,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -8175,32 +8188,32 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -8213,12 +8226,12 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -8235,24 +8248,24 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -8262,13 +8275,13 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -8282,33 +8295,33 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -8332,7 +8345,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
     return adverseEventSuspectEntity(
-        extension, modifierExtension, instance, causality);
+        fhirExtension, modifierExtension, instance, causality);
   }
 
   @override
@@ -8346,9 +8359,9 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -8360,24 +8373,24 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -8389,8 +8402,8 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -8408,18 +8421,18 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -8427,37 +8440,37 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -8470,9 +8483,9 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -8493,13 +8506,13 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -8507,7 +8520,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -8516,30 +8529,30 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -8551,12 +8564,12 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -8573,22 +8586,22 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -8597,13 +8610,13 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -8617,31 +8630,31 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -8649,7 +8662,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
     assert(orElse != null);
     if (adverseEventSuspectEntity != null) {
       return adverseEventSuspectEntity(
-          extension, modifierExtension, instance, causality);
+          fhirExtension, modifierExtension, instance, causality);
     }
     return orElse();
   }
@@ -8744,19 +8757,20 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
 
 abstract class AdverseEventSuspectEntity implements Summary {
   const factory AdverseEventSuspectEntity(
-      {List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      {@JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference instance,
-      List<AdverseEventCausality> causality}) = _$AdverseEventSuspectEntity;
+      List<dynamic> causality}) = _$AdverseEventSuspectEntity;
 
   factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =
       _$AdverseEventSuspectEntity.fromJson;
 
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Reference get instance;
-  List<AdverseEventCausality> get causality;
+  List<dynamic> get causality;
   @override
   $AdverseEventSuspectEntityCopyWith<AdverseEventSuspectEntity> get copyWith;
 }
@@ -8769,8 +8783,8 @@ abstract class $AdverseEventCausalityCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept assessment,
       String productRelatedness,
       Reference author,
@@ -8790,7 +8804,7 @@ class _$AdverseEventCausalityCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object assessment = freezed,
     Object productRelatedness = freezed,
@@ -8799,12 +8813,12 @@ class _$AdverseEventCausalityCopyWithImpl<$Res>
   }) {
     return _then(AdverseEventCausality(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       assessment: assessment == freezed
           ? _value.assessment
           : assessment as CodeableConcept,
@@ -8821,7 +8835,7 @@ class _$AdverseEventCausalityCopyWithImpl<$Res>
 class _$AdverseEventCausality implements AdverseEventCausality {
   const _$AdverseEventCausality(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.assessment,
       this.productRelatedness,
@@ -8834,9 +8848,10 @@ class _$AdverseEventCausality implements AdverseEventCausality {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept assessment;
   @override
@@ -8848,7 +8863,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
 
   @override
   String toString() {
-    return 'Summary.adverseEventCausality(id: $id, extension: $extension, modifierExtension: $modifierExtension, assessment: $assessment, productRelatedness: $productRelatedness, author: $author, method: $method)';
+    return 'Summary.adverseEventCausality(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, assessment: $assessment, productRelatedness: $productRelatedness, author: $author, method: $method)';
   }
 
   @override
@@ -8857,9 +8872,9 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         (other is AdverseEventCausality &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -8879,7 +8894,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(assessment) ^
       const DeepCollectionEquality().hash(productRelatedness) ^
@@ -8903,9 +8918,9 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -8917,26 +8932,26 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -8949,8 +8964,8 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -8968,19 +8983,19 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -8989,39 +9004,39 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -9035,9 +9050,9 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -9058,14 +9073,14 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -9073,7 +9088,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -9083,32 +9098,32 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -9121,12 +9136,12 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -9143,24 +9158,24 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -9170,13 +9185,13 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -9190,33 +9205,33 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -9239,8 +9254,8 @@ class _$AdverseEventCausality implements AdverseEventCausality {
     assert(procedure != null);
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
-    return adverseEventCausality(id, extension, modifierExtension, assessment,
-        productRelatedness, author, method);
+    return adverseEventCausality(id, fhirExtension, modifierExtension,
+        assessment, productRelatedness, author, method);
   }
 
   @override
@@ -9254,9 +9269,9 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -9268,24 +9283,24 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -9297,8 +9312,8 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -9316,18 +9331,18 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -9335,37 +9350,37 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -9378,9 +9393,9 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -9401,13 +9416,13 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -9415,7 +9430,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -9424,30 +9439,30 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -9459,12 +9474,12 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -9481,22 +9496,22 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -9505,13 +9520,13 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -9525,39 +9540,39 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (adverseEventCausality != null) {
-      return adverseEventCausality(id, extension, modifierExtension, assessment,
-          productRelatedness, author, method);
+      return adverseEventCausality(id, fhirExtension, modifierExtension,
+          assessment, productRelatedness, author, method);
     }
     return orElse();
   }
@@ -9653,8 +9668,8 @@ class _$AdverseEventCausality implements AdverseEventCausality {
 abstract class AdverseEventCausality implements Summary {
   const factory AdverseEventCausality(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept assessment,
       String productRelatedness,
       Reference author,
@@ -9664,9 +9679,10 @@ abstract class AdverseEventCausality implements Summary {
       _$AdverseEventCausality.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get assessment;
   String get productRelatedness;
   Reference get author;
@@ -9689,9 +9705,9 @@ abstract class $FamilyMemberHistoryCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       FamilyMemberHistoryStatus status,
@@ -9712,9 +9728,9 @@ abstract class $FamilyMemberHistoryCopyWith<$Res>
       Range deceasedRange,
       Date deceasedDate,
       String deceasedString,
-      List<CodeableConcept> reasonCode,
-      List<Annotation> note,
-      List<FamilyMemberHistoryCondition> condition});
+      List<dynamic> reasonCode,
+      List<dynamic> note,
+      List<dynamic> condition});
 }
 
 class _$FamilyMemberHistoryCopyWithImpl<$Res>
@@ -9736,7 +9752,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object instantiatesCanonical = freezed,
@@ -9776,15 +9792,15 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
           : instantiatesCanonical as List<Canonical>,
@@ -9828,11 +9844,10 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
           : deceasedString as String,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<CodeableConcept>,
-      note: note == freezed ? _value.note : note as List<Annotation>,
-      condition: condition == freezed
-          ? _value.condition
-          : condition as List<FamilyMemberHistoryCondition>,
+          : reasonCode as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<dynamic>,
+      condition:
+          condition == freezed ? _value.condition : condition as List<dynamic>,
     ));
   }
 }
@@ -9847,7 +9862,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.instantiatesCanonical,
@@ -9892,11 +9907,12 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final List<Canonical> instantiatesCanonical;
   @override
@@ -9938,15 +9954,15 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
   @override
   final String deceasedString;
   @override
-  final List<CodeableConcept> reasonCode;
+  final List<dynamic> reasonCode;
   @override
-  final List<Annotation> note;
+  final List<dynamic> note;
   @override
-  final List<FamilyMemberHistoryCondition> condition;
+  final List<dynamic> condition;
 
   @override
   String toString() {
-    return 'Summary.familyMemberHistory(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, status: $status, dataAbsentReason: $dataAbsentReason, patient: $patient, date: $date, name: $name, relationship: $relationship, sex: $sex, bornPeriod: $bornPeriod, bornString: $bornString, ageAge: $ageAge, ageRange: $ageRange, ageString: $ageString, estimatedAge: $estimatedAge, deceasedBoolean: $deceasedBoolean, deceasedAge: $deceasedAge, deceasedRange: $deceasedRange, deceasedDate: $deceasedDate, deceasedString: $deceasedString, reasonCode: $reasonCode, note: $note, condition: $condition)';
+    return 'Summary.familyMemberHistory(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, status: $status, dataAbsentReason: $dataAbsentReason, patient: $patient, date: $date, name: $name, relationship: $relationship, sex: $sex, bornPeriod: $bornPeriod, bornString: $bornString, ageAge: $ageAge, ageRange: $ageRange, ageString: $ageString, estimatedAge: $estimatedAge, deceasedBoolean: $deceasedBoolean, deceasedAge: $deceasedAge, deceasedRange: $deceasedRange, deceasedDate: $deceasedDate, deceasedString: $deceasedString, reasonCode: $reasonCode, note: $note, condition: $condition)';
   }
 
   @override
@@ -9971,9 +9987,9 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -10041,7 +10057,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(instantiatesCanonical) ^
@@ -10084,9 +10100,9 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -10098,26 +10114,26 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -10130,8 +10146,8 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -10149,19 +10165,19 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -10170,39 +10186,39 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -10216,9 +10232,9 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -10239,14 +10255,14 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -10254,7 +10270,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -10264,32 +10280,32 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -10302,12 +10318,12 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -10324,24 +10340,24 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -10351,13 +10367,13 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -10371,33 +10387,33 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -10428,7 +10444,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         instantiatesCanonical,
@@ -10467,9 +10483,9 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -10481,24 +10497,24 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -10510,8 +10526,8 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -10529,18 +10545,18 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -10548,37 +10564,37 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -10591,9 +10607,9 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -10614,13 +10630,13 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -10628,7 +10644,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -10637,30 +10653,30 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -10672,12 +10688,12 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -10694,22 +10710,22 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -10718,13 +10734,13 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -10738,31 +10754,31 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -10777,7 +10793,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           instantiatesCanonical,
@@ -10904,9 +10920,9 @@ abstract class FamilyMemberHistory implements Summary {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       FamilyMemberHistoryStatus status,
@@ -10927,9 +10943,9 @@ abstract class FamilyMemberHistory implements Summary {
       Range deceasedRange,
       Date deceasedDate,
       String deceasedString,
-      List<CodeableConcept> reasonCode,
-      List<Annotation> note,
-      List<FamilyMemberHistoryCondition> condition}) = _$FamilyMemberHistory;
+      List<dynamic> reasonCode,
+      List<dynamic> note,
+      List<dynamic> condition}) = _$FamilyMemberHistory;
 
   factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =
       _$FamilyMemberHistory.fromJson;
@@ -10941,10 +10957,11 @@ abstract class FamilyMemberHistory implements Summary {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   FamilyMemberHistoryStatus get status;
@@ -10965,9 +10982,9 @@ abstract class FamilyMemberHistory implements Summary {
   Range get deceasedRange;
   Date get deceasedDate;
   String get deceasedString;
-  List<CodeableConcept> get reasonCode;
-  List<Annotation> get note;
-  List<FamilyMemberHistoryCondition> get condition;
+  List<dynamic> get reasonCode;
+  List<dynamic> get note;
+  List<dynamic> get condition;
   @override
   $FamilyMemberHistoryCopyWith<FamilyMemberHistory> get copyWith;
 }
@@ -10981,8 +10998,8 @@ abstract class $FamilyMemberHistoryConditionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
       CodeableConcept outcome,
       bool contributedToDeath,
@@ -10990,7 +11007,7 @@ abstract class $FamilyMemberHistoryConditionCopyWith<$Res>
       Range onsetRange,
       Period onsetPeriod,
       String onsetString,
-      List<Annotation> note});
+      List<dynamic> note});
 }
 
 class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
@@ -11008,7 +11025,7 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
     Object outcome = freezed,
@@ -11021,12 +11038,12 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
   }) {
     return _then(FamilyMemberHistoryCondition(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
       contributedToDeath: contributedToDeath == freezed
@@ -11039,7 +11056,7 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
       onsetString:
           onsetString == freezed ? _value.onsetString : onsetString as String,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+      note: note == freezed ? _value.note : note as List<dynamic>,
     ));
   }
 }
@@ -11048,7 +11065,7 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
 class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
   const _$FamilyMemberHistoryCondition(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.code,
       this.outcome,
@@ -11065,9 +11082,10 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept code;
   @override
@@ -11083,11 +11101,11 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
   @override
   final String onsetString;
   @override
-  final List<Annotation> note;
+  final List<dynamic> note;
 
   @override
   String toString() {
-    return 'Summary.familyMemberHistoryCondition(id: $id, extension: $extension, modifierExtension: $modifierExtension, code: $code, outcome: $outcome, contributedToDeath: $contributedToDeath, onsetAge: $onsetAge, onsetRange: $onsetRange, onsetPeriod: $onsetPeriod, onsetString: $onsetString, note: $note)';
+    return 'Summary.familyMemberHistoryCondition(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, outcome: $outcome, contributedToDeath: $contributedToDeath, onsetAge: $onsetAge, onsetRange: $onsetRange, onsetPeriod: $onsetPeriod, onsetString: $onsetString, note: $note)';
   }
 
   @override
@@ -11096,9 +11114,9 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         (other is FamilyMemberHistoryCondition &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -11130,7 +11148,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(outcome) ^
@@ -11158,9 +11176,9 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -11172,26 +11190,26 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -11204,8 +11222,8 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -11223,19 +11241,19 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -11244,39 +11262,39 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -11290,9 +11308,9 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -11313,14 +11331,14 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -11328,7 +11346,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -11338,32 +11356,32 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -11376,12 +11394,12 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -11398,24 +11416,24 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -11425,13 +11443,13 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -11445,33 +11463,33 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -11496,7 +11514,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
     assert(procedureFocalDevice != null);
     return familyMemberHistoryCondition(
         id,
-        extension,
+        fhirExtension,
         modifierExtension,
         code,
         outcome,
@@ -11519,9 +11537,9 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -11533,24 +11551,24 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -11562,8 +11580,8 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -11581,18 +11599,18 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -11600,37 +11618,37 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -11643,9 +11661,9 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -11666,13 +11684,13 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -11680,7 +11698,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -11689,30 +11707,30 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -11724,12 +11742,12 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -11746,22 +11764,22 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -11770,13 +11788,13 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -11790,31 +11808,31 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -11823,7 +11841,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
     if (familyMemberHistoryCondition != null) {
       return familyMemberHistoryCondition(
           id,
-          extension,
+          fhirExtension,
           modifierExtension,
           code,
           outcome,
@@ -11928,8 +11946,8 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
 abstract class FamilyMemberHistoryCondition implements Summary {
   const factory FamilyMemberHistoryCondition(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
       CodeableConcept outcome,
       bool contributedToDeath,
@@ -11937,15 +11955,16 @@ abstract class FamilyMemberHistoryCondition implements Summary {
       Range onsetRange,
       Period onsetPeriod,
       String onsetString,
-      List<Annotation> note}) = _$FamilyMemberHistoryCondition;
+      List<dynamic> note}) = _$FamilyMemberHistoryCondition;
 
   factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =
       _$FamilyMemberHistoryCondition.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get code;
   CodeableConcept get outcome;
   bool get contributedToDeath;
@@ -11953,7 +11972,7 @@ abstract class FamilyMemberHistoryCondition implements Summary {
   Range get onsetRange;
   Period get onsetPeriod;
   String get onsetString;
-  List<Annotation> get note;
+  List<dynamic> get note;
   @override
   $FamilyMemberHistoryConditionCopyWith<FamilyMemberHistoryCondition>
       get copyWith;
@@ -11972,20 +11991,20 @@ abstract class $DetectedIssueCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       CodeableConcept code,
       DetectedIssueSeverity severity,
       Reference patient,
       Period identifiedPeriod,
       Reference author,
-      List<Reference> implicated,
-      List<DetectedIssueEvidence> evidence,
+      List<dynamic> implicated,
+      List<dynamic> evidence,
       String detail,
       FhirUri reference,
-      List<DetectedIssueMitigation> mitigation});
+      List<dynamic> mitigation});
 }
 
 class _$DetectedIssueCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
@@ -12006,7 +12025,7 @@ class _$DetectedIssueCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
@@ -12034,15 +12053,15 @@ class _$DetectedIssueCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as Code,
       code: code == freezed ? _value.code : code as CodeableConcept,
       severity: severity == freezed
@@ -12055,15 +12074,14 @@ class _$DetectedIssueCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       author: author == freezed ? _value.author : author as Reference,
       implicated: implicated == freezed
           ? _value.implicated
-          : implicated as List<Reference>,
-      evidence: evidence == freezed
-          ? _value.evidence
-          : evidence as List<DetectedIssueEvidence>,
+          : implicated as List<dynamic>,
+      evidence:
+          evidence == freezed ? _value.evidence : evidence as List<dynamic>,
       detail: detail == freezed ? _value.detail : detail as String,
       reference: reference == freezed ? _value.reference : reference as FhirUri,
       mitigation: mitigation == freezed
           ? _value.mitigation
-          : mitigation as List<DetectedIssueMitigation>,
+          : mitigation as List<dynamic>,
     ));
   }
 }
@@ -12078,7 +12096,7 @@ class _$DetectedIssue implements DetectedIssue {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.status,
@@ -12111,11 +12129,12 @@ class _$DetectedIssue implements DetectedIssue {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final Code status;
   @override
@@ -12129,19 +12148,19 @@ class _$DetectedIssue implements DetectedIssue {
   @override
   final Reference author;
   @override
-  final List<Reference> implicated;
+  final List<dynamic> implicated;
   @override
-  final List<DetectedIssueEvidence> evidence;
+  final List<dynamic> evidence;
   @override
   final String detail;
   @override
   final FhirUri reference;
   @override
-  final List<DetectedIssueMitigation> mitigation;
+  final List<dynamic> mitigation;
 
   @override
   String toString() {
-    return 'Summary.detectedIssue(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, code: $code, severity: $severity, patient: $patient, identifiedPeriod: $identifiedPeriod, author: $author, implicated: $implicated, evidence: $evidence, detail: $detail, reference: $reference, mitigation: $mitigation)';
+    return 'Summary.detectedIssue(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, code: $code, severity: $severity, patient: $patient, identifiedPeriod: $identifiedPeriod, author: $author, implicated: $implicated, evidence: $evidence, detail: $detail, reference: $reference, mitigation: $mitigation)';
   }
 
   @override
@@ -12166,9 +12185,9 @@ class _$DetectedIssue implements DetectedIssue {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -12216,7 +12235,7 @@ class _$DetectedIssue implements DetectedIssue {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
@@ -12247,9 +12266,9 @@ class _$DetectedIssue implements DetectedIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -12261,26 +12280,26 @@ class _$DetectedIssue implements DetectedIssue {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -12293,8 +12312,8 @@ class _$DetectedIssue implements DetectedIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -12312,19 +12331,19 @@ class _$DetectedIssue implements DetectedIssue {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -12333,39 +12352,39 @@ class _$DetectedIssue implements DetectedIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -12379,9 +12398,9 @@ class _$DetectedIssue implements DetectedIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -12402,14 +12421,14 @@ class _$DetectedIssue implements DetectedIssue {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -12417,7 +12436,7 @@ class _$DetectedIssue implements DetectedIssue {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -12427,32 +12446,32 @@ class _$DetectedIssue implements DetectedIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -12465,12 +12484,12 @@ class _$DetectedIssue implements DetectedIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -12487,24 +12506,24 @@ class _$DetectedIssue implements DetectedIssue {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -12514,13 +12533,13 @@ class _$DetectedIssue implements DetectedIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -12534,33 +12553,33 @@ class _$DetectedIssue implements DetectedIssue {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -12591,7 +12610,7 @@ class _$DetectedIssue implements DetectedIssue {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         status,
@@ -12618,9 +12637,9 @@ class _$DetectedIssue implements DetectedIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -12632,24 +12651,24 @@ class _$DetectedIssue implements DetectedIssue {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -12661,8 +12680,8 @@ class _$DetectedIssue implements DetectedIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -12680,18 +12699,18 @@ class _$DetectedIssue implements DetectedIssue {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -12699,37 +12718,37 @@ class _$DetectedIssue implements DetectedIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -12742,9 +12761,9 @@ class _$DetectedIssue implements DetectedIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -12765,13 +12784,13 @@ class _$DetectedIssue implements DetectedIssue {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -12779,7 +12798,7 @@ class _$DetectedIssue implements DetectedIssue {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -12788,30 +12807,30 @@ class _$DetectedIssue implements DetectedIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -12823,12 +12842,12 @@ class _$DetectedIssue implements DetectedIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -12845,22 +12864,22 @@ class _$DetectedIssue implements DetectedIssue {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -12869,13 +12888,13 @@ class _$DetectedIssue implements DetectedIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -12889,31 +12908,31 @@ class _$DetectedIssue implements DetectedIssue {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -12928,7 +12947,7 @@ class _$DetectedIssue implements DetectedIssue {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           status,
@@ -13042,20 +13061,20 @@ abstract class DetectedIssue implements Summary {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       CodeableConcept code,
       DetectedIssueSeverity severity,
       Reference patient,
       Period identifiedPeriod,
       Reference author,
-      List<Reference> implicated,
-      List<DetectedIssueEvidence> evidence,
+      List<dynamic> implicated,
+      List<dynamic> evidence,
       String detail,
       FhirUri reference,
-      List<DetectedIssueMitigation> mitigation}) = _$DetectedIssue;
+      List<dynamic> mitigation}) = _$DetectedIssue;
 
   factory DetectedIssue.fromJson(Map<String, dynamic> json) =
       _$DetectedIssue.fromJson;
@@ -13067,21 +13086,22 @@ abstract class DetectedIssue implements Summary {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   Code get status;
   CodeableConcept get code;
   DetectedIssueSeverity get severity;
   Reference get patient;
   Period get identifiedPeriod;
   Reference get author;
-  List<Reference> get implicated;
-  List<DetectedIssueEvidence> get evidence;
+  List<dynamic> get implicated;
+  List<dynamic> get evidence;
   String get detail;
   FhirUri get reference;
-  List<DetectedIssueMitigation> get mitigation;
+  List<dynamic> get mitigation;
   @override
   $DetectedIssueCopyWith<DetectedIssue> get copyWith;
 }
@@ -13094,10 +13114,10 @@ abstract class $DetectedIssueEvidenceCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> code,
-      List<Reference> detail});
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> code,
+      List<dynamic> detail});
 }
 
 class _$DetectedIssueEvidenceCopyWithImpl<$Res>
@@ -13113,21 +13133,21 @@ class _$DetectedIssueEvidenceCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
     Object detail = freezed,
   }) {
     return _then(DetectedIssueEvidence(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      code: code == freezed ? _value.code : code as List<CodeableConcept>,
-      detail: detail == freezed ? _value.detail : detail as List<Reference>,
+          : modifierExtension as List<dynamic>,
+      code: code == freezed ? _value.code : code as List<dynamic>,
+      detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
   }
 }
@@ -13136,7 +13156,7 @@ class _$DetectedIssueEvidenceCopyWithImpl<$Res>
 class _$DetectedIssueEvidence implements DetectedIssueEvidence {
   const _$DetectedIssueEvidence(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.code,
       this.detail});
@@ -13147,17 +13167,18 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<CodeableConcept> code;
+  final List<dynamic> code;
   @override
-  final List<Reference> detail;
+  final List<dynamic> detail;
 
   @override
   String toString() {
-    return 'Summary.detectedIssueEvidence(id: $id, extension: $extension, modifierExtension: $modifierExtension, code: $code, detail: $detail)';
+    return 'Summary.detectedIssueEvidence(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, detail: $detail)';
   }
 
   @override
@@ -13166,9 +13187,9 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         (other is DetectedIssueEvidence &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -13182,7 +13203,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(detail);
@@ -13204,9 +13225,9 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -13218,26 +13239,26 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -13250,8 +13271,8 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -13269,19 +13290,19 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -13290,39 +13311,39 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -13336,9 +13357,9 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -13359,14 +13380,14 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -13374,7 +13395,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -13384,32 +13405,32 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -13422,12 +13443,12 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -13444,24 +13465,24 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -13471,13 +13492,13 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -13491,33 +13512,33 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -13541,7 +13562,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
     return detectedIssueEvidence(
-        id, extension, modifierExtension, code, detail);
+        id, fhirExtension, modifierExtension, code, detail);
   }
 
   @override
@@ -13555,9 +13576,9 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -13569,24 +13590,24 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -13598,8 +13619,8 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -13617,18 +13638,18 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -13636,37 +13657,37 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -13679,9 +13700,9 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -13702,13 +13723,13 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -13716,7 +13737,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -13725,30 +13746,30 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -13760,12 +13781,12 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -13782,22 +13803,22 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -13806,13 +13827,13 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -13826,31 +13847,31 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -13858,7 +13879,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
     assert(orElse != null);
     if (detectedIssueEvidence != null) {
       return detectedIssueEvidence(
-          id, extension, modifierExtension, code, detail);
+          id, fhirExtension, modifierExtension, code, detail);
     }
     return orElse();
   }
@@ -13954,20 +13975,21 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
 abstract class DetectedIssueEvidence implements Summary {
   const factory DetectedIssueEvidence(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> code,
-      List<Reference> detail}) = _$DetectedIssueEvidence;
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> code,
+      List<dynamic> detail}) = _$DetectedIssueEvidence;
 
   factory DetectedIssueEvidence.fromJson(Map<String, dynamic> json) =
       _$DetectedIssueEvidence.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<CodeableConcept> get code;
-  List<Reference> get detail;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get code;
+  List<dynamic> get detail;
   @override
   $DetectedIssueEvidenceCopyWith<DetectedIssueEvidence> get copyWith;
 }
@@ -13980,8 +14002,8 @@ abstract class $DetectedIssueMitigationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept action,
       FhirDateTime date,
       Reference author});
@@ -14000,7 +14022,7 @@ class _$DetectedIssueMitigationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object action = freezed,
     Object date = freezed,
@@ -14008,12 +14030,12 @@ class _$DetectedIssueMitigationCopyWithImpl<$Res>
   }) {
     return _then(DetectedIssueMitigation(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       action: action == freezed ? _value.action : action as CodeableConcept,
       date: date == freezed ? _value.date : date as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
@@ -14025,7 +14047,7 @@ class _$DetectedIssueMitigationCopyWithImpl<$Res>
 class _$DetectedIssueMitigation implements DetectedIssueMitigation {
   const _$DetectedIssueMitigation(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.action,
       this.date,
@@ -14037,9 +14059,10 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept action;
   @override
@@ -14049,7 +14072,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
 
   @override
   String toString() {
-    return 'Summary.detectedIssueMitigation(id: $id, extension: $extension, modifierExtension: $modifierExtension, action: $action, date: $date, author: $author)';
+    return 'Summary.detectedIssueMitigation(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, action: $action, date: $date, author: $author)';
   }
 
   @override
@@ -14058,9 +14081,9 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         (other is DetectedIssueMitigation &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -14076,7 +14099,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(action) ^
       const DeepCollectionEquality().hash(date) ^
@@ -14099,9 +14122,9 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -14113,26 +14136,26 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -14145,8 +14168,8 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -14164,19 +14187,19 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -14185,39 +14208,39 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -14231,9 +14254,9 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -14254,14 +14277,14 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -14269,7 +14292,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -14279,32 +14302,32 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -14317,12 +14340,12 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -14339,24 +14362,24 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -14366,13 +14389,13 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -14386,33 +14409,33 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -14436,7 +14459,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
     return detectedIssueMitigation(
-        id, extension, modifierExtension, action, date, author);
+        id, fhirExtension, modifierExtension, action, date, author);
   }
 
   @override
@@ -14450,9 +14473,9 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -14464,24 +14487,24 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -14493,8 +14516,8 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -14512,18 +14535,18 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -14531,37 +14554,37 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -14574,9 +14597,9 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -14597,13 +14620,13 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -14611,7 +14634,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -14620,30 +14643,30 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -14655,12 +14678,12 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -14677,22 +14700,22 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -14701,13 +14724,13 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -14721,31 +14744,31 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -14753,7 +14776,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
     assert(orElse != null);
     if (detectedIssueMitigation != null) {
       return detectedIssueMitigation(
-          id, extension, modifierExtension, action, date, author);
+          id, fhirExtension, modifierExtension, action, date, author);
     }
     return orElse();
   }
@@ -14849,8 +14872,8 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
 abstract class DetectedIssueMitigation implements Summary {
   const factory DetectedIssueMitigation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept action,
       FhirDateTime date,
       Reference author}) = _$DetectedIssueMitigation;
@@ -14859,9 +14882,10 @@ abstract class DetectedIssueMitigation implements Summary {
       _$DetectedIssueMitigation.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get action;
   FhirDateTime get date;
   Reference get author;
@@ -14881,12 +14905,12 @@ abstract class $ConditionCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept severity,
       CodeableConcept code,
       Reference subject,
@@ -14903,9 +14927,9 @@ abstract class $ConditionCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       FhirDateTime recordedDate,
       Reference recorder,
       Reference asserter,
-      List<ConditionStage> stage,
-      List<ConditionEvidence> evidence,
-      List<Annotation> note});
+      List<dynamic> stage,
+      List<dynamic> evidence,
+      List<dynamic> note});
 }
 
 class _$ConditionCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
@@ -14925,7 +14949,7 @@ class _$ConditionCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object clinicalStatus = freezed,
@@ -14964,24 +14988,23 @@ class _$ConditionCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       clinicalStatus: clinicalStatus == freezed
           ? _value.clinicalStatus
           : clinicalStatus as CodeableConcept,
       verificationStatus: verificationStatus == freezed
           ? _value.verificationStatus
           : verificationStatus as CodeableConcept,
-      category: category == freezed
-          ? _value.category
-          : category as List<CodeableConcept>,
+      category:
+          category == freezed ? _value.category : category as List<dynamic>,
       severity:
           severity == freezed ? _value.severity : severity as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
@@ -15014,11 +15037,10 @@ class _$ConditionCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
           : recordedDate as FhirDateTime,
       recorder: recorder == freezed ? _value.recorder : recorder as Reference,
       asserter: asserter == freezed ? _value.asserter : asserter as Reference,
-      stage: stage == freezed ? _value.stage : stage as List<ConditionStage>,
-      evidence: evidence == freezed
-          ? _value.evidence
-          : evidence as List<ConditionEvidence>,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+      stage: stage == freezed ? _value.stage : stage as List<dynamic>,
+      evidence:
+          evidence == freezed ? _value.evidence : evidence as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<dynamic>,
     ));
   }
 }
@@ -15033,7 +15055,7 @@ class _$Condition implements Condition {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.clinicalStatus,
@@ -15077,17 +15099,18 @@ class _$Condition implements Condition {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final CodeableConcept clinicalStatus;
   @override
   final CodeableConcept verificationStatus;
   @override
-  final List<CodeableConcept> category;
+  final List<dynamic> category;
   @override
   final CodeableConcept severity;
   @override
@@ -15121,15 +15144,15 @@ class _$Condition implements Condition {
   @override
   final Reference asserter;
   @override
-  final List<ConditionStage> stage;
+  final List<dynamic> stage;
   @override
-  final List<ConditionEvidence> evidence;
+  final List<dynamic> evidence;
   @override
-  final List<Annotation> note;
+  final List<dynamic> note;
 
   @override
   String toString() {
-    return 'Summary.condition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, category: $category, severity: $severity, code: $code, subject: $subject, encounter: $encounter, onsetDateTime: $onsetDateTime, onsetAge: $onsetAge, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, abatementDateTime: $abatementDateTime, abatementAge: $abatementAge, abatementRange: $abatementRange, abatementString: $abatementString, recordedDate: $recordedDate, recorder: $recorder, asserter: $asserter, stage: $stage, evidence: $evidence, note: $note)';
+    return 'Summary.condition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, category: $category, severity: $severity, code: $code, subject: $subject, encounter: $encounter, onsetDateTime: $onsetDateTime, onsetAge: $onsetAge, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, abatementDateTime: $abatementDateTime, abatementAge: $abatementAge, abatementRange: $abatementRange, abatementString: $abatementString, recordedDate: $recordedDate, recorder: $recorder, asserter: $asserter, stage: $stage, evidence: $evidence, note: $note)';
   }
 
   @override
@@ -15154,9 +15177,9 @@ class _$Condition implements Condition {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -15223,7 +15246,7 @@ class _$Condition implements Condition {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(clinicalStatus) ^
@@ -15265,9 +15288,9 @@ class _$Condition implements Condition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -15279,26 +15302,26 @@ class _$Condition implements Condition {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -15311,8 +15334,8 @@ class _$Condition implements Condition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -15330,19 +15353,19 @@ class _$Condition implements Condition {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -15351,39 +15374,39 @@ class _$Condition implements Condition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -15397,9 +15420,9 @@ class _$Condition implements Condition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -15420,14 +15443,14 @@ class _$Condition implements Condition {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -15435,7 +15458,7 @@ class _$Condition implements Condition {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -15445,32 +15468,32 @@ class _$Condition implements Condition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -15483,12 +15506,12 @@ class _$Condition implements Condition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -15505,24 +15528,24 @@ class _$Condition implements Condition {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -15532,13 +15555,13 @@ class _$Condition implements Condition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -15552,33 +15575,33 @@ class _$Condition implements Condition {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -15609,7 +15632,7 @@ class _$Condition implements Condition {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         clinicalStatus,
@@ -15647,9 +15670,9 @@ class _$Condition implements Condition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -15661,24 +15684,24 @@ class _$Condition implements Condition {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -15690,8 +15713,8 @@ class _$Condition implements Condition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -15709,18 +15732,18 @@ class _$Condition implements Condition {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -15728,37 +15751,37 @@ class _$Condition implements Condition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -15771,9 +15794,9 @@ class _$Condition implements Condition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -15794,13 +15817,13 @@ class _$Condition implements Condition {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -15808,7 +15831,7 @@ class _$Condition implements Condition {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -15817,30 +15840,30 @@ class _$Condition implements Condition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -15852,12 +15875,12 @@ class _$Condition implements Condition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -15874,22 +15897,22 @@ class _$Condition implements Condition {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -15898,13 +15921,13 @@ class _$Condition implements Condition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -15918,31 +15941,31 @@ class _$Condition implements Condition {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -15957,7 +15980,7 @@ class _$Condition implements Condition {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           clinicalStatus,
@@ -16082,12 +16105,12 @@ abstract class Condition implements Summary {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept severity,
       CodeableConcept code,
       Reference subject,
@@ -16104,9 +16127,9 @@ abstract class Condition implements Summary {
       FhirDateTime recordedDate,
       Reference recorder,
       Reference asserter,
-      List<ConditionStage> stage,
-      List<ConditionEvidence> evidence,
-      List<Annotation> note}) = _$Condition;
+      List<dynamic> stage,
+      List<dynamic> evidence,
+      List<dynamic> note}) = _$Condition;
 
   factory Condition.fromJson(Map<String, dynamic> json) = _$Condition.fromJson;
 
@@ -16117,13 +16140,14 @@ abstract class Condition implements Summary {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   CodeableConcept get clinicalStatus;
   CodeableConcept get verificationStatus;
-  List<CodeableConcept> get category;
+  List<dynamic> get category;
   CodeableConcept get severity;
   CodeableConcept get code;
   Reference get subject;
@@ -16140,9 +16164,9 @@ abstract class Condition implements Summary {
   FhirDateTime get recordedDate;
   Reference get recorder;
   Reference get asserter;
-  List<ConditionStage> get stage;
-  List<ConditionEvidence> get evidence;
-  List<Annotation> get note;
+  List<dynamic> get stage;
+  List<dynamic> get evidence;
+  List<dynamic> get note;
   @override
   $ConditionCopyWith<Condition> get copyWith;
 }
@@ -16154,10 +16178,10 @@ abstract class $ConditionStageCopyWith<$Res> implements $SummaryCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept summary,
-      List<Reference> assessment,
+      List<dynamic> assessment,
       CodeableConcept type});
 }
 
@@ -16173,7 +16197,7 @@ class _$ConditionStageCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object summary = freezed,
     Object assessment = freezed,
@@ -16181,16 +16205,16 @@ class _$ConditionStageCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
   }) {
     return _then(ConditionStage(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       summary: summary == freezed ? _value.summary : summary as CodeableConcept,
       assessment: assessment == freezed
           ? _value.assessment
-          : assessment as List<Reference>,
+          : assessment as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
     ));
   }
@@ -16200,7 +16224,7 @@ class _$ConditionStageCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
 class _$ConditionStage implements ConditionStage {
   const _$ConditionStage(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.summary,
       this.assessment,
@@ -16212,19 +16236,20 @@ class _$ConditionStage implements ConditionStage {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept summary;
   @override
-  final List<Reference> assessment;
+  final List<dynamic> assessment;
   @override
   final CodeableConcept type;
 
   @override
   String toString() {
-    return 'Summary.conditionStage(id: $id, extension: $extension, modifierExtension: $modifierExtension, summary: $summary, assessment: $assessment, type: $type)';
+    return 'Summary.conditionStage(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, summary: $summary, assessment: $assessment, type: $type)';
   }
 
   @override
@@ -16233,9 +16258,9 @@ class _$ConditionStage implements ConditionStage {
         (other is ConditionStage &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -16253,7 +16278,7 @@ class _$ConditionStage implements ConditionStage {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(summary) ^
       const DeepCollectionEquality().hash(assessment) ^
@@ -16275,9 +16300,9 @@ class _$ConditionStage implements ConditionStage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -16289,26 +16314,26 @@ class _$ConditionStage implements ConditionStage {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -16321,8 +16346,8 @@ class _$ConditionStage implements ConditionStage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -16340,19 +16365,19 @@ class _$ConditionStage implements ConditionStage {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -16361,39 +16386,39 @@ class _$ConditionStage implements ConditionStage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -16407,9 +16432,9 @@ class _$ConditionStage implements ConditionStage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -16430,14 +16455,14 @@ class _$ConditionStage implements ConditionStage {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -16445,7 +16470,7 @@ class _$ConditionStage implements ConditionStage {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -16455,32 +16480,32 @@ class _$ConditionStage implements ConditionStage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -16493,12 +16518,12 @@ class _$ConditionStage implements ConditionStage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -16515,24 +16540,24 @@ class _$ConditionStage implements ConditionStage {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -16542,13 +16567,13 @@ class _$ConditionStage implements ConditionStage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -16562,33 +16587,33 @@ class _$ConditionStage implements ConditionStage {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -16612,7 +16637,7 @@ class _$ConditionStage implements ConditionStage {
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
     return conditionStage(
-        id, extension, modifierExtension, summary, assessment, type);
+        id, fhirExtension, modifierExtension, summary, assessment, type);
   }
 
   @override
@@ -16626,9 +16651,9 @@ class _$ConditionStage implements ConditionStage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -16640,24 +16665,24 @@ class _$ConditionStage implements ConditionStage {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -16669,8 +16694,8 @@ class _$ConditionStage implements ConditionStage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -16688,18 +16713,18 @@ class _$ConditionStage implements ConditionStage {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -16707,37 +16732,37 @@ class _$ConditionStage implements ConditionStage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -16750,9 +16775,9 @@ class _$ConditionStage implements ConditionStage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -16773,13 +16798,13 @@ class _$ConditionStage implements ConditionStage {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -16787,7 +16812,7 @@ class _$ConditionStage implements ConditionStage {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -16796,30 +16821,30 @@ class _$ConditionStage implements ConditionStage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -16831,12 +16856,12 @@ class _$ConditionStage implements ConditionStage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -16853,22 +16878,22 @@ class _$ConditionStage implements ConditionStage {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -16877,13 +16902,13 @@ class _$ConditionStage implements ConditionStage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -16897,31 +16922,31 @@ class _$ConditionStage implements ConditionStage {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -16929,7 +16954,7 @@ class _$ConditionStage implements ConditionStage {
     assert(orElse != null);
     if (conditionStage != null) {
       return conditionStage(
-          id, extension, modifierExtension, summary, assessment, type);
+          id, fhirExtension, modifierExtension, summary, assessment, type);
     }
     return orElse();
   }
@@ -17024,21 +17049,22 @@ class _$ConditionStage implements ConditionStage {
 abstract class ConditionStage implements Summary {
   const factory ConditionStage(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept summary,
-      List<Reference> assessment,
+      List<dynamic> assessment,
       CodeableConcept type}) = _$ConditionStage;
 
   factory ConditionStage.fromJson(Map<String, dynamic> json) =
       _$ConditionStage.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get summary;
-  List<Reference> get assessment;
+  List<dynamic> get assessment;
   CodeableConcept get type;
   @override
   $ConditionStageCopyWith<ConditionStage> get copyWith;
@@ -17052,10 +17078,10 @@ abstract class $ConditionEvidenceCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> code,
-      List<Reference> detail});
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> code,
+      List<dynamic> detail});
 }
 
 class _$ConditionEvidenceCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
@@ -17070,21 +17096,21 @@ class _$ConditionEvidenceCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
     Object detail = freezed,
   }) {
     return _then(ConditionEvidence(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      code: code == freezed ? _value.code : code as List<CodeableConcept>,
-      detail: detail == freezed ? _value.detail : detail as List<Reference>,
+          : modifierExtension as List<dynamic>,
+      code: code == freezed ? _value.code : code as List<dynamic>,
+      detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
   }
 }
@@ -17093,7 +17119,7 @@ class _$ConditionEvidenceCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
 class _$ConditionEvidence implements ConditionEvidence {
   const _$ConditionEvidence(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.code,
       this.detail});
@@ -17104,17 +17130,18 @@ class _$ConditionEvidence implements ConditionEvidence {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<CodeableConcept> code;
+  final List<dynamic> code;
   @override
-  final List<Reference> detail;
+  final List<dynamic> detail;
 
   @override
   String toString() {
-    return 'Summary.conditionEvidence(id: $id, extension: $extension, modifierExtension: $modifierExtension, code: $code, detail: $detail)';
+    return 'Summary.conditionEvidence(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, detail: $detail)';
   }
 
   @override
@@ -17123,9 +17150,9 @@ class _$ConditionEvidence implements ConditionEvidence {
         (other is ConditionEvidence &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -17139,7 +17166,7 @@ class _$ConditionEvidence implements ConditionEvidence {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(detail);
@@ -17160,9 +17187,9 @@ class _$ConditionEvidence implements ConditionEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -17174,26 +17201,26 @@ class _$ConditionEvidence implements ConditionEvidence {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -17206,8 +17233,8 @@ class _$ConditionEvidence implements ConditionEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -17225,19 +17252,19 @@ class _$ConditionEvidence implements ConditionEvidence {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -17246,39 +17273,39 @@ class _$ConditionEvidence implements ConditionEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -17292,9 +17319,9 @@ class _$ConditionEvidence implements ConditionEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -17315,14 +17342,14 @@ class _$ConditionEvidence implements ConditionEvidence {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -17330,7 +17357,7 @@ class _$ConditionEvidence implements ConditionEvidence {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -17340,32 +17367,32 @@ class _$ConditionEvidence implements ConditionEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -17378,12 +17405,12 @@ class _$ConditionEvidence implements ConditionEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -17400,24 +17427,24 @@ class _$ConditionEvidence implements ConditionEvidence {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -17427,13 +17454,13 @@ class _$ConditionEvidence implements ConditionEvidence {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -17447,33 +17474,33 @@ class _$ConditionEvidence implements ConditionEvidence {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -17496,7 +17523,8 @@ class _$ConditionEvidence implements ConditionEvidence {
     assert(procedure != null);
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
-    return conditionEvidence(id, extension, modifierExtension, code, detail);
+    return conditionEvidence(
+        id, fhirExtension, modifierExtension, code, detail);
   }
 
   @override
@@ -17510,9 +17538,9 @@ class _$ConditionEvidence implements ConditionEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -17524,24 +17552,24 @@ class _$ConditionEvidence implements ConditionEvidence {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -17553,8 +17581,8 @@ class _$ConditionEvidence implements ConditionEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -17572,18 +17600,18 @@ class _$ConditionEvidence implements ConditionEvidence {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -17591,37 +17619,37 @@ class _$ConditionEvidence implements ConditionEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -17634,9 +17662,9 @@ class _$ConditionEvidence implements ConditionEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -17657,13 +17685,13 @@ class _$ConditionEvidence implements ConditionEvidence {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -17671,7 +17699,7 @@ class _$ConditionEvidence implements ConditionEvidence {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -17680,30 +17708,30 @@ class _$ConditionEvidence implements ConditionEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -17715,12 +17743,12 @@ class _$ConditionEvidence implements ConditionEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -17737,22 +17765,22 @@ class _$ConditionEvidence implements ConditionEvidence {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -17761,13 +17789,13 @@ class _$ConditionEvidence implements ConditionEvidence {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -17781,38 +17809,39 @@ class _$ConditionEvidence implements ConditionEvidence {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (conditionEvidence != null) {
-      return conditionEvidence(id, extension, modifierExtension, code, detail);
+      return conditionEvidence(
+          id, fhirExtension, modifierExtension, code, detail);
     }
     return orElse();
   }
@@ -17908,20 +17937,21 @@ class _$ConditionEvidence implements ConditionEvidence {
 abstract class ConditionEvidence implements Summary {
   const factory ConditionEvidence(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> code,
-      List<Reference> detail}) = _$ConditionEvidence;
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> code,
+      List<dynamic> detail}) = _$ConditionEvidence;
 
   factory ConditionEvidence.fromJson(Map<String, dynamic> json) =
       _$ConditionEvidence.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<CodeableConcept> get code;
-  List<Reference> get detail;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get code;
+  List<dynamic> get detail;
   @override
   $ConditionEvidenceCopyWith<ConditionEvidence> get copyWith;
 }
@@ -17938,13 +17968,13 @@ abstract class $ProcedureCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      List<Reference> basedOn,
-      List<Reference> partOf,
+      List<dynamic> basedOn,
+      List<dynamic> partOf,
       Code status,
       CodeableConcept statusReason,
       CodeableConcept category,
@@ -17958,20 +17988,20 @@ abstract class $ProcedureCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       Range performedRange,
       Reference recorder,
       Reference asserter,
-      List<ProcedurePerformer> performer,
+      List<dynamic> performer,
       Reference location,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
-      List<CodeableConcept> bodySite,
+      List<dynamic> reasonCode,
+      List<dynamic> reasonReference,
+      List<dynamic> bodySite,
       CodeableConcept outcome,
-      List<Reference> report,
-      List<CodeableConcept> complication,
-      List<Reference> complicationDetail,
-      List<CodeableConcept> followUp,
-      List<Annotation> note,
-      List<ProcedureFocalDevice> focalDevice,
-      List<Reference> usedReference,
-      List<CodeableConcept> usedCode});
+      List<dynamic> report,
+      List<dynamic> complication,
+      List<dynamic> complicationDetail,
+      List<dynamic> followUp,
+      List<dynamic> note,
+      List<dynamic> focalDevice,
+      List<dynamic> usedReference,
+      List<dynamic> usedCode});
 }
 
 class _$ProcedureCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
@@ -17991,7 +18021,7 @@ class _$ProcedureCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object instantiatesCanonical = freezed,
@@ -18039,23 +18069,23 @@ class _$ProcedureCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
           : instantiatesCanonical as List<Canonical>,
       instantiatesUri: instantiatesUri == freezed
           ? _value.instantiatesUri
           : instantiatesUri as List<FhirUri>,
-      basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
-      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
+      basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<dynamic>,
+      partOf: partOf == freezed ? _value.partOf : partOf as List<dynamic>,
       status: status == freezed ? _value.status : status as Code,
       statusReason: statusReason == freezed
           ? _value.statusReason
@@ -18082,40 +18112,36 @@ class _$ProcedureCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
           : performedRange as Range,
       recorder: recorder == freezed ? _value.recorder : recorder as Reference,
       asserter: asserter == freezed ? _value.asserter : asserter as Reference,
-      performer: performer == freezed
-          ? _value.performer
-          : performer as List<ProcedurePerformer>,
+      performer:
+          performer == freezed ? _value.performer : performer as List<dynamic>,
       location: location == freezed ? _value.location : location as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<CodeableConcept>,
+          : reasonCode as List<dynamic>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
-          : reasonReference as List<Reference>,
-      bodySite: bodySite == freezed
-          ? _value.bodySite
-          : bodySite as List<CodeableConcept>,
+          : reasonReference as List<dynamic>,
+      bodySite:
+          bodySite == freezed ? _value.bodySite : bodySite as List<dynamic>,
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
-      report: report == freezed ? _value.report : report as List<Reference>,
+      report: report == freezed ? _value.report : report as List<dynamic>,
       complication: complication == freezed
           ? _value.complication
-          : complication as List<CodeableConcept>,
+          : complication as List<dynamic>,
       complicationDetail: complicationDetail == freezed
           ? _value.complicationDetail
-          : complicationDetail as List<Reference>,
-      followUp: followUp == freezed
-          ? _value.followUp
-          : followUp as List<CodeableConcept>,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+          : complicationDetail as List<dynamic>,
+      followUp:
+          followUp == freezed ? _value.followUp : followUp as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<dynamic>,
       focalDevice: focalDevice == freezed
           ? _value.focalDevice
-          : focalDevice as List<ProcedureFocalDevice>,
+          : focalDevice as List<dynamic>,
       usedReference: usedReference == freezed
           ? _value.usedReference
-          : usedReference as List<Reference>,
-      usedCode: usedCode == freezed
-          ? _value.usedCode
-          : usedCode as List<CodeableConcept>,
+          : usedReference as List<dynamic>,
+      usedCode:
+          usedCode == freezed ? _value.usedCode : usedCode as List<dynamic>,
     ));
   }
 }
@@ -18130,7 +18156,7 @@ class _$Procedure implements Procedure {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.instantiatesCanonical,
@@ -18183,19 +18209,20 @@ class _$Procedure implements Procedure {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final List<Canonical> instantiatesCanonical;
   @override
   final List<FhirUri> instantiatesUri;
   @override
-  final List<Reference> basedOn;
+  final List<dynamic> basedOn;
   @override
-  final List<Reference> partOf;
+  final List<dynamic> partOf;
   @override
   final Code status;
   @override
@@ -18223,37 +18250,37 @@ class _$Procedure implements Procedure {
   @override
   final Reference asserter;
   @override
-  final List<ProcedurePerformer> performer;
+  final List<dynamic> performer;
   @override
   final Reference location;
   @override
-  final List<CodeableConcept> reasonCode;
+  final List<dynamic> reasonCode;
   @override
-  final List<Reference> reasonReference;
+  final List<dynamic> reasonReference;
   @override
-  final List<CodeableConcept> bodySite;
+  final List<dynamic> bodySite;
   @override
   final CodeableConcept outcome;
   @override
-  final List<Reference> report;
+  final List<dynamic> report;
   @override
-  final List<CodeableConcept> complication;
+  final List<dynamic> complication;
   @override
-  final List<Reference> complicationDetail;
+  final List<dynamic> complicationDetail;
   @override
-  final List<CodeableConcept> followUp;
+  final List<dynamic> followUp;
   @override
-  final List<Annotation> note;
+  final List<dynamic> note;
   @override
-  final List<ProcedureFocalDevice> focalDevice;
+  final List<dynamic> focalDevice;
   @override
-  final List<Reference> usedReference;
+  final List<dynamic> usedReference;
   @override
-  final List<CodeableConcept> usedCode;
+  final List<dynamic> usedCode;
 
   @override
   String toString() {
-    return 'Summary.procedure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, basedOn: $basedOn, partOf: $partOf, status: $status, statusReason: $statusReason, category: $category, code: $code, subject: $subject, encounter: $encounter, performedDateTime: $performedDateTime, performedPeriod: $performedPeriod, performedString: $performedString, performedAge: $performedAge, performedRange: $performedRange, recorder: $recorder, asserter: $asserter, performer: $performer, location: $location, reasonCode: $reasonCode, reasonReference: $reasonReference, bodySite: $bodySite, outcome: $outcome, report: $report, complication: $complication, complicationDetail: $complicationDetail, followUp: $followUp, note: $note, focalDevice: $focalDevice, usedReference: $usedReference, usedCode: $usedCode)';
+    return 'Summary.procedure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, basedOn: $basedOn, partOf: $partOf, status: $status, statusReason: $statusReason, category: $category, code: $code, subject: $subject, encounter: $encounter, performedDateTime: $performedDateTime, performedPeriod: $performedPeriod, performedString: $performedString, performedAge: $performedAge, performedRange: $performedRange, recorder: $recorder, asserter: $asserter, performer: $performer, location: $location, reasonCode: $reasonCode, reasonReference: $reasonReference, bodySite: $bodySite, outcome: $outcome, report: $report, complication: $complication, complicationDetail: $complicationDetail, followUp: $followUp, note: $note, focalDevice: $focalDevice, usedReference: $usedReference, usedCode: $usedCode)';
   }
 
   @override
@@ -18278,9 +18305,9 @@ class _$Procedure implements Procedure {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -18356,7 +18383,7 @@ class _$Procedure implements Procedure {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(instantiatesCanonical) ^
@@ -18407,9 +18434,9 @@ class _$Procedure implements Procedure {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -18421,26 +18448,26 @@ class _$Procedure implements Procedure {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -18453,8 +18480,8 @@ class _$Procedure implements Procedure {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -18472,19 +18499,19 @@ class _$Procedure implements Procedure {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -18493,39 +18520,39 @@ class _$Procedure implements Procedure {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -18539,9 +18566,9 @@ class _$Procedure implements Procedure {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -18562,14 +18589,14 @@ class _$Procedure implements Procedure {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -18577,7 +18604,7 @@ class _$Procedure implements Procedure {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -18587,32 +18614,32 @@ class _$Procedure implements Procedure {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -18625,12 +18652,12 @@ class _$Procedure implements Procedure {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -18647,24 +18674,24 @@ class _$Procedure implements Procedure {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -18674,13 +18701,13 @@ class _$Procedure implements Procedure {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -18694,33 +18721,33 @@ class _$Procedure implements Procedure {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -18751,7 +18778,7 @@ class _$Procedure implements Procedure {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         instantiatesCanonical,
@@ -18798,9 +18825,9 @@ class _$Procedure implements Procedure {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -18812,24 +18839,24 @@ class _$Procedure implements Procedure {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -18841,8 +18868,8 @@ class _$Procedure implements Procedure {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -18860,18 +18887,18 @@ class _$Procedure implements Procedure {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -18879,37 +18906,37 @@ class _$Procedure implements Procedure {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -18922,9 +18949,9 @@ class _$Procedure implements Procedure {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -18945,13 +18972,13 @@ class _$Procedure implements Procedure {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -18959,7 +18986,7 @@ class _$Procedure implements Procedure {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -18968,30 +18995,30 @@ class _$Procedure implements Procedure {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -19003,12 +19030,12 @@ class _$Procedure implements Procedure {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -19025,22 +19052,22 @@ class _$Procedure implements Procedure {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -19049,13 +19076,13 @@ class _$Procedure implements Procedure {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -19069,31 +19096,31 @@ class _$Procedure implements Procedure {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -19108,7 +19135,7 @@ class _$Procedure implements Procedure {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           instantiatesCanonical,
@@ -19242,13 +19269,13 @@ abstract class Procedure implements Summary {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      List<Reference> basedOn,
-      List<Reference> partOf,
+      List<dynamic> basedOn,
+      List<dynamic> partOf,
       Code status,
       CodeableConcept statusReason,
       CodeableConcept category,
@@ -19262,20 +19289,20 @@ abstract class Procedure implements Summary {
       Range performedRange,
       Reference recorder,
       Reference asserter,
-      List<ProcedurePerformer> performer,
+      List<dynamic> performer,
       Reference location,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
-      List<CodeableConcept> bodySite,
+      List<dynamic> reasonCode,
+      List<dynamic> reasonReference,
+      List<dynamic> bodySite,
       CodeableConcept outcome,
-      List<Reference> report,
-      List<CodeableConcept> complication,
-      List<Reference> complicationDetail,
-      List<CodeableConcept> followUp,
-      List<Annotation> note,
-      List<ProcedureFocalDevice> focalDevice,
-      List<Reference> usedReference,
-      List<CodeableConcept> usedCode}) = _$Procedure;
+      List<dynamic> report,
+      List<dynamic> complication,
+      List<dynamic> complicationDetail,
+      List<dynamic> followUp,
+      List<dynamic> note,
+      List<dynamic> focalDevice,
+      List<dynamic> usedReference,
+      List<dynamic> usedCode}) = _$Procedure;
 
   factory Procedure.fromJson(Map<String, dynamic> json) = _$Procedure.fromJson;
 
@@ -19286,14 +19313,15 @@ abstract class Procedure implements Summary {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
-  List<Reference> get basedOn;
-  List<Reference> get partOf;
+  List<dynamic> get basedOn;
+  List<dynamic> get partOf;
   Code get status;
   CodeableConcept get statusReason;
   CodeableConcept get category;
@@ -19307,20 +19335,20 @@ abstract class Procedure implements Summary {
   Range get performedRange;
   Reference get recorder;
   Reference get asserter;
-  List<ProcedurePerformer> get performer;
+  List<dynamic> get performer;
   Reference get location;
-  List<CodeableConcept> get reasonCode;
-  List<Reference> get reasonReference;
-  List<CodeableConcept> get bodySite;
+  List<dynamic> get reasonCode;
+  List<dynamic> get reasonReference;
+  List<dynamic> get bodySite;
   CodeableConcept get outcome;
-  List<Reference> get report;
-  List<CodeableConcept> get complication;
-  List<Reference> get complicationDetail;
-  List<CodeableConcept> get followUp;
-  List<Annotation> get note;
-  List<ProcedureFocalDevice> get focalDevice;
-  List<Reference> get usedReference;
-  List<CodeableConcept> get usedCode;
+  List<dynamic> get report;
+  List<dynamic> get complication;
+  List<dynamic> get complicationDetail;
+  List<dynamic> get followUp;
+  List<dynamic> get note;
+  List<dynamic> get focalDevice;
+  List<dynamic> get usedReference;
+  List<dynamic> get usedCode;
   @override
   $ProcedureCopyWith<Procedure> get copyWith;
 }
@@ -19333,8 +19361,8 @@ abstract class $ProcedurePerformerCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept function,
       Reference actor,
       Reference onBehalfOf});
@@ -19352,7 +19380,7 @@ class _$ProcedurePerformerCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object function = freezed,
     Object actor = freezed,
@@ -19360,12 +19388,12 @@ class _$ProcedurePerformerCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
   }) {
     return _then(ProcedurePerformer(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       function:
           function == freezed ? _value.function : function as CodeableConcept,
       actor: actor == freezed ? _value.actor : actor as Reference,
@@ -19379,7 +19407,7 @@ class _$ProcedurePerformerCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
 class _$ProcedurePerformer implements ProcedurePerformer {
   const _$ProcedurePerformer(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.function,
       this.actor,
@@ -19391,9 +19419,10 @@ class _$ProcedurePerformer implements ProcedurePerformer {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept function;
   @override
@@ -19403,7 +19432,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
 
   @override
   String toString() {
-    return 'Summary.procedurePerformer(id: $id, extension: $extension, modifierExtension: $modifierExtension, function: $function, actor: $actor, onBehalfOf: $onBehalfOf)';
+    return 'Summary.procedurePerformer(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, function: $function, actor: $actor, onBehalfOf: $onBehalfOf)';
   }
 
   @override
@@ -19412,9 +19441,9 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         (other is ProcedurePerformer &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -19432,7 +19461,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(function) ^
       const DeepCollectionEquality().hash(actor) ^
@@ -19454,9 +19483,9 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -19468,26 +19497,26 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -19500,8 +19529,8 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -19519,19 +19548,19 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -19540,39 +19569,39 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -19586,9 +19615,9 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -19609,14 +19638,14 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -19624,7 +19653,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -19634,32 +19663,32 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -19672,12 +19701,12 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -19694,24 +19723,24 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -19721,13 +19750,13 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -19741,33 +19770,33 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -19791,7 +19820,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
     return procedurePerformer(
-        id, extension, modifierExtension, function, actor, onBehalfOf);
+        id, fhirExtension, modifierExtension, function, actor, onBehalfOf);
   }
 
   @override
@@ -19805,9 +19834,9 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -19819,24 +19848,24 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -19848,8 +19877,8 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -19867,18 +19896,18 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -19886,37 +19915,37 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -19929,9 +19958,9 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -19952,13 +19981,13 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -19966,7 +19995,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -19975,30 +20004,30 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -20010,12 +20039,12 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -20032,22 +20061,22 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -20056,13 +20085,13 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -20076,31 +20105,31 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -20108,7 +20137,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
     assert(orElse != null);
     if (procedurePerformer != null) {
       return procedurePerformer(
-          id, extension, modifierExtension, function, actor, onBehalfOf);
+          id, fhirExtension, modifierExtension, function, actor, onBehalfOf);
     }
     return orElse();
   }
@@ -20204,8 +20233,8 @@ class _$ProcedurePerformer implements ProcedurePerformer {
 abstract class ProcedurePerformer implements Summary {
   const factory ProcedurePerformer(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept function,
       Reference actor,
       Reference onBehalfOf}) = _$ProcedurePerformer;
@@ -20214,9 +20243,10 @@ abstract class ProcedurePerformer implements Summary {
       _$ProcedurePerformer.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get function;
   Reference get actor;
   Reference get onBehalfOf;
@@ -20232,8 +20262,8 @@ abstract class $ProcedureFocalDeviceCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept action,
       Reference manipulated});
 }
@@ -20251,19 +20281,19 @@ class _$ProcedureFocalDeviceCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object action = freezed,
     Object manipulated = freezed,
   }) {
     return _then(ProcedureFocalDevice(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       action: action == freezed ? _value.action : action as CodeableConcept,
       manipulated: manipulated == freezed
           ? _value.manipulated
@@ -20276,7 +20306,7 @@ class _$ProcedureFocalDeviceCopyWithImpl<$Res>
 class _$ProcedureFocalDevice implements ProcedureFocalDevice {
   const _$ProcedureFocalDevice(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.action,
       this.manipulated});
@@ -20287,9 +20317,10 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept action;
   @override
@@ -20297,7 +20328,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
 
   @override
   String toString() {
-    return 'Summary.procedureFocalDevice(id: $id, extension: $extension, modifierExtension: $modifierExtension, action: $action, manipulated: $manipulated)';
+    return 'Summary.procedureFocalDevice(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, action: $action, manipulated: $manipulated)';
   }
 
   @override
@@ -20306,9 +20337,9 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         (other is ProcedureFocalDevice &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -20323,7 +20354,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(action) ^
       const DeepCollectionEquality().hash(manipulated);
@@ -20345,9 +20376,9 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept code,
@@ -20359,26 +20390,26 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             FhirDateTime date,
             Reference assessor,
             Reference previous,
-            List<Reference> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> problem,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
-            List<ClinicalImpressionFinding> finding,
-            List<CodeableConcept> prognosisCodeableConcept,
-            List<Reference> prognosisReference,
-            List<Reference> supportingInfo,
-            List<Annotation> note),
+            List<dynamic> finding,
+            List<dynamic> prognosisCodeableConcept,
+            List<dynamic> prognosisReference,
+            List<dynamic> supportingInfo,
+            List<dynamic> note),
     @required
         Result clinicalImpressionInvestigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<Reference> item),
+            List<dynamic> item),
     @required
         Result clinicalImpressionFinding(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept itemCodeableConcept,
             Reference itemReference,
             String basis),
@@ -20391,8 +20422,8 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
@@ -20410,19 +20441,19 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Reference recorder,
             Reference asserter,
             FhirDateTime lastOccurrence,
-            List<Annotation> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> note,
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept substance,
-            List<CodeableConcept> manifestation,
+            List<dynamic> manifestation,
             FhirDateTime onset,
             AllergyIntoleranceReactionSeverity severity,
             CodeableConcept exposureRoute,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result adverseEvent(
             String resourceType,
@@ -20431,39 +20462,39 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             AdverseEventActuality actuality,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept event,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
             FhirDateTime detected,
             FhirDateTime recordedDate,
-            List<Reference> resultingCondition,
+            List<dynamic> resultingCondition,
             Reference location,
             CodeableConcept seriousness,
             CodeableConcept severity,
             CodeableConcept outcome,
             Reference recorder,
-            List<Reference> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
-            List<Reference> subjectMedicalHistory,
-            List<Reference> referenceDocument,
-            List<Reference> study),
+            List<dynamic> contributor,
+            List<dynamic> suspectEntity,
+            List<dynamic> subjectMedicalHistory,
+            List<dynamic> referenceDocument,
+            List<dynamic> study),
     @required
         Result adverseEventSuspectEntity(
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept assessment,
             String productRelatedness,
             Reference author,
@@ -20477,9 +20508,9 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             FamilyMemberHistoryStatus status,
@@ -20500,14 +20531,14 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Range deceasedRange,
             Date deceasedDate,
             String deceasedString,
-            List<CodeableConcept> reasonCode,
-            List<Annotation> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> reasonCode,
+            List<dynamic> note,
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept outcome,
             bool contributedToDeath,
@@ -20515,7 +20546,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Range onsetRange,
             Period onsetPeriod,
             String onsetString,
-            List<Annotation> note),
+            List<dynamic> note),
     @required
         Result detectedIssue(
             String resourceType,
@@ -20525,32 +20556,32 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             CodeableConcept code,
             DetectedIssueSeverity severity,
             Reference patient,
             Period identifiedPeriod,
             Reference author,
-            List<Reference> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> implicated,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result detectedIssueMitigation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             FhirDateTime date,
             Reference author),
@@ -20563,12 +20594,12 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept severity,
             CodeableConcept code,
             Reference subject,
@@ -20585,24 +20616,24 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
-            List<Annotation> note),
+            List<dynamic> stage,
+            List<dynamic> evidence,
+            List<dynamic> note),
     @required
         Result conditionStage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept summary,
-            List<Reference> assessment,
+            List<dynamic> assessment,
             CodeableConcept type),
     @required
         Result conditionEvidence(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> code,
-            List<Reference> detail),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> code,
+            List<dynamic> detail),
     @required
         Result procedure(
             String resourceType,
@@ -20612,13 +20643,13 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
-            List<Reference> basedOn,
-            List<Reference> partOf,
+            List<dynamic> basedOn,
+            List<dynamic> partOf,
             Code status,
             CodeableConcept statusReason,
             CodeableConcept category,
@@ -20632,33 +20663,33 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
-            List<CodeableConcept> bodySite,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> bodySite,
             CodeableConcept outcome,
-            List<Reference> report,
-            List<CodeableConcept> complication,
-            List<Reference> complicationDetail,
-            List<CodeableConcept> followUp,
-            List<Annotation> note,
-            List<ProcedureFocalDevice> focalDevice,
-            List<Reference> usedReference,
-            List<CodeableConcept> usedCode),
+            List<dynamic> report,
+            List<dynamic> complication,
+            List<dynamic> complicationDetail,
+            List<dynamic> followUp,
+            List<dynamic> note,
+            List<dynamic> focalDevice,
+            List<dynamic> usedReference,
+            List<dynamic> usedCode),
     @required
         Result procedurePerformer(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept function,
             Reference actor,
             Reference onBehalfOf),
     @required
         Result procedureFocalDevice(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept action,
             Reference manipulated),
   }) {
@@ -20682,7 +20713,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
     assert(procedurePerformer != null);
     assert(procedureFocalDevice != null);
     return procedureFocalDevice(
-        id, extension, modifierExtension, action, manipulated);
+        id, fhirExtension, modifierExtension, action, manipulated);
   }
 
   @override
@@ -20696,9 +20727,9 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept code,
@@ -20710,24 +20741,24 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         FhirDateTime date,
         Reference assessor,
         Reference previous,
-        List<Reference> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> problem,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
-        List<ClinicalImpressionFinding> finding,
-        List<CodeableConcept> prognosisCodeableConcept,
-        List<Reference> prognosisReference,
-        List<Reference> supportingInfo,
-        List<Annotation> note),
+        List<dynamic> finding,
+        List<dynamic> prognosisCodeableConcept,
+        List<dynamic> prognosisReference,
+        List<dynamic> supportingInfo,
+        List<dynamic> note),
     Result clinicalImpressionInvestigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<Reference> item),
+        List<dynamic> item),
     Result clinicalImpressionFinding(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept itemCodeableConcept,
         Reference itemReference,
         String basis),
@@ -20739,8 +20770,8 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
@@ -20758,18 +20789,18 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Reference recorder,
         Reference asserter,
         FhirDateTime lastOccurrence,
-        List<Annotation> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> note,
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept substance,
-        List<CodeableConcept> manifestation,
+        List<dynamic> manifestation,
         FhirDateTime onset,
         AllergyIntoleranceReactionSeverity severity,
         CodeableConcept exposureRoute,
-        List<Annotation> note),
+        List<dynamic> note),
     Result adverseEvent(
         String resourceType,
         Id id,
@@ -20777,37 +20808,37 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         AdverseEventActuality actuality,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept event,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
         FhirDateTime detected,
         FhirDateTime recordedDate,
-        List<Reference> resultingCondition,
+        List<dynamic> resultingCondition,
         Reference location,
         CodeableConcept seriousness,
         CodeableConcept severity,
         CodeableConcept outcome,
         Reference recorder,
-        List<Reference> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
-        List<Reference> subjectMedicalHistory,
-        List<Reference> referenceDocument,
-        List<Reference> study),
+        List<dynamic> contributor,
+        List<dynamic> suspectEntity,
+        List<dynamic> subjectMedicalHistory,
+        List<dynamic> referenceDocument,
+        List<dynamic> study),
     Result adverseEventSuspectEntity(
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept assessment,
         String productRelatedness,
         Reference author,
@@ -20820,9 +20851,9 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         FamilyMemberHistoryStatus status,
@@ -20843,13 +20874,13 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Range deceasedRange,
         Date deceasedDate,
         String deceasedString,
-        List<CodeableConcept> reasonCode,
-        List<Annotation> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> reasonCode,
+        List<dynamic> note,
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept outcome,
         bool contributedToDeath,
@@ -20857,7 +20888,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Range onsetRange,
         Period onsetPeriod,
         String onsetString,
-        List<Annotation> note),
+        List<dynamic> note),
     Result detectedIssue(
         String resourceType,
         Id id,
@@ -20866,30 +20897,30 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         CodeableConcept code,
         DetectedIssueSeverity severity,
         Reference patient,
         Period identifiedPeriod,
         Reference author,
-        List<Reference> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> implicated,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result detectedIssueMitigation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         FhirDateTime date,
         Reference author),
@@ -20901,12 +20932,12 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept severity,
         CodeableConcept code,
         Reference subject,
@@ -20923,22 +20954,22 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
-        List<Annotation> note),
+        List<dynamic> stage,
+        List<dynamic> evidence,
+        List<dynamic> note),
     Result conditionStage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept summary,
-        List<Reference> assessment,
+        List<dynamic> assessment,
         CodeableConcept type),
     Result conditionEvidence(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> code,
-        List<Reference> detail),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> code,
+        List<dynamic> detail),
     Result procedure(
         String resourceType,
         Id id,
@@ -20947,13 +20978,13 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
-        List<Reference> basedOn,
-        List<Reference> partOf,
+        List<dynamic> basedOn,
+        List<dynamic> partOf,
         Code status,
         CodeableConcept statusReason,
         CodeableConcept category,
@@ -20967,31 +20998,31 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
-        List<CodeableConcept> bodySite,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> bodySite,
         CodeableConcept outcome,
-        List<Reference> report,
-        List<CodeableConcept> complication,
-        List<Reference> complicationDetail,
-        List<CodeableConcept> followUp,
-        List<Annotation> note,
-        List<ProcedureFocalDevice> focalDevice,
-        List<Reference> usedReference,
-        List<CodeableConcept> usedCode),
+        List<dynamic> report,
+        List<dynamic> complication,
+        List<dynamic> complicationDetail,
+        List<dynamic> followUp,
+        List<dynamic> note,
+        List<dynamic> focalDevice,
+        List<dynamic> usedReference,
+        List<dynamic> usedCode),
     Result procedurePerformer(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept function,
         Reference actor,
         Reference onBehalfOf),
     Result procedureFocalDevice(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept action,
         Reference manipulated),
     @required Result orElse(),
@@ -20999,7 +21030,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
     assert(orElse != null);
     if (procedureFocalDevice != null) {
       return procedureFocalDevice(
-          id, extension, modifierExtension, action, manipulated);
+          id, fhirExtension, modifierExtension, action, manipulated);
     }
     return orElse();
   }
@@ -21095,8 +21126,8 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
 abstract class ProcedureFocalDevice implements Summary {
   const factory ProcedureFocalDevice(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept action,
       Reference manipulated}) = _$ProcedureFocalDevice;
 
@@ -21104,9 +21135,10 @@ abstract class ProcedureFocalDevice implements Summary {
       _$ProcedureFocalDevice.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get action;
   Reference get manipulated;
   @override

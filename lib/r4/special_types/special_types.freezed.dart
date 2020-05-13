@@ -51,11 +51,11 @@ class _$SpecialTypesTearOff {
 
   Dosage dosage(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       int sequence,
       String text,
-      List<CodeableConcept> additionalInstruction,
+      List<dynamic> additionalInstruction,
       String patientInstruction,
       Timing timing,
       bool asNeededBoolean,
@@ -63,7 +63,7 @@ class _$SpecialTypesTearOff {
       CodeableConcept site,
       CodeableConcept route,
       CodeableConcept method,
-      List<DosageDoseAndRate> doseAndRate,
+      List<dynamic> doseAndRate,
       Ratio maxDosePerPeriod,
       Quantity maxDosePerAdministration,
       Quantity maxDosePerLifetime}) {
@@ -90,8 +90,8 @@ class _$SpecialTypesTearOff {
 
   DosageDoseAndRate dosageDoseAndRate(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
       Range doseRange,
       Quantity doseQuantity,
@@ -113,14 +113,14 @@ class _$SpecialTypesTearOff {
 
   ElementDefinition elementDefinition(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String path,
       List<ElementDefinitionRepresentation> representation,
       String sliceName,
       bool sliceIsConstraining,
       String label,
-      List<Coding> code,
+      List<dynamic> code,
       ElementDefinitionSlicing slicing,
       String short,
       Markdown definition,
@@ -131,7 +131,7 @@ class _$SpecialTypesTearOff {
       String max,
       ElementDefinitionBase base,
       FhirUri contentReference,
-      List<ElementDefinitionType> type,
+      List<dynamic> type,
       Base64Binary defaultValueBase64Binary,
       bool defaultValueBoolean,
       Canonical defaultValueCanonical,
@@ -284,7 +284,7 @@ class _$SpecialTypesTearOff {
       UsageContext patternUsageContext,
       Dosage patternDosage,
       Meta patternMeta,
-      List<ElementDefinitionExample> example,
+      List<dynamic> example,
       Date minValueDate,
       FhirDateTime minValueDateTime,
       Instant minValueInstant,
@@ -305,13 +305,13 @@ class _$SpecialTypesTearOff {
       Quantity maxValueQuantity,
       int maxLength,
       List<Id> condition,
-      List<ElementDefinitionConstraint> constraint,
+      List<dynamic> constraint,
       bool mustSupport,
       bool isModifier,
       String isModifierReason,
       bool isSummary,
       ElementDefinitionBinding binding,
-      List<ElementDefinitionMapping> mapping}) {
+      List<dynamic> mapping}) {
     return ElementDefinition(
       id: id,
       fhirExtension: fhirExtension,
@@ -518,9 +518,9 @@ class _$SpecialTypesTearOff {
 
   ElementDefinitionSlicing elementDefinitionSlicing(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
-      List<ElementDefinitionDiscriminator> discriminator,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> discriminator,
       String description,
       bool ordered,
       ElementDefinitionSlicingRules rules}) {
@@ -537,8 +537,8 @@ class _$SpecialTypesTearOff {
 
   ElementDefinitionDiscriminator elementDefinitionDiscriminator(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       ElementDefinitionDiscriminatorType type,
       String path}) {
     return ElementDefinitionDiscriminator(
@@ -552,8 +552,8 @@ class _$SpecialTypesTearOff {
 
   ElementDefinitionBase elementDefinitionBase(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String path,
       int min,
       String max}) {
@@ -569,8 +569,8 @@ class _$SpecialTypesTearOff {
 
   ElementDefinitionType elementDefinitionType(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       FhirUri code,
       List<Canonical> profile,
       List<Canonical> targetProfile,
@@ -590,8 +590,8 @@ class _$SpecialTypesTearOff {
 
   ElementDefinitionExample elementDefinitionExample(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String label,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -703,8 +703,8 @@ class _$SpecialTypesTearOff {
 
   ElementDefinitionConstraint elementDefinitionConstraint(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Id key,
       String requirements,
       ElementDefinitionConstraintSeverity severity,
@@ -728,8 +728,8 @@ class _$SpecialTypesTearOff {
 
   ElementDefinitionBinding elementDefinitionBinding(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       ElementDefinitionBindingStrength strength,
       String description,
       Canonical valueSet}) {
@@ -745,8 +745,8 @@ class _$SpecialTypesTearOff {
 
   ElementDefinitionMapping elementDefinitionMapping(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Id identity,
       Code language,
       @JsonKey(name: 'map') String elementMap,
@@ -764,7 +764,7 @@ class _$SpecialTypesTearOff {
 
   FhirExtension fhirExtension(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       FhirUri url,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -875,13 +875,13 @@ class _$SpecialTypesTearOff {
 
   Meta meta(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       Id versionId,
       Instant lastUpdated,
       Uri source,
       List<Canonical> profile,
-      List<Coding> security,
-      List<Coding> tag}) {
+      List<dynamic> security,
+      List<dynamic> tag}) {
     return Meta(
       id: id,
       fhirExtension: fhirExtension,
@@ -896,7 +896,7 @@ class _$SpecialTypesTearOff {
 
   Narrative narrative(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       NarrativeStatus status,
       String div}) {
     return Narrative(
@@ -909,7 +909,7 @@ class _$SpecialTypesTearOff {
 
   Reference reference(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       String reference,
       FhirUri type,
       Identifier identifier,
@@ -931,18 +931,18 @@ const $SpecialTypes = _$SpecialTypesTearOff();
 mixin _$SpecialTypes {
   String get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
+  List<dynamic> get fhirExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -950,15 +950,15 @@ mixin _$SpecialTypes {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -968,14 +968,14 @@ mixin _$SpecialTypes {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -986,7 +986,7 @@ mixin _$SpecialTypes {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -1139,7 +1139,7 @@ mixin _$SpecialTypes {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -1160,42 +1160,42 @@ mixin _$SpecialTypes {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -1204,8 +1204,8 @@ mixin _$SpecialTypes {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -1260,8 +1260,8 @@ mixin _$SpecialTypes {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -1272,16 +1272,16 @@ mixin _$SpecialTypes {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -1289,7 +1289,7 @@ mixin _$SpecialTypes {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -1344,23 +1344,23 @@ mixin _$SpecialTypes {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -1370,11 +1370,11 @@ mixin _$SpecialTypes {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -1382,14 +1382,14 @@ mixin _$SpecialTypes {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -1398,14 +1398,14 @@ mixin _$SpecialTypes {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -1416,7 +1416,7 @@ mixin _$SpecialTypes {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -1569,7 +1569,7 @@ mixin _$SpecialTypes {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -1590,38 +1590,38 @@ mixin _$SpecialTypes {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -1629,8 +1629,8 @@ mixin _$SpecialTypes {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -1684,8 +1684,8 @@ mixin _$SpecialTypes {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -1695,22 +1695,22 @@ mixin _$SpecialTypes {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -1764,21 +1764,21 @@ mixin _$SpecialTypes {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -1834,8 +1834,7 @@ abstract class $SpecialTypesCopyWith<$Res> {
           SpecialTypes value, $Res Function(SpecialTypes) then) =
       _$SpecialTypesCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension});
+      {String id, @JsonKey(name: 'extension') List<dynamic> fhirExtension});
 }
 
 class _$SpecialTypesCopyWithImpl<$Res> implements $SpecialTypesCopyWith<$Res> {
@@ -1854,7 +1853,7 @@ class _$SpecialTypesCopyWithImpl<$Res> implements $SpecialTypesCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
     ));
   }
 }
@@ -1865,11 +1864,11 @@ abstract class $DosageCopyWith<$Res> implements $SpecialTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       int sequence,
       String text,
-      List<CodeableConcept> additionalInstruction,
+      List<dynamic> additionalInstruction,
       String patientInstruction,
       Timing timing,
       bool asNeededBoolean,
@@ -1877,7 +1876,7 @@ abstract class $DosageCopyWith<$Res> implements $SpecialTypesCopyWith<$Res> {
       CodeableConcept site,
       CodeableConcept route,
       CodeableConcept method,
-      List<DosageDoseAndRate> doseAndRate,
+      List<dynamic> doseAndRate,
       Ratio maxDosePerPeriod,
       Quantity maxDosePerAdministration,
       Quantity maxDosePerLifetime});
@@ -1915,15 +1914,15 @@ class _$DosageCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       sequence: sequence == freezed ? _value.sequence : sequence as int,
       text: text == freezed ? _value.text : text as String,
       additionalInstruction: additionalInstruction == freezed
           ? _value.additionalInstruction
-          : additionalInstruction as List<CodeableConcept>,
+          : additionalInstruction as List<dynamic>,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
           : patientInstruction as String,
@@ -1939,7 +1938,7 @@ class _$DosageCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
       method: method == freezed ? _value.method : method as CodeableConcept,
       doseAndRate: doseAndRate == freezed
           ? _value.doseAndRate
-          : doseAndRate as List<DosageDoseAndRate>,
+          : doseAndRate as List<dynamic>,
       maxDosePerPeriod: maxDosePerPeriod == freezed
           ? _value.maxDosePerPeriod
           : maxDosePerPeriod as Ratio,
@@ -1981,15 +1980,15 @@ class _$Dosage implements Dosage {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final int sequence;
   @override
   final String text;
   @override
-  final List<CodeableConcept> additionalInstruction;
+  final List<dynamic> additionalInstruction;
   @override
   final String patientInstruction;
   @override
@@ -2005,7 +2004,7 @@ class _$Dosage implements Dosage {
   @override
   final CodeableConcept method;
   @override
-  final List<DosageDoseAndRate> doseAndRate;
+  final List<dynamic> doseAndRate;
   @override
   final Ratio maxDosePerPeriod;
   @override
@@ -2103,11 +2102,11 @@ class _$Dosage implements Dosage {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -2115,15 +2114,15 @@ class _$Dosage implements Dosage {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -2133,14 +2132,14 @@ class _$Dosage implements Dosage {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -2151,7 +2150,7 @@ class _$Dosage implements Dosage {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -2304,7 +2303,7 @@ class _$Dosage implements Dosage {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -2325,42 +2324,42 @@ class _$Dosage implements Dosage {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -2369,8 +2368,8 @@ class _$Dosage implements Dosage {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -2425,8 +2424,8 @@ class _$Dosage implements Dosage {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -2437,16 +2436,16 @@ class _$Dosage implements Dosage {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -2454,7 +2453,7 @@ class _$Dosage implements Dosage {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -2509,23 +2508,23 @@ class _$Dosage implements Dosage {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -2571,11 +2570,11 @@ class _$Dosage implements Dosage {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -2583,14 +2582,14 @@ class _$Dosage implements Dosage {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -2599,14 +2598,14 @@ class _$Dosage implements Dosage {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -2617,7 +2616,7 @@ class _$Dosage implements Dosage {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -2770,7 +2769,7 @@ class _$Dosage implements Dosage {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -2791,38 +2790,38 @@ class _$Dosage implements Dosage {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -2830,8 +2829,8 @@ class _$Dosage implements Dosage {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -2885,8 +2884,8 @@ class _$Dosage implements Dosage {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -2896,22 +2895,22 @@ class _$Dosage implements Dosage {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -2965,21 +2964,21 @@ class _$Dosage implements Dosage {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -3086,11 +3085,11 @@ class _$Dosage implements Dosage {
 abstract class Dosage implements SpecialTypes {
   const factory Dosage(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       int sequence,
       String text,
-      List<CodeableConcept> additionalInstruction,
+      List<dynamic> additionalInstruction,
       String patientInstruction,
       Timing timing,
       bool asNeededBoolean,
@@ -3098,7 +3097,7 @@ abstract class Dosage implements SpecialTypes {
       CodeableConcept site,
       CodeableConcept route,
       CodeableConcept method,
-      List<DosageDoseAndRate> doseAndRate,
+      List<dynamic> doseAndRate,
       Ratio maxDosePerPeriod,
       Quantity maxDosePerAdministration,
       Quantity maxDosePerLifetime}) = _$Dosage;
@@ -3109,11 +3108,11 @@ abstract class Dosage implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   int get sequence;
   String get text;
-  List<CodeableConcept> get additionalInstruction;
+  List<dynamic> get additionalInstruction;
   String get patientInstruction;
   Timing get timing;
   bool get asNeededBoolean;
@@ -3121,7 +3120,7 @@ abstract class Dosage implements SpecialTypes {
   CodeableConcept get site;
   CodeableConcept get route;
   CodeableConcept get method;
-  List<DosageDoseAndRate> get doseAndRate;
+  List<dynamic> get doseAndRate;
   Ratio get maxDosePerPeriod;
   Quantity get maxDosePerAdministration;
   Quantity get maxDosePerLifetime;
@@ -3137,8 +3136,8 @@ abstract class $DosageDoseAndRateCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
       Range doseRange,
       Quantity doseQuantity,
@@ -3173,10 +3172,10 @@ class _$DosageDoseAndRateCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       doseRange: doseRange == freezed ? _value.doseRange : doseRange as Range,
       doseQuantity: doseQuantity == freezed
@@ -3211,9 +3210,9 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -3286,11 +3285,11 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -3298,15 +3297,15 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -3316,14 +3315,14 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -3334,7 +3333,7 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -3487,7 +3486,7 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -3508,42 +3507,42 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -3552,8 +3551,8 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -3608,8 +3607,8 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -3620,16 +3619,16 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -3637,7 +3636,7 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -3692,23 +3691,23 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -3738,11 +3737,11 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -3750,14 +3749,14 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -3766,14 +3765,14 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -3784,7 +3783,7 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -3937,7 +3936,7 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -3958,38 +3957,38 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -3997,8 +3996,8 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -4052,8 +4051,8 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -4063,22 +4062,22 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -4132,21 +4131,21 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -4238,8 +4237,8 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
 abstract class DosageDoseAndRate implements SpecialTypes {
   const factory DosageDoseAndRate(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
       Range doseRange,
       Quantity doseQuantity,
@@ -4254,8 +4253,8 @@ abstract class DosageDoseAndRate implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get type;
   Range get doseRange;
   Quantity get doseQuantity;
@@ -4274,14 +4273,14 @@ abstract class $ElementDefinitionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String path,
       List<ElementDefinitionRepresentation> representation,
       String sliceName,
       bool sliceIsConstraining,
       String label,
-      List<Coding> code,
+      List<dynamic> code,
       ElementDefinitionSlicing slicing,
       String short,
       Markdown definition,
@@ -4292,7 +4291,7 @@ abstract class $ElementDefinitionCopyWith<$Res>
       String max,
       ElementDefinitionBase base,
       FhirUri contentReference,
-      List<ElementDefinitionType> type,
+      List<dynamic> type,
       Base64Binary defaultValueBase64Binary,
       bool defaultValueBoolean,
       Canonical defaultValueCanonical,
@@ -4445,7 +4444,7 @@ abstract class $ElementDefinitionCopyWith<$Res>
       UsageContext patternUsageContext,
       Dosage patternDosage,
       Meta patternMeta,
-      List<ElementDefinitionExample> example,
+      List<dynamic> example,
       Date minValueDate,
       FhirDateTime minValueDateTime,
       Instant minValueInstant,
@@ -4466,13 +4465,13 @@ abstract class $ElementDefinitionCopyWith<$Res>
       Quantity maxValueQuantity,
       int maxLength,
       List<Id> condition,
-      List<ElementDefinitionConstraint> constraint,
+      List<dynamic> constraint,
       bool mustSupport,
       bool isModifier,
       String isModifierReason,
       bool isSummary,
       ElementDefinitionBinding binding,
-      List<ElementDefinitionMapping> mapping});
+      List<dynamic> mapping});
 }
 
 class _$ElementDefinitionCopyWithImpl<$Res>
@@ -4692,10 +4691,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       path: path == freezed ? _value.path : path as String,
       representation: representation == freezed
           ? _value.representation
@@ -4705,7 +4704,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.sliceIsConstraining
           : sliceIsConstraining as bool,
       label: label == freezed ? _value.label : label as String,
-      code: code == freezed ? _value.code : code as List<Coding>,
+      code: code == freezed ? _value.code : code as List<dynamic>,
       slicing: slicing == freezed
           ? _value.slicing
           : slicing as ElementDefinitionSlicing,
@@ -4723,7 +4722,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       contentReference: contentReference == freezed
           ? _value.contentReference
           : contentReference as FhirUri,
-      type: type == freezed ? _value.type : type as List<ElementDefinitionType>,
+      type: type == freezed ? _value.type : type as List<dynamic>,
       defaultValueBase64Binary: defaultValueBase64Binary == freezed
           ? _value.defaultValueBase64Binary
           : defaultValueBase64Binary as Base64Binary,
@@ -5134,9 +5133,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : patternDosage as Dosage,
       patternMeta:
           patternMeta == freezed ? _value.patternMeta : patternMeta as Meta,
-      example: example == freezed
-          ? _value.example
-          : example as List<ElementDefinitionExample>,
+      example: example == freezed ? _value.example : example as List<dynamic>,
       minValueDate:
           minValueDate == freezed ? _value.minValueDate : minValueDate as Date,
       minValueDateTime: minValueDateTime == freezed
@@ -5192,7 +5189,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           condition == freezed ? _value.condition : condition as List<Id>,
       constraint: constraint == freezed
           ? _value.constraint
-          : constraint as List<ElementDefinitionConstraint>,
+          : constraint as List<dynamic>,
       mustSupport:
           mustSupport == freezed ? _value.mustSupport : mustSupport as bool,
       isModifier:
@@ -5204,9 +5201,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       binding: binding == freezed
           ? _value.binding
           : binding as ElementDefinitionBinding,
-      mapping: mapping == freezed
-          ? _value.mapping
-          : mapping as List<ElementDefinitionMapping>,
+      mapping: mapping == freezed ? _value.mapping : mapping as List<dynamic>,
     ));
   }
 }
@@ -5422,9 +5417,9 @@ class _$ElementDefinition implements ElementDefinition {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String path;
   @override
@@ -5436,7 +5431,7 @@ class _$ElementDefinition implements ElementDefinition {
   @override
   final String label;
   @override
-  final List<Coding> code;
+  final List<dynamic> code;
   @override
   final ElementDefinitionSlicing slicing;
   @override
@@ -5458,7 +5453,7 @@ class _$ElementDefinition implements ElementDefinition {
   @override
   final FhirUri contentReference;
   @override
-  final List<ElementDefinitionType> type;
+  final List<dynamic> type;
   @override
   final Base64Binary defaultValueBase64Binary;
   @override
@@ -5764,7 +5759,7 @@ class _$ElementDefinition implements ElementDefinition {
   @override
   final Meta patternMeta;
   @override
-  final List<ElementDefinitionExample> example;
+  final List<dynamic> example;
   @override
   final Date minValueDate;
   @override
@@ -5806,7 +5801,7 @@ class _$ElementDefinition implements ElementDefinition {
   @override
   final List<Id> condition;
   @override
-  final List<ElementDefinitionConstraint> constraint;
+  final List<dynamic> constraint;
   @override
   final bool mustSupport;
   @override
@@ -5818,7 +5813,7 @@ class _$ElementDefinition implements ElementDefinition {
   @override
   final ElementDefinitionBinding binding;
   @override
-  final List<ElementDefinitionMapping> mapping;
+  final List<dynamic> mapping;
 
   @override
   String toString() {
@@ -6286,11 +6281,11 @@ class _$ElementDefinition implements ElementDefinition {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -6298,15 +6293,15 @@ class _$ElementDefinition implements ElementDefinition {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -6316,14 +6311,14 @@ class _$ElementDefinition implements ElementDefinition {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -6334,7 +6329,7 @@ class _$ElementDefinition implements ElementDefinition {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -6487,7 +6482,7 @@ class _$ElementDefinition implements ElementDefinition {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -6508,42 +6503,42 @@ class _$ElementDefinition implements ElementDefinition {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -6552,8 +6547,8 @@ class _$ElementDefinition implements ElementDefinition {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -6608,8 +6603,8 @@ class _$ElementDefinition implements ElementDefinition {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -6620,16 +6615,16 @@ class _$ElementDefinition implements ElementDefinition {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -6637,7 +6632,7 @@ class _$ElementDefinition implements ElementDefinition {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -6692,23 +6687,23 @@ class _$ElementDefinition implements ElementDefinition {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -6937,11 +6932,11 @@ class _$ElementDefinition implements ElementDefinition {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -6949,14 +6944,14 @@ class _$ElementDefinition implements ElementDefinition {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -6965,14 +6960,14 @@ class _$ElementDefinition implements ElementDefinition {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -6983,7 +6978,7 @@ class _$ElementDefinition implements ElementDefinition {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -7136,7 +7131,7 @@ class _$ElementDefinition implements ElementDefinition {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -7157,38 +7152,38 @@ class _$ElementDefinition implements ElementDefinition {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -7196,8 +7191,8 @@ class _$ElementDefinition implements ElementDefinition {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -7251,8 +7246,8 @@ class _$ElementDefinition implements ElementDefinition {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -7262,22 +7257,22 @@ class _$ElementDefinition implements ElementDefinition {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -7331,21 +7326,21 @@ class _$ElementDefinition implements ElementDefinition {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -7636,14 +7631,14 @@ class _$ElementDefinition implements ElementDefinition {
 abstract class ElementDefinition implements SpecialTypes {
   const factory ElementDefinition(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String path,
       List<ElementDefinitionRepresentation> representation,
       String sliceName,
       bool sliceIsConstraining,
       String label,
-      List<Coding> code,
+      List<dynamic> code,
       ElementDefinitionSlicing slicing,
       String short,
       Markdown definition,
@@ -7654,7 +7649,7 @@ abstract class ElementDefinition implements SpecialTypes {
       String max,
       ElementDefinitionBase base,
       FhirUri contentReference,
-      List<ElementDefinitionType> type,
+      List<dynamic> type,
       Base64Binary defaultValueBase64Binary,
       bool defaultValueBoolean,
       Canonical defaultValueCanonical,
@@ -7807,7 +7802,7 @@ abstract class ElementDefinition implements SpecialTypes {
       UsageContext patternUsageContext,
       Dosage patternDosage,
       Meta patternMeta,
-      List<ElementDefinitionExample> example,
+      List<dynamic> example,
       Date minValueDate,
       FhirDateTime minValueDateTime,
       Instant minValueInstant,
@@ -7828,13 +7823,13 @@ abstract class ElementDefinition implements SpecialTypes {
       Quantity maxValueQuantity,
       int maxLength,
       List<Id> condition,
-      List<ElementDefinitionConstraint> constraint,
+      List<dynamic> constraint,
       bool mustSupport,
       bool isModifier,
       String isModifierReason,
       bool isSummary,
       ElementDefinitionBinding binding,
-      List<ElementDefinitionMapping> mapping}) = _$ElementDefinition;
+      List<dynamic> mapping}) = _$ElementDefinition;
 
   factory ElementDefinition.fromJson(Map<String, dynamic> json) =
       _$ElementDefinition.fromJson;
@@ -7843,14 +7838,14 @@ abstract class ElementDefinition implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   String get path;
   List<ElementDefinitionRepresentation> get representation;
   String get sliceName;
   bool get sliceIsConstraining;
   String get label;
-  List<Coding> get code;
+  List<dynamic> get code;
   ElementDefinitionSlicing get slicing;
   String get short;
   Markdown get definition;
@@ -7861,7 +7856,7 @@ abstract class ElementDefinition implements SpecialTypes {
   String get max;
   ElementDefinitionBase get base;
   FhirUri get contentReference;
-  List<ElementDefinitionType> get type;
+  List<dynamic> get type;
   Base64Binary get defaultValueBase64Binary;
   bool get defaultValueBoolean;
   Canonical get defaultValueCanonical;
@@ -8014,7 +8009,7 @@ abstract class ElementDefinition implements SpecialTypes {
   UsageContext get patternUsageContext;
   Dosage get patternDosage;
   Meta get patternMeta;
-  List<ElementDefinitionExample> get example;
+  List<dynamic> get example;
   Date get minValueDate;
   FhirDateTime get minValueDateTime;
   Instant get minValueInstant;
@@ -8035,13 +8030,13 @@ abstract class ElementDefinition implements SpecialTypes {
   Quantity get maxValueQuantity;
   int get maxLength;
   List<Id> get condition;
-  List<ElementDefinitionConstraint> get constraint;
+  List<dynamic> get constraint;
   bool get mustSupport;
   bool get isModifier;
   String get isModifierReason;
   bool get isSummary;
   ElementDefinitionBinding get binding;
-  List<ElementDefinitionMapping> get mapping;
+  List<dynamic> get mapping;
   @override
   $ElementDefinitionCopyWith<ElementDefinition> get copyWith;
 }
@@ -8054,9 +8049,9 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
-      List<ElementDefinitionDiscriminator> discriminator,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> discriminator,
       String description,
       bool ordered,
       ElementDefinitionSlicingRules rules});
@@ -8087,13 +8082,13 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       discriminator: discriminator == freezed
           ? _value.discriminator
-          : discriminator as List<ElementDefinitionDiscriminator>,
+          : discriminator as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
       ordered: ordered == freezed ? _value.ordered : ordered as bool,
@@ -8122,11 +8117,11 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<ElementDefinitionDiscriminator> discriminator;
+  final List<dynamic> discriminator;
   @override
   final String description;
   @override
@@ -8186,11 +8181,11 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -8198,15 +8193,15 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -8216,14 +8211,14 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -8234,7 +8229,7 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -8387,7 +8382,7 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -8408,42 +8403,42 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -8452,8 +8447,8 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -8508,8 +8503,8 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -8520,16 +8515,16 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -8537,7 +8532,7 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -8592,23 +8587,23 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -8638,11 +8633,11 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -8650,14 +8645,14 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -8666,14 +8661,14 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -8684,7 +8679,7 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -8837,7 +8832,7 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -8858,38 +8853,38 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -8897,8 +8892,8 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -8952,8 +8947,8 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -8963,22 +8958,22 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -9032,21 +9027,21 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -9138,9 +9133,9 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
 abstract class ElementDefinitionSlicing implements SpecialTypes {
   const factory ElementDefinitionSlicing(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
-      List<ElementDefinitionDiscriminator> discriminator,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> discriminator,
       String description,
       bool ordered,
       ElementDefinitionSlicingRules rules}) = _$ElementDefinitionSlicing;
@@ -9152,9 +9147,9 @@ abstract class ElementDefinitionSlicing implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
-  List<ElementDefinitionDiscriminator> get discriminator;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get discriminator;
   String get description;
   bool get ordered;
   ElementDefinitionSlicingRules get rules;
@@ -9171,8 +9166,8 @@ abstract class $ElementDefinitionDiscriminatorCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       ElementDefinitionDiscriminatorType type,
       String path});
 }
@@ -9201,10 +9196,10 @@ class _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed
           ? _value.type
           : type as ElementDefinitionDiscriminatorType,
@@ -9231,9 +9226,9 @@ class _$ElementDefinitionDiscriminator
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final ElementDefinitionDiscriminatorType type;
   @override
@@ -9282,11 +9277,11 @@ class _$ElementDefinitionDiscriminator
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -9294,15 +9289,15 @@ class _$ElementDefinitionDiscriminator
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -9312,14 +9307,14 @@ class _$ElementDefinitionDiscriminator
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -9330,7 +9325,7 @@ class _$ElementDefinitionDiscriminator
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -9483,7 +9478,7 @@ class _$ElementDefinitionDiscriminator
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -9504,42 +9499,42 @@ class _$ElementDefinitionDiscriminator
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -9548,8 +9543,8 @@ class _$ElementDefinitionDiscriminator
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -9604,8 +9599,8 @@ class _$ElementDefinitionDiscriminator
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -9616,16 +9611,16 @@ class _$ElementDefinitionDiscriminator
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -9633,7 +9628,7 @@ class _$ElementDefinitionDiscriminator
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -9688,23 +9683,23 @@ class _$ElementDefinitionDiscriminator
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -9734,11 +9729,11 @@ class _$ElementDefinitionDiscriminator
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -9746,14 +9741,14 @@ class _$ElementDefinitionDiscriminator
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -9762,14 +9757,14 @@ class _$ElementDefinitionDiscriminator
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -9780,7 +9775,7 @@ class _$ElementDefinitionDiscriminator
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -9933,7 +9928,7 @@ class _$ElementDefinitionDiscriminator
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -9954,38 +9949,38 @@ class _$ElementDefinitionDiscriminator
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -9993,8 +9988,8 @@ class _$ElementDefinitionDiscriminator
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -10048,8 +10043,8 @@ class _$ElementDefinitionDiscriminator
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -10059,22 +10054,22 @@ class _$ElementDefinitionDiscriminator
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -10128,21 +10123,21 @@ class _$ElementDefinitionDiscriminator
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -10234,8 +10229,8 @@ class _$ElementDefinitionDiscriminator
 abstract class ElementDefinitionDiscriminator implements SpecialTypes {
   const factory ElementDefinitionDiscriminator(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       ElementDefinitionDiscriminatorType type,
       String path}) = _$ElementDefinitionDiscriminator;
 
@@ -10246,8 +10241,8 @@ abstract class ElementDefinitionDiscriminator implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   ElementDefinitionDiscriminatorType get type;
   String get path;
   @override
@@ -10263,8 +10258,8 @@ abstract class $ElementDefinitionBaseCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String path,
       int min,
       String max});
@@ -10293,10 +10288,10 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       path: path == freezed ? _value.path : path as String,
       min: min == freezed ? _value.min : min as int,
       max: max == freezed ? _value.max : max as String,
@@ -10321,9 +10316,9 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String path;
   @override
@@ -10377,11 +10372,11 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -10389,15 +10384,15 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -10407,14 +10402,14 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -10425,7 +10420,7 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -10578,7 +10573,7 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -10599,42 +10594,42 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -10643,8 +10638,8 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -10699,8 +10694,8 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -10711,16 +10706,16 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -10728,7 +10723,7 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -10783,23 +10778,23 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -10829,11 +10824,11 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -10841,14 +10836,14 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -10857,14 +10852,14 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -10875,7 +10870,7 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -11028,7 +11023,7 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -11049,38 +11044,38 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -11088,8 +11083,8 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -11143,8 +11138,8 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -11154,22 +11149,22 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -11223,21 +11218,21 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -11329,8 +11324,8 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
 abstract class ElementDefinitionBase implements SpecialTypes {
   const factory ElementDefinitionBase(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String path,
       int min,
       String max}) = _$ElementDefinitionBase;
@@ -11342,8 +11337,8 @@ abstract class ElementDefinitionBase implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   String get path;
   int get min;
   String get max;
@@ -11359,8 +11354,8 @@ abstract class $ElementDefinitionTypeCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       FhirUri code,
       List<Canonical> profile,
       List<Canonical> targetProfile,
@@ -11393,10 +11388,10 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       code: code == freezed ? _value.code : code as FhirUri,
       profile: profile == freezed ? _value.profile : profile as List<Canonical>,
       targetProfile: targetProfile == freezed
@@ -11431,9 +11426,9 @@ class _$ElementDefinitionType implements ElementDefinitionType {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final FhirUri code;
   @override
@@ -11501,11 +11496,11 @@ class _$ElementDefinitionType implements ElementDefinitionType {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -11513,15 +11508,15 @@ class _$ElementDefinitionType implements ElementDefinitionType {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -11531,14 +11526,14 @@ class _$ElementDefinitionType implements ElementDefinitionType {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -11549,7 +11544,7 @@ class _$ElementDefinitionType implements ElementDefinitionType {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -11702,7 +11697,7 @@ class _$ElementDefinitionType implements ElementDefinitionType {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -11723,42 +11718,42 @@ class _$ElementDefinitionType implements ElementDefinitionType {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -11767,8 +11762,8 @@ class _$ElementDefinitionType implements ElementDefinitionType {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -11823,8 +11818,8 @@ class _$ElementDefinitionType implements ElementDefinitionType {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -11835,16 +11830,16 @@ class _$ElementDefinitionType implements ElementDefinitionType {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -11852,7 +11847,7 @@ class _$ElementDefinitionType implements ElementDefinitionType {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -11907,23 +11902,23 @@ class _$ElementDefinitionType implements ElementDefinitionType {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -11953,11 +11948,11 @@ class _$ElementDefinitionType implements ElementDefinitionType {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -11965,14 +11960,14 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -11981,14 +11976,14 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -11999,7 +11994,7 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -12152,7 +12147,7 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -12173,38 +12168,38 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -12212,8 +12207,8 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -12267,8 +12262,8 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -12278,22 +12273,22 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -12347,21 +12342,21 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -12453,8 +12448,8 @@ class _$ElementDefinitionType implements ElementDefinitionType {
 abstract class ElementDefinitionType implements SpecialTypes {
   const factory ElementDefinitionType(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       FhirUri code,
       List<Canonical> profile,
       List<Canonical> targetProfile,
@@ -12468,8 +12463,8 @@ abstract class ElementDefinitionType implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   FhirUri get code;
   List<Canonical> get profile;
   List<Canonical> get targetProfile;
@@ -12487,8 +12482,8 @@ abstract class $ElementDefinitionExampleCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String label,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -12614,10 +12609,10 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       label: label == freezed ? _value.label : label as String,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
@@ -12807,9 +12802,9 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String label;
   @override
@@ -13090,11 +13085,11 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -13102,15 +13097,15 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -13120,14 +13115,14 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -13138,7 +13133,7 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -13291,7 +13286,7 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -13312,42 +13307,42 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -13356,8 +13351,8 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -13412,8 +13407,8 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -13424,16 +13419,16 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -13441,7 +13436,7 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -13496,23 +13491,23 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -13595,11 +13590,11 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -13607,14 +13602,14 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -13623,14 +13618,14 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -13641,7 +13636,7 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -13794,7 +13789,7 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -13815,38 +13810,38 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -13854,8 +13849,8 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -13909,8 +13904,8 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -13920,22 +13915,22 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -13989,21 +13984,21 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -14148,8 +14143,8 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
 abstract class ElementDefinitionExample implements SpecialTypes {
   const factory ElementDefinitionExample(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String label,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -14209,8 +14204,8 @@ abstract class ElementDefinitionExample implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   String get label;
   Base64Binary get valueBase64Binary;
   bool get valueBoolean;
@@ -14275,8 +14270,8 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Id key,
       String requirements,
       ElementDefinitionConstraintSeverity severity,
@@ -14314,10 +14309,10 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       key: key == freezed ? _value.key : key as Id,
       requirements: requirements == freezed
           ? _value.requirements
@@ -14355,9 +14350,9 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Id key;
   @override
@@ -14434,11 +14429,11 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -14446,15 +14441,15 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -14464,14 +14459,14 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -14482,7 +14477,7 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -14635,7 +14630,7 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -14656,42 +14651,42 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -14700,8 +14695,8 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -14756,8 +14751,8 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -14768,16 +14763,16 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -14785,7 +14780,7 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -14840,23 +14835,23 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -14895,11 +14890,11 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -14907,14 +14902,14 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -14923,14 +14918,14 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -14941,7 +14936,7 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -15094,7 +15089,7 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -15115,38 +15110,38 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -15154,8 +15149,8 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -15209,8 +15204,8 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -15220,22 +15215,22 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -15289,21 +15284,21 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -15404,8 +15399,8 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
 abstract class ElementDefinitionConstraint implements SpecialTypes {
   const factory ElementDefinitionConstraint(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Id key,
       String requirements,
       ElementDefinitionConstraintSeverity severity,
@@ -15421,8 +15416,8 @@ abstract class ElementDefinitionConstraint implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   Id get key;
   String get requirements;
   ElementDefinitionConstraintSeverity get severity;
@@ -15443,8 +15438,8 @@ abstract class $ElementDefinitionBindingCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       ElementDefinitionBindingStrength strength,
       String description,
       Canonical valueSet});
@@ -15474,10 +15469,10 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       strength: strength == freezed
           ? _value.strength
           : strength as ElementDefinitionBindingStrength,
@@ -15505,9 +15500,9 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final ElementDefinitionBindingStrength strength;
   @override
@@ -15564,11 +15559,11 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -15576,15 +15571,15 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -15594,14 +15589,14 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -15612,7 +15607,7 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -15765,7 +15760,7 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -15786,42 +15781,42 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -15830,8 +15825,8 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -15886,8 +15881,8 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -15898,16 +15893,16 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -15915,7 +15910,7 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -15970,23 +15965,23 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -16016,11 +16011,11 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -16028,14 +16023,14 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -16044,14 +16039,14 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -16062,7 +16057,7 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -16215,7 +16210,7 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -16236,38 +16231,38 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -16275,8 +16270,8 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -16330,8 +16325,8 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -16341,22 +16336,22 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -16410,21 +16405,21 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -16516,8 +16511,8 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
 abstract class ElementDefinitionBinding implements SpecialTypes {
   const factory ElementDefinitionBinding(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       ElementDefinitionBindingStrength strength,
       String description,
       Canonical valueSet}) = _$ElementDefinitionBinding;
@@ -16529,8 +16524,8 @@ abstract class ElementDefinitionBinding implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   ElementDefinitionBindingStrength get strength;
   String get description;
   Canonical get valueSet;
@@ -16546,8 +16541,8 @@ abstract class $ElementDefinitionMappingCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Id identity,
       Code language,
       @JsonKey(name: 'map') String elementMap,
@@ -16579,10 +16574,10 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identity: identity == freezed ? _value.identity : identity as Id,
       language: language == freezed ? _value.language : language as Code,
       elementMap:
@@ -16610,9 +16605,9 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Id identity;
   @override
@@ -16675,11 +16670,11 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -16687,15 +16682,15 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -16705,14 +16700,14 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -16723,7 +16718,7 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -16876,7 +16871,7 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -16897,42 +16892,42 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -16941,8 +16936,8 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -16997,8 +16992,8 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -17009,16 +17004,16 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -17026,7 +17021,7 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -17081,23 +17076,23 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -17127,11 +17122,11 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -17139,14 +17134,14 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -17155,14 +17150,14 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -17173,7 +17168,7 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -17326,7 +17321,7 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -17347,38 +17342,38 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -17386,8 +17381,8 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -17441,8 +17436,8 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -17452,22 +17447,22 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -17521,21 +17516,21 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -17627,8 +17622,8 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
 abstract class ElementDefinitionMapping implements SpecialTypes {
   const factory ElementDefinitionMapping(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Id identity,
       Code language,
       @JsonKey(name: 'map') String elementMap,
@@ -17641,8 +17636,8 @@ abstract class ElementDefinitionMapping implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   Id get identity;
   Code get language;
   @JsonKey(name: 'map')
@@ -17660,7 +17655,7 @@ abstract class $FhirExtensionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       FhirUri url,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -17783,7 +17778,7 @@ class _$FhirExtensionCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       url: url == freezed ? _value.url : url as FhirUri,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
@@ -17972,7 +17967,7 @@ class _$FhirExtension implements FhirExtension {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
   final FhirUri url;
   @override
@@ -18250,11 +18245,11 @@ class _$FhirExtension implements FhirExtension {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -18262,15 +18257,15 @@ class _$FhirExtension implements FhirExtension {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -18280,14 +18275,14 @@ class _$FhirExtension implements FhirExtension {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -18298,7 +18293,7 @@ class _$FhirExtension implements FhirExtension {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -18451,7 +18446,7 @@ class _$FhirExtension implements FhirExtension {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -18472,42 +18467,42 @@ class _$FhirExtension implements FhirExtension {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -18516,8 +18511,8 @@ class _$FhirExtension implements FhirExtension {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -18572,8 +18567,8 @@ class _$FhirExtension implements FhirExtension {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -18584,16 +18579,16 @@ class _$FhirExtension implements FhirExtension {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -18601,7 +18596,7 @@ class _$FhirExtension implements FhirExtension {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -18656,23 +18651,23 @@ class _$FhirExtension implements FhirExtension {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -18754,11 +18749,11 @@ class _$FhirExtension implements FhirExtension {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -18766,14 +18761,14 @@ class _$FhirExtension implements FhirExtension {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -18782,14 +18777,14 @@ class _$FhirExtension implements FhirExtension {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -18800,7 +18795,7 @@ class _$FhirExtension implements FhirExtension {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -18953,7 +18948,7 @@ class _$FhirExtension implements FhirExtension {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -18974,38 +18969,38 @@ class _$FhirExtension implements FhirExtension {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -19013,8 +19008,8 @@ class _$FhirExtension implements FhirExtension {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -19068,8 +19063,8 @@ class _$FhirExtension implements FhirExtension {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -19079,22 +19074,22 @@ class _$FhirExtension implements FhirExtension {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -19148,21 +19143,21 @@ class _$FhirExtension implements FhirExtension {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -19305,7 +19300,7 @@ class _$FhirExtension implements FhirExtension {
 abstract class FhirExtension implements SpecialTypes {
   const factory FhirExtension(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       FhirUri url,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -19365,7 +19360,7 @@ abstract class FhirExtension implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
+  List<dynamic> get fhirExtension;
   FhirUri get url;
   Base64Binary get valueBase64Binary;
   bool get valueBoolean;
@@ -19427,13 +19422,13 @@ abstract class $MetaCopyWith<$Res> implements $SpecialTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       Id versionId,
       Instant lastUpdated,
       Uri source,
       List<Canonical> profile,
-      List<Coding> security,
-      List<Coding> tag});
+      List<dynamic> security,
+      List<dynamic> tag});
 }
 
 class _$MetaCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
@@ -19459,15 +19454,15 @@ class _$MetaCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       versionId: versionId == freezed ? _value.versionId : versionId as Id,
       lastUpdated:
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
       source: source == freezed ? _value.source : source as Uri,
       profile: profile == freezed ? _value.profile : profile as List<Canonical>,
       security:
-          security == freezed ? _value.security : security as List<Coding>,
-      tag: tag == freezed ? _value.tag : tag as List<Coding>,
+          security == freezed ? _value.security : security as List<dynamic>,
+      tag: tag == freezed ? _value.tag : tag as List<dynamic>,
     ));
   }
 }
@@ -19490,7 +19485,7 @@ class _$Meta implements Meta {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
   final Id versionId;
   @override
@@ -19500,9 +19495,9 @@ class _$Meta implements Meta {
   @override
   final List<Canonical> profile;
   @override
-  final List<Coding> security;
+  final List<dynamic> security;
   @override
-  final List<Coding> tag;
+  final List<dynamic> tag;
 
   @override
   String toString() {
@@ -19558,11 +19553,11 @@ class _$Meta implements Meta {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -19570,15 +19565,15 @@ class _$Meta implements Meta {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -19588,14 +19583,14 @@ class _$Meta implements Meta {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -19606,7 +19601,7 @@ class _$Meta implements Meta {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -19759,7 +19754,7 @@ class _$Meta implements Meta {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -19780,42 +19775,42 @@ class _$Meta implements Meta {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -19824,8 +19819,8 @@ class _$Meta implements Meta {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -19880,8 +19875,8 @@ class _$Meta implements Meta {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -19892,16 +19887,16 @@ class _$Meta implements Meta {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -19909,7 +19904,7 @@ class _$Meta implements Meta {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -19964,23 +19959,23 @@ class _$Meta implements Meta {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -20010,11 +20005,11 @@ class _$Meta implements Meta {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -20022,14 +20017,14 @@ class _$Meta implements Meta {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -20038,14 +20033,14 @@ class _$Meta implements Meta {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -20056,7 +20051,7 @@ class _$Meta implements Meta {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -20209,7 +20204,7 @@ class _$Meta implements Meta {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -20230,38 +20225,38 @@ class _$Meta implements Meta {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -20269,8 +20264,8 @@ class _$Meta implements Meta {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -20324,8 +20319,8 @@ class _$Meta implements Meta {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -20335,22 +20330,22 @@ class _$Meta implements Meta {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -20404,21 +20399,21 @@ class _$Meta implements Meta {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -20509,13 +20504,13 @@ class _$Meta implements Meta {
 abstract class Meta implements SpecialTypes {
   const factory Meta(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       Id versionId,
       Instant lastUpdated,
       Uri source,
       List<Canonical> profile,
-      List<Coding> security,
-      List<Coding> tag}) = _$Meta;
+      List<dynamic> security,
+      List<dynamic> tag}) = _$Meta;
 
   factory Meta.fromJson(Map<String, dynamic> json) = _$Meta.fromJson;
 
@@ -20523,13 +20518,13 @@ abstract class Meta implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
+  List<dynamic> get fhirExtension;
   Id get versionId;
   Instant get lastUpdated;
   Uri get source;
   List<Canonical> get profile;
-  List<Coding> get security;
-  List<Coding> get tag;
+  List<dynamic> get security;
+  List<dynamic> get tag;
   @override
   $MetaCopyWith<Meta> get copyWith;
 }
@@ -20540,7 +20535,7 @@ abstract class $NarrativeCopyWith<$Res> implements $SpecialTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       NarrativeStatus status,
       String div});
 }
@@ -20564,7 +20559,7 @@ class _$NarrativeCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       status: status == freezed ? _value.status : status as NarrativeStatus,
       div: div == freezed ? _value.div : div as String,
     ));
@@ -20586,7 +20581,7 @@ class _$Narrative implements Narrative {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
   final NarrativeStatus status;
   @override
@@ -20630,11 +20625,11 @@ class _$Narrative implements Narrative {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -20642,15 +20637,15 @@ class _$Narrative implements Narrative {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -20660,14 +20655,14 @@ class _$Narrative implements Narrative {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -20678,7 +20673,7 @@ class _$Narrative implements Narrative {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -20831,7 +20826,7 @@ class _$Narrative implements Narrative {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -20852,42 +20847,42 @@ class _$Narrative implements Narrative {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -20896,8 +20891,8 @@ class _$Narrative implements Narrative {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -20952,8 +20947,8 @@ class _$Narrative implements Narrative {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -20964,16 +20959,16 @@ class _$Narrative implements Narrative {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -20981,7 +20976,7 @@ class _$Narrative implements Narrative {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -21036,23 +21031,23 @@ class _$Narrative implements Narrative {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -21081,11 +21076,11 @@ class _$Narrative implements Narrative {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -21093,14 +21088,14 @@ class _$Narrative implements Narrative {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -21109,14 +21104,14 @@ class _$Narrative implements Narrative {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -21127,7 +21122,7 @@ class _$Narrative implements Narrative {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -21280,7 +21275,7 @@ class _$Narrative implements Narrative {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -21301,38 +21296,38 @@ class _$Narrative implements Narrative {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -21340,8 +21335,8 @@ class _$Narrative implements Narrative {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -21395,8 +21390,8 @@ class _$Narrative implements Narrative {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -21406,22 +21401,22 @@ class _$Narrative implements Narrative {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -21475,21 +21470,21 @@ class _$Narrative implements Narrative {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -21579,7 +21574,7 @@ class _$Narrative implements Narrative {
 abstract class Narrative implements SpecialTypes {
   const factory Narrative(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       NarrativeStatus status,
       String div}) = _$Narrative;
 
@@ -21589,7 +21584,7 @@ abstract class Narrative implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
+  List<dynamic> get fhirExtension;
   NarrativeStatus get status;
   String get div;
   @override
@@ -21602,7 +21597,7 @@ abstract class $ReferenceCopyWith<$Res> implements $SpecialTypesCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       String reference,
       FhirUri type,
       Identifier identifier,
@@ -21630,7 +21625,7 @@ class _$ReferenceCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+          : fhirExtension as List<dynamic>,
       reference: reference == freezed ? _value.reference : reference as String,
       type: type == freezed ? _value.type : type as FhirUri,
       identifier:
@@ -21657,7 +21652,7 @@ class _$Reference implements Reference {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<dynamic> fhirExtension;
   @override
   final String reference;
   @override
@@ -21713,11 +21708,11 @@ class _$Reference implements Reference {
     @required
         Result dosage(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<CodeableConcept> additionalInstruction,
+            List<dynamic> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -21725,15 +21720,15 @@ class _$Reference implements Reference {
             CodeableConcept site,
             CodeableConcept route,
             CodeableConcept method,
-            List<DosageDoseAndRate> doseAndRate,
+            List<dynamic> doseAndRate,
             Ratio maxDosePerPeriod,
             Quantity maxDosePerAdministration,
             Quantity maxDosePerLifetime),
     @required
         Result dosageDoseAndRate(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Range doseRange,
             Quantity doseQuantity,
@@ -21743,14 +21738,14 @@ class _$Reference implements Reference {
     @required
         Result elementDefinition(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             List<ElementDefinitionRepresentation> representation,
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<Coding> code,
+            List<dynamic> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -21761,7 +21756,7 @@ class _$Reference implements Reference {
             String max,
             ElementDefinitionBase base,
             FhirUri contentReference,
-            List<ElementDefinitionType> type,
+            List<dynamic> type,
             Base64Binary defaultValueBase64Binary,
             bool defaultValueBoolean,
             Canonical defaultValueCanonical,
@@ -21914,7 +21909,7 @@ class _$Reference implements Reference {
             UsageContext patternUsageContext,
             Dosage patternDosage,
             Meta patternMeta,
-            List<ElementDefinitionExample> example,
+            List<dynamic> example,
             Date minValueDate,
             FhirDateTime minValueDateTime,
             Instant minValueInstant,
@@ -21935,42 +21930,42 @@ class _$Reference implements Reference {
             Quantity maxValueQuantity,
             int maxLength,
             List<Id> condition,
-            List<ElementDefinitionConstraint> constraint,
+            List<dynamic> constraint,
             bool mustSupport,
             bool isModifier,
             String isModifierReason,
             bool isSummary,
             ElementDefinitionBinding binding,
-            List<ElementDefinitionMapping> mapping),
+            List<dynamic> mapping),
     @required
         Result elementDefinitionSlicing(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
-            List<ElementDefinitionDiscriminator> discriminator,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> discriminator,
             String description,
             bool ordered,
             ElementDefinitionSlicingRules rules),
     @required
         Result elementDefinitionDiscriminator(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionDiscriminatorType type,
             String path),
     @required
         Result elementDefinitionBase(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String path,
             int min,
             String max),
     @required
         Result elementDefinitionType(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             FhirUri code,
             List<Canonical> profile,
             List<Canonical> targetProfile,
@@ -21979,8 +21974,8 @@ class _$Reference implements Reference {
     @required
         Result elementDefinitionExample(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String label,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -22035,8 +22030,8 @@ class _$Reference implements Reference {
     @required
         Result elementDefinitionConstraint(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id key,
             String requirements,
             ElementDefinitionConstraintSeverity severity,
@@ -22047,16 +22042,16 @@ class _$Reference implements Reference {
     @required
         Result elementDefinitionBinding(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             ElementDefinitionBindingStrength strength,
             String description,
             Canonical valueSet),
     @required
         Result elementDefinitionMapping(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identity,
             Code language,
             @JsonKey(name: 'map') String elementMap,
@@ -22064,7 +22059,7 @@ class _$Reference implements Reference {
     @required
         Result fhirExtension(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             FhirUri url,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -22119,23 +22114,23 @@ class _$Reference implements Reference {
     @required
         Result meta(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             Id versionId,
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<Coding> security,
-            List<Coding> tag),
+            List<dynamic> security,
+            List<dynamic> tag),
     @required
         Result narrative(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             NarrativeStatus status,
             String div),
     @required
         Result reference(
             String id,
-            @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String reference,
             FhirUri type,
             Identifier identifier,
@@ -22165,11 +22160,11 @@ class _$Reference implements Reference {
   Result maybeWhen<Result extends Object>({
     Result dosage(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<CodeableConcept> additionalInstruction,
+        List<dynamic> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -22177,14 +22172,14 @@ class _$Reference implements Reference {
         CodeableConcept site,
         CodeableConcept route,
         CodeableConcept method,
-        List<DosageDoseAndRate> doseAndRate,
+        List<dynamic> doseAndRate,
         Ratio maxDosePerPeriod,
         Quantity maxDosePerAdministration,
         Quantity maxDosePerLifetime),
     Result dosageDoseAndRate(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Range doseRange,
         Quantity doseQuantity,
@@ -22193,14 +22188,14 @@ class _$Reference implements Reference {
         Quantity rateQuantity),
     Result elementDefinition(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         List<ElementDefinitionRepresentation> representation,
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<Coding> code,
+        List<dynamic> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -22211,7 +22206,7 @@ class _$Reference implements Reference {
         String max,
         ElementDefinitionBase base,
         FhirUri contentReference,
-        List<ElementDefinitionType> type,
+        List<dynamic> type,
         Base64Binary defaultValueBase64Binary,
         bool defaultValueBoolean,
         Canonical defaultValueCanonical,
@@ -22364,7 +22359,7 @@ class _$Reference implements Reference {
         UsageContext patternUsageContext,
         Dosage patternDosage,
         Meta patternMeta,
-        List<ElementDefinitionExample> example,
+        List<dynamic> example,
         Date minValueDate,
         FhirDateTime minValueDateTime,
         Instant minValueInstant,
@@ -22385,38 +22380,38 @@ class _$Reference implements Reference {
         Quantity maxValueQuantity,
         int maxLength,
         List<Id> condition,
-        List<ElementDefinitionConstraint> constraint,
+        List<dynamic> constraint,
         bool mustSupport,
         bool isModifier,
         String isModifierReason,
         bool isSummary,
         ElementDefinitionBinding binding,
-        List<ElementDefinitionMapping> mapping),
+        List<dynamic> mapping),
     Result elementDefinitionSlicing(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
-        List<ElementDefinitionDiscriminator> discriminator,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> discriminator,
         String description,
         bool ordered,
         ElementDefinitionSlicingRules rules),
     Result elementDefinitionDiscriminator(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionDiscriminatorType type,
         String path),
     Result elementDefinitionBase(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String path,
         int min,
         String max),
     Result elementDefinitionType(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         FhirUri code,
         List<Canonical> profile,
         List<Canonical> targetProfile,
@@ -22424,8 +22419,8 @@ class _$Reference implements Reference {
         ElementDefinitionTypeVersioning versioning),
     Result elementDefinitionExample(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String label,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -22479,8 +22474,8 @@ class _$Reference implements Reference {
         Meta valueMeta),
     Result elementDefinitionConstraint(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id key,
         String requirements,
         ElementDefinitionConstraintSeverity severity,
@@ -22490,22 +22485,22 @@ class _$Reference implements Reference {
         Canonical source),
     Result elementDefinitionBinding(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         ElementDefinitionBindingStrength strength,
         String description,
         Canonical valueSet),
     Result elementDefinitionMapping(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identity,
         Code language,
         @JsonKey(name: 'map') String elementMap,
         String comment),
     Result fhirExtension(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         FhirUri url,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -22559,21 +22554,21 @@ class _$Reference implements Reference {
         Meta valueMeta),
     Result meta(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         Id versionId,
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<Coding> security,
-        List<Coding> tag),
+        List<dynamic> security,
+        List<dynamic> tag),
     Result narrative(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         NarrativeStatus status,
         String div),
     Result reference(
         String id,
-        @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String reference,
         FhirUri type,
         Identifier identifier,
@@ -22664,7 +22659,7 @@ class _$Reference implements Reference {
 abstract class Reference implements SpecialTypes {
   const factory Reference(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       String reference,
       FhirUri type,
       Identifier identifier,
@@ -22676,7 +22671,7 @@ abstract class Reference implements SpecialTypes {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
+  List<dynamic> get fhirExtension;
   String get reference;
   FhirUri get type;
   Identifier get identifier;

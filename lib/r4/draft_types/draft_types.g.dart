@@ -9,16 +9,8 @@ part of 'draft_types.dart';
 _$MarketingStatus _$_$MarketingStatusFromJson(Map<String, dynamic> json) {
   return _$MarketingStatus(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     country: json['country'] == null
         ? null
         : CodeableConcept.fromJson(json['country'] as Map<String, dynamic>),
@@ -53,16 +45,8 @@ Map<String, dynamic> _$_$MarketingStatusToJson(_$MarketingStatus instance) =>
 _$Population _$_$PopulationFromJson(Map<String, dynamic> json) {
   return _$Population(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     ageRange: json['ageRange'] == null
         ? null
         : Range.fromJson(json['ageRange'] as Map<String, dynamic>),
@@ -98,16 +82,8 @@ Map<String, dynamic> _$_$PopulationToJson(_$Population instance) =>
 _$ProdCharacteristic _$_$ProdCharacteristicFromJson(Map<String, dynamic> json) {
   return _$ProdCharacteristic(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     height: json['height'] == null
         ? null
         : Quantity.fromJson(json['height'] as Map<String, dynamic>),
@@ -129,10 +105,7 @@ _$ProdCharacteristic _$_$ProdCharacteristicFromJson(Map<String, dynamic> json) {
     shape: json['shape'] as String,
     color: (json['color'] as List)?.map((e) => e as String)?.toList(),
     imprint: (json['imprint'] as List)?.map((e) => e as String)?.toList(),
-    image: (json['image'] as List)
-        ?.map((e) =>
-            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    image: json['image'] as List,
     scoring: json['scoring'] == null
         ? null
         : CodeableConcept.fromJson(json['scoring'] as Map<String, dynamic>),
@@ -161,16 +134,8 @@ Map<String, dynamic> _$_$ProdCharacteristicToJson(
 _$ProductShelfLife _$_$ProductShelfLifeFromJson(Map<String, dynamic> json) {
   return _$ProductShelfLife(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -180,11 +145,7 @@ _$ProductShelfLife _$_$ProductShelfLifeFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Quantity.fromJson(json['period'] as Map<String, dynamic>),
-    specialPrecautionsForStorage: (json['specialPrecautionsForStorage'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    specialPrecautionsForStorage: json['specialPrecautionsForStorage'] as List,
   );
 }
 
@@ -202,16 +163,8 @@ Map<String, dynamic> _$_$ProductShelfLifeToJson(_$ProductShelfLife instance) =>
 _$SubstanceAmount _$_$SubstanceAmountFromJson(Map<String, dynamic> json) {
   return _$SubstanceAmount(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     amountQuantity: json['amountQuantity'] == null
         ? null
         : Quantity.fromJson(json['amountQuantity'] as Map<String, dynamic>),
@@ -249,16 +202,8 @@ _$SubstanceAmountReferenceRange _$_$SubstanceAmountReferenceRangeFromJson(
     Map<String, dynamic> json) {
   return _$SubstanceAmountReferenceRange(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     lowLimit: json['lowLimit'] == null
         ? null
         : Quantity.fromJson(json['lowLimit'] as Map<String, dynamic>),

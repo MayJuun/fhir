@@ -23,25 +23,11 @@ _$ImagingStudy _$_$ImagingStudyFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     status: _$enumDecodeNullable(_$ImagingStudyStatusEnumMap, json['status']),
-    modality: (json['modality'] as List)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    modality: json['modality'] as List,
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -51,54 +37,27 @@ _$ImagingStudy _$_$ImagingStudyFromJson(Map<String, dynamic> json) {
     started: json['started'] == null
         ? null
         : FhirDateTime.fromJson(json['started'] as String),
-    basedOn: (json['basedOn'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    basedOn: json['basedOn'] as List,
     referrer: json['referrer'] == null
         ? null
         : Reference.fromJson(json['referrer'] as Map<String, dynamic>),
-    interpreter: (json['interpreter'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    endpoint: (json['endpoint'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    interpreter: json['interpreter'] as List,
+    endpoint: json['endpoint'] as List,
     numberOfSeries: json['numberOfSeries'] as int,
     numberOfInstances: json['numberOfInstances'] as int,
     procedureReference: json['procedureReference'] == null
         ? null
         : Reference.fromJson(
             json['procedureReference'] as Map<String, dynamic>),
-    procedureCode: (json['procedureCode'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    procedureCode: json['procedureCode'] as List,
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
-    reasonCode: (json['reasonCode'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    reasonReference: (json['reasonReference'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    reasonCode: json['reasonCode'] as List,
+    reasonReference: json['reasonReference'] as List,
+    note: json['note'] as List,
     description: json['description'] as String,
-    series: (json['series'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ImagingStudySeries.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    series: json['series'] as List,
   );
 }
 
@@ -111,7 +70,7 @@ Map<String, dynamic> _$_$ImagingStudyToJson(_$ImagingStudy instance) =>
       'language': instance.language,
       'text': instance.text,
       'contained': instance.contained,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'status': _$ImagingStudyStatusEnumMap[instance.status],
@@ -178,16 +137,8 @@ const _$ImagingStudyStatusEnumMap = {
 _$ImagingStudySeries _$_$ImagingStudySeriesFromJson(Map<String, dynamic> json) {
   return _$ImagingStudySeries(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     uid: json['uid'] == null ? null : Id.fromJson(json['uid'] as String),
     number: json['number'] as int,
     modality: json['modality'] == null
@@ -195,33 +146,19 @@ _$ImagingStudySeries _$_$ImagingStudySeriesFromJson(Map<String, dynamic> json) {
         : Coding.fromJson(json['modality'] as Map<String, dynamic>),
     description: json['description'] as String,
     numberOfInstances: json['numberOfInstances'] as int,
-    endpoint: (json['endpoint'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    endpoint: json['endpoint'] as List,
     bodySite: json['bodySite'] == null
         ? null
         : Coding.fromJson(json['bodySite'] as Map<String, dynamic>),
     laterality: json['laterality'] == null
         ? null
         : Coding.fromJson(json['laterality'] as Map<String, dynamic>),
-    specimen: (json['specimen'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    specimen: json['specimen'] as List,
     started: json['started'] == null
         ? null
         : FhirDateTime.fromJson(json['started'] as String),
-    performer: (json['performer'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ImagingStudyPerformer.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    instance: (json['instance'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ImagingStudyInstance.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    performer: json['performer'] as List,
+    instance: json['instance'] as List,
   );
 }
 
@@ -229,7 +166,7 @@ Map<String, dynamic> _$_$ImagingStudySeriesToJson(
         _$ImagingStudySeries instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'uid': instance.uid,
       'number': instance.number,
@@ -249,16 +186,8 @@ _$ImagingStudyPerformer _$_$ImagingStudyPerformerFromJson(
     Map<String, dynamic> json) {
   return _$ImagingStudyPerformer(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     function: json['function'] == null
         ? null
         : CodeableConcept.fromJson(json['function'] as Map<String, dynamic>),
@@ -272,7 +201,7 @@ Map<String, dynamic> _$_$ImagingStudyPerformerToJson(
         _$ImagingStudyPerformer instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'function': instance.function,
       'actor': instance.actor,
@@ -282,16 +211,8 @@ _$ImagingStudyInstance _$_$ImagingStudyInstanceFromJson(
     Map<String, dynamic> json) {
   return _$ImagingStudyInstance(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     uid: json['uid'] == null ? null : Id.fromJson(json['uid'] as String),
     sopClass: json['sopClass'] == null
         ? null
@@ -305,7 +226,7 @@ Map<String, dynamic> _$_$ImagingStudyInstanceToJson(
         _$ImagingStudyInstance instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'uid': instance.uid,
       'sopClass': instance.sopClass,
@@ -330,20 +251,9 @@ _$Specimen _$_$SpecimenFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     accessionIdentifier: json['accessionIdentifier'] == null
         ? null
         : Identifier.fromJson(
@@ -358,37 +268,16 @@ _$Specimen _$_$SpecimenFromJson(Map<String, dynamic> json) {
     receivedTime: json['receivedTime'] == null
         ? null
         : FhirDateTime.fromJson(json['receivedTime'] as String),
-    parent: (json['parent'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    request: (json['request'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    parent: json['parent'] as List,
+    request: json['request'] as List,
     collection: json['collection'] == null
         ? null
         : SpecimenCollection.fromJson(
             json['collection'] as Map<String, dynamic>),
-    processing: (json['processing'] as List)
-        ?.map((e) => e == null
-            ? null
-            : SpecimenProcessing.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    container: (json['container'] as List)
-        ?.map((e) => e == null
-            ? null
-            : SpecimenContainer.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    condition: (json['condition'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    processing: json['processing'] as List,
+    container: json['container'] as List,
+    condition: json['condition'] as List,
+    note: json['note'] as List,
   );
 }
 
@@ -401,7 +290,7 @@ Map<String, dynamic> _$_$SpecimenToJson(_$Specimen instance) =>
       'language': instance.language,
       'text': instance.text,
       'contained': instance.contained,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'accessionIdentifier': instance.accessionIdentifier,
@@ -429,16 +318,8 @@ const _$SpecimenStatusEnumMap = {
 _$SpecimenCollection _$_$SpecimenCollectionFromJson(Map<String, dynamic> json) {
   return _$SpecimenCollection(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     collector: json['collector'] == null
         ? null
         : Reference.fromJson(json['collector'] as Map<String, dynamic>),
@@ -475,7 +356,7 @@ Map<String, dynamic> _$_$SpecimenCollectionToJson(
         _$SpecimenCollection instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'collector': instance.collector,
       'collectedDateTime': instance.collectedDateTime,
@@ -491,24 +372,13 @@ Map<String, dynamic> _$_$SpecimenCollectionToJson(
 _$SpecimenProcessing _$_$SpecimenProcessingFromJson(Map<String, dynamic> json) {
   return _$SpecimenProcessing(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     description: json['description'] as String,
     procedure: json['procedure'] == null
         ? null
         : CodeableConcept.fromJson(json['procedure'] as Map<String, dynamic>),
-    additive: (json['additive'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    additive: json['additive'] as List,
     timeDateTime: json['timeDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['timeDateTime'] as String),
@@ -522,7 +392,7 @@ Map<String, dynamic> _$_$SpecimenProcessingToJson(
         _$SpecimenProcessing instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'description': instance.description,
       'procedure': instance.procedure,
@@ -534,20 +404,9 @@ Map<String, dynamic> _$_$SpecimenProcessingToJson(
 _$SpecimenContainer _$_$SpecimenContainerFromJson(Map<String, dynamic> json) {
   return _$SpecimenContainer(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     description: json['description'] as String,
     type: json['type'] == null
         ? null
@@ -572,7 +431,7 @@ Map<String, dynamic> _$_$SpecimenContainerToJson(
         _$SpecimenContainer instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'description': instance.description,
@@ -600,20 +459,9 @@ _$MolecularSequence _$_$MolecularSequenceFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     type: _$enumDecodeNullable(_$MolecularSequenceTypeEnumMap, json['type']),
     coordinateSystem: json['coordinateSystem'] as int,
     patient: json['patient'] == null
@@ -635,33 +483,13 @@ _$MolecularSequence _$_$MolecularSequenceFromJson(Map<String, dynamic> json) {
         ? null
         : MolecularSequenceReferenceSeq.fromJson(
             json['referenceSeq'] as Map<String, dynamic>),
-    variant: (json['variant'] as List)
-        ?.map((e) => e == null
-            ? null
-            : MolecularSequenceVariant.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    variant: json['variant'] as List,
     observedSeq: json['observedSeq'] as String,
-    quality: (json['quality'] as List)
-        ?.map((e) => e == null
-            ? null
-            : MolecularSequenceQuality.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    quality: json['quality'] as List,
     readCoverage: json['readCoverage'] as int,
-    repository: (json['repository'] as List)
-        ?.map((e) => e == null
-            ? null
-            : MolecularSequenceRepository.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    pointer: (json['pointer'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    structureVariant: (json['structureVariant'] as List)
-        ?.map((e) => e == null
-            ? null
-            : MolecularSequenceStructureVariant.fromJson(
-                e as Map<String, dynamic>))
-        ?.toList(),
+    repository: json['repository'] as List,
+    pointer: json['pointer'] as List,
+    structureVariant: json['structureVariant'] as List,
   );
 }
 
@@ -675,7 +503,7 @@ Map<String, dynamic> _$_$MolecularSequenceToJson(
       'language': instance.language,
       'text': instance.text,
       'contained': instance.contained,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'type': _$MolecularSequenceTypeEnumMap[instance.type],
@@ -706,16 +534,8 @@ _$MolecularSequenceReferenceSeq _$_$MolecularSequenceReferenceSeqFromJson(
     Map<String, dynamic> json) {
   return _$MolecularSequenceReferenceSeq(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     chromosome: json['chromosome'] == null
         ? null
         : CodeableConcept.fromJson(json['chromosome'] as Map<String, dynamic>),
@@ -742,7 +562,7 @@ Map<String, dynamic> _$_$MolecularSequenceReferenceSeqToJson(
         _$MolecularSequenceReferenceSeq instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'chromosome': instance.chromosome,
       'genomeBuild': instance.genomeBuild,
@@ -772,16 +592,8 @@ _$MolecularSequenceVariant _$_$MolecularSequenceVariantFromJson(
     Map<String, dynamic> json) {
   return _$MolecularSequenceVariant(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     start: json['start'] as int,
     end: json['end'] as int,
     observedAllele: json['observedAllele'] as String,
@@ -797,7 +609,7 @@ Map<String, dynamic> _$_$MolecularSequenceVariantToJson(
         _$MolecularSequenceVariant instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'start': instance.start,
       'end': instance.end,
@@ -811,16 +623,8 @@ _$MolecularSequenceQuality _$_$MolecularSequenceQualityFromJson(
     Map<String, dynamic> json) {
   return _$MolecularSequenceQuality(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: _$enumDecodeNullable(
         _$MolecularSequenceQualityTypeEnumMap, json['type']),
     standardSequence: json['standardSequence'] == null
@@ -853,7 +657,7 @@ Map<String, dynamic> _$_$MolecularSequenceQualityToJson(
         _$MolecularSequenceQuality instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'type': _$MolecularSequenceQualityTypeEnumMap[instance.type],
       'standardSequence': instance.standardSequence,
@@ -882,16 +686,8 @@ _$MolecularSequenceRoc _$_$MolecularSequenceRocFromJson(
     Map<String, dynamic> json) {
   return _$MolecularSequenceRoc(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     score: (json['score'] as List)?.map((e) => e as int)?.toList(),
     numTP: (json['numTP'] as List)?.map((e) => e as int)?.toList(),
     numFP: (json['numFP'] as List)?.map((e) => e as int)?.toList(),
@@ -912,7 +708,7 @@ Map<String, dynamic> _$_$MolecularSequenceRocToJson(
         _$MolecularSequenceRoc instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'score': instance.score,
       'numTP': instance.numTP,
@@ -927,16 +723,8 @@ _$MolecularSequenceRepository _$_$MolecularSequenceRepositoryFromJson(
     Map<String, dynamic> json) {
   return _$MolecularSequenceRepository(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: _$enumDecodeNullable(
         _$MolecularSequenceRepositoryTypeEnumMap, json['type']),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
@@ -951,7 +739,7 @@ Map<String, dynamic> _$_$MolecularSequenceRepositoryToJson(
         _$MolecularSequenceRepository instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'type': _$MolecularSequenceRepositoryTypeEnumMap[instance.type],
       'url': instance.url,
@@ -974,16 +762,8 @@ _$MolecularSequenceStructureVariant
     _$_$MolecularSequenceStructureVariantFromJson(Map<String, dynamic> json) {
   return _$MolecularSequenceStructureVariant(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     variantType: json['variantType'] == null
         ? null
         : CodeableConcept.fromJson(json['variantType'] as Map<String, dynamic>),
@@ -1004,7 +784,7 @@ Map<String, dynamic> _$_$MolecularSequenceStructureVariantToJson(
         _$MolecularSequenceStructureVariant instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'variantType': instance.variantType,
       'exact': instance.exact,
@@ -1017,16 +797,8 @@ _$MolecularSequenceOuter _$_$MolecularSequenceOuterFromJson(
     Map<String, dynamic> json) {
   return _$MolecularSequenceOuter(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     start: json['start'] as int,
     end: json['end'] as int,
   );
@@ -1036,7 +808,7 @@ Map<String, dynamic> _$_$MolecularSequenceOuterToJson(
         _$MolecularSequenceOuter instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'start': instance.start,
       'end': instance.end,
@@ -1046,16 +818,8 @@ _$MolecularSequenceInner _$_$MolecularSequenceInnerFromJson(
     Map<String, dynamic> json) {
   return _$MolecularSequenceInner(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     start: json['start'] as int,
     end: json['end'] as int,
   );
@@ -1065,7 +829,7 @@ Map<String, dynamic> _$_$MolecularSequenceInnerToJson(
         _$MolecularSequenceInner instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'start': instance.start,
       'end': instance.end,
@@ -1088,44 +852,20 @@ _$Observation _$_$ObservationFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    basedOn: (json['basedOn'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    partOf: (json['partOf'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
+    basedOn: json['basedOn'] as List,
+    partOf: json['partOf'] as List,
     status: _$enumDecodeNullable(_$ObservationStatusEnumMap, json['status']),
-    category: (json['category'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    category: json['category'] as List,
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    focus: (json['focus'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    focus: json['focus'] as List,
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
@@ -1144,10 +884,7 @@ _$Observation _$_$ObservationFromJson(Map<String, dynamic> json) {
     issued: json['issued'] == null
         ? null
         : Instant.fromJson(json['issued'] as String),
-    performer: (json['performer'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    performer: json['performer'] as List,
     valueQuantity: json['valueQuantity'] == null
         ? null
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
@@ -1181,15 +918,8 @@ _$Observation _$_$ObservationFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['dataAbsentReason'] as Map<String, dynamic>),
-    interpretation: (json['interpretation'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    interpretation: json['interpretation'] as List,
+    note: json['note'] as List,
     bodySite: json['bodySite'] == null
         ? null
         : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
@@ -1202,24 +932,10 @@ _$Observation _$_$ObservationFromJson(Map<String, dynamic> json) {
     device: json['device'] == null
         ? null
         : Reference.fromJson(json['device'] as Map<String, dynamic>),
-    referenceRange: (json['referenceRange'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ObservationReferenceRange.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    hasMember: (json['hasMember'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    derivedFrom: (json['derivedFrom'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    component: (json['component'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ObservationComponent.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    referenceRange: json['referenceRange'] as List,
+    hasMember: json['hasMember'] as List,
+    derivedFrom: json['derivedFrom'] as List,
+    component: json['component'] as List,
   );
 }
 
@@ -1232,7 +948,7 @@ Map<String, dynamic> _$_$ObservationToJson(_$Observation instance) =>
       'language': instance.language,
       'text': instance.text,
       'contained': instance.contained,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'basedOn': instance.basedOn,
@@ -1288,16 +1004,8 @@ _$ObservationReferenceRange _$_$ObservationReferenceRangeFromJson(
     Map<String, dynamic> json) {
   return _$ObservationReferenceRange(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     low: json['low'] == null
         ? null
         : Quantity.fromJson(json['low'] as Map<String, dynamic>),
@@ -1307,11 +1015,7 @@ _$ObservationReferenceRange _$_$ObservationReferenceRangeFromJson(
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    appliesTo: (json['appliesTo'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    appliesTo: json['appliesTo'] as List,
     age: json['age'] == null
         ? null
         : Range.fromJson(json['age'] as Map<String, dynamic>),
@@ -1323,7 +1027,7 @@ Map<String, dynamic> _$_$ObservationReferenceRangeToJson(
         _$ObservationReferenceRange instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'low': instance.low,
       'high': instance.high,
@@ -1337,16 +1041,8 @@ _$ObservationComponent _$_$ObservationComponentFromJson(
     Map<String, dynamic> json) {
   return _$ObservationComponent(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1383,16 +1079,8 @@ _$ObservationComponent _$_$ObservationComponentFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['dataAbsentReason'] as Map<String, dynamic>),
-    interpretation: (json['interpretation'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    referenceRange: (json['referenceRange'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ObservationReferenceRange.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    interpretation: json['interpretation'] as List,
+    referenceRange: json['referenceRange'] as List,
   );
 }
 
@@ -1400,7 +1088,7 @@ Map<String, dynamic> _$_$ObservationComponentToJson(
         _$ObservationComponent instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'code': instance.code,
       'valueQuantity': instance.valueQuantity,
@@ -1436,20 +1124,9 @@ _$BodyStructure _$_$BodyStructureFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     active: json['active'] as bool,
     morphology: json['morphology'] == null
         ? null
@@ -1457,16 +1134,9 @@ _$BodyStructure _$_$BodyStructureFromJson(Map<String, dynamic> json) {
     location: json['location'] == null
         ? null
         : CodeableConcept.fromJson(json['location'] as Map<String, dynamic>),
-    locationQualifier: (json['locationQualifier'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    locationQualifier: json['locationQualifier'] as List,
     description: json['description'] as String,
-    image: (json['image'] as List)
-        ?.map((e) =>
-            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    image: json['image'] as List,
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -1482,7 +1152,7 @@ Map<String, dynamic> _$_$BodyStructureToJson(_$BodyStructure instance) =>
       'language': instance.language,
       'text': instance.text,
       'contained': instance.contained,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'active': instance.active,
@@ -1512,27 +1182,13 @@ _$QuestionnaireResponse _$_$QuestionnaireResponseFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    basedOn: (json['basedOn'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    partOf: (json['partOf'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    basedOn: json['basedOn'] as List,
+    partOf: json['partOf'] as List,
     questionnaire: json['questionnaire'] == null
         ? null
         : Canonical.fromJson(json['questionnaire'] as String),
@@ -1553,11 +1209,7 @@ _$QuestionnaireResponse _$_$QuestionnaireResponseFromJson(
     source: json['source'] == null
         ? null
         : Reference.fromJson(json['source'] as Map<String, dynamic>),
-    item: (json['item'] as List)
-        ?.map((e) => e == null
-            ? null
-            : QuestionnaireResponseItem.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    item: json['item'] as List,
   );
 }
 
@@ -1571,7 +1223,7 @@ Map<String, dynamic> _$_$QuestionnaireResponseToJson(
       'language': instance.language,
       'text': instance.text,
       'contained': instance.contained,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'basedOn': instance.basedOn,
@@ -1599,31 +1251,15 @@ _$QuestionnaireResponseItem _$_$QuestionnaireResponseItemFromJson(
     Map<String, dynamic> json) {
   return _$QuestionnaireResponseItem(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     linkId: json['linkId'] as String,
     definition: json['definition'] == null
         ? null
         : FhirUri.fromJson(json['definition'] as String),
     text: json['text'] as String,
-    answer: (json['answer'] as List)
-        ?.map((e) => e == null
-            ? null
-            : QuestionnaireResponseAnswer.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    item: (json['item'] as List)
-        ?.map((e) => e == null
-            ? null
-            : QuestionnaireResponseItem.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    answer: json['answer'] as List,
+    item: json['item'] as List,
   );
 }
 
@@ -1631,7 +1267,7 @@ Map<String, dynamic> _$_$QuestionnaireResponseItemToJson(
         _$QuestionnaireResponseItem instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'linkId': instance.linkId,
       'definition': instance.definition,
@@ -1644,16 +1280,8 @@ _$QuestionnaireResponseAnswer _$_$QuestionnaireResponseAnswerFromJson(
     Map<String, dynamic> json) {
   return _$QuestionnaireResponseAnswer(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     valueBoolean: json['valueBoolean'] as bool,
     valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
     valueInteger: json['valueInteger'] as int,
@@ -1682,11 +1310,7 @@ _$QuestionnaireResponseAnswer _$_$QuestionnaireResponseAnswerFromJson(
     valueReference: json['valueReference'] == null
         ? null
         : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
-    item: (json['item'] as List)
-        ?.map((e) => e == null
-            ? null
-            : QuestionnaireResponseItem.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    item: json['item'] as List,
   );
 }
 
@@ -1694,7 +1318,7 @@ Map<String, dynamic> _$_$QuestionnaireResponseAnswerToJson(
         _$QuestionnaireResponseAnswer instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'valueBoolean': instance.valueBoolean,
       'valueDecimal': instance.valueDecimal,
@@ -1728,31 +1352,13 @@ _$DiagnosticReport _$_$DiagnosticReportFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    basedOn: (json['basedOn'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
+    basedOn: json['basedOn'] as List,
     status:
         _$enumDecodeNullable(_$DiagnosticReportStatusEnumMap, json['status']),
-    category: (json['category'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    category: json['category'] as List,
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1771,41 +1377,15 @@ _$DiagnosticReport _$_$DiagnosticReportFromJson(Map<String, dynamic> json) {
     issued: json['issued'] == null
         ? null
         : Instant.fromJson(json['issued'] as String),
-    performer: (json['performer'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    resultsInterpreter: (json['resultsInterpreter'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    specimen: (json['specimen'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    result: (json['result'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    imagingStudy: (json['imagingStudy'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    media: (json['media'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DiagnosticReportMedia.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    performer: json['performer'] as List,
+    resultsInterpreter: json['resultsInterpreter'] as List,
+    specimen: json['specimen'] as List,
+    result: json['result'] as List,
+    imagingStudy: json['imagingStudy'] as List,
+    media: json['media'] as List,
     conclusion: json['conclusion'] as String,
-    conclusionCode: (json['conclusionCode'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    presentedForm: (json['presentedForm'] as List)
-        ?.map((e) =>
-            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    conclusionCode: json['conclusionCode'] as List,
+    presentedForm: json['presentedForm'] as List,
   );
 }
 
@@ -1818,7 +1398,7 @@ Map<String, dynamic> _$_$DiagnosticReportToJson(_$DiagnosticReport instance) =>
       'language': instance.language,
       'text': instance.text,
       'contained': instance.contained,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'basedOn': instance.basedOn,
@@ -1858,16 +1438,8 @@ _$DiagnosticReportMedia _$_$DiagnosticReportMediaFromJson(
     Map<String, dynamic> json) {
   return _$DiagnosticReportMedia(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     comment: json['comment'] as String,
     link: json['link'] == null
         ? null
@@ -1879,7 +1451,7 @@ Map<String, dynamic> _$_$DiagnosticReportMediaToJson(
         _$DiagnosticReportMedia instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'comment': instance.comment,
       'link': instance.link,
@@ -1902,28 +1474,11 @@ _$Media _$_$MediaFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    basedOn: (json['basedOn'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    partOf: (json['partOf'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
+    basedOn: json['basedOn'] as List,
+    partOf: json['partOf'] as List,
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     type: json['type'] == null
@@ -1953,11 +1508,7 @@ _$Media _$_$MediaFromJson(Map<String, dynamic> json) {
     operator: json['operator'] == null
         ? null
         : Reference.fromJson(json['operator'] as Map<String, dynamic>),
-    reasonCode: (json['reasonCode'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    reasonCode: json['reasonCode'] as List,
     bodySite: json['bodySite'] == null
         ? null
         : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
@@ -1972,10 +1523,7 @@ _$Media _$_$MediaFromJson(Map<String, dynamic> json) {
     content: json['content'] == null
         ? null
         : Attachment.fromJson(json['content'] as Map<String, dynamic>),
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    note: json['note'] as List,
   );
 }
 
@@ -1987,7 +1535,7 @@ Map<String, dynamic> _$_$MediaToJson(_$Media instance) => <String, dynamic>{
       'language': instance.language,
       'text': instance.text,
       'contained': instance.contained,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'basedOn': instance.basedOn,

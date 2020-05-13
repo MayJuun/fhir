@@ -49,32 +49,32 @@ class _$Entities1TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Reference providedBy,
-      List<CodeableConcept> category,
-      List<CodeableConcept> type,
-      List<CodeableConcept> specialty,
-      List<Reference> location,
+      List<dynamic> category,
+      List<dynamic> type,
+      List<dynamic> specialty,
+      List<dynamic> location,
       String name,
       String comment,
       Markdown extraDetails,
       Attachment photo,
-      List<ContactPoint> telecom,
-      List<Reference> coverageArea,
-      List<CodeableConcept> serviceProvisionCode,
-      List<HealthcareServiceEligibility> eligibility,
-      List<CodeableConcept> program,
-      List<CodeableConcept> characteristic,
-      List<CodeableConcept> communication,
-      List<CodeableConcept> referralMethod,
+      List<dynamic> telecom,
+      List<dynamic> coverageArea,
+      List<dynamic> serviceProvisionCode,
+      List<dynamic> eligibility,
+      List<dynamic> program,
+      List<dynamic> characteristic,
+      List<dynamic> communication,
+      List<dynamic> referralMethod,
       bool appointmentRequired,
-      List<HealthcareServiceAvailableTime> availableTime,
-      List<HealthcareServiceNotAvailable> notAvailable,
+      List<dynamic> availableTime,
+      List<dynamic> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint}) {
+      List<dynamic> endpoint}) {
     return HealthcareService(
       resourceType: resourceType,
       id: id,
@@ -83,7 +83,7 @@ class _$Entities1TearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
@@ -114,13 +114,13 @@ class _$Entities1TearOff {
 
   HealthcareServiceEligibility healthcareServiceEligibility(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
       Markdown comment}) {
     return HealthcareServiceEligibility(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       code: code,
       comment: comment,
@@ -129,15 +129,15 @@ class _$Entities1TearOff {
 
   HealthcareServiceAvailableTime healthcareServiceAvailableTime(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       List<String> daysOfWeek,
       bool allDay,
       Time availableStartTime,
       Time availableEndTime}) {
     return HealthcareServiceAvailableTime(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       daysOfWeek: daysOfWeek,
       allDay: allDay,
@@ -148,13 +148,13 @@ class _$Entities1TearOff {
 
   HealthcareServiceNotAvailable healthcareServiceNotAvailable(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       Period during}) {
     return HealthcareServiceNotAvailable(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       description: description,
       during: during,
@@ -169,25 +169,25 @@ class _$Entities1TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       LocationStatus status,
       Coding operationalStatus,
       String name,
       List<String> alias,
       String description,
       LocationMode mode,
-      List<CodeableConcept> type,
-      List<ContactPoint> telecom,
+      List<dynamic> type,
+      List<dynamic> telecom,
       Address address,
       CodeableConcept physicalType,
       LocationPosition position,
       Reference managingOrganization,
       Reference partOf,
-      List<LocationHoursOfOperation> hoursOfOperation,
+      List<dynamic> hoursOfOperation,
       String availabilityExceptions,
-      List<Reference> endpoint}) {
+      List<dynamic> endpoint}) {
     return Location(
       resourceType: resourceType,
       id: id,
@@ -196,7 +196,7 @@ class _$Entities1TearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
@@ -220,14 +220,14 @@ class _$Entities1TearOff {
 
   LocationPosition locationPosition(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       double longitude,
       double latitude,
       double altitude}) {
     return LocationPosition(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       longitude: longitude,
       latitude: latitude,
@@ -237,15 +237,15 @@ class _$Entities1TearOff {
 
   LocationHoursOfOperation locationHoursOfOperation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       List<Code> daysOfWeek,
       bool allDay,
       Time openingTime,
       Time closingTime}) {
     return LocationHoursOfOperation(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       daysOfWeek: daysOfWeek,
       allDay: allDay,
@@ -262,20 +262,20 @@ class _$Entities1TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Period period,
       Reference organization,
       Reference participatingOrganization,
-      List<Reference> network,
-      List<CodeableConcept> code,
-      List<CodeableConcept> specialty,
-      List<Reference> location,
-      List<Reference> healthcareService,
-      List<ContactPoint> telecom,
-      List<Reference> endpoint}) {
+      List<dynamic> network,
+      List<dynamic> code,
+      List<dynamic> specialty,
+      List<dynamic> location,
+      List<dynamic> healthcareService,
+      List<dynamic> telecom,
+      List<dynamic> endpoint}) {
     return OrganizationAffiliation(
       resourceType: resourceType,
       id: id,
@@ -284,7 +284,7 @@ class _$Entities1TearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
@@ -309,18 +309,18 @@ class _$Entities1TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
-      List<CodeableConcept> type,
+      List<dynamic> type,
       String name,
       List<String> alias,
-      List<ContactPoint> telecom,
-      List<Address> address,
+      List<dynamic> telecom,
+      List<dynamic> address,
       Reference partOf,
-      List<OrganizationContact> contact,
-      List<Reference> endpoint}) {
+      List<dynamic> contact,
+      List<dynamic> endpoint}) {
     return Organization(
       resourceType: resourceType,
       id: id,
@@ -329,7 +329,7 @@ class _$Entities1TearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
@@ -346,15 +346,15 @@ class _$Entities1TearOff {
 
   OrganizationContact organizationContact(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept purpose,
       HumanName name,
-      List<ContactPoint> telecom,
+      List<dynamic> telecom,
       Address address}) {
     return OrganizationContact(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       purpose: purpose,
       name: name,
@@ -371,16 +371,16 @@ class _$Entities1TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       EndpointStatus status,
       Coding connectionType,
       String name,
       Reference managingOrganization,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Period period,
-      List<CodeableConcept> payloadType,
+      List<dynamic> payloadType,
       List<Code> payloadMimeType,
       FhirUrl address,
       List<String> header}) {
@@ -392,7 +392,7 @@ class _$Entities1TearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
@@ -413,8 +413,9 @@ class _$Entities1TearOff {
 const $Entities1 = _$Entities1TearOff();
 
 mixin _$Entities1 {
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -427,44 +428,44 @@ mixin _$Entities1 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -472,8 +473,8 @@ mixin _$Entities1 {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -485,38 +486,38 @@ mixin _$Entities1 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -530,20 +531,20 @@ mixin _$Entities1 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -553,26 +554,26 @@ mixin _$Entities1 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -583,16 +584,16 @@ mixin _$Entities1 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -607,50 +608,50 @@ mixin _$Entities1 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -661,36 +662,36 @@ mixin _$Entities1 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -703,20 +704,20 @@ mixin _$Entities1 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -725,25 +726,25 @@ mixin _$Entities1 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -753,16 +754,16 @@ mixin _$Entities1 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -810,7 +811,8 @@ abstract class $Entities1CopyWith<$Res> {
   factory $Entities1CopyWith(Entities1 value, $Res Function(Entities1) then) =
       _$Entities1CopyWithImpl<$Res>;
   $Res call(
-      {List<FhirExtension> extension, List<FhirExtension> modifierExtension});
+      {@JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension});
 }
 
 class _$Entities1CopyWithImpl<$Res> implements $Entities1CopyWith<$Res> {
@@ -822,16 +824,16 @@ class _$Entities1CopyWithImpl<$Res> implements $Entities1CopyWith<$Res> {
 
   @override
   $Res call({
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
     ));
   }
 }
@@ -850,32 +852,32 @@ abstract class $HealthcareServiceCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Reference providedBy,
-      List<CodeableConcept> category,
-      List<CodeableConcept> type,
-      List<CodeableConcept> specialty,
-      List<Reference> location,
+      List<dynamic> category,
+      List<dynamic> type,
+      List<dynamic> specialty,
+      List<dynamic> location,
       String name,
       String comment,
       Markdown extraDetails,
       Attachment photo,
-      List<ContactPoint> telecom,
-      List<Reference> coverageArea,
-      List<CodeableConcept> serviceProvisionCode,
-      List<HealthcareServiceEligibility> eligibility,
-      List<CodeableConcept> program,
-      List<CodeableConcept> characteristic,
-      List<CodeableConcept> communication,
-      List<CodeableConcept> referralMethod,
+      List<dynamic> telecom,
+      List<dynamic> coverageArea,
+      List<dynamic> serviceProvisionCode,
+      List<dynamic> eligibility,
+      List<dynamic> program,
+      List<dynamic> characteristic,
+      List<dynamic> communication,
+      List<dynamic> referralMethod,
       bool appointmentRequired,
-      List<HealthcareServiceAvailableTime> availableTime,
-      List<HealthcareServiceNotAvailable> notAvailable,
+      List<dynamic> availableTime,
+      List<dynamic> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint});
+      List<dynamic> endpoint});
 }
 
 class _$HealthcareServiceCopyWithImpl<$Res>
@@ -897,7 +899,7 @@ class _$HealthcareServiceCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
@@ -937,70 +939,65 @@ class _$HealthcareServiceCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       active: active == freezed ? _value.active : active as bool,
       providedBy:
           providedBy == freezed ? _value.providedBy : providedBy as Reference,
-      category: category == freezed
-          ? _value.category
-          : category as List<CodeableConcept>,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
-      specialty: specialty == freezed
-          ? _value.specialty
-          : specialty as List<CodeableConcept>,
+      category:
+          category == freezed ? _value.category : category as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<dynamic>,
+      specialty:
+          specialty == freezed ? _value.specialty : specialty as List<dynamic>,
       location:
-          location == freezed ? _value.location : location as List<Reference>,
+          location == freezed ? _value.location : location as List<dynamic>,
       name: name == freezed ? _value.name : name as String,
       comment: comment == freezed ? _value.comment : comment as String,
       extraDetails: extraDetails == freezed
           ? _value.extraDetails
           : extraDetails as Markdown,
       photo: photo == freezed ? _value.photo : photo as Attachment,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
       coverageArea: coverageArea == freezed
           ? _value.coverageArea
-          : coverageArea as List<Reference>,
+          : coverageArea as List<dynamic>,
       serviceProvisionCode: serviceProvisionCode == freezed
           ? _value.serviceProvisionCode
-          : serviceProvisionCode as List<CodeableConcept>,
+          : serviceProvisionCode as List<dynamic>,
       eligibility: eligibility == freezed
           ? _value.eligibility
-          : eligibility as List<HealthcareServiceEligibility>,
-      program: program == freezed
-          ? _value.program
-          : program as List<CodeableConcept>,
+          : eligibility as List<dynamic>,
+      program: program == freezed ? _value.program : program as List<dynamic>,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<CodeableConcept>,
+          : characteristic as List<dynamic>,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<CodeableConcept>,
+          : communication as List<dynamic>,
       referralMethod: referralMethod == freezed
           ? _value.referralMethod
-          : referralMethod as List<CodeableConcept>,
+          : referralMethod as List<dynamic>,
       appointmentRequired: appointmentRequired == freezed
           ? _value.appointmentRequired
           : appointmentRequired as bool,
       availableTime: availableTime == freezed
           ? _value.availableTime
-          : availableTime as List<HealthcareServiceAvailableTime>,
+          : availableTime as List<dynamic>,
       notAvailable: notAvailable == freezed
           ? _value.notAvailable
-          : notAvailable as List<HealthcareServiceNotAvailable>,
+          : notAvailable as List<dynamic>,
       availabilityExceptions: availabilityExceptions == freezed
           ? _value.availabilityExceptions
           : availabilityExceptions as String,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+          endpoint == freezed ? _value.endpoint : endpoint as List<dynamic>,
     ));
   }
 }
@@ -1015,7 +1012,7 @@ class _$HealthcareService implements HealthcareService {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.active,
@@ -1062,23 +1059,24 @@ class _$HealthcareService implements HealthcareService {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final bool active;
   @override
   final Reference providedBy;
   @override
-  final List<CodeableConcept> category;
+  final List<dynamic> category;
   @override
-  final List<CodeableConcept> type;
+  final List<dynamic> type;
   @override
-  final List<CodeableConcept> specialty;
+  final List<dynamic> specialty;
   @override
-  final List<Reference> location;
+  final List<dynamic> location;
   @override
   final String name;
   @override
@@ -1088,35 +1086,35 @@ class _$HealthcareService implements HealthcareService {
   @override
   final Attachment photo;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
-  final List<Reference> coverageArea;
+  final List<dynamic> coverageArea;
   @override
-  final List<CodeableConcept> serviceProvisionCode;
+  final List<dynamic> serviceProvisionCode;
   @override
-  final List<HealthcareServiceEligibility> eligibility;
+  final List<dynamic> eligibility;
   @override
-  final List<CodeableConcept> program;
+  final List<dynamic> program;
   @override
-  final List<CodeableConcept> characteristic;
+  final List<dynamic> characteristic;
   @override
-  final List<CodeableConcept> communication;
+  final List<dynamic> communication;
   @override
-  final List<CodeableConcept> referralMethod;
+  final List<dynamic> referralMethod;
   @override
   final bool appointmentRequired;
   @override
-  final List<HealthcareServiceAvailableTime> availableTime;
+  final List<dynamic> availableTime;
   @override
-  final List<HealthcareServiceNotAvailable> notAvailable;
+  final List<dynamic> notAvailable;
   @override
   final String availabilityExceptions;
   @override
-  final List<Reference> endpoint;
+  final List<dynamic> endpoint;
 
   @override
   String toString() {
-    return 'Entities1.healthcareService(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, providedBy: $providedBy, category: $category, type: $type, specialty: $specialty, location: $location, name: $name, comment: $comment, extraDetails: $extraDetails, photo: $photo, telecom: $telecom, coverageArea: $coverageArea, serviceProvisionCode: $serviceProvisionCode, eligibility: $eligibility, program: $program, characteristic: $characteristic, communication: $communication, referralMethod: $referralMethod, appointmentRequired: $appointmentRequired, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint)';
+    return 'Entities1.healthcareService(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, providedBy: $providedBy, category: $category, type: $type, specialty: $specialty, location: $location, name: $name, comment: $comment, extraDetails: $extraDetails, photo: $photo, telecom: $telecom, coverageArea: $coverageArea, serviceProvisionCode: $serviceProvisionCode, eligibility: $eligibility, program: $program, characteristic: $characteristic, communication: $communication, referralMethod: $referralMethod, appointmentRequired: $appointmentRequired, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint)';
   }
 
   @override
@@ -1141,9 +1139,9 @@ class _$HealthcareService implements HealthcareService {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -1210,7 +1208,7 @@ class _$HealthcareService implements HealthcareService {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
@@ -1253,44 +1251,44 @@ class _$HealthcareService implements HealthcareService {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -1298,8 +1296,8 @@ class _$HealthcareService implements HealthcareService {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -1311,38 +1309,38 @@ class _$HealthcareService implements HealthcareService {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -1356,20 +1354,20 @@ class _$HealthcareService implements HealthcareService {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -1379,26 +1377,26 @@ class _$HealthcareService implements HealthcareService {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -1409,16 +1407,16 @@ class _$HealthcareService implements HealthcareService {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -1442,7 +1440,7 @@ class _$HealthcareService implements HealthcareService {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         active,
@@ -1481,50 +1479,50 @@ class _$HealthcareService implements HealthcareService {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -1535,36 +1533,36 @@ class _$HealthcareService implements HealthcareService {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -1577,20 +1575,20 @@ class _$HealthcareService implements HealthcareService {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -1599,25 +1597,25 @@ class _$HealthcareService implements HealthcareService {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -1627,16 +1625,16 @@ class _$HealthcareService implements HealthcareService {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -1652,7 +1650,7 @@ class _$HealthcareService implements HealthcareService {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           active,
@@ -1755,32 +1753,32 @@ abstract class HealthcareService implements Entities1 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Reference providedBy,
-      List<CodeableConcept> category,
-      List<CodeableConcept> type,
-      List<CodeableConcept> specialty,
-      List<Reference> location,
+      List<dynamic> category,
+      List<dynamic> type,
+      List<dynamic> specialty,
+      List<dynamic> location,
       String name,
       String comment,
       Markdown extraDetails,
       Attachment photo,
-      List<ContactPoint> telecom,
-      List<Reference> coverageArea,
-      List<CodeableConcept> serviceProvisionCode,
-      List<HealthcareServiceEligibility> eligibility,
-      List<CodeableConcept> program,
-      List<CodeableConcept> characteristic,
-      List<CodeableConcept> communication,
-      List<CodeableConcept> referralMethod,
+      List<dynamic> telecom,
+      List<dynamic> coverageArea,
+      List<dynamic> serviceProvisionCode,
+      List<dynamic> eligibility,
+      List<dynamic> program,
+      List<dynamic> characteristic,
+      List<dynamic> communication,
+      List<dynamic> referralMethod,
       bool appointmentRequired,
-      List<HealthcareServiceAvailableTime> availableTime,
-      List<HealthcareServiceNotAvailable> notAvailable,
+      List<dynamic> availableTime,
+      List<dynamic> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint}) = _$HealthcareService;
+      List<dynamic> endpoint}) = _$HealthcareService;
 
   factory HealthcareService.fromJson(Map<String, dynamic> json) =
       _$HealthcareService.fromJson;
@@ -1793,33 +1791,34 @@ abstract class HealthcareService implements Entities1 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   bool get active;
   Reference get providedBy;
-  List<CodeableConcept> get category;
-  List<CodeableConcept> get type;
-  List<CodeableConcept> get specialty;
-  List<Reference> get location;
+  List<dynamic> get category;
+  List<dynamic> get type;
+  List<dynamic> get specialty;
+  List<dynamic> get location;
   String get name;
   String get comment;
   Markdown get extraDetails;
   Attachment get photo;
-  List<ContactPoint> get telecom;
-  List<Reference> get coverageArea;
-  List<CodeableConcept> get serviceProvisionCode;
-  List<HealthcareServiceEligibility> get eligibility;
-  List<CodeableConcept> get program;
-  List<CodeableConcept> get characteristic;
-  List<CodeableConcept> get communication;
-  List<CodeableConcept> get referralMethod;
+  List<dynamic> get telecom;
+  List<dynamic> get coverageArea;
+  List<dynamic> get serviceProvisionCode;
+  List<dynamic> get eligibility;
+  List<dynamic> get program;
+  List<dynamic> get characteristic;
+  List<dynamic> get communication;
+  List<dynamic> get referralMethod;
   bool get appointmentRequired;
-  List<HealthcareServiceAvailableTime> get availableTime;
-  List<HealthcareServiceNotAvailable> get notAvailable;
+  List<dynamic> get availableTime;
+  List<dynamic> get notAvailable;
   String get availabilityExceptions;
-  List<Reference> get endpoint;
+  List<dynamic> get endpoint;
   @override
   $HealthcareServiceCopyWith<HealthcareService> get copyWith;
 }
@@ -1833,8 +1832,8 @@ abstract class $HealthcareServiceEligibilityCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
       Markdown comment});
 }
@@ -1854,19 +1853,19 @@ class _$HealthcareServiceEligibilityCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
     Object comment = freezed,
   }) {
     return _then(HealthcareServiceEligibility(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       comment: comment == freezed ? _value.comment : comment as Markdown,
     ));
@@ -1877,7 +1876,7 @@ class _$HealthcareServiceEligibilityCopyWithImpl<$Res>
 class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
   const _$HealthcareServiceEligibility(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.code,
       this.comment});
@@ -1888,9 +1887,10 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept code;
   @override
@@ -1898,7 +1898,7 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
 
   @override
   String toString() {
-    return 'Entities1.healthcareServiceEligibility(id: $id, extension: $extension, modifierExtension: $modifierExtension, code: $code, comment: $comment)';
+    return 'Entities1.healthcareServiceEligibility(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, comment: $comment)';
   }
 
   @override
@@ -1907,9 +1907,9 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         (other is HealthcareServiceEligibility &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -1923,7 +1923,7 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(comment);
@@ -1945,44 +1945,44 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -1990,8 +1990,8 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -2003,38 +2003,38 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -2048,20 +2048,20 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -2071,26 +2071,26 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -2101,16 +2101,16 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -2127,7 +2127,7 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
     assert(organizationContact != null);
     assert(endpoint != null);
     return healthcareServiceEligibility(
-        id, extension, modifierExtension, code, comment);
+        id, fhirExtension, modifierExtension, code, comment);
   }
 
   @override
@@ -2141,50 +2141,50 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -2195,36 +2195,36 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -2237,20 +2237,20 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -2259,25 +2259,25 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -2287,16 +2287,16 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -2305,7 +2305,7 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
     assert(orElse != null);
     if (healthcareServiceEligibility != null) {
       return healthcareServiceEligibility(
-          id, extension, modifierExtension, code, comment);
+          id, fhirExtension, modifierExtension, code, comment);
     }
     return orElse();
   }
@@ -2377,8 +2377,8 @@ class _$HealthcareServiceEligibility implements HealthcareServiceEligibility {
 abstract class HealthcareServiceEligibility implements Entities1 {
   const factory HealthcareServiceEligibility(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
       Markdown comment}) = _$HealthcareServiceEligibility;
 
@@ -2387,9 +2387,10 @@ abstract class HealthcareServiceEligibility implements Entities1 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get code;
   Markdown get comment;
   @override
@@ -2406,8 +2407,8 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       List<String> daysOfWeek,
       bool allDay,
       Time availableStartTime,
@@ -2429,7 +2430,7 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object daysOfWeek = freezed,
     Object allDay = freezed,
@@ -2438,12 +2439,12 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
   }) {
     return _then(HealthcareServiceAvailableTime(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       daysOfWeek: daysOfWeek == freezed
           ? _value.daysOfWeek
           : daysOfWeek as List<String>,
@@ -2463,7 +2464,7 @@ class _$HealthcareServiceAvailableTime
     implements HealthcareServiceAvailableTime {
   const _$HealthcareServiceAvailableTime(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.daysOfWeek,
       this.allDay,
@@ -2477,9 +2478,10 @@ class _$HealthcareServiceAvailableTime
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final List<String> daysOfWeek;
   @override
@@ -2491,7 +2493,7 @@ class _$HealthcareServiceAvailableTime
 
   @override
   String toString() {
-    return 'Entities1.healthcareServiceAvailableTime(id: $id, extension: $extension, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, availableStartTime: $availableStartTime, availableEndTime: $availableEndTime)';
+    return 'Entities1.healthcareServiceAvailableTime(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, availableStartTime: $availableStartTime, availableEndTime: $availableEndTime)';
   }
 
   @override
@@ -2500,9 +2502,9 @@ class _$HealthcareServiceAvailableTime
         (other is HealthcareServiceAvailableTime &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -2523,7 +2525,7 @@ class _$HealthcareServiceAvailableTime
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(daysOfWeek) ^
       const DeepCollectionEquality().hash(allDay) ^
@@ -2547,44 +2549,44 @@ class _$HealthcareServiceAvailableTime
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -2592,8 +2594,8 @@ class _$HealthcareServiceAvailableTime
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -2605,38 +2607,38 @@ class _$HealthcareServiceAvailableTime
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -2650,20 +2652,20 @@ class _$HealthcareServiceAvailableTime
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -2673,26 +2675,26 @@ class _$HealthcareServiceAvailableTime
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -2703,16 +2705,16 @@ class _$HealthcareServiceAvailableTime
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -2728,7 +2730,7 @@ class _$HealthcareServiceAvailableTime
     assert(organization != null);
     assert(organizationContact != null);
     assert(endpoint != null);
-    return healthcareServiceAvailableTime(id, extension, modifierExtension,
+    return healthcareServiceAvailableTime(id, fhirExtension, modifierExtension,
         daysOfWeek, allDay, availableStartTime, availableEndTime);
   }
 
@@ -2743,50 +2745,50 @@ class _$HealthcareServiceAvailableTime
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -2797,36 +2799,36 @@ class _$HealthcareServiceAvailableTime
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -2839,20 +2841,20 @@ class _$HealthcareServiceAvailableTime
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -2861,25 +2863,25 @@ class _$HealthcareServiceAvailableTime
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -2889,16 +2891,16 @@ class _$HealthcareServiceAvailableTime
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -2906,8 +2908,14 @@ class _$HealthcareServiceAvailableTime
   }) {
     assert(orElse != null);
     if (healthcareServiceAvailableTime != null) {
-      return healthcareServiceAvailableTime(id, extension, modifierExtension,
-          daysOfWeek, allDay, availableStartTime, availableEndTime);
+      return healthcareServiceAvailableTime(
+          id,
+          fhirExtension,
+          modifierExtension,
+          daysOfWeek,
+          allDay,
+          availableStartTime,
+          availableEndTime);
     }
     return orElse();
   }
@@ -2979,8 +2987,8 @@ class _$HealthcareServiceAvailableTime
 abstract class HealthcareServiceAvailableTime implements Entities1 {
   const factory HealthcareServiceAvailableTime(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       List<String> daysOfWeek,
       bool allDay,
       Time availableStartTime,
@@ -2991,9 +2999,10 @@ abstract class HealthcareServiceAvailableTime implements Entities1 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   List<String> get daysOfWeek;
   bool get allDay;
   Time get availableStartTime;
@@ -3012,8 +3021,8 @@ abstract class $HealthcareServiceNotAvailableCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       Period during});
 }
@@ -3033,19 +3042,19 @@ class _$HealthcareServiceNotAvailableCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object description = freezed,
     Object during = freezed,
   }) {
     return _then(HealthcareServiceNotAvailable(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
       during: during == freezed ? _value.during : during as Period,
@@ -3057,7 +3066,7 @@ class _$HealthcareServiceNotAvailableCopyWithImpl<$Res>
 class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
   const _$HealthcareServiceNotAvailable(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.description,
       this.during});
@@ -3068,9 +3077,10 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String description;
   @override
@@ -3078,7 +3088,7 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
 
   @override
   String toString() {
-    return 'Entities1.healthcareServiceNotAvailable(id: $id, extension: $extension, modifierExtension: $modifierExtension, description: $description, during: $during)';
+    return 'Entities1.healthcareServiceNotAvailable(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, description: $description, during: $during)';
   }
 
   @override
@@ -3087,9 +3097,9 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         (other is HealthcareServiceNotAvailable &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -3104,7 +3114,7 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(during);
@@ -3126,44 +3136,44 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -3171,8 +3181,8 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -3184,38 +3194,38 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -3229,20 +3239,20 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -3252,26 +3262,26 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -3282,16 +3292,16 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -3308,7 +3318,7 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
     assert(organizationContact != null);
     assert(endpoint != null);
     return healthcareServiceNotAvailable(
-        id, extension, modifierExtension, description, during);
+        id, fhirExtension, modifierExtension, description, during);
   }
 
   @override
@@ -3322,50 +3332,50 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -3376,36 +3386,36 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -3418,20 +3428,20 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -3440,25 +3450,25 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -3468,16 +3478,16 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -3486,7 +3496,7 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
     assert(orElse != null);
     if (healthcareServiceNotAvailable != null) {
       return healthcareServiceNotAvailable(
-          id, extension, modifierExtension, description, during);
+          id, fhirExtension, modifierExtension, description, during);
     }
     return orElse();
   }
@@ -3558,8 +3568,8 @@ class _$HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable {
 abstract class HealthcareServiceNotAvailable implements Entities1 {
   const factory HealthcareServiceNotAvailable(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       Period during}) = _$HealthcareServiceNotAvailable;
 
@@ -3568,9 +3578,10 @@ abstract class HealthcareServiceNotAvailable implements Entities1 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get description;
   Period get during;
   @override
@@ -3590,25 +3601,25 @@ abstract class $LocationCopyWith<$Res> implements $Entities1CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       LocationStatus status,
       Coding operationalStatus,
       String name,
       List<String> alias,
       String description,
       LocationMode mode,
-      List<CodeableConcept> type,
-      List<ContactPoint> telecom,
+      List<dynamic> type,
+      List<dynamic> telecom,
       Address address,
       CodeableConcept physicalType,
       LocationPosition position,
       Reference managingOrganization,
       Reference partOf,
-      List<LocationHoursOfOperation> hoursOfOperation,
+      List<dynamic> hoursOfOperation,
       String availabilityExceptions,
-      List<Reference> endpoint});
+      List<dynamic> endpoint});
 }
 
 class _$LocationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
@@ -3628,7 +3639,7 @@ class _$LocationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
@@ -3661,15 +3672,15 @@ class _$LocationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as LocationStatus,
       operationalStatus: operationalStatus == freezed
           ? _value.operationalStatus
@@ -3679,9 +3690,8 @@ class _$LocationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       mode: mode == freezed ? _value.mode : mode as LocationMode,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      type: type == freezed ? _value.type : type as List<dynamic>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
       address: address == freezed ? _value.address : address as Address,
       physicalType: physicalType == freezed
           ? _value.physicalType
@@ -3694,12 +3704,12 @@ class _$LocationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       partOf: partOf == freezed ? _value.partOf : partOf as Reference,
       hoursOfOperation: hoursOfOperation == freezed
           ? _value.hoursOfOperation
-          : hoursOfOperation as List<LocationHoursOfOperation>,
+          : hoursOfOperation as List<dynamic>,
       availabilityExceptions: availabilityExceptions == freezed
           ? _value.availabilityExceptions
           : availabilityExceptions as String,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+          endpoint == freezed ? _value.endpoint : endpoint as List<dynamic>,
     ));
   }
 }
@@ -3714,7 +3724,7 @@ class _$Location implements Location {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.status,
@@ -3754,11 +3764,12 @@ class _$Location implements Location {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final LocationStatus status;
   @override
@@ -3772,9 +3783,9 @@ class _$Location implements Location {
   @override
   final LocationMode mode;
   @override
-  final List<CodeableConcept> type;
+  final List<dynamic> type;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
   final Address address;
   @override
@@ -3786,15 +3797,15 @@ class _$Location implements Location {
   @override
   final Reference partOf;
   @override
-  final List<LocationHoursOfOperation> hoursOfOperation;
+  final List<dynamic> hoursOfOperation;
   @override
   final String availabilityExceptions;
   @override
-  final List<Reference> endpoint;
+  final List<dynamic> endpoint;
 
   @override
   String toString() {
-    return 'Entities1.location(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, operationalStatus: $operationalStatus, name: $name, alias: $alias, description: $description, mode: $mode, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf, hoursOfOperation: $hoursOfOperation, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint)';
+    return 'Entities1.location(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, operationalStatus: $operationalStatus, name: $name, alias: $alias, description: $description, mode: $mode, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf, hoursOfOperation: $hoursOfOperation, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint)';
   }
 
   @override
@@ -3819,9 +3830,9 @@ class _$Location implements Location {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -3881,7 +3892,7 @@ class _$Location implements Location {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
@@ -3917,44 +3928,44 @@ class _$Location implements Location {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -3962,8 +3973,8 @@ class _$Location implements Location {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -3975,38 +3986,38 @@ class _$Location implements Location {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -4020,20 +4031,20 @@ class _$Location implements Location {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -4043,26 +4054,26 @@ class _$Location implements Location {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -4073,16 +4084,16 @@ class _$Location implements Location {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -4106,7 +4117,7 @@ class _$Location implements Location {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         status,
@@ -4138,50 +4149,50 @@ class _$Location implements Location {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -4192,36 +4203,36 @@ class _$Location implements Location {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -4234,20 +4245,20 @@ class _$Location implements Location {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -4256,25 +4267,25 @@ class _$Location implements Location {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -4284,16 +4295,16 @@ class _$Location implements Location {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -4309,7 +4320,7 @@ class _$Location implements Location {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           status,
@@ -4404,25 +4415,25 @@ abstract class Location implements Entities1 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       LocationStatus status,
       Coding operationalStatus,
       String name,
       List<String> alias,
       String description,
       LocationMode mode,
-      List<CodeableConcept> type,
-      List<ContactPoint> telecom,
+      List<dynamic> type,
+      List<dynamic> telecom,
       Address address,
       CodeableConcept physicalType,
       LocationPosition position,
       Reference managingOrganization,
       Reference partOf,
-      List<LocationHoursOfOperation> hoursOfOperation,
+      List<dynamic> hoursOfOperation,
       String availabilityExceptions,
-      List<Reference> endpoint}) = _$Location;
+      List<dynamic> endpoint}) = _$Location;
 
   factory Location.fromJson(Map<String, dynamic> json) = _$Location.fromJson;
 
@@ -4434,26 +4445,27 @@ abstract class Location implements Entities1 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   LocationStatus get status;
   Coding get operationalStatus;
   String get name;
   List<String> get alias;
   String get description;
   LocationMode get mode;
-  List<CodeableConcept> get type;
-  List<ContactPoint> get telecom;
+  List<dynamic> get type;
+  List<dynamic> get telecom;
   Address get address;
   CodeableConcept get physicalType;
   LocationPosition get position;
   Reference get managingOrganization;
   Reference get partOf;
-  List<LocationHoursOfOperation> get hoursOfOperation;
+  List<dynamic> get hoursOfOperation;
   String get availabilityExceptions;
-  List<Reference> get endpoint;
+  List<dynamic> get endpoint;
   @override
   $LocationCopyWith<Location> get copyWith;
 }
@@ -4466,8 +4478,8 @@ abstract class $LocationPositionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       double longitude,
       double latitude,
       double altitude});
@@ -4485,7 +4497,7 @@ class _$LocationPositionCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object longitude = freezed,
     Object latitude = freezed,
@@ -4493,12 +4505,12 @@ class _$LocationPositionCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
   }) {
     return _then(LocationPosition(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       longitude: longitude == freezed ? _value.longitude : longitude as double,
       latitude: latitude == freezed ? _value.latitude : latitude as double,
       altitude: altitude == freezed ? _value.altitude : altitude as double,
@@ -4510,7 +4522,7 @@ class _$LocationPositionCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
 class _$LocationPosition implements LocationPosition {
   const _$LocationPosition(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.longitude,
       this.latitude,
@@ -4522,9 +4534,10 @@ class _$LocationPosition implements LocationPosition {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final double longitude;
   @override
@@ -4534,7 +4547,7 @@ class _$LocationPosition implements LocationPosition {
 
   @override
   String toString() {
-    return 'Entities1.locationPosition(id: $id, extension: $extension, modifierExtension: $modifierExtension, longitude: $longitude, latitude: $latitude, altitude: $altitude)';
+    return 'Entities1.locationPosition(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, longitude: $longitude, latitude: $latitude, altitude: $altitude)';
   }
 
   @override
@@ -4543,9 +4556,9 @@ class _$LocationPosition implements LocationPosition {
         (other is LocationPosition &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -4564,7 +4577,7 @@ class _$LocationPosition implements LocationPosition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(longitude) ^
       const DeepCollectionEquality().hash(latitude) ^
@@ -4586,44 +4599,44 @@ class _$LocationPosition implements LocationPosition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -4631,8 +4644,8 @@ class _$LocationPosition implements LocationPosition {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -4644,38 +4657,38 @@ class _$LocationPosition implements LocationPosition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -4689,20 +4702,20 @@ class _$LocationPosition implements LocationPosition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -4712,26 +4725,26 @@ class _$LocationPosition implements LocationPosition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -4742,16 +4755,16 @@ class _$LocationPosition implements LocationPosition {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -4768,7 +4781,7 @@ class _$LocationPosition implements LocationPosition {
     assert(organizationContact != null);
     assert(endpoint != null);
     return locationPosition(
-        id, extension, modifierExtension, longitude, latitude, altitude);
+        id, fhirExtension, modifierExtension, longitude, latitude, altitude);
   }
 
   @override
@@ -4782,50 +4795,50 @@ class _$LocationPosition implements LocationPosition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -4836,36 +4849,36 @@ class _$LocationPosition implements LocationPosition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -4878,20 +4891,20 @@ class _$LocationPosition implements LocationPosition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -4900,25 +4913,25 @@ class _$LocationPosition implements LocationPosition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -4928,16 +4941,16 @@ class _$LocationPosition implements LocationPosition {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -4946,7 +4959,7 @@ class _$LocationPosition implements LocationPosition {
     assert(orElse != null);
     if (locationPosition != null) {
       return locationPosition(
-          id, extension, modifierExtension, longitude, latitude, altitude);
+          id, fhirExtension, modifierExtension, longitude, latitude, altitude);
     }
     return orElse();
   }
@@ -5018,8 +5031,8 @@ class _$LocationPosition implements LocationPosition {
 abstract class LocationPosition implements Entities1 {
   const factory LocationPosition(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       double longitude,
       double latitude,
       double altitude}) = _$LocationPosition;
@@ -5029,9 +5042,10 @@ abstract class LocationPosition implements Entities1 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   double get longitude;
   double get latitude;
   double get altitude;
@@ -5047,8 +5061,8 @@ abstract class $LocationHoursOfOperationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       List<Code> daysOfWeek,
       bool allDay,
       Time openingTime,
@@ -5069,7 +5083,7 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object daysOfWeek = freezed,
     Object allDay = freezed,
@@ -5078,12 +5092,12 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res>
   }) {
     return _then(LocationHoursOfOperation(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       daysOfWeek:
           daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
       allDay: allDay == freezed ? _value.allDay : allDay as bool,
@@ -5099,7 +5113,7 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res>
 class _$LocationHoursOfOperation implements LocationHoursOfOperation {
   const _$LocationHoursOfOperation(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.daysOfWeek,
       this.allDay,
@@ -5112,9 +5126,10 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final List<Code> daysOfWeek;
   @override
@@ -5126,7 +5141,7 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
 
   @override
   String toString() {
-    return 'Entities1.locationHoursOfOperation(id: $id, extension: $extension, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, openingTime: $openingTime, closingTime: $closingTime)';
+    return 'Entities1.locationHoursOfOperation(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, openingTime: $openingTime, closingTime: $closingTime)';
   }
 
   @override
@@ -5135,9 +5150,9 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         (other is LocationHoursOfOperation &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -5158,7 +5173,7 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(daysOfWeek) ^
       const DeepCollectionEquality().hash(allDay) ^
@@ -5182,44 +5197,44 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -5227,8 +5242,8 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -5240,38 +5255,38 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -5285,20 +5300,20 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -5308,26 +5323,26 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -5338,16 +5353,16 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -5363,7 +5378,7 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
     assert(organization != null);
     assert(organizationContact != null);
     assert(endpoint != null);
-    return locationHoursOfOperation(id, extension, modifierExtension,
+    return locationHoursOfOperation(id, fhirExtension, modifierExtension,
         daysOfWeek, allDay, openingTime, closingTime);
   }
 
@@ -5378,50 +5393,50 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -5432,36 +5447,36 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -5474,20 +5489,20 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -5496,25 +5511,25 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -5524,16 +5539,16 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -5541,7 +5556,7 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
   }) {
     assert(orElse != null);
     if (locationHoursOfOperation != null) {
-      return locationHoursOfOperation(id, extension, modifierExtension,
+      return locationHoursOfOperation(id, fhirExtension, modifierExtension,
           daysOfWeek, allDay, openingTime, closingTime);
     }
     return orElse();
@@ -5614,8 +5629,8 @@ class _$LocationHoursOfOperation implements LocationHoursOfOperation {
 abstract class LocationHoursOfOperation implements Entities1 {
   const factory LocationHoursOfOperation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       List<Code> daysOfWeek,
       bool allDay,
       Time openingTime,
@@ -5626,9 +5641,10 @@ abstract class LocationHoursOfOperation implements Entities1 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   List<Code> get daysOfWeek;
   bool get allDay;
   Time get openingTime;
@@ -5651,20 +5667,20 @@ abstract class $OrganizationAffiliationCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Period period,
       Reference organization,
       Reference participatingOrganization,
-      List<Reference> network,
-      List<CodeableConcept> code,
-      List<CodeableConcept> specialty,
-      List<Reference> location,
-      List<Reference> healthcareService,
-      List<ContactPoint> telecom,
-      List<Reference> endpoint});
+      List<dynamic> network,
+      List<dynamic> code,
+      List<dynamic> specialty,
+      List<dynamic> location,
+      List<dynamic> healthcareService,
+      List<dynamic> telecom,
+      List<dynamic> endpoint});
 }
 
 class _$OrganizationAffiliationCopyWithImpl<$Res>
@@ -5686,7 +5702,7 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
@@ -5714,15 +5730,15 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       active: active == freezed ? _value.active : active as bool,
       period: period == freezed ? _value.period : period as Period,
       organization: organization == freezed
@@ -5731,20 +5747,18 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
       participatingOrganization: participatingOrganization == freezed
           ? _value.participatingOrganization
           : participatingOrganization as Reference,
-      network: network == freezed ? _value.network : network as List<Reference>,
-      code: code == freezed ? _value.code : code as List<CodeableConcept>,
-      specialty: specialty == freezed
-          ? _value.specialty
-          : specialty as List<CodeableConcept>,
+      network: network == freezed ? _value.network : network as List<dynamic>,
+      code: code == freezed ? _value.code : code as List<dynamic>,
+      specialty:
+          specialty == freezed ? _value.specialty : specialty as List<dynamic>,
       location:
-          location == freezed ? _value.location : location as List<Reference>,
+          location == freezed ? _value.location : location as List<dynamic>,
       healthcareService: healthcareService == freezed
           ? _value.healthcareService
-          : healthcareService as List<Reference>,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+          : healthcareService as List<dynamic>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+          endpoint == freezed ? _value.endpoint : endpoint as List<dynamic>,
     ));
   }
 }
@@ -5759,7 +5773,7 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.active,
@@ -5794,11 +5808,12 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final bool active;
   @override
@@ -5808,23 +5823,23 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
   @override
   final Reference participatingOrganization;
   @override
-  final List<Reference> network;
+  final List<dynamic> network;
   @override
-  final List<CodeableConcept> code;
+  final List<dynamic> code;
   @override
-  final List<CodeableConcept> specialty;
+  final List<dynamic> specialty;
   @override
-  final List<Reference> location;
+  final List<dynamic> location;
   @override
-  final List<Reference> healthcareService;
+  final List<dynamic> healthcareService;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
-  final List<Reference> endpoint;
+  final List<dynamic> endpoint;
 
   @override
   String toString() {
-    return 'Entities1.organizationAffiliation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, period: $period, organization: $organization, participatingOrganization: $participatingOrganization, network: $network, code: $code, specialty: $specialty, location: $location, healthcareService: $healthcareService, telecom: $telecom, endpoint: $endpoint)';
+    return 'Entities1.organizationAffiliation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, period: $period, organization: $organization, participatingOrganization: $participatingOrganization, network: $network, code: $code, specialty: $specialty, location: $location, healthcareService: $healthcareService, telecom: $telecom, endpoint: $endpoint)';
   }
 
   @override
@@ -5849,9 +5864,9 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -5902,7 +5917,7 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
@@ -5934,44 +5949,44 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -5979,8 +5994,8 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -5992,38 +6007,38 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -6037,20 +6052,20 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -6060,26 +6075,26 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -6090,16 +6105,16 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -6123,7 +6138,7 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         active,
@@ -6150,50 +6165,50 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -6204,36 +6219,36 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -6246,20 +6261,20 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -6268,25 +6283,25 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -6296,16 +6311,16 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -6321,7 +6336,7 @@ class _$OrganizationAffiliation implements OrganizationAffiliation {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           active,
@@ -6412,20 +6427,20 @@ abstract class OrganizationAffiliation implements Entities1 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Period period,
       Reference organization,
       Reference participatingOrganization,
-      List<Reference> network,
-      List<CodeableConcept> code,
-      List<CodeableConcept> specialty,
-      List<Reference> location,
-      List<Reference> healthcareService,
-      List<ContactPoint> telecom,
-      List<Reference> endpoint}) = _$OrganizationAffiliation;
+      List<dynamic> network,
+      List<dynamic> code,
+      List<dynamic> specialty,
+      List<dynamic> location,
+      List<dynamic> healthcareService,
+      List<dynamic> telecom,
+      List<dynamic> endpoint}) = _$OrganizationAffiliation;
 
   factory OrganizationAffiliation.fromJson(Map<String, dynamic> json) =
       _$OrganizationAffiliation.fromJson;
@@ -6438,21 +6453,22 @@ abstract class OrganizationAffiliation implements Entities1 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   bool get active;
   Period get period;
   Reference get organization;
   Reference get participatingOrganization;
-  List<Reference> get network;
-  List<CodeableConcept> get code;
-  List<CodeableConcept> get specialty;
-  List<Reference> get location;
-  List<Reference> get healthcareService;
-  List<ContactPoint> get telecom;
-  List<Reference> get endpoint;
+  List<dynamic> get network;
+  List<dynamic> get code;
+  List<dynamic> get specialty;
+  List<dynamic> get location;
+  List<dynamic> get healthcareService;
+  List<dynamic> get telecom;
+  List<dynamic> get endpoint;
   @override
   $OrganizationAffiliationCopyWith<OrganizationAffiliation> get copyWith;
 }
@@ -6470,18 +6486,18 @@ abstract class $OrganizationCopyWith<$Res> implements $Entities1CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
-      List<CodeableConcept> type,
+      List<dynamic> type,
       String name,
       List<String> alias,
-      List<ContactPoint> telecom,
-      List<Address> address,
+      List<dynamic> telecom,
+      List<dynamic> address,
       Reference partOf,
-      List<OrganizationContact> contact,
-      List<Reference> endpoint});
+      List<dynamic> contact,
+      List<dynamic> endpoint});
 }
 
 class _$OrganizationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
@@ -6502,7 +6518,7 @@ class _$OrganizationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
@@ -6528,28 +6544,25 @@ class _$OrganizationCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       active: active == freezed ? _value.active : active as bool,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+      type: type == freezed ? _value.type : type as List<dynamic>,
       name: name == freezed ? _value.name : name as String,
       alias: alias == freezed ? _value.alias : alias as List<String>,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
-      address: address == freezed ? _value.address : address as List<Address>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
+      address: address == freezed ? _value.address : address as List<dynamic>,
       partOf: partOf == freezed ? _value.partOf : partOf as Reference,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<OrganizationContact>,
+      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+          endpoint == freezed ? _value.endpoint : endpoint as List<dynamic>,
     ));
   }
 }
@@ -6564,7 +6577,7 @@ class _$Organization implements Organization {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.active,
@@ -6597,33 +6610,34 @@ class _$Organization implements Organization {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final bool active;
   @override
-  final List<CodeableConcept> type;
+  final List<dynamic> type;
   @override
   final String name;
   @override
   final List<String> alias;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
-  final List<Address> address;
+  final List<dynamic> address;
   @override
   final Reference partOf;
   @override
-  final List<OrganizationContact> contact;
+  final List<dynamic> contact;
   @override
-  final List<Reference> endpoint;
+  final List<dynamic> endpoint;
 
   @override
   String toString() {
-    return 'Entities1.organization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, type: $type, name: $name, alias: $alias, telecom: $telecom, address: $address, partOf: $partOf, contact: $contact, endpoint: $endpoint)';
+    return 'Entities1.organization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, type: $type, name: $name, alias: $alias, telecom: $telecom, address: $address, partOf: $partOf, contact: $contact, endpoint: $endpoint)';
   }
 
   @override
@@ -6648,9 +6662,9 @@ class _$Organization implements Organization {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -6691,7 +6705,7 @@ class _$Organization implements Organization {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
@@ -6720,44 +6734,44 @@ class _$Organization implements Organization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -6765,8 +6779,8 @@ class _$Organization implements Organization {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -6778,38 +6792,38 @@ class _$Organization implements Organization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -6823,20 +6837,20 @@ class _$Organization implements Organization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -6846,26 +6860,26 @@ class _$Organization implements Organization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -6876,16 +6890,16 @@ class _$Organization implements Organization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -6909,7 +6923,7 @@ class _$Organization implements Organization {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         active,
@@ -6934,50 +6948,50 @@ class _$Organization implements Organization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -6988,36 +7002,36 @@ class _$Organization implements Organization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -7030,20 +7044,20 @@ class _$Organization implements Organization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -7052,25 +7066,25 @@ class _$Organization implements Organization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -7080,16 +7094,16 @@ class _$Organization implements Organization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -7105,7 +7119,7 @@ class _$Organization implements Organization {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           active,
@@ -7193,18 +7207,18 @@ abstract class Organization implements Entities1 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
-      List<CodeableConcept> type,
+      List<dynamic> type,
       String name,
       List<String> alias,
-      List<ContactPoint> telecom,
-      List<Address> address,
+      List<dynamic> telecom,
+      List<dynamic> address,
       Reference partOf,
-      List<OrganizationContact> contact,
-      List<Reference> endpoint}) = _$Organization;
+      List<dynamic> contact,
+      List<dynamic> endpoint}) = _$Organization;
 
   factory Organization.fromJson(Map<String, dynamic> json) =
       _$Organization.fromJson;
@@ -7217,19 +7231,20 @@ abstract class Organization implements Entities1 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   bool get active;
-  List<CodeableConcept> get type;
+  List<dynamic> get type;
   String get name;
   List<String> get alias;
-  List<ContactPoint> get telecom;
-  List<Address> get address;
+  List<dynamic> get telecom;
+  List<dynamic> get address;
   Reference get partOf;
-  List<OrganizationContact> get contact;
-  List<Reference> get endpoint;
+  List<dynamic> get contact;
+  List<dynamic> get endpoint;
   @override
   $OrganizationCopyWith<Organization> get copyWith;
 }
@@ -7242,11 +7257,11 @@ abstract class $OrganizationContactCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept purpose,
       HumanName name,
-      List<ContactPoint> telecom,
+      List<dynamic> telecom,
       Address address});
 }
 
@@ -7263,7 +7278,7 @@ class _$OrganizationContactCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object purpose = freezed,
     Object name = freezed,
@@ -7272,16 +7287,15 @@ class _$OrganizationContactCopyWithImpl<$Res>
   }) {
     return _then(OrganizationContact(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       purpose: purpose == freezed ? _value.purpose : purpose as CodeableConcept,
       name: name == freezed ? _value.name : name as HumanName,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
       address: address == freezed ? _value.address : address as Address,
     ));
   }
@@ -7291,7 +7305,7 @@ class _$OrganizationContactCopyWithImpl<$Res>
 class _$OrganizationContact implements OrganizationContact {
   const _$OrganizationContact(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.purpose,
       this.name,
@@ -7304,21 +7318,22 @@ class _$OrganizationContact implements OrganizationContact {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept purpose;
   @override
   final HumanName name;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
   final Address address;
 
   @override
   String toString() {
-    return 'Entities1.organizationContact(id: $id, extension: $extension, modifierExtension: $modifierExtension, purpose: $purpose, name: $name, telecom: $telecom, address: $address)';
+    return 'Entities1.organizationContact(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, purpose: $purpose, name: $name, telecom: $telecom, address: $address)';
   }
 
   @override
@@ -7327,9 +7342,9 @@ class _$OrganizationContact implements OrganizationContact {
         (other is OrganizationContact &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -7349,7 +7364,7 @@ class _$OrganizationContact implements OrganizationContact {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(purpose) ^
       const DeepCollectionEquality().hash(name) ^
@@ -7372,44 +7387,44 @@ class _$OrganizationContact implements OrganizationContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -7417,8 +7432,8 @@ class _$OrganizationContact implements OrganizationContact {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -7430,38 +7445,38 @@ class _$OrganizationContact implements OrganizationContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -7475,20 +7490,20 @@ class _$OrganizationContact implements OrganizationContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -7498,26 +7513,26 @@ class _$OrganizationContact implements OrganizationContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -7528,16 +7543,16 @@ class _$OrganizationContact implements OrganizationContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -7554,7 +7569,7 @@ class _$OrganizationContact implements OrganizationContact {
     assert(organizationContact != null);
     assert(endpoint != null);
     return organizationContact(
-        id, extension, modifierExtension, purpose, name, telecom, address);
+        id, fhirExtension, modifierExtension, purpose, name, telecom, address);
   }
 
   @override
@@ -7568,50 +7583,50 @@ class _$OrganizationContact implements OrganizationContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -7622,36 +7637,36 @@ class _$OrganizationContact implements OrganizationContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -7664,20 +7679,20 @@ class _$OrganizationContact implements OrganizationContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -7686,25 +7701,25 @@ class _$OrganizationContact implements OrganizationContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -7714,16 +7729,16 @@ class _$OrganizationContact implements OrganizationContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -7731,8 +7746,8 @@ class _$OrganizationContact implements OrganizationContact {
   }) {
     assert(orElse != null);
     if (organizationContact != null) {
-      return organizationContact(
-          id, extension, modifierExtension, purpose, name, telecom, address);
+      return organizationContact(id, fhirExtension, modifierExtension, purpose,
+          name, telecom, address);
     }
     return orElse();
   }
@@ -7804,11 +7819,11 @@ class _$OrganizationContact implements OrganizationContact {
 abstract class OrganizationContact implements Entities1 {
   const factory OrganizationContact(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept purpose,
       HumanName name,
-      List<ContactPoint> telecom,
+      List<dynamic> telecom,
       Address address}) = _$OrganizationContact;
 
   factory OrganizationContact.fromJson(Map<String, dynamic> json) =
@@ -7816,12 +7831,13 @@ abstract class OrganizationContact implements Entities1 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get purpose;
   HumanName get name;
-  List<ContactPoint> get telecom;
+  List<dynamic> get telecom;
   Address get address;
   @override
   $OrganizationContactCopyWith<OrganizationContact> get copyWith;
@@ -7839,16 +7855,16 @@ abstract class $EndpointCopyWith<$Res> implements $Entities1CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       EndpointStatus status,
       Coding connectionType,
       String name,
       Reference managingOrganization,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Period period,
-      List<CodeableConcept> payloadType,
+      List<dynamic> payloadType,
       List<Code> payloadMimeType,
       FhirUrl address,
       List<String> header});
@@ -7871,7 +7887,7 @@ class _$EndpointCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
@@ -7898,15 +7914,15 @@ class _$EndpointCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as EndpointStatus,
       connectionType: connectionType == freezed
           ? _value.connectionType
@@ -7915,12 +7931,11 @@ class _$EndpointCopyWithImpl<$Res> extends _$Entities1CopyWithImpl<$Res>
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>,
+      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       period: period == freezed ? _value.period : period as Period,
       payloadType: payloadType == freezed
           ? _value.payloadType
-          : payloadType as List<CodeableConcept>,
+          : payloadType as List<dynamic>,
       payloadMimeType: payloadMimeType == freezed
           ? _value.payloadMimeType
           : payloadMimeType as List<Code>,
@@ -7940,7 +7955,7 @@ class _$Endpoint implements Endpoint {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.status,
@@ -7974,11 +7989,12 @@ class _$Endpoint implements Endpoint {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final EndpointStatus status;
   @override
@@ -7988,11 +8004,11 @@ class _$Endpoint implements Endpoint {
   @override
   final Reference managingOrganization;
   @override
-  final List<ContactPoint> contact;
+  final List<dynamic> contact;
   @override
   final Period period;
   @override
-  final List<CodeableConcept> payloadType;
+  final List<dynamic> payloadType;
   @override
   final List<Code> payloadMimeType;
   @override
@@ -8002,7 +8018,7 @@ class _$Endpoint implements Endpoint {
 
   @override
   String toString() {
-    return 'Entities1.endpoint(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, connectionType: $connectionType, name: $name, managingOrganization: $managingOrganization, contact: $contact, period: $period, payloadType: $payloadType, payloadMimeType: $payloadMimeType, address: $address, header: $header)';
+    return 'Entities1.endpoint(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, connectionType: $connectionType, name: $name, managingOrganization: $managingOrganization, contact: $contact, period: $period, payloadType: $payloadType, payloadMimeType: $payloadMimeType, address: $address, header: $header)';
   }
 
   @override
@@ -8027,9 +8043,9 @@ class _$Endpoint implements Endpoint {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -8074,7 +8090,7 @@ class _$Endpoint implements Endpoint {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
@@ -8104,44 +8120,44 @@ class _$Endpoint implements Endpoint {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference providedBy,
-            List<CodeableConcept> category,
-            List<CodeableConcept> type,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
+            List<dynamic> category,
+            List<dynamic> type,
+            List<dynamic> specialty,
+            List<dynamic> location,
             String name,
             String comment,
             Markdown extraDetails,
             Attachment photo,
-            List<ContactPoint> telecom,
-            List<Reference> coverageArea,
-            List<CodeableConcept> serviceProvisionCode,
-            List<HealthcareServiceEligibility> eligibility,
-            List<CodeableConcept> program,
-            List<CodeableConcept> characteristic,
-            List<CodeableConcept> communication,
-            List<CodeableConcept> referralMethod,
+            List<dynamic> telecom,
+            List<dynamic> coverageArea,
+            List<dynamic> serviceProvisionCode,
+            List<dynamic> eligibility,
+            List<dynamic> program,
+            List<dynamic> characteristic,
+            List<dynamic> communication,
+            List<dynamic> referralMethod,
             bool appointmentRequired,
-            List<HealthcareServiceAvailableTime> availableTime,
-            List<HealthcareServiceNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result healthcareServiceEligibility(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             Markdown comment),
     @required
         Result healthcareServiceAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<String> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -8149,8 +8165,8 @@ class _$Endpoint implements Endpoint {
     @required
         Result healthcareServiceNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -8162,38 +8178,38 @@ class _$Endpoint implements Endpoint {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             LocationStatus status,
             Coding operationalStatus,
             String name,
             List<String> alias,
             String description,
             LocationMode mode,
-            List<CodeableConcept> type,
-            List<ContactPoint> telecom,
+            List<dynamic> type,
+            List<dynamic> telecom,
             Address address,
             CodeableConcept physicalType,
             LocationPosition position,
             Reference managingOrganization,
             Reference partOf,
-            List<LocationHoursOfOperation> hoursOfOperation,
+            List<dynamic> hoursOfOperation,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result locationPosition(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             double longitude,
             double latitude,
             double altitude),
     @required
         Result locationHoursOfOperation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time openingTime,
@@ -8207,20 +8223,20 @@ class _$Endpoint implements Endpoint {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference organization,
             Reference participatingOrganization,
-            List<Reference> network,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<Reference> endpoint),
+            List<dynamic> network,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> endpoint),
     @required
         Result organization(
             String resourceType,
@@ -8230,26 +8246,26 @@ class _$Endpoint implements Endpoint {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             String name,
             List<String> alias,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> telecom,
+            List<dynamic> address,
             Reference partOf,
-            List<OrganizationContact> contact,
-            List<Reference> endpoint),
+            List<dynamic> contact,
+            List<dynamic> endpoint),
     @required
         Result organizationContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept purpose,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address),
     @required
         Result endpoint(
@@ -8260,16 +8276,16 @@ class _$Endpoint implements Endpoint {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EndpointStatus status,
             Coding connectionType,
             String name,
             Reference managingOrganization,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Period period,
-            List<CodeableConcept> payloadType,
+            List<dynamic> payloadType,
             List<Code> payloadMimeType,
             FhirUrl address,
             List<String> header),
@@ -8293,7 +8309,7 @@ class _$Endpoint implements Endpoint {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         status,
@@ -8319,50 +8335,50 @@ class _$Endpoint implements Endpoint {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference providedBy,
-        List<CodeableConcept> category,
-        List<CodeableConcept> type,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
+        List<dynamic> category,
+        List<dynamic> type,
+        List<dynamic> specialty,
+        List<dynamic> location,
         String name,
         String comment,
         Markdown extraDetails,
         Attachment photo,
-        List<ContactPoint> telecom,
-        List<Reference> coverageArea,
-        List<CodeableConcept> serviceProvisionCode,
-        List<HealthcareServiceEligibility> eligibility,
-        List<CodeableConcept> program,
-        List<CodeableConcept> characteristic,
-        List<CodeableConcept> communication,
-        List<CodeableConcept> referralMethod,
+        List<dynamic> telecom,
+        List<dynamic> coverageArea,
+        List<dynamic> serviceProvisionCode,
+        List<dynamic> eligibility,
+        List<dynamic> program,
+        List<dynamic> characteristic,
+        List<dynamic> communication,
+        List<dynamic> referralMethod,
         bool appointmentRequired,
-        List<HealthcareServiceAvailableTime> availableTime,
-        List<HealthcareServiceNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result healthcareServiceEligibility(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         Markdown comment),
     Result healthcareServiceAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<String> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result healthcareServiceNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result location(
@@ -8373,36 +8389,36 @@ class _$Endpoint implements Endpoint {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         LocationStatus status,
         Coding operationalStatus,
         String name,
         List<String> alias,
         String description,
         LocationMode mode,
-        List<CodeableConcept> type,
-        List<ContactPoint> telecom,
+        List<dynamic> type,
+        List<dynamic> telecom,
         Address address,
         CodeableConcept physicalType,
         LocationPosition position,
         Reference managingOrganization,
         Reference partOf,
-        List<LocationHoursOfOperation> hoursOfOperation,
+        List<dynamic> hoursOfOperation,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result locationPosition(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         double longitude,
         double latitude,
         double altitude),
     Result locationHoursOfOperation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time openingTime,
@@ -8415,20 +8431,20 @@ class _$Endpoint implements Endpoint {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference organization,
         Reference participatingOrganization,
-        List<Reference> network,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<Reference> endpoint),
+        List<dynamic> network,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> endpoint),
     Result organization(
         String resourceType,
         Id id,
@@ -8437,25 +8453,25 @@ class _$Endpoint implements Endpoint {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         String name,
         List<String> alias,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> telecom,
+        List<dynamic> address,
         Reference partOf,
-        List<OrganizationContact> contact,
-        List<Reference> endpoint),
+        List<dynamic> contact,
+        List<dynamic> endpoint),
     Result organizationContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept purpose,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address),
     Result endpoint(
         String resourceType,
@@ -8465,16 +8481,16 @@ class _$Endpoint implements Endpoint {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EndpointStatus status,
         Coding connectionType,
         String name,
         Reference managingOrganization,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Period period,
-        List<CodeableConcept> payloadType,
+        List<dynamic> payloadType,
         List<Code> payloadMimeType,
         FhirUrl address,
         List<String> header),
@@ -8490,7 +8506,7 @@ class _$Endpoint implements Endpoint {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           status,
@@ -8579,16 +8595,16 @@ abstract class Endpoint implements Entities1 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       EndpointStatus status,
       Coding connectionType,
       String name,
       Reference managingOrganization,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Period period,
-      List<CodeableConcept> payloadType,
+      List<dynamic> payloadType,
       List<Code> payloadMimeType,
       FhirUrl address,
       List<String> header}) = _$Endpoint;
@@ -8603,17 +8619,18 @@ abstract class Endpoint implements Entities1 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   EndpointStatus get status;
   Coding get connectionType;
   String get name;
   Reference get managingOrganization;
-  List<ContactPoint> get contact;
+  List<dynamic> get contact;
   Period get period;
-  List<CodeableConcept> get payloadType;
+  List<dynamic> get payloadType;
   List<Code> get payloadMimeType;
   FhirUrl get address;
   List<String> get header;

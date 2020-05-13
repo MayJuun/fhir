@@ -9,16 +9,9 @@ part of 'metadata_types.dart';
 _$ContactDetail _$_$ContactDetailFromJson(Map<String, dynamic> json) {
   return _$ContactDetail(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
     name: json['name'] as String,
-    telecom: (json['telecom'] as List)
-        ?.map((e) =>
-            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    telecom: json['telecom'] as List,
   );
 }
 
@@ -33,18 +26,10 @@ Map<String, dynamic> _$_$ContactDetailToJson(_$ContactDetail instance) =>
 _$Contributor _$_$ContributorFromJson(Map<String, dynamic> json) {
   return _$Contributor(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
     type: _$enumDecodeNullable(_$ContributorTypeEnumMap, json['type']),
     name: json['name'] as String,
-    contact: (json['contact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contact: json['contact'] as List,
   );
 }
 
@@ -100,11 +85,7 @@ const _$ContributorTypeEnumMap = {
 _$DataRequirement _$_$DataRequirementFromJson(Map<String, dynamic> json) {
   return _$DataRequirement(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     profile: (json['profile'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
@@ -118,22 +99,10 @@ _$DataRequirement _$_$DataRequirementFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['subjectReference'] as Map<String, dynamic>),
     mustSupport:
         (json['mustSupport'] as List)?.map((e) => e as String)?.toList(),
-    codeFilter: (json['codeFilter'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DataRequirementCodeFilter.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    dateFilter: (json['dateFilter'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DataRequirementDateFilter.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    codeFilter: json['codeFilter'] as List,
+    dateFilter: json['dateFilter'] as List,
     limit: json['limit'] as int,
-    sort: (json['sort'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DataRequirementSort.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    sort: json['sort'] as List,
   );
 }
 
@@ -156,25 +125,14 @@ _$DataRequirementCodeFilter _$_$DataRequirementCodeFilterFromJson(
     Map<String, dynamic> json) {
   return _$DataRequirementCodeFilter(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     path: json['path'] as String,
     searchParam: json['searchParam'] as String,
     valueSet: json['valueSet'] == null
         ? null
         : Canonical.fromJson(json['valueSet'] as String),
-    code: (json['code'] as List)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    code: json['code'] as List,
   );
 }
 
@@ -194,16 +152,8 @@ _$DataRequirementDateFilter _$_$DataRequirementDateFilterFromJson(
     Map<String, dynamic> json) {
   return _$DataRequirementDateFilter(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     path: json['path'] as String,
     searchParam: json['searchParam'] as String,
     valueDateTime: json['valueDateTime'] == null
@@ -235,16 +185,8 @@ _$DataRequirementSort _$_$DataRequirementSortFromJson(
     Map<String, dynamic> json) {
   return _$DataRequirementSort(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     path: json['path'] as String,
     direction: _$enumDecodeNullable(
         _$DataRequirementSortDirectionEnumMap, json['direction']),
@@ -270,11 +212,7 @@ const _$DataRequirementSortDirectionEnumMap = {
 _$Expression _$_$ExpressionFromJson(Map<String, dynamic> json) {
   return _$Expression(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
     description: json['description'] as String,
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
     language:
@@ -308,11 +246,7 @@ _$ParameterDefinition _$_$ParameterDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$ParameterDefinition(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
     name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
     use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
     min: json['min'] as int,
@@ -342,11 +276,7 @@ Map<String, dynamic> _$_$ParameterDefinitionToJson(
 _$RelatedArtifact _$_$RelatedArtifactFromJson(Map<String, dynamic> json) {
   return _$RelatedArtifact(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
     type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type']),
     label: json['label'] as String,
     display: json['display'] as String,
@@ -391,11 +321,7 @@ const _$RelatedArtifactTypeEnumMap = {
 _$TriggerDefinition _$_$TriggerDefinitionFromJson(Map<String, dynamic> json) {
   return _$TriggerDefinition(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
     type: _$enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type']),
     name: json['name'] as String,
     timingTiming: json['timingTiming'] == null
@@ -410,11 +336,7 @@ _$TriggerDefinition _$_$TriggerDefinitionFromJson(Map<String, dynamic> json) {
     timingDateTime: json['timingDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['timingDateTime'] as String),
-    data: (json['data'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DataRequirement.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    data: json['data'] as List,
     condition: json['condition'] == null
         ? null
         : Expression.fromJson(json['condition'] as Map<String, dynamic>),
@@ -451,11 +373,7 @@ const _$TriggerDefinitionTypeEnumMap = {
 _$UsageContext _$_$UsageContextFromJson(Map<String, dynamic> json) {
   return _$UsageContext(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
     code: json['code'] == null
         ? null
         : Coding.fromJson(json['code'] as Map<String, dynamic>),

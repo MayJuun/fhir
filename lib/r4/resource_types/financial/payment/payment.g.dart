@@ -23,20 +23,9 @@ _$PaymentNotice _$_$PaymentNoticeFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     request: json['request'] == null
@@ -82,7 +71,7 @@ Map<String, dynamic> _$_$PaymentNoticeToJson(_$PaymentNotice instance) =>
       'language': instance.language,
       'text': instance.text,
       'contained': instance.contained,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'status': instance.status,
@@ -116,20 +105,9 @@ _$PaymentReconciliation _$_$PaymentReconciliationFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     period: json['period'] == null
@@ -160,20 +138,11 @@ _$PaymentReconciliation _$_$PaymentReconciliationFromJson(
         ? null
         : Identifier.fromJson(
             json['paymentIdentifier'] as Map<String, dynamic>),
-    detail: (json['detail'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PaymentReconciliationDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    detail: json['detail'] as List,
     formCode: json['formCode'] == null
         ? null
         : CodeableConcept.fromJson(json['formCode'] as Map<String, dynamic>),
-    processNote: (json['processNote'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PaymentReconciliationProcessNote.fromJson(
-                e as Map<String, dynamic>))
-        ?.toList(),
+    processNote: json['processNote'] as List,
   );
 }
 
@@ -187,7 +156,7 @@ Map<String, dynamic> _$_$PaymentReconciliationToJson(
       'language': instance.language,
       'text': instance.text,
       'contained': instance.contained,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'status': instance.status,
@@ -250,16 +219,8 @@ _$PaymentReconciliationDetail _$_$PaymentReconciliationDetailFromJson(
     Map<String, dynamic> json) {
   return _$PaymentReconciliationDetail(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -295,7 +256,7 @@ Map<String, dynamic> _$_$PaymentReconciliationDetailToJson(
         _$PaymentReconciliationDetail instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'identifier': instance.identifier,
       'predecessor': instance.predecessor,
@@ -313,16 +274,8 @@ _$PaymentReconciliationProcessNote _$_$PaymentReconciliationProcessNoteFromJson(
     Map<String, dynamic> json) {
   return _$PaymentReconciliationProcessNote(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    fhirExtension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: _$enumDecodeNullable(
         _$PaymentReconciliationProcessNoteTypeEnumMap, json['type']),
     text: json['text'] as String,
@@ -333,7 +286,7 @@ Map<String, dynamic> _$_$PaymentReconciliationProcessNoteToJson(
         _$PaymentReconciliationProcessNote instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'extension': instance.extension,
+      'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
       'type': _$PaymentReconciliationProcessNoteTypeEnumMap[instance.type],
       'text': instance.text,

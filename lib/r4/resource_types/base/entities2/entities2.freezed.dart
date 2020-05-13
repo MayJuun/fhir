@@ -59,15 +59,15 @@ class _$Entities2TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       SubstanceStatus status,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept code,
       String description,
-      List<SubstanceInstance> instance,
-      List<SubstanceIngredient> ingredient}) {
+      List<dynamic> instance,
+      List<dynamic> ingredient}) {
     return Substance(
       resourceType: resourceType,
       id: id,
@@ -76,7 +76,7 @@ class _$Entities2TearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
@@ -90,14 +90,14 @@ class _$Entities2TearOff {
 
   SubstanceInstance substanceInstance(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       FhirDateTime expiry,
       Quantity quantity}) {
     return SubstanceInstance(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       expiry: expiry,
@@ -107,14 +107,14 @@ class _$Entities2TearOff {
 
   SubstanceIngredient substanceIngredient(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Ratio quantity,
       CodeableConcept substanceCodeableConcept,
       Reference substanceReference}) {
     return SubstanceIngredient(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       quantity: quantity,
       substanceCodeableConcept: substanceCodeableConcept,
@@ -130,19 +130,19 @@ class _$Entities2TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
-      List<Reference> request,
+      List<dynamic> request,
       int quantity,
-      List<Reference> parent,
+      List<dynamic> parent,
       BiologicallyDerivedProductCollection collection,
-      List<BiologicallyDerivedProductProcessing> processing,
+      List<dynamic> processing,
       BiologicallyDerivedProductManipulation manipulation,
-      List<BiologicallyDerivedProductStorage> storage}) {
+      List<dynamic> storage}) {
     return BiologicallyDerivedProduct(
       resourceType: resourceType,
       id: id,
@@ -151,7 +151,7 @@ class _$Entities2TearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       productCategory: productCategory,
@@ -169,15 +169,15 @@ class _$Entities2TearOff {
 
   BiologicallyDerivedProductCollection biologicallyDerivedProductCollection(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference collector,
       Reference source,
       FhirDateTime collectedDateTime,
       Period collectedPeriod}) {
     return BiologicallyDerivedProductCollection(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       collector: collector,
       source: source,
@@ -188,8 +188,8 @@ class _$Entities2TearOff {
 
   BiologicallyDerivedProductProcessing biologicallyDerivedProductProcessing(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       CodeableConcept procedure,
       Reference additive,
@@ -197,7 +197,7 @@ class _$Entities2TearOff {
       Period timePeriod}) {
     return BiologicallyDerivedProductProcessing(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       description: description,
       procedure: procedure,
@@ -209,14 +209,14 @@ class _$Entities2TearOff {
 
   BiologicallyDerivedProductManipulation biologicallyDerivedProductManipulation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       FhirDateTime timeDateTime,
       Period timePeriod}) {
     return BiologicallyDerivedProductManipulation(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       description: description,
       timeDateTime: timeDateTime,
@@ -226,15 +226,15 @@ class _$Entities2TearOff {
 
   BiologicallyDerivedProductStorage biologicallyDerivedProductStorage(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       double temperature,
       BiologicallyDerivedProductStorageScale scale,
       Period duration}) {
     return BiologicallyDerivedProductStorage(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       description: description,
       temperature: temperature,
@@ -251,33 +251,33 @@ class _$Entities2TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Reference definition,
-      List<DeviceUdiCarrier> udiCarrier,
+      List<dynamic> udiCarrier,
       DeviceStatus status,
-      List<CodeableConcept> statusReason,
+      List<dynamic> statusReason,
       String distinctIdentifier,
       String manufacturer,
       FhirDateTime manufactureDate,
       FhirDateTime expirationDate,
       String lotNumber,
       String serialNumber,
-      List<DeviceDeviceName> deviceName,
+      List<dynamic> deviceName,
       String modelNumber,
       String partNumber,
       CodeableConcept type,
-      List<DeviceSpecialization> specialization,
-      List<DeviceVersion> version,
-      List<DeviceProperty> property,
+      List<dynamic> specialization,
+      List<dynamic> version,
+      List<dynamic> property,
       Reference patient,
       Reference owner,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Reference location,
       FhirUri url,
-      List<Annotation> note,
-      List<CodeableConcept> safety,
+      List<dynamic> note,
+      List<dynamic> safety,
       Reference parent}) {
     return Device(
       resourceType: resourceType,
@@ -287,7 +287,7 @@ class _$Entities2TearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       definition: definition,
@@ -320,8 +320,8 @@ class _$Entities2TearOff {
 
   DeviceUdiCarrier deviceUdiCarrier(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String deviceIdentifier,
       FhirUri issuer,
       FhirUri jurisdiction,
@@ -330,7 +330,7 @@ class _$Entities2TearOff {
       DeviceUdiCarrierEntryType entryType}) {
     return DeviceUdiCarrier(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       deviceIdentifier: deviceIdentifier,
       issuer: issuer,
@@ -343,13 +343,13 @@ class _$Entities2TearOff {
 
   DeviceDeviceName deviceDeviceName(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       DeviceDeviceNameType type}) {
     return DeviceDeviceName(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       name: name,
       type: type,
@@ -358,13 +358,13 @@ class _$Entities2TearOff {
 
   DeviceSpecialization deviceSpecialization(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept systemType,
       String version}) {
     return DeviceSpecialization(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       systemType: systemType,
       version: version,
@@ -373,14 +373,14 @@ class _$Entities2TearOff {
 
   DeviceVersion deviceVersion(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
       Identifier component,
       String value}) {
     return DeviceVersion(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       type: type,
       component: component,
@@ -390,14 +390,14 @@ class _$Entities2TearOff {
 
   DeviceProperty deviceProperty(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<Quantity> valueQuantity,
-      List<CodeableConcept> valueCode}) {
+      List<dynamic> valueQuantity,
+      List<dynamic> valueCode}) {
     return DeviceProperty(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       type: type,
       valueQuantity: valueQuantity,
@@ -413,9 +413,9 @@ class _$Entities2TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
@@ -424,7 +424,7 @@ class _$Entities2TearOff {
       DeviceMetricColor color,
       DeviceMetricCategory category,
       Timing measurementPeriod,
-      List<DeviceMetricCalibration> calibration}) {
+      List<dynamic> calibration}) {
     return DeviceMetric(
       resourceType: resourceType,
       id: id,
@@ -433,7 +433,7 @@ class _$Entities2TearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       type: type,
@@ -450,14 +450,14 @@ class _$Entities2TearOff {
 
   DeviceMetricCalibration deviceMetricCalibration(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       DeviceMetricCalibrationType type,
       DeviceMetricCalibrationState state,
       Instant time}) {
     return DeviceMetricCalibration(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       type: type,
       state: state,
@@ -470,8 +470,9 @@ class _$Entities2TearOff {
 const $Entities2 = _$Entities2TearOff();
 
 mixin _$Entities2 {
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -484,28 +485,28 @@ mixin _$Entities2 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -518,24 +519,24 @@ mixin _$Entities2 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -543,8 +544,8 @@ mixin _$Entities2 {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -553,16 +554,16 @@ mixin _$Entities2 {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -576,39 +577,39 @@ mixin _$Entities2 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -618,33 +619,33 @@ mixin _$Entities2 {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -654,9 +655,9 @@ mixin _$Entities2 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -665,12 +666,12 @@ mixin _$Entities2 {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -685,26 +686,26 @@ mixin _$Entities2 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -716,31 +717,31 @@ mixin _$Entities2 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -748,15 +749,15 @@ mixin _$Entities2 {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -769,38 +770,38 @@ mixin _$Entities2 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -809,30 +810,30 @@ mixin _$Entities2 {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -841,9 +842,9 @@ mixin _$Entities2 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -852,11 +853,11 @@ mixin _$Entities2 {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -922,7 +923,8 @@ abstract class $Entities2CopyWith<$Res> {
   factory $Entities2CopyWith(Entities2 value, $Res Function(Entities2) then) =
       _$Entities2CopyWithImpl<$Res>;
   $Res call(
-      {List<FhirExtension> extension, List<FhirExtension> modifierExtension});
+      {@JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension});
 }
 
 class _$Entities2CopyWithImpl<$Res> implements $Entities2CopyWith<$Res> {
@@ -934,16 +936,16 @@ class _$Entities2CopyWithImpl<$Res> implements $Entities2CopyWith<$Res> {
 
   @override
   $Res call({
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
     ));
   }
 }
@@ -960,15 +962,15 @@ abstract class $SubstanceCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       SubstanceStatus status,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept code,
       String description,
-      List<SubstanceInstance> instance,
-      List<SubstanceIngredient> ingredient});
+      List<dynamic> instance,
+      List<dynamic> ingredient});
 }
 
 class _$SubstanceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
@@ -988,7 +990,7 @@ class _$SubstanceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
@@ -1011,28 +1013,26 @@ class _$SubstanceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as SubstanceStatus,
-      category: category == freezed
-          ? _value.category
-          : category as List<CodeableConcept>,
+      category:
+          category == freezed ? _value.category : category as List<dynamic>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String,
-      instance: instance == freezed
-          ? _value.instance
-          : instance as List<SubstanceInstance>,
+      instance:
+          instance == freezed ? _value.instance : instance as List<dynamic>,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as List<SubstanceIngredient>,
+          : ingredient as List<dynamic>,
     ));
   }
 }
@@ -1047,7 +1047,7 @@ class _$Substance implements Substance {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.status,
@@ -1075,27 +1075,28 @@ class _$Substance implements Substance {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final SubstanceStatus status;
   @override
-  final List<CodeableConcept> category;
+  final List<dynamic> category;
   @override
   final CodeableConcept code;
   @override
   final String description;
   @override
-  final List<SubstanceInstance> instance;
+  final List<dynamic> instance;
   @override
-  final List<SubstanceIngredient> ingredient;
+  final List<dynamic> ingredient;
 
   @override
   String toString() {
-    return 'Entities2.substance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, code: $code, description: $description, instance: $instance, ingredient: $ingredient)';
+    return 'Entities2.substance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, code: $code, description: $description, instance: $instance, ingredient: $ingredient)';
   }
 
   @override
@@ -1120,9 +1121,9 @@ class _$Substance implements Substance {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -1157,7 +1158,7 @@ class _$Substance implements Substance {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
@@ -1183,28 +1184,28 @@ class _$Substance implements Substance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -1217,24 +1218,24 @@ class _$Substance implements Substance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -1242,8 +1243,8 @@ class _$Substance implements Substance {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -1252,16 +1253,16 @@ class _$Substance implements Substance {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -1275,39 +1276,39 @@ class _$Substance implements Substance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -1317,33 +1318,33 @@ class _$Substance implements Substance {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -1353,9 +1354,9 @@ class _$Substance implements Substance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -1364,12 +1365,12 @@ class _$Substance implements Substance {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -1398,7 +1399,7 @@ class _$Substance implements Substance {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         status,
@@ -1420,26 +1421,26 @@ class _$Substance implements Substance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -1451,31 +1452,31 @@ class _$Substance implements Substance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -1483,15 +1484,15 @@ class _$Substance implements Substance {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -1504,38 +1505,38 @@ class _$Substance implements Substance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -1544,30 +1545,30 @@ class _$Substance implements Substance {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -1576,9 +1577,9 @@ class _$Substance implements Substance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -1587,11 +1588,11 @@ class _$Substance implements Substance {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -1607,7 +1608,7 @@ class _$Substance implements Substance {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           status,
@@ -1715,15 +1716,15 @@ abstract class Substance implements Entities2 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       SubstanceStatus status,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept code,
       String description,
-      List<SubstanceInstance> instance,
-      List<SubstanceIngredient> ingredient}) = _$Substance;
+      List<dynamic> instance,
+      List<dynamic> ingredient}) = _$Substance;
 
   factory Substance.fromJson(Map<String, dynamic> json) = _$Substance.fromJson;
 
@@ -1735,16 +1736,17 @@ abstract class Substance implements Entities2 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   SubstanceStatus get status;
-  List<CodeableConcept> get category;
+  List<dynamic> get category;
   CodeableConcept get code;
   String get description;
-  List<SubstanceInstance> get instance;
-  List<SubstanceIngredient> get ingredient;
+  List<dynamic> get instance;
+  List<dynamic> get ingredient;
   @override
   $SubstanceCopyWith<Substance> get copyWith;
 }
@@ -1757,8 +1759,8 @@ abstract class $SubstanceInstanceCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       FhirDateTime expiry,
       Quantity quantity});
@@ -1777,7 +1779,7 @@ class _$SubstanceInstanceCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object expiry = freezed,
@@ -1785,12 +1787,12 @@ class _$SubstanceInstanceCopyWithImpl<$Res>
   }) {
     return _then(SubstanceInstance(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
@@ -1803,7 +1805,7 @@ class _$SubstanceInstanceCopyWithImpl<$Res>
 class _$SubstanceInstance implements SubstanceInstance {
   const _$SubstanceInstance(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.expiry,
@@ -1815,9 +1817,10 @@ class _$SubstanceInstance implements SubstanceInstance {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Identifier identifier;
   @override
@@ -1827,7 +1830,7 @@ class _$SubstanceInstance implements SubstanceInstance {
 
   @override
   String toString() {
-    return 'Entities2.substanceInstance(id: $id, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, expiry: $expiry, quantity: $quantity)';
+    return 'Entities2.substanceInstance(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, expiry: $expiry, quantity: $quantity)';
   }
 
   @override
@@ -1836,9 +1839,9 @@ class _$SubstanceInstance implements SubstanceInstance {
         (other is SubstanceInstance &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -1856,7 +1859,7 @@ class _$SubstanceInstance implements SubstanceInstance {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(expiry) ^
@@ -1878,28 +1881,28 @@ class _$SubstanceInstance implements SubstanceInstance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -1912,24 +1915,24 @@ class _$SubstanceInstance implements SubstanceInstance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -1937,8 +1940,8 @@ class _$SubstanceInstance implements SubstanceInstance {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -1947,16 +1950,16 @@ class _$SubstanceInstance implements SubstanceInstance {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -1970,39 +1973,39 @@ class _$SubstanceInstance implements SubstanceInstance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -2012,33 +2015,33 @@ class _$SubstanceInstance implements SubstanceInstance {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -2048,9 +2051,9 @@ class _$SubstanceInstance implements SubstanceInstance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -2059,12 +2062,12 @@ class _$SubstanceInstance implements SubstanceInstance {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -2086,7 +2089,7 @@ class _$SubstanceInstance implements SubstanceInstance {
     assert(deviceMetric != null);
     assert(deviceMetricCalibration != null);
     return substanceInstance(
-        id, extension, modifierExtension, identifier, expiry, quantity);
+        id, fhirExtension, modifierExtension, identifier, expiry, quantity);
   }
 
   @override
@@ -2100,26 +2103,26 @@ class _$SubstanceInstance implements SubstanceInstance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -2131,31 +2134,31 @@ class _$SubstanceInstance implements SubstanceInstance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -2163,15 +2166,15 @@ class _$SubstanceInstance implements SubstanceInstance {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -2184,38 +2187,38 @@ class _$SubstanceInstance implements SubstanceInstance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -2224,30 +2227,30 @@ class _$SubstanceInstance implements SubstanceInstance {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -2256,9 +2259,9 @@ class _$SubstanceInstance implements SubstanceInstance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -2267,11 +2270,11 @@ class _$SubstanceInstance implements SubstanceInstance {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -2280,7 +2283,7 @@ class _$SubstanceInstance implements SubstanceInstance {
     assert(orElse != null);
     if (substanceInstance != null) {
       return substanceInstance(
-          id, extension, modifierExtension, identifier, expiry, quantity);
+          id, fhirExtension, modifierExtension, identifier, expiry, quantity);
     }
     return orElse();
   }
@@ -2375,8 +2378,8 @@ class _$SubstanceInstance implements SubstanceInstance {
 abstract class SubstanceInstance implements Entities2 {
   const factory SubstanceInstance(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       FhirDateTime expiry,
       Quantity quantity}) = _$SubstanceInstance;
@@ -2386,9 +2389,10 @@ abstract class SubstanceInstance implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Identifier get identifier;
   FhirDateTime get expiry;
   Quantity get quantity;
@@ -2404,8 +2408,8 @@ abstract class $SubstanceIngredientCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Ratio quantity,
       CodeableConcept substanceCodeableConcept,
       Reference substanceReference});
@@ -2424,7 +2428,7 @@ class _$SubstanceIngredientCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object quantity = freezed,
     Object substanceCodeableConcept = freezed,
@@ -2432,12 +2436,12 @@ class _$SubstanceIngredientCopyWithImpl<$Res>
   }) {
     return _then(SubstanceIngredient(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       quantity: quantity == freezed ? _value.quantity : quantity as Ratio,
       substanceCodeableConcept: substanceCodeableConcept == freezed
           ? _value.substanceCodeableConcept
@@ -2453,7 +2457,7 @@ class _$SubstanceIngredientCopyWithImpl<$Res>
 class _$SubstanceIngredient implements SubstanceIngredient {
   const _$SubstanceIngredient(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.quantity,
       this.substanceCodeableConcept,
@@ -2465,9 +2469,10 @@ class _$SubstanceIngredient implements SubstanceIngredient {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Ratio quantity;
   @override
@@ -2477,7 +2482,7 @@ class _$SubstanceIngredient implements SubstanceIngredient {
 
   @override
   String toString() {
-    return 'Entities2.substanceIngredient(id: $id, extension: $extension, modifierExtension: $modifierExtension, quantity: $quantity, substanceCodeableConcept: $substanceCodeableConcept, substanceReference: $substanceReference)';
+    return 'Entities2.substanceIngredient(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, quantity: $quantity, substanceCodeableConcept: $substanceCodeableConcept, substanceReference: $substanceReference)';
   }
 
   @override
@@ -2486,9 +2491,9 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         (other is SubstanceIngredient &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -2509,7 +2514,7 @@ class _$SubstanceIngredient implements SubstanceIngredient {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(quantity) ^
       const DeepCollectionEquality().hash(substanceCodeableConcept) ^
@@ -2531,28 +2536,28 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -2565,24 +2570,24 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -2590,8 +2595,8 @@ class _$SubstanceIngredient implements SubstanceIngredient {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -2600,16 +2605,16 @@ class _$SubstanceIngredient implements SubstanceIngredient {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -2623,39 +2628,39 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -2665,33 +2670,33 @@ class _$SubstanceIngredient implements SubstanceIngredient {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -2701,9 +2706,9 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -2712,12 +2717,12 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -2738,7 +2743,7 @@ class _$SubstanceIngredient implements SubstanceIngredient {
     assert(deviceProperty != null);
     assert(deviceMetric != null);
     assert(deviceMetricCalibration != null);
-    return substanceIngredient(id, extension, modifierExtension, quantity,
+    return substanceIngredient(id, fhirExtension, modifierExtension, quantity,
         substanceCodeableConcept, substanceReference);
   }
 
@@ -2753,26 +2758,26 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -2784,31 +2789,31 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -2816,15 +2821,15 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -2837,38 +2842,38 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -2877,30 +2882,30 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -2909,9 +2914,9 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -2920,11 +2925,11 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -2932,7 +2937,7 @@ class _$SubstanceIngredient implements SubstanceIngredient {
   }) {
     assert(orElse != null);
     if (substanceIngredient != null) {
-      return substanceIngredient(id, extension, modifierExtension, quantity,
+      return substanceIngredient(id, fhirExtension, modifierExtension, quantity,
           substanceCodeableConcept, substanceReference);
     }
     return orElse();
@@ -3028,8 +3033,8 @@ class _$SubstanceIngredient implements SubstanceIngredient {
 abstract class SubstanceIngredient implements Entities2 {
   const factory SubstanceIngredient(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Ratio quantity,
       CodeableConcept substanceCodeableConcept,
       Reference substanceReference}) = _$SubstanceIngredient;
@@ -3039,9 +3044,10 @@ abstract class SubstanceIngredient implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Ratio get quantity;
   CodeableConcept get substanceCodeableConcept;
   Reference get substanceReference;
@@ -3063,19 +3069,19 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
-      List<Reference> request,
+      List<dynamic> request,
       int quantity,
-      List<Reference> parent,
+      List<dynamic> parent,
       BiologicallyDerivedProductCollection collection,
-      List<BiologicallyDerivedProductProcessing> processing,
+      List<dynamic> processing,
       BiologicallyDerivedProductManipulation manipulation,
-      List<BiologicallyDerivedProductStorage> storage});
+      List<dynamic> storage});
 }
 
 class _$BiologicallyDerivedProductCopyWithImpl<$Res>
@@ -3098,7 +3104,7 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object productCategory = freezed,
@@ -3125,15 +3131,15 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       productCategory: productCategory == freezed
           ? _value.productCategory
           : productCategory as BiologicallyDerivedProductCategory,
@@ -3143,21 +3149,19 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status as BiologicallyDerivedProductStatus,
-      request: request == freezed ? _value.request : request as List<Reference>,
+      request: request == freezed ? _value.request : request as List<dynamic>,
       quantity: quantity == freezed ? _value.quantity : quantity as int,
-      parent: parent == freezed ? _value.parent : parent as List<Reference>,
+      parent: parent == freezed ? _value.parent : parent as List<dynamic>,
       collection: collection == freezed
           ? _value.collection
           : collection as BiologicallyDerivedProductCollection,
       processing: processing == freezed
           ? _value.processing
-          : processing as List<BiologicallyDerivedProductProcessing>,
+          : processing as List<dynamic>,
       manipulation: manipulation == freezed
           ? _value.manipulation
           : manipulation as BiologicallyDerivedProductManipulation,
-      storage: storage == freezed
-          ? _value.storage
-          : storage as List<BiologicallyDerivedProductStorage>,
+      storage: storage == freezed ? _value.storage : storage as List<dynamic>,
     ));
   }
 }
@@ -3172,7 +3176,7 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.productCategory,
@@ -3204,11 +3208,12 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final BiologicallyDerivedProductCategory productCategory;
   @override
@@ -3216,23 +3221,23 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
   @override
   final BiologicallyDerivedProductStatus status;
   @override
-  final List<Reference> request;
+  final List<dynamic> request;
   @override
   final int quantity;
   @override
-  final List<Reference> parent;
+  final List<dynamic> parent;
   @override
   final BiologicallyDerivedProductCollection collection;
   @override
-  final List<BiologicallyDerivedProductProcessing> processing;
+  final List<dynamic> processing;
   @override
   final BiologicallyDerivedProductManipulation manipulation;
   @override
-  final List<BiologicallyDerivedProductStorage> storage;
+  final List<dynamic> storage;
 
   @override
   String toString() {
-    return 'Entities2.biologicallyDerivedProduct(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, productCategory: $productCategory, productCode: $productCode, status: $status, request: $request, quantity: $quantity, parent: $parent, collection: $collection, processing: $processing, manipulation: $manipulation, storage: $storage)';
+    return 'Entities2.biologicallyDerivedProduct(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, productCategory: $productCategory, productCode: $productCode, status: $status, request: $request, quantity: $quantity, parent: $parent, collection: $collection, processing: $processing, manipulation: $manipulation, storage: $storage)';
   }
 
   @override
@@ -3257,9 +3262,9 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -3305,7 +3310,7 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(productCategory) ^
@@ -3337,28 +3342,28 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -3371,24 +3376,24 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -3396,8 +3401,8 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -3406,16 +3411,16 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -3429,39 +3434,39 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -3471,33 +3476,33 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -3507,9 +3512,9 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -3518,12 +3523,12 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -3552,7 +3557,7 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         productCategory,
@@ -3578,26 +3583,26 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -3609,31 +3614,31 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -3641,15 +3646,15 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -3662,38 +3667,38 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -3702,30 +3707,30 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -3734,9 +3739,9 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -3745,11 +3750,11 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -3765,7 +3770,7 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           productCategory,
@@ -3871,27 +3876,26 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
 
 abstract class BiologicallyDerivedProduct implements Entities2 {
   const factory BiologicallyDerivedProduct(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<dynamic> contained,
-          List<FhirExtension> extension,
-          List<FhirExtension> modifierExtension,
-          List<Identifier> identifier,
-          BiologicallyDerivedProductCategory productCategory,
-          CodeableConcept productCode,
-          BiologicallyDerivedProductStatus status,
-          List<Reference> request,
-          int quantity,
-          List<Reference> parent,
-          BiologicallyDerivedProductCollection collection,
-          List<BiologicallyDerivedProductProcessing> processing,
-          BiologicallyDerivedProductManipulation manipulation,
-          List<BiologicallyDerivedProductStorage> storage}) =
-      _$BiologicallyDerivedProduct;
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      BiologicallyDerivedProductCategory productCategory,
+      CodeableConcept productCode,
+      BiologicallyDerivedProductStatus status,
+      List<dynamic> request,
+      int quantity,
+      List<dynamic> parent,
+      BiologicallyDerivedProductCollection collection,
+      List<dynamic> processing,
+      BiologicallyDerivedProductManipulation manipulation,
+      List<dynamic> storage}) = _$BiologicallyDerivedProduct;
 
   factory BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =
       _$BiologicallyDerivedProduct.fromJson;
@@ -3904,20 +3908,21 @@ abstract class BiologicallyDerivedProduct implements Entities2 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   BiologicallyDerivedProductCategory get productCategory;
   CodeableConcept get productCode;
   BiologicallyDerivedProductStatus get status;
-  List<Reference> get request;
+  List<dynamic> get request;
   int get quantity;
-  List<Reference> get parent;
+  List<dynamic> get parent;
   BiologicallyDerivedProductCollection get collection;
-  List<BiologicallyDerivedProductProcessing> get processing;
+  List<dynamic> get processing;
   BiologicallyDerivedProductManipulation get manipulation;
-  List<BiologicallyDerivedProductStorage> get storage;
+  List<dynamic> get storage;
   @override
   $BiologicallyDerivedProductCopyWith<BiologicallyDerivedProduct> get copyWith;
 }
@@ -3931,8 +3936,8 @@ abstract class $BiologicallyDerivedProductCollectionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference collector,
       Reference source,
       FhirDateTime collectedDateTime,
@@ -3954,7 +3959,7 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object collector = freezed,
     Object source = freezed,
@@ -3963,12 +3968,12 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
   }) {
     return _then(BiologicallyDerivedProductCollection(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       collector:
           collector == freezed ? _value.collector : collector as Reference,
       source: source == freezed ? _value.source : source as Reference,
@@ -3987,7 +3992,7 @@ class _$BiologicallyDerivedProductCollection
     implements BiologicallyDerivedProductCollection {
   const _$BiologicallyDerivedProductCollection(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.collector,
       this.source,
@@ -4001,9 +4006,10 @@ class _$BiologicallyDerivedProductCollection
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Reference collector;
   @override
@@ -4015,7 +4021,7 @@ class _$BiologicallyDerivedProductCollection
 
   @override
   String toString() {
-    return 'Entities2.biologicallyDerivedProductCollection(id: $id, extension: $extension, modifierExtension: $modifierExtension, collector: $collector, source: $source, collectedDateTime: $collectedDateTime, collectedPeriod: $collectedPeriod)';
+    return 'Entities2.biologicallyDerivedProductCollection(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, collector: $collector, source: $source, collectedDateTime: $collectedDateTime, collectedPeriod: $collectedPeriod)';
   }
 
   @override
@@ -4024,9 +4030,9 @@ class _$BiologicallyDerivedProductCollection
         (other is BiologicallyDerivedProductCollection &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -4047,7 +4053,7 @@ class _$BiologicallyDerivedProductCollection
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(collector) ^
       const DeepCollectionEquality().hash(source) ^
@@ -4072,28 +4078,28 @@ class _$BiologicallyDerivedProductCollection
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -4106,24 +4112,24 @@ class _$BiologicallyDerivedProductCollection
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -4131,8 +4137,8 @@ class _$BiologicallyDerivedProductCollection
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -4141,16 +4147,16 @@ class _$BiologicallyDerivedProductCollection
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -4164,39 +4170,39 @@ class _$BiologicallyDerivedProductCollection
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -4206,33 +4212,33 @@ class _$BiologicallyDerivedProductCollection
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -4242,9 +4248,9 @@ class _$BiologicallyDerivedProductCollection
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -4253,12 +4259,12 @@ class _$BiologicallyDerivedProductCollection
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -4281,7 +4287,7 @@ class _$BiologicallyDerivedProductCollection
     assert(deviceMetricCalibration != null);
     return biologicallyDerivedProductCollection(
         id,
-        extension,
+        fhirExtension,
         modifierExtension,
         collector,
         source,
@@ -4300,26 +4306,26 @@ class _$BiologicallyDerivedProductCollection
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -4331,31 +4337,31 @@ class _$BiologicallyDerivedProductCollection
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -4363,15 +4369,15 @@ class _$BiologicallyDerivedProductCollection
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -4384,38 +4390,38 @@ class _$BiologicallyDerivedProductCollection
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -4424,30 +4430,30 @@ class _$BiologicallyDerivedProductCollection
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -4456,9 +4462,9 @@ class _$BiologicallyDerivedProductCollection
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -4467,11 +4473,11 @@ class _$BiologicallyDerivedProductCollection
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -4481,7 +4487,7 @@ class _$BiologicallyDerivedProductCollection
     if (biologicallyDerivedProductCollection != null) {
       return biologicallyDerivedProductCollection(
           id,
-          extension,
+          fhirExtension,
           modifierExtension,
           collector,
           source,
@@ -4581,8 +4587,8 @@ class _$BiologicallyDerivedProductCollection
 abstract class BiologicallyDerivedProductCollection implements Entities2 {
   const factory BiologicallyDerivedProductCollection(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference collector,
       Reference source,
       FhirDateTime collectedDateTime,
@@ -4594,9 +4600,10 @@ abstract class BiologicallyDerivedProductCollection implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Reference get collector;
   Reference get source;
   FhirDateTime get collectedDateTime;
@@ -4615,8 +4622,8 @@ abstract class $BiologicallyDerivedProductProcessingCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       CodeableConcept procedure,
       Reference additive,
@@ -4639,7 +4646,7 @@ class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object description = freezed,
     Object procedure = freezed,
@@ -4649,12 +4656,12 @@ class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
   }) {
     return _then(BiologicallyDerivedProductProcessing(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
       procedure: procedure == freezed
@@ -4675,7 +4682,7 @@ class _$BiologicallyDerivedProductProcessing
     implements BiologicallyDerivedProductProcessing {
   const _$BiologicallyDerivedProductProcessing(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.description,
       this.procedure,
@@ -4690,9 +4697,10 @@ class _$BiologicallyDerivedProductProcessing
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String description;
   @override
@@ -4706,7 +4714,7 @@ class _$BiologicallyDerivedProductProcessing
 
   @override
   String toString() {
-    return 'Entities2.biologicallyDerivedProductProcessing(id: $id, extension: $extension, modifierExtension: $modifierExtension, description: $description, procedure: $procedure, additive: $additive, timeDateTime: $timeDateTime, timePeriod: $timePeriod)';
+    return 'Entities2.biologicallyDerivedProductProcessing(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, description: $description, procedure: $procedure, additive: $additive, timeDateTime: $timeDateTime, timePeriod: $timePeriod)';
   }
 
   @override
@@ -4715,9 +4723,9 @@ class _$BiologicallyDerivedProductProcessing
         (other is BiologicallyDerivedProductProcessing &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -4742,7 +4750,7 @@ class _$BiologicallyDerivedProductProcessing
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(procedure) ^
@@ -4768,28 +4776,28 @@ class _$BiologicallyDerivedProductProcessing
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -4802,24 +4810,24 @@ class _$BiologicallyDerivedProductProcessing
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -4827,8 +4835,8 @@ class _$BiologicallyDerivedProductProcessing
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -4837,16 +4845,16 @@ class _$BiologicallyDerivedProductProcessing
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -4860,39 +4868,39 @@ class _$BiologicallyDerivedProductProcessing
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -4902,33 +4910,33 @@ class _$BiologicallyDerivedProductProcessing
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -4938,9 +4946,9 @@ class _$BiologicallyDerivedProductProcessing
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -4949,12 +4957,12 @@ class _$BiologicallyDerivedProductProcessing
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -4977,7 +4985,7 @@ class _$BiologicallyDerivedProductProcessing
     assert(deviceMetricCalibration != null);
     return biologicallyDerivedProductProcessing(
         id,
-        extension,
+        fhirExtension,
         modifierExtension,
         description,
         procedure,
@@ -4997,26 +5005,26 @@ class _$BiologicallyDerivedProductProcessing
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -5028,31 +5036,31 @@ class _$BiologicallyDerivedProductProcessing
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -5060,15 +5068,15 @@ class _$BiologicallyDerivedProductProcessing
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -5081,38 +5089,38 @@ class _$BiologicallyDerivedProductProcessing
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -5121,30 +5129,30 @@ class _$BiologicallyDerivedProductProcessing
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -5153,9 +5161,9 @@ class _$BiologicallyDerivedProductProcessing
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -5164,11 +5172,11 @@ class _$BiologicallyDerivedProductProcessing
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -5178,7 +5186,7 @@ class _$BiologicallyDerivedProductProcessing
     if (biologicallyDerivedProductProcessing != null) {
       return biologicallyDerivedProductProcessing(
           id,
-          extension,
+          fhirExtension,
           modifierExtension,
           description,
           procedure,
@@ -5279,8 +5287,8 @@ class _$BiologicallyDerivedProductProcessing
 abstract class BiologicallyDerivedProductProcessing implements Entities2 {
   const factory BiologicallyDerivedProductProcessing(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       CodeableConcept procedure,
       Reference additive,
@@ -5293,9 +5301,10 @@ abstract class BiologicallyDerivedProductProcessing implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get description;
   CodeableConcept get procedure;
   Reference get additive;
@@ -5315,8 +5324,8 @@ abstract class $BiologicallyDerivedProductManipulationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       FhirDateTime timeDateTime,
       Period timePeriod});
@@ -5338,7 +5347,7 @@ class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object description = freezed,
     Object timeDateTime = freezed,
@@ -5346,12 +5355,12 @@ class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
   }) {
     return _then(BiologicallyDerivedProductManipulation(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
       timeDateTime: timeDateTime == freezed
@@ -5368,7 +5377,7 @@ class _$BiologicallyDerivedProductManipulation
     implements BiologicallyDerivedProductManipulation {
   const _$BiologicallyDerivedProductManipulation(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.description,
       this.timeDateTime,
@@ -5381,9 +5390,10 @@ class _$BiologicallyDerivedProductManipulation
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String description;
   @override
@@ -5393,7 +5403,7 @@ class _$BiologicallyDerivedProductManipulation
 
   @override
   String toString() {
-    return 'Entities2.biologicallyDerivedProductManipulation(id: $id, extension: $extension, modifierExtension: $modifierExtension, description: $description, timeDateTime: $timeDateTime, timePeriod: $timePeriod)';
+    return 'Entities2.biologicallyDerivedProductManipulation(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, description: $description, timeDateTime: $timeDateTime, timePeriod: $timePeriod)';
   }
 
   @override
@@ -5402,9 +5412,9 @@ class _$BiologicallyDerivedProductManipulation
         (other is BiologicallyDerivedProductManipulation &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -5423,7 +5433,7 @@ class _$BiologicallyDerivedProductManipulation
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(timeDateTime) ^
@@ -5447,28 +5457,28 @@ class _$BiologicallyDerivedProductManipulation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -5481,24 +5491,24 @@ class _$BiologicallyDerivedProductManipulation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -5506,8 +5516,8 @@ class _$BiologicallyDerivedProductManipulation
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -5516,16 +5526,16 @@ class _$BiologicallyDerivedProductManipulation
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -5539,39 +5549,39 @@ class _$BiologicallyDerivedProductManipulation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -5581,33 +5591,33 @@ class _$BiologicallyDerivedProductManipulation
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -5617,9 +5627,9 @@ class _$BiologicallyDerivedProductManipulation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -5628,12 +5638,12 @@ class _$BiologicallyDerivedProductManipulation
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -5654,7 +5664,7 @@ class _$BiologicallyDerivedProductManipulation
     assert(deviceProperty != null);
     assert(deviceMetric != null);
     assert(deviceMetricCalibration != null);
-    return biologicallyDerivedProductManipulation(id, extension,
+    return biologicallyDerivedProductManipulation(id, fhirExtension,
         modifierExtension, description, timeDateTime, timePeriod);
   }
 
@@ -5669,26 +5679,26 @@ class _$BiologicallyDerivedProductManipulation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -5700,31 +5710,31 @@ class _$BiologicallyDerivedProductManipulation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -5732,15 +5742,15 @@ class _$BiologicallyDerivedProductManipulation
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -5753,38 +5763,38 @@ class _$BiologicallyDerivedProductManipulation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -5793,30 +5803,30 @@ class _$BiologicallyDerivedProductManipulation
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -5825,9 +5835,9 @@ class _$BiologicallyDerivedProductManipulation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -5836,11 +5846,11 @@ class _$BiologicallyDerivedProductManipulation
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -5848,7 +5858,7 @@ class _$BiologicallyDerivedProductManipulation
   }) {
     assert(orElse != null);
     if (biologicallyDerivedProductManipulation != null) {
-      return biologicallyDerivedProductManipulation(id, extension,
+      return biologicallyDerivedProductManipulation(id, fhirExtension,
           modifierExtension, description, timeDateTime, timePeriod);
     }
     return orElse();
@@ -5944,8 +5954,8 @@ class _$BiologicallyDerivedProductManipulation
 abstract class BiologicallyDerivedProductManipulation implements Entities2 {
   const factory BiologicallyDerivedProductManipulation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       FhirDateTime timeDateTime,
       Period timePeriod}) = _$BiologicallyDerivedProductManipulation;
@@ -5956,9 +5966,10 @@ abstract class BiologicallyDerivedProductManipulation implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get description;
   FhirDateTime get timeDateTime;
   Period get timePeriod;
@@ -5976,8 +5987,8 @@ abstract class $BiologicallyDerivedProductStorageCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       double temperature,
       BiologicallyDerivedProductStorageScale scale,
@@ -5999,7 +6010,7 @@ class _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object description = freezed,
     Object temperature = freezed,
@@ -6008,12 +6019,12 @@ class _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
   }) {
     return _then(BiologicallyDerivedProductStorage(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
       temperature:
@@ -6031,7 +6042,7 @@ class _$BiologicallyDerivedProductStorage
     implements BiologicallyDerivedProductStorage {
   const _$BiologicallyDerivedProductStorage(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.description,
       this.temperature,
@@ -6045,9 +6056,10 @@ class _$BiologicallyDerivedProductStorage
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String description;
   @override
@@ -6059,7 +6071,7 @@ class _$BiologicallyDerivedProductStorage
 
   @override
   String toString() {
-    return 'Entities2.biologicallyDerivedProductStorage(id: $id, extension: $extension, modifierExtension: $modifierExtension, description: $description, temperature: $temperature, scale: $scale, duration: $duration)';
+    return 'Entities2.biologicallyDerivedProductStorage(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, description: $description, temperature: $temperature, scale: $scale, duration: $duration)';
   }
 
   @override
@@ -6068,9 +6080,9 @@ class _$BiologicallyDerivedProductStorage
         (other is BiologicallyDerivedProductStorage &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -6091,7 +6103,7 @@ class _$BiologicallyDerivedProductStorage
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(temperature) ^
@@ -6115,28 +6127,28 @@ class _$BiologicallyDerivedProductStorage
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -6149,24 +6161,24 @@ class _$BiologicallyDerivedProductStorage
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -6174,8 +6186,8 @@ class _$BiologicallyDerivedProductStorage
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -6184,16 +6196,16 @@ class _$BiologicallyDerivedProductStorage
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -6207,39 +6219,39 @@ class _$BiologicallyDerivedProductStorage
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -6249,33 +6261,33 @@ class _$BiologicallyDerivedProductStorage
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -6285,9 +6297,9 @@ class _$BiologicallyDerivedProductStorage
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -6296,12 +6308,12 @@ class _$BiologicallyDerivedProductStorage
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -6322,8 +6334,8 @@ class _$BiologicallyDerivedProductStorage
     assert(deviceProperty != null);
     assert(deviceMetric != null);
     assert(deviceMetricCalibration != null);
-    return biologicallyDerivedProductStorage(id, extension, modifierExtension,
-        description, temperature, scale, duration);
+    return biologicallyDerivedProductStorage(id, fhirExtension,
+        modifierExtension, description, temperature, scale, duration);
   }
 
   @override
@@ -6337,26 +6349,26 @@ class _$BiologicallyDerivedProductStorage
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -6368,31 +6380,31 @@ class _$BiologicallyDerivedProductStorage
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -6400,15 +6412,15 @@ class _$BiologicallyDerivedProductStorage
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -6421,38 +6433,38 @@ class _$BiologicallyDerivedProductStorage
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -6461,30 +6473,30 @@ class _$BiologicallyDerivedProductStorage
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -6493,9 +6505,9 @@ class _$BiologicallyDerivedProductStorage
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -6504,11 +6516,11 @@ class _$BiologicallyDerivedProductStorage
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -6516,8 +6528,8 @@ class _$BiologicallyDerivedProductStorage
   }) {
     assert(orElse != null);
     if (biologicallyDerivedProductStorage != null) {
-      return biologicallyDerivedProductStorage(id, extension, modifierExtension,
-          description, temperature, scale, duration);
+      return biologicallyDerivedProductStorage(id, fhirExtension,
+          modifierExtension, description, temperature, scale, duration);
     }
     return orElse();
   }
@@ -6612,8 +6624,8 @@ class _$BiologicallyDerivedProductStorage
 abstract class BiologicallyDerivedProductStorage implements Entities2 {
   const factory BiologicallyDerivedProductStorage(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       double temperature,
       BiologicallyDerivedProductStorageScale scale,
@@ -6624,9 +6636,10 @@ abstract class BiologicallyDerivedProductStorage implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get description;
   double get temperature;
   BiologicallyDerivedProductStorageScale get scale;
@@ -6648,33 +6661,33 @@ abstract class $DeviceCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Reference definition,
-      List<DeviceUdiCarrier> udiCarrier,
+      List<dynamic> udiCarrier,
       DeviceStatus status,
-      List<CodeableConcept> statusReason,
+      List<dynamic> statusReason,
       String distinctIdentifier,
       String manufacturer,
       FhirDateTime manufactureDate,
       FhirDateTime expirationDate,
       String lotNumber,
       String serialNumber,
-      List<DeviceDeviceName> deviceName,
+      List<dynamic> deviceName,
       String modelNumber,
       String partNumber,
       CodeableConcept type,
-      List<DeviceSpecialization> specialization,
-      List<DeviceVersion> version,
-      List<DeviceProperty> property,
+      List<dynamic> specialization,
+      List<dynamic> version,
+      List<dynamic> property,
       Reference patient,
       Reference owner,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Reference location,
       FhirUri url,
-      List<Annotation> note,
-      List<CodeableConcept> safety,
+      List<dynamic> note,
+      List<dynamic> safety,
       Reference parent});
 }
 
@@ -6695,7 +6708,7 @@ class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object definition = freezed,
@@ -6737,24 +6750,24 @@ class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       definition:
           definition == freezed ? _value.definition : definition as Reference,
       udiCarrier: udiCarrier == freezed
           ? _value.udiCarrier
-          : udiCarrier as List<DeviceUdiCarrier>,
+          : udiCarrier as List<dynamic>,
       status: status == freezed ? _value.status : status as DeviceStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
-          : statusReason as List<CodeableConcept>,
+          : statusReason as List<dynamic>,
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
           : distinctIdentifier as String,
@@ -6773,7 +6786,7 @@ class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
           : serialNumber as String,
       deviceName: deviceName == freezed
           ? _value.deviceName
-          : deviceName as List<DeviceDeviceName>,
+          : deviceName as List<dynamic>,
       modelNumber:
           modelNumber == freezed ? _value.modelNumber : modelNumber as String,
       partNumber:
@@ -6781,21 +6794,17 @@ class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       specialization: specialization == freezed
           ? _value.specialization
-          : specialization as List<DeviceSpecialization>,
-      version:
-          version == freezed ? _value.version : version as List<DeviceVersion>,
-      property: property == freezed
-          ? _value.property
-          : property as List<DeviceProperty>,
+          : specialization as List<dynamic>,
+      version: version == freezed ? _value.version : version as List<dynamic>,
+      property:
+          property == freezed ? _value.property : property as List<dynamic>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       owner: owner == freezed ? _value.owner : owner as Reference,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>,
+      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       location: location == freezed ? _value.location : location as Reference,
       url: url == freezed ? _value.url : url as FhirUri,
-      note: note == freezed ? _value.note : note as List<Annotation>,
-      safety:
-          safety == freezed ? _value.safety : safety as List<CodeableConcept>,
+      note: note == freezed ? _value.note : note as List<dynamic>,
+      safety: safety == freezed ? _value.safety : safety as List<dynamic>,
       parent: parent == freezed ? _value.parent : parent as Reference,
     ));
   }
@@ -6811,7 +6820,7 @@ class _$Device implements Device {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.definition,
@@ -6858,19 +6867,20 @@ class _$Device implements Device {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final Reference definition;
   @override
-  final List<DeviceUdiCarrier> udiCarrier;
+  final List<dynamic> udiCarrier;
   @override
   final DeviceStatus status;
   @override
-  final List<CodeableConcept> statusReason;
+  final List<dynamic> statusReason;
   @override
   final String distinctIdentifier;
   @override
@@ -6884,7 +6894,7 @@ class _$Device implements Device {
   @override
   final String serialNumber;
   @override
-  final List<DeviceDeviceName> deviceName;
+  final List<dynamic> deviceName;
   @override
   final String modelNumber;
   @override
@@ -6892,31 +6902,31 @@ class _$Device implements Device {
   @override
   final CodeableConcept type;
   @override
-  final List<DeviceSpecialization> specialization;
+  final List<dynamic> specialization;
   @override
-  final List<DeviceVersion> version;
+  final List<dynamic> version;
   @override
-  final List<DeviceProperty> property;
+  final List<dynamic> property;
   @override
   final Reference patient;
   @override
   final Reference owner;
   @override
-  final List<ContactPoint> contact;
+  final List<dynamic> contact;
   @override
   final Reference location;
   @override
   final FhirUri url;
   @override
-  final List<Annotation> note;
+  final List<dynamic> note;
   @override
-  final List<CodeableConcept> safety;
+  final List<dynamic> safety;
   @override
   final Reference parent;
 
   @override
   String toString() {
-    return 'Entities2.device(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, definition: $definition, udiCarrier: $udiCarrier, status: $status, statusReason: $statusReason, distinctIdentifier: $distinctIdentifier, manufacturer: $manufacturer, manufactureDate: $manufactureDate, expirationDate: $expirationDate, lotNumber: $lotNumber, serialNumber: $serialNumber, deviceName: $deviceName, modelNumber: $modelNumber, partNumber: $partNumber, type: $type, specialization: $specialization, version: $version, property: $property, patient: $patient, owner: $owner, contact: $contact, location: $location, url: $url, note: $note, safety: $safety, parent: $parent)';
+    return 'Entities2.device(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, definition: $definition, udiCarrier: $udiCarrier, status: $status, statusReason: $statusReason, distinctIdentifier: $distinctIdentifier, manufacturer: $manufacturer, manufactureDate: $manufactureDate, expirationDate: $expirationDate, lotNumber: $lotNumber, serialNumber: $serialNumber, deviceName: $deviceName, modelNumber: $modelNumber, partNumber: $partNumber, type: $type, specialization: $specialization, version: $version, property: $property, patient: $patient, owner: $owner, contact: $contact, location: $location, url: $url, note: $note, safety: $safety, parent: $parent)';
   }
 
   @override
@@ -6941,9 +6951,9 @@ class _$Device implements Device {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -7013,7 +7023,7 @@ class _$Device implements Device {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(definition) ^
@@ -7058,28 +7068,28 @@ class _$Device implements Device {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -7092,24 +7102,24 @@ class _$Device implements Device {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -7117,8 +7127,8 @@ class _$Device implements Device {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -7127,16 +7137,16 @@ class _$Device implements Device {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -7150,39 +7160,39 @@ class _$Device implements Device {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -7192,33 +7202,33 @@ class _$Device implements Device {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -7228,9 +7238,9 @@ class _$Device implements Device {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -7239,12 +7249,12 @@ class _$Device implements Device {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -7273,7 +7283,7 @@ class _$Device implements Device {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         definition,
@@ -7314,26 +7324,26 @@ class _$Device implements Device {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -7345,31 +7355,31 @@ class _$Device implements Device {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -7377,15 +7387,15 @@ class _$Device implements Device {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -7398,38 +7408,38 @@ class _$Device implements Device {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -7438,30 +7448,30 @@ class _$Device implements Device {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -7470,9 +7480,9 @@ class _$Device implements Device {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -7481,11 +7491,11 @@ class _$Device implements Device {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -7501,7 +7511,7 @@ class _$Device implements Device {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           definition,
@@ -7628,33 +7638,33 @@ abstract class Device implements Entities2 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Reference definition,
-      List<DeviceUdiCarrier> udiCarrier,
+      List<dynamic> udiCarrier,
       DeviceStatus status,
-      List<CodeableConcept> statusReason,
+      List<dynamic> statusReason,
       String distinctIdentifier,
       String manufacturer,
       FhirDateTime manufactureDate,
       FhirDateTime expirationDate,
       String lotNumber,
       String serialNumber,
-      List<DeviceDeviceName> deviceName,
+      List<dynamic> deviceName,
       String modelNumber,
       String partNumber,
       CodeableConcept type,
-      List<DeviceSpecialization> specialization,
-      List<DeviceVersion> version,
-      List<DeviceProperty> property,
+      List<dynamic> specialization,
+      List<dynamic> version,
+      List<dynamic> property,
       Reference patient,
       Reference owner,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Reference location,
       FhirUri url,
-      List<Annotation> note,
-      List<CodeableConcept> safety,
+      List<dynamic> note,
+      List<dynamic> safety,
       Reference parent}) = _$Device;
 
   factory Device.fromJson(Map<String, dynamic> json) = _$Device.fromJson;
@@ -7667,34 +7677,35 @@ abstract class Device implements Entities2 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   Reference get definition;
-  List<DeviceUdiCarrier> get udiCarrier;
+  List<dynamic> get udiCarrier;
   DeviceStatus get status;
-  List<CodeableConcept> get statusReason;
+  List<dynamic> get statusReason;
   String get distinctIdentifier;
   String get manufacturer;
   FhirDateTime get manufactureDate;
   FhirDateTime get expirationDate;
   String get lotNumber;
   String get serialNumber;
-  List<DeviceDeviceName> get deviceName;
+  List<dynamic> get deviceName;
   String get modelNumber;
   String get partNumber;
   CodeableConcept get type;
-  List<DeviceSpecialization> get specialization;
-  List<DeviceVersion> get version;
-  List<DeviceProperty> get property;
+  List<dynamic> get specialization;
+  List<dynamic> get version;
+  List<dynamic> get property;
   Reference get patient;
   Reference get owner;
-  List<ContactPoint> get contact;
+  List<dynamic> get contact;
   Reference get location;
   FhirUri get url;
-  List<Annotation> get note;
-  List<CodeableConcept> get safety;
+  List<dynamic> get note;
+  List<dynamic> get safety;
   Reference get parent;
   @override
   $DeviceCopyWith<Device> get copyWith;
@@ -7708,8 +7719,8 @@ abstract class $DeviceUdiCarrierCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String deviceIdentifier,
       FhirUri issuer,
       FhirUri jurisdiction,
@@ -7730,7 +7741,7 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object deviceIdentifier = freezed,
     Object issuer = freezed,
@@ -7741,12 +7752,12 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   }) {
     return _then(DeviceUdiCarrier(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       deviceIdentifier: deviceIdentifier == freezed
           ? _value.deviceIdentifier
           : deviceIdentifier as String,
@@ -7770,7 +7781,7 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
 class _$DeviceUdiCarrier implements DeviceUdiCarrier {
   const _$DeviceUdiCarrier(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.deviceIdentifier,
       this.issuer,
@@ -7785,9 +7796,10 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String deviceIdentifier;
   @override
@@ -7803,7 +7815,7 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
 
   @override
   String toString() {
-    return 'Entities2.deviceUdiCarrier(id: $id, extension: $extension, modifierExtension: $modifierExtension, deviceIdentifier: $deviceIdentifier, issuer: $issuer, jurisdiction: $jurisdiction, carrierAIDC: $carrierAIDC, carrierHRF: $carrierHRF, entryType: $entryType)';
+    return 'Entities2.deviceUdiCarrier(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, deviceIdentifier: $deviceIdentifier, issuer: $issuer, jurisdiction: $jurisdiction, carrierAIDC: $carrierAIDC, carrierHRF: $carrierHRF, entryType: $entryType)';
   }
 
   @override
@@ -7812,9 +7824,9 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         (other is DeviceUdiCarrier &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -7841,7 +7853,7 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(deviceIdentifier) ^
       const DeepCollectionEquality().hash(issuer) ^
@@ -7866,28 +7878,28 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -7900,24 +7912,24 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -7925,8 +7937,8 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -7935,16 +7947,16 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -7958,39 +7970,39 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -8000,33 +8012,33 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -8036,9 +8048,9 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -8047,12 +8059,12 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -8073,8 +8085,16 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     assert(deviceProperty != null);
     assert(deviceMetric != null);
     assert(deviceMetricCalibration != null);
-    return deviceUdiCarrier(id, extension, modifierExtension, deviceIdentifier,
-        issuer, jurisdiction, carrierAIDC, carrierHRF, entryType);
+    return deviceUdiCarrier(
+        id,
+        fhirExtension,
+        modifierExtension,
+        deviceIdentifier,
+        issuer,
+        jurisdiction,
+        carrierAIDC,
+        carrierHRF,
+        entryType);
   }
 
   @override
@@ -8088,26 +8108,26 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -8119,31 +8139,31 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -8151,15 +8171,15 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -8172,38 +8192,38 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -8212,30 +8232,30 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -8244,9 +8264,9 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -8255,11 +8275,11 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -8269,7 +8289,7 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     if (deviceUdiCarrier != null) {
       return deviceUdiCarrier(
           id,
-          extension,
+          fhirExtension,
           modifierExtension,
           deviceIdentifier,
           issuer,
@@ -8371,8 +8391,8 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
 abstract class DeviceUdiCarrier implements Entities2 {
   const factory DeviceUdiCarrier(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String deviceIdentifier,
       FhirUri issuer,
       FhirUri jurisdiction,
@@ -8385,9 +8405,10 @@ abstract class DeviceUdiCarrier implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get deviceIdentifier;
   FhirUri get issuer;
   FhirUri get jurisdiction;
@@ -8406,8 +8427,8 @@ abstract class $DeviceDeviceNameCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       DeviceDeviceNameType type});
 }
@@ -8424,19 +8445,19 @@ class _$DeviceDeviceNameCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
     Object type = freezed,
   }) {
     return _then(DeviceDeviceName(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as DeviceDeviceNameType,
     ));
@@ -8446,7 +8467,11 @@ class _$DeviceDeviceNameCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
 @JsonSerializable()
 class _$DeviceDeviceName implements DeviceDeviceName {
   const _$DeviceDeviceName(
-      {this.id, this.extension, this.modifierExtension, this.name, this.type});
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.modifierExtension,
+      this.name,
+      this.type});
 
   factory _$DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
       _$_$DeviceDeviceNameFromJson(json);
@@ -8454,9 +8479,10 @@ class _$DeviceDeviceName implements DeviceDeviceName {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String name;
   @override
@@ -8464,7 +8490,7 @@ class _$DeviceDeviceName implements DeviceDeviceName {
 
   @override
   String toString() {
-    return 'Entities2.deviceDeviceName(id: $id, extension: $extension, modifierExtension: $modifierExtension, name: $name, type: $type)';
+    return 'Entities2.deviceDeviceName(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, name: $name, type: $type)';
   }
 
   @override
@@ -8473,9 +8499,9 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         (other is DeviceDeviceName &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -8489,7 +8515,7 @@ class _$DeviceDeviceName implements DeviceDeviceName {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(type);
@@ -8510,28 +8536,28 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -8544,24 +8570,24 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -8569,8 +8595,8 @@ class _$DeviceDeviceName implements DeviceDeviceName {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -8579,16 +8605,16 @@ class _$DeviceDeviceName implements DeviceDeviceName {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -8602,39 +8628,39 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -8644,33 +8670,33 @@ class _$DeviceDeviceName implements DeviceDeviceName {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -8680,9 +8706,9 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -8691,12 +8717,12 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -8717,7 +8743,7 @@ class _$DeviceDeviceName implements DeviceDeviceName {
     assert(deviceProperty != null);
     assert(deviceMetric != null);
     assert(deviceMetricCalibration != null);
-    return deviceDeviceName(id, extension, modifierExtension, name, type);
+    return deviceDeviceName(id, fhirExtension, modifierExtension, name, type);
   }
 
   @override
@@ -8731,26 +8757,26 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -8762,31 +8788,31 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -8794,15 +8820,15 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -8815,38 +8841,38 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -8855,30 +8881,30 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -8887,9 +8913,9 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -8898,11 +8924,11 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -8910,7 +8936,7 @@ class _$DeviceDeviceName implements DeviceDeviceName {
   }) {
     assert(orElse != null);
     if (deviceDeviceName != null) {
-      return deviceDeviceName(id, extension, modifierExtension, name, type);
+      return deviceDeviceName(id, fhirExtension, modifierExtension, name, type);
     }
     return orElse();
   }
@@ -9005,8 +9031,8 @@ class _$DeviceDeviceName implements DeviceDeviceName {
 abstract class DeviceDeviceName implements Entities2 {
   const factory DeviceDeviceName(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       DeviceDeviceNameType type}) = _$DeviceDeviceName;
 
@@ -9015,9 +9041,10 @@ abstract class DeviceDeviceName implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get name;
   DeviceDeviceNameType get type;
   @override
@@ -9032,8 +9059,8 @@ abstract class $DeviceSpecializationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept systemType,
       String version});
 }
@@ -9051,19 +9078,19 @@ class _$DeviceSpecializationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object systemType = freezed,
     Object version = freezed,
   }) {
     return _then(DeviceSpecialization(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       systemType: systemType == freezed
           ? _value.systemType
           : systemType as CodeableConcept,
@@ -9076,7 +9103,7 @@ class _$DeviceSpecializationCopyWithImpl<$Res>
 class _$DeviceSpecialization implements DeviceSpecialization {
   const _$DeviceSpecialization(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.systemType,
       this.version});
@@ -9087,9 +9114,10 @@ class _$DeviceSpecialization implements DeviceSpecialization {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept systemType;
   @override
@@ -9097,7 +9125,7 @@ class _$DeviceSpecialization implements DeviceSpecialization {
 
   @override
   String toString() {
-    return 'Entities2.deviceSpecialization(id: $id, extension: $extension, modifierExtension: $modifierExtension, systemType: $systemType, version: $version)';
+    return 'Entities2.deviceSpecialization(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, systemType: $systemType, version: $version)';
   }
 
   @override
@@ -9106,9 +9134,9 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         (other is DeviceSpecialization &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -9123,7 +9151,7 @@ class _$DeviceSpecialization implements DeviceSpecialization {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(systemType) ^
       const DeepCollectionEquality().hash(version);
@@ -9145,28 +9173,28 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -9179,24 +9207,24 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -9204,8 +9232,8 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -9214,16 +9242,16 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -9237,39 +9265,39 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -9279,33 +9307,33 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -9315,9 +9343,9 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -9326,12 +9354,12 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -9353,7 +9381,7 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     assert(deviceMetric != null);
     assert(deviceMetricCalibration != null);
     return deviceSpecialization(
-        id, extension, modifierExtension, systemType, version);
+        id, fhirExtension, modifierExtension, systemType, version);
   }
 
   @override
@@ -9367,26 +9395,26 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -9398,31 +9426,31 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -9430,15 +9458,15 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -9451,38 +9479,38 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -9491,30 +9519,30 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -9523,9 +9551,9 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -9534,11 +9562,11 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -9547,7 +9575,7 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     assert(orElse != null);
     if (deviceSpecialization != null) {
       return deviceSpecialization(
-          id, extension, modifierExtension, systemType, version);
+          id, fhirExtension, modifierExtension, systemType, version);
     }
     return orElse();
   }
@@ -9642,8 +9670,8 @@ class _$DeviceSpecialization implements DeviceSpecialization {
 abstract class DeviceSpecialization implements Entities2 {
   const factory DeviceSpecialization(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept systemType,
       String version}) = _$DeviceSpecialization;
 
@@ -9652,9 +9680,10 @@ abstract class DeviceSpecialization implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get systemType;
   String get version;
   @override
@@ -9669,8 +9698,8 @@ abstract class $DeviceVersionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
       Identifier component,
       String value});
@@ -9688,7 +9717,7 @@ class _$DeviceVersionCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
     Object component = freezed,
@@ -9696,12 +9725,12 @@ class _$DeviceVersionCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   }) {
     return _then(DeviceVersion(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       component:
           component == freezed ? _value.component : component as Identifier,
@@ -9714,7 +9743,7 @@ class _$DeviceVersionCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
 class _$DeviceVersion implements DeviceVersion {
   const _$DeviceVersion(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.type,
       this.component,
@@ -9726,9 +9755,10 @@ class _$DeviceVersion implements DeviceVersion {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -9738,7 +9768,7 @@ class _$DeviceVersion implements DeviceVersion {
 
   @override
   String toString() {
-    return 'Entities2.deviceVersion(id: $id, extension: $extension, modifierExtension: $modifierExtension, type: $type, component: $component, value: $value)';
+    return 'Entities2.deviceVersion(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, type: $type, component: $component, value: $value)';
   }
 
   @override
@@ -9747,9 +9777,9 @@ class _$DeviceVersion implements DeviceVersion {
         (other is DeviceVersion &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -9766,7 +9796,7 @@ class _$DeviceVersion implements DeviceVersion {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(component) ^
@@ -9788,28 +9818,28 @@ class _$DeviceVersion implements DeviceVersion {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -9822,24 +9852,24 @@ class _$DeviceVersion implements DeviceVersion {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -9847,8 +9877,8 @@ class _$DeviceVersion implements DeviceVersion {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -9857,16 +9887,16 @@ class _$DeviceVersion implements DeviceVersion {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -9880,39 +9910,39 @@ class _$DeviceVersion implements DeviceVersion {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -9922,33 +9952,33 @@ class _$DeviceVersion implements DeviceVersion {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -9958,9 +9988,9 @@ class _$DeviceVersion implements DeviceVersion {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -9969,12 +9999,12 @@ class _$DeviceVersion implements DeviceVersion {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -9996,7 +10026,7 @@ class _$DeviceVersion implements DeviceVersion {
     assert(deviceMetric != null);
     assert(deviceMetricCalibration != null);
     return deviceVersion(
-        id, extension, modifierExtension, type, component, value);
+        id, fhirExtension, modifierExtension, type, component, value);
   }
 
   @override
@@ -10010,26 +10040,26 @@ class _$DeviceVersion implements DeviceVersion {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -10041,31 +10071,31 @@ class _$DeviceVersion implements DeviceVersion {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -10073,15 +10103,15 @@ class _$DeviceVersion implements DeviceVersion {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -10094,38 +10124,38 @@ class _$DeviceVersion implements DeviceVersion {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -10134,30 +10164,30 @@ class _$DeviceVersion implements DeviceVersion {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -10166,9 +10196,9 @@ class _$DeviceVersion implements DeviceVersion {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -10177,11 +10207,11 @@ class _$DeviceVersion implements DeviceVersion {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -10190,7 +10220,7 @@ class _$DeviceVersion implements DeviceVersion {
     assert(orElse != null);
     if (deviceVersion != null) {
       return deviceVersion(
-          id, extension, modifierExtension, type, component, value);
+          id, fhirExtension, modifierExtension, type, component, value);
     }
     return orElse();
   }
@@ -10284,8 +10314,8 @@ class _$DeviceVersion implements DeviceVersion {
 abstract class DeviceVersion implements Entities2 {
   const factory DeviceVersion(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
       Identifier component,
       String value}) = _$DeviceVersion;
@@ -10295,9 +10325,10 @@ abstract class DeviceVersion implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get type;
   Identifier get component;
   String get value;
@@ -10313,11 +10344,11 @@ abstract class $DevicePropertyCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<Quantity> valueQuantity,
-      List<CodeableConcept> valueCode});
+      List<dynamic> valueQuantity,
+      List<dynamic> valueCode});
 }
 
 class _$DevicePropertyCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
@@ -10332,7 +10363,7 @@ class _$DevicePropertyCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
     Object valueQuantity = freezed,
@@ -10340,19 +10371,18 @@ class _$DevicePropertyCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   }) {
     return _then(DeviceProperty(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as List<Quantity>,
-      valueCode: valueCode == freezed
-          ? _value.valueCode
-          : valueCode as List<CodeableConcept>,
+          : valueQuantity as List<dynamic>,
+      valueCode:
+          valueCode == freezed ? _value.valueCode : valueCode as List<dynamic>,
     ));
   }
 }
@@ -10361,7 +10391,7 @@ class _$DevicePropertyCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
 class _$DeviceProperty implements DeviceProperty {
   const _$DeviceProperty(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.type,
       this.valueQuantity,
@@ -10373,19 +10403,20 @@ class _$DeviceProperty implements DeviceProperty {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept type;
   @override
-  final List<Quantity> valueQuantity;
+  final List<dynamic> valueQuantity;
   @override
-  final List<CodeableConcept> valueCode;
+  final List<dynamic> valueCode;
 
   @override
   String toString() {
-    return 'Entities2.deviceProperty(id: $id, extension: $extension, modifierExtension: $modifierExtension, type: $type, valueQuantity: $valueQuantity, valueCode: $valueCode)';
+    return 'Entities2.deviceProperty(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, type: $type, valueQuantity: $valueQuantity, valueCode: $valueCode)';
   }
 
   @override
@@ -10394,9 +10425,9 @@ class _$DeviceProperty implements DeviceProperty {
         (other is DeviceProperty &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -10414,7 +10445,7 @@ class _$DeviceProperty implements DeviceProperty {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
@@ -10436,28 +10467,28 @@ class _$DeviceProperty implements DeviceProperty {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -10470,24 +10501,24 @@ class _$DeviceProperty implements DeviceProperty {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -10495,8 +10526,8 @@ class _$DeviceProperty implements DeviceProperty {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -10505,16 +10536,16 @@ class _$DeviceProperty implements DeviceProperty {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -10528,39 +10559,39 @@ class _$DeviceProperty implements DeviceProperty {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -10570,33 +10601,33 @@ class _$DeviceProperty implements DeviceProperty {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -10606,9 +10637,9 @@ class _$DeviceProperty implements DeviceProperty {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -10617,12 +10648,12 @@ class _$DeviceProperty implements DeviceProperty {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -10644,7 +10675,7 @@ class _$DeviceProperty implements DeviceProperty {
     assert(deviceMetric != null);
     assert(deviceMetricCalibration != null);
     return deviceProperty(
-        id, extension, modifierExtension, type, valueQuantity, valueCode);
+        id, fhirExtension, modifierExtension, type, valueQuantity, valueCode);
   }
 
   @override
@@ -10658,26 +10689,26 @@ class _$DeviceProperty implements DeviceProperty {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -10689,31 +10720,31 @@ class _$DeviceProperty implements DeviceProperty {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -10721,15 +10752,15 @@ class _$DeviceProperty implements DeviceProperty {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -10742,38 +10773,38 @@ class _$DeviceProperty implements DeviceProperty {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -10782,30 +10813,30 @@ class _$DeviceProperty implements DeviceProperty {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -10814,9 +10845,9 @@ class _$DeviceProperty implements DeviceProperty {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -10825,11 +10856,11 @@ class _$DeviceProperty implements DeviceProperty {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -10838,7 +10869,7 @@ class _$DeviceProperty implements DeviceProperty {
     assert(orElse != null);
     if (deviceProperty != null) {
       return deviceProperty(
-          id, extension, modifierExtension, type, valueQuantity, valueCode);
+          id, fhirExtension, modifierExtension, type, valueQuantity, valueCode);
     }
     return orElse();
   }
@@ -10932,23 +10963,24 @@ class _$DeviceProperty implements DeviceProperty {
 abstract class DeviceProperty implements Entities2 {
   const factory DeviceProperty(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<Quantity> valueQuantity,
-      List<CodeableConcept> valueCode}) = _$DeviceProperty;
+      List<dynamic> valueQuantity,
+      List<dynamic> valueCode}) = _$DeviceProperty;
 
   factory DeviceProperty.fromJson(Map<String, dynamic> json) =
       _$DeviceProperty.fromJson;
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get type;
-  List<Quantity> get valueQuantity;
-  List<CodeableConcept> get valueCode;
+  List<dynamic> get valueQuantity;
+  List<dynamic> get valueCode;
   @override
   $DevicePropertyCopyWith<DeviceProperty> get copyWith;
 }
@@ -10966,9 +10998,9 @@ abstract class $DeviceMetricCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
@@ -10977,7 +11009,7 @@ abstract class $DeviceMetricCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       DeviceMetricColor color,
       DeviceMetricCategory category,
       Timing measurementPeriod,
-      List<DeviceMetricCalibration> calibration});
+      List<dynamic> calibration});
 }
 
 class _$DeviceMetricCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
@@ -10998,7 +11030,7 @@ class _$DeviceMetricCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object type = freezed,
@@ -11024,15 +11056,15 @@ class _$DeviceMetricCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       unit: unit == freezed ? _value.unit : unit as CodeableConcept,
       source: source == freezed ? _value.source : source as Reference,
@@ -11049,7 +11081,7 @@ class _$DeviceMetricCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
           : measurementPeriod as Timing,
       calibration: calibration == freezed
           ? _value.calibration
-          : calibration as List<DeviceMetricCalibration>,
+          : calibration as List<dynamic>,
     ));
   }
 }
@@ -11064,7 +11096,7 @@ class _$DeviceMetric implements DeviceMetric {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.type,
@@ -11095,11 +11127,12 @@ class _$DeviceMetric implements DeviceMetric {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final CodeableConcept type;
   @override
@@ -11117,11 +11150,11 @@ class _$DeviceMetric implements DeviceMetric {
   @override
   final Timing measurementPeriod;
   @override
-  final List<DeviceMetricCalibration> calibration;
+  final List<dynamic> calibration;
 
   @override
   String toString() {
-    return 'Entities2.deviceMetric(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, unit: $unit, source: $source, parent: $parent, operationalStatus: $operationalStatus, color: $color, category: $category, measurementPeriod: $measurementPeriod, calibration: $calibration)';
+    return 'Entities2.deviceMetric(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, unit: $unit, source: $source, parent: $parent, operationalStatus: $operationalStatus, color: $color, category: $category, measurementPeriod: $measurementPeriod, calibration: $calibration)';
   }
 
   @override
@@ -11146,9 +11179,9 @@ class _$DeviceMetric implements DeviceMetric {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -11189,7 +11222,7 @@ class _$DeviceMetric implements DeviceMetric {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(type) ^
@@ -11218,28 +11251,28 @@ class _$DeviceMetric implements DeviceMetric {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -11252,24 +11285,24 @@ class _$DeviceMetric implements DeviceMetric {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -11277,8 +11310,8 @@ class _$DeviceMetric implements DeviceMetric {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -11287,16 +11320,16 @@ class _$DeviceMetric implements DeviceMetric {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -11310,39 +11343,39 @@ class _$DeviceMetric implements DeviceMetric {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -11352,33 +11385,33 @@ class _$DeviceMetric implements DeviceMetric {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -11388,9 +11421,9 @@ class _$DeviceMetric implements DeviceMetric {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -11399,12 +11432,12 @@ class _$DeviceMetric implements DeviceMetric {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -11433,7 +11466,7 @@ class _$DeviceMetric implements DeviceMetric {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         type,
@@ -11458,26 +11491,26 @@ class _$DeviceMetric implements DeviceMetric {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -11489,31 +11522,31 @@ class _$DeviceMetric implements DeviceMetric {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -11521,15 +11554,15 @@ class _$DeviceMetric implements DeviceMetric {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -11542,38 +11575,38 @@ class _$DeviceMetric implements DeviceMetric {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -11582,30 +11615,30 @@ class _$DeviceMetric implements DeviceMetric {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -11614,9 +11647,9 @@ class _$DeviceMetric implements DeviceMetric {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -11625,11 +11658,11 @@ class _$DeviceMetric implements DeviceMetric {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -11645,7 +11678,7 @@ class _$DeviceMetric implements DeviceMetric {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           type,
@@ -11756,9 +11789,9 @@ abstract class DeviceMetric implements Entities2 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
@@ -11767,7 +11800,7 @@ abstract class DeviceMetric implements Entities2 {
       DeviceMetricColor color,
       DeviceMetricCategory category,
       Timing measurementPeriod,
-      List<DeviceMetricCalibration> calibration}) = _$DeviceMetric;
+      List<dynamic> calibration}) = _$DeviceMetric;
 
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =
       _$DeviceMetric.fromJson;
@@ -11780,10 +11813,11 @@ abstract class DeviceMetric implements Entities2 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   CodeableConcept get type;
   CodeableConcept get unit;
   Reference get source;
@@ -11792,7 +11826,7 @@ abstract class DeviceMetric implements Entities2 {
   DeviceMetricColor get color;
   DeviceMetricCategory get category;
   Timing get measurementPeriod;
-  List<DeviceMetricCalibration> get calibration;
+  List<dynamic> get calibration;
   @override
   $DeviceMetricCopyWith<DeviceMetric> get copyWith;
 }
@@ -11805,8 +11839,8 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       DeviceMetricCalibrationType type,
       DeviceMetricCalibrationState state,
       Instant time});
@@ -11825,7 +11859,7 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
     Object state = freezed,
@@ -11833,12 +11867,12 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
   }) {
     return _then(DeviceMetricCalibration(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as DeviceMetricCalibrationType,
       state: state == freezed
           ? _value.state
@@ -11852,7 +11886,7 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
 class _$DeviceMetricCalibration implements DeviceMetricCalibration {
   const _$DeviceMetricCalibration(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.type,
       this.state,
@@ -11864,9 +11898,10 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final DeviceMetricCalibrationType type;
   @override
@@ -11876,7 +11911,7 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
 
   @override
   String toString() {
-    return 'Entities2.deviceMetricCalibration(id: $id, extension: $extension, modifierExtension: $modifierExtension, type: $type, state: $state, time: $time)';
+    return 'Entities2.deviceMetricCalibration(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, type: $type, state: $state, time: $time)';
   }
 
   @override
@@ -11885,9 +11920,9 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         (other is DeviceMetricCalibration &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -11903,7 +11938,7 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(state) ^
@@ -11926,28 +11961,28 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
-            List<SubstanceInstance> instance,
-            List<SubstanceIngredient> ingredient),
+            List<dynamic> instance,
+            List<dynamic> ingredient),
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -11960,24 +11995,24 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
-            List<BiologicallyDerivedProductProcessing> processing,
+            List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
-            List<BiologicallyDerivedProductStorage> storage),
+            List<dynamic> storage),
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -11985,8 +12020,8 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -11995,16 +12030,16 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -12018,39 +12053,39 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
-            List<DeviceUdiCarrier> udiCarrier,
+            List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
             FhirDateTime expirationDate,
             String lotNumber,
             String serialNumber,
-            List<DeviceDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             String partNumber,
             CodeableConcept type,
-            List<DeviceSpecialization> specialization,
-            List<DeviceVersion> version,
-            List<DeviceProperty> property,
+            List<dynamic> specialization,
+            List<dynamic> version,
+            List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -12060,33 +12095,33 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -12096,9 +12131,9 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -12107,12 +12142,12 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             DeviceMetricColor color,
             DeviceMetricCategory category,
             Timing measurementPeriod,
-            List<DeviceMetricCalibration> calibration),
+            List<dynamic> calibration),
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -12134,7 +12169,7 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     assert(deviceMetric != null);
     assert(deviceMetricCalibration != null);
     return deviceMetricCalibration(
-        id, extension, modifierExtension, type, state, time);
+        id, fhirExtension, modifierExtension, type, state, time);
   }
 
   @override
@@ -12148,26 +12183,26 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
-        List<SubstanceInstance> instance,
-        List<SubstanceIngredient> ingredient),
+        List<dynamic> instance,
+        List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -12179,31 +12214,31 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
-        List<BiologicallyDerivedProductProcessing> processing,
+        List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
-        List<BiologicallyDerivedProductStorage> storage),
+        List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -12211,15 +12246,15 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -12232,38 +12267,38 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
-        List<DeviceUdiCarrier> udiCarrier,
+        List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
         FhirDateTime expirationDate,
         String lotNumber,
         String serialNumber,
-        List<DeviceDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         String partNumber,
         CodeableConcept type,
-        List<DeviceSpecialization> specialization,
-        List<DeviceVersion> version,
-        List<DeviceProperty> property,
+        List<dynamic> specialization,
+        List<dynamic> version,
+        List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -12272,30 +12307,30 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -12304,9 +12339,9 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -12315,11 +12350,11 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         DeviceMetricColor color,
         DeviceMetricCategory category,
         Timing measurementPeriod,
-        List<DeviceMetricCalibration> calibration),
+        List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -12328,7 +12363,7 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     assert(orElse != null);
     if (deviceMetricCalibration != null) {
       return deviceMetricCalibration(
-          id, extension, modifierExtension, type, state, time);
+          id, fhirExtension, modifierExtension, type, state, time);
     }
     return orElse();
   }
@@ -12423,8 +12458,8 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
 abstract class DeviceMetricCalibration implements Entities2 {
   const factory DeviceMetricCalibration(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       DeviceMetricCalibrationType type,
       DeviceMetricCalibrationState state,
       Instant time}) = _$DeviceMetricCalibration;
@@ -12434,9 +12469,10 @@ abstract class DeviceMetricCalibration implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   DeviceMetricCalibrationType get type;
   DeviceMetricCalibrationState get state;
   Instant get time;

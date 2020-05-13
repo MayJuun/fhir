@@ -226,7 +226,7 @@ abstract class Medications with _$Medications {
   }) = MedicationRequestSubstitution;
 
   const factory Medications.immunization({
-    String resourceType,
+    @Default('Immunization') String resourceType,
     Id id,
     Meta meta,
     Code language,
@@ -240,6 +240,7 @@ abstract class Medications with _$Medications {
     CodeableConcept vaccineCode,
     Reference patient,
     Reference encounter,
+    FhirDateTime occurrenceDateTime,
     String occurrenceString,
     FhirDateTime recorded,
     bool primarySource,

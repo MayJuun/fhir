@@ -35,9 +35,9 @@ class _$PaymentTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       Reference request,
       Reference response,
@@ -57,7 +57,7 @@ class _$PaymentTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
@@ -82,9 +82,9 @@ class _$PaymentTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       Period period,
       FhirDateTime created,
@@ -96,9 +96,9 @@ class _$PaymentTearOff {
       Date paymentDate,
       Money paymentAmount,
       Identifier paymentIdentifier,
-      List<PaymentReconciliationDetail> detail,
+      List<dynamic> detail,
       CodeableConcept formCode,
-      List<PaymentReconciliationProcessNote> processNote}) {
+      List<dynamic> processNote}) {
     return PaymentReconciliation(
       resourceType: resourceType,
       id: id,
@@ -107,7 +107,7 @@ class _$PaymentTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
@@ -129,8 +129,8 @@ class _$PaymentTearOff {
 
   PaymentReconciliationDetail paymentReconciliationDetail(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       Identifier predecessor,
       CodeableConcept type,
@@ -143,7 +143,7 @@ class _$PaymentTearOff {
       Money amount}) {
     return PaymentReconciliationDetail(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       predecessor: predecessor,
@@ -160,13 +160,13 @@ class _$PaymentTearOff {
 
   PaymentReconciliationProcessNote paymentReconciliationProcessNote(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       PaymentReconciliationProcessNoteType type,
       String text}) {
     return PaymentReconciliationProcessNote(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       type: type,
       text: text,
@@ -178,8 +178,9 @@ class _$PaymentTearOff {
 const $Payment = _$PaymentTearOff();
 
 mixin _$Payment {
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -192,9 +193,9 @@ mixin _$Payment {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -215,9 +216,9 @@ mixin _$Payment {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -229,14 +230,14 @@ mixin _$Payment {
             Date paymentDate,
             Money paymentAmount,
             Identifier paymentIdentifier,
-            List<PaymentReconciliationDetail> detail,
+            List<dynamic> detail,
             CodeableConcept formCode,
-            List<PaymentReconciliationProcessNote> processNote),
+            List<dynamic> processNote),
     @required
         Result paymentReconciliationDetail(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             Identifier predecessor,
             CodeableConcept type,
@@ -250,8 +251,8 @@ mixin _$Payment {
     @required
         Result paymentReconciliationProcessNote(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             PaymentReconciliationProcessNoteType type,
             String text),
   });
@@ -265,9 +266,9 @@ mixin _$Payment {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -287,9 +288,9 @@ mixin _$Payment {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -301,13 +302,13 @@ mixin _$Payment {
         Date paymentDate,
         Money paymentAmount,
         Identifier paymentIdentifier,
-        List<PaymentReconciliationDetail> detail,
+        List<dynamic> detail,
         CodeableConcept formCode,
-        List<PaymentReconciliationProcessNote> processNote),
+        List<dynamic> processNote),
     Result paymentReconciliationDetail(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         Identifier predecessor,
         CodeableConcept type,
@@ -320,8 +321,8 @@ mixin _$Payment {
         Money amount),
     Result paymentReconciliationProcessNote(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         PaymentReconciliationProcessNoteType type,
         String text),
     @required Result orElse(),
@@ -353,7 +354,8 @@ abstract class $PaymentCopyWith<$Res> {
   factory $PaymentCopyWith(Payment value, $Res Function(Payment) then) =
       _$PaymentCopyWithImpl<$Res>;
   $Res call(
-      {List<FhirExtension> extension, List<FhirExtension> modifierExtension});
+      {@JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension});
 }
 
 class _$PaymentCopyWithImpl<$Res> implements $PaymentCopyWith<$Res> {
@@ -365,16 +367,16 @@ class _$PaymentCopyWithImpl<$Res> implements $PaymentCopyWith<$Res> {
 
   @override
   $Res call({
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
     ));
   }
 }
@@ -392,9 +394,9 @@ abstract class $PaymentNoticeCopyWith<$Res> implements $PaymentCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       Reference request,
       Reference response,
@@ -426,7 +428,7 @@ class _$PaymentNoticeCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
@@ -454,15 +456,15 @@ class _$PaymentNoticeCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as Code,
       request: request == freezed ? _value.request : request as Reference,
       response: response == freezed ? _value.response : response as Reference,
@@ -492,7 +494,7 @@ class _$PaymentNotice implements PaymentNotice {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.status,
@@ -525,11 +527,12 @@ class _$PaymentNotice implements PaymentNotice {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final Code status;
   @override
@@ -555,7 +558,7 @@ class _$PaymentNotice implements PaymentNotice {
 
   @override
   String toString() {
-    return 'Payment.paymentNotice(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, request: $request, response: $response, created: $created, provider: $provider, payment: $payment, paymentDate: $paymentDate, payee: $payee, recipient: $recipient, amount: $amount, paymentStatus: $paymentStatus)';
+    return 'Payment.paymentNotice(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, request: $request, response: $response, created: $created, provider: $provider, payment: $payment, paymentDate: $paymentDate, payee: $payee, recipient: $recipient, amount: $amount, paymentStatus: $paymentStatus)';
   }
 
   @override
@@ -580,9 +583,9 @@ class _$PaymentNotice implements PaymentNotice {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -631,7 +634,7 @@ class _$PaymentNotice implements PaymentNotice {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
@@ -662,9 +665,9 @@ class _$PaymentNotice implements PaymentNotice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -685,9 +688,9 @@ class _$PaymentNotice implements PaymentNotice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -699,14 +702,14 @@ class _$PaymentNotice implements PaymentNotice {
             Date paymentDate,
             Money paymentAmount,
             Identifier paymentIdentifier,
-            List<PaymentReconciliationDetail> detail,
+            List<dynamic> detail,
             CodeableConcept formCode,
-            List<PaymentReconciliationProcessNote> processNote),
+            List<dynamic> processNote),
     @required
         Result paymentReconciliationDetail(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             Identifier predecessor,
             CodeableConcept type,
@@ -720,8 +723,8 @@ class _$PaymentNotice implements PaymentNotice {
     @required
         Result paymentReconciliationProcessNote(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             PaymentReconciliationProcessNoteType type,
             String text),
   }) {
@@ -737,7 +740,7 @@ class _$PaymentNotice implements PaymentNotice {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         status,
@@ -764,9 +767,9 @@ class _$PaymentNotice implements PaymentNotice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -786,9 +789,9 @@ class _$PaymentNotice implements PaymentNotice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -800,13 +803,13 @@ class _$PaymentNotice implements PaymentNotice {
         Date paymentDate,
         Money paymentAmount,
         Identifier paymentIdentifier,
-        List<PaymentReconciliationDetail> detail,
+        List<dynamic> detail,
         CodeableConcept formCode,
-        List<PaymentReconciliationProcessNote> processNote),
+        List<dynamic> processNote),
     Result paymentReconciliationDetail(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         Identifier predecessor,
         CodeableConcept type,
@@ -819,8 +822,8 @@ class _$PaymentNotice implements PaymentNotice {
         Money amount),
     Result paymentReconciliationProcessNote(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         PaymentReconciliationProcessNoteType type,
         String text),
     @required Result orElse(),
@@ -835,7 +838,7 @@ class _$PaymentNotice implements PaymentNotice {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           status,
@@ -903,9 +906,9 @@ abstract class PaymentNotice implements Payment {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       Reference request,
       Reference response,
@@ -929,10 +932,11 @@ abstract class PaymentNotice implements Payment {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   Code get status;
   Reference get request;
   Reference get response;
@@ -962,9 +966,9 @@ abstract class $PaymentReconciliationCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       Period period,
       FhirDateTime created,
@@ -976,9 +980,9 @@ abstract class $PaymentReconciliationCopyWith<$Res>
       Date paymentDate,
       Money paymentAmount,
       Identifier paymentIdentifier,
-      List<PaymentReconciliationDetail> detail,
+      List<dynamic> detail,
       CodeableConcept formCode,
-      List<PaymentReconciliationProcessNote> processNote});
+      List<dynamic> processNote});
 }
 
 class _$PaymentReconciliationCopyWithImpl<$Res>
@@ -1000,7 +1004,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
@@ -1031,15 +1035,15 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as Code,
       period: period == freezed ? _value.period : period as Period,
       created: created == freezed ? _value.created : created as FhirDateTime,
@@ -1062,14 +1066,12 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       paymentIdentifier: paymentIdentifier == freezed
           ? _value.paymentIdentifier
           : paymentIdentifier as Identifier,
-      detail: detail == freezed
-          ? _value.detail
-          : detail as List<PaymentReconciliationDetail>,
+      detail: detail == freezed ? _value.detail : detail as List<dynamic>,
       formCode:
           formCode == freezed ? _value.formCode : formCode as CodeableConcept,
       processNote: processNote == freezed
           ? _value.processNote
-          : processNote as List<PaymentReconciliationProcessNote>,
+          : processNote as List<dynamic>,
     ));
   }
 }
@@ -1084,7 +1086,7 @@ class _$PaymentReconciliation implements PaymentReconciliation {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.status,
@@ -1120,11 +1122,12 @@ class _$PaymentReconciliation implements PaymentReconciliation {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final Code status;
   @override
@@ -1148,15 +1151,15 @@ class _$PaymentReconciliation implements PaymentReconciliation {
   @override
   final Identifier paymentIdentifier;
   @override
-  final List<PaymentReconciliationDetail> detail;
+  final List<dynamic> detail;
   @override
   final CodeableConcept formCode;
   @override
-  final List<PaymentReconciliationProcessNote> processNote;
+  final List<dynamic> processNote;
 
   @override
   String toString() {
-    return 'Payment.paymentReconciliation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, period: $period, created: $created, paymentIssuer: $paymentIssuer, request: $request, requestor: $requestor, outcome: $outcome, disposition: $disposition, paymentDate: $paymentDate, paymentAmount: $paymentAmount, paymentIdentifier: $paymentIdentifier, detail: $detail, formCode: $formCode, processNote: $processNote)';
+    return 'Payment.paymentReconciliation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, period: $period, created: $created, paymentIssuer: $paymentIssuer, request: $request, requestor: $requestor, outcome: $outcome, disposition: $disposition, paymentDate: $paymentDate, paymentAmount: $paymentAmount, paymentIdentifier: $paymentIdentifier, detail: $detail, formCode: $formCode, processNote: $processNote)';
   }
 
   @override
@@ -1181,9 +1184,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -1241,7 +1244,7 @@ class _$PaymentReconciliation implements PaymentReconciliation {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
@@ -1276,9 +1279,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -1299,9 +1302,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -1313,14 +1316,14 @@ class _$PaymentReconciliation implements PaymentReconciliation {
             Date paymentDate,
             Money paymentAmount,
             Identifier paymentIdentifier,
-            List<PaymentReconciliationDetail> detail,
+            List<dynamic> detail,
             CodeableConcept formCode,
-            List<PaymentReconciliationProcessNote> processNote),
+            List<dynamic> processNote),
     @required
         Result paymentReconciliationDetail(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             Identifier predecessor,
             CodeableConcept type,
@@ -1334,8 +1337,8 @@ class _$PaymentReconciliation implements PaymentReconciliation {
     @required
         Result paymentReconciliationProcessNote(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             PaymentReconciliationProcessNoteType type,
             String text),
   }) {
@@ -1351,7 +1354,7 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         status,
@@ -1381,9 +1384,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -1403,9 +1406,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -1417,13 +1420,13 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         Date paymentDate,
         Money paymentAmount,
         Identifier paymentIdentifier,
-        List<PaymentReconciliationDetail> detail,
+        List<dynamic> detail,
         CodeableConcept formCode,
-        List<PaymentReconciliationProcessNote> processNote),
+        List<dynamic> processNote),
     Result paymentReconciliationDetail(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         Identifier predecessor,
         CodeableConcept type,
@@ -1436,8 +1439,8 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         Money amount),
     Result paymentReconciliationProcessNote(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         PaymentReconciliationProcessNoteType type,
         String text),
     @required Result orElse(),
@@ -1452,7 +1455,7 @@ class _$PaymentReconciliation implements PaymentReconciliation {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           status,
@@ -1517,31 +1520,30 @@ class _$PaymentReconciliation implements PaymentReconciliation {
 
 abstract class PaymentReconciliation implements Payment {
   const factory PaymentReconciliation(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<dynamic> contained,
-          List<FhirExtension> extension,
-          List<FhirExtension> modifierExtension,
-          List<Identifier> identifier,
-          Code status,
-          Period period,
-          FhirDateTime created,
-          Reference paymentIssuer,
-          Reference request,
-          Reference requestor,
-          PaymentReconciliationOutcome outcome,
-          String disposition,
-          Date paymentDate,
-          Money paymentAmount,
-          Identifier paymentIdentifier,
-          List<PaymentReconciliationDetail> detail,
-          CodeableConcept formCode,
-          List<PaymentReconciliationProcessNote> processNote}) =
-      _$PaymentReconciliation;
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      Code status,
+      Period period,
+      FhirDateTime created,
+      Reference paymentIssuer,
+      Reference request,
+      Reference requestor,
+      PaymentReconciliationOutcome outcome,
+      String disposition,
+      Date paymentDate,
+      Money paymentAmount,
+      Identifier paymentIdentifier,
+      List<dynamic> detail,
+      CodeableConcept formCode,
+      List<dynamic> processNote}) = _$PaymentReconciliation;
 
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =
       _$PaymentReconciliation.fromJson;
@@ -1554,10 +1556,11 @@ abstract class PaymentReconciliation implements Payment {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   Code get status;
   Period get period;
   FhirDateTime get created;
@@ -1569,9 +1572,9 @@ abstract class PaymentReconciliation implements Payment {
   Date get paymentDate;
   Money get paymentAmount;
   Identifier get paymentIdentifier;
-  List<PaymentReconciliationDetail> get detail;
+  List<dynamic> get detail;
   CodeableConcept get formCode;
-  List<PaymentReconciliationProcessNote> get processNote;
+  List<dynamic> get processNote;
   @override
   $PaymentReconciliationCopyWith<PaymentReconciliation> get copyWith;
 }
@@ -1585,8 +1588,8 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       Identifier predecessor,
       CodeableConcept type,
@@ -1613,7 +1616,7 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object predecessor = freezed,
@@ -1628,12 +1631,12 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
   }) {
     return _then(PaymentReconciliationDetail(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       predecessor: predecessor == freezed
@@ -1658,7 +1661,7 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
 class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
   const _$PaymentReconciliationDetail(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.predecessor,
@@ -1677,9 +1680,10 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Identifier identifier;
   @override
@@ -1703,7 +1707,7 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
 
   @override
   String toString() {
-    return 'Payment.paymentReconciliationDetail(id: $id, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, predecessor: $predecessor, type: $type, request: $request, submitter: $submitter, response: $response, date: $date, responsible: $responsible, payee: $payee, amount: $amount)';
+    return 'Payment.paymentReconciliationDetail(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, predecessor: $predecessor, type: $type, request: $request, submitter: $submitter, response: $response, date: $date, responsible: $responsible, payee: $payee, amount: $amount)';
   }
 
   @override
@@ -1712,9 +1716,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         (other is PaymentReconciliationDetail &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -1750,7 +1754,7 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(predecessor) ^
@@ -1780,9 +1784,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -1803,9 +1807,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -1817,14 +1821,14 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
             Date paymentDate,
             Money paymentAmount,
             Identifier paymentIdentifier,
-            List<PaymentReconciliationDetail> detail,
+            List<dynamic> detail,
             CodeableConcept formCode,
-            List<PaymentReconciliationProcessNote> processNote),
+            List<dynamic> processNote),
     @required
         Result paymentReconciliationDetail(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             Identifier predecessor,
             CodeableConcept type,
@@ -1838,8 +1842,8 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
     @required
         Result paymentReconciliationProcessNote(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             PaymentReconciliationProcessNoteType type,
             String text),
   }) {
@@ -1849,7 +1853,7 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
     assert(paymentReconciliationProcessNote != null);
     return paymentReconciliationDetail(
         id,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         predecessor,
@@ -1874,9 +1878,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -1896,9 +1900,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -1910,13 +1914,13 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         Date paymentDate,
         Money paymentAmount,
         Identifier paymentIdentifier,
-        List<PaymentReconciliationDetail> detail,
+        List<dynamic> detail,
         CodeableConcept formCode,
-        List<PaymentReconciliationProcessNote> processNote),
+        List<dynamic> processNote),
     Result paymentReconciliationDetail(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         Identifier predecessor,
         CodeableConcept type,
@@ -1929,8 +1933,8 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         Money amount),
     Result paymentReconciliationProcessNote(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         PaymentReconciliationProcessNoteType type,
         String text),
     @required Result orElse(),
@@ -1939,7 +1943,7 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
     if (paymentReconciliationDetail != null) {
       return paymentReconciliationDetail(
           id,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           predecessor,
@@ -2000,8 +2004,8 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
 abstract class PaymentReconciliationDetail implements Payment {
   const factory PaymentReconciliationDetail(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       Identifier predecessor,
       CodeableConcept type,
@@ -2018,9 +2022,10 @@ abstract class PaymentReconciliationDetail implements Payment {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Identifier get identifier;
   Identifier get predecessor;
   CodeableConcept get type;
@@ -2045,8 +2050,8 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       PaymentReconciliationProcessNoteType type,
       String text});
 }
@@ -2066,19 +2071,19 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
     Object text = freezed,
   }) {
     return _then(PaymentReconciliationProcessNote(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed
           ? _value.type
           : type as PaymentReconciliationProcessNoteType,
@@ -2091,7 +2096,11 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
 class _$PaymentReconciliationProcessNote
     implements PaymentReconciliationProcessNote {
   const _$PaymentReconciliationProcessNote(
-      {this.id, this.extension, this.modifierExtension, this.type, this.text});
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.modifierExtension,
+      this.type,
+      this.text});
 
   factory _$PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>
@@ -2100,9 +2109,10 @@ class _$PaymentReconciliationProcessNote
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final PaymentReconciliationProcessNoteType type;
   @override
@@ -2110,7 +2120,7 @@ class _$PaymentReconciliationProcessNote
 
   @override
   String toString() {
-    return 'Payment.paymentReconciliationProcessNote(id: $id, extension: $extension, modifierExtension: $modifierExtension, type: $type, text: $text)';
+    return 'Payment.paymentReconciliationProcessNote(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, type: $type, text: $text)';
   }
 
   @override
@@ -2119,9 +2129,9 @@ class _$PaymentReconciliationProcessNote
         (other is PaymentReconciliationProcessNote &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -2135,7 +2145,7 @@ class _$PaymentReconciliationProcessNote
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(text);
@@ -2157,9 +2167,9 @@ class _$PaymentReconciliationProcessNote
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -2180,9 +2190,9 @@ class _$PaymentReconciliationProcessNote
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -2194,14 +2204,14 @@ class _$PaymentReconciliationProcessNote
             Date paymentDate,
             Money paymentAmount,
             Identifier paymentIdentifier,
-            List<PaymentReconciliationDetail> detail,
+            List<dynamic> detail,
             CodeableConcept formCode,
-            List<PaymentReconciliationProcessNote> processNote),
+            List<dynamic> processNote),
     @required
         Result paymentReconciliationDetail(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             Identifier predecessor,
             CodeableConcept type,
@@ -2215,8 +2225,8 @@ class _$PaymentReconciliationProcessNote
     @required
         Result paymentReconciliationProcessNote(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             PaymentReconciliationProcessNoteType type,
             String text),
   }) {
@@ -2225,7 +2235,7 @@ class _$PaymentReconciliationProcessNote
     assert(paymentReconciliationDetail != null);
     assert(paymentReconciliationProcessNote != null);
     return paymentReconciliationProcessNote(
-        id, extension, modifierExtension, type, text);
+        id, fhirExtension, modifierExtension, type, text);
   }
 
   @override
@@ -2239,9 +2249,9 @@ class _$PaymentReconciliationProcessNote
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -2261,9 +2271,9 @@ class _$PaymentReconciliationProcessNote
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -2275,13 +2285,13 @@ class _$PaymentReconciliationProcessNote
         Date paymentDate,
         Money paymentAmount,
         Identifier paymentIdentifier,
-        List<PaymentReconciliationDetail> detail,
+        List<dynamic> detail,
         CodeableConcept formCode,
-        List<PaymentReconciliationProcessNote> processNote),
+        List<dynamic> processNote),
     Result paymentReconciliationDetail(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         Identifier predecessor,
         CodeableConcept type,
@@ -2294,8 +2304,8 @@ class _$PaymentReconciliationProcessNote
         Money amount),
     Result paymentReconciliationProcessNote(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         PaymentReconciliationProcessNoteType type,
         String text),
     @required Result orElse(),
@@ -2303,7 +2313,7 @@ class _$PaymentReconciliationProcessNote
     assert(orElse != null);
     if (paymentReconciliationProcessNote != null) {
       return paymentReconciliationProcessNote(
-          id, extension, modifierExtension, type, text);
+          id, fhirExtension, modifierExtension, type, text);
     }
     return orElse();
   }
@@ -2353,8 +2363,8 @@ class _$PaymentReconciliationProcessNote
 abstract class PaymentReconciliationProcessNote implements Payment {
   const factory PaymentReconciliationProcessNote(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       PaymentReconciliationProcessNoteType type,
       String text}) = _$PaymentReconciliationProcessNote;
 
@@ -2363,9 +2373,10 @@ abstract class PaymentReconciliationProcessNote implements Payment {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   PaymentReconciliationProcessNoteType get type;
   String get text;
   @override

@@ -67,9 +67,9 @@ class _$OtherTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<OperationOutcomeIssue> issue}) {
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> issue}) {
     return OperationOutcome(
       resourceType: resourceType,
       id: id,
@@ -78,7 +78,7 @@ class _$OtherTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       issue: issue,
     );
@@ -86,8 +86,8 @@ class _$OtherTearOff {
 
   OperationOutcomeIssue operationOutcomeIssue(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       OperationOutcomeIssueSeverity severity,
       OperationOutcomeIssueCode code,
       CodeableConcept details,
@@ -96,7 +96,7 @@ class _$OtherTearOff {
       List<String> expression}) {
     return OperationOutcomeIssue(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       severity: severity,
       code: code,
@@ -115,11 +115,11 @@ class _$OtherTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Coding eventCoding,
       FhirUri eventUri,
-      List<MessageHeaderDestination> destination,
+      List<dynamic> destination,
       Reference sender,
       Reference enterer,
       Reference author,
@@ -127,7 +127,7 @@ class _$OtherTearOff {
       Reference responsible,
       CodeableConcept reason,
       MessageHeaderResponse response,
-      List<Reference> focus,
+      List<dynamic> focus,
       Canonical definition}) {
     return MessageHeader(
       resourceType: resourceType,
@@ -137,7 +137,7 @@ class _$OtherTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       eventCoding: eventCoding,
       eventUri: eventUri,
@@ -156,15 +156,15 @@ class _$OtherTearOff {
 
   MessageHeaderDestination messageHeaderDestination(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       Reference target,
       FhirUrl endpoint,
       Reference receiver}) {
     return MessageHeaderDestination(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       name: name,
       target: target,
@@ -175,8 +175,8 @@ class _$OtherTearOff {
 
   MessageHeaderSource messageHeaderSource(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       String software,
       String version,
@@ -184,7 +184,7 @@ class _$OtherTearOff {
       FhirUrl endpoint}) {
     return MessageHeaderSource(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       name: name,
       software: software,
@@ -196,14 +196,14 @@ class _$OtherTearOff {
 
   MessageHeaderResponse messageHeaderResponse(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Id identifier,
       MessageHeaderResponseCode code,
       Reference details}) {
     return MessageHeaderResponse(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       code: code,
@@ -217,7 +217,7 @@ class _$OtherTearOff {
       Meta meta,
       FhirUri implicitRules,
       Code language,
-      List<ParametersParameter> parameter}) {
+      List<dynamic> parameter}) {
     return Parameters(
       resourceType: resourceType,
       id: id,
@@ -230,8 +230,8 @@ class _$OtherTearOff {
 
   ParametersParameter parametersParameter(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -284,10 +284,10 @@ class _$OtherTearOff {
       Dosage valueDosage,
       Meta valueMeta,
       dynamic resource,
-      List<ParametersParameter> part}) {
+      List<dynamic> part}) {
     return ParametersParameter(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       name: name,
       valueBase64Binary: valueBase64Binary,
@@ -374,10 +374,10 @@ class _$OtherTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       SubscriptionStatus status,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Instant end,
       String reason,
       String criteria,
@@ -391,7 +391,7 @@ class _$OtherTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       status: status,
       contact: contact,
@@ -405,15 +405,15 @@ class _$OtherTearOff {
 
   SubscriptionChannel subscriptionChannel(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       SubscriptionChannelType type,
       FhirUrl endpoint,
       Code payload,
       List<String> header}) {
     return SubscriptionChannel(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       type: type,
       endpoint: endpoint,
@@ -430,11 +430,11 @@ class _$OtherTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       bool active,
       Reference author,
-      List<LinkageItem> item}) {
+      List<dynamic> item}) {
     return Linkage(
       resourceType: resourceType,
       id: id,
@@ -443,7 +443,7 @@ class _$OtherTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       active: active,
       author: author,
@@ -453,13 +453,13 @@ class _$OtherTearOff {
 
   LinkageItem linkageItem(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       LinkageItemType type,
       Reference resource}) {
     return LinkageItem(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       type: type,
       resource: resource,
@@ -476,8 +476,8 @@ class _$OtherTearOff {
       BundleType type,
       Instant timestamp,
       int total,
-      List<BundleLink> link,
-      List<BundleEntry> entry,
+      List<dynamic> link,
+      List<dynamic> entry,
       Signature signature}) {
     return Bundle(
       resourceType: resourceType,
@@ -497,13 +497,13 @@ class _$OtherTearOff {
 
   BundleLink bundleLink(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String relation,
       FhirUri url}) {
     return BundleLink(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       relation: relation,
       url: url,
@@ -512,9 +512,9 @@ class _$OtherTearOff {
 
   BundleEntry bundleEntry(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<BundleLink> link,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> link,
       FhirUri fullUrl,
       dynamic resource,
       BundleSearch search,
@@ -522,7 +522,7 @@ class _$OtherTearOff {
       BundleResponse response}) {
     return BundleEntry(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       link: link,
       fullUrl: fullUrl,
@@ -535,13 +535,13 @@ class _$OtherTearOff {
 
   BundleSearch bundleSearch(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       BundleSearchMode mode,
       double score}) {
     return BundleSearch(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       mode: mode,
       score: score,
@@ -550,8 +550,8 @@ class _$OtherTearOff {
 
   BundleRequest bundleRequest(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       BundleRequestMethod method,
       FhirUri url,
       String ifNoneMatch,
@@ -560,7 +560,7 @@ class _$OtherTearOff {
       String ifNoneExist}) {
     return BundleRequest(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       method: method,
       url: url,
@@ -573,8 +573,8 @@ class _$OtherTearOff {
 
   BundleResponse bundleResponse(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String status,
       FhirUri location,
       String etag,
@@ -582,7 +582,7 @@ class _$OtherTearOff {
       dynamic outcome}) {
     return BundleResponse(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       status: status,
       location: location,
@@ -600,9 +600,9 @@ class _$OtherTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept code,
       Reference subject,
       Date created,
@@ -615,7 +615,7 @@ class _$OtherTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       code: code,
@@ -641,14 +641,14 @@ mixin _$Other {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -664,11 +664,11 @@ mixin _$Other {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -676,13 +676,13 @@ mixin _$Other {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -690,8 +690,8 @@ mixin _$Other {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -700,24 +700,19 @@ mixin _$Other {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -770,7 +765,7 @@ mixin _$Other {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -790,10 +785,10 @@ mixin _$Other {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -802,8 +797,8 @@ mixin _$Other {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -817,16 +812,16 @@ mixin _$Other {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -840,22 +835,22 @@ mixin _$Other {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -864,15 +859,15 @@ mixin _$Other {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -882,8 +877,8 @@ mixin _$Other {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -898,9 +893,9 @@ mixin _$Other {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -916,13 +911,13 @@ mixin _$Other {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -937,11 +932,11 @@ mixin _$Other {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -949,20 +944,20 @@ mixin _$Other {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -970,22 +965,17 @@ mixin _$Other {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -1038,7 +1028,7 @@ mixin _$Other {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -1056,10 +1046,10 @@ mixin _$Other {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -1067,8 +1057,8 @@ mixin _$Other {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -1081,15 +1071,15 @@ mixin _$Other {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -1102,16 +1092,20 @@ mixin _$Other {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -1119,14 +1113,14 @@ mixin _$Other {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -1135,8 +1129,8 @@ mixin _$Other {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -1150,9 +1144,9 @@ mixin _$Other {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -1234,9 +1228,9 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<OperationOutcomeIssue> issue});
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> issue});
 }
 
 class _$OperationOutcomeCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -1257,7 +1251,7 @@ class _$OperationOutcomeCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object issue = freezed,
   }) {
@@ -1274,15 +1268,13 @@ class _$OperationOutcomeCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      issue: issue == freezed
-          ? _value.issue
-          : issue as List<OperationOutcomeIssue>,
+          : modifierExtension as List<dynamic>,
+      issue: issue == freezed ? _value.issue : issue as List<dynamic>,
     ));
   }
 }
@@ -1297,7 +1289,7 @@ class _$OperationOutcome implements OperationOutcome {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.issue});
 
@@ -1319,15 +1311,16 @@ class _$OperationOutcome implements OperationOutcome {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<OperationOutcomeIssue> issue;
+  final List<dynamic> issue;
 
   @override
   String toString() {
-    return 'Other.operationOutcome(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, issue: $issue)';
+    return 'Other.operationOutcome(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, issue: $issue)';
   }
 
   @override
@@ -1352,9 +1345,9 @@ class _$OperationOutcome implements OperationOutcome {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -1372,7 +1365,7 @@ class _$OperationOutcome implements OperationOutcome {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(issue);
 
@@ -1392,14 +1385,14 @@ class _$OperationOutcome implements OperationOutcome {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -1415,11 +1408,11 @@ class _$OperationOutcome implements OperationOutcome {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -1427,13 +1420,13 @@ class _$OperationOutcome implements OperationOutcome {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -1441,8 +1434,8 @@ class _$OperationOutcome implements OperationOutcome {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -1451,24 +1444,19 @@ class _$OperationOutcome implements OperationOutcome {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -1521,7 +1509,7 @@ class _$OperationOutcome implements OperationOutcome {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -1541,10 +1529,10 @@ class _$OperationOutcome implements OperationOutcome {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -1553,8 +1541,8 @@ class _$OperationOutcome implements OperationOutcome {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -1568,16 +1556,16 @@ class _$OperationOutcome implements OperationOutcome {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -1591,22 +1579,22 @@ class _$OperationOutcome implements OperationOutcome {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -1615,15 +1603,15 @@ class _$OperationOutcome implements OperationOutcome {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -1633,8 +1621,8 @@ class _$OperationOutcome implements OperationOutcome {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -1649,9 +1637,9 @@ class _$OperationOutcome implements OperationOutcome {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -1678,7 +1666,7 @@ class _$OperationOutcome implements OperationOutcome {
     assert(bundleResponse != null);
     assert(basic != null);
     return operationOutcome(resourceType, id, meta, implicitRules, language,
-        text, contained, extension, modifierExtension, issue);
+        text, contained, fhirExtension, modifierExtension, issue);
   }
 
   @override
@@ -1692,13 +1680,13 @@ class _$OperationOutcome implements OperationOutcome {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -1713,11 +1701,11 @@ class _$OperationOutcome implements OperationOutcome {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -1725,20 +1713,20 @@ class _$OperationOutcome implements OperationOutcome {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -1746,22 +1734,17 @@ class _$OperationOutcome implements OperationOutcome {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -1814,7 +1797,7 @@ class _$OperationOutcome implements OperationOutcome {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -1832,10 +1815,10 @@ class _$OperationOutcome implements OperationOutcome {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -1843,8 +1826,8 @@ class _$OperationOutcome implements OperationOutcome {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -1857,15 +1840,15 @@ class _$OperationOutcome implements OperationOutcome {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -1878,16 +1861,20 @@ class _$OperationOutcome implements OperationOutcome {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -1895,14 +1882,14 @@ class _$OperationOutcome implements OperationOutcome {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -1911,8 +1898,8 @@ class _$OperationOutcome implements OperationOutcome {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -1926,9 +1913,9 @@ class _$OperationOutcome implements OperationOutcome {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -1938,7 +1925,7 @@ class _$OperationOutcome implements OperationOutcome {
     assert(orElse != null);
     if (operationOutcome != null) {
       return operationOutcome(resourceType, id, meta, implicitRules, language,
-          text, contained, extension, modifierExtension, issue);
+          text, contained, fhirExtension, modifierExtension, issue);
     }
     return orElse();
   }
@@ -2038,9 +2025,9 @@ abstract class OperationOutcome implements Other {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<OperationOutcomeIssue> issue}) = _$OperationOutcome;
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> issue}) = _$OperationOutcome;
 
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =
       _$OperationOutcome.fromJson;
@@ -2052,9 +2039,10 @@ abstract class OperationOutcome implements Other {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
-  List<OperationOutcomeIssue> get issue;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get issue;
   $OperationOutcomeCopyWith<OperationOutcome> get copyWith;
 }
 
@@ -2064,8 +2052,8 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
       _$OperationOutcomeIssueCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       OperationOutcomeIssueSeverity severity,
       OperationOutcomeIssueCode code,
       CodeableConcept details,
@@ -2087,7 +2075,7 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object severity = freezed,
     Object code = freezed,
@@ -2098,12 +2086,12 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
   }) {
     return _then(OperationOutcomeIssue(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       severity: severity == freezed
           ? _value.severity
           : severity as OperationOutcomeIssueSeverity,
@@ -2124,7 +2112,7 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
 class _$OperationOutcomeIssue implements OperationOutcomeIssue {
   const _$OperationOutcomeIssue(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.severity,
       this.code,
@@ -2139,9 +2127,10 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final OperationOutcomeIssueSeverity severity;
   @override
@@ -2157,7 +2146,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
 
   @override
   String toString() {
-    return 'Other.operationOutcomeIssue(id: $id, extension: $extension, modifierExtension: $modifierExtension, severity: $severity, code: $code, details: $details, diagnostics: $diagnostics, location: $location, expression: $expression)';
+    return 'Other.operationOutcomeIssue(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, severity: $severity, code: $code, details: $details, diagnostics: $diagnostics, location: $location, expression: $expression)';
   }
 
   @override
@@ -2166,9 +2155,9 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         (other is OperationOutcomeIssue &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -2195,7 +2184,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(severity) ^
       const DeepCollectionEquality().hash(code) ^
@@ -2221,14 +2210,14 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -2244,11 +2233,11 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -2256,13 +2245,13 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -2270,8 +2259,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -2280,24 +2269,19 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -2350,7 +2334,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -2370,10 +2354,10 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -2382,8 +2366,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -2397,16 +2381,16 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -2420,22 +2404,22 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -2444,15 +2428,15 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -2462,8 +2446,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -2478,9 +2462,9 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -2506,7 +2490,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
     assert(bundleRequest != null);
     assert(bundleResponse != null);
     assert(basic != null);
-    return operationOutcomeIssue(id, extension, modifierExtension, severity,
+    return operationOutcomeIssue(id, fhirExtension, modifierExtension, severity,
         code, details, diagnostics, location, expression);
   }
 
@@ -2521,13 +2505,13 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -2542,11 +2526,11 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -2554,20 +2538,20 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -2575,22 +2559,17 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -2643,7 +2622,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -2661,10 +2640,10 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -2672,8 +2651,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -2686,15 +2665,15 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -2707,16 +2686,20 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -2724,14 +2707,14 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -2740,8 +2723,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -2755,9 +2738,9 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -2766,8 +2749,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
   }) {
     assert(orElse != null);
     if (operationOutcomeIssue != null) {
-      return operationOutcomeIssue(id, extension, modifierExtension, severity,
-          code, details, diagnostics, location, expression);
+      return operationOutcomeIssue(id, fhirExtension, modifierExtension,
+          severity, code, details, diagnostics, location, expression);
     }
     return orElse();
   }
@@ -2861,8 +2844,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
 abstract class OperationOutcomeIssue implements Other {
   const factory OperationOutcomeIssue(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       OperationOutcomeIssueSeverity severity,
       OperationOutcomeIssueCode code,
       CodeableConcept details,
@@ -2874,8 +2857,9 @@ abstract class OperationOutcomeIssue implements Other {
       _$OperationOutcomeIssue.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   OperationOutcomeIssueSeverity get severity;
   OperationOutcomeIssueCode get code;
   CodeableConcept get details;
@@ -2897,11 +2881,11 @@ abstract class $MessageHeaderCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Coding eventCoding,
       FhirUri eventUri,
-      List<MessageHeaderDestination> destination,
+      List<dynamic> destination,
       Reference sender,
       Reference enterer,
       Reference author,
@@ -2909,7 +2893,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
       Reference responsible,
       CodeableConcept reason,
       MessageHeaderResponse response,
-      List<Reference> focus,
+      List<dynamic> focus,
       Canonical definition});
 }
 
@@ -2931,7 +2915,7 @@ class _$MessageHeaderCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object eventCoding = freezed,
     Object eventUri = freezed,
@@ -2959,18 +2943,18 @@ class _$MessageHeaderCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       eventCoding:
           eventCoding == freezed ? _value.eventCoding : eventCoding as Coding,
       eventUri: eventUri == freezed ? _value.eventUri : eventUri as FhirUri,
       destination: destination == freezed
           ? _value.destination
-          : destination as List<MessageHeaderDestination>,
+          : destination as List<dynamic>,
       sender: sender == freezed ? _value.sender : sender as Reference,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       author: author == freezed ? _value.author : author as Reference,
@@ -2982,7 +2966,7 @@ class _$MessageHeaderCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       response: response == freezed
           ? _value.response
           : response as MessageHeaderResponse,
-      focus: focus == freezed ? _value.focus : focus as List<Reference>,
+      focus: focus == freezed ? _value.focus : focus as List<dynamic>,
       definition:
           definition == freezed ? _value.definition : definition as Canonical,
     ));
@@ -2999,7 +2983,7 @@ class _$MessageHeader implements MessageHeader {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.eventCoding,
       this.eventUri,
@@ -3032,15 +3016,16 @@ class _$MessageHeader implements MessageHeader {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Coding eventCoding;
   @override
   final FhirUri eventUri;
   @override
-  final List<MessageHeaderDestination> destination;
+  final List<dynamic> destination;
   @override
   final Reference sender;
   @override
@@ -3056,13 +3041,13 @@ class _$MessageHeader implements MessageHeader {
   @override
   final MessageHeaderResponse response;
   @override
-  final List<Reference> focus;
+  final List<dynamic> focus;
   @override
   final Canonical definition;
 
   @override
   String toString() {
-    return 'Other.messageHeader(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, eventCoding: $eventCoding, eventUri: $eventUri, destination: $destination, sender: $sender, enterer: $enterer, author: $author, source: $source, responsible: $responsible, reason: $reason, response: $response, focus: $focus, definition: $definition)';
+    return 'Other.messageHeader(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, eventCoding: $eventCoding, eventUri: $eventUri, destination: $destination, sender: $sender, enterer: $enterer, author: $author, source: $source, responsible: $responsible, reason: $reason, response: $response, focus: $focus, definition: $definition)';
   }
 
   @override
@@ -3087,9 +3072,9 @@ class _$MessageHeader implements MessageHeader {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -3136,7 +3121,7 @@ class _$MessageHeader implements MessageHeader {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(eventCoding) ^
       const DeepCollectionEquality().hash(eventUri) ^
@@ -3167,14 +3152,14 @@ class _$MessageHeader implements MessageHeader {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -3190,11 +3175,11 @@ class _$MessageHeader implements MessageHeader {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -3202,13 +3187,13 @@ class _$MessageHeader implements MessageHeader {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -3216,8 +3201,8 @@ class _$MessageHeader implements MessageHeader {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -3226,24 +3211,19 @@ class _$MessageHeader implements MessageHeader {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -3296,7 +3276,7 @@ class _$MessageHeader implements MessageHeader {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -3316,10 +3296,10 @@ class _$MessageHeader implements MessageHeader {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -3328,8 +3308,8 @@ class _$MessageHeader implements MessageHeader {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -3343,16 +3323,16 @@ class _$MessageHeader implements MessageHeader {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -3366,22 +3346,22 @@ class _$MessageHeader implements MessageHeader {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -3390,15 +3370,15 @@ class _$MessageHeader implements MessageHeader {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -3408,8 +3388,8 @@ class _$MessageHeader implements MessageHeader {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -3424,9 +3404,9 @@ class _$MessageHeader implements MessageHeader {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -3460,7 +3440,7 @@ class _$MessageHeader implements MessageHeader {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         eventCoding,
         eventUri,
@@ -3487,13 +3467,13 @@ class _$MessageHeader implements MessageHeader {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -3508,11 +3488,11 @@ class _$MessageHeader implements MessageHeader {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -3520,20 +3500,20 @@ class _$MessageHeader implements MessageHeader {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -3541,22 +3521,17 @@ class _$MessageHeader implements MessageHeader {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -3609,7 +3584,7 @@ class _$MessageHeader implements MessageHeader {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -3627,10 +3602,10 @@ class _$MessageHeader implements MessageHeader {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -3638,8 +3613,8 @@ class _$MessageHeader implements MessageHeader {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -3652,15 +3627,15 @@ class _$MessageHeader implements MessageHeader {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -3673,16 +3648,20 @@ class _$MessageHeader implements MessageHeader {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -3690,14 +3669,14 @@ class _$MessageHeader implements MessageHeader {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -3706,8 +3685,8 @@ class _$MessageHeader implements MessageHeader {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -3721,9 +3700,9 @@ class _$MessageHeader implements MessageHeader {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -3740,7 +3719,7 @@ class _$MessageHeader implements MessageHeader {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           eventCoding,
           eventUri,
@@ -3852,11 +3831,11 @@ abstract class MessageHeader implements Other {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Coding eventCoding,
       FhirUri eventUri,
-      List<MessageHeaderDestination> destination,
+      List<dynamic> destination,
       Reference sender,
       Reference enterer,
       Reference author,
@@ -3864,7 +3843,7 @@ abstract class MessageHeader implements Other {
       Reference responsible,
       CodeableConcept reason,
       MessageHeaderResponse response,
-      List<Reference> focus,
+      List<dynamic> focus,
       Canonical definition}) = _$MessageHeader;
 
   factory MessageHeader.fromJson(Map<String, dynamic> json) =
@@ -3877,11 +3856,12 @@ abstract class MessageHeader implements Other {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   Coding get eventCoding;
   FhirUri get eventUri;
-  List<MessageHeaderDestination> get destination;
+  List<dynamic> get destination;
   Reference get sender;
   Reference get enterer;
   Reference get author;
@@ -3889,7 +3869,7 @@ abstract class MessageHeader implements Other {
   Reference get responsible;
   CodeableConcept get reason;
   MessageHeaderResponse get response;
-  List<Reference> get focus;
+  List<dynamic> get focus;
   Canonical get definition;
   $MessageHeaderCopyWith<MessageHeader> get copyWith;
 }
@@ -3900,8 +3880,8 @@ abstract class $MessageHeaderDestinationCopyWith<$Res> {
       _$MessageHeaderDestinationCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       Reference target,
       FhirUrl endpoint,
@@ -3922,7 +3902,7 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
     Object target = freezed,
@@ -3931,12 +3911,12 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
   }) {
     return _then(MessageHeaderDestination(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       name: name == freezed ? _value.name : name as String,
       target: target == freezed ? _value.target : target as Reference,
       endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUrl,
@@ -3949,7 +3929,7 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
 class _$MessageHeaderDestination implements MessageHeaderDestination {
   const _$MessageHeaderDestination(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.name,
       this.target,
@@ -3962,9 +3942,10 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String name;
   @override
@@ -3976,7 +3957,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
 
   @override
   String toString() {
-    return 'Other.messageHeaderDestination(id: $id, extension: $extension, modifierExtension: $modifierExtension, name: $name, target: $target, endpoint: $endpoint, receiver: $receiver)';
+    return 'Other.messageHeaderDestination(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, name: $name, target: $target, endpoint: $endpoint, receiver: $receiver)';
   }
 
   @override
@@ -3985,9 +3966,9 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         (other is MessageHeaderDestination &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -4007,7 +3988,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(target) ^
@@ -4031,14 +4012,14 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -4054,11 +4035,11 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -4066,13 +4047,13 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -4080,8 +4061,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -4090,24 +4071,19 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -4160,7 +4136,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -4180,10 +4156,10 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -4192,8 +4168,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -4207,16 +4183,16 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -4230,22 +4206,22 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -4254,15 +4230,15 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -4272,8 +4248,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -4288,9 +4264,9 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -4317,7 +4293,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
     assert(bundleResponse != null);
     assert(basic != null);
     return messageHeaderDestination(
-        id, extension, modifierExtension, name, target, endpoint, receiver);
+        id, fhirExtension, modifierExtension, name, target, endpoint, receiver);
   }
 
   @override
@@ -4331,13 +4307,13 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -4352,11 +4328,11 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -4364,20 +4340,20 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -4385,22 +4361,17 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -4453,7 +4424,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -4471,10 +4442,10 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -4482,8 +4453,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -4496,15 +4467,15 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -4517,16 +4488,20 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -4534,14 +4509,14 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -4550,8 +4525,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -4565,9 +4540,9 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -4576,8 +4551,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
   }) {
     assert(orElse != null);
     if (messageHeaderDestination != null) {
-      return messageHeaderDestination(
-          id, extension, modifierExtension, name, target, endpoint, receiver);
+      return messageHeaderDestination(id, fhirExtension, modifierExtension,
+          name, target, endpoint, receiver);
     }
     return orElse();
   }
@@ -4671,8 +4646,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
 abstract class MessageHeaderDestination implements Other {
   const factory MessageHeaderDestination(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       Reference target,
       FhirUrl endpoint,
@@ -4682,8 +4657,9 @@ abstract class MessageHeaderDestination implements Other {
       _$MessageHeaderDestination.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   String get name;
   Reference get target;
   FhirUrl get endpoint;
@@ -4697,8 +4673,8 @@ abstract class $MessageHeaderSourceCopyWith<$Res> {
       _$MessageHeaderSourceCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       String software,
       String version,
@@ -4718,7 +4694,7 @@ class _$MessageHeaderSourceCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
     Object software = freezed,
@@ -4728,12 +4704,12 @@ class _$MessageHeaderSourceCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   }) {
     return _then(MessageHeaderSource(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       name: name == freezed ? _value.name : name as String,
       software: software == freezed ? _value.software : software as String,
       version: version == freezed ? _value.version : version as String,
@@ -4747,7 +4723,7 @@ class _$MessageHeaderSourceCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
 class _$MessageHeaderSource implements MessageHeaderSource {
   const _$MessageHeaderSource(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.name,
       this.software,
@@ -4761,9 +4737,10 @@ class _$MessageHeaderSource implements MessageHeaderSource {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String name;
   @override
@@ -4777,7 +4754,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
 
   @override
   String toString() {
-    return 'Other.messageHeaderSource(id: $id, extension: $extension, modifierExtension: $modifierExtension, name: $name, software: $software, version: $version, contact: $contact, endpoint: $endpoint)';
+    return 'Other.messageHeaderSource(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, name: $name, software: $software, version: $version, contact: $contact, endpoint: $endpoint)';
   }
 
   @override
@@ -4786,9 +4763,9 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         (other is MessageHeaderSource &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -4812,7 +4789,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(software) ^
@@ -4836,14 +4813,14 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -4859,11 +4836,11 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -4871,13 +4848,13 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -4885,8 +4862,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -4895,24 +4872,19 @@ class _$MessageHeaderSource implements MessageHeaderSource {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -4965,7 +4937,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -4985,10 +4957,10 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -4997,8 +4969,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -5012,16 +4984,16 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -5035,22 +5007,22 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -5059,15 +5031,15 @@ class _$MessageHeaderSource implements MessageHeaderSource {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -5077,8 +5049,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -5093,9 +5065,9 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -5121,8 +5093,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
     assert(bundleRequest != null);
     assert(bundleResponse != null);
     assert(basic != null);
-    return messageHeaderSource(id, extension, modifierExtension, name, software,
-        version, contact, endpoint);
+    return messageHeaderSource(id, fhirExtension, modifierExtension, name,
+        software, version, contact, endpoint);
   }
 
   @override
@@ -5136,13 +5108,13 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -5157,11 +5129,11 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -5169,20 +5141,20 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -5190,22 +5162,17 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -5258,7 +5225,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -5276,10 +5243,10 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -5287,8 +5254,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -5301,15 +5268,15 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -5322,16 +5289,20 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -5339,14 +5310,14 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -5355,8 +5326,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -5370,9 +5341,9 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -5381,7 +5352,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
   }) {
     assert(orElse != null);
     if (messageHeaderSource != null) {
-      return messageHeaderSource(id, extension, modifierExtension, name,
+      return messageHeaderSource(id, fhirExtension, modifierExtension, name,
           software, version, contact, endpoint);
     }
     return orElse();
@@ -5476,8 +5447,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
 abstract class MessageHeaderSource implements Other {
   const factory MessageHeaderSource(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       String software,
       String version,
@@ -5488,8 +5459,9 @@ abstract class MessageHeaderSource implements Other {
       _$MessageHeaderSource.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   String get name;
   String get software;
   String get version;
@@ -5504,8 +5476,8 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
       _$MessageHeaderResponseCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Id identifier,
       MessageHeaderResponseCode code,
       Reference details});
@@ -5524,7 +5496,7 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object code = freezed,
@@ -5532,12 +5504,12 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
   }) {
     return _then(MessageHeaderResponse(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed ? _value.identifier : identifier as Id,
       code: code == freezed ? _value.code : code as MessageHeaderResponseCode,
       details: details == freezed ? _value.details : details as Reference,
@@ -5549,7 +5521,7 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
 class _$MessageHeaderResponse implements MessageHeaderResponse {
   const _$MessageHeaderResponse(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.code,
@@ -5561,9 +5533,10 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Id identifier;
   @override
@@ -5573,7 +5546,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
 
   @override
   String toString() {
-    return 'Other.messageHeaderResponse(id: $id, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, details: $details)';
+    return 'Other.messageHeaderResponse(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, details: $details)';
   }
 
   @override
@@ -5582,9 +5555,9 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         (other is MessageHeaderResponse &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -5601,7 +5574,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(code) ^
@@ -5624,14 +5597,14 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -5647,11 +5620,11 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -5659,13 +5632,13 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -5673,8 +5646,8 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -5683,24 +5656,19 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -5753,7 +5721,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -5773,10 +5741,10 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -5785,8 +5753,8 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -5800,16 +5768,16 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -5823,22 +5791,22 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -5847,15 +5815,15 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -5865,8 +5833,8 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -5881,9 +5849,9 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -5910,7 +5878,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
     assert(bundleResponse != null);
     assert(basic != null);
     return messageHeaderResponse(
-        id, extension, modifierExtension, identifier, code, details);
+        id, fhirExtension, modifierExtension, identifier, code, details);
   }
 
   @override
@@ -5924,13 +5892,13 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -5945,11 +5913,11 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -5957,20 +5925,20 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -5978,22 +5946,17 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -6046,7 +6009,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -6064,10 +6027,10 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -6075,8 +6038,8 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -6089,15 +6052,15 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -6110,16 +6073,20 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -6127,14 +6094,14 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -6143,8 +6110,8 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -6158,9 +6125,9 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -6170,7 +6137,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
     assert(orElse != null);
     if (messageHeaderResponse != null) {
       return messageHeaderResponse(
-          id, extension, modifierExtension, identifier, code, details);
+          id, fhirExtension, modifierExtension, identifier, code, details);
     }
     return orElse();
   }
@@ -6264,8 +6231,8 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
 abstract class MessageHeaderResponse implements Other {
   const factory MessageHeaderResponse(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Id identifier,
       MessageHeaderResponseCode code,
       Reference details}) = _$MessageHeaderResponse;
@@ -6274,8 +6241,9 @@ abstract class MessageHeaderResponse implements Other {
       _$MessageHeaderResponse.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   Id get identifier;
   MessageHeaderResponseCode get code;
   Reference get details;
@@ -6292,7 +6260,7 @@ abstract class $ParametersCopyWith<$Res> {
       Meta meta,
       FhirUri implicitRules,
       Code language,
-      List<ParametersParameter> parameter});
+      List<dynamic> parameter});
 }
 
 class _$ParametersCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -6322,9 +6290,8 @@ class _$ParametersCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules as FhirUri,
       language: language == freezed ? _value.language : language as Code,
-      parameter: parameter == freezed
-          ? _value.parameter
-          : parameter as List<ParametersParameter>,
+      parameter:
+          parameter == freezed ? _value.parameter : parameter as List<dynamic>,
     ));
   }
 }
@@ -6353,7 +6320,7 @@ class _$Parameters implements Parameters {
   @override
   final Code language;
   @override
-  final List<ParametersParameter> parameter;
+  final List<dynamic> parameter;
 
   @override
   String toString() {
@@ -6408,14 +6375,14 @@ class _$Parameters implements Parameters {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -6431,11 +6398,11 @@ class _$Parameters implements Parameters {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -6443,13 +6410,13 @@ class _$Parameters implements Parameters {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -6457,8 +6424,8 @@ class _$Parameters implements Parameters {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -6467,24 +6434,19 @@ class _$Parameters implements Parameters {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -6537,7 +6499,7 @@ class _$Parameters implements Parameters {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -6557,10 +6519,10 @@ class _$Parameters implements Parameters {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -6569,8 +6531,8 @@ class _$Parameters implements Parameters {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -6584,16 +6546,16 @@ class _$Parameters implements Parameters {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -6607,22 +6569,22 @@ class _$Parameters implements Parameters {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -6631,15 +6593,15 @@ class _$Parameters implements Parameters {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -6649,8 +6611,8 @@ class _$Parameters implements Parameters {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -6665,9 +6627,9 @@ class _$Parameters implements Parameters {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -6708,13 +6670,13 @@ class _$Parameters implements Parameters {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -6729,11 +6691,11 @@ class _$Parameters implements Parameters {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -6741,20 +6703,20 @@ class _$Parameters implements Parameters {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -6762,22 +6724,17 @@ class _$Parameters implements Parameters {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -6830,7 +6787,7 @@ class _$Parameters implements Parameters {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -6848,10 +6805,10 @@ class _$Parameters implements Parameters {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -6859,8 +6816,8 @@ class _$Parameters implements Parameters {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -6873,15 +6830,15 @@ class _$Parameters implements Parameters {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -6894,16 +6851,20 @@ class _$Parameters implements Parameters {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -6911,14 +6872,14 @@ class _$Parameters implements Parameters {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -6927,8 +6888,8 @@ class _$Parameters implements Parameters {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -6942,9 +6903,9 @@ class _$Parameters implements Parameters {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -7051,7 +7012,7 @@ abstract class Parameters implements Other {
       Meta meta,
       FhirUri implicitRules,
       Code language,
-      List<ParametersParameter> parameter}) = _$Parameters;
+      List<dynamic> parameter}) = _$Parameters;
 
   factory Parameters.fromJson(Map<String, dynamic> json) =
       _$Parameters.fromJson;
@@ -7061,7 +7022,7 @@ abstract class Parameters implements Other {
   Meta get meta;
   FhirUri get implicitRules;
   Code get language;
-  List<ParametersParameter> get parameter;
+  List<dynamic> get parameter;
   $ParametersCopyWith<Parameters> get copyWith;
 }
 
@@ -7071,8 +7032,8 @@ abstract class $ParametersParameterCopyWith<$Res> {
       _$ParametersParameterCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -7125,7 +7086,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       Dosage valueDosage,
       Meta valueMeta,
       dynamic resource,
-      List<ParametersParameter> part});
+      List<dynamic> part});
 }
 
 class _$ParametersParameterCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -7140,7 +7101,7 @@ class _$ParametersParameterCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object name = freezed,
     Object valueBase64Binary = freezed,
@@ -7198,12 +7159,12 @@ class _$ParametersParameterCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   }) {
     return _then(ParametersParameter(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       name: name == freezed ? _value.name : name as String,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
@@ -7325,7 +7286,7 @@ class _$ParametersParameterCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
       resource: resource == freezed ? _value.resource : resource as dynamic,
-      part: part == freezed ? _value.part : part as List<ParametersParameter>,
+      part: part == freezed ? _value.part : part as List<dynamic>,
     ));
   }
 }
@@ -7334,7 +7295,7 @@ class _$ParametersParameterCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
 class _$ParametersParameter implements ParametersParameter {
   const _$ParametersParameter(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.name,
       this.valueBase64Binary,
@@ -7396,9 +7357,10 @@ class _$ParametersParameter implements ParametersParameter {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String name;
   @override
@@ -7504,11 +7466,11 @@ class _$ParametersParameter implements ParametersParameter {
   @override
   final dynamic resource;
   @override
-  final List<ParametersParameter> part;
+  final List<dynamic> part;
 
   @override
   String toString() {
-    return 'Other.parametersParameter(id: $id, extension: $extension, modifierExtension: $modifierExtension, name: $name, valueBase64Binary: $valueBase64Binary, valueBoolean: $valueBoolean, valueCanonical: $valueCanonical, valueCode: $valueCode, valueDate: $valueDate, valueDateTime: $valueDateTime, valueDecimal: $valueDecimal, valueId: $valueId, valueInstant: $valueInstant, valueInteger: $valueInteger, valueMarkdown: $valueMarkdown, valueOid: $valueOid, valuePositiveInt: $valuePositiveInt, valueString: $valueString, valueTime: $valueTime, valueUnsignedInt: $valueUnsignedInt, valueUri: $valueUri, valueUrl: $valueUrl, valueUuid: $valueUuid, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta, resource: $resource, part: $part)';
+    return 'Other.parametersParameter(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, name: $name, valueBase64Binary: $valueBase64Binary, valueBoolean: $valueBoolean, valueCanonical: $valueCanonical, valueCode: $valueCode, valueDate: $valueDate, valueDateTime: $valueDateTime, valueDecimal: $valueDecimal, valueId: $valueId, valueInstant: $valueInstant, valueInteger: $valueInteger, valueMarkdown: $valueMarkdown, valueOid: $valueOid, valuePositiveInt: $valuePositiveInt, valueString: $valueString, valueTime: $valueTime, valueUnsignedInt: $valueUnsignedInt, valueUri: $valueUri, valueUrl: $valueUrl, valueUuid: $valueUuid, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta, resource: $resource, part: $part)';
   }
 
   @override
@@ -7517,9 +7479,9 @@ class _$ParametersParameter implements ParametersParameter {
         (other is ParametersParameter &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -7620,7 +7582,7 @@ class _$ParametersParameter implements ParametersParameter {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(valueBase64Binary) ^
@@ -7692,14 +7654,14 @@ class _$ParametersParameter implements ParametersParameter {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -7715,11 +7677,11 @@ class _$ParametersParameter implements ParametersParameter {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -7727,13 +7689,13 @@ class _$ParametersParameter implements ParametersParameter {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -7741,8 +7703,8 @@ class _$ParametersParameter implements ParametersParameter {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -7751,24 +7713,19 @@ class _$ParametersParameter implements ParametersParameter {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -7821,7 +7778,7 @@ class _$ParametersParameter implements ParametersParameter {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -7841,10 +7798,10 @@ class _$ParametersParameter implements ParametersParameter {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -7853,8 +7810,8 @@ class _$ParametersParameter implements ParametersParameter {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -7868,16 +7825,16 @@ class _$ParametersParameter implements ParametersParameter {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -7891,22 +7848,22 @@ class _$ParametersParameter implements ParametersParameter {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -7915,15 +7872,15 @@ class _$ParametersParameter implements ParametersParameter {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -7933,8 +7890,8 @@ class _$ParametersParameter implements ParametersParameter {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -7949,9 +7906,9 @@ class _$ParametersParameter implements ParametersParameter {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -7979,7 +7936,7 @@ class _$ParametersParameter implements ParametersParameter {
     assert(basic != null);
     return parametersParameter(
         id,
-        extension,
+        fhirExtension,
         modifierExtension,
         name,
         valueBase64Binary,
@@ -8047,13 +8004,13 @@ class _$ParametersParameter implements ParametersParameter {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -8068,11 +8025,11 @@ class _$ParametersParameter implements ParametersParameter {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -8080,20 +8037,20 @@ class _$ParametersParameter implements ParametersParameter {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -8101,22 +8058,17 @@ class _$ParametersParameter implements ParametersParameter {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -8169,7 +8121,7 @@ class _$ParametersParameter implements ParametersParameter {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -8187,10 +8139,10 @@ class _$ParametersParameter implements ParametersParameter {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -8198,8 +8150,8 @@ class _$ParametersParameter implements ParametersParameter {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -8212,15 +8164,15 @@ class _$ParametersParameter implements ParametersParameter {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -8233,16 +8185,20 @@ class _$ParametersParameter implements ParametersParameter {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -8250,14 +8206,14 @@ class _$ParametersParameter implements ParametersParameter {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -8266,8 +8222,8 @@ class _$ParametersParameter implements ParametersParameter {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -8281,9 +8237,9 @@ class _$ParametersParameter implements ParametersParameter {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -8294,7 +8250,7 @@ class _$ParametersParameter implements ParametersParameter {
     if (parametersParameter != null) {
       return parametersParameter(
           id,
-          extension,
+          fhirExtension,
           modifierExtension,
           name,
           valueBase64Binary,
@@ -8442,8 +8398,8 @@ class _$ParametersParameter implements ParametersParameter {
 abstract class ParametersParameter implements Other {
   const factory ParametersParameter(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String name,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -8496,14 +8452,15 @@ abstract class ParametersParameter implements Other {
       Dosage valueDosage,
       Meta valueMeta,
       dynamic resource,
-      List<ParametersParameter> part}) = _$ParametersParameter;
+      List<dynamic> part}) = _$ParametersParameter;
 
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =
       _$ParametersParameter.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   String get name;
   Base64Binary get valueBase64Binary;
   bool get valueBoolean;
@@ -8556,7 +8513,7 @@ abstract class ParametersParameter implements Other {
   Dosage get valueDosage;
   Meta get valueMeta;
   dynamic get resource;
-  List<ParametersParameter> get part;
+  List<dynamic> get part;
   $ParametersParameterCopyWith<ParametersParameter> get copyWith;
 }
 
@@ -8705,14 +8662,14 @@ class _$Binary implements Binary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -8728,11 +8685,11 @@ class _$Binary implements Binary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -8740,13 +8697,13 @@ class _$Binary implements Binary {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -8754,8 +8711,8 @@ class _$Binary implements Binary {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -8764,24 +8721,19 @@ class _$Binary implements Binary {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -8834,7 +8786,7 @@ class _$Binary implements Binary {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -8854,10 +8806,10 @@ class _$Binary implements Binary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -8866,8 +8818,8 @@ class _$Binary implements Binary {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -8881,16 +8833,16 @@ class _$Binary implements Binary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -8904,22 +8856,22 @@ class _$Binary implements Binary {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -8928,15 +8880,15 @@ class _$Binary implements Binary {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -8946,8 +8898,8 @@ class _$Binary implements Binary {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -8962,9 +8914,9 @@ class _$Binary implements Binary {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -9005,13 +8957,13 @@ class _$Binary implements Binary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -9026,11 +8978,11 @@ class _$Binary implements Binary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -9038,20 +8990,20 @@ class _$Binary implements Binary {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -9059,22 +9011,17 @@ class _$Binary implements Binary {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -9127,7 +9074,7 @@ class _$Binary implements Binary {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -9145,10 +9092,10 @@ class _$Binary implements Binary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -9156,8 +9103,8 @@ class _$Binary implements Binary {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -9170,15 +9117,15 @@ class _$Binary implements Binary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -9191,16 +9138,20 @@ class _$Binary implements Binary {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -9208,14 +9159,14 @@ class _$Binary implements Binary {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -9224,8 +9175,8 @@ class _$Binary implements Binary {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -9239,9 +9190,9 @@ class _$Binary implements Binary {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -9377,10 +9328,10 @@ abstract class $SubscriptionCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       SubscriptionStatus status,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Instant end,
       String reason,
       String criteria,
@@ -9406,7 +9357,7 @@ class _$SubscriptionCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object status = freezed,
     Object contact = freezed,
@@ -9429,15 +9380,14 @@ class _$SubscriptionCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       status: status == freezed ? _value.status : status as SubscriptionStatus,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>,
+      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       end: end == freezed ? _value.end : end as Instant,
       reason: reason == freezed ? _value.reason : reason as String,
       criteria: criteria == freezed ? _value.criteria : criteria as String,
@@ -9458,7 +9408,7 @@ class _$Subscription implements Subscription {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.status,
       this.contact,
@@ -9486,13 +9436,14 @@ class _$Subscription implements Subscription {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final SubscriptionStatus status;
   @override
-  final List<ContactPoint> contact;
+  final List<dynamic> contact;
   @override
   final Instant end;
   @override
@@ -9506,7 +9457,7 @@ class _$Subscription implements Subscription {
 
   @override
   String toString() {
-    return 'Other.subscription(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, status: $status, contact: $contact, end: $end, reason: $reason, criteria: $criteria, error: $error, channel: $channel)';
+    return 'Other.subscription(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, status: $status, contact: $contact, end: $end, reason: $reason, criteria: $criteria, error: $error, channel: $channel)';
   }
 
   @override
@@ -9531,9 +9482,9 @@ class _$Subscription implements Subscription {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -9565,7 +9516,7 @@ class _$Subscription implements Subscription {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(contact) ^
@@ -9591,14 +9542,14 @@ class _$Subscription implements Subscription {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -9614,11 +9565,11 @@ class _$Subscription implements Subscription {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -9626,13 +9577,13 @@ class _$Subscription implements Subscription {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -9640,8 +9591,8 @@ class _$Subscription implements Subscription {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -9650,24 +9601,19 @@ class _$Subscription implements Subscription {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -9720,7 +9666,7 @@ class _$Subscription implements Subscription {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -9740,10 +9686,10 @@ class _$Subscription implements Subscription {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -9752,8 +9698,8 @@ class _$Subscription implements Subscription {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -9767,16 +9713,16 @@ class _$Subscription implements Subscription {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -9790,22 +9736,22 @@ class _$Subscription implements Subscription {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -9814,15 +9760,15 @@ class _$Subscription implements Subscription {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -9832,8 +9778,8 @@ class _$Subscription implements Subscription {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -9848,9 +9794,9 @@ class _$Subscription implements Subscription {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -9884,7 +9830,7 @@ class _$Subscription implements Subscription {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         status,
         contact,
@@ -9906,13 +9852,13 @@ class _$Subscription implements Subscription {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -9927,11 +9873,11 @@ class _$Subscription implements Subscription {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -9939,20 +9885,20 @@ class _$Subscription implements Subscription {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -9960,22 +9906,17 @@ class _$Subscription implements Subscription {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -10028,7 +9969,7 @@ class _$Subscription implements Subscription {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -10046,10 +9987,10 @@ class _$Subscription implements Subscription {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -10057,8 +9998,8 @@ class _$Subscription implements Subscription {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -10071,15 +10012,15 @@ class _$Subscription implements Subscription {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -10092,16 +10033,20 @@ class _$Subscription implements Subscription {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -10109,14 +10054,14 @@ class _$Subscription implements Subscription {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -10125,8 +10070,8 @@ class _$Subscription implements Subscription {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -10140,9 +10085,9 @@ class _$Subscription implements Subscription {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -10159,7 +10104,7 @@ class _$Subscription implements Subscription {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           status,
           contact,
@@ -10266,10 +10211,10 @@ abstract class Subscription implements Other {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       SubscriptionStatus status,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Instant end,
       String reason,
       String criteria,
@@ -10286,10 +10231,11 @@ abstract class Subscription implements Other {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   SubscriptionStatus get status;
-  List<ContactPoint> get contact;
+  List<dynamic> get contact;
   Instant get end;
   String get reason;
   String get criteria;
@@ -10304,8 +10250,8 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
       _$SubscriptionChannelCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       SubscriptionChannelType type,
       FhirUrl endpoint,
       Code payload,
@@ -10324,7 +10270,7 @@ class _$SubscriptionChannelCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
     Object endpoint = freezed,
@@ -10333,12 +10279,12 @@ class _$SubscriptionChannelCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   }) {
     return _then(SubscriptionChannel(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as SubscriptionChannelType,
       endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUrl,
       payload: payload == freezed ? _value.payload : payload as Code,
@@ -10351,7 +10297,7 @@ class _$SubscriptionChannelCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
 class _$SubscriptionChannel implements SubscriptionChannel {
   const _$SubscriptionChannel(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.type,
       this.endpoint,
@@ -10364,9 +10310,10 @@ class _$SubscriptionChannel implements SubscriptionChannel {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final SubscriptionChannelType type;
   @override
@@ -10378,7 +10325,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
 
   @override
   String toString() {
-    return 'Other.subscriptionChannel(id: $id, extension: $extension, modifierExtension: $modifierExtension, type: $type, endpoint: $endpoint, payload: $payload, header: $header)';
+    return 'Other.subscriptionChannel(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, type: $type, endpoint: $endpoint, payload: $payload, header: $header)';
   }
 
   @override
@@ -10387,9 +10334,9 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         (other is SubscriptionChannel &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -10409,7 +10356,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(endpoint) ^
@@ -10432,14 +10379,14 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -10455,11 +10402,11 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -10467,13 +10414,13 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -10481,8 +10428,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -10491,24 +10438,19 @@ class _$SubscriptionChannel implements SubscriptionChannel {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -10561,7 +10503,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -10581,10 +10523,10 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -10593,8 +10535,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -10608,16 +10550,16 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -10631,22 +10573,22 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -10655,15 +10597,15 @@ class _$SubscriptionChannel implements SubscriptionChannel {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -10673,8 +10615,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -10689,9 +10631,9 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -10718,7 +10660,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
     assert(bundleResponse != null);
     assert(basic != null);
     return subscriptionChannel(
-        id, extension, modifierExtension, type, endpoint, payload, header);
+        id, fhirExtension, modifierExtension, type, endpoint, payload, header);
   }
 
   @override
@@ -10732,13 +10674,13 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -10753,11 +10695,11 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -10765,20 +10707,20 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -10786,22 +10728,17 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -10854,7 +10791,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -10872,10 +10809,10 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -10883,8 +10820,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -10897,15 +10834,15 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -10918,16 +10855,20 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -10935,14 +10876,14 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -10951,8 +10892,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -10966,9 +10907,9 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -10977,8 +10918,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
   }) {
     assert(orElse != null);
     if (subscriptionChannel != null) {
-      return subscriptionChannel(
-          id, extension, modifierExtension, type, endpoint, payload, header);
+      return subscriptionChannel(id, fhirExtension, modifierExtension, type,
+          endpoint, payload, header);
     }
     return orElse();
   }
@@ -11072,8 +11013,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
 abstract class SubscriptionChannel implements Other {
   const factory SubscriptionChannel(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       SubscriptionChannelType type,
       FhirUrl endpoint,
       Code payload,
@@ -11083,8 +11024,9 @@ abstract class SubscriptionChannel implements Other {
       _$SubscriptionChannel.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   SubscriptionChannelType get type;
   FhirUrl get endpoint;
   Code get payload;
@@ -11103,11 +11045,11 @@ abstract class $LinkageCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       bool active,
       Reference author,
-      List<LinkageItem> item});
+      List<dynamic> item});
 }
 
 class _$LinkageCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -11127,7 +11069,7 @@ class _$LinkageCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object active = freezed,
     Object author = freezed,
@@ -11146,15 +11088,15 @@ class _$LinkageCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       active: active == freezed ? _value.active : active as bool,
       author: author == freezed ? _value.author : author as Reference,
-      item: item == freezed ? _value.item : item as List<LinkageItem>,
+      item: item == freezed ? _value.item : item as List<dynamic>,
     ));
   }
 }
@@ -11169,7 +11111,7 @@ class _$Linkage implements Linkage {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.active,
       this.author,
@@ -11193,19 +11135,20 @@ class _$Linkage implements Linkage {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final bool active;
   @override
   final Reference author;
   @override
-  final List<LinkageItem> item;
+  final List<dynamic> item;
 
   @override
   String toString() {
-    return 'Other.linkage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, active: $active, author: $author, item: $item)';
+    return 'Other.linkage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, active: $active, author: $author, item: $item)';
   }
 
   @override
@@ -11230,9 +11173,9 @@ class _$Linkage implements Linkage {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -11254,7 +11197,7 @@ class _$Linkage implements Linkage {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(active) ^
       const DeepCollectionEquality().hash(author) ^
@@ -11276,14 +11219,14 @@ class _$Linkage implements Linkage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -11299,11 +11242,11 @@ class _$Linkage implements Linkage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -11311,13 +11254,13 @@ class _$Linkage implements Linkage {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -11325,8 +11268,8 @@ class _$Linkage implements Linkage {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -11335,24 +11278,19 @@ class _$Linkage implements Linkage {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -11405,7 +11343,7 @@ class _$Linkage implements Linkage {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -11425,10 +11363,10 @@ class _$Linkage implements Linkage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -11437,8 +11375,8 @@ class _$Linkage implements Linkage {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -11452,16 +11390,16 @@ class _$Linkage implements Linkage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -11475,22 +11413,22 @@ class _$Linkage implements Linkage {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -11499,15 +11437,15 @@ class _$Linkage implements Linkage {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -11517,8 +11455,8 @@ class _$Linkage implements Linkage {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -11533,9 +11471,9 @@ class _$Linkage implements Linkage {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -11562,7 +11500,7 @@ class _$Linkage implements Linkage {
     assert(bundleResponse != null);
     assert(basic != null);
     return linkage(resourceType, id, meta, implicitRules, language, text,
-        contained, extension, modifierExtension, active, author, item);
+        contained, fhirExtension, modifierExtension, active, author, item);
   }
 
   @override
@@ -11576,13 +11514,13 @@ class _$Linkage implements Linkage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -11597,11 +11535,11 @@ class _$Linkage implements Linkage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -11609,20 +11547,20 @@ class _$Linkage implements Linkage {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -11630,22 +11568,17 @@ class _$Linkage implements Linkage {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -11698,7 +11631,7 @@ class _$Linkage implements Linkage {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -11716,10 +11649,10 @@ class _$Linkage implements Linkage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -11727,8 +11660,8 @@ class _$Linkage implements Linkage {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -11741,15 +11674,15 @@ class _$Linkage implements Linkage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -11762,16 +11695,20 @@ class _$Linkage implements Linkage {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -11779,14 +11716,14 @@ class _$Linkage implements Linkage {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -11795,8 +11732,8 @@ class _$Linkage implements Linkage {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -11810,9 +11747,9 @@ class _$Linkage implements Linkage {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -11822,7 +11759,7 @@ class _$Linkage implements Linkage {
     assert(orElse != null);
     if (linkage != null) {
       return linkage(resourceType, id, meta, implicitRules, language, text,
-          contained, extension, modifierExtension, active, author, item);
+          contained, fhirExtension, modifierExtension, active, author, item);
     }
     return orElse();
   }
@@ -11921,11 +11858,11 @@ abstract class Linkage implements Other {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       bool active,
       Reference author,
-      List<LinkageItem> item}) = _$Linkage;
+      List<dynamic> item}) = _$Linkage;
 
   factory Linkage.fromJson(Map<String, dynamic> json) = _$Linkage.fromJson;
 
@@ -11936,11 +11873,12 @@ abstract class Linkage implements Other {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   bool get active;
   Reference get author;
-  List<LinkageItem> get item;
+  List<dynamic> get item;
   $LinkageCopyWith<Linkage> get copyWith;
 }
 
@@ -11950,8 +11888,8 @@ abstract class $LinkageItemCopyWith<$Res> {
       _$LinkageItemCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       LinkageItemType type,
       Reference resource});
 }
@@ -11968,19 +11906,19 @@ class _$LinkageItemCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object type = freezed,
     Object resource = freezed,
   }) {
     return _then(LinkageItem(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as LinkageItemType,
       resource: resource == freezed ? _value.resource : resource as Reference,
     ));
@@ -11991,7 +11929,7 @@ class _$LinkageItemCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
 class _$LinkageItem implements LinkageItem {
   const _$LinkageItem(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.type,
       this.resource});
@@ -12002,9 +11940,10 @@ class _$LinkageItem implements LinkageItem {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final LinkageItemType type;
   @override
@@ -12012,7 +11951,7 @@ class _$LinkageItem implements LinkageItem {
 
   @override
   String toString() {
-    return 'Other.linkageItem(id: $id, extension: $extension, modifierExtension: $modifierExtension, type: $type, resource: $resource)';
+    return 'Other.linkageItem(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, type: $type, resource: $resource)';
   }
 
   @override
@@ -12021,9 +11960,9 @@ class _$LinkageItem implements LinkageItem {
         (other is LinkageItem &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -12038,7 +11977,7 @@ class _$LinkageItem implements LinkageItem {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(resource);
@@ -12059,14 +11998,14 @@ class _$LinkageItem implements LinkageItem {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -12082,11 +12021,11 @@ class _$LinkageItem implements LinkageItem {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -12094,13 +12033,13 @@ class _$LinkageItem implements LinkageItem {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -12108,8 +12047,8 @@ class _$LinkageItem implements LinkageItem {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -12118,24 +12057,19 @@ class _$LinkageItem implements LinkageItem {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -12188,7 +12122,7 @@ class _$LinkageItem implements LinkageItem {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -12208,10 +12142,10 @@ class _$LinkageItem implements LinkageItem {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -12220,8 +12154,8 @@ class _$LinkageItem implements LinkageItem {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -12235,16 +12169,16 @@ class _$LinkageItem implements LinkageItem {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -12258,22 +12192,22 @@ class _$LinkageItem implements LinkageItem {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -12282,15 +12216,15 @@ class _$LinkageItem implements LinkageItem {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -12300,8 +12234,8 @@ class _$LinkageItem implements LinkageItem {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -12316,9 +12250,9 @@ class _$LinkageItem implements LinkageItem {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -12344,7 +12278,7 @@ class _$LinkageItem implements LinkageItem {
     assert(bundleRequest != null);
     assert(bundleResponse != null);
     assert(basic != null);
-    return linkageItem(id, extension, modifierExtension, type, resource);
+    return linkageItem(id, fhirExtension, modifierExtension, type, resource);
   }
 
   @override
@@ -12358,13 +12292,13 @@ class _$LinkageItem implements LinkageItem {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -12379,11 +12313,11 @@ class _$LinkageItem implements LinkageItem {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -12391,20 +12325,20 @@ class _$LinkageItem implements LinkageItem {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -12412,22 +12346,17 @@ class _$LinkageItem implements LinkageItem {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -12480,7 +12409,7 @@ class _$LinkageItem implements LinkageItem {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -12498,10 +12427,10 @@ class _$LinkageItem implements LinkageItem {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -12509,8 +12438,8 @@ class _$LinkageItem implements LinkageItem {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -12523,15 +12452,15 @@ class _$LinkageItem implements LinkageItem {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -12544,16 +12473,20 @@ class _$LinkageItem implements LinkageItem {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -12561,14 +12494,14 @@ class _$LinkageItem implements LinkageItem {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -12577,8 +12510,8 @@ class _$LinkageItem implements LinkageItem {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -12592,9 +12525,9 @@ class _$LinkageItem implements LinkageItem {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -12603,7 +12536,7 @@ class _$LinkageItem implements LinkageItem {
   }) {
     assert(orElse != null);
     if (linkageItem != null) {
-      return linkageItem(id, extension, modifierExtension, type, resource);
+      return linkageItem(id, fhirExtension, modifierExtension, type, resource);
     }
     return orElse();
   }
@@ -12696,8 +12629,8 @@ class _$LinkageItem implements LinkageItem {
 abstract class LinkageItem implements Other {
   const factory LinkageItem(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       LinkageItemType type,
       Reference resource}) = _$LinkageItem;
 
@@ -12705,8 +12638,9 @@ abstract class LinkageItem implements Other {
       _$LinkageItem.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   LinkageItemType get type;
   Reference get resource;
   $LinkageItemCopyWith<LinkageItem> get copyWith;
@@ -12725,8 +12659,8 @@ abstract class $BundleCopyWith<$Res> {
       BundleType type,
       Instant timestamp,
       int total,
-      List<BundleLink> link,
-      List<BundleEntry> entry,
+      List<dynamic> link,
+      List<dynamic> entry,
       Signature signature});
 }
 
@@ -12768,8 +12702,8 @@ class _$BundleCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as BundleType,
       timestamp: timestamp == freezed ? _value.timestamp : timestamp as Instant,
       total: total == freezed ? _value.total : total as int,
-      link: link == freezed ? _value.link : link as List<BundleLink>,
-      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>,
+      link: link == freezed ? _value.link : link as List<dynamic>,
+      entry: entry == freezed ? _value.entry : entry as List<dynamic>,
       signature:
           signature == freezed ? _value.signature : signature as Signature,
     ));
@@ -12814,9 +12748,9 @@ class _$Bundle implements Bundle {
   @override
   final int total;
   @override
-  final List<BundleLink> link;
+  final List<dynamic> link;
   @override
-  final List<BundleEntry> entry;
+  final List<dynamic> entry;
   @override
   final Signature signature;
 
@@ -12893,14 +12827,14 @@ class _$Bundle implements Bundle {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -12916,11 +12850,11 @@ class _$Bundle implements Bundle {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -12928,13 +12862,13 @@ class _$Bundle implements Bundle {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -12942,8 +12876,8 @@ class _$Bundle implements Bundle {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -12952,24 +12886,19 @@ class _$Bundle implements Bundle {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -13022,7 +12951,7 @@ class _$Bundle implements Bundle {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -13042,10 +12971,10 @@ class _$Bundle implements Bundle {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -13054,8 +12983,8 @@ class _$Bundle implements Bundle {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -13069,16 +12998,16 @@ class _$Bundle implements Bundle {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -13092,22 +13021,22 @@ class _$Bundle implements Bundle {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -13116,15 +13045,15 @@ class _$Bundle implements Bundle {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -13134,8 +13063,8 @@ class _$Bundle implements Bundle {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -13150,9 +13079,9 @@ class _$Bundle implements Bundle {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -13193,13 +13122,13 @@ class _$Bundle implements Bundle {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -13214,11 +13143,11 @@ class _$Bundle implements Bundle {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -13226,20 +13155,20 @@ class _$Bundle implements Bundle {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -13247,22 +13176,17 @@ class _$Bundle implements Bundle {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -13315,7 +13239,7 @@ class _$Bundle implements Bundle {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -13333,10 +13257,10 @@ class _$Bundle implements Bundle {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -13344,8 +13268,8 @@ class _$Bundle implements Bundle {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -13358,15 +13282,15 @@ class _$Bundle implements Bundle {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -13379,16 +13303,20 @@ class _$Bundle implements Bundle {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -13396,14 +13324,14 @@ class _$Bundle implements Bundle {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -13412,8 +13340,8 @@ class _$Bundle implements Bundle {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -13427,9 +13355,9 @@ class _$Bundle implements Bundle {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -13540,8 +13468,8 @@ abstract class Bundle implements Other {
       BundleType type,
       Instant timestamp,
       int total,
-      List<BundleLink> link,
-      List<BundleEntry> entry,
+      List<dynamic> link,
+      List<dynamic> entry,
       Signature signature}) = _$Bundle;
 
   factory Bundle.fromJson(Map<String, dynamic> json) = _$Bundle.fromJson;
@@ -13555,8 +13483,8 @@ abstract class Bundle implements Other {
   BundleType get type;
   Instant get timestamp;
   int get total;
-  List<BundleLink> get link;
-  List<BundleEntry> get entry;
+  List<dynamic> get link;
+  List<dynamic> get entry;
   Signature get signature;
   $BundleCopyWith<Bundle> get copyWith;
 }
@@ -13567,8 +13495,8 @@ abstract class $BundleLinkCopyWith<$Res> {
       _$BundleLinkCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String relation,
       FhirUri url});
 }
@@ -13584,19 +13512,19 @@ class _$BundleLinkCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object relation = freezed,
     Object url = freezed,
   }) {
     return _then(BundleLink(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       relation: relation == freezed ? _value.relation : relation as String,
       url: url == freezed ? _value.url : url as FhirUri,
     ));
@@ -13607,7 +13535,7 @@ class _$BundleLinkCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
 class _$BundleLink implements BundleLink {
   const _$BundleLink(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.relation,
       this.url});
@@ -13618,9 +13546,10 @@ class _$BundleLink implements BundleLink {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String relation;
   @override
@@ -13628,7 +13557,7 @@ class _$BundleLink implements BundleLink {
 
   @override
   String toString() {
-    return 'Other.bundleLink(id: $id, extension: $extension, modifierExtension: $modifierExtension, relation: $relation, url: $url)';
+    return 'Other.bundleLink(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, relation: $relation, url: $url)';
   }
 
   @override
@@ -13637,9 +13566,9 @@ class _$BundleLink implements BundleLink {
         (other is BundleLink &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -13654,7 +13583,7 @@ class _$BundleLink implements BundleLink {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(relation) ^
       const DeepCollectionEquality().hash(url);
@@ -13675,14 +13604,14 @@ class _$BundleLink implements BundleLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -13698,11 +13627,11 @@ class _$BundleLink implements BundleLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -13710,13 +13639,13 @@ class _$BundleLink implements BundleLink {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -13724,8 +13653,8 @@ class _$BundleLink implements BundleLink {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -13734,24 +13663,19 @@ class _$BundleLink implements BundleLink {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -13804,7 +13728,7 @@ class _$BundleLink implements BundleLink {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -13824,10 +13748,10 @@ class _$BundleLink implements BundleLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -13836,8 +13760,8 @@ class _$BundleLink implements BundleLink {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -13851,16 +13775,16 @@ class _$BundleLink implements BundleLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -13874,22 +13798,22 @@ class _$BundleLink implements BundleLink {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -13898,15 +13822,15 @@ class _$BundleLink implements BundleLink {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -13916,8 +13840,8 @@ class _$BundleLink implements BundleLink {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -13932,9 +13856,9 @@ class _$BundleLink implements BundleLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -13960,7 +13884,7 @@ class _$BundleLink implements BundleLink {
     assert(bundleRequest != null);
     assert(bundleResponse != null);
     assert(basic != null);
-    return bundleLink(id, extension, modifierExtension, relation, url);
+    return bundleLink(id, fhirExtension, modifierExtension, relation, url);
   }
 
   @override
@@ -13974,13 +13898,13 @@ class _$BundleLink implements BundleLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -13995,11 +13919,11 @@ class _$BundleLink implements BundleLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -14007,20 +13931,20 @@ class _$BundleLink implements BundleLink {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -14028,22 +13952,17 @@ class _$BundleLink implements BundleLink {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -14096,7 +14015,7 @@ class _$BundleLink implements BundleLink {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -14114,10 +14033,10 @@ class _$BundleLink implements BundleLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -14125,8 +14044,8 @@ class _$BundleLink implements BundleLink {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -14139,15 +14058,15 @@ class _$BundleLink implements BundleLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -14160,16 +14079,20 @@ class _$BundleLink implements BundleLink {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -14177,14 +14100,14 @@ class _$BundleLink implements BundleLink {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -14193,8 +14116,8 @@ class _$BundleLink implements BundleLink {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -14208,9 +14131,9 @@ class _$BundleLink implements BundleLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -14219,7 +14142,7 @@ class _$BundleLink implements BundleLink {
   }) {
     assert(orElse != null);
     if (bundleLink != null) {
-      return bundleLink(id, extension, modifierExtension, relation, url);
+      return bundleLink(id, fhirExtension, modifierExtension, relation, url);
     }
     return orElse();
   }
@@ -14312,8 +14235,8 @@ class _$BundleLink implements BundleLink {
 abstract class BundleLink implements Other {
   const factory BundleLink(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String relation,
       FhirUri url}) = _$BundleLink;
 
@@ -14321,8 +14244,9 @@ abstract class BundleLink implements Other {
       _$BundleLink.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   String get relation;
   FhirUri get url;
   $BundleLinkCopyWith<BundleLink> get copyWith;
@@ -14334,9 +14258,9 @@ abstract class $BundleEntryCopyWith<$Res> {
       _$BundleEntryCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<BundleLink> link,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> link,
       FhirUri fullUrl,
       dynamic resource,
       BundleSearch search,
@@ -14356,7 +14280,7 @@ class _$BundleEntryCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object link = freezed,
     Object fullUrl = freezed,
@@ -14367,13 +14291,13 @@ class _$BundleEntryCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   }) {
     return _then(BundleEntry(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      link: link == freezed ? _value.link : link as List<BundleLink>,
+          : modifierExtension as List<dynamic>,
+      link: link == freezed ? _value.link : link as List<dynamic>,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri,
       resource: resource == freezed ? _value.resource : resource as dynamic,
       search: search == freezed ? _value.search : search as BundleSearch,
@@ -14388,7 +14312,7 @@ class _$BundleEntryCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
 class _$BundleEntry implements BundleEntry {
   const _$BundleEntry(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.link,
       this.fullUrl,
@@ -14403,11 +14327,12 @@ class _$BundleEntry implements BundleEntry {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<BundleLink> link;
+  final List<dynamic> link;
   @override
   final FhirUri fullUrl;
   @override
@@ -14421,7 +14346,7 @@ class _$BundleEntry implements BundleEntry {
 
   @override
   String toString() {
-    return 'Other.bundleEntry(id: $id, extension: $extension, modifierExtension: $modifierExtension, link: $link, fullUrl: $fullUrl, resource: $resource, search: $search, request: $request, response: $response)';
+    return 'Other.bundleEntry(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, link: $link, fullUrl: $fullUrl, resource: $resource, search: $search, request: $request, response: $response)';
   }
 
   @override
@@ -14430,9 +14355,9 @@ class _$BundleEntry implements BundleEntry {
         (other is BundleEntry &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -14458,7 +14383,7 @@ class _$BundleEntry implements BundleEntry {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(link) ^
       const DeepCollectionEquality().hash(fullUrl) ^
@@ -14483,14 +14408,14 @@ class _$BundleEntry implements BundleEntry {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -14506,11 +14431,11 @@ class _$BundleEntry implements BundleEntry {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -14518,13 +14443,13 @@ class _$BundleEntry implements BundleEntry {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -14532,8 +14457,8 @@ class _$BundleEntry implements BundleEntry {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -14542,24 +14467,19 @@ class _$BundleEntry implements BundleEntry {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -14612,7 +14532,7 @@ class _$BundleEntry implements BundleEntry {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -14632,10 +14552,10 @@ class _$BundleEntry implements BundleEntry {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -14644,8 +14564,8 @@ class _$BundleEntry implements BundleEntry {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -14659,16 +14579,16 @@ class _$BundleEntry implements BundleEntry {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -14682,22 +14602,22 @@ class _$BundleEntry implements BundleEntry {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -14706,15 +14626,15 @@ class _$BundleEntry implements BundleEntry {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -14724,8 +14644,8 @@ class _$BundleEntry implements BundleEntry {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -14740,9 +14660,9 @@ class _$BundleEntry implements BundleEntry {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -14768,7 +14688,7 @@ class _$BundleEntry implements BundleEntry {
     assert(bundleRequest != null);
     assert(bundleResponse != null);
     assert(basic != null);
-    return bundleEntry(id, extension, modifierExtension, link, fullUrl,
+    return bundleEntry(id, fhirExtension, modifierExtension, link, fullUrl,
         resource, search, request, response);
   }
 
@@ -14783,13 +14703,13 @@ class _$BundleEntry implements BundleEntry {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -14804,11 +14724,11 @@ class _$BundleEntry implements BundleEntry {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -14816,20 +14736,20 @@ class _$BundleEntry implements BundleEntry {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -14837,22 +14757,17 @@ class _$BundleEntry implements BundleEntry {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -14905,7 +14820,7 @@ class _$BundleEntry implements BundleEntry {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -14923,10 +14838,10 @@ class _$BundleEntry implements BundleEntry {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -14934,8 +14849,8 @@ class _$BundleEntry implements BundleEntry {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -14948,15 +14863,15 @@ class _$BundleEntry implements BundleEntry {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -14969,16 +14884,20 @@ class _$BundleEntry implements BundleEntry {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -14986,14 +14905,14 @@ class _$BundleEntry implements BundleEntry {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -15002,8 +14921,8 @@ class _$BundleEntry implements BundleEntry {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -15017,9 +14936,9 @@ class _$BundleEntry implements BundleEntry {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -15028,7 +14947,7 @@ class _$BundleEntry implements BundleEntry {
   }) {
     assert(orElse != null);
     if (bundleEntry != null) {
-      return bundleEntry(id, extension, modifierExtension, link, fullUrl,
+      return bundleEntry(id, fhirExtension, modifierExtension, link, fullUrl,
           resource, search, request, response);
     }
     return orElse();
@@ -15122,9 +15041,9 @@ class _$BundleEntry implements BundleEntry {
 abstract class BundleEntry implements Other {
   const factory BundleEntry(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<BundleLink> link,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> link,
       FhirUri fullUrl,
       dynamic resource,
       BundleSearch search,
@@ -15135,9 +15054,10 @@ abstract class BundleEntry implements Other {
       _$BundleEntry.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
-  List<BundleLink> get link;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get link;
   FhirUri get fullUrl;
   dynamic get resource;
   BundleSearch get search;
@@ -15152,8 +15072,8 @@ abstract class $BundleSearchCopyWith<$Res> {
       _$BundleSearchCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       BundleSearchMode mode,
       double score});
 }
@@ -15170,19 +15090,19 @@ class _$BundleSearchCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object mode = freezed,
     Object score = freezed,
   }) {
     return _then(BundleSearch(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       mode: mode == freezed ? _value.mode : mode as BundleSearchMode,
       score: score == freezed ? _value.score : score as double,
     ));
@@ -15192,7 +15112,11 @@ class _$BundleSearchCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
 @JsonSerializable()
 class _$BundleSearch implements BundleSearch {
   const _$BundleSearch(
-      {this.id, this.extension, this.modifierExtension, this.mode, this.score});
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.modifierExtension,
+      this.mode,
+      this.score});
 
   factory _$BundleSearch.fromJson(Map<String, dynamic> json) =>
       _$_$BundleSearchFromJson(json);
@@ -15200,9 +15124,10 @@ class _$BundleSearch implements BundleSearch {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final BundleSearchMode mode;
   @override
@@ -15210,7 +15135,7 @@ class _$BundleSearch implements BundleSearch {
 
   @override
   String toString() {
-    return 'Other.bundleSearch(id: $id, extension: $extension, modifierExtension: $modifierExtension, mode: $mode, score: $score)';
+    return 'Other.bundleSearch(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, mode: $mode, score: $score)';
   }
 
   @override
@@ -15219,9 +15144,9 @@ class _$BundleSearch implements BundleSearch {
         (other is BundleSearch &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -15235,7 +15160,7 @@ class _$BundleSearch implements BundleSearch {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(mode) ^
       const DeepCollectionEquality().hash(score);
@@ -15256,14 +15181,14 @@ class _$BundleSearch implements BundleSearch {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -15279,11 +15204,11 @@ class _$BundleSearch implements BundleSearch {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -15291,13 +15216,13 @@ class _$BundleSearch implements BundleSearch {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -15305,8 +15230,8 @@ class _$BundleSearch implements BundleSearch {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -15315,24 +15240,19 @@ class _$BundleSearch implements BundleSearch {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -15385,7 +15305,7 @@ class _$BundleSearch implements BundleSearch {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -15405,10 +15325,10 @@ class _$BundleSearch implements BundleSearch {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -15417,8 +15337,8 @@ class _$BundleSearch implements BundleSearch {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -15432,16 +15352,16 @@ class _$BundleSearch implements BundleSearch {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -15455,22 +15375,22 @@ class _$BundleSearch implements BundleSearch {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -15479,15 +15399,15 @@ class _$BundleSearch implements BundleSearch {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -15497,8 +15417,8 @@ class _$BundleSearch implements BundleSearch {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -15513,9 +15433,9 @@ class _$BundleSearch implements BundleSearch {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -15541,7 +15461,7 @@ class _$BundleSearch implements BundleSearch {
     assert(bundleRequest != null);
     assert(bundleResponse != null);
     assert(basic != null);
-    return bundleSearch(id, extension, modifierExtension, mode, score);
+    return bundleSearch(id, fhirExtension, modifierExtension, mode, score);
   }
 
   @override
@@ -15555,13 +15475,13 @@ class _$BundleSearch implements BundleSearch {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -15576,11 +15496,11 @@ class _$BundleSearch implements BundleSearch {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -15588,20 +15508,20 @@ class _$BundleSearch implements BundleSearch {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -15609,22 +15529,17 @@ class _$BundleSearch implements BundleSearch {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -15677,7 +15592,7 @@ class _$BundleSearch implements BundleSearch {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -15695,10 +15610,10 @@ class _$BundleSearch implements BundleSearch {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -15706,8 +15621,8 @@ class _$BundleSearch implements BundleSearch {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -15720,15 +15635,15 @@ class _$BundleSearch implements BundleSearch {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -15741,16 +15656,20 @@ class _$BundleSearch implements BundleSearch {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -15758,14 +15677,14 @@ class _$BundleSearch implements BundleSearch {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -15774,8 +15693,8 @@ class _$BundleSearch implements BundleSearch {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -15789,9 +15708,9 @@ class _$BundleSearch implements BundleSearch {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -15800,7 +15719,7 @@ class _$BundleSearch implements BundleSearch {
   }) {
     assert(orElse != null);
     if (bundleSearch != null) {
-      return bundleSearch(id, extension, modifierExtension, mode, score);
+      return bundleSearch(id, fhirExtension, modifierExtension, mode, score);
     }
     return orElse();
   }
@@ -15893,8 +15812,8 @@ class _$BundleSearch implements BundleSearch {
 abstract class BundleSearch implements Other {
   const factory BundleSearch(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       BundleSearchMode mode,
       double score}) = _$BundleSearch;
 
@@ -15902,8 +15821,9 @@ abstract class BundleSearch implements Other {
       _$BundleSearch.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   BundleSearchMode get mode;
   double get score;
   $BundleSearchCopyWith<BundleSearch> get copyWith;
@@ -15915,8 +15835,8 @@ abstract class $BundleRequestCopyWith<$Res> {
       _$BundleRequestCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       BundleRequestMethod method,
       FhirUri url,
       String ifNoneMatch,
@@ -15937,7 +15857,7 @@ class _$BundleRequestCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object method = freezed,
     Object url = freezed,
@@ -15948,12 +15868,12 @@ class _$BundleRequestCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   }) {
     return _then(BundleRequest(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       method: method == freezed ? _value.method : method as BundleRequestMethod,
       url: url == freezed ? _value.url : url as FhirUri,
       ifNoneMatch:
@@ -15972,7 +15892,7 @@ class _$BundleRequestCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
 class _$BundleRequest implements BundleRequest {
   const _$BundleRequest(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.method,
       this.url,
@@ -15987,9 +15907,10 @@ class _$BundleRequest implements BundleRequest {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final BundleRequestMethod method;
   @override
@@ -16005,7 +15926,7 @@ class _$BundleRequest implements BundleRequest {
 
   @override
   String toString() {
-    return 'Other.bundleRequest(id: $id, extension: $extension, modifierExtension: $modifierExtension, method: $method, url: $url, ifNoneMatch: $ifNoneMatch, ifModifiedSince: $ifModifiedSince, ifMatch: $ifMatch, ifNoneExist: $ifNoneExist)';
+    return 'Other.bundleRequest(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, method: $method, url: $url, ifNoneMatch: $ifNoneMatch, ifModifiedSince: $ifModifiedSince, ifMatch: $ifMatch, ifNoneExist: $ifNoneExist)';
   }
 
   @override
@@ -16014,9 +15935,9 @@ class _$BundleRequest implements BundleRequest {
         (other is BundleRequest &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -16042,7 +15963,7 @@ class _$BundleRequest implements BundleRequest {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(method) ^
       const DeepCollectionEquality().hash(url) ^
@@ -16067,14 +15988,14 @@ class _$BundleRequest implements BundleRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -16090,11 +16011,11 @@ class _$BundleRequest implements BundleRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -16102,13 +16023,13 @@ class _$BundleRequest implements BundleRequest {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -16116,8 +16037,8 @@ class _$BundleRequest implements BundleRequest {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -16126,24 +16047,19 @@ class _$BundleRequest implements BundleRequest {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -16196,7 +16112,7 @@ class _$BundleRequest implements BundleRequest {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -16216,10 +16132,10 @@ class _$BundleRequest implements BundleRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -16228,8 +16144,8 @@ class _$BundleRequest implements BundleRequest {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -16243,16 +16159,16 @@ class _$BundleRequest implements BundleRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -16266,22 +16182,22 @@ class _$BundleRequest implements BundleRequest {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -16290,15 +16206,15 @@ class _$BundleRequest implements BundleRequest {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -16308,8 +16224,8 @@ class _$BundleRequest implements BundleRequest {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -16324,9 +16240,9 @@ class _$BundleRequest implements BundleRequest {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -16352,7 +16268,7 @@ class _$BundleRequest implements BundleRequest {
     assert(bundleRequest != null);
     assert(bundleResponse != null);
     assert(basic != null);
-    return bundleRequest(id, extension, modifierExtension, method, url,
+    return bundleRequest(id, fhirExtension, modifierExtension, method, url,
         ifNoneMatch, ifModifiedSince, ifMatch, ifNoneExist);
   }
 
@@ -16367,13 +16283,13 @@ class _$BundleRequest implements BundleRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -16388,11 +16304,11 @@ class _$BundleRequest implements BundleRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -16400,20 +16316,20 @@ class _$BundleRequest implements BundleRequest {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -16421,22 +16337,17 @@ class _$BundleRequest implements BundleRequest {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -16489,7 +16400,7 @@ class _$BundleRequest implements BundleRequest {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -16507,10 +16418,10 @@ class _$BundleRequest implements BundleRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -16518,8 +16429,8 @@ class _$BundleRequest implements BundleRequest {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -16532,15 +16443,15 @@ class _$BundleRequest implements BundleRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -16553,16 +16464,20 @@ class _$BundleRequest implements BundleRequest {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -16570,14 +16485,14 @@ class _$BundleRequest implements BundleRequest {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -16586,8 +16501,8 @@ class _$BundleRequest implements BundleRequest {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -16601,9 +16516,9 @@ class _$BundleRequest implements BundleRequest {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -16612,7 +16527,7 @@ class _$BundleRequest implements BundleRequest {
   }) {
     assert(orElse != null);
     if (bundleRequest != null) {
-      return bundleRequest(id, extension, modifierExtension, method, url,
+      return bundleRequest(id, fhirExtension, modifierExtension, method, url,
           ifNoneMatch, ifModifiedSince, ifMatch, ifNoneExist);
     }
     return orElse();
@@ -16706,8 +16621,8 @@ class _$BundleRequest implements BundleRequest {
 abstract class BundleRequest implements Other {
   const factory BundleRequest(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       BundleRequestMethod method,
       FhirUri url,
       String ifNoneMatch,
@@ -16719,8 +16634,9 @@ abstract class BundleRequest implements Other {
       _$BundleRequest.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   BundleRequestMethod get method;
   FhirUri get url;
   String get ifNoneMatch;
@@ -16736,8 +16652,8 @@ abstract class $BundleResponseCopyWith<$Res> {
       _$BundleResponseCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String status,
       FhirUri location,
       String etag,
@@ -16757,7 +16673,7 @@ class _$BundleResponseCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object status = freezed,
     Object location = freezed,
@@ -16767,12 +16683,12 @@ class _$BundleResponseCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
   }) {
     return _then(BundleResponse(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       status: status == freezed ? _value.status : status as String,
       location: location == freezed ? _value.location : location as FhirUri,
       etag: etag == freezed ? _value.etag : etag as String,
@@ -16788,7 +16704,7 @@ class _$BundleResponseCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
 class _$BundleResponse implements BundleResponse {
   const _$BundleResponse(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.status,
       this.location,
@@ -16802,9 +16718,10 @@ class _$BundleResponse implements BundleResponse {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String status;
   @override
@@ -16818,7 +16735,7 @@ class _$BundleResponse implements BundleResponse {
 
   @override
   String toString() {
-    return 'Other.bundleResponse(id: $id, extension: $extension, modifierExtension: $modifierExtension, status: $status, location: $location, etag: $etag, lastModified: $lastModified, outcome: $outcome)';
+    return 'Other.bundleResponse(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, status: $status, location: $location, etag: $etag, lastModified: $lastModified, outcome: $outcome)';
   }
 
   @override
@@ -16827,9 +16744,9 @@ class _$BundleResponse implements BundleResponse {
         (other is BundleResponse &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -16851,7 +16768,7 @@ class _$BundleResponse implements BundleResponse {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(location) ^
@@ -16875,14 +16792,14 @@ class _$BundleResponse implements BundleResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -16898,11 +16815,11 @@ class _$BundleResponse implements BundleResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -16910,13 +16827,13 @@ class _$BundleResponse implements BundleResponse {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -16924,8 +16841,8 @@ class _$BundleResponse implements BundleResponse {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -16934,24 +16851,19 @@ class _$BundleResponse implements BundleResponse {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -17004,7 +16916,7 @@ class _$BundleResponse implements BundleResponse {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -17024,10 +16936,10 @@ class _$BundleResponse implements BundleResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -17036,8 +16948,8 @@ class _$BundleResponse implements BundleResponse {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -17051,16 +16963,16 @@ class _$BundleResponse implements BundleResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -17074,22 +16986,22 @@ class _$BundleResponse implements BundleResponse {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -17098,15 +17010,15 @@ class _$BundleResponse implements BundleResponse {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -17116,8 +17028,8 @@ class _$BundleResponse implements BundleResponse {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -17132,9 +17044,9 @@ class _$BundleResponse implements BundleResponse {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -17160,8 +17072,8 @@ class _$BundleResponse implements BundleResponse {
     assert(bundleRequest != null);
     assert(bundleResponse != null);
     assert(basic != null);
-    return bundleResponse(id, extension, modifierExtension, status, location,
-        etag, lastModified, outcome);
+    return bundleResponse(id, fhirExtension, modifierExtension, status,
+        location, etag, lastModified, outcome);
   }
 
   @override
@@ -17175,13 +17087,13 @@ class _$BundleResponse implements BundleResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -17196,11 +17108,11 @@ class _$BundleResponse implements BundleResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -17208,20 +17120,20 @@ class _$BundleResponse implements BundleResponse {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -17229,22 +17141,17 @@ class _$BundleResponse implements BundleResponse {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -17297,7 +17204,7 @@ class _$BundleResponse implements BundleResponse {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -17315,10 +17222,10 @@ class _$BundleResponse implements BundleResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -17326,8 +17233,8 @@ class _$BundleResponse implements BundleResponse {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -17340,15 +17247,15 @@ class _$BundleResponse implements BundleResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -17361,16 +17268,20 @@ class _$BundleResponse implements BundleResponse {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -17378,14 +17289,14 @@ class _$BundleResponse implements BundleResponse {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -17394,8 +17305,8 @@ class _$BundleResponse implements BundleResponse {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -17409,9 +17320,9 @@ class _$BundleResponse implements BundleResponse {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -17420,8 +17331,8 @@ class _$BundleResponse implements BundleResponse {
   }) {
     assert(orElse != null);
     if (bundleResponse != null) {
-      return bundleResponse(id, extension, modifierExtension, status, location,
-          etag, lastModified, outcome);
+      return bundleResponse(id, fhirExtension, modifierExtension, status,
+          location, etag, lastModified, outcome);
     }
     return orElse();
   }
@@ -17514,8 +17425,8 @@ class _$BundleResponse implements BundleResponse {
 abstract class BundleResponse implements Other {
   const factory BundleResponse(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String status,
       FhirUri location,
       String etag,
@@ -17526,8 +17437,9 @@ abstract class BundleResponse implements Other {
       _$BundleResponse.fromJson;
 
   String get id;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
   String get status;
   FhirUri get location;
   String get etag;
@@ -17547,9 +17459,9 @@ abstract class $BasicCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept code,
       Reference subject,
       Date created,
@@ -17573,7 +17485,7 @@ class _$BasicCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object code = freezed,
@@ -17594,15 +17506,15 @@ class _$BasicCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       created: created == freezed ? _value.created : created as Date,
@@ -17621,7 +17533,7 @@ class _$Basic implements Basic {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.code,
@@ -17647,11 +17559,12 @@ class _$Basic implements Basic {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final CodeableConcept code;
   @override
@@ -17663,7 +17576,7 @@ class _$Basic implements Basic {
 
   @override
   String toString() {
-    return 'Other.basic(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, subject: $subject, created: $created, author: $author)';
+    return 'Other.basic(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, subject: $subject, created: $created, author: $author)';
   }
 
   @override
@@ -17688,9 +17601,9 @@ class _$Basic implements Basic {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -17719,7 +17632,7 @@ class _$Basic implements Basic {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(code) ^
@@ -17743,14 +17656,14 @@ class _$Basic implements Basic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             OperationOutcomeIssueSeverity severity,
             OperationOutcomeIssueCode code,
             CodeableConcept details,
@@ -17766,11 +17679,11 @@ class _$Basic implements Basic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -17778,13 +17691,13 @@ class _$Basic implements Basic {
             Reference responsible,
             CodeableConcept reason,
             MessageHeaderResponse response,
-            List<Reference> focus,
+            List<dynamic> focus,
             Canonical definition),
     @required
         Result messageHeaderDestination(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Reference target,
             FhirUrl endpoint,
@@ -17792,8 +17705,8 @@ class _$Basic implements Basic {
     @required
         Result messageHeaderSource(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             String software,
             String version,
@@ -17802,24 +17715,19 @@ class _$Basic implements Basic {
     @required
         Result messageHeaderResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Id identifier,
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String name,
             Base64Binary valueBase64Binary,
             bool valueBoolean,
@@ -17872,7 +17780,7 @@ class _$Basic implements Basic {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -17892,10 +17800,10 @@ class _$Basic implements Basic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Instant end,
             String reason,
             String criteria,
@@ -17904,8 +17812,8 @@ class _$Basic implements Basic {
     @required
         Result subscriptionChannel(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             SubscriptionChannelType type,
             FhirUrl endpoint,
             Code payload,
@@ -17919,16 +17827,16 @@ class _$Basic implements Basic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             LinkageItemType type,
             Reference resource),
     @required
@@ -17942,22 +17850,22 @@ class _$Basic implements Basic {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String relation,
             FhirUri url),
     @required
         Result bundleEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<BundleLink> link,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -17966,15 +17874,15 @@ class _$Basic implements Basic {
     @required
         Result bundleSearch(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleSearchMode mode,
             double score),
     @required
         Result bundleRequest(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             BundleRequestMethod method,
             FhirUri url,
             String ifNoneMatch,
@@ -17984,8 +17892,8 @@ class _$Basic implements Basic {
     @required
         Result bundleResponse(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String status,
             FhirUri location,
             String etag,
@@ -18000,9 +17908,9 @@ class _$Basic implements Basic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -18036,7 +17944,7 @@ class _$Basic implements Basic {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         code,
@@ -18056,13 +17964,13 @@ class _$Basic implements Basic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         OperationOutcomeIssueSeverity severity,
         OperationOutcomeIssueCode code,
         CodeableConcept details,
@@ -18077,11 +17985,11 @@ class _$Basic implements Basic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -18089,20 +17997,20 @@ class _$Basic implements Basic {
         Reference responsible,
         CodeableConcept reason,
         MessageHeaderResponse response,
-        List<Reference> focus,
+        List<dynamic> focus,
         Canonical definition),
     Result messageHeaderDestination(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Reference target,
         FhirUrl endpoint,
         Reference receiver),
     Result messageHeaderSource(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         String software,
         String version,
@@ -18110,22 +18018,17 @@ class _$Basic implements Basic {
         FhirUrl endpoint),
     Result messageHeaderResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String name,
         Base64Binary valueBase64Binary,
         bool valueBoolean,
@@ -18178,7 +18081,7 @@ class _$Basic implements Basic {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -18196,10 +18099,10 @@ class _$Basic implements Basic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Instant end,
         String reason,
         String criteria,
@@ -18207,8 +18110,8 @@ class _$Basic implements Basic {
         SubscriptionChannel channel),
     Result subscriptionChannel(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         SubscriptionChannelType type,
         FhirUrl endpoint,
         Code payload,
@@ -18221,15 +18124,15 @@ class _$Basic implements Basic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         LinkageItemType type,
         Reference resource),
     Result bundle(
@@ -18242,16 +18145,20 @@ class _$Basic implements Basic {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
-    Result bundleLink(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, String relation, FhirUri url),
+    Result bundleLink(
+        String id,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        String relation,
+        FhirUri url),
     Result bundleEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<BundleLink> link,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -18259,14 +18166,14 @@ class _$Basic implements Basic {
         BundleResponse response),
     Result bundleSearch(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleSearchMode mode,
         double score),
     Result bundleRequest(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         BundleRequestMethod method,
         FhirUri url,
         String ifNoneMatch,
@@ -18275,8 +18182,8 @@ class _$Basic implements Basic {
         String ifNoneExist),
     Result bundleResponse(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String status,
         FhirUri location,
         String etag,
@@ -18290,9 +18197,9 @@ class _$Basic implements Basic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -18309,7 +18216,7 @@ class _$Basic implements Basic {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           code,
@@ -18414,9 +18321,9 @@ abstract class Basic implements Other {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept code,
       Reference subject,
       Date created,
@@ -18431,9 +18338,10 @@ abstract class Basic implements Other {
   Code get language;
   Narrative get text;
   List<dynamic> get contained;
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   CodeableConcept get code;
   Reference get subject;
   Date get created;

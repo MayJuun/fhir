@@ -1,5 +1,10 @@
 export './entities1/entities1.dart';
+export './entities1/entities1.enums.dart';
 export './entities2/entities2.dart';
+export './entities2/entities2.enums.dart';
 export './individuals/individuals.dart';
+export './individuals/individuals.enums.dart';
 export './management/management.dart';
+export './management/management.enums.dart';
 export './workflow/workflow.dart';
+export './workflow/workflow.enums.dart';

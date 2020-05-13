@@ -59,9 +59,9 @@ class _$IndividualsTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       GroupType type,
       bool actual,
@@ -69,8 +69,8 @@ class _$IndividualsTearOff {
       String name,
       int quantity,
       Reference managingEntity,
-      List<GroupCharacteristic> characteristic,
-      List<GroupMember> member}) {
+      List<dynamic> characteristic,
+      List<dynamic> member}) {
     return Group(
       resourceType: resourceType,
       id: id,
@@ -79,7 +79,7 @@ class _$IndividualsTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
@@ -96,8 +96,8 @@ class _$IndividualsTearOff {
 
   GroupCharacteristic groupCharacteristic(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
       CodeableConcept valueCodeableConcept,
       bool valueBoolean,
@@ -108,7 +108,7 @@ class _$IndividualsTearOff {
       Period period}) {
     return GroupCharacteristic(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       code: code,
       valueCodeableConcept: valueCodeableConcept,
@@ -123,14 +123,14 @@ class _$IndividualsTearOff {
 
   GroupMember groupMember(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference entity,
       Period period,
       bool inactive}) {
     return GroupMember(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       entity: entity,
       period: period,
@@ -146,26 +146,26 @@ class _$IndividualsTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
+      List<dynamic> name,
+      List<dynamic> telecom,
       PatientGender gender,
       Date birthDate,
       bool deceasedBoolean,
       FhirDateTime deceasedDateTime,
-      List<Address> address,
+      List<dynamic> address,
       CodeableConcept maritalStatus,
       bool multipleBirthBoolean,
       int multipleBirthInteger,
-      List<Attachment> photo,
-      List<PatientContact> contact,
-      List<PatientCommunication> communication,
-      List<Reference> generalPractitioner,
+      List<dynamic> photo,
+      List<dynamic> contact,
+      List<dynamic> communication,
+      List<dynamic> generalPractitioner,
       Reference managingOrganization,
-      List<PatientLink> link}) {
+      List<dynamic> link}) {
     return Patient(
       resourceType: resourceType,
       id: id,
@@ -174,7 +174,7 @@ class _$IndividualsTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
@@ -199,18 +199,18 @@ class _$IndividualsTearOff {
 
   PatientContact patientContact(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> relationship,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> relationship,
       HumanName name,
-      List<ContactPoint> telecom,
+      List<dynamic> telecom,
       Address address,
       PatientContactGender gender,
       Reference organization,
       Period period}) {
     return PatientContact(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       relationship: relationship,
       name: name,
@@ -224,13 +224,13 @@ class _$IndividualsTearOff {
 
   PatientCommunication patientCommunication(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept language,
       bool preferred}) {
     return PatientCommunication(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       language: language,
       preferred: preferred,
@@ -239,13 +239,13 @@ class _$IndividualsTearOff {
 
   PatientLink patientLink(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference other,
       PatientLinkType type}) {
     return PatientLink(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       other: other,
       type: type,
@@ -260,22 +260,22 @@ class _$IndividualsTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Period period,
       Reference practitioner,
       Reference organization,
-      List<CodeableConcept> code,
-      List<CodeableConcept> specialty,
-      List<Reference> location,
-      List<Reference> healthcareService,
-      List<ContactPoint> telecom,
-      List<PractitionerRoleAvailableTime> availableTime,
-      List<PractitionerRoleNotAvailable> notAvailable,
+      List<dynamic> code,
+      List<dynamic> specialty,
+      List<dynamic> location,
+      List<dynamic> healthcareService,
+      List<dynamic> telecom,
+      List<dynamic> availableTime,
+      List<dynamic> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint}) {
+      List<dynamic> endpoint}) {
     return PractitionerRole(
       resourceType: resourceType,
       id: id,
@@ -284,7 +284,7 @@ class _$IndividualsTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
@@ -305,15 +305,15 @@ class _$IndividualsTearOff {
 
   PractitionerRoleAvailableTime practitionerRoleAvailableTime(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       List<Code> daysOfWeek,
       bool allDay,
       Time availableStartTime,
       Time availableEndTime}) {
     return PractitionerRoleAvailableTime(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       daysOfWeek: daysOfWeek,
       allDay: allDay,
@@ -324,13 +324,13 @@ class _$IndividualsTearOff {
 
   PractitionerRoleNotAvailable practitionerRoleNotAvailable(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       Period during}) {
     return PractitionerRoleNotAvailable(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       description: description,
       during: during,
@@ -345,18 +345,18 @@ class _$IndividualsTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      List<dynamic> name,
+      List<dynamic> telecom,
       PersonGender gender,
       Date birthDate,
-      List<Address> address,
+      List<dynamic> address,
       Attachment photo,
       Reference managingOrganization,
       bool active,
-      List<PersonLink> link}) {
+      List<dynamic> link}) {
     return Person(
       resourceType: resourceType,
       id: id,
@@ -365,7 +365,7 @@ class _$IndividualsTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       name: name,
@@ -382,13 +382,13 @@ class _$IndividualsTearOff {
 
   PersonLink personLink(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference target,
       PersonLinkAssurance assurance}) {
     return PersonLink(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       target: target,
       assurance: assurance,
@@ -403,18 +403,18 @@ class _$IndividualsTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
-      List<Address> address,
+      List<dynamic> name,
+      List<dynamic> telecom,
+      List<dynamic> address,
       PractitionerGender gender,
       Date birthDate,
-      List<Attachment> photo,
-      List<PractitionerQualification> qualification,
-      List<CodeableConcept> communication}) {
+      List<dynamic> photo,
+      List<dynamic> qualification,
+      List<dynamic> communication}) {
     return Practitioner(
       resourceType: resourceType,
       id: id,
@@ -423,7 +423,7 @@ class _$IndividualsTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
@@ -440,15 +440,15 @@ class _$IndividualsTearOff {
 
   PractitionerQualification practitionerQualification(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept code,
       Period period,
       Reference issuer}) {
     return PractitionerQualification(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       code: code,
@@ -465,20 +465,20 @@ class _$IndividualsTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Reference patient,
-      List<CodeableConcept> relationship,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
+      List<dynamic> relationship,
+      List<dynamic> name,
+      List<dynamic> telecom,
       RelatedPersonGender gender,
       Date birthDate,
-      List<Address> address,
-      List<Attachment> photo,
+      List<dynamic> address,
+      List<dynamic> photo,
       Period period,
-      List<RelatedPersonCommunication> communication}) {
+      List<dynamic> communication}) {
     return RelatedPerson(
       resourceType: resourceType,
       id: id,
@@ -487,7 +487,7 @@ class _$IndividualsTearOff {
       language: language,
       text: text,
       contained: contained,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
@@ -506,13 +506,13 @@ class _$IndividualsTearOff {
 
   RelatedPersonCommunication relatedPersonCommunication(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept language,
       bool preferred}) {
     return RelatedPersonCommunication(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
       language: language,
       preferred: preferred,
@@ -524,8 +524,9 @@ class _$IndividualsTearOff {
 const $Individuals = _$IndividualsTearOff();
 
 mixin _$Individuals {
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
+  List<dynamic> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -538,9 +539,9 @@ mixin _$Individuals {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -548,13 +549,13 @@ mixin _$Individuals {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -566,8 +567,8 @@ mixin _$Individuals {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -580,34 +581,34 @@ mixin _$Individuals {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -615,15 +616,15 @@ mixin _$Individuals {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -635,27 +636,27 @@ mixin _$Individuals {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -663,8 +664,8 @@ mixin _$Individuals {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -676,23 +677,23 @@ mixin _$Individuals {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -704,24 +705,24 @@ mixin _$Individuals {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -734,25 +735,25 @@ mixin _$Individuals {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   });
@@ -766,9 +767,9 @@ mixin _$Individuals {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -776,12 +777,12 @@ mixin _$Individuals {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -792,8 +793,8 @@ mixin _$Individuals {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -805,47 +806,47 @@ mixin _$Individuals {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -856,34 +857,34 @@ mixin _$Individuals {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -894,22 +895,22 @@ mixin _$Individuals {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -920,23 +921,23 @@ mixin _$Individuals {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -948,24 +949,24 @@ mixin _$Individuals {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -1022,7 +1023,8 @@ abstract class $IndividualsCopyWith<$Res> {
           Individuals value, $Res Function(Individuals) then) =
       _$IndividualsCopyWithImpl<$Res>;
   $Res call(
-      {List<FhirExtension> extension, List<FhirExtension> modifierExtension});
+      {@JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension});
 }
 
 class _$IndividualsCopyWithImpl<$Res> implements $IndividualsCopyWith<$Res> {
@@ -1034,16 +1036,16 @@ class _$IndividualsCopyWithImpl<$Res> implements $IndividualsCopyWith<$Res> {
 
   @override
   $Res call({
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
     ));
   }
 }
@@ -1060,9 +1062,9 @@ abstract class $GroupCopyWith<$Res> implements $IndividualsCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       GroupType type,
       bool actual,
@@ -1070,8 +1072,8 @@ abstract class $GroupCopyWith<$Res> implements $IndividualsCopyWith<$Res> {
       String name,
       int quantity,
       Reference managingEntity,
-      List<GroupCharacteristic> characteristic,
-      List<GroupMember> member});
+      List<dynamic> characteristic,
+      List<dynamic> member});
 }
 
 class _$GroupCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
@@ -1091,7 +1093,7 @@ class _$GroupCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
@@ -1117,15 +1119,15 @@ class _$GroupCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       active: active == freezed ? _value.active : active as bool,
       type: type == freezed ? _value.type : type as GroupType,
       actual: actual == freezed ? _value.actual : actual as bool,
@@ -1137,8 +1139,8 @@ class _$GroupCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
           : managingEntity as Reference,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<GroupCharacteristic>,
-      member: member == freezed ? _value.member : member as List<GroupMember>,
+          : characteristic as List<dynamic>,
+      member: member == freezed ? _value.member : member as List<dynamic>,
     ));
   }
 }
@@ -1153,7 +1155,7 @@ class _$Group implements Group {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.active,
@@ -1184,11 +1186,12 @@ class _$Group implements Group {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final bool active;
   @override
@@ -1204,13 +1207,13 @@ class _$Group implements Group {
   @override
   final Reference managingEntity;
   @override
-  final List<GroupCharacteristic> characteristic;
+  final List<dynamic> characteristic;
   @override
-  final List<GroupMember> member;
+  final List<dynamic> member;
 
   @override
   String toString() {
-    return 'Individuals.group(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, type: $type, actual: $actual, code: $code, name: $name, quantity: $quantity, managingEntity: $managingEntity, characteristic: $characteristic, member: $member)';
+    return 'Individuals.group(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, type: $type, actual: $actual, code: $code, name: $name, quantity: $quantity, managingEntity: $managingEntity, characteristic: $characteristic, member: $member)';
   }
 
   @override
@@ -1235,9 +1238,9 @@ class _$Group implements Group {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -1277,7 +1280,7 @@ class _$Group implements Group {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
@@ -1306,9 +1309,9 @@ class _$Group implements Group {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -1316,13 +1319,13 @@ class _$Group implements Group {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -1334,8 +1337,8 @@ class _$Group implements Group {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -1348,34 +1351,34 @@ class _$Group implements Group {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -1383,15 +1386,15 @@ class _$Group implements Group {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -1403,27 +1406,27 @@ class _$Group implements Group {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -1431,8 +1434,8 @@ class _$Group implements Group {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -1444,23 +1447,23 @@ class _$Group implements Group {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -1472,24 +1475,24 @@ class _$Group implements Group {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -1502,25 +1505,25 @@ class _$Group implements Group {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -1548,7 +1551,7 @@ class _$Group implements Group {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         active,
@@ -1573,9 +1576,9 @@ class _$Group implements Group {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -1583,12 +1586,12 @@ class _$Group implements Group {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -1599,8 +1602,8 @@ class _$Group implements Group {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -1612,47 +1615,47 @@ class _$Group implements Group {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -1663,34 +1666,34 @@ class _$Group implements Group {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -1701,22 +1704,22 @@ class _$Group implements Group {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -1727,23 +1730,23 @@ class _$Group implements Group {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -1755,24 +1758,24 @@ class _$Group implements Group {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -1787,7 +1790,7 @@ class _$Group implements Group {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           active,
@@ -1889,9 +1892,9 @@ abstract class Group implements Individuals {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       GroupType type,
       bool actual,
@@ -1899,8 +1902,8 @@ abstract class Group implements Individuals {
       String name,
       int quantity,
       Reference managingEntity,
-      List<GroupCharacteristic> characteristic,
-      List<GroupMember> member}) = _$Group;
+      List<dynamic> characteristic,
+      List<dynamic> member}) = _$Group;
 
   factory Group.fromJson(Map<String, dynamic> json) = _$Group.fromJson;
 
@@ -1912,10 +1915,11 @@ abstract class Group implements Individuals {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   bool get active;
   GroupType get type;
   bool get actual;
@@ -1923,8 +1927,8 @@ abstract class Group implements Individuals {
   String get name;
   int get quantity;
   Reference get managingEntity;
-  List<GroupCharacteristic> get characteristic;
-  List<GroupMember> get member;
+  List<dynamic> get characteristic;
+  List<dynamic> get member;
   @override
   $GroupCopyWith<Group> get copyWith;
 }
@@ -1937,8 +1941,8 @@ abstract class $GroupCharacteristicCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
       CodeableConcept valueCodeableConcept,
       bool valueBoolean,
@@ -1962,7 +1966,7 @@ class _$GroupCharacteristicCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
     Object valueCodeableConcept = freezed,
@@ -1975,12 +1979,12 @@ class _$GroupCharacteristicCopyWithImpl<$Res>
   }) {
     return _then(GroupCharacteristic(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
@@ -2005,7 +2009,7 @@ class _$GroupCharacteristicCopyWithImpl<$Res>
 class _$GroupCharacteristic implements GroupCharacteristic {
   const _$GroupCharacteristic(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.code,
       this.valueCodeableConcept,
@@ -2022,9 +2026,10 @@ class _$GroupCharacteristic implements GroupCharacteristic {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept code;
   @override
@@ -2044,7 +2049,7 @@ class _$GroupCharacteristic implements GroupCharacteristic {
 
   @override
   String toString() {
-    return 'Individuals.groupCharacteristic(id: $id, extension: $extension, modifierExtension: $modifierExtension, code: $code, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueQuantity: $valueQuantity, valueRange: $valueRange, valueReference: $valueReference, exclude: $exclude, period: $period)';
+    return 'Individuals.groupCharacteristic(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueQuantity: $valueQuantity, valueRange: $valueRange, valueReference: $valueReference, exclude: $exclude, period: $period)';
   }
 
   @override
@@ -2053,9 +2058,9 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         (other is GroupCharacteristic &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -2087,7 +2092,7 @@ class _$GroupCharacteristic implements GroupCharacteristic {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueCodeableConcept) ^
@@ -2114,9 +2119,9 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -2124,13 +2129,13 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -2142,8 +2147,8 @@ class _$GroupCharacteristic implements GroupCharacteristic {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -2156,34 +2161,34 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -2191,15 +2196,15 @@ class _$GroupCharacteristic implements GroupCharacteristic {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -2211,27 +2216,27 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -2239,8 +2244,8 @@ class _$GroupCharacteristic implements GroupCharacteristic {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -2252,23 +2257,23 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -2280,24 +2285,24 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -2310,25 +2315,25 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -2350,7 +2355,7 @@ class _$GroupCharacteristic implements GroupCharacteristic {
     assert(relatedPersonCommunication != null);
     return groupCharacteristic(
         id,
-        extension,
+        fhirExtension,
         modifierExtension,
         code,
         valueCodeableConcept,
@@ -2373,9 +2378,9 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -2383,12 +2388,12 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -2399,8 +2404,8 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -2412,47 +2417,47 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -2463,34 +2468,34 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -2501,22 +2506,22 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -2527,23 +2532,23 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -2555,24 +2560,24 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -2581,7 +2586,7 @@ class _$GroupCharacteristic implements GroupCharacteristic {
     if (groupCharacteristic != null) {
       return groupCharacteristic(
           id,
-          extension,
+          fhirExtension,
           modifierExtension,
           code,
           valueCodeableConcept,
@@ -2676,8 +2681,8 @@ class _$GroupCharacteristic implements GroupCharacteristic {
 abstract class GroupCharacteristic implements Individuals {
   const factory GroupCharacteristic(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept code,
       CodeableConcept valueCodeableConcept,
       bool valueBoolean,
@@ -2692,9 +2697,10 @@ abstract class GroupCharacteristic implements Individuals {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get code;
   CodeableConcept get valueCodeableConcept;
   bool get valueBoolean;
@@ -2715,8 +2721,8 @@ abstract class $GroupMemberCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference entity,
       Period period,
       bool inactive});
@@ -2734,7 +2740,7 @@ class _$GroupMemberCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object entity = freezed,
     Object period = freezed,
@@ -2742,12 +2748,12 @@ class _$GroupMemberCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
   }) {
     return _then(GroupMember(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       entity: entity == freezed ? _value.entity : entity as Reference,
       period: period == freezed ? _value.period : period as Period,
       inactive: inactive == freezed ? _value.inactive : inactive as bool,
@@ -2759,7 +2765,7 @@ class _$GroupMemberCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
 class _$GroupMember implements GroupMember {
   const _$GroupMember(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.entity,
       this.period,
@@ -2771,9 +2777,10 @@ class _$GroupMember implements GroupMember {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Reference entity;
   @override
@@ -2783,7 +2790,7 @@ class _$GroupMember implements GroupMember {
 
   @override
   String toString() {
-    return 'Individuals.groupMember(id: $id, extension: $extension, modifierExtension: $modifierExtension, entity: $entity, period: $period, inactive: $inactive)';
+    return 'Individuals.groupMember(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, entity: $entity, period: $period, inactive: $inactive)';
   }
 
   @override
@@ -2792,9 +2799,9 @@ class _$GroupMember implements GroupMember {
         (other is GroupMember &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -2811,7 +2818,7 @@ class _$GroupMember implements GroupMember {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(entity) ^
       const DeepCollectionEquality().hash(period) ^
@@ -2833,9 +2840,9 @@ class _$GroupMember implements GroupMember {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -2843,13 +2850,13 @@ class _$GroupMember implements GroupMember {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -2861,8 +2868,8 @@ class _$GroupMember implements GroupMember {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -2875,34 +2882,34 @@ class _$GroupMember implements GroupMember {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -2910,15 +2917,15 @@ class _$GroupMember implements GroupMember {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -2930,27 +2937,27 @@ class _$GroupMember implements GroupMember {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -2958,8 +2965,8 @@ class _$GroupMember implements GroupMember {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -2971,23 +2978,23 @@ class _$GroupMember implements GroupMember {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -2999,24 +3006,24 @@ class _$GroupMember implements GroupMember {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -3029,25 +3036,25 @@ class _$GroupMember implements GroupMember {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -3068,7 +3075,7 @@ class _$GroupMember implements GroupMember {
     assert(relatedPerson != null);
     assert(relatedPersonCommunication != null);
     return groupMember(
-        id, extension, modifierExtension, entity, period, inactive);
+        id, fhirExtension, modifierExtension, entity, period, inactive);
   }
 
   @override
@@ -3082,9 +3089,9 @@ class _$GroupMember implements GroupMember {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -3092,12 +3099,12 @@ class _$GroupMember implements GroupMember {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -3108,8 +3115,8 @@ class _$GroupMember implements GroupMember {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -3121,47 +3128,47 @@ class _$GroupMember implements GroupMember {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -3172,34 +3179,34 @@ class _$GroupMember implements GroupMember {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -3210,22 +3217,22 @@ class _$GroupMember implements GroupMember {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -3236,23 +3243,23 @@ class _$GroupMember implements GroupMember {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -3264,24 +3271,24 @@ class _$GroupMember implements GroupMember {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -3289,7 +3296,7 @@ class _$GroupMember implements GroupMember {
     assert(orElse != null);
     if (groupMember != null) {
       return groupMember(
-          id, extension, modifierExtension, entity, period, inactive);
+          id, fhirExtension, modifierExtension, entity, period, inactive);
     }
     return orElse();
   }
@@ -3374,8 +3381,8 @@ class _$GroupMember implements GroupMember {
 abstract class GroupMember implements Individuals {
   const factory GroupMember(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference entity,
       Period period,
       bool inactive}) = _$GroupMember;
@@ -3385,9 +3392,10 @@ abstract class GroupMember implements Individuals {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Reference get entity;
   Period get period;
   bool get inactive;
@@ -3407,26 +3415,26 @@ abstract class $PatientCopyWith<$Res> implements $IndividualsCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
+      List<dynamic> name,
+      List<dynamic> telecom,
       PatientGender gender,
       Date birthDate,
       bool deceasedBoolean,
       FhirDateTime deceasedDateTime,
-      List<Address> address,
+      List<dynamic> address,
       CodeableConcept maritalStatus,
       bool multipleBirthBoolean,
       int multipleBirthInteger,
-      List<Attachment> photo,
-      List<PatientContact> contact,
-      List<PatientCommunication> communication,
-      List<Reference> generalPractitioner,
+      List<dynamic> photo,
+      List<dynamic> contact,
+      List<dynamic> communication,
+      List<dynamic> generalPractitioner,
       Reference managingOrganization,
-      List<PatientLink> link});
+      List<dynamic> link});
 }
 
 class _$PatientCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
@@ -3446,7 +3454,7 @@ class _$PatientCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
@@ -3480,19 +3488,18 @@ class _$PatientCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       active: active == freezed ? _value.active : active as bool,
-      name: name == freezed ? _value.name : name as List<HumanName>,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      name: name == freezed ? _value.name : name as List<dynamic>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
       gender: gender == freezed ? _value.gender : gender as PatientGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
       deceasedBoolean: deceasedBoolean == freezed
@@ -3501,7 +3508,7 @@ class _$PatientCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
       deceasedDateTime: deceasedDateTime == freezed
           ? _value.deceasedDateTime
           : deceasedDateTime as FhirDateTime,
-      address: address == freezed ? _value.address : address as List<Address>,
+      address: address == freezed ? _value.address : address as List<dynamic>,
       maritalStatus: maritalStatus == freezed
           ? _value.maritalStatus
           : maritalStatus as CodeableConcept,
@@ -3511,19 +3518,18 @@ class _$PatientCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
       multipleBirthInteger: multipleBirthInteger == freezed
           ? _value.multipleBirthInteger
           : multipleBirthInteger as int,
-      photo: photo == freezed ? _value.photo : photo as List<Attachment>,
-      contact:
-          contact == freezed ? _value.contact : contact as List<PatientContact>,
+      photo: photo == freezed ? _value.photo : photo as List<dynamic>,
+      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<PatientCommunication>,
+          : communication as List<dynamic>,
       generalPractitioner: generalPractitioner == freezed
           ? _value.generalPractitioner
-          : generalPractitioner as List<Reference>,
+          : generalPractitioner as List<dynamic>,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
-      link: link == freezed ? _value.link : link as List<PatientLink>,
+      link: link == freezed ? _value.link : link as List<dynamic>,
     ));
   }
 }
@@ -3538,7 +3544,7 @@ class _$Patient implements Patient {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.active,
@@ -3577,17 +3583,18 @@ class _$Patient implements Patient {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final bool active;
   @override
-  final List<HumanName> name;
+  final List<dynamic> name;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
   final PatientGender gender;
   @override
@@ -3597,7 +3604,7 @@ class _$Patient implements Patient {
   @override
   final FhirDateTime deceasedDateTime;
   @override
-  final List<Address> address;
+  final List<dynamic> address;
   @override
   final CodeableConcept maritalStatus;
   @override
@@ -3605,21 +3612,21 @@ class _$Patient implements Patient {
   @override
   final int multipleBirthInteger;
   @override
-  final List<Attachment> photo;
+  final List<dynamic> photo;
   @override
-  final List<PatientContact> contact;
+  final List<dynamic> contact;
   @override
-  final List<PatientCommunication> communication;
+  final List<dynamic> communication;
   @override
-  final List<Reference> generalPractitioner;
+  final List<dynamic> generalPractitioner;
   @override
   final Reference managingOrganization;
   @override
-  final List<PatientLink> link;
+  final List<dynamic> link;
 
   @override
   String toString() {
-    return 'Individuals.patient(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, deceasedBoolean: $deceasedBoolean, deceasedDateTime: $deceasedDateTime, address: $address, maritalStatus: $maritalStatus, multipleBirthBoolean: $multipleBirthBoolean, multipleBirthInteger: $multipleBirthInteger, photo: $photo, contact: $contact, communication: $communication, generalPractitioner: $generalPractitioner, managingOrganization: $managingOrganization, link: $link)';
+    return 'Individuals.patient(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, deceasedBoolean: $deceasedBoolean, deceasedDateTime: $deceasedDateTime, address: $address, maritalStatus: $maritalStatus, multipleBirthBoolean: $multipleBirthBoolean, multipleBirthInteger: $multipleBirthInteger, photo: $photo, contact: $contact, communication: $communication, generalPractitioner: $generalPractitioner, managingOrganization: $managingOrganization, link: $link)';
   }
 
   @override
@@ -3644,9 +3651,9 @@ class _$Patient implements Patient {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -3707,7 +3714,7 @@ class _$Patient implements Patient {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
@@ -3744,9 +3751,9 @@ class _$Patient implements Patient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -3754,13 +3761,13 @@ class _$Patient implements Patient {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -3772,8 +3779,8 @@ class _$Patient implements Patient {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -3786,34 +3793,34 @@ class _$Patient implements Patient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -3821,15 +3828,15 @@ class _$Patient implements Patient {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -3841,27 +3848,27 @@ class _$Patient implements Patient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -3869,8 +3876,8 @@ class _$Patient implements Patient {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -3882,23 +3889,23 @@ class _$Patient implements Patient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -3910,24 +3917,24 @@ class _$Patient implements Patient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -3940,25 +3947,25 @@ class _$Patient implements Patient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -3986,7 +3993,7 @@ class _$Patient implements Patient {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         active,
@@ -4019,9 +4026,9 @@ class _$Patient implements Patient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -4029,12 +4036,12 @@ class _$Patient implements Patient {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -4045,8 +4052,8 @@ class _$Patient implements Patient {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -4058,47 +4065,47 @@ class _$Patient implements Patient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -4109,34 +4116,34 @@ class _$Patient implements Patient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -4147,22 +4154,22 @@ class _$Patient implements Patient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -4173,23 +4180,23 @@ class _$Patient implements Patient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -4201,24 +4208,24 @@ class _$Patient implements Patient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -4233,7 +4240,7 @@ class _$Patient implements Patient {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           active,
@@ -4343,26 +4350,26 @@ abstract class Patient implements Individuals {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
+      List<dynamic> name,
+      List<dynamic> telecom,
       PatientGender gender,
       Date birthDate,
       bool deceasedBoolean,
       FhirDateTime deceasedDateTime,
-      List<Address> address,
+      List<dynamic> address,
       CodeableConcept maritalStatus,
       bool multipleBirthBoolean,
       int multipleBirthInteger,
-      List<Attachment> photo,
-      List<PatientContact> contact,
-      List<PatientCommunication> communication,
-      List<Reference> generalPractitioner,
+      List<dynamic> photo,
+      List<dynamic> contact,
+      List<dynamic> communication,
+      List<dynamic> generalPractitioner,
       Reference managingOrganization,
-      List<PatientLink> link}) = _$Patient;
+      List<dynamic> link}) = _$Patient;
 
   factory Patient.fromJson(Map<String, dynamic> json) = _$Patient.fromJson;
 
@@ -4374,27 +4381,28 @@ abstract class Patient implements Individuals {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   bool get active;
-  List<HumanName> get name;
-  List<ContactPoint> get telecom;
+  List<dynamic> get name;
+  List<dynamic> get telecom;
   PatientGender get gender;
   Date get birthDate;
   bool get deceasedBoolean;
   FhirDateTime get deceasedDateTime;
-  List<Address> get address;
+  List<dynamic> get address;
   CodeableConcept get maritalStatus;
   bool get multipleBirthBoolean;
   int get multipleBirthInteger;
-  List<Attachment> get photo;
-  List<PatientContact> get contact;
-  List<PatientCommunication> get communication;
-  List<Reference> get generalPractitioner;
+  List<dynamic> get photo;
+  List<dynamic> get contact;
+  List<dynamic> get communication;
+  List<dynamic> get generalPractitioner;
   Reference get managingOrganization;
-  List<PatientLink> get link;
+  List<dynamic> get link;
   @override
   $PatientCopyWith<Patient> get copyWith;
 }
@@ -4407,11 +4415,11 @@ abstract class $PatientContactCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> relationship,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> relationship,
       HumanName name,
-      List<ContactPoint> telecom,
+      List<dynamic> telecom,
       Address address,
       PatientContactGender gender,
       Reference organization,
@@ -4430,7 +4438,7 @@ class _$PatientContactCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object relationship = freezed,
     Object name = freezed,
@@ -4442,18 +4450,17 @@ class _$PatientContactCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
   }) {
     return _then(PatientContact(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as List<CodeableConcept>,
+          : relationship as List<dynamic>,
       name: name == freezed ? _value.name : name as HumanName,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
       address: address == freezed ? _value.address : address as Address,
       gender:
           gender == freezed ? _value.gender : gender as PatientContactGender,
@@ -4469,7 +4476,7 @@ class _$PatientContactCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
 class _$PatientContact implements PatientContact {
   const _$PatientContact(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.relationship,
       this.name,
@@ -4485,15 +4492,16 @@ class _$PatientContact implements PatientContact {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<CodeableConcept> relationship;
+  final List<dynamic> relationship;
   @override
   final HumanName name;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
   final Address address;
   @override
@@ -4505,7 +4513,7 @@ class _$PatientContact implements PatientContact {
 
   @override
   String toString() {
-    return 'Individuals.patientContact(id: $id, extension: $extension, modifierExtension: $modifierExtension, relationship: $relationship, name: $name, telecom: $telecom, address: $address, gender: $gender, organization: $organization, period: $period)';
+    return 'Individuals.patientContact(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, relationship: $relationship, name: $name, telecom: $telecom, address: $address, gender: $gender, organization: $organization, period: $period)';
   }
 
   @override
@@ -4514,9 +4522,9 @@ class _$PatientContact implements PatientContact {
         (other is PatientContact &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -4544,7 +4552,7 @@ class _$PatientContact implements PatientContact {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(relationship) ^
       const DeepCollectionEquality().hash(name) ^
@@ -4570,9 +4578,9 @@ class _$PatientContact implements PatientContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -4580,13 +4588,13 @@ class _$PatientContact implements PatientContact {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -4598,8 +4606,8 @@ class _$PatientContact implements PatientContact {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -4612,34 +4620,34 @@ class _$PatientContact implements PatientContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -4647,15 +4655,15 @@ class _$PatientContact implements PatientContact {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -4667,27 +4675,27 @@ class _$PatientContact implements PatientContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -4695,8 +4703,8 @@ class _$PatientContact implements PatientContact {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -4708,23 +4716,23 @@ class _$PatientContact implements PatientContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -4736,24 +4744,24 @@ class _$PatientContact implements PatientContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -4766,25 +4774,25 @@ class _$PatientContact implements PatientContact {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -4804,8 +4812,8 @@ class _$PatientContact implements PatientContact {
     assert(practitionerQualification != null);
     assert(relatedPerson != null);
     assert(relatedPersonCommunication != null);
-    return patientContact(id, extension, modifierExtension, relationship, name,
-        telecom, address, gender, organization, period);
+    return patientContact(id, fhirExtension, modifierExtension, relationship,
+        name, telecom, address, gender, organization, period);
   }
 
   @override
@@ -4819,9 +4827,9 @@ class _$PatientContact implements PatientContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -4829,12 +4837,12 @@ class _$PatientContact implements PatientContact {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -4845,8 +4853,8 @@ class _$PatientContact implements PatientContact {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -4858,47 +4866,47 @@ class _$PatientContact implements PatientContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -4909,34 +4917,34 @@ class _$PatientContact implements PatientContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -4947,22 +4955,22 @@ class _$PatientContact implements PatientContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -4973,23 +4981,23 @@ class _$PatientContact implements PatientContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -5001,31 +5009,31 @@ class _$PatientContact implements PatientContact {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (patientContact != null) {
-      return patientContact(id, extension, modifierExtension, relationship,
+      return patientContact(id, fhirExtension, modifierExtension, relationship,
           name, telecom, address, gender, organization, period);
     }
     return orElse();
@@ -5111,11 +5119,11 @@ class _$PatientContact implements PatientContact {
 abstract class PatientContact implements Individuals {
   const factory PatientContact(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> relationship,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> relationship,
       HumanName name,
-      List<ContactPoint> telecom,
+      List<dynamic> telecom,
       Address address,
       PatientContactGender gender,
       Reference organization,
@@ -5126,12 +5134,13 @@ abstract class PatientContact implements Individuals {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<CodeableConcept> get relationship;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get relationship;
   HumanName get name;
-  List<ContactPoint> get telecom;
+  List<dynamic> get telecom;
   Address get address;
   PatientContactGender get gender;
   Reference get organization;
@@ -5148,8 +5157,8 @@ abstract class $PatientCommunicationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept language,
       bool preferred});
 }
@@ -5167,19 +5176,19 @@ class _$PatientCommunicationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object language = freezed,
     Object preferred = freezed,
   }) {
     return _then(PatientCommunication(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       language:
           language == freezed ? _value.language : language as CodeableConcept,
       preferred: preferred == freezed ? _value.preferred : preferred as bool,
@@ -5191,7 +5200,7 @@ class _$PatientCommunicationCopyWithImpl<$Res>
 class _$PatientCommunication implements PatientCommunication {
   const _$PatientCommunication(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.language,
       this.preferred});
@@ -5202,9 +5211,10 @@ class _$PatientCommunication implements PatientCommunication {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept language;
   @override
@@ -5212,7 +5222,7 @@ class _$PatientCommunication implements PatientCommunication {
 
   @override
   String toString() {
-    return 'Individuals.patientCommunication(id: $id, extension: $extension, modifierExtension: $modifierExtension, language: $language, preferred: $preferred)';
+    return 'Individuals.patientCommunication(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, language: $language, preferred: $preferred)';
   }
 
   @override
@@ -5221,9 +5231,9 @@ class _$PatientCommunication implements PatientCommunication {
         (other is PatientCommunication &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -5239,7 +5249,7 @@ class _$PatientCommunication implements PatientCommunication {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(preferred);
@@ -5261,9 +5271,9 @@ class _$PatientCommunication implements PatientCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -5271,13 +5281,13 @@ class _$PatientCommunication implements PatientCommunication {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -5289,8 +5299,8 @@ class _$PatientCommunication implements PatientCommunication {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -5303,34 +5313,34 @@ class _$PatientCommunication implements PatientCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -5338,15 +5348,15 @@ class _$PatientCommunication implements PatientCommunication {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -5358,27 +5368,27 @@ class _$PatientCommunication implements PatientCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -5386,8 +5396,8 @@ class _$PatientCommunication implements PatientCommunication {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -5399,23 +5409,23 @@ class _$PatientCommunication implements PatientCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -5427,24 +5437,24 @@ class _$PatientCommunication implements PatientCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -5457,25 +5467,25 @@ class _$PatientCommunication implements PatientCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -5496,7 +5506,7 @@ class _$PatientCommunication implements PatientCommunication {
     assert(relatedPerson != null);
     assert(relatedPersonCommunication != null);
     return patientCommunication(
-        id, extension, modifierExtension, language, preferred);
+        id, fhirExtension, modifierExtension, language, preferred);
   }
 
   @override
@@ -5510,9 +5520,9 @@ class _$PatientCommunication implements PatientCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -5520,12 +5530,12 @@ class _$PatientCommunication implements PatientCommunication {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -5536,8 +5546,8 @@ class _$PatientCommunication implements PatientCommunication {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -5549,47 +5559,47 @@ class _$PatientCommunication implements PatientCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -5600,34 +5610,34 @@ class _$PatientCommunication implements PatientCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -5638,22 +5648,22 @@ class _$PatientCommunication implements PatientCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -5664,23 +5674,23 @@ class _$PatientCommunication implements PatientCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -5692,24 +5702,24 @@ class _$PatientCommunication implements PatientCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -5717,7 +5727,7 @@ class _$PatientCommunication implements PatientCommunication {
     assert(orElse != null);
     if (patientCommunication != null) {
       return patientCommunication(
-          id, extension, modifierExtension, language, preferred);
+          id, fhirExtension, modifierExtension, language, preferred);
     }
     return orElse();
   }
@@ -5803,8 +5813,8 @@ class _$PatientCommunication implements PatientCommunication {
 abstract class PatientCommunication implements Individuals {
   const factory PatientCommunication(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept language,
       bool preferred}) = _$PatientCommunication;
 
@@ -5813,9 +5823,10 @@ abstract class PatientCommunication implements Individuals {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get language;
   bool get preferred;
   @override
@@ -5830,8 +5841,8 @@ abstract class $PatientLinkCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference other,
       PatientLinkType type});
 }
@@ -5848,19 +5859,19 @@ class _$PatientLinkCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object other = freezed,
     Object type = freezed,
   }) {
     return _then(PatientLink(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       other: other == freezed ? _value.other : other as Reference,
       type: type == freezed ? _value.type : type as PatientLinkType,
     ));
@@ -5870,7 +5881,11 @@ class _$PatientLinkCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PatientLink implements PatientLink {
   const _$PatientLink(
-      {this.id, this.extension, this.modifierExtension, this.other, this.type});
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.modifierExtension,
+      this.other,
+      this.type});
 
   factory _$PatientLink.fromJson(Map<String, dynamic> json) =>
       _$_$PatientLinkFromJson(json);
@@ -5878,9 +5893,10 @@ class _$PatientLink implements PatientLink {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Reference other;
   @override
@@ -5888,7 +5904,7 @@ class _$PatientLink implements PatientLink {
 
   @override
   String toString() {
-    return 'Individuals.patientLink(id: $id, extension: $extension, modifierExtension: $modifierExtension, other: $other, type: $type)';
+    return 'Individuals.patientLink(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, other: $other, type: $type)';
   }
 
   @override
@@ -5897,9 +5913,9 @@ class _$PatientLink implements PatientLink {
         (other is PatientLink &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -5914,7 +5930,7 @@ class _$PatientLink implements PatientLink {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(other) ^
       const DeepCollectionEquality().hash(type);
@@ -5935,9 +5951,9 @@ class _$PatientLink implements PatientLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -5945,13 +5961,13 @@ class _$PatientLink implements PatientLink {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -5963,8 +5979,8 @@ class _$PatientLink implements PatientLink {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -5977,34 +5993,34 @@ class _$PatientLink implements PatientLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -6012,15 +6028,15 @@ class _$PatientLink implements PatientLink {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -6032,27 +6048,27 @@ class _$PatientLink implements PatientLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -6060,8 +6076,8 @@ class _$PatientLink implements PatientLink {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -6073,23 +6089,23 @@ class _$PatientLink implements PatientLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -6101,24 +6117,24 @@ class _$PatientLink implements PatientLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -6131,25 +6147,25 @@ class _$PatientLink implements PatientLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -6169,7 +6185,7 @@ class _$PatientLink implements PatientLink {
     assert(practitionerQualification != null);
     assert(relatedPerson != null);
     assert(relatedPersonCommunication != null);
-    return patientLink(id, extension, modifierExtension, other, type);
+    return patientLink(id, fhirExtension, modifierExtension, other, type);
   }
 
   @override
@@ -6183,9 +6199,9 @@ class _$PatientLink implements PatientLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -6193,12 +6209,12 @@ class _$PatientLink implements PatientLink {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -6209,8 +6225,8 @@ class _$PatientLink implements PatientLink {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -6222,47 +6238,47 @@ class _$PatientLink implements PatientLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -6273,34 +6289,34 @@ class _$PatientLink implements PatientLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -6311,22 +6327,22 @@ class _$PatientLink implements PatientLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -6337,23 +6353,23 @@ class _$PatientLink implements PatientLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -6365,31 +6381,31 @@ class _$PatientLink implements PatientLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (patientLink != null) {
-      return patientLink(id, extension, modifierExtension, other, type);
+      return patientLink(id, fhirExtension, modifierExtension, other, type);
     }
     return orElse();
   }
@@ -6474,8 +6490,8 @@ class _$PatientLink implements PatientLink {
 abstract class PatientLink implements Individuals {
   const factory PatientLink(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference other,
       PatientLinkType type}) = _$PatientLink;
 
@@ -6484,9 +6500,10 @@ abstract class PatientLink implements Individuals {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Reference get other;
   PatientLinkType get type;
   @override
@@ -6507,22 +6524,22 @@ abstract class $PractitionerRoleCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Period period,
       Reference practitioner,
       Reference organization,
-      List<CodeableConcept> code,
-      List<CodeableConcept> specialty,
-      List<Reference> location,
-      List<Reference> healthcareService,
-      List<ContactPoint> telecom,
-      List<PractitionerRoleAvailableTime> availableTime,
-      List<PractitionerRoleNotAvailable> notAvailable,
+      List<dynamic> code,
+      List<dynamic> specialty,
+      List<dynamic> location,
+      List<dynamic> healthcareService,
+      List<dynamic> telecom,
+      List<dynamic> availableTime,
+      List<dynamic> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint});
+      List<dynamic> endpoint});
 }
 
 class _$PractitionerRoleCopyWithImpl<$Res>
@@ -6544,7 +6561,7 @@ class _$PractitionerRoleCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
@@ -6574,15 +6591,15 @@ class _$PractitionerRoleCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       active: active == freezed ? _value.active : active as bool,
       period: period == freezed ? _value.period : period as Period,
       practitioner: practitioner == freezed
@@ -6591,28 +6608,26 @@ class _$PractitionerRoleCopyWithImpl<$Res>
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
-      code: code == freezed ? _value.code : code as List<CodeableConcept>,
-      specialty: specialty == freezed
-          ? _value.specialty
-          : specialty as List<CodeableConcept>,
+      code: code == freezed ? _value.code : code as List<dynamic>,
+      specialty:
+          specialty == freezed ? _value.specialty : specialty as List<dynamic>,
       location:
-          location == freezed ? _value.location : location as List<Reference>,
+          location == freezed ? _value.location : location as List<dynamic>,
       healthcareService: healthcareService == freezed
           ? _value.healthcareService
-          : healthcareService as List<Reference>,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+          : healthcareService as List<dynamic>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
       availableTime: availableTime == freezed
           ? _value.availableTime
-          : availableTime as List<PractitionerRoleAvailableTime>,
+          : availableTime as List<dynamic>,
       notAvailable: notAvailable == freezed
           ? _value.notAvailable
-          : notAvailable as List<PractitionerRoleNotAvailable>,
+          : notAvailable as List<dynamic>,
       availabilityExceptions: availabilityExceptions == freezed
           ? _value.availabilityExceptions
           : availabilityExceptions as String,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+          endpoint == freezed ? _value.endpoint : endpoint as List<dynamic>,
     ));
   }
 }
@@ -6627,7 +6642,7 @@ class _$PractitionerRole implements PractitionerRole {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.active,
@@ -6662,11 +6677,12 @@ class _$PractitionerRole implements PractitionerRole {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final bool active;
   @override
@@ -6676,27 +6692,27 @@ class _$PractitionerRole implements PractitionerRole {
   @override
   final Reference organization;
   @override
-  final List<CodeableConcept> code;
+  final List<dynamic> code;
   @override
-  final List<CodeableConcept> specialty;
+  final List<dynamic> specialty;
   @override
-  final List<Reference> location;
+  final List<dynamic> location;
   @override
-  final List<Reference> healthcareService;
+  final List<dynamic> healthcareService;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
-  final List<PractitionerRoleAvailableTime> availableTime;
+  final List<dynamic> availableTime;
   @override
-  final List<PractitionerRoleNotAvailable> notAvailable;
+  final List<dynamic> notAvailable;
   @override
   final String availabilityExceptions;
   @override
-  final List<Reference> endpoint;
+  final List<dynamic> endpoint;
 
   @override
   String toString() {
-    return 'Individuals.practitionerRole(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, period: $period, practitioner: $practitioner, organization: $organization, code: $code, specialty: $specialty, location: $location, healthcareService: $healthcareService, telecom: $telecom, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint)';
+    return 'Individuals.practitionerRole(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, period: $period, practitioner: $practitioner, organization: $organization, code: $code, specialty: $specialty, location: $location, healthcareService: $healthcareService, telecom: $telecom, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint)';
   }
 
   @override
@@ -6721,9 +6737,9 @@ class _$PractitionerRole implements PractitionerRole {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -6778,7 +6794,7 @@ class _$PractitionerRole implements PractitionerRole {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
@@ -6811,9 +6827,9 @@ class _$PractitionerRole implements PractitionerRole {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -6821,13 +6837,13 @@ class _$PractitionerRole implements PractitionerRole {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -6839,8 +6855,8 @@ class _$PractitionerRole implements PractitionerRole {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -6853,34 +6869,34 @@ class _$PractitionerRole implements PractitionerRole {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -6888,15 +6904,15 @@ class _$PractitionerRole implements PractitionerRole {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -6908,27 +6924,27 @@ class _$PractitionerRole implements PractitionerRole {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -6936,8 +6952,8 @@ class _$PractitionerRole implements PractitionerRole {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -6949,23 +6965,23 @@ class _$PractitionerRole implements PractitionerRole {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -6977,24 +6993,24 @@ class _$PractitionerRole implements PractitionerRole {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -7007,25 +7023,25 @@ class _$PractitionerRole implements PractitionerRole {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -7053,7 +7069,7 @@ class _$PractitionerRole implements PractitionerRole {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         active,
@@ -7082,9 +7098,9 @@ class _$PractitionerRole implements PractitionerRole {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -7092,12 +7108,12 @@ class _$PractitionerRole implements PractitionerRole {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -7108,8 +7124,8 @@ class _$PractitionerRole implements PractitionerRole {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -7121,47 +7137,47 @@ class _$PractitionerRole implements PractitionerRole {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -7172,34 +7188,34 @@ class _$PractitionerRole implements PractitionerRole {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -7210,22 +7226,22 @@ class _$PractitionerRole implements PractitionerRole {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -7236,23 +7252,23 @@ class _$PractitionerRole implements PractitionerRole {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -7264,24 +7280,24 @@ class _$PractitionerRole implements PractitionerRole {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -7296,7 +7312,7 @@ class _$PractitionerRole implements PractitionerRole {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           active,
@@ -7403,22 +7419,22 @@ abstract class PractitionerRole implements Individuals {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Period period,
       Reference practitioner,
       Reference organization,
-      List<CodeableConcept> code,
-      List<CodeableConcept> specialty,
-      List<Reference> location,
-      List<Reference> healthcareService,
-      List<ContactPoint> telecom,
-      List<PractitionerRoleAvailableTime> availableTime,
-      List<PractitionerRoleNotAvailable> notAvailable,
+      List<dynamic> code,
+      List<dynamic> specialty,
+      List<dynamic> location,
+      List<dynamic> healthcareService,
+      List<dynamic> telecom,
+      List<dynamic> availableTime,
+      List<dynamic> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint}) = _$PractitionerRole;
+      List<dynamic> endpoint}) = _$PractitionerRole;
 
   factory PractitionerRole.fromJson(Map<String, dynamic> json) =
       _$PractitionerRole.fromJson;
@@ -7431,23 +7447,24 @@ abstract class PractitionerRole implements Individuals {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   bool get active;
   Period get period;
   Reference get practitioner;
   Reference get organization;
-  List<CodeableConcept> get code;
-  List<CodeableConcept> get specialty;
-  List<Reference> get location;
-  List<Reference> get healthcareService;
-  List<ContactPoint> get telecom;
-  List<PractitionerRoleAvailableTime> get availableTime;
-  List<PractitionerRoleNotAvailable> get notAvailable;
+  List<dynamic> get code;
+  List<dynamic> get specialty;
+  List<dynamic> get location;
+  List<dynamic> get healthcareService;
+  List<dynamic> get telecom;
+  List<dynamic> get availableTime;
+  List<dynamic> get notAvailable;
   String get availabilityExceptions;
-  List<Reference> get endpoint;
+  List<dynamic> get endpoint;
   @override
   $PractitionerRoleCopyWith<PractitionerRole> get copyWith;
 }
@@ -7461,8 +7478,8 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       List<Code> daysOfWeek,
       bool allDay,
       Time availableStartTime,
@@ -7484,7 +7501,7 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object daysOfWeek = freezed,
     Object allDay = freezed,
@@ -7493,12 +7510,12 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
   }) {
     return _then(PractitionerRoleAvailableTime(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       daysOfWeek:
           daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
       allDay: allDay == freezed ? _value.allDay : allDay as bool,
@@ -7516,7 +7533,7 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
 class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
   const _$PractitionerRoleAvailableTime(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.daysOfWeek,
       this.allDay,
@@ -7529,9 +7546,10 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final List<Code> daysOfWeek;
   @override
@@ -7543,7 +7561,7 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
 
   @override
   String toString() {
-    return 'Individuals.practitionerRoleAvailableTime(id: $id, extension: $extension, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, availableStartTime: $availableStartTime, availableEndTime: $availableEndTime)';
+    return 'Individuals.practitionerRoleAvailableTime(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, availableStartTime: $availableStartTime, availableEndTime: $availableEndTime)';
   }
 
   @override
@@ -7552,9 +7570,9 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         (other is PractitionerRoleAvailableTime &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -7575,7 +7593,7 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(daysOfWeek) ^
       const DeepCollectionEquality().hash(allDay) ^
@@ -7599,9 +7617,9 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -7609,13 +7627,13 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -7627,8 +7645,8 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -7641,34 +7659,34 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -7676,15 +7694,15 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -7696,27 +7714,27 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -7724,8 +7742,8 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -7737,23 +7755,23 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -7765,24 +7783,24 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -7795,25 +7813,25 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -7833,7 +7851,7 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
     assert(practitionerQualification != null);
     assert(relatedPerson != null);
     assert(relatedPersonCommunication != null);
-    return practitionerRoleAvailableTime(id, extension, modifierExtension,
+    return practitionerRoleAvailableTime(id, fhirExtension, modifierExtension,
         daysOfWeek, allDay, availableStartTime, availableEndTime);
   }
 
@@ -7848,9 +7866,9 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -7858,12 +7876,12 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -7874,8 +7892,8 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -7887,47 +7905,47 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -7938,34 +7956,34 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -7976,22 +7994,22 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -8002,23 +8020,23 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -8030,31 +8048,31 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (practitionerRoleAvailableTime != null) {
-      return practitionerRoleAvailableTime(id, extension, modifierExtension,
+      return practitionerRoleAvailableTime(id, fhirExtension, modifierExtension,
           daysOfWeek, allDay, availableStartTime, availableEndTime);
     }
     return orElse();
@@ -8141,8 +8159,8 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
 abstract class PractitionerRoleAvailableTime implements Individuals {
   const factory PractitionerRoleAvailableTime(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       List<Code> daysOfWeek,
       bool allDay,
       Time availableStartTime,
@@ -8153,9 +8171,10 @@ abstract class PractitionerRoleAvailableTime implements Individuals {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   List<Code> get daysOfWeek;
   bool get allDay;
   Time get availableStartTime;
@@ -8174,8 +8193,8 @@ abstract class $PractitionerRoleNotAvailableCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       Period during});
 }
@@ -8195,19 +8214,19 @@ class _$PractitionerRoleNotAvailableCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object description = freezed,
     Object during = freezed,
   }) {
     return _then(PractitionerRoleNotAvailable(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
       during: during == freezed ? _value.during : during as Period,
@@ -8219,7 +8238,7 @@ class _$PractitionerRoleNotAvailableCopyWithImpl<$Res>
 class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
   const _$PractitionerRoleNotAvailable(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.description,
       this.during});
@@ -8230,9 +8249,10 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String description;
   @override
@@ -8240,7 +8260,7 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
 
   @override
   String toString() {
-    return 'Individuals.practitionerRoleNotAvailable(id: $id, extension: $extension, modifierExtension: $modifierExtension, description: $description, during: $during)';
+    return 'Individuals.practitionerRoleNotAvailable(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, description: $description, during: $during)';
   }
 
   @override
@@ -8249,9 +8269,9 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         (other is PractitionerRoleNotAvailable &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -8266,7 +8286,7 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(during);
@@ -8288,9 +8308,9 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -8298,13 +8318,13 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -8316,8 +8336,8 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -8330,34 +8350,34 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -8365,15 +8385,15 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -8385,27 +8405,27 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -8413,8 +8433,8 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -8426,23 +8446,23 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -8454,24 +8474,24 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -8484,25 +8504,25 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -8523,7 +8543,7 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
     assert(relatedPerson != null);
     assert(relatedPersonCommunication != null);
     return practitionerRoleNotAvailable(
-        id, extension, modifierExtension, description, during);
+        id, fhirExtension, modifierExtension, description, during);
   }
 
   @override
@@ -8537,9 +8557,9 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -8547,12 +8567,12 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -8563,8 +8583,8 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -8576,47 +8596,47 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -8627,34 +8647,34 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -8665,22 +8685,22 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -8691,23 +8711,23 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -8719,24 +8739,24 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -8744,7 +8764,7 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
     assert(orElse != null);
     if (practitionerRoleNotAvailable != null) {
       return practitionerRoleNotAvailable(
-          id, extension, modifierExtension, description, during);
+          id, fhirExtension, modifierExtension, description, during);
     }
     return orElse();
   }
@@ -8830,8 +8850,8 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
 abstract class PractitionerRoleNotAvailable implements Individuals {
   const factory PractitionerRoleNotAvailable(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       String description,
       Period during}) = _$PractitionerRoleNotAvailable;
 
@@ -8840,9 +8860,10 @@ abstract class PractitionerRoleNotAvailable implements Individuals {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get description;
   Period get during;
   @override
@@ -8862,18 +8883,18 @@ abstract class $PersonCopyWith<$Res> implements $IndividualsCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      List<dynamic> name,
+      List<dynamic> telecom,
       PersonGender gender,
       Date birthDate,
-      List<Address> address,
+      List<dynamic> address,
       Attachment photo,
       Reference managingOrganization,
       bool active,
-      List<PersonLink> link});
+      List<dynamic> link});
 }
 
 class _$PersonCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
@@ -8893,7 +8914,7 @@ class _$PersonCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object name = freezed,
@@ -8919,27 +8940,26 @@ class _$PersonCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      name: name == freezed ? _value.name : name as List<HumanName>,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+          : identifier as List<dynamic>,
+      name: name == freezed ? _value.name : name as List<dynamic>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
       gender: gender == freezed ? _value.gender : gender as PersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      address: address == freezed ? _value.address : address as List<Address>,
+      address: address == freezed ? _value.address : address as List<dynamic>,
       photo: photo == freezed ? _value.photo : photo as Attachment,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
       active: active == freezed ? _value.active : active as bool,
-      link: link == freezed ? _value.link : link as List<PersonLink>,
+      link: link == freezed ? _value.link : link as List<dynamic>,
     ));
   }
 }
@@ -8954,7 +8974,7 @@ class _$Person implements Person {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.name,
@@ -8987,21 +9007,22 @@ class _$Person implements Person {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
-  final List<HumanName> name;
+  final List<dynamic> name;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
   final PersonGender gender;
   @override
   final Date birthDate;
   @override
-  final List<Address> address;
+  final List<dynamic> address;
   @override
   final Attachment photo;
   @override
@@ -9009,11 +9030,11 @@ class _$Person implements Person {
   @override
   final bool active;
   @override
-  final List<PersonLink> link;
+  final List<dynamic> link;
 
   @override
   String toString() {
-    return 'Individuals.person(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, managingOrganization: $managingOrganization, active: $active, link: $link)';
+    return 'Individuals.person(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, managingOrganization: $managingOrganization, active: $active, link: $link)';
   }
 
   @override
@@ -9038,9 +9059,9 @@ class _$Person implements Person {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -9081,7 +9102,7 @@ class _$Person implements Person {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(name) ^
@@ -9110,9 +9131,9 @@ class _$Person implements Person {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -9120,13 +9141,13 @@ class _$Person implements Person {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -9138,8 +9159,8 @@ class _$Person implements Person {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -9152,34 +9173,34 @@ class _$Person implements Person {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -9187,15 +9208,15 @@ class _$Person implements Person {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -9207,27 +9228,27 @@ class _$Person implements Person {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -9235,8 +9256,8 @@ class _$Person implements Person {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -9248,23 +9269,23 @@ class _$Person implements Person {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -9276,24 +9297,24 @@ class _$Person implements Person {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -9306,25 +9327,25 @@ class _$Person implements Person {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -9352,7 +9373,7 @@ class _$Person implements Person {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         name,
@@ -9377,9 +9398,9 @@ class _$Person implements Person {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -9387,12 +9408,12 @@ class _$Person implements Person {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -9403,8 +9424,8 @@ class _$Person implements Person {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -9416,47 +9437,47 @@ class _$Person implements Person {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -9467,34 +9488,34 @@ class _$Person implements Person {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -9505,22 +9526,22 @@ class _$Person implements Person {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -9531,23 +9552,23 @@ class _$Person implements Person {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -9559,24 +9580,24 @@ class _$Person implements Person {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -9591,7 +9612,7 @@ class _$Person implements Person {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           name,
@@ -9693,18 +9714,18 @@ abstract class Person implements Individuals {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      List<dynamic> name,
+      List<dynamic> telecom,
       PersonGender gender,
       Date birthDate,
-      List<Address> address,
+      List<dynamic> address,
       Attachment photo,
       Reference managingOrganization,
       bool active,
-      List<PersonLink> link}) = _$Person;
+      List<dynamic> link}) = _$Person;
 
   factory Person.fromJson(Map<String, dynamic> json) = _$Person.fromJson;
 
@@ -9716,19 +9737,20 @@ abstract class Person implements Individuals {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  List<HumanName> get name;
-  List<ContactPoint> get telecom;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
+  List<dynamic> get name;
+  List<dynamic> get telecom;
   PersonGender get gender;
   Date get birthDate;
-  List<Address> get address;
+  List<dynamic> get address;
   Attachment get photo;
   Reference get managingOrganization;
   bool get active;
-  List<PersonLink> get link;
+  List<dynamic> get link;
   @override
   $PersonCopyWith<Person> get copyWith;
 }
@@ -9740,8 +9762,8 @@ abstract class $PersonLinkCopyWith<$Res> implements $IndividualsCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference target,
       PersonLinkAssurance assurance});
 }
@@ -9757,19 +9779,19 @@ class _$PersonLinkCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object target = freezed,
     Object assurance = freezed,
   }) {
     return _then(PersonLink(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       target: target == freezed ? _value.target : target as Reference,
       assurance: assurance == freezed
           ? _value.assurance
@@ -9782,7 +9804,7 @@ class _$PersonLinkCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
 class _$PersonLink implements PersonLink {
   const _$PersonLink(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.target,
       this.assurance});
@@ -9793,9 +9815,10 @@ class _$PersonLink implements PersonLink {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Reference target;
   @override
@@ -9803,7 +9826,7 @@ class _$PersonLink implements PersonLink {
 
   @override
   String toString() {
-    return 'Individuals.personLink(id: $id, extension: $extension, modifierExtension: $modifierExtension, target: $target, assurance: $assurance)';
+    return 'Individuals.personLink(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, target: $target, assurance: $assurance)';
   }
 
   @override
@@ -9812,9 +9835,9 @@ class _$PersonLink implements PersonLink {
         (other is PersonLink &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -9829,7 +9852,7 @@ class _$PersonLink implements PersonLink {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(target) ^
       const DeepCollectionEquality().hash(assurance);
@@ -9850,9 +9873,9 @@ class _$PersonLink implements PersonLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -9860,13 +9883,13 @@ class _$PersonLink implements PersonLink {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -9878,8 +9901,8 @@ class _$PersonLink implements PersonLink {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -9892,34 +9915,34 @@ class _$PersonLink implements PersonLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -9927,15 +9950,15 @@ class _$PersonLink implements PersonLink {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -9947,27 +9970,27 @@ class _$PersonLink implements PersonLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -9975,8 +9998,8 @@ class _$PersonLink implements PersonLink {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -9988,23 +10011,23 @@ class _$PersonLink implements PersonLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -10016,24 +10039,24 @@ class _$PersonLink implements PersonLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -10046,25 +10069,25 @@ class _$PersonLink implements PersonLink {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -10084,7 +10107,7 @@ class _$PersonLink implements PersonLink {
     assert(practitionerQualification != null);
     assert(relatedPerson != null);
     assert(relatedPersonCommunication != null);
-    return personLink(id, extension, modifierExtension, target, assurance);
+    return personLink(id, fhirExtension, modifierExtension, target, assurance);
   }
 
   @override
@@ -10098,9 +10121,9 @@ class _$PersonLink implements PersonLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -10108,12 +10131,12 @@ class _$PersonLink implements PersonLink {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -10124,8 +10147,8 @@ class _$PersonLink implements PersonLink {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -10137,47 +10160,47 @@ class _$PersonLink implements PersonLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -10188,34 +10211,34 @@ class _$PersonLink implements PersonLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -10226,22 +10249,22 @@ class _$PersonLink implements PersonLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -10252,23 +10275,23 @@ class _$PersonLink implements PersonLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -10280,31 +10303,32 @@ class _$PersonLink implements PersonLink {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (personLink != null) {
-      return personLink(id, extension, modifierExtension, target, assurance);
+      return personLink(
+          id, fhirExtension, modifierExtension, target, assurance);
     }
     return orElse();
   }
@@ -10389,8 +10413,8 @@ class _$PersonLink implements PersonLink {
 abstract class PersonLink implements Individuals {
   const factory PersonLink(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       Reference target,
       PersonLinkAssurance assurance}) = _$PersonLink;
 
@@ -10399,9 +10423,10 @@ abstract class PersonLink implements Individuals {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Reference get target;
   PersonLinkAssurance get assurance;
   @override
@@ -10422,18 +10447,18 @@ abstract class $PractitionerCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
-      List<Address> address,
+      List<dynamic> name,
+      List<dynamic> telecom,
+      List<dynamic> address,
       PractitionerGender gender,
       Date birthDate,
-      List<Attachment> photo,
-      List<PractitionerQualification> qualification,
-      List<CodeableConcept> communication});
+      List<dynamic> photo,
+      List<dynamic> qualification,
+      List<dynamic> communication});
 }
 
 class _$PractitionerCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
@@ -10454,7 +10479,7 @@ class _$PractitionerCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
@@ -10480,29 +10505,28 @@ class _$PractitionerCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       active: active == freezed ? _value.active : active as bool,
-      name: name == freezed ? _value.name : name as List<HumanName>,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
-      address: address == freezed ? _value.address : address as List<Address>,
+      name: name == freezed ? _value.name : name as List<dynamic>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
+      address: address == freezed ? _value.address : address as List<dynamic>,
       gender: gender == freezed ? _value.gender : gender as PractitionerGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      photo: photo == freezed ? _value.photo : photo as List<Attachment>,
+      photo: photo == freezed ? _value.photo : photo as List<dynamic>,
       qualification: qualification == freezed
           ? _value.qualification
-          : qualification as List<PractitionerQualification>,
+          : qualification as List<dynamic>,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<CodeableConcept>,
+          : communication as List<dynamic>,
     ));
   }
 }
@@ -10517,7 +10541,7 @@ class _$Practitioner implements Practitioner {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.active,
@@ -10548,33 +10572,34 @@ class _$Practitioner implements Practitioner {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final bool active;
   @override
-  final List<HumanName> name;
+  final List<dynamic> name;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
-  final List<Address> address;
+  final List<dynamic> address;
   @override
   final PractitionerGender gender;
   @override
   final Date birthDate;
   @override
-  final List<Attachment> photo;
+  final List<dynamic> photo;
   @override
-  final List<PractitionerQualification> qualification;
+  final List<dynamic> qualification;
   @override
-  final List<CodeableConcept> communication;
+  final List<dynamic> communication;
 
   @override
   String toString() {
-    return 'Individuals.practitioner(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, address: $address, gender: $gender, birthDate: $birthDate, photo: $photo, qualification: $qualification, communication: $communication)';
+    return 'Individuals.practitioner(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, address: $address, gender: $gender, birthDate: $birthDate, photo: $photo, qualification: $qualification, communication: $communication)';
   }
 
   @override
@@ -10599,9 +10624,9 @@ class _$Practitioner implements Practitioner {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -10643,7 +10668,7 @@ class _$Practitioner implements Practitioner {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
@@ -10672,9 +10697,9 @@ class _$Practitioner implements Practitioner {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -10682,13 +10707,13 @@ class _$Practitioner implements Practitioner {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -10700,8 +10725,8 @@ class _$Practitioner implements Practitioner {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -10714,34 +10739,34 @@ class _$Practitioner implements Practitioner {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -10749,15 +10774,15 @@ class _$Practitioner implements Practitioner {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -10769,27 +10794,27 @@ class _$Practitioner implements Practitioner {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -10797,8 +10822,8 @@ class _$Practitioner implements Practitioner {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -10810,23 +10835,23 @@ class _$Practitioner implements Practitioner {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -10838,24 +10863,24 @@ class _$Practitioner implements Practitioner {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -10868,25 +10893,25 @@ class _$Practitioner implements Practitioner {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -10914,7 +10939,7 @@ class _$Practitioner implements Practitioner {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         active,
@@ -10939,9 +10964,9 @@ class _$Practitioner implements Practitioner {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -10949,12 +10974,12 @@ class _$Practitioner implements Practitioner {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -10965,8 +10990,8 @@ class _$Practitioner implements Practitioner {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -10978,47 +11003,47 @@ class _$Practitioner implements Practitioner {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -11029,34 +11054,34 @@ class _$Practitioner implements Practitioner {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -11067,22 +11092,22 @@ class _$Practitioner implements Practitioner {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -11093,23 +11118,23 @@ class _$Practitioner implements Practitioner {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -11121,24 +11146,24 @@ class _$Practitioner implements Practitioner {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -11153,7 +11178,7 @@ class _$Practitioner implements Practitioner {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           active,
@@ -11255,18 +11280,18 @@ abstract class Practitioner implements Individuals {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
-      List<Address> address,
+      List<dynamic> name,
+      List<dynamic> telecom,
+      List<dynamic> address,
       PractitionerGender gender,
       Date birthDate,
-      List<Attachment> photo,
-      List<PractitionerQualification> qualification,
-      List<CodeableConcept> communication}) = _$Practitioner;
+      List<dynamic> photo,
+      List<dynamic> qualification,
+      List<dynamic> communication}) = _$Practitioner;
 
   factory Practitioner.fromJson(Map<String, dynamic> json) =
       _$Practitioner.fromJson;
@@ -11279,19 +11304,20 @@ abstract class Practitioner implements Individuals {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   bool get active;
-  List<HumanName> get name;
-  List<ContactPoint> get telecom;
-  List<Address> get address;
+  List<dynamic> get name;
+  List<dynamic> get telecom;
+  List<dynamic> get address;
   PractitionerGender get gender;
   Date get birthDate;
-  List<Attachment> get photo;
-  List<PractitionerQualification> get qualification;
-  List<CodeableConcept> get communication;
+  List<dynamic> get photo;
+  List<dynamic> get qualification;
+  List<dynamic> get communication;
   @override
   $PractitionerCopyWith<Practitioner> get copyWith;
 }
@@ -11304,9 +11330,9 @@ abstract class $PractitionerQualificationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept code,
       Period period,
       Reference issuer});
@@ -11326,7 +11352,7 @@ class _$PractitionerQualificationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object code = freezed,
@@ -11335,15 +11361,15 @@ class _$PractitionerQualificationCopyWithImpl<$Res>
   }) {
     return _then(PractitionerQualification(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       period: period == freezed ? _value.period : period as Period,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference,
@@ -11355,7 +11381,7 @@ class _$PractitionerQualificationCopyWithImpl<$Res>
 class _$PractitionerQualification implements PractitionerQualification {
   const _$PractitionerQualification(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.code,
@@ -11368,11 +11394,12 @@ class _$PractitionerQualification implements PractitionerQualification {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final CodeableConcept code;
   @override
@@ -11382,7 +11409,7 @@ class _$PractitionerQualification implements PractitionerQualification {
 
   @override
   String toString() {
-    return 'Individuals.practitionerQualification(id: $id, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, period: $period, issuer: $issuer)';
+    return 'Individuals.practitionerQualification(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, period: $period, issuer: $issuer)';
   }
 
   @override
@@ -11391,9 +11418,9 @@ class _$PractitionerQualification implements PractitionerQualification {
         (other is PractitionerQualification &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -11412,7 +11439,7 @@ class _$PractitionerQualification implements PractitionerQualification {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(code) ^
@@ -11436,9 +11463,9 @@ class _$PractitionerQualification implements PractitionerQualification {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -11446,13 +11473,13 @@ class _$PractitionerQualification implements PractitionerQualification {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -11464,8 +11491,8 @@ class _$PractitionerQualification implements PractitionerQualification {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -11478,34 +11505,34 @@ class _$PractitionerQualification implements PractitionerQualification {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -11513,15 +11540,15 @@ class _$PractitionerQualification implements PractitionerQualification {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -11533,27 +11560,27 @@ class _$PractitionerQualification implements PractitionerQualification {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -11561,8 +11588,8 @@ class _$PractitionerQualification implements PractitionerQualification {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -11574,23 +11601,23 @@ class _$PractitionerQualification implements PractitionerQualification {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -11602,24 +11629,24 @@ class _$PractitionerQualification implements PractitionerQualification {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -11632,25 +11659,25 @@ class _$PractitionerQualification implements PractitionerQualification {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -11671,7 +11698,7 @@ class _$PractitionerQualification implements PractitionerQualification {
     assert(relatedPerson != null);
     assert(relatedPersonCommunication != null);
     return practitionerQualification(
-        id, extension, modifierExtension, identifier, code, period, issuer);
+        id, fhirExtension, modifierExtension, identifier, code, period, issuer);
   }
 
   @override
@@ -11685,9 +11712,9 @@ class _$PractitionerQualification implements PractitionerQualification {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -11695,12 +11722,12 @@ class _$PractitionerQualification implements PractitionerQualification {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -11711,8 +11738,8 @@ class _$PractitionerQualification implements PractitionerQualification {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -11724,47 +11751,47 @@ class _$PractitionerQualification implements PractitionerQualification {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -11775,34 +11802,34 @@ class _$PractitionerQualification implements PractitionerQualification {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -11813,22 +11840,22 @@ class _$PractitionerQualification implements PractitionerQualification {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -11839,23 +11866,23 @@ class _$PractitionerQualification implements PractitionerQualification {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -11867,32 +11894,32 @@ class _$PractitionerQualification implements PractitionerQualification {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (practitionerQualification != null) {
-      return practitionerQualification(
-          id, extension, modifierExtension, identifier, code, period, issuer);
+      return practitionerQualification(id, fhirExtension, modifierExtension,
+          identifier, code, period, issuer);
     }
     return orElse();
   }
@@ -11978,9 +12005,9 @@ class _$PractitionerQualification implements PractitionerQualification {
 abstract class PractitionerQualification implements Individuals {
   const factory PractitionerQualification(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept code,
       Period period,
       Reference issuer}) = _$PractitionerQualification;
@@ -11990,10 +12017,11 @@ abstract class PractitionerQualification implements Individuals {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   CodeableConcept get code;
   Period get period;
   Reference get issuer;
@@ -12015,20 +12043,20 @@ abstract class $RelatedPersonCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Reference patient,
-      List<CodeableConcept> relationship,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
+      List<dynamic> relationship,
+      List<dynamic> name,
+      List<dynamic> telecom,
       RelatedPersonGender gender,
       Date birthDate,
-      List<Address> address,
-      List<Attachment> photo,
+      List<dynamic> address,
+      List<dynamic> photo,
       Period period,
-      List<RelatedPersonCommunication> communication});
+      List<dynamic> communication});
 }
 
 class _$RelatedPersonCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
@@ -12049,7 +12077,7 @@ class _$RelatedPersonCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
     Object language = freezed,
     Object text = freezed,
     Object contained = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
@@ -12077,31 +12105,30 @@ class _$RelatedPersonCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       active: active == freezed ? _value.active : active as bool,
       patient: patient == freezed ? _value.patient : patient as Reference,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as List<CodeableConcept>,
-      name: name == freezed ? _value.name : name as List<HumanName>,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+          : relationship as List<dynamic>,
+      name: name == freezed ? _value.name : name as List<dynamic>,
+      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
       gender: gender == freezed ? _value.gender : gender as RelatedPersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      address: address == freezed ? _value.address : address as List<Address>,
-      photo: photo == freezed ? _value.photo : photo as List<Attachment>,
+      address: address == freezed ? _value.address : address as List<dynamic>,
+      photo: photo == freezed ? _value.photo : photo as List<dynamic>,
       period: period == freezed ? _value.period : period as Period,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<RelatedPersonCommunication>,
+          : communication as List<dynamic>,
     ));
   }
 }
@@ -12116,7 +12143,7 @@ class _$RelatedPerson implements RelatedPerson {
       this.language,
       this.text,
       this.contained,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.active,
@@ -12149,37 +12176,38 @@ class _$RelatedPerson implements RelatedPerson {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final bool active;
   @override
   final Reference patient;
   @override
-  final List<CodeableConcept> relationship;
+  final List<dynamic> relationship;
   @override
-  final List<HumanName> name;
+  final List<dynamic> name;
   @override
-  final List<ContactPoint> telecom;
+  final List<dynamic> telecom;
   @override
   final RelatedPersonGender gender;
   @override
   final Date birthDate;
   @override
-  final List<Address> address;
+  final List<dynamic> address;
   @override
-  final List<Attachment> photo;
+  final List<dynamic> photo;
   @override
   final Period period;
   @override
-  final List<RelatedPersonCommunication> communication;
+  final List<dynamic> communication;
 
   @override
   String toString() {
-    return 'Individuals.relatedPerson(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, patient: $patient, relationship: $relationship, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, period: $period, communication: $communication)';
+    return 'Individuals.relatedPerson(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, patient: $patient, relationship: $relationship, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, period: $period, communication: $communication)';
   }
 
   @override
@@ -12204,9 +12232,9 @@ class _$RelatedPerson implements RelatedPerson {
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -12253,7 +12281,7 @@ class _$RelatedPerson implements RelatedPerson {
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
@@ -12284,9 +12312,9 @@ class _$RelatedPerson implements RelatedPerson {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -12294,13 +12322,13 @@ class _$RelatedPerson implements RelatedPerson {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -12312,8 +12340,8 @@ class _$RelatedPerson implements RelatedPerson {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -12326,34 +12354,34 @@ class _$RelatedPerson implements RelatedPerson {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -12361,15 +12389,15 @@ class _$RelatedPerson implements RelatedPerson {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -12381,27 +12409,27 @@ class _$RelatedPerson implements RelatedPerson {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -12409,8 +12437,8 @@ class _$RelatedPerson implements RelatedPerson {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -12422,23 +12450,23 @@ class _$RelatedPerson implements RelatedPerson {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -12450,24 +12478,24 @@ class _$RelatedPerson implements RelatedPerson {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -12480,25 +12508,25 @@ class _$RelatedPerson implements RelatedPerson {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -12526,7 +12554,7 @@ class _$RelatedPerson implements RelatedPerson {
         language,
         text,
         contained,
-        extension,
+        fhirExtension,
         modifierExtension,
         identifier,
         active,
@@ -12553,9 +12581,9 @@ class _$RelatedPerson implements RelatedPerson {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -12563,12 +12591,12 @@ class _$RelatedPerson implements RelatedPerson {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -12579,8 +12607,8 @@ class _$RelatedPerson implements RelatedPerson {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -12592,47 +12620,47 @@ class _$RelatedPerson implements RelatedPerson {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -12643,34 +12671,34 @@ class _$RelatedPerson implements RelatedPerson {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -12681,22 +12709,22 @@ class _$RelatedPerson implements RelatedPerson {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -12707,23 +12735,23 @@ class _$RelatedPerson implements RelatedPerson {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -12735,24 +12763,24 @@ class _$RelatedPerson implements RelatedPerson {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -12767,7 +12795,7 @@ class _$RelatedPerson implements RelatedPerson {
           language,
           text,
           contained,
-          extension,
+          fhirExtension,
           modifierExtension,
           identifier,
           active,
@@ -12871,20 +12899,20 @@ abstract class RelatedPerson implements Individuals {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       bool active,
       Reference patient,
-      List<CodeableConcept> relationship,
-      List<HumanName> name,
-      List<ContactPoint> telecom,
+      List<dynamic> relationship,
+      List<dynamic> name,
+      List<dynamic> telecom,
       RelatedPersonGender gender,
       Date birthDate,
-      List<Address> address,
-      List<Attachment> photo,
+      List<dynamic> address,
+      List<dynamic> photo,
       Period period,
-      List<RelatedPersonCommunication> communication}) = _$RelatedPerson;
+      List<dynamic> communication}) = _$RelatedPerson;
 
   factory RelatedPerson.fromJson(Map<String, dynamic> json) =
       _$RelatedPerson.fromJson;
@@ -12897,21 +12925,22 @@ abstract class RelatedPerson implements Individuals {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   bool get active;
   Reference get patient;
-  List<CodeableConcept> get relationship;
-  List<HumanName> get name;
-  List<ContactPoint> get telecom;
+  List<dynamic> get relationship;
+  List<dynamic> get name;
+  List<dynamic> get telecom;
   RelatedPersonGender get gender;
   Date get birthDate;
-  List<Address> get address;
-  List<Attachment> get photo;
+  List<dynamic> get address;
+  List<dynamic> get photo;
   Period get period;
-  List<RelatedPersonCommunication> get communication;
+  List<dynamic> get communication;
   @override
   $RelatedPersonCopyWith<RelatedPerson> get copyWith;
 }
@@ -12924,8 +12953,8 @@ abstract class $RelatedPersonCommunicationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept language,
       bool preferred});
 }
@@ -12944,19 +12973,19 @@ class _$RelatedPersonCommunicationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
     Object language = freezed,
     Object preferred = freezed,
   }) {
     return _then(RelatedPersonCommunication(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       language:
           language == freezed ? _value.language : language as CodeableConcept,
       preferred: preferred == freezed ? _value.preferred : preferred as bool,
@@ -12968,7 +12997,7 @@ class _$RelatedPersonCommunicationCopyWithImpl<$Res>
 class _$RelatedPersonCommunication implements RelatedPersonCommunication {
   const _$RelatedPersonCommunication(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.language,
       this.preferred});
@@ -12979,9 +13008,10 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<dynamic> fhirExtension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept language;
   @override
@@ -12989,7 +13019,7 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
 
   @override
   String toString() {
-    return 'Individuals.relatedPersonCommunication(id: $id, extension: $extension, modifierExtension: $modifierExtension, language: $language, preferred: $preferred)';
+    return 'Individuals.relatedPersonCommunication(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, language: $language, preferred: $preferred)';
   }
 
   @override
@@ -12998,9 +13028,9 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         (other is RelatedPersonCommunication &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -13016,7 +13046,7 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(preferred);
@@ -13039,9 +13069,9 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             GroupType type,
             bool actual,
@@ -13049,13 +13079,13 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept code,
             CodeableConcept valueCodeableConcept,
             bool valueBoolean,
@@ -13067,8 +13097,8 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
     @required
         Result groupMember(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference entity,
             Period period,
             bool inactive),
@@ -13081,34 +13111,34 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PatientGender gender,
             Date birthDate,
             bool deceasedBoolean,
             FhirDateTime deceasedDateTime,
-            List<Address> address,
+            List<dynamic> address,
             CodeableConcept maritalStatus,
             bool multipleBirthBoolean,
             int multipleBirthInteger,
-            List<Attachment> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
-            List<Reference> generalPractitioner,
+            List<dynamic> photo,
+            List<dynamic> contact,
+            List<dynamic> communication,
+            List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> relationship,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> relationship,
             HumanName name,
-            List<ContactPoint> telecom,
+            List<dynamic> telecom,
             Address address,
             PatientContactGender gender,
             Reference organization,
@@ -13116,15 +13146,15 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
     @required
         Result patientCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
     @required
         Result patientLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference other,
             PatientLinkType type),
     @required
@@ -13136,27 +13166,27 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Period period,
             Reference practitioner,
             Reference organization,
-            List<CodeableConcept> code,
-            List<CodeableConcept> specialty,
-            List<Reference> location,
-            List<Reference> healthcareService,
-            List<ContactPoint> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> code,
+            List<dynamic> specialty,
+            List<dynamic> location,
+            List<dynamic> healthcareService,
+            List<dynamic> telecom,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
-            List<Reference> endpoint),
+            List<dynamic> endpoint),
     @required
         Result practitionerRoleAvailableTime(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             List<Code> daysOfWeek,
             bool allDay,
             Time availableStartTime,
@@ -13164,8 +13194,8 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
     @required
         Result practitionerRoleNotAvailable(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             String description,
             Period during),
     @required
@@ -13177,23 +13207,23 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            List<dynamic> name,
+            List<dynamic> telecom,
             PersonGender gender,
             Date birthDate,
-            List<Address> address,
+            List<dynamic> address,
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             Reference target,
             PersonLinkAssurance assurance),
     @required
@@ -13205,24 +13235,24 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
-            List<Address> address,
+            List<dynamic> name,
+            List<dynamic> telecom,
+            List<dynamic> address,
             PractitionerGender gender,
             Date birthDate,
-            List<Attachment> photo,
-            List<PractitionerQualification> qualification,
-            List<CodeableConcept> communication),
+            List<dynamic> photo,
+            List<dynamic> qualification,
+            List<dynamic> communication),
     @required
         Result practitionerQualification(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept code,
             Period period,
             Reference issuer),
@@ -13235,25 +13265,25 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             bool active,
             Reference patient,
-            List<CodeableConcept> relationship,
-            List<HumanName> name,
-            List<ContactPoint> telecom,
+            List<dynamic> relationship,
+            List<dynamic> name,
+            List<dynamic> telecom,
             RelatedPersonGender gender,
             Date birthDate,
-            List<Address> address,
-            List<Attachment> photo,
+            List<dynamic> address,
+            List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+            List<dynamic> modifierExtension,
             CodeableConcept language,
             bool preferred),
   }) {
@@ -13274,7 +13304,7 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
     assert(relatedPerson != null);
     assert(relatedPersonCommunication != null);
     return relatedPersonCommunication(
-        id, extension, modifierExtension, language, preferred);
+        id, fhirExtension, modifierExtension, language, preferred);
   }
 
   @override
@@ -13288,9 +13318,9 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         GroupType type,
         bool actual,
@@ -13298,12 +13328,12 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept code,
         CodeableConcept valueCodeableConcept,
         bool valueBoolean,
@@ -13314,8 +13344,8 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         Period period),
     Result groupMember(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference entity,
         Period period,
         bool inactive),
@@ -13327,47 +13357,47 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PatientGender gender,
         Date birthDate,
         bool deceasedBoolean,
         FhirDateTime deceasedDateTime,
-        List<Address> address,
+        List<dynamic> address,
         CodeableConcept maritalStatus,
         bool multipleBirthBoolean,
         int multipleBirthInteger,
-        List<Attachment> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
-        List<Reference> generalPractitioner,
+        List<dynamic> photo,
+        List<dynamic> contact,
+        List<dynamic> communication,
+        List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> relationship,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> relationship,
         HumanName name,
-        List<ContactPoint> telecom,
+        List<dynamic> telecom,
         Address address,
         PatientContactGender gender,
         Reference organization,
         Period period),
     Result patientCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     Result patientLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference other,
         PatientLinkType type),
     Result practitionerRole(
@@ -13378,34 +13408,34 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Period period,
         Reference practitioner,
         Reference organization,
-        List<CodeableConcept> code,
-        List<CodeableConcept> specialty,
-        List<Reference> location,
-        List<Reference> healthcareService,
-        List<ContactPoint> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> code,
+        List<dynamic> specialty,
+        List<dynamic> location,
+        List<dynamic> healthcareService,
+        List<dynamic> telecom,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
-        List<Reference> endpoint),
+        List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         List<Code> daysOfWeek,
         bool allDay,
         Time availableStartTime,
         Time availableEndTime),
     Result practitionerRoleNotAvailable(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         String description,
         Period during),
     Result person(
@@ -13416,22 +13446,22 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        List<dynamic> name,
+        List<dynamic> telecom,
         PersonGender gender,
         Date birthDate,
-        List<Address> address,
+        List<dynamic> address,
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         Reference target,
         PersonLinkAssurance assurance),
     Result practitioner(
@@ -13442,23 +13472,23 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
-        List<Address> address,
+        List<dynamic> name,
+        List<dynamic> telecom,
+        List<dynamic> address,
         PractitionerGender gender,
         Date birthDate,
-        List<Attachment> photo,
-        List<PractitionerQualification> qualification,
-        List<CodeableConcept> communication),
+        List<dynamic> photo,
+        List<dynamic> qualification,
+        List<dynamic> communication),
     Result practitionerQualification(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept code,
         Period period,
         Reference issuer),
@@ -13470,24 +13500,24 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         bool active,
         Reference patient,
-        List<CodeableConcept> relationship,
-        List<HumanName> name,
-        List<ContactPoint> telecom,
+        List<dynamic> relationship,
+        List<dynamic> name,
+        List<dynamic> telecom,
         RelatedPersonGender gender,
         Date birthDate,
-        List<Address> address,
-        List<Attachment> photo,
+        List<dynamic> address,
+        List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+        List<dynamic> modifierExtension,
         CodeableConcept language,
         bool preferred),
     @required Result orElse(),
@@ -13495,7 +13525,7 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
     assert(orElse != null);
     if (relatedPersonCommunication != null) {
       return relatedPersonCommunication(
-          id, extension, modifierExtension, language, preferred);
+          id, fhirExtension, modifierExtension, language, preferred);
     }
     return orElse();
   }
@@ -13581,8 +13611,8 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
 abstract class RelatedPersonCommunication implements Individuals {
   const factory RelatedPersonCommunication(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+      List<dynamic> modifierExtension,
       CodeableConcept language,
       bool preferred}) = _$RelatedPersonCommunication;
 
@@ -13591,9 +13621,10 @@ abstract class RelatedPersonCommunication implements Individuals {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<dynamic> get fhirExtension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get language;
   bool get preferred;
   @override
