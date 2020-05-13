@@ -16,7 +16,7 @@ abstract class Documents with _$Documents {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept type,
@@ -35,7 +35,7 @@ abstract class Documents with _$Documents {
 
   const factory Documents.catalogEntryRelatedEntry({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CatalogEntryRelatedEntryRelationtype relationtype,
     Reference item,
@@ -49,7 +49,7 @@ abstract class Documents with _$Documents {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     CompositionStatus status,
@@ -70,7 +70,7 @@ abstract class Documents with _$Documents {
 
   const factory Documents.compositionAttester({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CompositionAttesterMode mode,
     FhirDateTime time,
@@ -79,7 +79,7 @@ abstract class Documents with _$Documents {
 
   const factory Documents.compositionRelatesTo({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     Identifier targetIdentifier,
@@ -88,7 +88,7 @@ abstract class Documents with _$Documents {
 
   const factory Documents.compositionEvent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> code,
     Period period,
@@ -97,7 +97,7 @@ abstract class Documents with _$Documents {
 
   const factory Documents.compositionSection({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String title,
     CodeableConcept code,
@@ -118,7 +118,7 @@ abstract class Documents with _$Documents {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier masterIdentifier,
     List<Identifier> identifier,
@@ -135,7 +135,7 @@ abstract class Documents with _$Documents {
 
   const factory Documents.documentManifestRelated({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     Reference ref,
@@ -149,7 +149,7 @@ abstract class Documents with _$Documents {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier masterIdentifier,
     List<Identifier> identifier,
@@ -169,14 +169,14 @@ abstract class Documents with _$Documents {
   }) = DocumentReference;
   const factory Documents.documentReferenceRelatesTo({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     DocumentReferenceRelatesToCode code,
     Reference target,
   }) = DocumentReferenceRelatesTo;
 
   const factory Documents.documentReferenceContent({
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Attachment attachment,
     Coding format,

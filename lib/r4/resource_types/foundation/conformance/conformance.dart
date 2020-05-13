@@ -16,7 +16,7 @@ abstract class Conformance with _$Conformance {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -47,7 +47,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.messageDefinitionFocus({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     Canonical profile,
@@ -57,7 +57,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.messageDefinitionAllowedResponse({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Canonical message,
     Markdown situation,
@@ -71,7 +71,7 @@ abstract class Conformance with _$Conformance {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     String version,
@@ -103,7 +103,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementSoftware({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String version,
@@ -112,7 +112,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementImplementation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     FhirUrl url,
@@ -121,7 +121,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementRest({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CapabilityStatementRestMode mode,
     Markdown documentation,
@@ -135,7 +135,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementSecurity({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool cors,
     List<CodeableConcept> service,
@@ -144,7 +144,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementResource({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code type,
     Canonical profile,
@@ -167,7 +167,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementInteraction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CapabilityStatementInteractionCode code,
     Markdown documentation,
@@ -175,7 +175,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementSearchParam({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     Canonical definition,
@@ -185,7 +185,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementOperation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     Canonical definition,
@@ -194,7 +194,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementInteraction1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String code,
     Markdown documentation,
@@ -202,7 +202,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementMessaging({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CapabilityStatementEndpoint> endpoint,
     int reliableCache,
@@ -212,7 +212,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementEndpoint({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Coding protocol,
     FhirUrl address,
@@ -220,7 +220,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementSupportedMessage({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CapabilityStatementSupportedMessageMode mode,
     Canonical definition,
@@ -228,7 +228,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.capabilityStatementDocument({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CapabilityStatementDocumentMode mode,
     Markdown documentation,
@@ -243,7 +243,7 @@ abstract class Conformance with _$Conformance {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     String version,
@@ -263,7 +263,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.compartmentDefinitionResource({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     List<String> param,
@@ -278,7 +278,7 @@ abstract class Conformance with _$Conformance {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     String version,
@@ -310,7 +310,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.operationDefinitionParameter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code name,
     OperationDefinitionParameterUse use,
@@ -327,7 +327,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.operationDefinitionBinding({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     OperationDefinitionBindingStrength strength,
     Canonical valueSet,
@@ -335,7 +335,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.operationDefinitionReferencedFrom({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String source,
     String sourceId,
@@ -343,7 +343,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.operationDefinitionOverload({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<String> parameterName,
     String comment,
@@ -357,7 +357,7 @@ abstract class Conformance with _$Conformance {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -380,7 +380,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.exampleScenarioActor({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String actorId,
     ExampleScenarioActorType type,
@@ -390,7 +390,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.exampleScenarioInstance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String resourceId,
     Code resourceType,
@@ -402,7 +402,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.exampleScenarioVersion({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String versionId,
     Markdown description,
@@ -410,7 +410,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.exampleScenarioContainedInstance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String resourceId,
     String versionId,
@@ -418,7 +418,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.exampleScenarioProcess({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String title,
     Markdown description,
@@ -429,7 +429,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.exampleScenarioStep({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<ExampleScenarioProcess> process,
     bool pause,
@@ -439,7 +439,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.exampleScenarioOperation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String number,
     String type,
@@ -455,7 +455,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.exampleScenarioAlternative({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String title,
     Markdown description,
@@ -470,7 +470,7 @@ abstract class Conformance with _$Conformance {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -494,7 +494,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureMapStructure({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Canonical url,
     StructureMapStructureMode mode,
@@ -504,10 +504,10 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureMapGroup({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id name,
-    Id extend,
+    @JsonKey(name: 'extends') Id extend,
     StructureMapGroupTypeMode typeMode,
     String documentation,
     List<StructureMapInput> input,
@@ -516,7 +516,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureMapInput({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id name,
     String type,
@@ -526,7 +526,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureMapRule({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id name,
     List<StructureMapSource> source,
@@ -538,7 +538,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureMapSource({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id context,
     int min,
@@ -604,7 +604,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureMapTarget({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id context,
     StructureMapTargetContextType contextType,
@@ -618,7 +618,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureMapParameter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id valueId,
     String valueString,
@@ -629,7 +629,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureMapDependent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id name,
     List<String> variable,
@@ -643,7 +643,7 @@ abstract class Conformance with _$Conformance {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     String version,
@@ -669,7 +669,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuideDependsOn({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Canonical uri,
     Id packageId,
@@ -678,7 +678,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuideGlobal({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code type,
     Canonical profile,
@@ -686,7 +686,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuideDefinition({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<ImplementationGuideGrouping> grouping,
     List<ImplementationGuideResource> resource,
@@ -697,7 +697,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuideGrouping({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String description,
@@ -705,7 +705,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuideResource({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference reference,
     List<String> fhirVersion,
@@ -718,7 +718,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuidePage({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUrl nameUrl,
     Reference nameReference,
@@ -729,7 +729,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuideParameter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ImplementationGuideParameterCode code,
     String value,
@@ -737,7 +737,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuideTemplate({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     String source,
@@ -746,7 +746,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuideManifest({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUrl rendering,
     List<ImplementationGuideResource1> resource,
@@ -757,7 +757,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuideResource1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference reference,
     bool exampleBoolean,
@@ -767,7 +767,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.implementationGuidePage1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String title,
@@ -782,7 +782,7 @@ abstract class Conformance with _$Conformance {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     String version,
@@ -814,7 +814,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.searchParameterComponent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Canonical definition,
     String expression,
@@ -828,7 +828,7 @@ abstract class Conformance with _$Conformance {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     String version,
@@ -849,7 +849,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.graphDefinitionLink({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String path,
     String sliceName,
@@ -861,7 +861,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.graphDefinitionTarget({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code type,
     String params,
@@ -872,7 +872,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.graphDefinitionCompartment({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     GraphDefinitionCompartmentUse use,
     Code code,
@@ -889,7 +889,7 @@ abstract class Conformance with _$Conformance {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -922,7 +922,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureDefinitionMapping({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id identity,
     FhirUri uri,
@@ -932,7 +932,7 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureDefinitionContext({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     StructureDefinitionContextType type,
     String expression,
@@ -940,14 +940,14 @@ abstract class Conformance with _$Conformance {
 
   const factory Conformance.structureDefinitionSnapshot({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<ElementDefinition> element,
   }) = StructureDefinitionSnapshot;
 
   const factory Conformance.structureDefinitionDifferential({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<ElementDefinition> element,
   }) = StructureDefinitionDifferential;

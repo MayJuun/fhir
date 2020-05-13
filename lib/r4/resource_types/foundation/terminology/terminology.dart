@@ -16,7 +16,7 @@ abstract class Terminology with _$Terminology {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -47,7 +47,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.codeSystemFilter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     String description,
@@ -57,7 +57,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.codeSystemProperty({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     FhirUri uri,
@@ -67,7 +67,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.codeSystemConcept({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     String display,
@@ -79,7 +79,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.codeSystemDesignation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code language,
     Coding use,
@@ -88,7 +88,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.codeSystemProperty1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     Code valueCode,
@@ -108,7 +108,7 @@ abstract class Terminology with _$Terminology {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -130,7 +130,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.valueSetCompose({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Date lockedDate,
     bool inactive,
@@ -140,7 +140,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.valueSetInclude({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri system,
     String version,
@@ -150,7 +150,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.valueSetConcept({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String display,
     List<ValueSetDesignation> designation,
@@ -158,7 +158,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.valueSetDesignation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code language,
     Coding use,
     String value,
@@ -166,7 +166,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.valueSetFilter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code property,
     ValueSetFilterOp op,
@@ -175,7 +175,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.valueSetExpansion({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri identifier,
     FhirDateTime timestamp,
@@ -186,7 +186,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.valueSetParameter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     bool valueBoolean,
@@ -199,7 +199,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.valueSetContains({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri system,
     bool abstract,
@@ -219,7 +219,7 @@ abstract class Terminology with _$Terminology {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     String version,
@@ -249,7 +249,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.terminologyCapabilitiesSoftware({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String version,
@@ -257,7 +257,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.terminologyCapabilitiesImplementation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     FhirUrl url,
@@ -265,7 +265,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.terminologyCapabilitiesCodeSystem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Canonical uri,
     List<TerminologyCapabilitiesVersion> version,
@@ -274,7 +274,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.terminologyCapabilitiesVersion({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String code,
     bool isDefault,
@@ -286,7 +286,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.terminologyCapabilitiesFilter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     List<Code> op,
@@ -294,7 +294,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.terminologyCapabilitiesExpansion({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool hierarchical,
     bool paging,
@@ -305,7 +305,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.terminologyCapabilitiesParameter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code name,
     String documentation,
@@ -313,21 +313,21 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.terminologyCapabilitiesValidateCode({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool translations,
   }) = TerminologyCapabilitiesValidateCode;
 
   const factory Terminology.terminologyCapabilitiesTranslation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool needsMap,
   }) = TerminologyCapabilitiesTranslation;
 
   const factory Terminology.terminologyCapabilitiesClosure({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool translation,
   }) = TerminologyCapabilitiesClosure;
@@ -340,7 +340,7 @@ abstract class Terminology with _$Terminology {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     NamingSystemStatus status,
@@ -359,7 +359,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.namingSystemUniqueId({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     NamingSystemUniqueIdType type,
     String value,
@@ -376,7 +376,7 @@ abstract class Terminology with _$Terminology {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     Identifier identifier,
@@ -402,7 +402,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.conceptMapGroup({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri source,
     String sourceVersion,
@@ -414,7 +414,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.conceptMapElement({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     String display,
@@ -423,7 +423,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.conceptMapTarget({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     String display,
@@ -435,7 +435,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.conceptMapDependsOn({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri property,
     Canonical system,
@@ -445,7 +445,7 @@ abstract class Terminology with _$Terminology {
 
   const factory Terminology.conceptMapUnmapped({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ConceptMapUnmappedMode mode,
     Code code,

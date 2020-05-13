@@ -16,7 +16,7 @@ abstract class General with _$General {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -44,7 +44,7 @@ abstract class General with _$General {
   }) = ChargeItemDefinition;
 
   const factory General.chargeItemDefinitionApplicability({
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     String language,
@@ -53,14 +53,14 @@ abstract class General with _$General {
 
   const factory General.chargeItemDefinitionPropertyGroup({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<ChargeItemDefinitionApplicability> applicability,
     List<ChargeItemDefinitionPriceComponent> priceComponent,
   }) = ChargeItemDefinitionPropertyGroup;
 
   const factory General.chargeItemDefinitionPriceComponent({
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code type,
     CodeableConcept code,
@@ -75,7 +75,7 @@ abstract class General with _$General {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     AccountStatus status,
@@ -91,7 +91,7 @@ abstract class General with _$General {
 
   const factory General.accountCoverage({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference coverage,
     int priority,
@@ -99,7 +99,7 @@ abstract class General with _$General {
 
   const factory General.accountGuarantor({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference party,
     bool onHold,
@@ -114,7 +114,7 @@ abstract class General with _$General {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<FhirUri> definitionUri,
@@ -147,7 +147,7 @@ abstract class General with _$General {
 
   const factory General.chargeItemPerformer({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept function,
     Reference actor,
@@ -180,7 +180,7 @@ abstract class General with _$General {
 
   const factory General.insurancePlanContact({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept purpose,
     HumanName name,
@@ -190,7 +190,7 @@ abstract class General with _$General {
 
   const factory General.insurancePlanCoverage({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<Reference> network,
@@ -199,7 +199,7 @@ abstract class General with _$General {
 
   const factory General.insurancePlanBenefit({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     String requirement,
@@ -208,7 +208,7 @@ abstract class General with _$General {
 
   const factory General.insurancePlanLimit({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Quantity value,
     CodeableConcept code,
@@ -216,7 +216,7 @@ abstract class General with _$General {
 
   const factory General.insurancePlanPlan({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept type,
@@ -227,7 +227,7 @@ abstract class General with _$General {
 
   const factory General.insurancePlanGeneralCost({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     CodeableConcept type,
     int groupSize,
     Money cost,
@@ -236,21 +236,21 @@ abstract class General with _$General {
 
   const factory General.insurancePlanSpecificCost({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     CodeableConcept category,
     List<InsurancePlanBenefit1> benefit,
   }) = InsurancePlanSpecificCost;
 
   const factory General.insurancePlanBenefit1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
   }) = InsurancePlanBenefit1;
 
   const factory General.insurancePlanCost({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     CodeableConcept applicability,
@@ -266,7 +266,7 @@ abstract class General with _$General {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     ExplanationOfBenefitStatus status,
@@ -327,7 +327,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitCareTeam({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     Reference provider,
@@ -338,7 +338,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitSupportingInfo({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     CodeableConcept category,
@@ -355,7 +355,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitDiagnosis({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     CodeableConcept diagnosisCodeableConcept,
@@ -367,7 +367,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitProcedure({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     List<CodeableConcept> type,
@@ -379,7 +379,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitInsurance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool focal,
     Reference coverage,
@@ -388,7 +388,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitAccident(
       {String id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Date date,
       CodeableConcept type,
@@ -397,7 +397,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     List<int> careTeamSequence,
@@ -429,7 +429,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitAdjudication({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept category,
     CodeableConcept reason,
@@ -439,7 +439,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitDetail({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     CodeableConcept revenue,
@@ -459,7 +459,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitSubDetail({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     CodeableConcept revenue,
@@ -478,7 +478,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitAddItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<int> itemSequence,
     List<int> detailSequence,
@@ -505,7 +505,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitDetail1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept productOrService,
     List<CodeableConcept> modifier,
@@ -520,7 +520,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitSubDetail1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept productOrService,
     List<CodeableConcept> modifier,
@@ -534,7 +534,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitTotal({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept category,
     Money amount,
@@ -542,7 +542,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitPayment({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Money adjustment,
@@ -554,7 +554,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitProcessNote({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int number,
     ExplanationOfBenefitProcessNote type,
@@ -564,7 +564,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitBenefitBalance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept category,
     bool excluded,
@@ -578,7 +578,7 @@ abstract class General with _$General {
 
   const factory General.explanationOfBenefitFinancial({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     int allowedUnsignedInt,
@@ -596,7 +596,7 @@ abstract class General with _$General {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     FhirUri url,
@@ -637,7 +637,7 @@ abstract class General with _$General {
 
   const factory General.contractContentDefinition({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     CodeableConcept subType,
@@ -649,7 +649,7 @@ abstract class General with _$General {
 
   const factory General.contractTerm({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     FhirDateTime issued,
@@ -668,7 +668,7 @@ abstract class General with _$General {
 
   const factory General.contractSecurityLabel({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<int> number,
     Coding classification,
@@ -678,7 +678,7 @@ abstract class General with _$General {
 
   const factory General.contractOffer({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<ContractParty> party,
@@ -694,7 +694,7 @@ abstract class General with _$General {
 
   const factory General.contractParty({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Reference> reference,
     CodeableConcept role,
@@ -702,7 +702,7 @@ abstract class General with _$General {
 
   const factory General.contractAnswer({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool valueBoolean,
     double valueDecimal,
@@ -720,7 +720,7 @@ abstract class General with _$General {
 
   const factory General.contractAsset({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept scope,
     List<CodeableConcept> type,
@@ -741,7 +741,7 @@ abstract class General with _$General {
 
   const factory General.contractContext({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference reference,
     List<CodeableConcept> code,
@@ -750,7 +750,7 @@ abstract class General with _$General {
 
   const factory General.contractValuedItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept entityCodeableConcept,
     Reference entityReference,
@@ -771,7 +771,7 @@ abstract class General with _$General {
 
   const factory General.contractAction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool doNotPerform,
     CodeableConcept type,
@@ -800,7 +800,7 @@ abstract class General with _$General {
 
   const factory General.contractSubject({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Reference> reference,
     CodeableConcept role,
@@ -808,7 +808,7 @@ abstract class General with _$General {
 
   const factory General.contractSigner({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Coding type,
     Reference party,
@@ -817,7 +817,7 @@ abstract class General with _$General {
 
   const factory General.contractFriendly({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Attachment contentAttachment,
     Reference contentReference,
@@ -825,7 +825,7 @@ abstract class General with _$General {
 
   const factory General.contractLegal({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Attachment contentAttachment,
     Reference contentReference,
@@ -833,7 +833,7 @@ abstract class General with _$General {
 
   const factory General.contractRule({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Attachment contentAttachment,
     Reference contentReference,

@@ -16,7 +16,7 @@ abstract class Summary with _$Summary {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -42,7 +42,7 @@ abstract class Summary with _$Summary {
 
   const factory Summary.clinicalImpressionInvestigation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     List<Reference> item,
@@ -50,7 +50,7 @@ abstract class Summary with _$Summary {
 
   const factory Summary.clinicalImpressionFinding({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
@@ -90,7 +90,7 @@ abstract class Summary with _$Summary {
 
   const factory Summary.allergyIntoleranceReaction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept substance,
     List<CodeableConcept> manifestation,
@@ -107,7 +107,7 @@ abstract class Summary with _$Summary {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     AdverseEventActuality actuality,
@@ -132,7 +132,7 @@ abstract class Summary with _$Summary {
   }) = AdverseEvent;
 
   const factory Summary.adverseEventSuspectEntity({
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference instance,
     List<AdverseEventCausality> causality,
@@ -140,7 +140,7 @@ abstract class Summary with _$Summary {
 
   const factory Summary.adverseEventCausality({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept assessment,
     String productRelatedness,
@@ -156,7 +156,7 @@ abstract class Summary with _$Summary {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Canonical> instantiatesCanonical,
@@ -186,7 +186,7 @@ abstract class Summary with _$Summary {
 
   const factory Summary.familyMemberHistoryCondition({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     CodeableConcept outcome,
@@ -206,7 +206,7 @@ abstract class Summary with _$Summary {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -223,7 +223,7 @@ abstract class Summary with _$Summary {
   }) = DetectedIssue;
   const factory Summary.detectedIssueEvidence({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> code,
     List<Reference> detail,
@@ -231,7 +231,7 @@ abstract class Summary with _$Summary {
 
   const factory Summary.detectedIssueMitigation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept action,
     FhirDateTime date,
@@ -246,7 +246,7 @@ abstract class Summary with _$Summary {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept clinicalStatus,
@@ -275,7 +275,7 @@ abstract class Summary with _$Summary {
 
   const factory Summary.conditionStage({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept summary,
     List<Reference> assessment,
@@ -284,7 +284,7 @@ abstract class Summary with _$Summary {
 
   const factory Summary.conditionEvidence({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> code,
     List<Reference> detail,
@@ -298,7 +298,7 @@ abstract class Summary with _$Summary {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Canonical> instantiatesCanonical,
@@ -336,7 +336,7 @@ abstract class Summary with _$Summary {
 
   const factory Summary.procedurePerformer({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept function,
     Reference actor,
@@ -345,7 +345,7 @@ abstract class Summary with _$Summary {
 
   const factory Summary.procedureFocalDevice({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept action,
     Reference manipulated,

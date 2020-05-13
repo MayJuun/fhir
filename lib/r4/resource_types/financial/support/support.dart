@@ -16,7 +16,7 @@ abstract class Support with _$Support {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -34,7 +34,7 @@ abstract class Support with _$Support {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -54,7 +54,7 @@ abstract class Support with _$Support {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<Identifier> identifier,
     Code status,
     List<String> purpose,
@@ -75,7 +75,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageEligibilityResponseInsurance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference coverage,
     bool inforce,
@@ -84,7 +84,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageEligibilityResponseItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept category,
     CodeableConcept productOrService,
@@ -104,7 +104,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageEligibilityResponseBenefit({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     int allowedUnsignedInt,
@@ -117,7 +117,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageEligibilityResponseError({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
   }) = CoverageEligibilityResponseError;
@@ -130,7 +130,7 @@ abstract class Support with _$Support {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -151,7 +151,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageEligibilityRequestSupportingInfo({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     Reference information,
@@ -160,7 +160,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageEligibilityRequestInsurance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool focal,
     Reference coverage,
@@ -169,7 +169,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageEligibilityRequestItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<int> supportingInfoSequence,
     CodeableConcept category,
@@ -185,7 +185,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageEligibilityRequestDiagnosis({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept diagnosisCodeableConcept,
     Reference diagnosisReference,
@@ -199,7 +199,7 @@ abstract class Support with _$Support {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -212,7 +212,7 @@ abstract class Support with _$Support {
     CodeableConcept relationship,
     Period period,
     List<Reference> payor,
-    List<CoverageClass> clas,
+    @JsonKey(name: 'class') List<CoverageClass> clas,
     int order,
     String network,
     List<CoverageCostToBeneficiary> costToBeneficiary,
@@ -222,7 +222,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageClass({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     String value,
@@ -231,7 +231,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageCostToBeneficiary({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Quantity valueQuantity,
@@ -241,7 +241,7 @@ abstract class Support with _$Support {
 
   const factory Support.coverageException({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Period period,

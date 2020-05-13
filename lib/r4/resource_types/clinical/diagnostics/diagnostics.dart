@@ -16,7 +16,7 @@ abstract class Diagnostics with _$Diagnostics {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     ImagingStudyStatus status,
@@ -42,7 +42,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.imagingStudySeries({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id uid,
     int number,
@@ -60,7 +60,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.imagingStudyPerformer({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept function,
     Reference actor,
@@ -68,7 +68,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.imagingStudyInstance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id uid,
     Coding sopClass,
@@ -84,7 +84,7 @@ abstract class Diagnostics with _$Diagnostics {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Identifier accessionIdentifier,
@@ -103,7 +103,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.specimenCollection({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference collector,
     FhirDateTime collectedDateTime,
@@ -118,7 +118,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.specimenProcessing({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     CodeableConcept procedure,
@@ -129,7 +129,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.specimenContainer({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     String description,
@@ -148,7 +148,7 @@ abstract class Diagnostics with _$Diagnostics {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     MolecularSequenceType type,
@@ -170,7 +170,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.molecularSequenceReferenceSeq({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept chromosome,
     String genomeBuild,
@@ -185,7 +185,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.molecularSequenceVariant({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int start,
     int end,
@@ -197,7 +197,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.molecularSequenceQuality({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     MolecularSequenceQualityType type,
     CodeableConcept standardSequence,
@@ -218,7 +218,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.molecularSequenceRoc({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<int> score,
     List<int> numTP,
@@ -231,7 +231,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.molecularSequenceRepository({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     MolecularSequenceRepositoryType type,
     FhirUri url,
@@ -243,7 +243,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.molecularSequenceStructureVariant({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept variantType,
     bool exact,
@@ -254,7 +254,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.molecularSequenceOuter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int start,
     int end,
@@ -262,7 +262,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.molecularSequenceInner({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int start,
     int end,
@@ -276,7 +276,7 @@ abstract class Diagnostics with _$Diagnostics {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
@@ -319,7 +319,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.observationReferenceRange({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Quantity low,
     Quantity high,
@@ -331,7 +331,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.observationComponent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     Quantity valueQuantity,
@@ -358,7 +358,7 @@ abstract class Diagnostics with _$Diagnostics {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
@@ -378,7 +378,7 @@ abstract class Diagnostics with _$Diagnostics {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     List<Reference> basedOn,
@@ -395,7 +395,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.questionnaireResponseItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String linkId,
     FhirUri definition,
@@ -406,7 +406,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.questionnaireResponseAnswer({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool valueBoolean,
     double valueDecimal,
@@ -431,7 +431,7 @@ abstract class Diagnostics with _$Diagnostics {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
@@ -456,7 +456,7 @@ abstract class Diagnostics with _$Diagnostics {
 
   const factory Diagnostics.diagnosticReportMedia({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String comment,
     Reference link,
@@ -470,7 +470,7 @@ abstract class Diagnostics with _$Diagnostics {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,

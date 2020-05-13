@@ -16,7 +16,7 @@ abstract class Workflow with _$Workflow {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
@@ -36,7 +36,7 @@ abstract class Workflow with _$Workflow {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<CodeableConcept> serviceCategory,
@@ -59,7 +59,7 @@ abstract class Workflow with _$Workflow {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Canonical instantiatesCanonical,
@@ -75,7 +75,7 @@ abstract class Workflow with _$Workflow {
     CodeableConcept code,
     String description,
     Reference focus,
-    Reference fore,
+    @JsonKey(name: 'for') Reference fore,
     Reference encounter,
     Period executionPeriod,
     FhirDateTime authoredOn,
@@ -96,7 +96,7 @@ abstract class Workflow with _$Workflow {
 
   const factory Workflow.taskRestriction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int repetitions,
     Period period,
@@ -105,7 +105,7 @@ abstract class Workflow with _$Workflow {
 
   const factory Workflow.taskInput({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Base64Binary valueBase64Binary,
@@ -162,7 +162,7 @@ abstract class Workflow with _$Workflow {
 
   const factory Workflow.taskOutput({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Base64Binary valueBase64Binary,
@@ -225,7 +225,7 @@ abstract class Workflow with _$Workflow {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     AppointmentStatus status,
@@ -253,7 +253,7 @@ abstract class Workflow with _$Workflow {
 
   const factory Workflow.appointmentParticipant({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> type,
     Reference actor,
@@ -270,7 +270,7 @@ abstract class Workflow with _$Workflow {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Reference appointment,
@@ -290,7 +290,7 @@ abstract class Workflow with _$Workflow {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Reference> target,
     List<String> targetLocation,
@@ -310,7 +310,7 @@ abstract class Workflow with _$Workflow {
 
   const factory Workflow.verificationResultPrimarySource({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference who,
     List<CodeableConcept> type,
@@ -323,7 +323,7 @@ abstract class Workflow with _$Workflow {
 
   const factory Workflow.verificationResultAttestation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference who,
     Reference onBehalfOf,
@@ -337,7 +337,7 @@ abstract class Workflow with _$Workflow {
 
   const factory Workflow.verificationResultValidator({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference organization,
     String identityCertificate,

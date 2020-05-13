@@ -16,7 +16,7 @@ abstract class Billing with _$Billing {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -49,7 +49,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimRelated({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference claim,
     CodeableConcept relationship,
@@ -58,7 +58,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimPayee({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Reference party,
@@ -66,7 +66,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimCareTeam({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     Reference provider,
@@ -77,7 +77,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimSupportingInfo({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     CodeableConcept category,
@@ -94,7 +94,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimDiagnosis({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     CodeableConcept diagnosisCodeableConcept,
@@ -106,7 +106,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimProcedure({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     List<CodeableConcept> type,
@@ -118,7 +118,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimInsurance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     bool focal,
@@ -131,7 +131,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimAccident({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Date date,
     CodeableConcept type,
@@ -141,7 +141,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     List<int> careTeamSequence,
@@ -171,7 +171,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimDetail({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     CodeableConcept revenue,
@@ -189,7 +189,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimSubDetail({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     CodeableConcept revenue,
@@ -212,7 +212,7 @@ abstract class Billing with _$Billing {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     InvoiceStatus status,
@@ -234,7 +234,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.invoiceParticipant({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept role,
     Reference actor,
@@ -242,7 +242,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.invoiceLineItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     Reference chargeItemReference,
@@ -252,7 +252,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.invoicePriceComponent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     InvoicePriceComponentType type,
     CodeableConcept code,
@@ -268,7 +268,7 @@ abstract class Billing with _$Billing {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -301,7 +301,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int itemSequence,
     List<int> noteNumber,
@@ -311,7 +311,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseAdjudication({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept category,
     CodeableConcept reason,
@@ -321,7 +321,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseDetail({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int detailSequence,
     List<int> noteNumber,
@@ -331,7 +331,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseSubDetail({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int subDetailSequence,
     List<int> noteNumber,
@@ -340,7 +340,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseAddItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<int> itemSequence,
     List<int> detailSequence,
@@ -367,7 +367,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseDetail1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept productOrService,
     List<CodeableConcept> modifier,
@@ -382,7 +382,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseSubDetail1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept productOrService,
     List<CodeableConcept> modifier,
@@ -396,7 +396,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseTotal({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept category,
     Money amount,
@@ -404,7 +404,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponsePayment({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Money adjustment,
@@ -416,7 +416,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseProcessNote({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int number,
     ClaimResponseProcessNoteType type,
@@ -426,7 +426,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseInsurance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     bool focal,
@@ -437,7 +437,7 @@ abstract class Billing with _$Billing {
 
   const factory Billing.claimResponseError({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int itemSequence,
     int detailSequence,

@@ -16,7 +16,7 @@ abstract class Payment with _$Payment {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -40,7 +40,7 @@ abstract class Payment with _$Payment {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -61,7 +61,7 @@ abstract class Payment with _$Payment {
 
   const factory Payment.paymentReconciliationDetail({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     Identifier predecessor,
@@ -77,7 +77,7 @@ abstract class Payment with _$Payment {
 
   const factory Payment.paymentReconciliationProcessNote({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     PaymentReconciliationProcessNoteType type,
     String text,

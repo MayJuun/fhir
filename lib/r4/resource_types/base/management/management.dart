@@ -16,7 +16,7 @@ abstract class Management with _$Management {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -60,7 +60,7 @@ abstract class Management with _$Management {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     ListStatus status,
@@ -79,7 +79,7 @@ abstract class Management with _$Management {
 
   const factory Management.listEntry({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept flag,
     bool deleted,
@@ -95,7 +95,7 @@ abstract class Management with _$Management {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     EpisodeOfCareStatus status,
@@ -113,7 +113,7 @@ abstract class Management with _$Management {
 
   const factory Management.episodeOfCareStatusHistory({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     EpisodeOfCareStatusHistoryStatus status,
     Period period,
@@ -121,7 +121,7 @@ abstract class Management with _$Management {
 
   const factory Management.episodeOfCareDiagnosis({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference condition,
     CodeableConcept role,
@@ -136,12 +136,12 @@ abstract class Management with _$Management {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     EncounterStatus status,
     List<EncounterStatusHistory> statusHistory,
-    Coding clas,
+    @JsonKey(name: 'class') Coding clas,
     List<EncounterClassHistory> classHistory,
     List<CodeableConcept> type,
     CodeableConcept serviceType,
@@ -165,7 +165,7 @@ abstract class Management with _$Management {
 
   const factory Management.encounterStatusHistory({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     EncounterStatusHistoryStatus status,
     Period period,
@@ -173,15 +173,15 @@ abstract class Management with _$Management {
 
   const factory Management.encounterClassHistory({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    Coding clas,
+    @JsonKey(name: 'class') Coding clas,
     Period period,
   }) = EncounterClassHistory;
 
   const factory Management.encounterParticipant({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> type,
     Period period,
@@ -190,7 +190,7 @@ abstract class Management with _$Management {
 
   const factory Management.encounterDiagnosis({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference condition,
     CodeableConcept use,
@@ -199,7 +199,7 @@ abstract class Management with _$Management {
 
   const factory Management.encounterHospitalization({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier preAdmissionIdentifier,
     Reference origin,
@@ -214,7 +214,7 @@ abstract class Management with _$Management {
 
   const factory Management.encounterLocation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference location,
     EncounterLocationStatus status,
@@ -230,7 +230,7 @@ abstract class Management with _$Management {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     FlagStatus status,

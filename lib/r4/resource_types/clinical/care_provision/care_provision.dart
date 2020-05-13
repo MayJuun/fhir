@@ -16,7 +16,7 @@ abstract class CareProvision with _$CareProvision {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -30,7 +30,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.visionPrescriptionLensSpecification({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept product,
     VisionPrescriptionLensSpecificationEye eye,
@@ -50,7 +50,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.visionPrescriptionPrism({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     double amount,
     VisionPrescriptionPrismBase base,
@@ -64,7 +64,7 @@ abstract class CareProvision with _$CareProvision {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Reference basedOn,
@@ -88,7 +88,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.riskAssessmentPrediction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     double probabilityDecimal,
     Range probabilityRange,
@@ -106,7 +106,7 @@ abstract class CareProvision with _$CareProvision {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Canonical> instantiatesCanonical,
@@ -155,7 +155,7 @@ abstract class CareProvision with _$CareProvision {
     FhirUri implicitRules,
     Code language,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     GoalLifecycleStatus lifecycleStatus,
@@ -178,7 +178,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.goalTarget({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept measure,
     Quantity detailQuantity,
@@ -200,7 +200,7 @@ abstract class CareProvision with _$CareProvision {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Canonical> instantiatesCanonical,
@@ -222,7 +222,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.nutritionOrderOralDiet({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> type,
     List<Timing> schedule,
@@ -234,7 +234,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.nutritionOrderNutrient({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept modifier,
     Quantity amount,
@@ -242,7 +242,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.nutritionOrderTexture({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept modifier,
     CodeableConcept foodType,
@@ -250,7 +250,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.nutritionOrderSupplement({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     CodeableConcept type,
     String productName,
     List<Timing> schedule,
@@ -260,7 +260,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.nutritionOrderEnteralFormula({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept baseFormulaType,
     String baseFormulaProductName,
@@ -274,7 +274,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.nutritionOrderAdministration({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Timing schedule,
     Quantity quantity,
@@ -290,7 +290,7 @@ abstract class CareProvision with _$CareProvision {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Canonical> instantiatesCanonical,
@@ -317,7 +317,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.carePlanActivity({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> outcomeCodeableConcept,
     List<Annotation> progress,
@@ -327,7 +327,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.carePlanDetail({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code kind,
     List<Canonical> instantiatesCanonical,
     List<FhirUri> instantiatesUri,
@@ -358,7 +358,7 @@ abstract class CareProvision with _$CareProvision {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CareTeamStatus status,
@@ -377,7 +377,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.careTeamParticipant({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> role,
     Reference member,
@@ -393,7 +393,7 @@ abstract class CareProvision with _$CareProvision {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Canonical> instantiatesCanonical,
@@ -417,7 +417,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.requestGroupAction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String prefix,
     String title,
@@ -447,7 +447,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.requestGroupCondition({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code kind,
     Expression expression,
@@ -455,7 +455,7 @@ abstract class CareProvision with _$CareProvision {
 
   const factory CareProvision.requestGroupRelatedAction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id actionId,
     Code relationship,

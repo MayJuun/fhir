@@ -15,7 +15,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Reference> subject,
     String description,
@@ -28,7 +28,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductInteractionInteractant({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference itemReference,
     CodeableConcept itemCodeableConcept,
@@ -42,7 +42,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String comment,
     List<SubstanceReferenceInformationGene> gene,
@@ -53,7 +53,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceReferenceInformationGene({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept geneSequenceOrigin,
     CodeableConcept gene,
@@ -62,7 +62,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceReferenceInformationGeneElement({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Identifier element,
@@ -71,7 +71,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceReferenceInformationClassification({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept domain,
     CodeableConcept classification,
@@ -81,7 +81,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceReferenceInformationTarget({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier target,
     CodeableConcept type,
@@ -103,7 +103,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     CodeableConcept type,
@@ -128,7 +128,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSpecificationMoiety({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept role,
     Identifier identifier,
@@ -142,7 +142,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSpecificationProperty({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept category,
     CodeableConcept code,
@@ -155,7 +155,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSpecificationStructure({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept stereochemistry,
     CodeableConcept opticalActivity,
@@ -169,7 +169,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSpecificationIsotope({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     CodeableConcept name,
@@ -180,7 +180,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSpecificationMolecularWeight({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept method,
     CodeableConcept type,
@@ -189,7 +189,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSpecificationRepresentation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     String representation,
@@ -198,7 +198,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSpecificationCode({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     CodeableConcept status,
@@ -209,7 +209,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSpecificationName({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     CodeableConcept type,
@@ -226,7 +226,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSpecificationOfficial({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept authority,
     CodeableConcept status,
@@ -235,7 +235,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSpecificationRelationship({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference substanceReference,
     CodeableConcept substanceCodeableConcept,
@@ -258,7 +258,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept manufacturedDoseForm,
     CodeableConcept unitOfPresentation,
@@ -277,7 +277,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Reference> subject,
     CodeableConcept disease,
@@ -290,7 +290,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductContraindicationOtherTherapy({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept therapyRelationshipType,
     CodeableConcept medicationCodeableConcept,
@@ -305,7 +305,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     CodeableConcept role,
@@ -317,7 +317,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductIngredientSpecifiedSubstance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     CodeableConcept group,
@@ -327,7 +327,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductIngredientStrength({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Ratio presentation,
     Ratio presentationLowLimit,
@@ -340,7 +340,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductIngredientReferenceStrength({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept substance,
     Ratio strength,
@@ -351,7 +351,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductIngredientSubstance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     List<MedicinalProductIngredientStrength> strength,
@@ -365,7 +365,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept sourceMaterialClass,
     CodeableConcept sourceMaterialType,
@@ -384,7 +384,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSourceMaterialFractionDescription({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String fraction,
     CodeableConcept materialType,
@@ -392,7 +392,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSourceMaterialOrganism({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept family,
     CodeableConcept genus,
@@ -406,7 +406,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSourceMaterialAuthor({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept authorType,
     String authorDescription,
@@ -414,7 +414,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSourceMaterialHybrid({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String maternalOrganismId,
     String maternalOrganismName,
@@ -425,17 +425,17 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceSourceMaterialOrganismGeneral({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept kingdom,
     CodeableConcept phylum,
-    CodeableConcept clas,
+    @JsonKey(name: 'class') CodeableConcept clas,
     CodeableConcept order,
   }) = SubstanceSourceMaterialOrganismGeneral;
 
   const factory MedicationDefinition.substanceSourceMaterialPartDescription({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept part,
     CodeableConcept partLocation,
@@ -449,7 +449,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Reference> subject,
     CodeableConcept symptomConditionEffect,
@@ -466,7 +466,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept type,
@@ -493,7 +493,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductName({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String productName,
     List<MedicinalProductNamePart> namePart,
@@ -502,7 +502,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductNamePart({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String part,
     Coding type,
@@ -510,7 +510,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductCountryLanguage({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept country,
     CodeableConcept jurisdiction,
@@ -519,7 +519,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductManufacturingBusinessOperation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept operationType,
     Identifier authorisationReferenceNumber,
@@ -531,7 +531,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductSpecialDesignation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept type,
@@ -551,7 +551,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> subject,
@@ -566,7 +566,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductPackagedBatchIdentifier({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier outerPackaging,
     Identifier immediatePackaging,
@@ -574,7 +574,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductPackagedPackageItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept type,
@@ -598,7 +598,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept sequenceType,
     int numberOfSubunits,
@@ -609,7 +609,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceNucleicAcidSubunit({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int subunit,
     String sequence,
@@ -623,7 +623,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceNucleicAcidLinkage({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String connectivity,
     Identifier identifier,
@@ -633,7 +633,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceNucleicAcidSugar({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     String name,
@@ -648,7 +648,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept administrableDoseForm,
@@ -662,7 +662,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductPharmaceuticalCharacteristics({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     CodeableConcept status,
@@ -670,7 +670,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductPharmaceuticalRouteOfAdministration({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     Quantity firstDose,
@@ -683,7 +683,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductPharmaceuticalTargetSpecies({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     List<MedicinalProductPharmaceuticalWithdrawalPeriod> withdrawalPeriod,
@@ -691,7 +691,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductPharmaceuticalWithdrawalPeriod({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept tissue,
     Quantity value,
@@ -706,9 +706,9 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    CodeableConcept clas,
+    @JsonKey(name: 'class') CodeableConcept clas,
     CodeableConcept geometry,
     List<CodeableConcept> copolymerConnectivity,
     List<String> modification,
@@ -718,7 +718,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substancePolymerMonomerSet({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept ratioType,
     List<SubstancePolymerStartingMaterial> startingMaterial,
@@ -726,7 +726,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substancePolymerStartingMaterial({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept material,
     CodeableConcept type,
@@ -736,7 +736,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substancePolymerRepeat({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int numberOfUnits,
     String averageMolecularFormula,
@@ -746,7 +746,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substancePolymerRepeatUnit({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept orientationOfPolymerisation,
     String repeatUnit,
@@ -757,7 +757,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substancePolymerDegreeOfPolymerisation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept degree,
     SubstanceAmount amount,
@@ -765,7 +765,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substancePolymerStructuralRepresentation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     String representation,
@@ -780,7 +780,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Reference subject,
@@ -803,7 +803,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductAuthorizationJurisdictionalAuthorization({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept country,
@@ -814,7 +814,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductAuthorizationProcedure({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     CodeableConcept type,
@@ -831,7 +831,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept sequenceType,
     int numberOfSubunits,
@@ -841,7 +841,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.substanceProteinSubunit({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int subunit,
     String sequence,
@@ -861,7 +861,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Reference> subject,
     CodeableConcept diseaseSymptomProcedure,
@@ -876,7 +876,7 @@ abstract class MedicationDefinition with _$MedicationDefinition {
 
   const factory MedicationDefinition.medicinalProductIndicationOtherTherapy({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept therapyRelationshipType,
     CodeableConcept medicationCodeableConcept,

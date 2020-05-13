@@ -16,7 +16,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -75,7 +75,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.activityDefinitionParticipant({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code type,
     CodeableConcept role,
@@ -83,7 +83,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.activityDefinitionDynamicValue({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String path,
     Expression expression,
@@ -97,7 +97,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
@@ -126,7 +126,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.deviceDefinitionUdiDeviceIdentifier({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String deviceIdentifier,
     FhirUri issuer,
@@ -135,7 +135,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.deviceDefinitionDeviceName({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     DeviceDefinitionDeviceNameType type,
@@ -143,7 +143,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.deviceDefinitionSpecialization({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String systemType,
     String version,
@@ -151,7 +151,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.deviceDefinitionCapability({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<CodeableConcept> description,
@@ -159,7 +159,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.deviceDefinitionProperty({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<Quantity> valueQuantity,
@@ -168,7 +168,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.deviceDefinitionMaterial({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept substance,
     bool alternate,
@@ -183,7 +183,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -224,7 +224,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> category,
     CodeableConcept code,
@@ -243,7 +243,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.observationDefinitionQuantitativeDetails({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept customaryUnit,
     CodeableConcept unit,
@@ -253,7 +253,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.observationDefinitionQualifiedInterval({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ObservationDefinitionQualifiedIntervalCategory category,
     Range range,
@@ -273,7 +273,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     CodeableConcept typeCollected,
@@ -285,7 +285,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.specimenDefinitionTypeTested({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool isDerived,
     CodeableConcept type,
@@ -299,7 +299,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.specimenDefinitionContainer({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept material,
     CodeableConcept type,
@@ -314,7 +314,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.specimenDefinitionAdditive({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept additiveCodeableConcept,
     Reference additiveReference,
@@ -322,7 +322,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.specimenDefinitionHandling({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept temperatureQualifier,
     Range temperatureRange,
@@ -338,7 +338,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -376,7 +376,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.planDefinitionGoal({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept category,
     CodeableConcept description,
@@ -389,7 +389,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.planDefinitionTarget({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept measure,
     Quantity detailQuantity,
@@ -400,7 +400,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.planDefinitionAction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String prefix,
     String title,
@@ -440,7 +440,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.planDefinitionCondition({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     PlanDefinitionConditionKind kind,
     Expression expression,
@@ -448,7 +448,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.planDefinitionRelatedAction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id actionId,
     PlanDefinitionRelatedActionRelationship relationship,
@@ -458,7 +458,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.planDefinitionParticipant({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     PlanDefinitionParticipantType type,
     CodeableConcept role,
@@ -466,7 +466,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.planDefinitionDynamicValue({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String path,
     Expression expression,
@@ -480,7 +480,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -508,7 +508,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.questionnaireItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String linkId,
     FhirUri definition,
@@ -530,7 +530,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.questionnaireEnableWhen({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String question,
     QuestionnaireEnableWhenOperator operator,
@@ -548,7 +548,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.questionnaireAnswerOption({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int valueInteger,
     Date valueDate,
@@ -561,7 +561,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
 
   const factory DefinitionalArtifacts.questionnaireInitial({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool valueBoolean,
     double valueDecimal,

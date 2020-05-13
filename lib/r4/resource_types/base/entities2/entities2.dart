@@ -16,7 +16,7 @@ abstract class Entities2 with _$Entities2 {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     SubstanceStatus status,
@@ -29,7 +29,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.substanceInstance({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     FhirDateTime expiry,
@@ -38,7 +38,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.substanceIngredient({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Ratio quantity,
     CodeableConcept substanceCodeableConcept,
@@ -53,7 +53,7 @@ abstract class Entities2 with _$Entities2 {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     BiologicallyDerivedProductCategory productCategory,
@@ -70,7 +70,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.biologicallyDerivedProductCollection({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference collector,
     Reference source,
@@ -80,7 +80,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.biologicallyDerivedProductProcessing({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     CodeableConcept procedure,
@@ -91,7 +91,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.biologicallyDerivedProductManipulation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     FhirDateTime timeDateTime,
@@ -100,7 +100,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.biologicallyDerivedProductStorage({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     double temperature,
@@ -116,7 +116,7 @@ abstract class Entities2 with _$Entities2 {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Reference definition,
@@ -148,7 +148,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.deviceUdiCarrier({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String deviceIdentifier,
     FhirUri issuer,
@@ -160,7 +160,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.deviceDeviceName({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     DeviceDeviceNameType type,
@@ -168,7 +168,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.deviceSpecialization({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept systemType,
     String version,
@@ -176,7 +176,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.deviceVersion({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Identifier component,
@@ -185,7 +185,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.deviceProperty({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<Quantity> valueQuantity,
@@ -200,7 +200,7 @@ abstract class Entities2 with _$Entities2 {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept type,
@@ -216,7 +216,7 @@ abstract class Entities2 with _$Entities2 {
 
   const factory Entities2.deviceMetricCalibration({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     DeviceMetricCalibrationType type,
     DeviceMetricCalibrationState state,

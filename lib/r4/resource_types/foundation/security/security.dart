@@ -16,7 +16,7 @@ abstract class Security with _$Security {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Coding type,
     List<Coding> subtype,
@@ -33,7 +33,7 @@ abstract class Security with _$Security {
 
   const factory Security.auditEventAgent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<CodeableConcept> role,
@@ -50,7 +50,7 @@ abstract class Security with _$Security {
 
   const factory Security.auditEventNetwork({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String address,
     AuditEventNetworkType type,
@@ -58,7 +58,7 @@ abstract class Security with _$Security {
 
   const factory Security.auditEventSource({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String site,
     Reference observer,
@@ -67,7 +67,7 @@ abstract class Security with _$Security {
 
   const factory Security.auditEventEntity({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference what,
     Coding type,
@@ -82,7 +82,7 @@ abstract class Security with _$Security {
 
   const factory Security.auditEventDetail({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String type,
     Markdown valueString,
@@ -97,7 +97,7 @@ abstract class Security with _$Security {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     ConsentStatus status,
@@ -117,7 +117,7 @@ abstract class Security with _$Security {
 
   const factory Security.consentPolicy({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri authority,
     FhirUri uri,
@@ -125,7 +125,7 @@ abstract class Security with _$Security {
 
   const factory Security.consentVerification({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool verified,
     Reference verifiedWith,
@@ -134,7 +134,7 @@ abstract class Security with _$Security {
 
   const factory Security.consentProvision({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ConsentProvisionType type,
     Period period,
@@ -142,7 +142,7 @@ abstract class Security with _$Security {
     List<CodeableConcept> action,
     List<Coding> securityLabel,
     List<Coding> purpose,
-    List<Coding> clas,
+    @JsonKey(name: 'class') List<Coding> clas,
     List<CodeableConcept> code,
     Period dataPeriod,
     List<ConsentData> data,
@@ -151,7 +151,7 @@ abstract class Security with _$Security {
 
   const factory Security.consentActor({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept role,
     Reference reference,
@@ -159,7 +159,7 @@ abstract class Security with _$Security {
 
   const factory Security.consentData({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ConsentDataMeaning meaning,
     Reference reference,
@@ -173,7 +173,7 @@ abstract class Security with _$Security {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Reference> target,
     Period occurredPeriod,
@@ -190,7 +190,7 @@ abstract class Security with _$Security {
 
   const factory Security.provenanceAgent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<CodeableConcept> role,
@@ -200,7 +200,7 @@ abstract class Security with _$Security {
 
   const factory Security.provenanceEntity({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ProvenanceEntityRole role,
     Reference what,

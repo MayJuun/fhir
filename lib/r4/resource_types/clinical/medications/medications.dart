@@ -15,7 +15,7 @@ abstract class Medications with _$Medications {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -41,7 +41,7 @@ abstract class Medications with _$Medications {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> partOf,
@@ -78,7 +78,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationDispenseSubstitution({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool wasSubstituted,
     CodeableConcept type,
@@ -94,7 +94,7 @@ abstract class Medications with _$Medications {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept code,
@@ -108,7 +108,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationIngredient({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
     bool isActive,
@@ -117,7 +117,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationBatch({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String lotNumber,
     FhirDateTime expirationDate,
@@ -131,7 +131,7 @@ abstract class Medications with _$Medications {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
     List<Reference> partOf,
@@ -160,7 +160,7 @@ abstract class Medications with _$Medications {
     FhirUri implicitRules,
     Code language,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -199,7 +199,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationRequestDispenseRequest({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     MedicationRequestInitialFill initialFill,
     Duration dispenseInterval,
@@ -211,14 +211,14 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationRequestInitialFill({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Quantity quantity,
     Duration duration,
   }) = MedicationRequestInitialFill;
 
   const factory Medications.medicationRequestSubstitution({
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool allowedBoolean,
     CodeableConcept allowedCodeableConcept,
@@ -232,7 +232,7 @@ abstract class Medications with _$Medications {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
@@ -265,7 +265,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.immunizationPerformer({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept function,
     Reference actor,
@@ -273,7 +273,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.immunizationEducation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String documentType,
     FhirUri reference,
@@ -283,7 +283,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.immunizationReaction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirDateTime date,
     Reference detail,
@@ -292,7 +292,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.immunizationProtocolApplied({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String series,
     Reference authority,
@@ -311,7 +311,7 @@ abstract class Medications with _$Medications {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> partOf,
@@ -336,7 +336,7 @@ abstract class Medications with _$Medications {
   }) = MedicationAdministration;
   const factory Medications.medicationAdministrationPerformer({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept function,
     Reference actor,
@@ -344,7 +344,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationAdministrationDosage(
       {String id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String text,
       CodeableConcept site,
@@ -362,7 +362,7 @@ abstract class Medications with _$Medications {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Reference patient,
@@ -373,7 +373,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.immunizationRecommendationRecommendation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<CodeableConcept> vaccineCode,
     CodeableConcept targetDisease,
     List<CodeableConcept> contraindicatedVaccineCode,
@@ -391,7 +391,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.immunizationRecommendationDateCriterion({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     FhirDateTime value,
@@ -404,7 +404,7 @@ abstract class Medications with _$Medications {
     FhirUri implicitRules,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     Code status,
@@ -433,7 +433,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeRelatedMedicationKnowledge({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<Reference> reference,
@@ -441,7 +441,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeMonograph({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Reference source,
@@ -449,7 +449,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeIngredient({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
@@ -459,7 +459,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeCost({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     String source,
@@ -468,7 +468,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeMonitoringProgram({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     String name,
@@ -476,7 +476,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeAdministrationGuidelines({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<MedicationKnowledgeDosage> dosage,
     CodeableConcept indicationCodeableConcept,
@@ -486,7 +486,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeDosage({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<Dosage> dosage,
@@ -494,7 +494,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgePatientCharacteristics({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept characteristicCodeableConcept,
     Quantity characteristicQuantity,
@@ -503,7 +503,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeMedicineClassification({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<CodeableConcept> classification,
@@ -511,7 +511,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgePackaging({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Quantity quantity,
@@ -519,7 +519,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeDrugCharacteristic({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     CodeableConcept valueCodeableConcept,
@@ -530,7 +530,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeRegulatory({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference regulatoryAuthority,
     List<MedicationKnowledgeSubstitution> substitution,
@@ -540,7 +540,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeSubstitution({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     bool allowed,
@@ -548,14 +548,14 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeSchedule({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept schedule,
   }) = MedicationKnowledgeSchedule;
 
   const factory Medications.medicationKnowledgeMaxDispense({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Quantity quantity,
     Duration period,
@@ -563,7 +563,7 @@ abstract class Medications with _$Medications {
 
   const factory Medications.medicationKnowledgeKinetics({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Quantity> areaUnderCurve,
     List<Quantity> lethalDose50,

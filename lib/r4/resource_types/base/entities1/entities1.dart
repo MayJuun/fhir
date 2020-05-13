@@ -16,7 +16,7 @@ abstract class Entities1 with _$Entities1 {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
@@ -46,7 +46,7 @@ abstract class Entities1 with _$Entities1 {
 
   const factory Entities1.healthcareServiceEligibility({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     Markdown comment,
@@ -54,7 +54,7 @@ abstract class Entities1 with _$Entities1 {
 
   const factory Entities1.healthcareServiceAvailableTime({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<String> daysOfWeek,
     bool allDay,
@@ -64,7 +64,7 @@ abstract class Entities1 with _$Entities1 {
 
   const factory Entities1.healthcareServiceNotAvailable({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     Period during,
@@ -78,7 +78,7 @@ abstract class Entities1 with _$Entities1 {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     LocationStatus status,
@@ -101,7 +101,7 @@ abstract class Entities1 with _$Entities1 {
 
   const factory Entities1.locationPosition({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     double longitude,
     double latitude,
@@ -110,7 +110,7 @@ abstract class Entities1 with _$Entities1 {
 
   const factory Entities1.locationHoursOfOperation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Code> daysOfWeek,
     bool allDay,
@@ -126,7 +126,7 @@ abstract class Entities1 with _$Entities1 {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
@@ -150,7 +150,7 @@ abstract class Entities1 with _$Entities1 {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
@@ -166,7 +166,7 @@ abstract class Entities1 with _$Entities1 {
 
   const factory Entities1.organizationContact({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept purpose,
     HumanName name,
@@ -182,7 +182,7 @@ abstract class Entities1 with _$Entities1 {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     EndpointStatus status,

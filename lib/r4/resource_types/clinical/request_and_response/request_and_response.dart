@@ -16,7 +16,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
@@ -43,7 +43,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
@@ -62,7 +62,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
 
   const factory RequestAndResponse.supplyDeliverySuppliedItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Quantity quantity,
     CodeableConcept itemCodeableConcept,
@@ -77,7 +77,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     SupplyRequestStatus status,
@@ -101,7 +101,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
 
   const factory RequestAndResponse.supplyRequestParameter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     CodeableConcept valueCodeableConcept,
@@ -118,7 +118,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier requestIdentifier,
     List<Identifier> identifier,
@@ -147,7 +147,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Canonical> instantiatesCanonical,
@@ -180,7 +180,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
 
   const factory RequestAndResponse.deviceRequestParameter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     CodeableConcept valueCodeableConcept,
@@ -197,7 +197,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
@@ -226,7 +226,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
 
   const factory RequestAndResponse.communicationRequestPayload({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String contentString,
     Attachment contentAttachment,
@@ -241,7 +241,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Canonical> instantiatesCanonical,
@@ -270,7 +270,7 @@ abstract class RequestAndResponse with _$RequestAndResponse {
 
   const factory RequestAndResponse.communicationPayload({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String contentString,
     Attachment contentAttachment,

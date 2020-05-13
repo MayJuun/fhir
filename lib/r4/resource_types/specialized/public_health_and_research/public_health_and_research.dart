@@ -16,7 +16,7 @@ abstract class PublicHealthAndResearch with _$PublicHealthAndResearch {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     String title,
@@ -44,7 +44,7 @@ abstract class PublicHealthAndResearch with _$PublicHealthAndResearch {
 
   const factory PublicHealthAndResearch.researchStudyArm({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     CodeableConcept type,
@@ -53,7 +53,7 @@ abstract class PublicHealthAndResearch with _$PublicHealthAndResearch {
 
   const factory PublicHealthAndResearch.researchStudyObjective({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     CodeableConcept type,

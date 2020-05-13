@@ -16,14 +16,14 @@ abstract class Other with _$Other {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<OperationOutcomeIssue> issue,
   }) = OperationOutcome;
 
   const factory Other.operationOutcomeIssue({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     OperationOutcomeIssueSeverity severity,
     OperationOutcomeIssueCode code,
@@ -41,7 +41,7 @@ abstract class Other with _$Other {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Coding eventCoding,
     FhirUri eventUri,
@@ -59,7 +59,7 @@ abstract class Other with _$Other {
 
   const factory Other.messageHeaderDestination({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     Reference target,
@@ -69,7 +69,7 @@ abstract class Other with _$Other {
 
   const factory Other.messageHeaderSource({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String software,
@@ -80,7 +80,7 @@ abstract class Other with _$Other {
 
   const factory Other.messageHeaderResponse({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id identifier,
     MessageHeaderResponseCode code,
@@ -98,7 +98,7 @@ abstract class Other with _$Other {
 
   const factory Other.parametersParameter({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     Base64Binary valueBase64Binary,
@@ -174,7 +174,7 @@ abstract class Other with _$Other {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     SubscriptionStatus status,
     List<ContactPoint> contact,
@@ -187,7 +187,7 @@ abstract class Other with _$Other {
 
   const factory Other.subscriptionChannel({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     SubscriptionChannelType type,
     FhirUrl endpoint,
@@ -203,7 +203,7 @@ abstract class Other with _$Other {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool active,
     Reference author,
@@ -212,7 +212,7 @@ abstract class Other with _$Other {
 
   const factory Other.linkageItem({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     LinkageItemType type,
     Reference resource,
@@ -235,7 +235,7 @@ abstract class Other with _$Other {
 
   const factory Other.bundleLink({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String relation,
     FhirUri url,
@@ -243,7 +243,7 @@ abstract class Other with _$Other {
 
   const factory Other.bundleEntry({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<BundleLink> link,
     FhirUri fullUrl,
@@ -255,7 +255,7 @@ abstract class Other with _$Other {
 
   const factory Other.bundleSearch({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     BundleSearchMode mode,
     double score,
@@ -263,7 +263,7 @@ abstract class Other with _$Other {
 
   const factory Other.bundleRequest({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     BundleRequestMethod method,
     FhirUri url,
@@ -275,7 +275,7 @@ abstract class Other with _$Other {
 
   const factory Other.bundleResponse({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String status,
     FhirUri location,
@@ -292,7 +292,7 @@ abstract class Other with _$Other {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept code,

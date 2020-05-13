@@ -16,7 +16,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     MeasureReportStatus status,
@@ -33,7 +33,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measureReportGroup({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     List<MeasureReportPopulation> population,
@@ -43,7 +43,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measureReportPopulation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     int count,
@@ -52,7 +52,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measureReportStratifier({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> code,
     List<MeasureReportStratum> stratum,
@@ -60,7 +60,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measureReportStratum({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept value,
     List<MeasureReportComponent> component,
@@ -70,7 +70,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measureReportComponent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     CodeableConcept value,
@@ -78,7 +78,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measureReportPopulation1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     int count,
@@ -93,7 +93,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -141,7 +141,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measureGroup({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     String description,
@@ -151,7 +151,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measurePopulation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     String description,
@@ -160,7 +160,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measureStratifier({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     String description,
@@ -170,7 +170,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measureComponent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     String description,
@@ -179,7 +179,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.measureSupplementalData({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     List<CodeableConcept> usage,
@@ -195,7 +195,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     Identifier identifier,
@@ -225,7 +225,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptOrigin({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int index,
     Coding profile,
@@ -233,7 +233,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptDestination({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int index,
     Coding profile,
@@ -241,7 +241,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptMetadata({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<TestScriptLink> link,
     List<TestScriptCapability> capability,
@@ -249,7 +249,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptLink({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     String description,
@@ -257,9 +257,9 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptCapability({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    bool require,
+    @JsonKey(name: 'required') bool require,
     bool validated,
     String description,
     List<int> origin,
@@ -270,7 +270,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptFixture({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool autocreate,
     bool autodelete,
@@ -279,7 +279,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptVariable({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String defaultValue,
@@ -293,22 +293,22 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptSetup({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<TestScriptAction> action,
   }) = TestScriptSetup;
 
   const factory QualityReportingAndTesting.testScriptAction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestScriptOperation operation,
-    TestScriptAssert asserts,
+    @JsonKey(name: 'assert') TestScriptAssert asserts,
   }) = TestScriptAction;
 
   const factory QualityReportingAndTesting.testScriptOperation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Coding type,
     Code resource,
@@ -331,7 +331,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptRequestHeader({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String field,
     String value,
@@ -339,7 +339,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptAssert({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String label,
     String description,
@@ -367,7 +367,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptTest({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String description,
@@ -376,22 +376,22 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testScriptAction1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestScriptOperation operation,
-    TestScriptAssert asserts,
+    @JsonKey(name: 'assert') TestScriptAssert asserts,
   }) = TestScriptAction1;
 
   const factory QualityReportingAndTesting.testScriptTeardown({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<TestScriptAction2> action,
   }) = TestScriptTeardown;
 
   const factory QualityReportingAndTesting.testScriptAction2({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestScriptOperation operation,
   }) = TestScriptAction2;
@@ -404,7 +404,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     String name,
@@ -422,7 +422,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testReportParticipant({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportParticipantType type,
     FhirUri uri,
@@ -431,22 +431,22 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testReportSetup({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<TestReportAction> action,
   }) = TestReportSetup;
 
   const factory QualityReportingAndTesting.testReportAction({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportOperation operation,
-    TestReportAssert asserts,
+    @JsonKey(name: 'assert') TestReportAssert asserts,
   }) = TestReportAction;
 
   const factory QualityReportingAndTesting.testReportOperation({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportOperationResult result,
     Markdown message,
@@ -455,7 +455,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testReportAssert({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportAssertResult result,
     Markdown message,
@@ -464,7 +464,7 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testReportTest({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String description,
@@ -473,22 +473,22 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
 
   const factory QualityReportingAndTesting.testReportAction1({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportOperation operation,
-    TestReportAssert asserts,
+    @JsonKey(name: 'assert') TestReportAssert asserts,
   }) = TestReportAction1;
 
   const factory QualityReportingAndTesting.testReportTeardown({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<TestReportAction2> action,
   }) = TestReportTeardown;
 
   const factory QualityReportingAndTesting.testReportAction2({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportOperation operation,
   }) = TestReportAction2;

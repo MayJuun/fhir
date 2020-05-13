@@ -16,7 +16,7 @@ abstract class Individuals with _$Individuals {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
@@ -32,7 +32,7 @@ abstract class Individuals with _$Individuals {
 
   const factory Individuals.groupCharacteristic({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     CodeableConcept valueCodeableConcept,
@@ -46,7 +46,7 @@ abstract class Individuals with _$Individuals {
 
   const factory Individuals.groupMember({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference entity,
     Period period,
@@ -61,7 +61,7 @@ abstract class Individuals with _$Individuals {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
@@ -85,7 +85,7 @@ abstract class Individuals with _$Individuals {
 
   const factory Individuals.patientContact({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> relationship,
     HumanName name,
@@ -98,7 +98,7 @@ abstract class Individuals with _$Individuals {
 
   const factory Individuals.patientCommunication({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept language,
     bool preferred,
@@ -106,7 +106,7 @@ abstract class Individuals with _$Individuals {
 
   const factory Individuals.patientLink({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference other,
     PatientLinkType type,
@@ -120,7 +120,7 @@ abstract class Individuals with _$Individuals {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
@@ -140,7 +140,7 @@ abstract class Individuals with _$Individuals {
 
   const factory Individuals.practitionerRoleAvailableTime({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Code> daysOfWeek,
     bool allDay,
@@ -150,7 +150,7 @@ abstract class Individuals with _$Individuals {
 
   const factory Individuals.practitionerRoleNotAvailable({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     Period during,
@@ -164,7 +164,7 @@ abstract class Individuals with _$Individuals {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<HumanName> name,
@@ -180,7 +180,7 @@ abstract class Individuals with _$Individuals {
 
   const factory Individuals.personLink({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference target,
     PersonLinkAssurance assurance,
@@ -194,7 +194,7 @@ abstract class Individuals with _$Individuals {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
@@ -210,7 +210,7 @@ abstract class Individuals with _$Individuals {
 
   const factory Individuals.practitionerQualification({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept code,
@@ -226,7 +226,7 @@ abstract class Individuals with _$Individuals {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
@@ -244,7 +244,7 @@ abstract class Individuals with _$Individuals {
 
   const factory Individuals.relatedPersonCommunication({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept language,
     bool preferred,

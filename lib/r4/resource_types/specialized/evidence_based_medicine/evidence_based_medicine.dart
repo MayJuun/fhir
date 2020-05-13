@@ -16,7 +16,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -53,7 +53,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.riskEvidenceSynthesisSampleSize({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     int numberOfStudies,
@@ -62,7 +62,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.riskEvidenceSynthesisRiskEstimate({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     CodeableConcept type,
@@ -75,7 +75,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.riskEvidenceSynthesisPrecisionEstimate({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     double level,
@@ -85,7 +85,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.riskEvidenceSynthesisCertainty({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> rating,
     List<Annotation> note,
@@ -94,7 +94,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.riskEvidenceSynthesisCertaintySubcomponent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<CodeableConcept> rating,
@@ -109,7 +109,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -142,7 +142,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.evidenceVariableCharacteristic({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     Reference definitionReference,
@@ -169,7 +169,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -209,7 +209,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -249,7 +249,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.researchElementDefinitionCharacteristic({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept definitionCodeableConcept,
     Canonical definitionCanonical,
@@ -284,7 +284,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -331,7 +331,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
     Code language,
     Narrative text,
     List<dynamic> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -370,7 +370,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.effectEvidenceSynthesisSampleSize({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     int numberOfStudies,
@@ -379,7 +379,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.effectEvidenceSynthesisResultsByExposure({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     EffectEvidenceSynthesisResultsByExposureState exposureState,
@@ -389,7 +389,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.effectEvidenceSynthesisEffectEstimate({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     CodeableConcept type,
@@ -401,7 +401,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.effectEvidenceSynthesisPrecisionEstimate({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     double level,
@@ -411,7 +411,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.effectEvidenceSynthesisCertainty({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> rating,
     List<Annotation> note,
@@ -420,7 +420,7 @@ abstract class EvidenceBasedMedicine with _$EvidenceBasedMedicine {
 
   const factory EvidenceBasedMedicine.effectEvidenceSynthesisCertaintySubcomponent({
     String id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<CodeableConcept> rating,
