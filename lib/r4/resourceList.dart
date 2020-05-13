@@ -1,6 +1,6 @@
 import '../fhir_r4.dart';
 
-ResourceFromJson(Map<String, dynamic> json) {
+dynamic ResourceFromJson(Map<String, dynamic> json) {
   switch (json['resourceType']) {
     case 'Account':
       return Account.fromJson(json);

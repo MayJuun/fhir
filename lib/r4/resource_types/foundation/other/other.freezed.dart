@@ -526,7 +526,7 @@ class _$OtherTearOff {
       modifierExtension: modifierExtension,
       link: link,
       fullUrl: fullUrl,
-      resource: resource,
+      resource: ResourceFromJson(resource),
       search: search,
       request: request,
       response: response,
