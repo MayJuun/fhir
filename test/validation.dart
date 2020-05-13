@@ -8,7 +8,7 @@ void main() async {
   var headers = {'Content-type': 'application/json'};
 
   var response = await get('$server/Patient', headers: headers);
-  var newBundle = Other.fromJson(json.decode(response.body));
+  var newBundle = Bundle.fromJson(json.decode(response.body));
   // for (var resource in resourceTypes) {
   //   var response = await get('$server/$resource', headers: headers);
   //   var newBundle = Bundle.fromJson(json.decode(response.body));
