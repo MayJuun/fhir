@@ -1624,10 +1624,13 @@ class _$ContactPointTearOff {
 
   _ContactPoint call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      ContactPointSystem system,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
+          ContactPointSystem system,
       String value,
-      ContactPointUse use,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+          ContactPointUse use,
       int rank,
       Period period}) {
     return _ContactPoint(
@@ -1649,8 +1652,10 @@ mixin _$ContactPoint {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
+  @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   ContactPointSystem get system;
   String get value;
+  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
   ContactPointUse get use;
   int get rank;
   Period get period;
@@ -1665,10 +1670,13 @@ abstract class $ContactPointCopyWith<$Res> {
       _$ContactPointCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      ContactPointSystem system,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
+          ContactPointSystem system,
       String value,
-      ContactPointUse use,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+          ContactPointUse use,
       int rank,
       Period period});
 
@@ -1724,10 +1732,13 @@ abstract class _$ContactPointCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      ContactPointSystem system,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
+          ContactPointSystem system,
       String value,
-      ContactPointUse use,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+          ContactPointUse use,
       int rank,
       Period period});
 
@@ -1773,9 +1784,9 @@ class _$_ContactPoint implements _ContactPoint {
   const _$_ContactPoint(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
-      this.system,
+      @JsonKey(unknownEnumValue: ContactPointSystem.unknown) this.system,
       this.value,
-      this.use,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown) this.use,
       this.rank,
       this.period});
 
@@ -1788,10 +1799,12 @@ class _$_ContactPoint implements _ContactPoint {
   @JsonKey(name: 'extension')
   final List<FhirExtension> fhirExtension;
   @override
+  @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   final ContactPointSystem system;
   @override
   final String value;
   @override
+  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
   final ContactPointUse use;
   @override
   final int rank;
@@ -1848,10 +1861,13 @@ class _$_ContactPoint implements _ContactPoint {
 abstract class _ContactPoint implements ContactPoint {
   const factory _ContactPoint(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      ContactPointSystem system,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
+          ContactPointSystem system,
       String value,
-      ContactPointUse use,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+          ContactPointUse use,
       int rank,
       Period period}) = _$_ContactPoint;
 
@@ -1864,10 +1880,12 @@ abstract class _ContactPoint implements ContactPoint {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   @override
+  @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   ContactPointSystem get system;
   @override
   String get value;
   @override
+  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
   ContactPointUse get use;
   @override
   int get rank;
@@ -2622,7 +2640,7 @@ class _$HumanNameTearOff {
   _HumanName call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      HumanNameUse use,
+      @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
       String text,
       String family,
       List<String> given,
@@ -2650,6 +2668,7 @@ mixin _$HumanName {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
+  @JsonKey(unknownEnumValue: HumanNameUse.unknown)
   HumanNameUse get use;
   String get text;
   String get family;
@@ -2668,7 +2687,7 @@ abstract class $HumanNameCopyWith<$Res> {
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      HumanNameUse use,
+      @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
       String text,
       String family,
       List<String> given,
@@ -2732,7 +2751,7 @@ abstract class _$HumanNameCopyWith<$Res> implements $HumanNameCopyWith<$Res> {
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      HumanNameUse use,
+      @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
       String text,
       String family,
       List<String> given,
@@ -2785,7 +2804,7 @@ class _$_HumanName implements _HumanName {
   const _$_HumanName(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
-      this.use,
+      @JsonKey(unknownEnumValue: HumanNameUse.unknown) this.use,
       this.text,
       this.family,
       this.given,
@@ -2802,6 +2821,7 @@ class _$_HumanName implements _HumanName {
   @JsonKey(name: 'extension')
   final List<FhirExtension> fhirExtension;
   @override
+  @JsonKey(unknownEnumValue: HumanNameUse.unknown)
   final HumanNameUse use;
   @override
   final String text;
@@ -2873,7 +2893,7 @@ abstract class _HumanName implements HumanName {
   const factory _HumanName(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      HumanNameUse use,
+      @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
       String text,
       String family,
       List<String> given,
@@ -2890,6 +2910,7 @@ abstract class _HumanName implements HumanName {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   @override
+  @JsonKey(unknownEnumValue: HumanNameUse.unknown)
   HumanNameUse get use;
   @override
   String get text;
@@ -2917,7 +2938,7 @@ class _$IdentifierTearOff {
   _Identifier call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      IdentifierUse use,
+      @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
       CodeableConcept type,
       FhirUri system,
       String value,
@@ -2943,6 +2964,7 @@ mixin _$Identifier {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
+  @JsonKey(unknownEnumValue: IdentifierUse.unknown)
   IdentifierUse get use;
   CodeableConcept get type;
   FhirUri get system;
@@ -2961,7 +2983,7 @@ abstract class $IdentifierCopyWith<$Res> {
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      IdentifierUse use,
+      @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
       CodeableConcept type,
       FhirUri system,
       String value,
@@ -3044,7 +3066,7 @@ abstract class _$IdentifierCopyWith<$Res> implements $IdentifierCopyWith<$Res> {
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      IdentifierUse use,
+      @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
       CodeableConcept type,
       FhirUri system,
       String value,
@@ -3099,7 +3121,7 @@ class _$_Identifier implements _Identifier {
   const _$_Identifier(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
-      this.use,
+      @JsonKey(unknownEnumValue: IdentifierUse.unknown) this.use,
       this.type,
       this.system,
       this.value,
@@ -3115,6 +3137,7 @@ class _$_Identifier implements _Identifier {
   @JsonKey(name: 'extension')
   final List<FhirExtension> fhirExtension;
   @override
+  @JsonKey(unknownEnumValue: IdentifierUse.unknown)
   final IdentifierUse use;
   @override
   final CodeableConcept type;
@@ -3182,7 +3205,7 @@ abstract class _Identifier implements Identifier {
   const factory _Identifier(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      IdentifierUse use,
+      @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
       CodeableConcept type,
       FhirUri system,
       String value,
@@ -3198,6 +3221,7 @@ abstract class _Identifier implements Identifier {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   @override
+  @JsonKey(unknownEnumValue: IdentifierUse.unknown)
   IdentifierUse get use;
   @override
   CodeableConcept get type;
@@ -5165,7 +5189,8 @@ class _$TimingRepeatTearOff {
 
   _TimingRepeat call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Duration boundsDuration,
       Range boundsRange,
@@ -5174,7 +5199,8 @@ class _$TimingRepeatTearOff {
       int countMax,
       double duration,
       double durationMax,
-      TimingRepeatUnit durationUnit,
+      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
+          TimingRepeatUnit durationUnit,
       int frequency,
       int frequencyMax,
       double period,
@@ -5182,7 +5208,8 @@ class _$TimingRepeatTearOff {
       TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
-      @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
+      @JsonKey(name: 'when')
+          List<TimingRepeatWhen> timingRepeatWhenList,
       int offset}) {
     return _TimingRepeat(
       id: id,
@@ -5224,6 +5251,7 @@ mixin _$TimingRepeat {
   int get countMax;
   double get duration;
   double get durationMax;
+  @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
   TimingRepeatUnit get durationUnit;
   int get frequency;
   int get frequencyMax;
@@ -5246,7 +5274,8 @@ abstract class $TimingRepeatCopyWith<$Res> {
       _$TimingRepeatCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Duration boundsDuration,
       Range boundsRange,
@@ -5255,7 +5284,8 @@ abstract class $TimingRepeatCopyWith<$Res> {
       int countMax,
       double duration,
       double durationMax,
-      TimingRepeatUnit durationUnit,
+      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
+          TimingRepeatUnit durationUnit,
       int frequency,
       int frequencyMax,
       double period,
@@ -5263,7 +5293,8 @@ abstract class $TimingRepeatCopyWith<$Res> {
       TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
-      @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
+      @JsonKey(name: 'when')
+          List<TimingRepeatWhen> timingRepeatWhenList,
       int offset});
 
   $DurationCopyWith<$Res> get boundsDuration;
@@ -5383,7 +5414,8 @@ abstract class _$TimingRepeatCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Duration boundsDuration,
       Range boundsRange,
@@ -5392,7 +5424,8 @@ abstract class _$TimingRepeatCopyWith<$Res>
       int countMax,
       double duration,
       double durationMax,
-      TimingRepeatUnit durationUnit,
+      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
+          TimingRepeatUnit durationUnit,
       int frequency,
       int frequencyMax,
       double period,
@@ -5400,7 +5433,8 @@ abstract class _$TimingRepeatCopyWith<$Res>
       TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
-      @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
+      @JsonKey(name: 'when')
+          List<TimingRepeatWhen> timingRepeatWhenList,
       int offset});
 
   @override
@@ -5500,7 +5534,7 @@ class _$_TimingRepeat implements _TimingRepeat {
       this.countMax,
       this.duration,
       this.durationMax,
-      this.durationUnit,
+      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown) this.durationUnit,
       this.frequency,
       this.frequencyMax,
       this.period,
@@ -5536,6 +5570,7 @@ class _$_TimingRepeat implements _TimingRepeat {
   @override
   final double durationMax;
   @override
+  @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
   final TimingRepeatUnit durationUnit;
   @override
   final int frequency;
@@ -5661,7 +5696,8 @@ class _$_TimingRepeat implements _TimingRepeat {
 abstract class _TimingRepeat implements TimingRepeat {
   const factory _TimingRepeat(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Duration boundsDuration,
       Range boundsRange,
@@ -5670,7 +5706,8 @@ abstract class _TimingRepeat implements TimingRepeat {
       int countMax,
       double duration,
       double durationMax,
-      TimingRepeatUnit durationUnit,
+      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
+          TimingRepeatUnit durationUnit,
       int frequency,
       int frequencyMax,
       double period,
@@ -5678,7 +5715,8 @@ abstract class _TimingRepeat implements TimingRepeat {
       TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
-      @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
+      @JsonKey(name: 'when')
+          List<TimingRepeatWhen> timingRepeatWhenList,
       int offset}) = _$_TimingRepeat;
 
   factory _TimingRepeat.fromJson(Map<String, dynamic> json) =
@@ -5706,6 +5744,7 @@ abstract class _TimingRepeat implements TimingRepeat {
   @override
   double get durationMax;
   @override
+  @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
   TimingRepeatUnit get durationUnit;
   @override
   int get frequency;

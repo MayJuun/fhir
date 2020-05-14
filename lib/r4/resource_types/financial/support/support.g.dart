@@ -58,25 +58,36 @@ _$_EnrollmentRequest _$_$_EnrollmentRequestFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_EnrollmentRequestToJson(
-        _$_EnrollmentRequest instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': instance.status,
-      'created': instance.created,
-      'insurer': instance.insurer,
-      'provider': instance.provider,
-      'candidate': instance.candidate,
-      'coverage': instance.coverage,
-    };
+    _$_EnrollmentRequest instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('insurer', instance.insurer?.toJson());
+  writeNotNull('provider', instance.provider?.toJson());
+  writeNotNull('candidate', instance.candidate?.toJson());
+  writeNotNull('coverage', instance.coverage?.toJson());
+  return val;
+}
 
 _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
     Map<String, dynamic> json) {
@@ -130,25 +141,36 @@ _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
 }
 
 Map<String, dynamic> _$_$_EnrollmentResponseToJson(
-        _$_EnrollmentResponse instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': instance.status,
-      'request': instance.request,
-      'outcome': _$EnrollmentResponseOutcomeEnumMap[instance.outcome],
-      'disposition': instance.disposition,
-      'created': instance.created,
-      'organization': instance.organization,
-      'requestProvider': instance.requestProvider,
-    };
+    _$_EnrollmentResponse instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('request', instance.request?.toJson());
+  writeNotNull('outcome', _$EnrollmentResponseOutcomeEnumMap[instance.outcome]);
+  writeNotNull('disposition', instance.disposition);
+  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('organization', instance.organization?.toJson());
+  writeNotNull('requestProvider', instance.requestProvider?.toJson());
+  return val;
+}
 
 T _$enumDecode<T>(
   Map<T, dynamic> enumValues,
@@ -264,33 +286,45 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
 }
 
 Map<String, dynamic> _$_$_CoverageEligibilityResponseToJson(
-        _$_CoverageEligibilityResponse instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'identifier': instance.identifier,
-      'status': instance.status,
-      'purpose': instance.purpose,
-      'patient': instance.patient,
-      'servicedDate': instance.servicedDate,
-      'servicedPeriod': instance.servicedPeriod,
-      'created': instance.created,
-      'requestor': instance.requestor,
-      'request': instance.request,
-      'outcome': _$CoverageEligibilityResponseOutcomeEnumMap[instance.outcome],
-      'disposition': instance.disposition,
-      'insurer': instance.insurer,
-      'insurance': instance.insurance,
-      'preAuthRef': instance.preAuthRef,
-      'form': instance.form,
-      'error': instance.error,
-    };
+    _$_CoverageEligibilityResponse instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('purpose', instance.purpose);
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('servicedDate', instance.servicedDate?.toJson());
+  writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
+  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('requestor', instance.requestor?.toJson());
+  writeNotNull('request', instance.request?.toJson());
+  writeNotNull(
+      'outcome', _$CoverageEligibilityResponseOutcomeEnumMap[instance.outcome]);
+  writeNotNull('disposition', instance.disposition);
+  writeNotNull('insurer', instance.insurer?.toJson());
+  writeNotNull(
+      'insurance', instance.insurance?.map((e) => e?.toJson())?.toList());
+  writeNotNull('preAuthRef', instance.preAuthRef);
+  writeNotNull('form', instance.form?.toJson());
+  writeNotNull('error', instance.error?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$CoverageEligibilityResponseOutcomeEnumMap = {
   CoverageEligibilityResponseOutcome.queued: 'queued',
@@ -329,15 +363,25 @@ _$_CoverageEligibilityResponseInsurance
 }
 
 Map<String, dynamic> _$_$_CoverageEligibilityResponseInsuranceToJson(
-        _$_CoverageEligibilityResponseInsurance instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'coverage': instance.coverage,
-      'inforce': instance.inforce,
-      'item': instance.item,
-    };
+    _$_CoverageEligibilityResponseInsurance instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('coverage', instance.coverage?.toJson());
+  writeNotNull('inforce', instance.inforce);
+  writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_CoverageEligibilityResponseItem _$_$_CoverageEligibilityResponseItemFromJson(
     Map<String, dynamic> json) {
@@ -399,26 +443,38 @@ _$_CoverageEligibilityResponseItem _$_$_CoverageEligibilityResponseItemFromJson(
 }
 
 Map<String, dynamic> _$_$_CoverageEligibilityResponseItemToJson(
-        _$_CoverageEligibilityResponseItem instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'category': instance.category,
-      'productOrService': instance.productOrService,
-      'modifier': instance.modifier,
-      'provider': instance.provider,
-      'excluded': instance.excluded,
-      'name': instance.name,
-      'description': instance.description,
-      'network': instance.network,
-      'unit': instance.unit,
-      'term': instance.term,
-      'benefit': instance.benefit,
-      'authorizationRequired': instance.authorizationRequired,
-      'authorizationSupporting': instance.authorizationSupporting,
-      'authorizationUrl': instance.authorizationUrl,
-    };
+    _$_CoverageEligibilityResponseItem instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('category', instance.category?.toJson());
+  writeNotNull('productOrService', instance.productOrService?.toJson());
+  writeNotNull(
+      'modifier', instance.modifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('provider', instance.provider?.toJson());
+  writeNotNull('excluded', instance.excluded);
+  writeNotNull('name', instance.name);
+  writeNotNull('description', instance.description);
+  writeNotNull('network', instance.network?.toJson());
+  writeNotNull('unit', instance.unit?.toJson());
+  writeNotNull('term', instance.term?.toJson());
+  writeNotNull('benefit', instance.benefit?.map((e) => e?.toJson())?.toList());
+  writeNotNull('authorizationRequired', instance.authorizationRequired);
+  writeNotNull('authorizationSupporting',
+      instance.authorizationSupporting?.map((e) => e?.toJson())?.toList());
+  writeNotNull('authorizationUrl', instance.authorizationUrl?.toJson());
+  return val;
+}
 
 _$_CoverageEligibilityResponseBenefit
     _$_$_CoverageEligibilityResponseBenefitFromJson(Map<String, dynamic> json) {
@@ -451,19 +507,29 @@ _$_CoverageEligibilityResponseBenefit
 }
 
 Map<String, dynamic> _$_$_CoverageEligibilityResponseBenefitToJson(
-        _$_CoverageEligibilityResponseBenefit instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'allowedUnsignedInt': instance.allowedUnsignedInt,
-      'allowedString': instance.allowedString,
-      'allowedMoney': instance.allowedMoney,
-      'usedUnsignedInt': instance.usedUnsignedInt,
-      'usedString': instance.usedString,
-      'usedMoney': instance.usedMoney,
-    };
+    _$_CoverageEligibilityResponseBenefit instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('allowedUnsignedInt', instance.allowedUnsignedInt);
+  writeNotNull('allowedString', instance.allowedString);
+  writeNotNull('allowedMoney', instance.allowedMoney?.toJson());
+  writeNotNull('usedUnsignedInt', instance.usedUnsignedInt);
+  writeNotNull('usedString', instance.usedString);
+  writeNotNull('usedMoney', instance.usedMoney?.toJson());
+  return val;
+}
 
 _$_CoverageEligibilityResponseError
     _$_$_CoverageEligibilityResponseErrorFromJson(Map<String, dynamic> json) {
@@ -486,13 +552,23 @@ _$_CoverageEligibilityResponseError
 }
 
 Map<String, dynamic> _$_$_CoverageEligibilityResponseErrorToJson(
-        _$_CoverageEligibilityResponseError instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'code': instance.code,
-    };
+    _$_CoverageEligibilityResponseError instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('code', instance.code?.toJson());
+  return val;
+}
 
 _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
     Map<String, dynamic> json) {
@@ -578,33 +654,46 @@ _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
 }
 
 Map<String, dynamic> _$_$_CoverageEligibilityRequestToJson(
-        _$_CoverageEligibilityRequest instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': instance.status,
-      'priority': instance.priority,
-      'purpose': instance.purpose,
-      'patient': instance.patient,
-      'servicedDate': instance.servicedDate,
-      'servicedPeriod': instance.servicedPeriod,
-      'created': instance.created,
-      'enterer': instance.enterer,
-      'provider': instance.provider,
-      'insurer': instance.insurer,
-      'facility': instance.facility,
-      'supportingInfo': instance.supportingInfo,
-      'insurance': instance.insurance,
-      'item': instance.item,
-    };
+    _$_CoverageEligibilityRequest instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('purpose', instance.purpose);
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('servicedDate', instance.servicedDate?.toJson());
+  writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
+  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('enterer', instance.enterer?.toJson());
+  writeNotNull('provider', instance.provider?.toJson());
+  writeNotNull('insurer', instance.insurer?.toJson());
+  writeNotNull('facility', instance.facility?.toJson());
+  writeNotNull('supportingInfo',
+      instance.supportingInfo?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'insurance', instance.insurance?.map((e) => e?.toJson())?.toList());
+  writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_CoverageEligibilityRequestSupportingInfo
     _$_$_CoverageEligibilityRequestSupportingInfoFromJson(
@@ -630,15 +719,25 @@ _$_CoverageEligibilityRequestSupportingInfo
 }
 
 Map<String, dynamic> _$_$_CoverageEligibilityRequestSupportingInfoToJson(
-        _$_CoverageEligibilityRequestSupportingInfo instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'sequence': instance.sequence,
-      'information': instance.information,
-      'appliesToAll': instance.appliesToAll,
-    };
+    _$_CoverageEligibilityRequestSupportingInfo instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('sequence', instance.sequence);
+  writeNotNull('information', instance.information?.toJson());
+  writeNotNull('appliesToAll', instance.appliesToAll);
+  return val;
+}
 
 _$_CoverageEligibilityRequestInsurance
     _$_$_CoverageEligibilityRequestInsuranceFromJson(
@@ -664,15 +763,25 @@ _$_CoverageEligibilityRequestInsurance
 }
 
 Map<String, dynamic> _$_$_CoverageEligibilityRequestInsuranceToJson(
-        _$_CoverageEligibilityRequestInsurance instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'focal': instance.focal,
-      'coverage': instance.coverage,
-      'businessArrangement': instance.businessArrangement,
-    };
+    _$_CoverageEligibilityRequestInsurance instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('focal', instance.focal);
+  writeNotNull('coverage', instance.coverage?.toJson());
+  writeNotNull('businessArrangement', instance.businessArrangement);
+  return val;
+}
 
 _$_CoverageEligibilityRequestItem _$_$_CoverageEligibilityRequestItemFromJson(
     Map<String, dynamic> json) {
@@ -729,22 +838,34 @@ _$_CoverageEligibilityRequestItem _$_$_CoverageEligibilityRequestItemFromJson(
 }
 
 Map<String, dynamic> _$_$_CoverageEligibilityRequestItemToJson(
-        _$_CoverageEligibilityRequestItem instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'supportingInfoSequence': instance.supportingInfoSequence,
-      'category': instance.category,
-      'productOrService': instance.productOrService,
-      'modifier': instance.modifier,
-      'provider': instance.provider,
-      'quantity': instance.quantity,
-      'unitPrice': instance.unitPrice,
-      'facility': instance.facility,
-      'diagnosis': instance.diagnosis,
-      'detail': instance.detail,
-    };
+    _$_CoverageEligibilityRequestItem instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('supportingInfoSequence', instance.supportingInfoSequence);
+  writeNotNull('category', instance.category?.toJson());
+  writeNotNull('productOrService', instance.productOrService?.toJson());
+  writeNotNull(
+      'modifier', instance.modifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('provider', instance.provider?.toJson());
+  writeNotNull('quantity', instance.quantity?.toJson());
+  writeNotNull('unitPrice', instance.unitPrice?.toJson());
+  writeNotNull('facility', instance.facility?.toJson());
+  writeNotNull(
+      'diagnosis', instance.diagnosis?.map((e) => e?.toJson())?.toList());
+  writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_CoverageEligibilityRequestDiagnosis
     _$_$_CoverageEligibilityRequestDiagnosisFromJson(
@@ -773,14 +894,25 @@ _$_CoverageEligibilityRequestDiagnosis
 }
 
 Map<String, dynamic> _$_$_CoverageEligibilityRequestDiagnosisToJson(
-        _$_CoverageEligibilityRequestDiagnosis instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'diagnosisCodeableConcept': instance.diagnosisCodeableConcept,
-      'diagnosisReference': instance.diagnosisReference,
-    };
+    _$_CoverageEligibilityRequestDiagnosis instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'diagnosisCodeableConcept', instance.diagnosisCodeableConcept?.toJson());
+  writeNotNull('diagnosisReference', instance.diagnosisReference?.toJson());
+  return val;
+}
 
 _$_Coverage _$_$_CoverageFromJson(Map<String, dynamic> json) {
   return _$_Coverage(
@@ -860,35 +992,48 @@ _$_Coverage _$_$_CoverageFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_CoverageToJson(_$_Coverage instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': instance.status,
-      'type': instance.type,
-      'policyHolder': instance.policyHolder,
-      'subscriber': instance.subscriber,
-      'subscriberId': instance.subscriberId,
-      'beneficiary': instance.beneficiary,
-      'dependent': instance.dependent,
-      'relationship': instance.relationship,
-      'period': instance.period,
-      'payor': instance.payor,
-      'class': instance.clas,
-      'order': instance.order,
-      'network': instance.network,
-      'costToBeneficiary': instance.costToBeneficiary,
-      'subrogation': instance.subrogation,
-      'contract': instance.contract,
-    };
+Map<String, dynamic> _$_$_CoverageToJson(_$_Coverage instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('policyHolder', instance.policyHolder?.toJson());
+  writeNotNull('subscriber', instance.subscriber?.toJson());
+  writeNotNull('subscriberId', instance.subscriberId);
+  writeNotNull('beneficiary', instance.beneficiary?.toJson());
+  writeNotNull('dependent', instance.dependent);
+  writeNotNull('relationship', instance.relationship?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('payor', instance.payor?.map((e) => e?.toJson())?.toList());
+  writeNotNull('class', instance.clas?.map((e) => e?.toJson())?.toList());
+  writeNotNull('order', instance.order);
+  writeNotNull('network', instance.network);
+  writeNotNull('costToBeneficiary',
+      instance.costToBeneficiary?.map((e) => e?.toJson())?.toList());
+  writeNotNull('subrogation', instance.subrogation);
+  writeNotNull(
+      'contract', instance.contract?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_CoverageClass _$_$_CoverageClassFromJson(Map<String, dynamic> json) {
   return _$_CoverageClass(
@@ -911,15 +1056,25 @@ _$_CoverageClass _$_$_CoverageClassFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_CoverageClassToJson(_$_CoverageClass instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'value': instance.value,
-      'name': instance.name,
-    };
+Map<String, dynamic> _$_$_CoverageClassToJson(_$_CoverageClass instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('value', instance.value);
+  writeNotNull('name', instance.name);
+  return val;
+}
 
 _$_CoverageCostToBeneficiary _$_$_CoverageCostToBeneficiaryFromJson(
     Map<String, dynamic> json) {
@@ -953,16 +1108,27 @@ _$_CoverageCostToBeneficiary _$_$_CoverageCostToBeneficiaryFromJson(
 }
 
 Map<String, dynamic> _$_$_CoverageCostToBeneficiaryToJson(
-        _$_CoverageCostToBeneficiary instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'valueQuantity': instance.valueQuantity,
-      'valueMoney': instance.valueMoney,
-      'exception': instance.exception,
-    };
+    _$_CoverageCostToBeneficiary instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueMoney', instance.valueMoney?.toJson());
+  writeNotNull(
+      'exception', instance.exception?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_CoverageException _$_$_CoverageExceptionFromJson(Map<String, dynamic> json) {
   return _$_CoverageException(
@@ -987,11 +1153,21 @@ _$_CoverageException _$_$_CoverageExceptionFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_CoverageExceptionToJson(
-        _$_CoverageException instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'period': instance.period,
-    };
+    _$_CoverageException instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  return val;
+}

@@ -108,38 +108,54 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
 }
 
 Map<String, dynamic> _$_$_ClinicalImpressionToJson(
-        _$_ClinicalImpression instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': instance.status,
-      'statusReason': instance.statusReason,
-      'code': instance.code,
-      'description': instance.description,
-      'subject': instance.subject,
-      'encounter': instance.encounter,
-      'effectiveDateTime': instance.effectiveDateTime,
-      'effectivePeriod': instance.effectivePeriod,
-      'date': instance.date,
-      'assessor': instance.assessor,
-      'previous': instance.previous,
-      'problem': instance.problem,
-      'investigation': instance.investigation,
-      'protocol': instance.protocol,
-      'finding': instance.finding,
-      'prognosisCodeableConcept': instance.prognosisCodeableConcept,
-      'prognosisReference': instance.prognosisReference,
-      'supportingInfo': instance.supportingInfo,
-      'note': instance.note,
-    };
+    _$_ClinicalImpression instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('statusReason', instance.statusReason?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('description', instance.description);
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('effectiveDateTime', instance.effectiveDateTime?.toJson());
+  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('assessor', instance.assessor?.toJson());
+  writeNotNull('previous', instance.previous?.toJson());
+  writeNotNull('problem', instance.problem?.map((e) => e?.toJson())?.toList());
+  writeNotNull('investigation',
+      instance.investigation?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'protocol', instance.protocol?.map((e) => e?.toJson())?.toList());
+  writeNotNull('finding', instance.finding?.map((e) => e?.toJson())?.toList());
+  writeNotNull('prognosisCodeableConcept',
+      instance.prognosisCodeableConcept?.map((e) => e?.toJson())?.toList());
+  writeNotNull('prognosisReference',
+      instance.prognosisReference?.map((e) => e?.toJson())?.toList());
+  writeNotNull('supportingInfo',
+      instance.supportingInfo?.map((e) => e?.toJson())?.toList());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_ClinicalImpressionInvestigation _$_$_ClinicalImpressionInvestigationFromJson(
     Map<String, dynamic> json) {
@@ -166,14 +182,24 @@ _$_ClinicalImpressionInvestigation _$_$_ClinicalImpressionInvestigationFromJson(
 }
 
 Map<String, dynamic> _$_$_ClinicalImpressionInvestigationToJson(
-        _$_ClinicalImpressionInvestigation instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'code': instance.code,
-      'item': instance.item,
-    };
+    _$_ClinicalImpressionInvestigation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_ClinicalImpressionFinding _$_$_ClinicalImpressionFindingFromJson(
     Map<String, dynamic> json) {
@@ -201,15 +227,25 @@ _$_ClinicalImpressionFinding _$_$_ClinicalImpressionFindingFromJson(
 }
 
 Map<String, dynamic> _$_$_ClinicalImpressionFindingToJson(
-        _$_ClinicalImpressionFinding instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'itemCodeableConcept': instance.itemCodeableConcept,
-      'itemReference': instance.itemReference,
-      'basis': instance.basis,
-    };
+    _$_ClinicalImpressionFinding instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());
+  writeNotNull('itemReference', instance.itemReference?.toJson());
+  writeNotNull('basis', instance.basis);
+  return val;
+}
 
 _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
     Map<String, dynamic> json) {
@@ -302,40 +338,53 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
 }
 
 Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
-        _$_AllergyIntolerance instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'clinicalStatus': instance.clinicalStatus,
-      'verificationStatus': instance.verificationStatus,
-      'type': _$AllergyIntoleranceTypeEnumMap[instance.type],
-      'category': instance.category
+    _$_AllergyIntolerance instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('clinicalStatus', instance.clinicalStatus?.toJson());
+  writeNotNull('verificationStatus', instance.verificationStatus?.toJson());
+  writeNotNull('type', _$AllergyIntoleranceTypeEnumMap[instance.type]);
+  writeNotNull(
+      'category',
+      instance.category
           ?.map((e) => _$AllergyIntoleranceCategoryEnumMap[e])
-          ?.toList(),
-      'criticality':
-          _$AllergyIntoleranceCriticalityEnumMap[instance.criticality],
-      'code': instance.code,
-      'patient': instance.patient,
-      'encounter': instance.encounter,
-      'onsetDateTime': instance.onsetDateTime,
-      'onsetAge': instance.onsetAge,
-      'onsetPeriod': instance.onsetPeriod,
-      'onsetRange': instance.onsetRange,
-      'onsetString': instance.onsetString,
-      'recordedDate': instance.recordedDate,
-      'recorder': instance.recorder,
-      'asserter': instance.asserter,
-      'lastOccurrence': instance.lastOccurrence,
-      'note': instance.note,
-      'reaction': instance.reaction,
-    };
+          ?.toList());
+  writeNotNull('criticality',
+      _$AllergyIntoleranceCriticalityEnumMap[instance.criticality]);
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('onsetDateTime', instance.onsetDateTime?.toJson());
+  writeNotNull('onsetAge', instance.onsetAge?.toJson());
+  writeNotNull('onsetPeriod', instance.onsetPeriod?.toJson());
+  writeNotNull('onsetRange', instance.onsetRange?.toJson());
+  writeNotNull('onsetString', instance.onsetString?.toJson());
+  writeNotNull('recordedDate', instance.recordedDate?.toJson());
+  writeNotNull('recorder', instance.recorder?.toJson());
+  writeNotNull('asserter', instance.asserter?.toJson());
+  writeNotNull('lastOccurrence', instance.lastOccurrence?.toJson());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'reaction', instance.reaction?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 T _$enumDecode<T>(
   Map<T, dynamic> enumValues,
@@ -429,19 +478,30 @@ _$_AllergyIntoleranceReaction _$_$_AllergyIntoleranceReactionFromJson(
 }
 
 Map<String, dynamic> _$_$_AllergyIntoleranceReactionToJson(
-        _$_AllergyIntoleranceReaction instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'substance': instance.substance,
-      'manifestation': instance.manifestation,
-      'onset': instance.onset,
-      'severity':
-          _$AllergyIntoleranceReactionSeverityEnumMap[instance.severity],
-      'exposureRoute': instance.exposureRoute,
-      'note': instance.note,
-    };
+    _$_AllergyIntoleranceReaction instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('substance', instance.substance?.toJson());
+  writeNotNull('manifestation',
+      instance.manifestation?.map((e) => e?.toJson())?.toList());
+  writeNotNull('onset', instance.onset?.toJson());
+  writeNotNull('severity',
+      _$AllergyIntoleranceReactionSeverityEnumMap[instance.severity]);
+  writeNotNull('exposureRoute', instance.exposureRoute?.toJson());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$AllergyIntoleranceReactionSeverityEnumMap = {
   AllergyIntoleranceReactionSeverity.mild: 'mild',
@@ -545,37 +605,53 @@ _$_AdverseEvent _$_$_AdverseEventFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_AdverseEventToJson(_$_AdverseEvent instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'actuality': _$AdverseEventActualityEnumMap[instance.actuality],
-      'category': instance.category,
-      'event': instance.event,
-      'subject': instance.subject,
-      'encounter': instance.encounter,
-      'date': instance.date,
-      'detected': instance.detected,
-      'recordedDate': instance.recordedDate,
-      'resultingCondition': instance.resultingCondition,
-      'location': instance.location,
-      'seriousness': instance.seriousness,
-      'severity': instance.severity,
-      'outcome': instance.outcome,
-      'recorder': instance.recorder,
-      'contributor': instance.contributor,
-      'suspectEntity': instance.suspectEntity,
-      'subjectMedicalHistory': instance.subjectMedicalHistory,
-      'referenceDocument': instance.referenceDocument,
-      'study': instance.study,
-    };
+Map<String, dynamic> _$_$_AdverseEventToJson(_$_AdverseEvent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('actuality', _$AdverseEventActualityEnumMap[instance.actuality]);
+  writeNotNull(
+      'category', instance.category?.map((e) => e?.toJson())?.toList());
+  writeNotNull('event', instance.event?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('detected', instance.detected?.toJson());
+  writeNotNull('recordedDate', instance.recordedDate?.toJson());
+  writeNotNull('resultingCondition',
+      instance.resultingCondition?.map((e) => e?.toJson())?.toList());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('seriousness', instance.seriousness?.toJson());
+  writeNotNull('severity', instance.severity?.toJson());
+  writeNotNull('outcome', instance.outcome?.toJson());
+  writeNotNull('recorder', instance.recorder?.toJson());
+  writeNotNull(
+      'contributor', instance.contributor?.map((e) => e?.toJson())?.toList());
+  writeNotNull('suspectEntity',
+      instance.suspectEntity?.map((e) => e?.toJson())?.toList());
+  writeNotNull('subjectMedicalHistory',
+      instance.subjectMedicalHistory?.map((e) => e?.toJson())?.toList());
+  writeNotNull('referenceDocument',
+      instance.referenceDocument?.map((e) => e?.toJson())?.toList());
+  writeNotNull('study', instance.study?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$AdverseEventActualityEnumMap = {
   AdverseEventActuality.actual: 'actual',
@@ -608,13 +684,24 @@ _$_AdverseEventSuspectEntity _$_$_AdverseEventSuspectEntityFromJson(
 }
 
 Map<String, dynamic> _$_$_AdverseEventSuspectEntityToJson(
-        _$_AdverseEventSuspectEntity instance) =>
-    <String, dynamic>{
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'instance': instance.instance,
-      'causality': instance.causality,
-    };
+    _$_AdverseEventSuspectEntity instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('instance', instance.instance?.toJson());
+  writeNotNull(
+      'causality', instance.causality?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_AdverseEventCausality _$_$_AdverseEventCausalityFromJson(
     Map<String, dynamic> json) {
@@ -644,16 +731,26 @@ _$_AdverseEventCausality _$_$_AdverseEventCausalityFromJson(
 }
 
 Map<String, dynamic> _$_$_AdverseEventCausalityToJson(
-        _$_AdverseEventCausality instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'assessment': instance.assessment,
-      'productRelatedness': instance.productRelatedness,
-      'author': instance.author,
-      'method': instance.method,
-    };
+    _$_AdverseEventCausality instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('assessment', instance.assessment?.toJson());
+  writeNotNull('productRelatedness', instance.productRelatedness);
+  writeNotNull('author', instance.author?.toJson());
+  writeNotNull('method', instance.method?.toJson());
+  return val;
+}
 
 _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     Map<String, dynamic> json) {
@@ -754,42 +851,57 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
 }
 
 Map<String, dynamic> _$_$_FamilyMemberHistoryToJson(
-        _$_FamilyMemberHistory instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'instantiatesCanonical': instance.instantiatesCanonical,
-      'instantiatesUri': instance.instantiatesUri,
-      'status': _$FamilyMemberHistoryStatusEnumMap[instance.status],
-      'dataAbsentReason': instance.dataAbsentReason,
-      'patient': instance.patient,
-      'date': instance.date,
-      'name': instance.name,
-      'relationship': instance.relationship,
-      'sex': instance.sex,
-      'bornPeriod': instance.bornPeriod,
-      'bornString': instance.bornString,
-      'ageAge': instance.ageAge,
-      'ageRange': instance.ageRange,
-      'ageString': instance.ageString,
-      'estimatedAge': instance.estimatedAge,
-      'deceasedBoolean': instance.deceasedBoolean,
-      'deceasedAge': instance.deceasedAge,
-      'deceasedRange': instance.deceasedRange,
-      'deceasedDate': instance.deceasedDate,
-      'deceasedString': instance.deceasedString,
-      'reasonCode': instance.reasonCode,
-      'note': instance.note,
-      'condition': instance.condition,
-    };
+    _$_FamilyMemberHistory instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('instantiatesCanonical',
+      instance.instantiatesCanonical?.map((e) => e?.toJson())?.toList());
+  writeNotNull('instantiatesUri',
+      instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$FamilyMemberHistoryStatusEnumMap[instance.status]);
+  writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('name', instance.name);
+  writeNotNull('relationship', instance.relationship?.toJson());
+  writeNotNull('sex', instance.sex?.toJson());
+  writeNotNull('bornPeriod', instance.bornPeriod?.toJson());
+  writeNotNull('bornString', instance.bornString);
+  writeNotNull('ageAge', instance.ageAge?.toJson());
+  writeNotNull('ageRange', instance.ageRange?.toJson());
+  writeNotNull('ageString', instance.ageString);
+  writeNotNull('estimatedAge', instance.estimatedAge);
+  writeNotNull('deceasedBoolean', instance.deceasedBoolean);
+  writeNotNull('deceasedAge', instance.deceasedAge?.toJson());
+  writeNotNull('deceasedRange', instance.deceasedRange?.toJson());
+  writeNotNull('deceasedDate', instance.deceasedDate?.toJson());
+  writeNotNull('deceasedString', instance.deceasedString);
+  writeNotNull(
+      'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'condition', instance.condition?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$FamilyMemberHistoryStatusEnumMap = {
   FamilyMemberHistoryStatus.partial: 'partial',
@@ -837,20 +949,30 @@ _$_FamilyMemberHistoryCondition _$_$_FamilyMemberHistoryConditionFromJson(
 }
 
 Map<String, dynamic> _$_$_FamilyMemberHistoryConditionToJson(
-        _$_FamilyMemberHistoryCondition instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'code': instance.code,
-      'outcome': instance.outcome,
-      'contributedToDeath': instance.contributedToDeath,
-      'onsetAge': instance.onsetAge,
-      'onsetRange': instance.onsetRange,
-      'onsetPeriod': instance.onsetPeriod,
-      'onsetString': instance.onsetString,
-      'note': instance.note,
-    };
+    _$_FamilyMemberHistoryCondition instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('outcome', instance.outcome?.toJson());
+  writeNotNull('contributedToDeath', instance.contributedToDeath);
+  writeNotNull('onsetAge', instance.onsetAge?.toJson());
+  writeNotNull('onsetRange', instance.onsetRange?.toJson());
+  writeNotNull('onsetPeriod', instance.onsetPeriod?.toJson());
+  writeNotNull('onsetString', instance.onsetString);
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
   return _$_DetectedIssue(
@@ -920,30 +1042,44 @@ _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DetectedIssueToJson(_$_DetectedIssue instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': instance.status,
-      'code': instance.code,
-      'severity': _$DetectedIssueSeverityEnumMap[instance.severity],
-      'patient': instance.patient,
-      'identifiedPeriod': instance.identifiedPeriod,
-      'author': instance.author,
-      'implicated': instance.implicated,
-      'evidence': instance.evidence,
-      'detail': instance.detail,
-      'reference': instance.reference,
-      'mitigation': instance.mitigation,
-    };
+Map<String, dynamic> _$_$_DetectedIssueToJson(_$_DetectedIssue instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('severity', _$DetectedIssueSeverityEnumMap[instance.severity]);
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('identifiedPeriod', instance.identifiedPeriod?.toJson());
+  writeNotNull('author', instance.author?.toJson());
+  writeNotNull(
+      'implicated', instance.implicated?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'evidence', instance.evidence?.map((e) => e?.toJson())?.toList());
+  writeNotNull('detail', instance.detail);
+  writeNotNull('reference', instance.reference?.toJson());
+  writeNotNull(
+      'mitigation', instance.mitigation?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$DetectedIssueSeverityEnumMap = {
   DetectedIssueSeverity.high: 'high',
@@ -979,14 +1115,24 @@ _$_DetectedIssueEvidence _$_$_DetectedIssueEvidenceFromJson(
 }
 
 Map<String, dynamic> _$_$_DetectedIssueEvidenceToJson(
-        _$_DetectedIssueEvidence instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'code': instance.code,
-      'detail': instance.detail,
-    };
+    _$_DetectedIssueEvidence instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
+  writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_DetectedIssueMitigation _$_$_DetectedIssueMitigationFromJson(
     Map<String, dynamic> json) {
@@ -1015,15 +1161,25 @@ _$_DetectedIssueMitigation _$_$_DetectedIssueMitigationFromJson(
 }
 
 Map<String, dynamic> _$_$_DetectedIssueMitigationToJson(
-        _$_DetectedIssueMitigation instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'action': instance.action,
-      'date': instance.date,
-      'author': instance.author,
-    };
+    _$_DetectedIssueMitigation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('action', instance.action?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('author', instance.author?.toJson());
+  return val;
+}
 
 _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
   return _$_Condition(
@@ -1130,41 +1286,54 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ConditionToJson(_$_Condition instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'clinicalStatus': instance.clinicalStatus,
-      'verificationStatus': instance.verificationStatus,
-      'category': instance.category,
-      'severity': instance.severity,
-      'code': instance.code,
-      'subject': instance.subject,
-      'encounter': instance.encounter,
-      'onsetDateTime': instance.onsetDateTime,
-      'onsetAge': instance.onsetAge,
-      'onsetPeriod': instance.onsetPeriod,
-      'onsetRange': instance.onsetRange,
-      'onsetString': instance.onsetString,
-      'abatementDateTime': instance.abatementDateTime,
-      'abatementAge': instance.abatementAge,
-      'abatementRange': instance.abatementRange,
-      'abatementString': instance.abatementString,
-      'recordedDate': instance.recordedDate,
-      'recorder': instance.recorder,
-      'asserter': instance.asserter,
-      'stage': instance.stage,
-      'evidence': instance.evidence,
-      'note': instance.note,
-    };
+Map<String, dynamic> _$_$_ConditionToJson(_$_Condition instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('clinicalStatus', instance.clinicalStatus?.toJson());
+  writeNotNull('verificationStatus', instance.verificationStatus?.toJson());
+  writeNotNull(
+      'category', instance.category?.map((e) => e?.toJson())?.toList());
+  writeNotNull('severity', instance.severity?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('onsetDateTime', instance.onsetDateTime?.toJson());
+  writeNotNull('onsetAge', instance.onsetAge?.toJson());
+  writeNotNull('onsetPeriod', instance.onsetPeriod?.toJson());
+  writeNotNull('onsetRange', instance.onsetRange?.toJson());
+  writeNotNull('onsetString', instance.onsetString);
+  writeNotNull('abatementDateTime', instance.abatementDateTime?.toJson());
+  writeNotNull('abatementAge', instance.abatementAge?.toJson());
+  writeNotNull('abatementRange', instance.abatementRange?.toJson());
+  writeNotNull('abatementString', instance.abatementString);
+  writeNotNull('recordedDate', instance.recordedDate?.toJson());
+  writeNotNull('recorder', instance.recorder?.toJson());
+  writeNotNull('asserter', instance.asserter?.toJson());
+  writeNotNull('stage', instance.stage?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'evidence', instance.evidence?.map((e) => e?.toJson())?.toList());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_ConditionStage _$_$_ConditionStageFromJson(Map<String, dynamic> json) {
   return _$_ConditionStage(
@@ -1192,15 +1361,26 @@ _$_ConditionStage _$_$_ConditionStageFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ConditionStageToJson(_$_ConditionStage instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'summary': instance.summary,
-      'assessment': instance.assessment,
-      'type': instance.type,
-    };
+Map<String, dynamic> _$_$_ConditionStageToJson(_$_ConditionStage instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('summary', instance.summary?.toJson());
+  writeNotNull(
+      'assessment', instance.assessment?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  return val;
+}
 
 _$_ConditionEvidence _$_$_ConditionEvidenceFromJson(Map<String, dynamic> json) {
   return _$_ConditionEvidence(
@@ -1228,14 +1408,24 @@ _$_ConditionEvidence _$_$_ConditionEvidenceFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_ConditionEvidenceToJson(
-        _$_ConditionEvidence instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'code': instance.code,
-      'detail': instance.detail,
-    };
+    _$_ConditionEvidence instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
+  writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
   return _$_Procedure(
@@ -1383,50 +1573,73 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ProcedureToJson(_$_Procedure instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'instantiatesCanonical': instance.instantiatesCanonical,
-      'instantiatesUri': instance.instantiatesUri,
-      'basedOn': instance.basedOn,
-      'partOf': instance.partOf,
-      'status': instance.status,
-      'statusReason': instance.statusReason,
-      'category': instance.category,
-      'code': instance.code,
-      'subject': instance.subject,
-      'encounter': instance.encounter,
-      'performedDateTime': instance.performedDateTime,
-      'performedPeriod': instance.performedPeriod,
-      'performedString': instance.performedString,
-      'performedAge': instance.performedAge,
-      'performedRange': instance.performedRange,
-      'recorder': instance.recorder,
-      'asserter': instance.asserter,
-      'performer': instance.performer,
-      'location': instance.location,
-      'reasonCode': instance.reasonCode,
-      'reasonReference': instance.reasonReference,
-      'bodySite': instance.bodySite,
-      'outcome': instance.outcome,
-      'report': instance.report,
-      'complication': instance.complication,
-      'complicationDetail': instance.complicationDetail,
-      'followUp': instance.followUp,
-      'note': instance.note,
-      'focalDevice': instance.focalDevice,
-      'usedReference': instance.usedReference,
-      'usedCode': instance.usedCode,
-    };
+Map<String, dynamic> _$_$_ProcedureToJson(_$_Procedure instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('instantiatesCanonical',
+      instance.instantiatesCanonical?.map((e) => e?.toJson())?.toList());
+  writeNotNull('instantiatesUri',
+      instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
+  writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
+  writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('statusReason', instance.statusReason?.toJson());
+  writeNotNull('category', instance.category?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('performedDateTime', instance.performedDateTime?.toJson());
+  writeNotNull('performedPeriod', instance.performedPeriod?.toJson());
+  writeNotNull('performedString', instance.performedString);
+  writeNotNull('performedAge', instance.performedAge?.toJson());
+  writeNotNull('performedRange', instance.performedRange?.toJson());
+  writeNotNull('recorder', instance.recorder?.toJson());
+  writeNotNull('asserter', instance.asserter?.toJson());
+  writeNotNull(
+      'performer', instance.performer?.map((e) => e?.toJson())?.toList());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull(
+      'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
+  writeNotNull('reasonReference',
+      instance.reasonReference?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'bodySite', instance.bodySite?.map((e) => e?.toJson())?.toList());
+  writeNotNull('outcome', instance.outcome?.toJson());
+  writeNotNull('report', instance.report?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'complication', instance.complication?.map((e) => e?.toJson())?.toList());
+  writeNotNull('complicationDetail',
+      instance.complicationDetail?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'followUp', instance.followUp?.map((e) => e?.toJson())?.toList());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'focalDevice', instance.focalDevice?.map((e) => e?.toJson())?.toList());
+  writeNotNull('usedReference',
+      instance.usedReference?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'usedCode', instance.usedCode?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_ProcedurePerformer _$_$_ProcedurePerformerFromJson(
     Map<String, dynamic> json) {
@@ -1455,15 +1668,25 @@ _$_ProcedurePerformer _$_$_ProcedurePerformerFromJson(
 }
 
 Map<String, dynamic> _$_$_ProcedurePerformerToJson(
-        _$_ProcedurePerformer instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'function': instance.function,
-      'actor': instance.actor,
-      'onBehalfOf': instance.onBehalfOf,
-    };
+    _$_ProcedurePerformer instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('function', instance.function?.toJson());
+  writeNotNull('actor', instance.actor?.toJson());
+  writeNotNull('onBehalfOf', instance.onBehalfOf?.toJson());
+  return val;
+}
 
 _$_ProcedureFocalDevice _$_$_ProcedureFocalDeviceFromJson(
     Map<String, dynamic> json) {
@@ -1489,11 +1712,21 @@ _$_ProcedureFocalDevice _$_$_ProcedureFocalDeviceFromJson(
 }
 
 Map<String, dynamic> _$_$_ProcedureFocalDeviceToJson(
-        _$_ProcedureFocalDevice instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'action': instance.action,
-      'manipulated': instance.manipulated,
-    };
+    _$_ProcedureFocalDevice instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('action', instance.action?.toJson());
+  writeNotNull('manipulated', instance.manipulated?.toJson());
+  return val;
+}

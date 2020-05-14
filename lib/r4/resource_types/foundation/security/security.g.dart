@@ -70,29 +70,40 @@ _$_AuditEvent _$_$_AuditEventFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_AuditEventToJson(_$_AuditEvent instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'subtype': instance.subtype,
-      'action': _$AuditEventActionEnumMap[instance.action],
-      'period': instance.period,
-      'recorded': instance.recorded,
-      'outcome': _$AuditEventOutcomeEnumMap[instance.outcome],
-      'outcomeDesc': instance.outcomeDesc,
-      'purposeOfEvent': instance.purposeOfEvent,
-      'agent': instance.agent,
-      'source': instance.source,
-      'entity': instance.entity,
-    };
+Map<String, dynamic> _$_$_AuditEventToJson(_$_AuditEvent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('subtype', instance.subtype?.map((e) => e?.toJson())?.toList());
+  writeNotNull('action', _$AuditEventActionEnumMap[instance.action]);
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('recorded', instance.recorded?.toJson());
+  writeNotNull('outcome', _$AuditEventOutcomeEnumMap[instance.outcome]);
+  writeNotNull('outcomeDesc', instance.outcomeDesc);
+  writeNotNull('purposeOfEvent',
+      instance.purposeOfEvent?.map((e) => e?.toJson())?.toList());
+  writeNotNull('agent', instance.agent?.map((e) => e?.toJson())?.toList());
+  writeNotNull('source', instance.source?.toJson());
+  writeNotNull('entity', instance.entity?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 T _$enumDecode<T>(
   Map<T, dynamic> enumValues,
@@ -190,23 +201,34 @@ _$_AuditEventAgent _$_$_AuditEventAgentFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_AuditEventAgentToJson(_$_AuditEventAgent instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'role': instance.role,
-      'who': instance.who,
-      'altId': instance.altId,
-      'name': instance.name,
-      'requestor': instance.requestor,
-      'location': instance.location,
-      'policy': instance.policy,
-      'media': instance.media,
-      'network': instance.network,
-      'purposeOfUse': instance.purposeOfUse,
-    };
+Map<String, dynamic> _$_$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('role', instance.role?.map((e) => e?.toJson())?.toList());
+  writeNotNull('who', instance.who?.toJson());
+  writeNotNull('altId', instance.altId);
+  writeNotNull('name', instance.name);
+  writeNotNull('requestor', instance.requestor);
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('policy', instance.policy?.map((e) => e?.toJson())?.toList());
+  writeNotNull('media', instance.media?.toJson());
+  writeNotNull('network', instance.network?.toJson());
+  writeNotNull(
+      'purposeOfUse', instance.purposeOfUse?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_AuditEventNetwork _$_$_AuditEventNetworkFromJson(Map<String, dynamic> json) {
   return _$_AuditEventNetwork(
@@ -227,14 +249,24 @@ _$_AuditEventNetwork _$_$_AuditEventNetworkFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_AuditEventNetworkToJson(
-        _$_AuditEventNetwork instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'address': instance.address,
-      'type': _$AuditEventNetworkTypeEnumMap[instance.type],
-    };
+    _$_AuditEventNetwork instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('address', instance.address);
+  writeNotNull('type', _$AuditEventNetworkTypeEnumMap[instance.type]);
+  return val;
+}
 
 const _$AuditEventNetworkTypeEnumMap = {
   AuditEventNetworkType.num_1: '1',
@@ -269,16 +301,25 @@ _$_AuditEventSource _$_$_AuditEventSourceFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_AuditEventSourceToJson(
-        _$_AuditEventSource instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'site': instance.site,
-      'observer': instance.observer,
-      'type': instance.type,
-    };
+Map<String, dynamic> _$_$_AuditEventSourceToJson(_$_AuditEventSource instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('site', instance.site);
+  writeNotNull('observer', instance.observer?.toJson());
+  writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_AuditEventEntity _$_$_AuditEventEntityFromJson(Map<String, dynamic> json) {
   return _$_AuditEventEntity(
@@ -322,22 +363,32 @@ _$_AuditEventEntity _$_$_AuditEventEntityFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_AuditEventEntityToJson(
-        _$_AuditEventEntity instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'what': instance.what,
-      'type': instance.type,
-      'role': instance.role,
-      'lifecycle': instance.lifecycle,
-      'securityLabel': instance.securityLabel,
-      'name': instance.name,
-      'description': instance.description,
-      'query': instance.query,
-      'detail': instance.detail,
-    };
+Map<String, dynamic> _$_$_AuditEventEntityToJson(_$_AuditEventEntity instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('what', instance.what?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('role', instance.role?.toJson());
+  writeNotNull('lifecycle', instance.lifecycle?.toJson());
+  writeNotNull('securityLabel',
+      instance.securityLabel?.map((e) => e?.toJson())?.toList());
+  writeNotNull('name', instance.name);
+  writeNotNull('description', instance.description);
+  writeNotNull('query', instance.query?.toJson());
+  writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_AuditEventDetail _$_$_AuditEventDetailFromJson(Map<String, dynamic> json) {
   return _$_AuditEventDetail(
@@ -362,16 +413,25 @@ _$_AuditEventDetail _$_$_AuditEventDetailFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_AuditEventDetailToJson(
-        _$_AuditEventDetail instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'valueString': instance.valueString,
-      'valueBase64Binary': instance.valueBase64Binary,
-    };
+Map<String, dynamic> _$_$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type);
+  writeNotNull('valueString', instance.valueString?.toJson());
+  writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
+  return val;
+}
 
 _$_Consent _$_$_ConsentFromJson(Map<String, dynamic> json) {
   return _$_Consent(
@@ -452,32 +512,47 @@ _$_Consent _$_$_ConsentFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ConsentToJson(_$_Consent instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': _$ConsentStatusEnumMap[instance.status],
-      'scope': instance.scope,
-      'category': instance.category,
-      'patient': instance.patient,
-      'dateTime': instance.dateTime,
-      'performer': instance.performer,
-      'organization': instance.organization,
-      'sourceAttachment': instance.sourceAttachment,
-      'sourceReference': instance.sourceReference,
-      'policy': instance.policy,
-      'policyRule': instance.policyRule,
-      'verification': instance.verification,
-      'provision': instance.provision,
-    };
+Map<String, dynamic> _$_$_ConsentToJson(_$_Consent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$ConsentStatusEnumMap[instance.status]);
+  writeNotNull('scope', instance.scope?.toJson());
+  writeNotNull(
+      'category', instance.category?.map((e) => e?.toJson())?.toList());
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('dateTime', instance.dateTime?.toJson());
+  writeNotNull(
+      'performer', instance.performer?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'organization', instance.organization?.map((e) => e?.toJson())?.toList());
+  writeNotNull('sourceAttachment', instance.sourceAttachment?.toJson());
+  writeNotNull('sourceReference', instance.sourceReference?.toJson());
+  writeNotNull('policy', instance.policy?.map((e) => e?.toJson())?.toList());
+  writeNotNull('policyRule', instance.policyRule?.toJson());
+  writeNotNull(
+      'verification', instance.verification?.map((e) => e?.toJson())?.toList());
+  writeNotNull('provision', instance.provision?.toJson());
+  return val;
+}
 
 const _$ConsentStatusEnumMap = {
   ConsentStatus.draft: 'draft',
@@ -509,14 +584,24 @@ _$_ConsentPolicy _$_$_ConsentPolicyFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ConsentPolicyToJson(_$_ConsentPolicy instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'authority': instance.authority,
-      'uri': instance.uri,
-    };
+Map<String, dynamic> _$_$_ConsentPolicyToJson(_$_ConsentPolicy instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('authority', instance.authority?.toJson());
+  writeNotNull('uri', instance.uri?.toJson());
+  return val;
+}
 
 _$_ConsentVerification _$_$_ConsentVerificationFromJson(
     Map<String, dynamic> json) {
@@ -543,15 +628,25 @@ _$_ConsentVerification _$_$_ConsentVerificationFromJson(
 }
 
 Map<String, dynamic> _$_$_ConsentVerificationToJson(
-        _$_ConsentVerification instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'verified': instance.verified,
-      'verifiedWith': instance.verifiedWith,
-      'verificationDate': instance.verificationDate,
-    };
+    _$_ConsentVerification instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('verified', instance.verified);
+  writeNotNull('verifiedWith', instance.verifiedWith?.toJson());
+  writeNotNull('verificationDate', instance.verificationDate?.toJson());
+  return val;
+}
 
 _$_ConsentProvision _$_$_ConsentProvisionFromJson(Map<String, dynamic> json) {
   return _$_ConsentProvision(
@@ -611,24 +706,35 @@ _$_ConsentProvision _$_$_ConsentProvisionFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ConsentProvisionToJson(
-        _$_ConsentProvision instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': _$ConsentProvisionTypeEnumMap[instance.type],
-      'period': instance.period,
-      'actor': instance.actor,
-      'action': instance.action,
-      'securityLabel': instance.securityLabel,
-      'purpose': instance.purpose,
-      'class': instance.clas,
-      'code': instance.code,
-      'dataPeriod': instance.dataPeriod,
-      'data': instance.data,
-      'provision': instance.provision,
-    };
+Map<String, dynamic> _$_$_ConsentProvisionToJson(_$_ConsentProvision instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', _$ConsentProvisionTypeEnumMap[instance.type]);
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('actor', instance.actor?.map((e) => e?.toJson())?.toList());
+  writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
+  writeNotNull('securityLabel',
+      instance.securityLabel?.map((e) => e?.toJson())?.toList());
+  writeNotNull('purpose', instance.purpose?.map((e) => e?.toJson())?.toList());
+  writeNotNull('class', instance.clas?.map((e) => e?.toJson())?.toList());
+  writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
+  writeNotNull('dataPeriod', instance.dataPeriod?.toJson());
+  writeNotNull('data', instance.data?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'provision', instance.provision?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$ConsentProvisionTypeEnumMap = {
   ConsentProvisionType.deny: 'deny',
@@ -658,14 +764,24 @@ _$_ConsentActor _$_$_ConsentActorFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ConsentActorToJson(_$_ConsentActor instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'role': instance.role,
-      'reference': instance.reference,
-    };
+Map<String, dynamic> _$_$_ConsentActorToJson(_$_ConsentActor instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('role', instance.role?.toJson());
+  writeNotNull('reference', instance.reference?.toJson());
+  return val;
+}
 
 _$_ConsentData _$_$_ConsentDataFromJson(Map<String, dynamic> json) {
   return _$_ConsentData(
@@ -687,14 +803,24 @@ _$_ConsentData _$_$_ConsentDataFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ConsentDataToJson(_$_ConsentData instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'meaning': _$ConsentDataMeaningEnumMap[instance.meaning],
-      'reference': instance.reference,
-    };
+Map<String, dynamic> _$_$_ConsentDataToJson(_$_ConsentData instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('meaning', _$ConsentDataMeaningEnumMap[instance.meaning]);
+  writeNotNull('reference', instance.reference?.toJson());
+  return val;
+}
 
 const _$ConsentDataMeaningEnumMap = {
   ConsentDataMeaning.instance: 'instance',
@@ -775,29 +901,40 @@ _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ProvenanceToJson(_$_Provenance instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'target': instance.target,
-      'occurredPeriod': instance.occurredPeriod,
-      'occurredDateTime': instance.occurredDateTime,
-      'recorded': instance.recorded,
-      'policy': instance.policy,
-      'location': instance.location,
-      'reason': instance.reason,
-      'activity': instance.activity,
-      'agent': instance.agent,
-      'entity': instance.entity,
-      'signature': instance.signature,
-    };
+Map<String, dynamic> _$_$_ProvenanceToJson(_$_Provenance instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
+  writeNotNull('occurredPeriod', instance.occurredPeriod?.toJson());
+  writeNotNull('occurredDateTime', instance.occurredDateTime?.toJson());
+  writeNotNull('recorded', instance.recorded?.toJson());
+  writeNotNull('policy', instance.policy?.map((e) => e?.toJson())?.toList());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('reason', instance.reason?.map((e) => e?.toJson())?.toList());
+  writeNotNull('activity', instance.activity?.toJson());
+  writeNotNull('agent', instance.agent?.map((e) => e?.toJson())?.toList());
+  writeNotNull('entity', instance.entity?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'signature', instance.signature?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_ProvenanceAgent _$_$_ProvenanceAgentFromJson(Map<String, dynamic> json) {
   return _$_ProvenanceAgent(
@@ -829,16 +966,26 @@ _$_ProvenanceAgent _$_$_ProvenanceAgentFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ProvenanceAgentToJson(_$_ProvenanceAgent instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'role': instance.role,
-      'who': instance.who,
-      'onBehalfOf': instance.onBehalfOf,
-    };
+Map<String, dynamic> _$_$_ProvenanceAgentToJson(_$_ProvenanceAgent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('role', instance.role?.map((e) => e?.toJson())?.toList());
+  writeNotNull('who', instance.who?.toJson());
+  writeNotNull('onBehalfOf', instance.onBehalfOf?.toJson());
+  return val;
+}
 
 _$_ProvenanceEntity _$_$_ProvenanceEntityFromJson(Map<String, dynamic> json) {
   return _$_ProvenanceEntity(
@@ -865,16 +1012,25 @@ _$_ProvenanceEntity _$_$_ProvenanceEntityFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ProvenanceEntityToJson(
-        _$_ProvenanceEntity instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'role': _$ProvenanceEntityRoleEnumMap[instance.role],
-      'what': instance.what,
-      'agent': instance.agent,
-    };
+Map<String, dynamic> _$_$_ProvenanceEntityToJson(_$_ProvenanceEntity instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('role', _$ProvenanceEntityRoleEnumMap[instance.role]);
+  writeNotNull('what', instance.what?.toJson());
+  writeNotNull('agent', instance.agent?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$ProvenanceEntityRoleEnumMap = {
   ProvenanceEntityRole.derivation: 'derivation',

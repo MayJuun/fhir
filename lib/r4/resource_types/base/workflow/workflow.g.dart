@@ -64,26 +64,40 @@ _$_Schedule _$_$_ScheduleFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ScheduleToJson(_$_Schedule instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'active': instance.active,
-      'serviceCategory': instance.serviceCategory,
-      'serviceType': instance.serviceType,
-      'specialty': instance.specialty,
-      'actor': instance.actor,
-      'planningHorizon': instance.planningHorizon,
-      'comment': instance.comment,
-    };
+Map<String, dynamic> _$_$_ScheduleToJson(_$_Schedule instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('active', instance.active);
+  writeNotNull('serviceCategory',
+      instance.serviceCategory?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'serviceType', instance.serviceType?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'specialty', instance.specialty?.map((e) => e?.toJson())?.toList());
+  writeNotNull('actor', instance.actor?.map((e) => e?.toJson())?.toList());
+  writeNotNull('planningHorizon', instance.planningHorizon?.toJson());
+  writeNotNull('comment', instance.comment);
+  return val;
+}
 
 _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
   return _$_Slot(
@@ -148,28 +162,43 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_SlotToJson(_$_Slot instance) => <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'serviceCategory': instance.serviceCategory,
-      'serviceType': instance.serviceType,
-      'specialty': instance.specialty,
-      'appointmentType': instance.appointmentType,
-      'schedule': instance.schedule,
-      'status': _$SlotStatusEnumMap[instance.status],
-      'start': instance.start,
-      'end': instance.end,
-      'overbooked': instance.overbooked,
-      'comment': instance.comment,
-    };
+Map<String, dynamic> _$_$_SlotToJson(_$_Slot instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('serviceCategory',
+      instance.serviceCategory?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'serviceType', instance.serviceType?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'specialty', instance.specialty?.map((e) => e?.toJson())?.toList());
+  writeNotNull('appointmentType', instance.appointmentType?.toJson());
+  writeNotNull('schedule', instance.schedule?.toJson());
+  writeNotNull('status', _$SlotStatusEnumMap[instance.status]);
+  writeNotNull('start', instance.start?.toJson());
+  writeNotNull('end', instance.end?.toJson());
+  writeNotNull('overbooked', instance.overbooked);
+  writeNotNull('comment', instance.comment);
+  return val;
+}
 
 T _$enumDecode<T>(
   Map<T, dynamic> enumValues,
@@ -341,48 +370,64 @@ _$_Task _$_$_TaskFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_TaskToJson(_$_Task instance) => <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'instantiatesCanonical': instance.instantiatesCanonical,
-      'instantiatesUri': instance.instantiatesUri,
-      'basedOn': instance.basedOn,
-      'groupIdentifier': instance.groupIdentifier,
-      'partOf': instance.partOf,
-      'status': _$TaskStatusEnumMap[instance.status],
-      'statusReason': instance.statusReason,
-      'businessStatus': instance.businessStatus,
-      'intent': _$TaskIntentEnumMap[instance.intent],
-      'priority': instance.priority,
-      'code': instance.code,
-      'description': instance.description,
-      'focus': instance.focus,
-      'for': instance.fore,
-      'encounter': instance.encounter,
-      'executionPeriod': instance.executionPeriod,
-      'authoredOn': instance.authoredOn,
-      'lastModified': instance.lastModified,
-      'requester': instance.requester,
-      'performerType': instance.performerType,
-      'owner': instance.owner,
-      'location': instance.location,
-      'reasonCode': instance.reasonCode,
-      'reasonReference': instance.reasonReference,
-      'insurance': instance.insurance,
-      'note': instance.note,
-      'relevantHistory': instance.relevantHistory,
-      'restriction': instance.restriction,
-      'input': instance.input,
-      'output': instance.output,
-    };
+Map<String, dynamic> _$_$_TaskToJson(_$_Task instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'instantiatesCanonical', instance.instantiatesCanonical?.toJson());
+  writeNotNull('instantiatesUri', instance.instantiatesUri?.toJson());
+  writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
+  writeNotNull('groupIdentifier', instance.groupIdentifier?.toJson());
+  writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$TaskStatusEnumMap[instance.status]);
+  writeNotNull('statusReason', instance.statusReason?.toJson());
+  writeNotNull('businessStatus', instance.businessStatus?.toJson());
+  writeNotNull('intent', _$TaskIntentEnumMap[instance.intent]);
+  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('description', instance.description);
+  writeNotNull('focus', instance.focus?.toJson());
+  writeNotNull('for', instance.fore?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('executionPeriod', instance.executionPeriod?.toJson());
+  writeNotNull('authoredOn', instance.authoredOn?.toJson());
+  writeNotNull('lastModified', instance.lastModified?.toJson());
+  writeNotNull('requester', instance.requester?.toJson());
+  writeNotNull('performerType',
+      instance.performerType?.map((e) => e?.toJson())?.toList());
+  writeNotNull('owner', instance.owner?.toJson());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('reasonCode', instance.reasonCode?.toJson());
+  writeNotNull('reasonReference', instance.reasonReference?.toJson());
+  writeNotNull(
+      'insurance', instance.insurance?.map((e) => e?.toJson())?.toList());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  writeNotNull('relevantHistory',
+      instance.relevantHistory?.map((e) => e?.toJson())?.toList());
+  writeNotNull('restriction', instance.restriction?.toJson());
+  writeNotNull('input', instance.input?.map((e) => e?.toJson())?.toList());
+  writeNotNull('output', instance.output?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$TaskStatusEnumMap = {
   TaskStatus.draft: 'draft',
@@ -436,15 +481,26 @@ _$_TaskRestriction _$_$_TaskRestrictionFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_TaskRestrictionToJson(_$_TaskRestriction instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'repetitions': instance.repetitions,
-      'period': instance.period,
-      'recipient': instance.recipient,
-    };
+Map<String, dynamic> _$_$_TaskRestrictionToJson(_$_TaskRestriction instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('repetitions', instance.repetitions);
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull(
+      'recipient', instance.recipient?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
   return _$_TaskInput(
@@ -612,63 +668,75 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_TaskInputToJson(_$_TaskInput instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'valueBase64Binary': instance.valueBase64Binary,
-      'valueBoolean': instance.valueBoolean,
-      'valueCanonical': instance.valueCanonical,
-      'valueCode': instance.valueCode,
-      'valueDate': instance.valueDate,
-      'valueDateTime': instance.valueDateTime,
-      'valueDecimal': instance.valueDecimal,
-      'valueId': instance.valueId,
-      'valueInstant': instance.valueInstant,
-      'valueInteger': instance.valueInteger,
-      'valueMarkdown': instance.valueMarkdown,
-      'valueOid': instance.valueOid,
-      'valuePositiveInt': instance.valuePositiveInt,
-      'valueString': instance.valueString,
-      'valueTime': instance.valueTime,
-      'valueUnsignedInt': instance.valueUnsignedInt,
-      'valueUri': instance.valueUri,
-      'valueUrl': instance.valueUrl,
-      'valueUuid': instance.valueUuid,
-      'valueAddress': instance.valueAddress,
-      'valueAge': instance.valueAge,
-      'valueAnnotation': instance.valueAnnotation,
-      'valueAttachment': instance.valueAttachment,
-      'valueCodeableConcept': instance.valueCodeableConcept,
-      'valueCoding': instance.valueCoding,
-      'valueContactPoint': instance.valueContactPoint,
-      'valueCount': instance.valueCount,
-      'valueDistance': instance.valueDistance,
-      'valueDuration': instance.valueDuration,
-      'valueHumanName': instance.valueHumanName,
-      'valueIdentifier': instance.valueIdentifier,
-      'valueMoney': instance.valueMoney,
-      'valuePeriod': instance.valuePeriod,
-      'valueQuantity': instance.valueQuantity,
-      'valueRange': instance.valueRange,
-      'valueRatio': instance.valueRatio,
-      'valueReference': instance.valueReference,
-      'valueSampledData': instance.valueSampledData,
-      'valueSignature': instance.valueSignature,
-      'valueTiming': instance.valueTiming,
-      'valueContactDetail': instance.valueContactDetail,
-      'valueContributor': instance.valueContributor,
-      'valueDataRequirement': instance.valueDataRequirement,
-      'valueExpression': instance.valueExpression,
-      'valueParameterDefinition': instance.valueParameterDefinition,
-      'valueRelatedArtifact': instance.valueRelatedArtifact,
-      'valueTriggerDefinition': instance.valueTriggerDefinition,
-      'valueUsageContext': instance.valueUsageContext,
-      'valueDosage': instance.valueDosage,
-      'valueMeta': instance.valueMeta,
-    };
+Map<String, dynamic> _$_$_TaskInputToJson(_$_TaskInput instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean);
+  writeNotNull('valueCanonical', instance.valueCanonical?.toJson());
+  writeNotNull('valueCode', instance.valueCode?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
+  writeNotNull('valueId', instance.valueId?.toJson());
+  writeNotNull('valueInstant', instance.valueInstant?.toJson());
+  writeNotNull('valueInteger', instance.valueInteger);
+  writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
+  writeNotNull('valueOid', instance.valueOid?.toJson());
+  writeNotNull('valuePositiveInt', instance.valuePositiveInt);
+  writeNotNull('valueString', instance.valueString);
+  writeNotNull('valueTime', instance.valueTime?.toJson());
+  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt);
+  writeNotNull('valueUri', instance.valueUri?.toJson());
+  writeNotNull('valueUrl', instance.valueUrl?.toJson());
+  writeNotNull('valueUuid', instance.valueUuid?.toJson());
+  writeNotNull('valueAddress', instance.valueAddress?.toJson());
+  writeNotNull('valueAge', instance.valueAge?.toJson());
+  writeNotNull('valueAnnotation', instance.valueAnnotation?.toJson());
+  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull('valueCoding', instance.valueCoding?.toJson());
+  writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
+  writeNotNull('valueCount', instance.valueCount?.toJson());
+  writeNotNull('valueDistance', instance.valueDistance?.toJson());
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
+  writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
+  writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
+  writeNotNull('valueMoney', instance.valueMoney?.toJson());
+  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueRatio', instance.valueRatio?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
+  writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
+  writeNotNull('valueSignature', instance.valueSignature?.toJson());
+  writeNotNull('valueTiming', instance.valueTiming?.toJson());
+  writeNotNull('valueContactDetail', instance.valueContactDetail?.toJson());
+  writeNotNull('valueContributor', instance.valueContributor?.toJson());
+  writeNotNull('valueDataRequirement', instance.valueDataRequirement?.toJson());
+  writeNotNull('valueExpression', instance.valueExpression?.toJson());
+  writeNotNull(
+      'valueParameterDefinition', instance.valueParameterDefinition?.toJson());
+  writeNotNull('valueRelatedArtifact', instance.valueRelatedArtifact?.toJson());
+  writeNotNull(
+      'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
+  writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
+  writeNotNull('valueDosage', instance.valueDosage?.toJson());
+  writeNotNull('valueMeta', instance.valueMeta?.toJson());
+  return val;
+}
 
 _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
   return _$_TaskOutput(
@@ -836,63 +904,75 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_TaskOutputToJson(_$_TaskOutput instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'valueBase64Binary': instance.valueBase64Binary,
-      'valueBoolean': instance.valueBoolean,
-      'valueCanonical': instance.valueCanonical,
-      'valueCode': instance.valueCode,
-      'valueDate': instance.valueDate,
-      'valueDateTime': instance.valueDateTime,
-      'valueDecimal': instance.valueDecimal,
-      'valueId': instance.valueId,
-      'valueInstant': instance.valueInstant,
-      'valueInteger': instance.valueInteger,
-      'valueMarkdown': instance.valueMarkdown,
-      'valueOid': instance.valueOid,
-      'valuePositiveInt': instance.valuePositiveInt,
-      'valueString': instance.valueString,
-      'valueTime': instance.valueTime,
-      'valueUnsignedInt': instance.valueUnsignedInt,
-      'valueUri': instance.valueUri,
-      'valueUrl': instance.valueUrl,
-      'valueUuid': instance.valueUuid,
-      'valueAddress': instance.valueAddress,
-      'valueAge': instance.valueAge,
-      'valueAnnotation': instance.valueAnnotation,
-      'valueAttachment': instance.valueAttachment,
-      'valueCodeableConcept': instance.valueCodeableConcept,
-      'valueCoding': instance.valueCoding,
-      'valueContactPoint': instance.valueContactPoint,
-      'valueCount': instance.valueCount,
-      'valueDistance': instance.valueDistance,
-      'valueDuration': instance.valueDuration,
-      'valueHumanName': instance.valueHumanName,
-      'valueIdentifier': instance.valueIdentifier,
-      'valueMoney': instance.valueMoney,
-      'valuePeriod': instance.valuePeriod,
-      'valueQuantity': instance.valueQuantity,
-      'valueRange': instance.valueRange,
-      'valueRatio': instance.valueRatio,
-      'valueReference': instance.valueReference,
-      'valueSampledData': instance.valueSampledData,
-      'valueSignature': instance.valueSignature,
-      'valueTiming': instance.valueTiming,
-      'valueContactDetail': instance.valueContactDetail,
-      'valueContributor': instance.valueContributor,
-      'valueDataRequirement': instance.valueDataRequirement,
-      'valueExpression': instance.valueExpression,
-      'valueParameterDefinition': instance.valueParameterDefinition,
-      'valueRelatedArtifact': instance.valueRelatedArtifact,
-      'valueTriggerDefinition': instance.valueTriggerDefinition,
-      'valueUsageContext': instance.valueUsageContext,
-      'valueDosage': instance.valueDosage,
-      'valueMeta': instance.valueMeta,
-    };
+Map<String, dynamic> _$_$_TaskOutputToJson(_$_TaskOutput instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean);
+  writeNotNull('valueCanonical', instance.valueCanonical?.toJson());
+  writeNotNull('valueCode', instance.valueCode?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
+  writeNotNull('valueId', instance.valueId?.toJson());
+  writeNotNull('valueInstant', instance.valueInstant?.toJson());
+  writeNotNull('valueInteger', instance.valueInteger);
+  writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
+  writeNotNull('valueOid', instance.valueOid?.toJson());
+  writeNotNull('valuePositiveInt', instance.valuePositiveInt);
+  writeNotNull('valueString', instance.valueString);
+  writeNotNull('valueTime', instance.valueTime?.toJson());
+  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt);
+  writeNotNull('valueUri', instance.valueUri?.toJson());
+  writeNotNull('valueUrl', instance.valueUrl?.toJson());
+  writeNotNull('valueUuid', instance.valueUuid?.toJson());
+  writeNotNull('valueAddress', instance.valueAddress?.toJson());
+  writeNotNull('valueAge', instance.valueAge?.toJson());
+  writeNotNull('valueAnnotation', instance.valueAnnotation?.toJson());
+  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull('valueCoding', instance.valueCoding?.toJson());
+  writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
+  writeNotNull('valueCount', instance.valueCount?.toJson());
+  writeNotNull('valueDistance', instance.valueDistance?.toJson());
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
+  writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
+  writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
+  writeNotNull('valueMoney', instance.valueMoney?.toJson());
+  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueRatio', instance.valueRatio?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
+  writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
+  writeNotNull('valueSignature', instance.valueSignature?.toJson());
+  writeNotNull('valueTiming', instance.valueTiming?.toJson());
+  writeNotNull('valueContactDetail', instance.valueContactDetail?.toJson());
+  writeNotNull('valueContributor', instance.valueContributor?.toJson());
+  writeNotNull('valueDataRequirement', instance.valueDataRequirement?.toJson());
+  writeNotNull('valueExpression', instance.valueExpression?.toJson());
+  writeNotNull(
+      'valueParameterDefinition', instance.valueParameterDefinition?.toJson());
+  writeNotNull('valueRelatedArtifact', instance.valueRelatedArtifact?.toJson());
+  writeNotNull(
+      'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
+  writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
+  writeNotNull('valueDosage', instance.valueDosage?.toJson());
+  writeNotNull('valueMeta', instance.valueMeta?.toJson());
+  return val;
+}
 
 _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
   return _$_Appointment(
@@ -994,40 +1074,59 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_AppointmentToJson(_$_Appointment instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': _$AppointmentStatusEnumMap[instance.status],
-      'cancelationReason': instance.cancelationReason,
-      'serviceCategory': instance.serviceCategory,
-      'serviceType': instance.serviceType,
-      'specialty': instance.specialty,
-      'appointmentType': instance.appointmentType,
-      'reasonCode': instance.reasonCode,
-      'reasonReference': instance.reasonReference,
-      'priority': instance.priority,
-      'description': instance.description,
-      'supportingInformation': instance.supportingInformation,
-      'start': instance.start,
-      'end': instance.end,
-      'minutesDuration': instance.minutesDuration,
-      'slot': instance.slot,
-      'created': instance.created,
-      'comment': instance.comment,
-      'patientInstruction': instance.patientInstruction,
-      'basedOn': instance.basedOn,
-      'participant': instance.participant,
-      'requestedPeriod': instance.requestedPeriod,
-    };
+Map<String, dynamic> _$_$_AppointmentToJson(_$_Appointment instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$AppointmentStatusEnumMap[instance.status]);
+  writeNotNull('cancelationReason', instance.cancelationReason?.toJson());
+  writeNotNull('serviceCategory',
+      instance.serviceCategory?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'serviceType', instance.serviceType?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'specialty', instance.specialty?.map((e) => e?.toJson())?.toList());
+  writeNotNull('appointmentType', instance.appointmentType?.toJson());
+  writeNotNull(
+      'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
+  writeNotNull('reasonReference',
+      instance.reasonReference?.map((e) => e?.toJson())?.toList());
+  writeNotNull('priority', instance.priority);
+  writeNotNull('description', instance.description);
+  writeNotNull('supportingInformation',
+      instance.supportingInformation?.map((e) => e?.toJson())?.toList());
+  writeNotNull('start', instance.start?.toJson());
+  writeNotNull('end', instance.end?.toJson());
+  writeNotNull('minutesDuration', instance.minutesDuration);
+  writeNotNull('slot', instance.slot?.map((e) => e?.toJson())?.toList());
+  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('comment', instance.comment);
+  writeNotNull('patientInstruction', instance.patientInstruction);
+  writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'participant', instance.participant?.map((e) => e?.toJson())?.toList());
+  writeNotNull('requestedPeriod',
+      instance.requestedPeriod?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$AppointmentStatusEnumMap = {
   AppointmentStatus.proposed: 'proposed',
@@ -1076,17 +1175,29 @@ _$_AppointmentParticipant _$_$_AppointmentParticipantFromJson(
 }
 
 Map<String, dynamic> _$_$_AppointmentParticipantToJson(
-        _$_AppointmentParticipant instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'actor': instance.actor,
-      'required': _$AppointmentParticipantRequiredEnumMap[instance.require],
-      'status': _$AppointmentParticipantStatusEnumMap[instance.status],
-      'period': instance.period,
-    };
+    _$_AppointmentParticipant instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
+  writeNotNull('actor', instance.actor?.toJson());
+  writeNotNull(
+      'required', _$AppointmentParticipantRequiredEnumMap[instance.require]);
+  writeNotNull(
+      'status', _$AppointmentParticipantStatusEnumMap[instance.status]);
+  writeNotNull('period', instance.period?.toJson());
+  return val;
+}
 
 const _$AppointmentParticipantRequiredEnumMap = {
   AppointmentParticipantRequired.required: 'required',
@@ -1158,26 +1269,38 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
 }
 
 Map<String, dynamic> _$_$_AppointmentResponseToJson(
-        _$_AppointmentResponse instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'appointment': instance.appointment,
-      'start': instance.start,
-      'end': instance.end,
-      'participantType': instance.participantType,
-      'actor': instance.actor,
-      'participantStatus': instance.participantStatus,
-      'comment': instance.comment,
-    };
+    _$_AppointmentResponse instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('appointment', instance.appointment?.toJson());
+  writeNotNull('start', instance.start?.toJson());
+  writeNotNull('end', instance.end?.toJson());
+  writeNotNull('participantType',
+      instance.participantType?.map((e) => e?.toJson())?.toList());
+  writeNotNull('actor', instance.actor?.toJson());
+  writeNotNull('participantStatus', instance.participantStatus?.toJson());
+  writeNotNull('comment', instance.comment);
+  return val;
+}
 
 _$_VerificationResult _$_$_VerificationResultFromJson(
     Map<String, dynamic> json) {
@@ -1262,32 +1385,45 @@ _$_VerificationResult _$_$_VerificationResultFromJson(
 }
 
 Map<String, dynamic> _$_$_VerificationResultToJson(
-        _$_VerificationResult instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'target': instance.target,
-      'targetLocation': instance.targetLocation,
-      'need': instance.need,
-      'status': instance.status,
-      'statusDate': instance.statusDate,
-      'validationType': instance.validationType,
-      'validationProcess': instance.validationProcess,
-      'frequency': instance.frequency,
-      'lastPerformed': instance.lastPerformed,
-      'nextScheduled': instance.nextScheduled,
-      'failureAction': instance.failureAction,
-      'primarySource': instance.primarySource,
-      'attestation': instance.attestation,
-      'validator': instance.validator,
-    };
+    _$_VerificationResult instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
+  writeNotNull('targetLocation', instance.targetLocation);
+  writeNotNull('need', instance.need?.toJson());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('statusDate', instance.statusDate?.toJson());
+  writeNotNull('validationType', instance.validationType?.toJson());
+  writeNotNull('validationProcess',
+      instance.validationProcess?.map((e) => e?.toJson())?.toList());
+  writeNotNull('frequency', instance.frequency?.toJson());
+  writeNotNull('lastPerformed', instance.lastPerformed?.toJson());
+  writeNotNull('nextScheduled', instance.nextScheduled?.toJson());
+  writeNotNull('failureAction', instance.failureAction?.toJson());
+  writeNotNull('primarySource',
+      instance.primarySource?.map((e) => e?.toJson())?.toList());
+  writeNotNull('attestation', instance.attestation?.toJson());
+  writeNotNull(
+      'validator', instance.validator?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_VerificationResultPrimarySource _$_$_VerificationResultPrimarySourceFromJson(
     Map<String, dynamic> json) {
@@ -1336,19 +1472,31 @@ _$_VerificationResultPrimarySource _$_$_VerificationResultPrimarySourceFromJson(
 }
 
 Map<String, dynamic> _$_$_VerificationResultPrimarySourceToJson(
-        _$_VerificationResultPrimarySource instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'who': instance.who,
-      'type': instance.type,
-      'communicationMethod': instance.communicationMethod,
-      'validationStatus': instance.validationStatus,
-      'validationDate': instance.validationDate,
-      'canPushUpdates': instance.canPushUpdates,
-      'pushTypeAvailable': instance.pushTypeAvailable,
-    };
+    _$_VerificationResultPrimarySource instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('who', instance.who?.toJson());
+  writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
+  writeNotNull('communicationMethod',
+      instance.communicationMethod?.map((e) => e?.toJson())?.toList());
+  writeNotNull('validationStatus', instance.validationStatus?.toJson());
+  writeNotNull('validationDate', instance.validationDate?.toJson());
+  writeNotNull('canPushUpdates', instance.canPushUpdates?.toJson());
+  writeNotNull('pushTypeAvailable',
+      instance.pushTypeAvailable?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_VerificationResultAttestation _$_$_VerificationResultAttestationFromJson(
     Map<String, dynamic> json) {
@@ -1387,20 +1535,30 @@ _$_VerificationResultAttestation _$_$_VerificationResultAttestationFromJson(
 }
 
 Map<String, dynamic> _$_$_VerificationResultAttestationToJson(
-        _$_VerificationResultAttestation instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'who': instance.who,
-      'onBehalfOf': instance.onBehalfOf,
-      'communicationMethod': instance.communicationMethod,
-      'date': instance.date,
-      'sourceIdentityCertificate': instance.sourceIdentityCertificate,
-      'proxyIdentityCertificate': instance.proxyIdentityCertificate,
-      'proxySignature': instance.proxySignature,
-      'sourceSignature': instance.sourceSignature,
-    };
+    _$_VerificationResultAttestation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('who', instance.who?.toJson());
+  writeNotNull('onBehalfOf', instance.onBehalfOf?.toJson());
+  writeNotNull('communicationMethod', instance.communicationMethod?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('sourceIdentityCertificate', instance.sourceIdentityCertificate);
+  writeNotNull('proxyIdentityCertificate', instance.proxyIdentityCertificate);
+  writeNotNull('proxySignature', instance.proxySignature?.toJson());
+  writeNotNull('sourceSignature', instance.sourceSignature?.toJson());
+  return val;
+}
 
 _$_VerificationResultValidator _$_$_VerificationResultValidatorFromJson(
     Map<String, dynamic> json) {
@@ -1428,12 +1586,22 @@ _$_VerificationResultValidator _$_$_VerificationResultValidatorFromJson(
 }
 
 Map<String, dynamic> _$_$_VerificationResultValidatorToJson(
-        _$_VerificationResultValidator instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'organization': instance.organization,
-      'identityCertificate': instance.identityCertificate,
-      'attestationSignature': instance.attestationSignature,
-    };
+    _$_VerificationResultValidator instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('organization', instance.organization?.toJson());
+  writeNotNull('identityCertificate', instance.identityCertificate);
+  writeNotNull('attestationSignature', instance.attestationSignature?.toJson());
+  return val;
+}

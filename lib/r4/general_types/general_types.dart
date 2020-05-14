@@ -104,9 +104,10 @@ abstract class ContactPoint with _$ContactPoint {
   const factory ContactPoint({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    ContactPointSystem system,
+    @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
+        ContactPointSystem system,
     String value,
-    ContactPointUse use,
+    @JsonKey(unknownEnumValue: ContactPointUse.unknown) ContactPointUse use,
     int rank,
     Period period,
   }) = _ContactPoint;
@@ -163,7 +164,7 @@ abstract class HumanName with _$HumanName {
   const factory HumanName({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    HumanNameUse use,
+    @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
     String text,
     String family,
     List<String> given,
@@ -180,7 +181,7 @@ abstract class Identifier with _$Identifier {
   const factory Identifier({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    IdentifierUse use,
+    @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
     CodeableConcept type,
     FhirUri system,
     String value,
@@ -311,7 +312,8 @@ abstract class TimingRepeat with _$TimingRepeat {
     int countMax,
     double duration,
     double durationMax,
-    TimingRepeatUnit durationUnit,
+    @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
+        TimingRepeatUnit durationUnit,
     int frequency,
     int frequencyMax,
     double period,

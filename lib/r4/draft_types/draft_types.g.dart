@@ -38,17 +38,27 @@ _$_MarketingStatus _$_$_MarketingStatusFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_MarketingStatusToJson(_$_MarketingStatus instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'country': instance.country,
-      'jurisdiction': instance.jurisdiction,
-      'status': instance.status,
-      'dateRange': instance.dateRange,
-      'restoreDate': instance.restoreDate,
-    };
+Map<String, dynamic> _$_$_MarketingStatusToJson(_$_MarketingStatus instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('country', instance.country?.toJson());
+  writeNotNull('jurisdiction', instance.jurisdiction?.toJson());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('dateRange', instance.dateRange?.toJson());
+  writeNotNull('restoreDate', instance.restoreDate?.toJson());
+  return val;
+}
 
 _$_Population _$_$_PopulationFromJson(Map<String, dynamic> json) {
   return _$_Population(
@@ -83,17 +93,28 @@ _$_Population _$_$_PopulationFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_PopulationToJson(_$_Population instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'ageRange': instance.ageRange,
-      'ageCodeableConcept': instance.ageCodeableConcept,
-      'gender': instance.gender,
-      'race': instance.race,
-      'physiologicalCondition': instance.physiologicalCondition,
-    };
+Map<String, dynamic> _$_$_PopulationToJson(_$_Population instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('ageRange', instance.ageRange?.toJson());
+  writeNotNull('ageCodeableConcept', instance.ageCodeableConcept?.toJson());
+  writeNotNull('gender', instance.gender?.toJson());
+  writeNotNull('race', instance.race?.toJson());
+  writeNotNull(
+      'physiologicalCondition', instance.physiologicalCondition?.toJson());
+  return val;
+}
 
 _$_ProdCharacteristic _$_$_ProdCharacteristicFromJson(
     Map<String, dynamic> json) {
@@ -141,23 +162,33 @@ _$_ProdCharacteristic _$_$_ProdCharacteristicFromJson(
 }
 
 Map<String, dynamic> _$_$_ProdCharacteristicToJson(
-        _$_ProdCharacteristic instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'height': instance.height,
-      'width': instance.width,
-      'depth': instance.depth,
-      'weight': instance.weight,
-      'nominalVolume': instance.nominalVolume,
-      'externalDiameter': instance.externalDiameter,
-      'shape': instance.shape,
-      'color': instance.color,
-      'imprint': instance.imprint,
-      'image': instance.image,
-      'scoring': instance.scoring,
-    };
+    _$_ProdCharacteristic instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('height', instance.height?.toJson());
+  writeNotNull('width', instance.width?.toJson());
+  writeNotNull('depth', instance.depth?.toJson());
+  writeNotNull('weight', instance.weight?.toJson());
+  writeNotNull('nominalVolume', instance.nominalVolume?.toJson());
+  writeNotNull('externalDiameter', instance.externalDiameter?.toJson());
+  writeNotNull('shape', instance.shape);
+  writeNotNull('color', instance.color);
+  writeNotNull('imprint', instance.imprint);
+  writeNotNull('image', instance.image?.map((e) => e?.toJson())?.toList());
+  writeNotNull('scoring', instance.scoring?.toJson());
+  return val;
+}
 
 _$_ProductShelfLife _$_$_ProductShelfLifeFromJson(Map<String, dynamic> json) {
   return _$_ProductShelfLife(
@@ -189,17 +220,27 @@ _$_ProductShelfLife _$_$_ProductShelfLifeFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ProductShelfLifeToJson(
-        _$_ProductShelfLife instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'type': instance.type,
-      'period': instance.period,
-      'specialPrecautionsForStorage': instance.specialPrecautionsForStorage,
-    };
+Map<String, dynamic> _$_$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('specialPrecautionsForStorage',
+      instance.specialPrecautionsForStorage?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_SubstanceAmount _$_$_SubstanceAmountFromJson(Map<String, dynamic> json) {
   return _$_SubstanceAmount(
@@ -234,18 +275,28 @@ _$_SubstanceAmount _$_$_SubstanceAmountFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_SubstanceAmountToJson(_$_SubstanceAmount instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'amountQuantity': instance.amountQuantity,
-      'amountRange': instance.amountRange,
-      'amountString': instance.amountString,
-      'amountType': instance.amountType,
-      'amountText': instance.amountText,
-      'referenceRange': instance.referenceRange,
-    };
+Map<String, dynamic> _$_$_SubstanceAmountToJson(_$_SubstanceAmount instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
+  writeNotNull('amountRange', instance.amountRange?.toJson());
+  writeNotNull('amountString', instance.amountString?.toJson());
+  writeNotNull('amountType', instance.amountType?.toJson());
+  writeNotNull('amountText', instance.amountText);
+  writeNotNull('referenceRange', instance.referenceRange?.toJson());
+  return val;
+}
 
 _$_SubstanceAmountReferenceRange _$_$_SubstanceAmountReferenceRangeFromJson(
     Map<String, dynamic> json) {
@@ -271,11 +322,21 @@ _$_SubstanceAmountReferenceRange _$_$_SubstanceAmountReferenceRangeFromJson(
 }
 
 Map<String, dynamic> _$_$_SubstanceAmountReferenceRangeToJson(
-        _$_SubstanceAmountReferenceRange instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'lowLimit': instance.lowLimit,
-      'highLimit': instance.highLimit,
-    };
+    _$_SubstanceAmountReferenceRange instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('lowLimit', instance.lowLimit?.toJson());
+  writeNotNull('highLimit', instance.highLimit?.toJson());
+  return val;
+}

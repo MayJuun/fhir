@@ -60,25 +60,39 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': _$SubstanceStatusEnumMap[instance.status],
-      'category': instance.category,
-      'code': instance.code,
-      'description': instance.description,
-      'instance': instance.instance,
-      'ingredient': instance.ingredient,
-    };
+Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$SubstanceStatusEnumMap[instance.status]);
+  writeNotNull(
+      'category', instance.category?.map((e) => e?.toJson())?.toList());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('description', instance.description);
+  writeNotNull(
+      'instance', instance.instance?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'ingredient', instance.ingredient?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 T _$enumDecode<T>(
   Map<T, dynamic> enumValues,
@@ -145,15 +159,25 @@ _$_SubstanceInstance _$_$_SubstanceInstanceFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_SubstanceInstanceToJson(
-        _$_SubstanceInstance instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'expiry': instance.expiry,
-      'quantity': instance.quantity,
-    };
+    _$_SubstanceInstance instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('expiry', instance.expiry?.toJson());
+  writeNotNull('quantity', instance.quantity?.toJson());
+  return val;
+}
 
 _$_SubstanceIngredient _$_$_SubstanceIngredientFromJson(
     Map<String, dynamic> json) {
@@ -184,15 +208,26 @@ _$_SubstanceIngredient _$_$_SubstanceIngredientFromJson(
 }
 
 Map<String, dynamic> _$_$_SubstanceIngredientToJson(
-        _$_SubstanceIngredient instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'quantity': instance.quantity,
-      'substanceCodeableConcept': instance.substanceCodeableConcept,
-      'substanceReference': instance.substanceReference,
-    };
+    _$_SubstanceIngredient instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('quantity', instance.quantity?.toJson());
+  writeNotNull(
+      'substanceCodeableConcept', instance.substanceCodeableConcept?.toJson());
+  writeNotNull('substanceReference', instance.substanceReference?.toJson());
+  return val;
+}
 
 _$_BiologicallyDerivedProduct _$_$_BiologicallyDerivedProductFromJson(
     Map<String, dynamic> json) {
@@ -266,30 +301,43 @@ _$_BiologicallyDerivedProduct _$_$_BiologicallyDerivedProductFromJson(
 }
 
 Map<String, dynamic> _$_$_BiologicallyDerivedProductToJson(
-        _$_BiologicallyDerivedProduct instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'productCategory':
-          _$BiologicallyDerivedProductCategoryEnumMap[instance.productCategory],
-      'productCode': instance.productCode,
-      'status': _$BiologicallyDerivedProductStatusEnumMap[instance.status],
-      'request': instance.request,
-      'quantity': instance.quantity,
-      'parent': instance.parent,
-      'collection': instance.collection,
-      'processing': instance.processing,
-      'manipulation': instance.manipulation,
-      'storage': instance.storage,
-    };
+    _$_BiologicallyDerivedProduct instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('productCategory',
+      _$BiologicallyDerivedProductCategoryEnumMap[instance.productCategory]);
+  writeNotNull('productCode', instance.productCode?.toJson());
+  writeNotNull(
+      'status', _$BiologicallyDerivedProductStatusEnumMap[instance.status]);
+  writeNotNull('request', instance.request?.map((e) => e?.toJson())?.toList());
+  writeNotNull('quantity', instance.quantity);
+  writeNotNull('parent', instance.parent?.map((e) => e?.toJson())?.toList());
+  writeNotNull('collection', instance.collection?.toJson());
+  writeNotNull(
+      'processing', instance.processing?.map((e) => e?.toJson())?.toList());
+  writeNotNull('manipulation', instance.manipulation?.toJson());
+  writeNotNull('storage', instance.storage?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$BiologicallyDerivedProductCategoryEnumMap = {
   BiologicallyDerivedProductCategory.organ: 'organ',
@@ -337,16 +385,26 @@ _$_BiologicallyDerivedProductCollection
 }
 
 Map<String, dynamic> _$_$_BiologicallyDerivedProductCollectionToJson(
-        _$_BiologicallyDerivedProductCollection instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'collector': instance.collector,
-      'source': instance.source,
-      'collectedDateTime': instance.collectedDateTime,
-      'collectedPeriod': instance.collectedPeriod,
-    };
+    _$_BiologicallyDerivedProductCollection instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('collector', instance.collector?.toJson());
+  writeNotNull('source', instance.source?.toJson());
+  writeNotNull('collectedDateTime', instance.collectedDateTime?.toJson());
+  writeNotNull('collectedPeriod', instance.collectedPeriod?.toJson());
+  return val;
+}
 
 _$_BiologicallyDerivedProductProcessing
     _$_$_BiologicallyDerivedProductProcessingFromJson(
@@ -380,17 +438,27 @@ _$_BiologicallyDerivedProductProcessing
 }
 
 Map<String, dynamic> _$_$_BiologicallyDerivedProductProcessingToJson(
-        _$_BiologicallyDerivedProductProcessing instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'description': instance.description,
-      'procedure': instance.procedure,
-      'additive': instance.additive,
-      'timeDateTime': instance.timeDateTime,
-      'timePeriod': instance.timePeriod,
-    };
+    _$_BiologicallyDerivedProductProcessing instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('description', instance.description);
+  writeNotNull('procedure', instance.procedure?.toJson());
+  writeNotNull('additive', instance.additive?.toJson());
+  writeNotNull('timeDateTime', instance.timeDateTime?.toJson());
+  writeNotNull('timePeriod', instance.timePeriod?.toJson());
+  return val;
+}
 
 _$_BiologicallyDerivedProductManipulation
     _$_$_BiologicallyDerivedProductManipulationFromJson(
@@ -418,15 +486,25 @@ _$_BiologicallyDerivedProductManipulation
 }
 
 Map<String, dynamic> _$_$_BiologicallyDerivedProductManipulationToJson(
-        _$_BiologicallyDerivedProductManipulation instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'description': instance.description,
-      'timeDateTime': instance.timeDateTime,
-      'timePeriod': instance.timePeriod,
-    };
+    _$_BiologicallyDerivedProductManipulation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('description', instance.description);
+  writeNotNull('timeDateTime', instance.timeDateTime?.toJson());
+  writeNotNull('timePeriod', instance.timePeriod?.toJson());
+  return val;
+}
 
 _$_BiologicallyDerivedProductStorage
     _$_$_BiologicallyDerivedProductStorageFromJson(Map<String, dynamic> json) {
@@ -453,16 +531,27 @@ _$_BiologicallyDerivedProductStorage
 }
 
 Map<String, dynamic> _$_$_BiologicallyDerivedProductStorageToJson(
-        _$_BiologicallyDerivedProductStorage instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'description': instance.description,
-      'temperature': instance.temperature,
-      'scale': _$BiologicallyDerivedProductStorageScaleEnumMap[instance.scale],
-      'duration': instance.duration,
-    };
+    _$_BiologicallyDerivedProductStorage instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('description', instance.description);
+  writeNotNull('temperature', instance.temperature);
+  writeNotNull(
+      'scale', _$BiologicallyDerivedProductStorageScaleEnumMap[instance.scale]);
+  writeNotNull('duration', instance.duration?.toJson());
+  return val;
+}
 
 const _$BiologicallyDerivedProductStorageScaleEnumMap = {
   BiologicallyDerivedProductStorageScale.farenheit: 'farenheit',
@@ -580,43 +669,60 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) => <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'definition': instance.definition,
-      'udiCarrier': instance.udiCarrier,
-      'status': _$DeviceStatusEnumMap[instance.status],
-      'statusReason': instance.statusReason,
-      'distinctIdentifier': instance.distinctIdentifier,
-      'manufacturer': instance.manufacturer,
-      'manufactureDate': instance.manufactureDate,
-      'expirationDate': instance.expirationDate,
-      'lotNumber': instance.lotNumber,
-      'serialNumber': instance.serialNumber,
-      'deviceName': instance.deviceName,
-      'modelNumber': instance.modelNumber,
-      'partNumber': instance.partNumber,
-      'type': instance.type,
-      'specialization': instance.specialization,
-      'version': instance.version,
-      'property': instance.property,
-      'patient': instance.patient,
-      'owner': instance.owner,
-      'contact': instance.contact,
-      'location': instance.location,
-      'url': instance.url,
-      'note': instance.note,
-      'safety': instance.safety,
-      'parent': instance.parent,
-    };
+Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('definition', instance.definition?.toJson());
+  writeNotNull(
+      'udiCarrier', instance.udiCarrier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
+  writeNotNull(
+      'statusReason', instance.statusReason?.map((e) => e?.toJson())?.toList());
+  writeNotNull('distinctIdentifier', instance.distinctIdentifier);
+  writeNotNull('manufacturer', instance.manufacturer);
+  writeNotNull('manufactureDate', instance.manufactureDate?.toJson());
+  writeNotNull('expirationDate', instance.expirationDate?.toJson());
+  writeNotNull('lotNumber', instance.lotNumber);
+  writeNotNull('serialNumber', instance.serialNumber);
+  writeNotNull(
+      'deviceName', instance.deviceName?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modelNumber', instance.modelNumber);
+  writeNotNull('partNumber', instance.partNumber);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('specialization',
+      instance.specialization?.map((e) => e?.toJson())?.toList());
+  writeNotNull('version', instance.version?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'property', instance.property?.map((e) => e?.toJson())?.toList());
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('owner', instance.owner?.toJson());
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('url', instance.url?.toJson());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  writeNotNull('safety', instance.safety?.map((e) => e?.toJson())?.toList());
+  writeNotNull('parent', instance.parent?.toJson());
+  return val;
+}
 
 const _$DeviceStatusEnumMap = {
   DeviceStatus.active: 'active',
@@ -654,19 +760,29 @@ _$_DeviceUdiCarrier _$_$_DeviceUdiCarrierFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DeviceUdiCarrierToJson(
-        _$_DeviceUdiCarrier instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'deviceIdentifier': instance.deviceIdentifier,
-      'issuer': instance.issuer,
-      'jurisdiction': instance.jurisdiction,
-      'carrierAIDC': instance.carrierAIDC,
-      'carrierHRF': instance.carrierHRF,
-      'entryType': _$DeviceUdiCarrierEntryTypeEnumMap[instance.entryType],
-    };
+Map<String, dynamic> _$_$_DeviceUdiCarrierToJson(_$_DeviceUdiCarrier instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('deviceIdentifier', instance.deviceIdentifier);
+  writeNotNull('issuer', instance.issuer?.toJson());
+  writeNotNull('jurisdiction', instance.jurisdiction?.toJson());
+  writeNotNull('carrierAIDC', instance.carrierAIDC?.toJson());
+  writeNotNull('carrierHRF', instance.carrierHRF);
+  writeNotNull(
+      'entryType', _$DeviceUdiCarrierEntryTypeEnumMap[instance.entryType]);
+  return val;
+}
 
 const _$DeviceUdiCarrierEntryTypeEnumMap = {
   DeviceUdiCarrierEntryType.barcode: 'barcode',
@@ -695,15 +811,24 @@ _$_DeviceDeviceName _$_$_DeviceDeviceNameFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DeviceDeviceNameToJson(
-        _$_DeviceDeviceName instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'name': instance.name,
-      'type': _$DeviceDeviceNameTypeEnumMap[instance.type],
-    };
+Map<String, dynamic> _$_$_DeviceDeviceNameToJson(_$_DeviceDeviceName instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('name', instance.name);
+  writeNotNull('type', _$DeviceDeviceNameTypeEnumMap[instance.type]);
+  return val;
+}
 
 const _$DeviceDeviceNameTypeEnumMap = {
   DeviceDeviceNameType.udi_label_name: 'udi-label-name',
@@ -737,14 +862,24 @@ _$_DeviceSpecialization _$_$_DeviceSpecializationFromJson(
 }
 
 Map<String, dynamic> _$_$_DeviceSpecializationToJson(
-        _$_DeviceSpecialization instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'systemType': instance.systemType,
-      'version': instance.version,
-    };
+    _$_DeviceSpecialization instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('systemType', instance.systemType?.toJson());
+  writeNotNull('version', instance.version);
+  return val;
+}
 
 _$_DeviceVersion _$_$_DeviceVersionFromJson(Map<String, dynamic> json) {
   return _$_DeviceVersion(
@@ -769,15 +904,25 @@ _$_DeviceVersion _$_$_DeviceVersionFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DeviceVersionToJson(_$_DeviceVersion instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'component': instance.component,
-      'value': instance.value,
-    };
+Map<String, dynamic> _$_$_DeviceVersionToJson(_$_DeviceVersion instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('component', instance.component?.toJson());
+  writeNotNull('value', instance.value);
+  return val;
+}
 
 _$_DeviceProperty _$_$_DevicePropertyFromJson(Map<String, dynamic> json) {
   return _$_DeviceProperty(
@@ -807,15 +952,27 @@ _$_DeviceProperty _$_$_DevicePropertyFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DevicePropertyToJson(_$_DeviceProperty instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'valueQuantity': instance.valueQuantity,
-      'valueCode': instance.valueCode,
-    };
+Map<String, dynamic> _$_$_DevicePropertyToJson(_$_DeviceProperty instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('valueQuantity',
+      instance.valueQuantity?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'valueCode', instance.valueCode?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
   return _$_DeviceMetric(
@@ -876,29 +1033,41 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'type': instance.type,
-      'unit': instance.unit,
-      'source': instance.source,
-      'parent': instance.parent,
-      'operationalStatus':
-          _$DeviceMetricOperationalStatusEnumMap[instance.operationalStatus],
-      'color': _$DeviceMetricColorEnumMap[instance.color],
-      'category': _$DeviceMetricCategoryEnumMap[instance.category],
-      'measurementPeriod': instance.measurementPeriod,
-      'calibration': instance.calibration,
-    };
+Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('unit', instance.unit?.toJson());
+  writeNotNull('source', instance.source?.toJson());
+  writeNotNull('parent', instance.parent?.toJson());
+  writeNotNull('operationalStatus',
+      _$DeviceMetricOperationalStatusEnumMap[instance.operationalStatus]);
+  writeNotNull('color', _$DeviceMetricColorEnumMap[instance.color]);
+  writeNotNull('category', _$DeviceMetricCategoryEnumMap[instance.category]);
+  writeNotNull('measurementPeriod', instance.measurementPeriod?.toJson());
+  writeNotNull(
+      'calibration', instance.calibration?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$DeviceMetricOperationalStatusEnumMap = {
   DeviceMetricOperationalStatus.on: 'on',
@@ -952,15 +1121,25 @@ _$_DeviceMetricCalibration _$_$_DeviceMetricCalibrationFromJson(
 }
 
 Map<String, dynamic> _$_$_DeviceMetricCalibrationToJson(
-        _$_DeviceMetricCalibration instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': _$DeviceMetricCalibrationTypeEnumMap[instance.type],
-      'state': _$DeviceMetricCalibrationStateEnumMap[instance.state],
-      'time': instance.time,
-    };
+    _$_DeviceMetricCalibration instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', _$DeviceMetricCalibrationTypeEnumMap[instance.type]);
+  writeNotNull('state', _$DeviceMetricCalibrationStateEnumMap[instance.state]);
+  writeNotNull('time', instance.time?.toJson());
+  return val;
+}
 
 const _$DeviceMetricCalibrationTypeEnumMap = {
   DeviceMetricCalibrationType.unspecified: 'unspecified',

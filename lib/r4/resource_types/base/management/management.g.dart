@@ -138,50 +138,69 @@ _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_LibraryToJson(_$_Library instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'url': instance.url,
-      'identifier': instance.identifier,
-      'version': instance.version,
-      'name': instance.name,
-      'title': instance.title,
-      'subtitle': instance.subtitle,
-      'status': _$LibraryStatusEnumMap[instance.status],
-      'experimental': instance.experimental,
-      'type': instance.type,
-      'subjectCodeableConcept': instance.subjectCodeableConcept,
-      'subjectReference': instance.subjectReference,
-      'date': instance.date,
-      'publisher': instance.publisher,
-      'contact': instance.contact,
-      'description': instance.description,
-      'useContext': instance.useContext,
-      'jurisdiction': instance.jurisdiction,
-      'purpose': instance.purpose,
-      'usage': instance.usage,
-      'copyright': instance.copyright,
-      'approvalDate': instance.approvalDate,
-      'lastReviewDate': instance.lastReviewDate,
-      'effectivePeriod': instance.effectivePeriod,
-      'topic': instance.topic,
-      'author': instance.author,
-      'editor': instance.editor,
-      'reviewer': instance.reviewer,
-      'endorser': instance.endorser,
-      'relatedArtifact': instance.relatedArtifact,
-      'parameter': instance.parameter,
-      'dataRequirement': instance.dataRequirement,
-      'content': instance.content,
-    };
+Map<String, dynamic> _$_$_LibraryToJson(_$_Library instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('url', instance.url?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('version', instance.version);
+  writeNotNull('name', instance.name);
+  writeNotNull('title', instance.title);
+  writeNotNull('subtitle', instance.subtitle);
+  writeNotNull('status', _$LibraryStatusEnumMap[instance.status]);
+  writeNotNull('experimental', instance.experimental);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull(
+      'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
+  writeNotNull('subjectReference', instance.subjectReference?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('publisher', instance.publisher);
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
+  writeNotNull('description', instance.description?.toJson());
+  writeNotNull(
+      'useContext', instance.useContext?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'jurisdiction', instance.jurisdiction?.map((e) => e?.toJson())?.toList());
+  writeNotNull('purpose', instance.purpose?.toJson());
+  writeNotNull('usage', instance.usage);
+  writeNotNull('copyright', instance.copyright?.toJson());
+  writeNotNull('approvalDate', instance.approvalDate?.toJson());
+  writeNotNull('lastReviewDate', instance.lastReviewDate?.toJson());
+  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
+  writeNotNull('topic', instance.topic?.map((e) => e?.toJson())?.toList());
+  writeNotNull('author', instance.author?.map((e) => e?.toJson())?.toList());
+  writeNotNull('editor', instance.editor?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'reviewer', instance.reviewer?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'endorser', instance.endorser?.map((e) => e?.toJson())?.toList());
+  writeNotNull('relatedArtifact',
+      instance.relatedArtifact?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'parameter', instance.parameter?.map((e) => e?.toJson())?.toList());
+  writeNotNull('dataRequirement',
+      instance.dataRequirement?.map((e) => e?.toJson())?.toList());
+  writeNotNull('content', instance.content?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 T _$enumDecode<T>(
   Map<T, dynamic> enumValues,
@@ -288,30 +307,42 @@ _$_Lists _$_$_ListsFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ListsToJson(_$_Lists instance) => <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': _$ListStatusEnumMap[instance.status],
-      'mode': _$ListModeEnumMap[instance.mode],
-      'title': instance.title,
-      'code': instance.code,
-      'subject': instance.subject,
-      'encounter': instance.encounter,
-      'date': instance.date,
-      'source': instance.source,
-      'orderedBy': instance.orderedBy,
-      'note': instance.note,
-      'entry': instance.entry,
-      'emptyReason': instance.emptyReason,
-    };
+Map<String, dynamic> _$_$_ListsToJson(_$_Lists instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$ListStatusEnumMap[instance.status]);
+  writeNotNull('mode', _$ListModeEnumMap[instance.mode]);
+  writeNotNull('title', instance.title);
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('source', instance.source?.toJson());
+  writeNotNull('orderedBy', instance.orderedBy?.toJson());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  writeNotNull('entry', instance.entry?.map((e) => e?.toJson())?.toList());
+  writeNotNull('emptyReason', instance.emptyReason?.toJson());
+  return val;
+}
 
 const _$ListStatusEnumMap = {
   ListStatus.current: 'current',
@@ -353,16 +384,26 @@ _$_ListEntry _$_$_ListEntryFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ListEntryToJson(_$_ListEntry instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'flag': instance.flag,
-      'deleted': instance.deleted,
-      'date': instance.date,
-      'item': instance.item,
-    };
+Map<String, dynamic> _$_$_ListEntryToJson(_$_ListEntry instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('flag', instance.flag?.toJson());
+  writeNotNull('deleted', instance.deleted);
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('item', instance.item?.toJson());
+  return val;
+}
 
 _$_EpisodeOfCare _$_$_EpisodeOfCareFromJson(Map<String, dynamic> json) {
   return _$_EpisodeOfCare(
@@ -439,30 +480,44 @@ _$_EpisodeOfCare _$_$_EpisodeOfCareFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_EpisodeOfCareToJson(_$_EpisodeOfCare instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': _$EpisodeOfCareStatusEnumMap[instance.status],
-      'statusHistory': instance.statusHistory,
-      'type': instance.type,
-      'diagnosis': instance.diagnosis,
-      'patient': instance.patient,
-      'managingOrganization': instance.managingOrganization,
-      'period': instance.period,
-      'referralRequest': instance.referralRequest,
-      'careManager': instance.careManager,
-      'team': instance.team,
-      'account': instance.account,
-    };
+Map<String, dynamic> _$_$_EpisodeOfCareToJson(_$_EpisodeOfCare instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$EpisodeOfCareStatusEnumMap[instance.status]);
+  writeNotNull('statusHistory',
+      instance.statusHistory?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'diagnosis', instance.diagnosis?.map((e) => e?.toJson())?.toList());
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('referralRequest',
+      instance.referralRequest?.map((e) => e?.toJson())?.toList());
+  writeNotNull('careManager', instance.careManager?.toJson());
+  writeNotNull('team', instance.team?.map((e) => e?.toJson())?.toList());
+  writeNotNull('account', instance.account?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 const _$EpisodeOfCareStatusEnumMap = {
   EpisodeOfCareStatus.planned: 'planned',
@@ -498,14 +553,25 @@ _$_EpisodeOfCareStatusHistory _$_$_EpisodeOfCareStatusHistoryFromJson(
 }
 
 Map<String, dynamic> _$_$_EpisodeOfCareStatusHistoryToJson(
-        _$_EpisodeOfCareStatusHistory instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'status': _$EpisodeOfCareStatusHistoryStatusEnumMap[instance.status],
-      'period': instance.period,
-    };
+    _$_EpisodeOfCareStatusHistory instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'status', _$EpisodeOfCareStatusHistoryStatusEnumMap[instance.status]);
+  writeNotNull('period', instance.period?.toJson());
+  return val;
+}
 
 const _$EpisodeOfCareStatusHistoryStatusEnumMap = {
   EpisodeOfCareStatusHistoryStatus.planned: 'planned',
@@ -543,15 +609,25 @@ _$_EpisodeOfCareDiagnosis _$_$_EpisodeOfCareDiagnosisFromJson(
 }
 
 Map<String, dynamic> _$_$_EpisodeOfCareDiagnosisToJson(
-        _$_EpisodeOfCareDiagnosis instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'condition': instance.condition,
-      'role': instance.role,
-      'rank': instance.rank,
-    };
+    _$_EpisodeOfCareDiagnosis instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('condition', instance.condition?.toJson());
+  writeNotNull('role', instance.role?.toJson());
+  writeNotNull('rank', instance.rank);
+  return val;
+}
 
 _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
   return _$_Encounter(
@@ -671,41 +747,61 @@ _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_EncounterToJson(_$_Encounter instance) =>
-    <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': _$EncounterStatusEnumMap[instance.status],
-      'statusHistory': instance.statusHistory,
-      'class': instance.clas,
-      'classHistory': instance.classHistory,
-      'type': instance.type,
-      'serviceType': instance.serviceType,
-      'priority': instance.priority,
-      'subject': instance.subject,
-      'episodeOfCare': instance.episodeOfCare,
-      'basedOn': instance.basedOn,
-      'participant': instance.participant,
-      'appointment': instance.appointment,
-      'period': instance.period,
-      'length': instance.length,
-      'reasonCode': instance.reasonCode,
-      'reasonReference': instance.reasonReference,
-      'diagnosis': instance.diagnosis,
-      'account': instance.account,
-      'hospitalization': instance.hospitalization,
-      'location': instance.location,
-      'serviceProvider': instance.serviceProvider,
-      'partOf': instance.partOf,
-    };
+Map<String, dynamic> _$_$_EncounterToJson(_$_Encounter instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$EncounterStatusEnumMap[instance.status]);
+  writeNotNull('statusHistory',
+      instance.statusHistory?.map((e) => e?.toJson())?.toList());
+  writeNotNull('class', instance.clas?.toJson());
+  writeNotNull(
+      'classHistory', instance.classHistory?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
+  writeNotNull('serviceType', instance.serviceType?.toJson());
+  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('episodeOfCare',
+      instance.episodeOfCare?.map((e) => e?.toJson())?.toList());
+  writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'participant', instance.participant?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'appointment', instance.appointment?.map((e) => e?.toJson())?.toList());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('length', instance.length?.toJson());
+  writeNotNull(
+      'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
+  writeNotNull('reasonReference',
+      instance.reasonReference?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'diagnosis', instance.diagnosis?.map((e) => e?.toJson())?.toList());
+  writeNotNull('account', instance.account?.map((e) => e?.toJson())?.toList());
+  writeNotNull('hospitalization', instance.hospitalization?.toJson());
+  writeNotNull(
+      'location', instance.location?.map((e) => e?.toJson())?.toList());
+  writeNotNull('serviceProvider', instance.serviceProvider?.toJson());
+  writeNotNull('partOf', instance.partOf?.toJson());
+  return val;
+}
 
 const _$EncounterStatusEnumMap = {
   EncounterStatus.planned: 'planned',
@@ -742,14 +838,25 @@ _$_EncounterStatusHistory _$_$_EncounterStatusHistoryFromJson(
 }
 
 Map<String, dynamic> _$_$_EncounterStatusHistoryToJson(
-        _$_EncounterStatusHistory instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'status': _$EncounterStatusHistoryStatusEnumMap[instance.status],
-      'period': instance.period,
-    };
+    _$_EncounterStatusHistory instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'status', _$EncounterStatusHistoryStatusEnumMap[instance.status]);
+  writeNotNull('period', instance.period?.toJson());
+  return val;
+}
 
 const _$EncounterStatusHistoryStatusEnumMap = {
   EncounterStatusHistoryStatus.planned: 'planned',
@@ -787,14 +894,24 @@ _$_EncounterClassHistory _$_$_EncounterClassHistoryFromJson(
 }
 
 Map<String, dynamic> _$_$_EncounterClassHistoryToJson(
-        _$_EncounterClassHistory instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'class': instance.clas,
-      'period': instance.period,
-    };
+    _$_EncounterClassHistory instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('class', instance.clas?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  return val;
+}
 
 _$_EncounterParticipant _$_$_EncounterParticipantFromJson(
     Map<String, dynamic> json) {
@@ -825,15 +942,25 @@ _$_EncounterParticipant _$_$_EncounterParticipantFromJson(
 }
 
 Map<String, dynamic> _$_$_EncounterParticipantToJson(
-        _$_EncounterParticipant instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'period': instance.period,
-      'individual': instance.individual,
-    };
+    _$_EncounterParticipant instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('individual', instance.individual?.toJson());
+  return val;
+}
 
 _$_EncounterDiagnosis _$_$_EncounterDiagnosisFromJson(
     Map<String, dynamic> json) {
@@ -860,15 +987,25 @@ _$_EncounterDiagnosis _$_$_EncounterDiagnosisFromJson(
 }
 
 Map<String, dynamic> _$_$_EncounterDiagnosisToJson(
-        _$_EncounterDiagnosis instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'condition': instance.condition,
-      'use': instance.use,
-      'rank': instance.rank,
-    };
+    _$_EncounterDiagnosis instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('condition', instance.condition?.toJson());
+  writeNotNull('use', instance.use?.toJson());
+  writeNotNull('rank', instance.rank);
+  return val;
+}
 
 _$_EncounterHospitalization _$_$_EncounterHospitalizationFromJson(
     Map<String, dynamic> json) {
@@ -923,21 +1060,35 @@ _$_EncounterHospitalization _$_$_EncounterHospitalizationFromJson(
 }
 
 Map<String, dynamic> _$_$_EncounterHospitalizationToJson(
-        _$_EncounterHospitalization instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'preAdmissionIdentifier': instance.preAdmissionIdentifier,
-      'origin': instance.origin,
-      'admitSource': instance.admitSource,
-      'reAdmission': instance.reAdmission,
-      'dietPreference': instance.dietPreference,
-      'specialCourtesy': instance.specialCourtesy,
-      'specialArrangement': instance.specialArrangement,
-      'destination': instance.destination,
-      'dischargeDisposition': instance.dischargeDisposition,
-    };
+    _$_EncounterHospitalization instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'preAdmissionIdentifier', instance.preAdmissionIdentifier?.toJson());
+  writeNotNull('origin', instance.origin?.toJson());
+  writeNotNull('admitSource', instance.admitSource?.toJson());
+  writeNotNull('reAdmission', instance.reAdmission?.toJson());
+  writeNotNull('dietPreference',
+      instance.dietPreference?.map((e) => e?.toJson())?.toList());
+  writeNotNull('specialCourtesy',
+      instance.specialCourtesy?.map((e) => e?.toJson())?.toList());
+  writeNotNull('specialArrangement',
+      instance.specialArrangement?.map((e) => e?.toJson())?.toList());
+  writeNotNull('destination', instance.destination?.toJson());
+  writeNotNull('dischargeDisposition', instance.dischargeDisposition?.toJson());
+  return val;
+}
 
 _$_EncounterLocation _$_$_EncounterLocationFromJson(Map<String, dynamic> json) {
   return _$_EncounterLocation(
@@ -968,16 +1119,26 @@ _$_EncounterLocation _$_$_EncounterLocationFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_EncounterLocationToJson(
-        _$_EncounterLocation instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'location': instance.location,
-      'status': _$EncounterLocationStatusEnumMap[instance.status],
-      'physicalType': instance.physicalType,
-      'period': instance.period,
-    };
+    _$_EncounterLocation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('status', _$EncounterLocationStatusEnumMap[instance.status]);
+  writeNotNull('physicalType', instance.physicalType?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  return val;
+}
 
 const _$EncounterLocationStatusEnumMap = {
   EncounterLocationStatus.planned: 'planned',
@@ -1042,25 +1203,38 @@ _$_Flag _$_$_FlagFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_FlagToJson(_$_Flag instance) => <String, dynamic>{
-      'resourceType': instance.resourceType,
-      'id': instance.id,
-      'meta': instance.meta,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'text': instance.text,
-      'contained': instance.contained,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identifier': instance.identifier,
-      'status': _$FlagStatusEnumMap[instance.status],
-      'category': instance.category,
-      'code': instance.code,
-      'subject': instance.subject,
-      'period': instance.period,
-      'encounter': instance.encounter,
-      'author': instance.author,
-    };
+Map<String, dynamic> _$_$_FlagToJson(_$_Flag instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$FlagStatusEnumMap[instance.status]);
+  writeNotNull(
+      'category', instance.category?.map((e) => e?.toJson())?.toList());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('author', instance.author?.toJson());
+  return val;
+}
 
 const _$FlagStatusEnumMap = {
   FlagStatus.active: 'active',

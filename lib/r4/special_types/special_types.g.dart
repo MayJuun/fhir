@@ -62,25 +62,40 @@ _$_Dosage _$_$_DosageFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DosageToJson(_$_Dosage instance) => <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'sequence': instance.sequence,
-      'text': instance.text,
-      'additionalInstruction': instance.additionalInstruction,
-      'patientInstruction': instance.patientInstruction,
-      'timing': instance.timing,
-      'asNeededBoolean': instance.asNeededBoolean,
-      'asNeededCodeableConcept': instance.asNeededCodeableConcept,
-      'site': instance.site,
-      'route': instance.route,
-      'method': instance.method,
-      'doseAndRate': instance.doseAndRate,
-      'maxDosePerPeriod': instance.maxDosePerPeriod,
-      'maxDosePerAdministration': instance.maxDosePerAdministration,
-      'maxDosePerLifetime': instance.maxDosePerLifetime,
-    };
+Map<String, dynamic> _$_$_DosageToJson(_$_Dosage instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('sequence', instance.sequence);
+  writeNotNull('text', instance.text);
+  writeNotNull('additionalInstruction',
+      instance.additionalInstruction?.map((e) => e?.toJson())?.toList());
+  writeNotNull('patientInstruction', instance.patientInstruction);
+  writeNotNull('timing', instance.timing?.toJson());
+  writeNotNull('asNeededBoolean', instance.asNeededBoolean);
+  writeNotNull(
+      'asNeededCodeableConcept', instance.asNeededCodeableConcept?.toJson());
+  writeNotNull('site', instance.site?.toJson());
+  writeNotNull('route', instance.route?.toJson());
+  writeNotNull('method', instance.method?.toJson());
+  writeNotNull(
+      'doseAndRate', instance.doseAndRate?.map((e) => e?.toJson())?.toList());
+  writeNotNull('maxDosePerPeriod', instance.maxDosePerPeriod?.toJson());
+  writeNotNull(
+      'maxDosePerAdministration', instance.maxDosePerAdministration?.toJson());
+  writeNotNull('maxDosePerLifetime', instance.maxDosePerLifetime?.toJson());
+  return val;
+}
 
 _$_DosageDoseAndRate _$_$_DosageDoseAndRateFromJson(Map<String, dynamic> json) {
   return _$_DosageDoseAndRate(
@@ -117,18 +132,28 @@ _$_DosageDoseAndRate _$_$_DosageDoseAndRateFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_DosageDoseAndRateToJson(
-        _$_DosageDoseAndRate instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': instance.type,
-      'doseRange': instance.doseRange,
-      'doseQuantity': instance.doseQuantity,
-      'rateRatio': instance.rateRatio,
-      'rateRange': instance.rateRange,
-      'rateQuantity': instance.rateQuantity,
-    };
+    _$_DosageDoseAndRate instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('doseRange', instance.doseRange?.toJson());
+  writeNotNull('doseQuantity', instance.doseQuantity?.toJson());
+  writeNotNull('rateRatio', instance.rateRatio?.toJson());
+  writeNotNull('rateRange', instance.rateRange?.toJson());
+  writeNotNull('rateQuantity', instance.rateQuantity?.toJson());
+  return val;
+}
 
 _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
   return _$_ElementDefinition(
@@ -694,212 +719,251 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_ElementDefinitionToJson(
-        _$_ElementDefinition instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'path': instance.path,
-      'representation': instance.representation
+    _$_ElementDefinition instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('path', instance.path);
+  writeNotNull(
+      'representation',
+      instance.representation
           ?.map((e) => _$ElementDefinitionRepresentationEnumMap[e])
-          ?.toList(),
-      'sliceName': instance.sliceName,
-      'sliceIsConstraining': instance.sliceIsConstraining,
-      'label': instance.label,
-      'code': instance.code,
-      'slicing': instance.slicing,
-      'short': instance.short,
-      'definition': instance.definition,
-      'comment': instance.comment,
-      'requirements': instance.requirements,
-      'alias': instance.alias,
-      'min': instance.min,
-      'max': instance.max,
-      'base': instance.base,
-      'contentReference': instance.contentReference,
-      'type': instance.type,
-      'defaultValueBase64Binary': instance.defaultValueBase64Binary,
-      'defaultValueBoolean': instance.defaultValueBoolean,
-      'defaultValueCanonical': instance.defaultValueCanonical,
-      'defaultValueCode': instance.defaultValueCode,
-      'defaultValueDate': instance.defaultValueDate,
-      'defaultValueDateTime': instance.defaultValueDateTime,
-      'defaultValueDecimal': instance.defaultValueDecimal,
-      'defaultValueId': instance.defaultValueId,
-      'defaultValueInstant': instance.defaultValueInstant,
-      'defaultValueInteger': instance.defaultValueInteger,
-      'defaultValueMarkdown': instance.defaultValueMarkdown,
-      'defaultValueOid': instance.defaultValueOid,
-      'defaultValuePositiveInt': instance.defaultValuePositiveInt,
-      'defaultValueString': instance.defaultValueString,
-      'defaultValueTime': instance.defaultValueTime,
-      'defaultValueUnsignedInt': instance.defaultValueUnsignedInt,
-      'defaultValueUri': instance.defaultValueUri,
-      'defaultValueUrl': instance.defaultValueUrl,
-      'defaultValueUuid': instance.defaultValueUuid,
-      'defaultValueAddress': instance.defaultValueAddress,
-      'defaultValueAge': instance.defaultValueAge,
-      'defaultValueAnnotation': instance.defaultValueAnnotation,
-      'defaultValueAttachment': instance.defaultValueAttachment,
-      'defaultValueCodeableConcept': instance.defaultValueCodeableConcept,
-      'defaultValueCoding': instance.defaultValueCoding,
-      'defaultValueContactPoint': instance.defaultValueContactPoint,
-      'defaultValueCount': instance.defaultValueCount,
-      'defaultValueDistance': instance.defaultValueDistance,
-      'defaultValueDuration': instance.defaultValueDuration,
-      'defaultValueHumanName': instance.defaultValueHumanName,
-      'defaultValueIdentifier': instance.defaultValueIdentifier,
-      'defaultValueMoney': instance.defaultValueMoney,
-      'defaultValuePeriod': instance.defaultValuePeriod,
-      'defaultValueQuantity': instance.defaultValueQuantity,
-      'defaultValueRange': instance.defaultValueRange,
-      'defaultValueRatio': instance.defaultValueRatio,
-      'defaultValueReference': instance.defaultValueReference,
-      'defaultValueSampledData': instance.defaultValueSampledData,
-      'defaultValueSignature': instance.defaultValueSignature,
-      'defaultValueTiming': instance.defaultValueTiming,
-      'defaultValueContactDetail': instance.defaultValueContactDetail,
-      'defaultValueContributor': instance.defaultValueContributor,
-      'defaultValueDataRequirement': instance.defaultValueDataRequirement,
-      'defaultValueExpression': instance.defaultValueExpression,
-      'defaultValueParameterDefinition':
-          instance.defaultValueParameterDefinition,
-      'defaultValueRelatedArtifact': instance.defaultValueRelatedArtifact,
-      'defaultValueTriggerDefinition': instance.defaultValueTriggerDefinition,
-      'defaultValueUsageContext': instance.defaultValueUsageContext,
-      'defaultValueDosage': instance.defaultValueDosage,
-      'defaultValueMeta': instance.defaultValueMeta,
-      'meaningWhenMissing': instance.meaningWhenMissing,
-      'orderMeaning': instance.orderMeaning,
-      'fixedBase64Binary': instance.fixedBase64Binary,
-      'fixedBoolean': instance.fixedBoolean,
-      'fixedCanonical': instance.fixedCanonical,
-      'fixedCode': instance.fixedCode,
-      'fixedDate': instance.fixedDate,
-      'fixedDateTime': instance.fixedDateTime,
-      'fixedDecimal': instance.fixedDecimal,
-      'fixedId': instance.fixedId,
-      'fixedInstant': instance.fixedInstant,
-      'fixedInteger': instance.fixedInteger,
-      'fixedMarkdown': instance.fixedMarkdown,
-      'fixedOid': instance.fixedOid,
-      'fixedPositiveInt': instance.fixedPositiveInt,
-      'fixedString': instance.fixedString,
-      'fixedTime': instance.fixedTime,
-      'fixedUnsignedInt': instance.fixedUnsignedInt,
-      'fixedUri': instance.fixedUri,
-      'fixedUrl': instance.fixedUrl,
-      'fixedUuid': instance.fixedUuid,
-      'fixedAddress': instance.fixedAddress,
-      'fixedAge': instance.fixedAge,
-      'fixedAnnotation': instance.fixedAnnotation,
-      'fixedAttachment': instance.fixedAttachment,
-      'fixedCodeableConcept': instance.fixedCodeableConcept,
-      'fixedCoding': instance.fixedCoding,
-      'fixedContactPoint': instance.fixedContactPoint,
-      'fixedCount': instance.fixedCount,
-      'fixedDistance': instance.fixedDistance,
-      'fixedDuration': instance.fixedDuration,
-      'fixedHumanName': instance.fixedHumanName,
-      'fixedIdentifier': instance.fixedIdentifier,
-      'fixedMoney': instance.fixedMoney,
-      'fixedPeriod': instance.fixedPeriod,
-      'fixedQuantity': instance.fixedQuantity,
-      'fixedRange': instance.fixedRange,
-      'fixedRatio': instance.fixedRatio,
-      'fixedReference': instance.fixedReference,
-      'fixedSampledData': instance.fixedSampledData,
-      'fixedSignature': instance.fixedSignature,
-      'fixedTiming': instance.fixedTiming,
-      'fixedContactDetail': instance.fixedContactDetail,
-      'fixedContributor': instance.fixedContributor,
-      'fixedDataRequirement': instance.fixedDataRequirement,
-      'fixedExpression': instance.fixedExpression,
-      'fixedParameterDefinition': instance.fixedParameterDefinition,
-      'fixedRelatedArtifact': instance.fixedRelatedArtifact,
-      'fixedTriggerDefinition': instance.fixedTriggerDefinition,
-      'fixedUsageContext': instance.fixedUsageContext,
-      'fixedDosage': instance.fixedDosage,
-      'fixedMeta': instance.fixedMeta,
-      'patternBase64Binary': instance.patternBase64Binary,
-      'patternBoolean': instance.patternBoolean,
-      'patternCanonical': instance.patternCanonical,
-      'patternCode': instance.patternCode,
-      'patternDate': instance.patternDate?.toIso8601String(),
-      'patternDateTime': instance.patternDateTime?.toIso8601String(),
-      'patternDecimal': instance.patternDecimal,
-      'patternId': instance.patternId,
-      'patternInstant': instance.patternInstant?.toIso8601String(),
-      'patternInteger': instance.patternInteger,
-      'patternMarkdown': instance.patternMarkdown,
-      'patternOid': instance.patternOid,
-      'patternPositiveInt': instance.patternPositiveInt,
-      'patternString': instance.patternString,
-      'patternTime': instance.patternTime,
-      'patternUnsignedInt': instance.patternUnsignedInt,
-      'patternUri': instance.patternUri,
-      'patternUrl': instance.patternUrl,
-      'patternUuid': instance.patternUuid,
-      'patternAddress': instance.patternAddress,
-      'patternAge': instance.patternAge,
-      'patternAnnotation': instance.patternAnnotation,
-      'patternAttachment': instance.patternAttachment,
-      'patternCodeableConcept': instance.patternCodeableConcept,
-      'patternCoding': instance.patternCoding,
-      'patternContactPoint': instance.patternContactPoint,
-      'patternCount': instance.patternCount,
-      'patternDistance': instance.patternDistance,
-      'patternDuration': instance.patternDuration,
-      'patternHumanName': instance.patternHumanName,
-      'patternIdentifier': instance.patternIdentifier,
-      'patternMoney': instance.patternMoney,
-      'patternPeriod': instance.patternPeriod,
-      'patternQuantity': instance.patternQuantity,
-      'patternRange': instance.patternRange,
-      'patternRatio': instance.patternRatio,
-      'patternReference': instance.patternReference,
-      'patternSampledData': instance.patternSampledData,
-      'patternSignature': instance.patternSignature,
-      'patternTiming': instance.patternTiming,
-      'patternContactDetail': instance.patternContactDetail,
-      'patternContributor': instance.patternContributor,
-      'patternDataRequirement': instance.patternDataRequirement,
-      'patternExpression': instance.patternExpression,
-      'patternParameterDefinition': instance.patternParameterDefinition,
-      'patternRelatedArtifact': instance.patternRelatedArtifact,
-      'patternTriggerDefinition': instance.patternTriggerDefinition,
-      'patternUsageContext': instance.patternUsageContext,
-      'patternDosage': instance.patternDosage,
-      'patternMeta': instance.patternMeta,
-      'example': instance.example,
-      'minValueDate': instance.minValueDate,
-      'minValueDateTime': instance.minValueDateTime,
-      'minValueInstant': instance.minValueInstant,
-      'minValueTime': instance.minValueTime,
-      'minValueDecimal': instance.minValueDecimal,
-      'minValueInteger': instance.minValueInteger,
-      'minValuePositiveInt': instance.minValuePositiveInt,
-      'minValueUnsignedInt': instance.minValueUnsignedInt,
-      'minValueQuantity': instance.minValueQuantity,
-      'maxValueDate': instance.maxValueDate,
-      'maxValueDateTime': instance.maxValueDateTime,
-      'maxValueInstant': instance.maxValueInstant,
-      'maxValueTime': instance.maxValueTime,
-      'maxValueDecimal': instance.maxValueDecimal,
-      'maxValueInteger': instance.maxValueInteger,
-      'maxValuePositiveInt': instance.maxValuePositiveInt,
-      'maxValueUnsignedInt': instance.maxValueUnsignedInt,
-      'maxValueQuantity': instance.maxValueQuantity,
-      'maxLength': instance.maxLength,
-      'condition': instance.condition,
-      'constraint': instance.constraint,
-      'mustSupport': instance.mustSupport,
-      'isModifier': instance.isModifier,
-      'isModifierReason': instance.isModifierReason,
-      'isSummary': instance.isSummary,
-      'binding': instance.binding,
-      'mapping': instance.mapping,
-    };
+          ?.toList());
+  writeNotNull('sliceName', instance.sliceName);
+  writeNotNull('sliceIsConstraining', instance.sliceIsConstraining);
+  writeNotNull('label', instance.label);
+  writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
+  writeNotNull('slicing', instance.slicing?.toJson());
+  writeNotNull('short', instance.short);
+  writeNotNull('definition', instance.definition?.toJson());
+  writeNotNull('comment', instance.comment?.toJson());
+  writeNotNull('requirements', instance.requirements?.toJson());
+  writeNotNull('alias', instance.alias);
+  writeNotNull('min', instance.min);
+  writeNotNull('max', instance.max);
+  writeNotNull('base', instance.base?.toJson());
+  writeNotNull('contentReference', instance.contentReference?.toJson());
+  writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'defaultValueBase64Binary', instance.defaultValueBase64Binary?.toJson());
+  writeNotNull('defaultValueBoolean', instance.defaultValueBoolean);
+  writeNotNull(
+      'defaultValueCanonical', instance.defaultValueCanonical?.toJson());
+  writeNotNull('defaultValueCode', instance.defaultValueCode?.toJson());
+  writeNotNull('defaultValueDate', instance.defaultValueDate?.toJson());
+  writeNotNull('defaultValueDateTime', instance.defaultValueDateTime?.toJson());
+  writeNotNull('defaultValueDecimal', instance.defaultValueDecimal);
+  writeNotNull('defaultValueId', instance.defaultValueId?.toJson());
+  writeNotNull('defaultValueInstant', instance.defaultValueInstant?.toJson());
+  writeNotNull('defaultValueInteger', instance.defaultValueInteger);
+  writeNotNull('defaultValueMarkdown', instance.defaultValueMarkdown?.toJson());
+  writeNotNull('defaultValueOid', instance.defaultValueOid?.toJson());
+  writeNotNull('defaultValuePositiveInt', instance.defaultValuePositiveInt);
+  writeNotNull('defaultValueString', instance.defaultValueString);
+  writeNotNull('defaultValueTime', instance.defaultValueTime?.toJson());
+  writeNotNull('defaultValueUnsignedInt', instance.defaultValueUnsignedInt);
+  writeNotNull('defaultValueUri', instance.defaultValueUri?.toJson());
+  writeNotNull('defaultValueUrl', instance.defaultValueUrl?.toJson());
+  writeNotNull('defaultValueUuid', instance.defaultValueUuid?.toJson());
+  writeNotNull('defaultValueAddress', instance.defaultValueAddress?.toJson());
+  writeNotNull('defaultValueAge', instance.defaultValueAge?.toJson());
+  writeNotNull(
+      'defaultValueAnnotation', instance.defaultValueAnnotation?.toJson());
+  writeNotNull(
+      'defaultValueAttachment', instance.defaultValueAttachment?.toJson());
+  writeNotNull('defaultValueCodeableConcept',
+      instance.defaultValueCodeableConcept?.toJson());
+  writeNotNull('defaultValueCoding', instance.defaultValueCoding?.toJson());
+  writeNotNull(
+      'defaultValueContactPoint', instance.defaultValueContactPoint?.toJson());
+  writeNotNull('defaultValueCount', instance.defaultValueCount?.toJson());
+  writeNotNull('defaultValueDistance', instance.defaultValueDistance?.toJson());
+  writeNotNull('defaultValueDuration', instance.defaultValueDuration?.toJson());
+  writeNotNull(
+      'defaultValueHumanName', instance.defaultValueHumanName?.toJson());
+  writeNotNull(
+      'defaultValueIdentifier', instance.defaultValueIdentifier?.toJson());
+  writeNotNull('defaultValueMoney', instance.defaultValueMoney?.toJson());
+  writeNotNull('defaultValuePeriod', instance.defaultValuePeriod?.toJson());
+  writeNotNull('defaultValueQuantity', instance.defaultValueQuantity?.toJson());
+  writeNotNull('defaultValueRange', instance.defaultValueRange?.toJson());
+  writeNotNull('defaultValueRatio', instance.defaultValueRatio?.toJson());
+  writeNotNull(
+      'defaultValueReference', instance.defaultValueReference?.toJson());
+  writeNotNull(
+      'defaultValueSampledData', instance.defaultValueSampledData?.toJson());
+  writeNotNull(
+      'defaultValueSignature', instance.defaultValueSignature?.toJson());
+  writeNotNull('defaultValueTiming', instance.defaultValueTiming?.toJson());
+  writeNotNull('defaultValueContactDetail',
+      instance.defaultValueContactDetail?.toJson());
+  writeNotNull(
+      'defaultValueContributor', instance.defaultValueContributor?.toJson());
+  writeNotNull('defaultValueDataRequirement',
+      instance.defaultValueDataRequirement?.toJson());
+  writeNotNull(
+      'defaultValueExpression', instance.defaultValueExpression?.toJson());
+  writeNotNull('defaultValueParameterDefinition',
+      instance.defaultValueParameterDefinition?.toJson());
+  writeNotNull('defaultValueRelatedArtifact',
+      instance.defaultValueRelatedArtifact?.toJson());
+  writeNotNull('defaultValueTriggerDefinition',
+      instance.defaultValueTriggerDefinition?.toJson());
+  writeNotNull(
+      'defaultValueUsageContext', instance.defaultValueUsageContext?.toJson());
+  writeNotNull('defaultValueDosage', instance.defaultValueDosage?.toJson());
+  writeNotNull('defaultValueMeta', instance.defaultValueMeta?.toJson());
+  writeNotNull('meaningWhenMissing', instance.meaningWhenMissing?.toJson());
+  writeNotNull('orderMeaning', instance.orderMeaning);
+  writeNotNull('fixedBase64Binary', instance.fixedBase64Binary?.toJson());
+  writeNotNull('fixedBoolean', instance.fixedBoolean);
+  writeNotNull('fixedCanonical', instance.fixedCanonical?.toJson());
+  writeNotNull('fixedCode', instance.fixedCode?.toJson());
+  writeNotNull('fixedDate', instance.fixedDate?.toJson());
+  writeNotNull('fixedDateTime', instance.fixedDateTime?.toJson());
+  writeNotNull('fixedDecimal', instance.fixedDecimal);
+  writeNotNull('fixedId', instance.fixedId?.toJson());
+  writeNotNull('fixedInstant', instance.fixedInstant?.toJson());
+  writeNotNull('fixedInteger', instance.fixedInteger);
+  writeNotNull('fixedMarkdown', instance.fixedMarkdown?.toJson());
+  writeNotNull('fixedOid', instance.fixedOid?.toJson());
+  writeNotNull('fixedPositiveInt', instance.fixedPositiveInt);
+  writeNotNull('fixedString', instance.fixedString);
+  writeNotNull('fixedTime', instance.fixedTime?.toJson());
+  writeNotNull('fixedUnsignedInt', instance.fixedUnsignedInt);
+  writeNotNull('fixedUri', instance.fixedUri?.toJson());
+  writeNotNull('fixedUrl', instance.fixedUrl?.toJson());
+  writeNotNull('fixedUuid', instance.fixedUuid?.toJson());
+  writeNotNull('fixedAddress', instance.fixedAddress?.toJson());
+  writeNotNull('fixedAge', instance.fixedAge?.toJson());
+  writeNotNull('fixedAnnotation', instance.fixedAnnotation?.toJson());
+  writeNotNull('fixedAttachment', instance.fixedAttachment?.toJson());
+  writeNotNull('fixedCodeableConcept', instance.fixedCodeableConcept?.toJson());
+  writeNotNull('fixedCoding', instance.fixedCoding?.toJson());
+  writeNotNull('fixedContactPoint', instance.fixedContactPoint?.toJson());
+  writeNotNull('fixedCount', instance.fixedCount?.toJson());
+  writeNotNull('fixedDistance', instance.fixedDistance?.toJson());
+  writeNotNull('fixedDuration', instance.fixedDuration?.toJson());
+  writeNotNull('fixedHumanName', instance.fixedHumanName?.toJson());
+  writeNotNull('fixedIdentifier', instance.fixedIdentifier?.toJson());
+  writeNotNull('fixedMoney', instance.fixedMoney?.toJson());
+  writeNotNull('fixedPeriod', instance.fixedPeriod?.toJson());
+  writeNotNull('fixedQuantity', instance.fixedQuantity?.toJson());
+  writeNotNull('fixedRange', instance.fixedRange?.toJson());
+  writeNotNull('fixedRatio', instance.fixedRatio?.toJson());
+  writeNotNull('fixedReference', instance.fixedReference?.toJson());
+  writeNotNull('fixedSampledData', instance.fixedSampledData?.toJson());
+  writeNotNull('fixedSignature', instance.fixedSignature?.toJson());
+  writeNotNull('fixedTiming', instance.fixedTiming?.toJson());
+  writeNotNull('fixedContactDetail', instance.fixedContactDetail?.toJson());
+  writeNotNull('fixedContributor', instance.fixedContributor?.toJson());
+  writeNotNull('fixedDataRequirement', instance.fixedDataRequirement?.toJson());
+  writeNotNull('fixedExpression', instance.fixedExpression?.toJson());
+  writeNotNull(
+      'fixedParameterDefinition', instance.fixedParameterDefinition?.toJson());
+  writeNotNull('fixedRelatedArtifact', instance.fixedRelatedArtifact?.toJson());
+  writeNotNull(
+      'fixedTriggerDefinition', instance.fixedTriggerDefinition?.toJson());
+  writeNotNull('fixedUsageContext', instance.fixedUsageContext?.toJson());
+  writeNotNull('fixedDosage', instance.fixedDosage?.toJson());
+  writeNotNull('fixedMeta', instance.fixedMeta?.toJson());
+  writeNotNull('patternBase64Binary', instance.patternBase64Binary);
+  writeNotNull('patternBoolean', instance.patternBoolean);
+  writeNotNull('patternCanonical', instance.patternCanonical);
+  writeNotNull('patternCode', instance.patternCode);
+  writeNotNull('patternDate', instance.patternDate?.toIso8601String());
+  writeNotNull('patternDateTime', instance.patternDateTime?.toIso8601String());
+  writeNotNull('patternDecimal', instance.patternDecimal);
+  writeNotNull('patternId', instance.patternId);
+  writeNotNull('patternInstant', instance.patternInstant?.toIso8601String());
+  writeNotNull('patternInteger', instance.patternInteger);
+  writeNotNull('patternMarkdown', instance.patternMarkdown);
+  writeNotNull('patternOid', instance.patternOid);
+  writeNotNull('patternPositiveInt', instance.patternPositiveInt);
+  writeNotNull('patternString', instance.patternString);
+  writeNotNull('patternTime', instance.patternTime);
+  writeNotNull('patternUnsignedInt', instance.patternUnsignedInt);
+  writeNotNull('patternUri', instance.patternUri);
+  writeNotNull('patternUrl', instance.patternUrl);
+  writeNotNull('patternUuid', instance.patternUuid);
+  writeNotNull('patternAddress', instance.patternAddress?.toJson());
+  writeNotNull('patternAge', instance.patternAge?.toJson());
+  writeNotNull('patternAnnotation', instance.patternAnnotation?.toJson());
+  writeNotNull('patternAttachment', instance.patternAttachment?.toJson());
+  writeNotNull(
+      'patternCodeableConcept', instance.patternCodeableConcept?.toJson());
+  writeNotNull('patternCoding', instance.patternCoding?.toJson());
+  writeNotNull('patternContactPoint', instance.patternContactPoint?.toJson());
+  writeNotNull('patternCount', instance.patternCount?.toJson());
+  writeNotNull('patternDistance', instance.patternDistance?.toJson());
+  writeNotNull('patternDuration', instance.patternDuration?.toJson());
+  writeNotNull('patternHumanName', instance.patternHumanName?.toJson());
+  writeNotNull('patternIdentifier', instance.patternIdentifier?.toJson());
+  writeNotNull('patternMoney', instance.patternMoney?.toJson());
+  writeNotNull('patternPeriod', instance.patternPeriod?.toJson());
+  writeNotNull('patternQuantity', instance.patternQuantity?.toJson());
+  writeNotNull('patternRange', instance.patternRange?.toJson());
+  writeNotNull('patternRatio', instance.patternRatio?.toJson());
+  writeNotNull('patternReference', instance.patternReference?.toJson());
+  writeNotNull('patternSampledData', instance.patternSampledData?.toJson());
+  writeNotNull('patternSignature', instance.patternSignature?.toJson());
+  writeNotNull('patternTiming', instance.patternTiming?.toJson());
+  writeNotNull('patternContactDetail', instance.patternContactDetail?.toJson());
+  writeNotNull('patternContributor', instance.patternContributor?.toJson());
+  writeNotNull(
+      'patternDataRequirement', instance.patternDataRequirement?.toJson());
+  writeNotNull('patternExpression', instance.patternExpression?.toJson());
+  writeNotNull('patternParameterDefinition',
+      instance.patternParameterDefinition?.toJson());
+  writeNotNull(
+      'patternRelatedArtifact', instance.patternRelatedArtifact?.toJson());
+  writeNotNull(
+      'patternTriggerDefinition', instance.patternTriggerDefinition?.toJson());
+  writeNotNull('patternUsageContext', instance.patternUsageContext?.toJson());
+  writeNotNull('patternDosage', instance.patternDosage?.toJson());
+  writeNotNull('patternMeta', instance.patternMeta?.toJson());
+  writeNotNull('example', instance.example?.map((e) => e?.toJson())?.toList());
+  writeNotNull('minValueDate', instance.minValueDate?.toJson());
+  writeNotNull('minValueDateTime', instance.minValueDateTime?.toJson());
+  writeNotNull('minValueInstant', instance.minValueInstant?.toJson());
+  writeNotNull('minValueTime', instance.minValueTime?.toJson());
+  writeNotNull('minValueDecimal', instance.minValueDecimal);
+  writeNotNull('minValueInteger', instance.minValueInteger);
+  writeNotNull('minValuePositiveInt', instance.minValuePositiveInt);
+  writeNotNull('minValueUnsignedInt', instance.minValueUnsignedInt);
+  writeNotNull('minValueQuantity', instance.minValueQuantity?.toJson());
+  writeNotNull('maxValueDate', instance.maxValueDate?.toJson());
+  writeNotNull('maxValueDateTime', instance.maxValueDateTime?.toJson());
+  writeNotNull('maxValueInstant', instance.maxValueInstant?.toJson());
+  writeNotNull('maxValueTime', instance.maxValueTime?.toJson());
+  writeNotNull('maxValueDecimal', instance.maxValueDecimal);
+  writeNotNull('maxValueInteger', instance.maxValueInteger);
+  writeNotNull('maxValuePositiveInt', instance.maxValuePositiveInt);
+  writeNotNull('maxValueUnsignedInt', instance.maxValueUnsignedInt);
+  writeNotNull('maxValueQuantity', instance.maxValueQuantity?.toJson());
+  writeNotNull('maxLength', instance.maxLength);
+  writeNotNull(
+      'condition', instance.condition?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'constraint', instance.constraint?.map((e) => e?.toJson())?.toList());
+  writeNotNull('mustSupport', instance.mustSupport);
+  writeNotNull('isModifier', instance.isModifier);
+  writeNotNull('isModifierReason', instance.isModifierReason);
+  writeNotNull('isSummary', instance.isSummary);
+  writeNotNull('binding', instance.binding?.toJson());
+  writeNotNull('mapping', instance.mapping?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 T _$enumDecode<T>(
   Map<T, dynamic> enumValues,
@@ -970,16 +1034,27 @@ _$_ElementDefinitionSlicing _$_$_ElementDefinitionSlicingFromJson(
 }
 
 Map<String, dynamic> _$_$_ElementDefinitionSlicingToJson(
-        _$_ElementDefinitionSlicing instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'discriminator': instance.discriminator,
-      'description': instance.description,
-      'ordered': instance.ordered,
-      'rules': _$ElementDefinitionSlicingRulesEnumMap[instance.rules],
-    };
+    _$_ElementDefinitionSlicing instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('discriminator',
+      instance.discriminator?.map((e) => e?.toJson())?.toList());
+  writeNotNull('description', instance.description);
+  writeNotNull('ordered', instance.ordered);
+  writeNotNull('rules', _$ElementDefinitionSlicingRulesEnumMap[instance.rules]);
+  return val;
+}
 
 const _$ElementDefinitionSlicingRulesEnumMap = {
   ElementDefinitionSlicingRules.closed: 'closed',
@@ -1009,14 +1084,25 @@ _$_ElementDefinitionDiscriminator _$_$_ElementDefinitionDiscriminatorFromJson(
 }
 
 Map<String, dynamic> _$_$_ElementDefinitionDiscriminatorToJson(
-        _$_ElementDefinitionDiscriminator instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'type': _$ElementDefinitionDiscriminatorTypeEnumMap[instance.type],
-      'path': instance.path,
-    };
+    _$_ElementDefinitionDiscriminator instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'type', _$ElementDefinitionDiscriminatorTypeEnumMap[instance.type]);
+  writeNotNull('path', instance.path);
+  return val;
+}
 
 const _$ElementDefinitionDiscriminatorTypeEnumMap = {
   ElementDefinitionDiscriminatorType.value: 'value',
@@ -1048,15 +1134,25 @@ _$_ElementDefinitionBase _$_$_ElementDefinitionBaseFromJson(
 }
 
 Map<String, dynamic> _$_$_ElementDefinitionBaseToJson(
-        _$_ElementDefinitionBase instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'path': instance.path,
-      'min': instance.min,
-      'max': instance.max,
-    };
+    _$_ElementDefinitionBase instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('path', instance.path);
+  writeNotNull('min', instance.min);
+  writeNotNull('max', instance.max);
+  return val;
+}
 
 _$_ElementDefinitionType _$_$_ElementDefinitionTypeFromJson(
     Map<String, dynamic> json) {
@@ -1090,20 +1186,33 @@ _$_ElementDefinitionType _$_$_ElementDefinitionTypeFromJson(
 }
 
 Map<String, dynamic> _$_$_ElementDefinitionTypeToJson(
-        _$_ElementDefinitionType instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'code': instance.code,
-      'profile': instance.profile,
-      'targetProfile': instance.targetProfile,
-      'aggregation': instance.aggregation
+    _$_ElementDefinitionType instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('profile', instance.profile?.map((e) => e?.toJson())?.toList());
+  writeNotNull('targetProfile',
+      instance.targetProfile?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'aggregation',
+      instance.aggregation
           ?.map((e) => _$ElementDefinitionTypeAggregationEnumMap[e])
-          ?.toList(),
-      'versioning':
-          _$ElementDefinitionTypeVersioningEnumMap[instance.versioning],
-    };
+          ?.toList());
+  writeNotNull('versioning',
+      _$ElementDefinitionTypeVersioningEnumMap[instance.versioning]);
+  return val;
+}
 
 const _$ElementDefinitionTypeAggregationEnumMap = {
   ElementDefinitionTypeAggregation.contained: 'contained',
@@ -1285,63 +1394,75 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
 }
 
 Map<String, dynamic> _$_$_ElementDefinitionExampleToJson(
-        _$_ElementDefinitionExample instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'label': instance.label,
-      'valueBase64Binary': instance.valueBase64Binary,
-      'valueBoolean': instance.valueBoolean,
-      'valueCanonical': instance.valueCanonical,
-      'valueCode': instance.valueCode,
-      'valueDate': instance.valueDate,
-      'valueDateTime': instance.valueDateTime,
-      'valueDecimal': instance.valueDecimal,
-      'valueId': instance.valueId,
-      'valueInstant': instance.valueInstant,
-      'valueInteger': instance.valueInteger,
-      'valueMarkdown': instance.valueMarkdown,
-      'valueOid': instance.valueOid,
-      'valuePositiveInt': instance.valuePositiveInt,
-      'valueString': instance.valueString,
-      'valueTime': instance.valueTime,
-      'valueUnsignedInt': instance.valueUnsignedInt,
-      'valueUri': instance.valueUri,
-      'valueUrl': instance.valueUrl,
-      'valueUuid': instance.valueUuid,
-      'valueAddress': instance.valueAddress,
-      'valueAge': instance.valueAge,
-      'valueAnnotation': instance.valueAnnotation,
-      'valueAttachment': instance.valueAttachment,
-      'valueCodeableConcept': instance.valueCodeableConcept,
-      'valueCoding': instance.valueCoding,
-      'valueContactPoint': instance.valueContactPoint,
-      'valueCount': instance.valueCount,
-      'valueDistance': instance.valueDistance,
-      'valueDuration': instance.valueDuration,
-      'valueHumanName': instance.valueHumanName,
-      'valueIdentifier': instance.valueIdentifier,
-      'valueMoney': instance.valueMoney,
-      'valuePeriod': instance.valuePeriod,
-      'valueQuantity': instance.valueQuantity,
-      'valueRange': instance.valueRange,
-      'valueRatio': instance.valueRatio,
-      'valueReference': instance.valueReference,
-      'valueSampledData': instance.valueSampledData,
-      'valueSignature': instance.valueSignature,
-      'valueTiming': instance.valueTiming,
-      'valueContactDetail': instance.valueContactDetail,
-      'valueContributor': instance.valueContributor,
-      'valueDataRequirement': instance.valueDataRequirement,
-      'valueExpression': instance.valueExpression,
-      'valueParameterDefinition': instance.valueParameterDefinition,
-      'valueRelatedArtifact': instance.valueRelatedArtifact,
-      'valueTriggerDefinition': instance.valueTriggerDefinition,
-      'valueUsageContext': instance.valueUsageContext,
-      'valueDosage': instance.valueDosage,
-      'valueMeta': instance.valueMeta,
-    };
+    _$_ElementDefinitionExample instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('label', instance.label);
+  writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean);
+  writeNotNull('valueCanonical', instance.valueCanonical?.toJson());
+  writeNotNull('valueCode', instance.valueCode?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
+  writeNotNull('valueId', instance.valueId?.toJson());
+  writeNotNull('valueInstant', instance.valueInstant?.toJson());
+  writeNotNull('valueInteger', instance.valueInteger);
+  writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
+  writeNotNull('valueOid', instance.valueOid?.toJson());
+  writeNotNull('valuePositiveInt', instance.valuePositiveInt);
+  writeNotNull('valueString', instance.valueString);
+  writeNotNull('valueTime', instance.valueTime?.toJson());
+  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt);
+  writeNotNull('valueUri', instance.valueUri?.toJson());
+  writeNotNull('valueUrl', instance.valueUrl?.toJson());
+  writeNotNull('valueUuid', instance.valueUuid?.toJson());
+  writeNotNull('valueAddress', instance.valueAddress?.toJson());
+  writeNotNull('valueAge', instance.valueAge?.toJson());
+  writeNotNull('valueAnnotation', instance.valueAnnotation?.toJson());
+  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull('valueCoding', instance.valueCoding?.toJson());
+  writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
+  writeNotNull('valueCount', instance.valueCount?.toJson());
+  writeNotNull('valueDistance', instance.valueDistance?.toJson());
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
+  writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
+  writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
+  writeNotNull('valueMoney', instance.valueMoney?.toJson());
+  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueRatio', instance.valueRatio?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
+  writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
+  writeNotNull('valueSignature', instance.valueSignature?.toJson());
+  writeNotNull('valueTiming', instance.valueTiming?.toJson());
+  writeNotNull('valueContactDetail', instance.valueContactDetail?.toJson());
+  writeNotNull('valueContributor', instance.valueContributor?.toJson());
+  writeNotNull('valueDataRequirement', instance.valueDataRequirement?.toJson());
+  writeNotNull('valueExpression', instance.valueExpression?.toJson());
+  writeNotNull(
+      'valueParameterDefinition', instance.valueParameterDefinition?.toJson());
+  writeNotNull('valueRelatedArtifact', instance.valueRelatedArtifact?.toJson());
+  writeNotNull(
+      'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
+  writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
+  writeNotNull('valueDosage', instance.valueDosage?.toJson());
+  writeNotNull('valueMeta', instance.valueMeta?.toJson());
+  return val;
+}
 
 _$_ElementDefinitionConstraint _$_$_ElementDefinitionConstraintFromJson(
     Map<String, dynamic> json) {
@@ -1371,20 +1492,30 @@ _$_ElementDefinitionConstraint _$_$_ElementDefinitionConstraintFromJson(
 }
 
 Map<String, dynamic> _$_$_ElementDefinitionConstraintToJson(
-        _$_ElementDefinitionConstraint instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'key': instance.key,
-      'requirements': instance.requirements,
-      'severity':
-          _$ElementDefinitionConstraintSeverityEnumMap[instance.severity],
-      'human': instance.human,
-      'expression': instance.expression,
-      'xpath': instance.xpath,
-      'source': instance.source,
-    };
+    _$_ElementDefinitionConstraint instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('key', instance.key?.toJson());
+  writeNotNull('requirements', instance.requirements);
+  writeNotNull('severity',
+      _$ElementDefinitionConstraintSeverityEnumMap[instance.severity]);
+  writeNotNull('human', instance.human);
+  writeNotNull('expression', instance.expression);
+  writeNotNull('xpath', instance.xpath);
+  writeNotNull('source', instance.source?.toJson());
+  return val;
+}
 
 const _$ElementDefinitionConstraintSeverityEnumMap = {
   ElementDefinitionConstraintSeverity.error: 'error',
@@ -1416,15 +1547,26 @@ _$_ElementDefinitionBinding _$_$_ElementDefinitionBindingFromJson(
 }
 
 Map<String, dynamic> _$_$_ElementDefinitionBindingToJson(
-        _$_ElementDefinitionBinding instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'strength': _$ElementDefinitionBindingStrengthEnumMap[instance.strength],
-      'description': instance.description,
-      'valueSet': instance.valueSet,
-    };
+    _$_ElementDefinitionBinding instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'strength', _$ElementDefinitionBindingStrengthEnumMap[instance.strength]);
+  writeNotNull('description', instance.description);
+  writeNotNull('valueSet', instance.valueSet?.toJson());
+  return val;
+}
 
 const _$ElementDefinitionBindingStrengthEnumMap = {
   ElementDefinitionBindingStrength.isRequired: 'required',
@@ -1460,16 +1602,26 @@ _$_ElementDefinitionMapping _$_$_ElementDefinitionMappingFromJson(
 }
 
 Map<String, dynamic> _$_$_ElementDefinitionMappingToJson(
-        _$_ElementDefinitionMapping instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'identity': instance.identity,
-      'language': instance.language,
-      'map': instance.elementMap,
-      'comment': instance.comment,
-    };
+    _$_ElementDefinitionMapping instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('identity', instance.identity?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('map', instance.elementMap);
+  writeNotNull('comment', instance.comment);
+  return val;
+}
 
 _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
   return _$_FhirExtension(
@@ -1630,62 +1782,73 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_FhirExtensionToJson(_$_FhirExtension instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'url': instance.url,
-      'valueBase64Binary': instance.valueBase64Binary,
-      'valueBoolean': instance.valueBoolean,
-      'valueCanonical': instance.valueCanonical,
-      'valueCode': instance.valueCode,
-      'valueDate': instance.valueDate,
-      'valueDateTime': instance.valueDateTime,
-      'valueDecimal': instance.valueDecimal,
-      'valueId': instance.valueId,
-      'valueInstant': instance.valueInstant,
-      'valueInteger': instance.valueInteger,
-      'valueMarkdown': instance.valueMarkdown,
-      'valueOid': instance.valueOid,
-      'valuePositiveInt': instance.valuePositiveInt,
-      'valueString': instance.valueString,
-      'valueTime': instance.valueTime,
-      'valueUnsignedInt': instance.valueUnsignedInt,
-      'valueUri': instance.valueUri,
-      'valueUrl': instance.valueUrl,
-      'valueUuid': instance.valueUuid,
-      'valueAddress': instance.valueAddress,
-      'valueAge': instance.valueAge,
-      'valueAnnotation': instance.valueAnnotation,
-      'valueAttachment': instance.valueAttachment,
-      'valueCodeableConcept': instance.valueCodeableConcept,
-      'valueCoding': instance.valueCoding,
-      'valueContactPoint': instance.valueContactPoint,
-      'valueCount': instance.valueCount,
-      'valueDistance': instance.valueDistance,
-      'valueDuration': instance.valueDuration,
-      'valueHumanName': instance.valueHumanName,
-      'valueIdentifier': instance.valueIdentifier,
-      'valueMoney': instance.valueMoney,
-      'valuePeriod': instance.valuePeriod,
-      'valueQuantity': instance.valueQuantity,
-      'valueRange': instance.valueRange,
-      'valueRatio': instance.valueRatio,
-      'valueReference': instance.valueReference,
-      'valueSampledData': instance.valueSampledData,
-      'valueSignature': instance.valueSignature,
-      'valueTiming': instance.valueTiming,
-      'valueContactDetail': instance.valueContactDetail,
-      'valueContributor': instance.valueContributor,
-      'valueDataRequirement': instance.valueDataRequirement,
-      'valueExpression': instance.valueExpression,
-      'valueParameterDefinition': instance.valueParameterDefinition,
-      'valueRelatedArtifact': instance.valueRelatedArtifact,
-      'valueTriggerDefinition': instance.valueTriggerDefinition,
-      'valueUsageContext': instance.valueUsageContext,
-      'valueDosage': instance.valueDosage,
-      'valueMeta': instance.valueMeta,
-    };
+Map<String, dynamic> _$_$_FhirExtensionToJson(_$_FhirExtension instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('url', instance.url?.toJson());
+  writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean);
+  writeNotNull('valueCanonical', instance.valueCanonical?.toJson());
+  writeNotNull('valueCode', instance.valueCode?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
+  writeNotNull('valueId', instance.valueId?.toJson());
+  writeNotNull('valueInstant', instance.valueInstant?.toJson());
+  writeNotNull('valueInteger', instance.valueInteger);
+  writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
+  writeNotNull('valueOid', instance.valueOid?.toJson());
+  writeNotNull('valuePositiveInt', instance.valuePositiveInt);
+  writeNotNull('valueString', instance.valueString);
+  writeNotNull('valueTime', instance.valueTime?.toJson());
+  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt);
+  writeNotNull('valueUri', instance.valueUri?.toJson());
+  writeNotNull('valueUrl', instance.valueUrl?.toJson());
+  writeNotNull('valueUuid', instance.valueUuid?.toJson());
+  writeNotNull('valueAddress', instance.valueAddress?.toJson());
+  writeNotNull('valueAge', instance.valueAge?.toJson());
+  writeNotNull('valueAnnotation', instance.valueAnnotation?.toJson());
+  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull('valueCoding', instance.valueCoding?.toJson());
+  writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
+  writeNotNull('valueCount', instance.valueCount?.toJson());
+  writeNotNull('valueDistance', instance.valueDistance?.toJson());
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
+  writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
+  writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
+  writeNotNull('valueMoney', instance.valueMoney?.toJson());
+  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueRatio', instance.valueRatio?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
+  writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
+  writeNotNull('valueSignature', instance.valueSignature?.toJson());
+  writeNotNull('valueTiming', instance.valueTiming?.toJson());
+  writeNotNull('valueContactDetail', instance.valueContactDetail?.toJson());
+  writeNotNull('valueContributor', instance.valueContributor?.toJson());
+  writeNotNull('valueDataRequirement', instance.valueDataRequirement?.toJson());
+  writeNotNull('valueExpression', instance.valueExpression?.toJson());
+  writeNotNull(
+      'valueParameterDefinition', instance.valueParameterDefinition?.toJson());
+  writeNotNull('valueRelatedArtifact', instance.valueRelatedArtifact?.toJson());
+  writeNotNull(
+      'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
+  writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
+  writeNotNull('valueDosage', instance.valueDosage?.toJson());
+  writeNotNull('valueMeta', instance.valueMeta?.toJson());
+  return val;
+}
 
 _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
   return _$_Meta(
@@ -1716,16 +1879,27 @@ _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) => <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'versionId': instance.versionId,
-      'lastUpdated': instance.lastUpdated,
-      'source': instance.source?.toString(),
-      'profile': instance.profile,
-      'security': instance.security,
-      'tag': instance.tag,
-    };
+Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('versionId', instance.versionId?.toJson());
+  writeNotNull('lastUpdated', instance.lastUpdated?.toJson());
+  writeNotNull('source', instance.source?.toString());
+  writeNotNull('profile', instance.profile?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'security', instance.security?.map((e) => e?.toJson())?.toList());
+  writeNotNull('tag', instance.tag?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_Narrative _$_$_NarrativeFromJson(Map<String, dynamic> json) {
   return _$_Narrative(
@@ -1740,13 +1914,22 @@ _$_Narrative _$_$_NarrativeFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_NarrativeToJson(_$_Narrative instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'status': _$NarrativeStatusEnumMap[instance.status],
-      'div': instance.div,
-    };
+Map<String, dynamic> _$_$_NarrativeToJson(_$_Narrative instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('status', _$NarrativeStatusEnumMap[instance.status]);
+  writeNotNull('div', instance.div);
+  return val;
+}
 
 const _$NarrativeStatusEnumMap = {
   NarrativeStatus.generated: 'generated',
@@ -1774,12 +1957,21 @@ _$_Reference _$_$_ReferenceFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ReferenceToJson(_$_Reference instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'reference': instance.reference,
-      'type': instance.type,
-      'identifier': instance.identifier,
-      'display': instance.display,
-    };
+Map<String, dynamic> _$_$_ReferenceToJson(_$_Reference instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('reference', instance.reference);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('display', instance.display);
+  return val;
+}

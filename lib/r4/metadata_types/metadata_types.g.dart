@@ -22,13 +22,22 @@ _$_ContactDetail _$_$_ContactDetailFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ContactDetailToJson(_$_ContactDetail instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'name': instance.name,
-      'telecom': instance.telecom,
-    };
+Map<String, dynamic> _$_$_ContactDetailToJson(_$_ContactDetail instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('name', instance.name);
+  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_Contributor _$_$_ContributorFromJson(Map<String, dynamic> json) {
   return _$_Contributor(
@@ -48,14 +57,23 @@ _$_Contributor _$_$_ContributorFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ContributorToJson(_$_Contributor instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'type': _$ContributorTypeEnumMap[instance.type],
-      'name': instance.name,
-      'contact': instance.contact,
-    };
+Map<String, dynamic> _$_$_ContributorToJson(_$_Contributor instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', _$ContributorTypeEnumMap[instance.type]);
+  writeNotNull('name', instance.name);
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 T _$enumDecode<T>(
   Map<T, dynamic> enumValues,
@@ -137,20 +155,32 @@ _$_DataRequirement _$_$_DataRequirementFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DataRequirementToJson(_$_DataRequirement instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'type': instance.type,
-      'profile': instance.profile,
-      'subjectCodeableConcept': instance.subjectCodeableConcept,
-      'subjectReference': instance.subjectReference,
-      'mustSupport': instance.mustSupport,
-      'codeFilter': instance.codeFilter,
-      'dateFilter': instance.dateFilter,
-      'limit': instance.limit,
-      'sort': instance.sort,
-    };
+Map<String, dynamic> _$_$_DataRequirementToJson(_$_DataRequirement instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('profile', instance.profile?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
+  writeNotNull('subjectReference', instance.subjectReference?.toJson());
+  writeNotNull('mustSupport', instance.mustSupport);
+  writeNotNull(
+      'codeFilter', instance.codeFilter?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'dateFilter', instance.dateFilter?.map((e) => e?.toJson())?.toList());
+  writeNotNull('limit', instance.limit);
+  writeNotNull('sort', instance.sort?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_DataRequirementCodeFilter _$_$_DataRequirementCodeFilterFromJson(
     Map<String, dynamic> json) {
@@ -179,16 +209,26 @@ _$_DataRequirementCodeFilter _$_$_DataRequirementCodeFilterFromJson(
 }
 
 Map<String, dynamic> _$_$_DataRequirementCodeFilterToJson(
-        _$_DataRequirementCodeFilter instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'path': instance.path,
-      'searchParam': instance.searchParam,
-      'valueSet': instance.valueSet,
-      'code': instance.code,
-    };
+    _$_DataRequirementCodeFilter instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('path', instance.path);
+  writeNotNull('searchParam', instance.searchParam);
+  writeNotNull('valueSet', instance.valueSet?.toJson());
+  writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_DataRequirementDateFilter _$_$_DataRequirementDateFilterFromJson(
     Map<String, dynamic> json) {
@@ -219,17 +259,27 @@ _$_DataRequirementDateFilter _$_$_DataRequirementDateFilterFromJson(
 }
 
 Map<String, dynamic> _$_$_DataRequirementDateFilterToJson(
-        _$_DataRequirementDateFilter instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'path': instance.path,
-      'searchParam': instance.searchParam,
-      'valueDateTime': instance.valueDateTime,
-      'valuePeriod': instance.valuePeriod,
-      'valueDuration': instance.valueDuration,
-    };
+    _$_DataRequirementDateFilter instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('path', instance.path);
+  writeNotNull('searchParam', instance.searchParam);
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
+  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
+  return val;
+}
 
 _$_DataRequirementSort _$_$_DataRequirementSortFromJson(
     Map<String, dynamic> json) {
@@ -252,14 +302,25 @@ _$_DataRequirementSort _$_$_DataRequirementSortFromJson(
 }
 
 Map<String, dynamic> _$_$_DataRequirementSortToJson(
-        _$_DataRequirementSort instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'modifierExtension': instance.modifierExtension,
-      'path': instance.path,
-      'direction': _$DataRequirementSortDirectionEnumMap[instance.direction],
-    };
+    _$_DataRequirementSort instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('path', instance.path);
+  writeNotNull(
+      'direction', _$DataRequirementSortDirectionEnumMap[instance.direction]);
+  return val;
+}
 
 const _$DataRequirementSortDirectionEnumMap = {
   DataRequirementSortDirection.ascending: 'ascending',
@@ -286,16 +347,25 @@ _$_Expression _$_$_ExpressionFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ExpressionToJson(_$_Expression instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'description': instance.description,
-      'name': instance.name,
-      'language': _$ExpressionLanguageEnumMap[instance.language],
-      'expression': instance.expression,
-      'reference': instance.reference,
-    };
+Map<String, dynamic> _$_$_ExpressionToJson(_$_Expression instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('description', instance.description);
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('language', _$ExpressionLanguageEnumMap[instance.language]);
+  writeNotNull('expression', instance.expression);
+  writeNotNull('reference', instance.reference?.toJson());
+  return val;
+}
 
 const _$ExpressionLanguageEnumMap = {
   ExpressionLanguage.text_cql: 'text/cql',
@@ -326,18 +396,27 @@ _$_ParameterDefinition _$_$_ParameterDefinitionFromJson(
 }
 
 Map<String, dynamic> _$_$_ParameterDefinitionToJson(
-        _$_ParameterDefinition instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'name': instance.name,
-      'use': instance.use,
-      'min': instance.min,
-      'max': instance.max,
-      'documentation': instance.documentation,
-      'type': instance.type,
-      'profile': instance.profile,
-    };
+    _$_ParameterDefinition instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('use', instance.use?.toJson());
+  writeNotNull('min', instance.min);
+  writeNotNull('max', instance.max);
+  writeNotNull('documentation', instance.documentation);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('profile', instance.profile?.toJson());
+  return val;
+}
 
 _$_RelatedArtifact _$_$_RelatedArtifactFromJson(Map<String, dynamic> json) {
   return _$_RelatedArtifact(
@@ -363,18 +442,27 @@ _$_RelatedArtifact _$_$_RelatedArtifactFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_RelatedArtifactToJson(_$_RelatedArtifact instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'type': _$RelatedArtifactTypeEnumMap[instance.type],
-      'label': instance.label,
-      'display': instance.display,
-      'citation': instance.citation,
-      'url': instance.url,
-      'document': instance.document,
-      'resource': instance.resource,
-    };
+Map<String, dynamic> _$_$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', _$RelatedArtifactTypeEnumMap[instance.type]);
+  writeNotNull('label', instance.label);
+  writeNotNull('display', instance.display);
+  writeNotNull('citation', instance.citation?.toJson());
+  writeNotNull('url', instance.url?.toJson());
+  writeNotNull('document', instance.document?.toJson());
+  writeNotNull('resource', instance.resource?.toJson());
+  return val;
+}
 
 const _$RelatedArtifactTypeEnumMap = {
   RelatedArtifactType.documentation: 'documentation',
@@ -422,19 +510,28 @@ _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_TriggerDefinitionToJson(
-        _$_TriggerDefinition instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'type': _$TriggerDefinitionTypeEnumMap[instance.type],
-      'name': instance.name,
-      'timingTiming': instance.timingTiming,
-      'timingReference': instance.timingReference,
-      'timingDate': instance.timingDate,
-      'timingDateTime': instance.timingDateTime,
-      'data': instance.data,
-      'condition': instance.condition,
-    };
+    _$_TriggerDefinition instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', _$TriggerDefinitionTypeEnumMap[instance.type]);
+  writeNotNull('name', instance.name);
+  writeNotNull('timingTiming', instance.timingTiming?.toJson());
+  writeNotNull('timingReference', instance.timingReference?.toJson());
+  writeNotNull('timingDate', instance.timingDate?.toJson());
+  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
+  writeNotNull('data', instance.data?.map((e) => e?.toJson())?.toList());
+  writeNotNull('condition', instance.condition?.toJson());
+  return val;
+}
 
 const _$TriggerDefinitionTypeEnumMap = {
   TriggerDefinitionType.named_event: 'named-event',
@@ -475,13 +572,22 @@ _$_UsageContext _$_$_UsageContextFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_UsageContextToJson(_$_UsageContext instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.fhirExtension,
-      'code': instance.code,
-      'valueCodeableConcept': instance.valueCodeableConcept,
-      'valueQuantity': instance.valueQuantity,
-      'valueRange': instance.valueRange,
-      'valueReference': instance.valueReference,
-    };
+Map<String, dynamic> _$_$_UsageContextToJson(_$_UsageContext instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
+  return val;
+}

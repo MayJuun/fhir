@@ -105,6 +105,8 @@ enum IdentifierUse {
   secondary,
   @JsonValue('old')
   old,
+  @JsonValue('unknown')
+  unknown,
 }
 
 enum TimingRepeatWhen {
