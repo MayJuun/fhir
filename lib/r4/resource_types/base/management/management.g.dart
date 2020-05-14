@@ -22,7 +22,10 @@ _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -257,7 +260,10 @@ _$_Lists _$_$_ListsFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -421,7 +427,10 @@ _$_EpisodeOfCare _$_$_EpisodeOfCareFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -645,7 +654,10 @@ _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1164,7 +1176,10 @@ _$_Flag _$_$_FlagFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

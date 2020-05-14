@@ -22,7 +22,10 @@ _$_Group _$_$_GroupFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -260,7 +263,10 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -556,7 +562,10 @@ _$_PractitionerRole _$_$_PractitionerRoleFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -772,7 +781,10 @@ _$_Person _$_$_PersonFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -923,7 +935,10 @@ _$_Practitioner _$_$_PractitionerFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1084,7 +1099,10 @@ _$_RelatedPerson _$_$_RelatedPersonFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

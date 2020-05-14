@@ -22,7 +22,10 @@ _$_MeasureReport _$_$_MeasureReportFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -463,7 +466,10 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -948,7 +954,10 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1951,7 +1960,10 @@ _$_TestReport _$_$_TestReportFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

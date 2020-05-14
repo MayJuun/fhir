@@ -22,7 +22,10 @@ _$_MessageDefinition _$_$_MessageDefinitionFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -322,7 +325,10 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1271,7 +1277,10 @@ _$_CompartmentDefinition _$_$_CompartmentDefinitionFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1432,7 +1441,10 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1817,7 +1829,10 @@ _$_ExampleScenario _$_$_ExampleScenarioFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -2363,7 +2378,10 @@ _$_StructureMap _$_$_StructureMapFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -3196,7 +3214,10 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -4245,7 +4266,10 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -4453,7 +4477,10 @@ _$_GraphDefinition _$_$_GraphDefinitionFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -4739,7 +4766,10 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

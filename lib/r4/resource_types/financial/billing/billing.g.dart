@@ -22,7 +22,10 @@ _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -976,7 +979,10 @@ _$_Invoice _$_$_InvoiceFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1264,7 +1270,10 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] as List,
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
+        ?.toList(),
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
