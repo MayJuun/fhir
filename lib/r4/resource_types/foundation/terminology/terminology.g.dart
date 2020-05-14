@@ -22,10 +22,7 @@ _$_CodeSystem _$_$_CodeSystemFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -484,10 +481,7 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1013,10 +1007,7 @@ _$_TerminologyCapabilities _$_$_TerminologyCapabilitiesFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1607,10 +1598,7 @@ _$_NamingSystem _$_$_NamingSystemFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1782,10 +1770,7 @@ _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

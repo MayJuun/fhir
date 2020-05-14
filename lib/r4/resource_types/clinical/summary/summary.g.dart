@@ -23,10 +23,7 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -267,10 +264,7 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) => e == null
             ? null
@@ -529,10 +523,7 @@ _$_AdverseEvent _$_$_AdverseEventFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -778,10 +769,7 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1002,10 +990,7 @@ _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1212,10 +1197,7 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1461,10 +1443,7 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

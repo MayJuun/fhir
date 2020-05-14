@@ -22,10 +22,7 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -249,10 +246,7 @@ _$_BiologicallyDerivedProduct _$_$_BiologicallyDerivedProductFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -582,10 +576,7 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -999,10 +990,7 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

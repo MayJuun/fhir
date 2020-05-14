@@ -22,10 +22,7 @@ _$_CatalogEntry _$_$_CatalogEntryFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -230,10 +227,7 @@ _$_Composition _$_$_CompositionFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -580,10 +574,7 @@ _$_DocumentManifest _$_$_DocumentManifestFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -737,10 +728,7 @@ _$_DocumentReference _$_$_DocumentReferenceFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : ResourceFromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: json['contained'] as List,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

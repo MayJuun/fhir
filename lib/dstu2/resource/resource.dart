@@ -1,24 +1,36 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../fhir_dstu2.dart';
 
+part 'resource.freezed.dart';
 part 'resource.g.dart';
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class Resource {
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
+@freezed
+abstract class DomainResource with _$DomainResource {
+  factory DomainResource({
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+  }) = _DomainResource;
 
-  Resource({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-  });
+  factory DomainResource.fromJson(Map<String, dynamic> json) =>
+      _$DomainResourceFromJson(json);
+}
+
+@freezed
+abstract class Resource with _$Resource {
+  factory Resource({
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+  }) = _Resource;
 
   factory Resource.fromJson(Map<String, dynamic> json) =>
       _$ResourceFromJson(json);
-  Map<String, dynamic> toJson() => _$ResourceToJson(this);
 }
