@@ -11,8 +11,15 @@ void main() async {
     (FileSystemEntity entity) async {
       if (entity.path.toString().contains('.dart')) {
         var text = await File(entity.path.toString()).readAsString();
-        text = text.replaceAll(exp, '');
-        text = text.replaceAll(exp2, '');
+        var name = entity.path.toString().split('/').last.split('.')[0];
+        text = text.replaceFirst('@freezed',
+            """import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
+
+import '../../../../fhir_dstu2.dart';
+
+part '$name.freezed.dart';
+part '$name.g.dart';\n\n@freezed""");
         // print(text);
 
         // var pieces = text.split('class ');

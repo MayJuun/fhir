@@ -17,7 +17,7 @@ class _$AddressTearOff {
 
   _Address call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       Code type,
       String text,
@@ -30,7 +30,7 @@ class _$AddressTearOff {
       Period period}) {
     return _Address(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       use: use,
       type: type,
       text: text,
@@ -50,7 +50,8 @@ const $Address = _$AddressTearOff();
 
 mixin _$Address {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Code get use;
   Code get type;
   String get text;
@@ -71,7 +72,7 @@ abstract class $AddressCopyWith<$Res> {
       _$AddressCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       Code type,
       String text,
@@ -96,7 +97,7 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object use = freezed,
     Object type = freezed,
     Object text = freezed,
@@ -110,9 +111,9 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       use: use == freezed ? _value.use : use as Code,
       type: type == freezed ? _value.type : type as Code,
       text: text == freezed ? _value.text : text as String,
@@ -144,7 +145,7 @@ abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       Code type,
       String text,
@@ -171,7 +172,7 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object use = freezed,
     Object type = freezed,
     Object text = freezed,
@@ -185,9 +186,9 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
   }) {
     return _then(_Address(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       use: use == freezed ? _value.use : use as Code,
       type: type == freezed ? _value.type : type as Code,
       text: text == freezed ? _value.text : text as String,
@@ -207,7 +208,7 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
 class _$_Address implements _Address {
   _$_Address(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.use,
       this.type,
       this.text,
@@ -225,7 +226,8 @@ class _$_Address implements _Address {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Code use;
   @override
@@ -249,7 +251,7 @@ class _$_Address implements _Address {
 
   @override
   String toString() {
-    return 'Address(id: $id, extension: $extension, use: $use, type: $type, text: $text, line: $line, city: $city, district: $district, state: $state, postalCode: $postalCode, country: $country, period: $period)';
+    return 'Address(id: $id, fhirExtension: $fhirExtension, use: $use, type: $type, text: $text, line: $line, city: $city, district: $district, state: $state, postalCode: $postalCode, country: $country, period: $period)';
   }
 
   @override
@@ -258,9 +260,9 @@ class _$_Address implements _Address {
         (other is _Address &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.use, use) ||
                 const DeepCollectionEquality().equals(other.use, use)) &&
             (identical(other.type, type) ||
@@ -290,7 +292,7 @@ class _$_Address implements _Address {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(use) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(text) ^
@@ -315,7 +317,7 @@ class _$_Address implements _Address {
 abstract class _Address implements Address {
   factory _Address(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       Code type,
       String text,
@@ -332,7 +334,8 @@ abstract class _Address implements Address {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Code get use;
   @override
@@ -366,13 +369,13 @@ class _$AnnotationTearOff {
 
   _Annotation call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Reference authorX,
       FhirDateTime time,
       String text}) {
     return _Annotation(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       authorX: authorX,
       time: time,
       text: text,
@@ -385,7 +388,8 @@ const $Annotation = _$AnnotationTearOff();
 
 mixin _$Annotation {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Reference get authorX;
   FhirDateTime get time;
   String get text;
@@ -400,7 +404,7 @@ abstract class $AnnotationCopyWith<$Res> {
       _$AnnotationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Reference authorX,
       FhirDateTime time,
       String text});
@@ -418,16 +422,16 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object authorX = freezed,
     Object time = freezed,
     Object text = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       authorX: authorX == freezed ? _value.authorX : authorX as Reference,
       time: time == freezed ? _value.time : time as FhirDateTime,
       text: text == freezed ? _value.text : text as String,
@@ -452,7 +456,7 @@ abstract class _$AnnotationCopyWith<$Res> implements $AnnotationCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Reference authorX,
       FhirDateTime time,
       String text});
@@ -473,16 +477,16 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object authorX = freezed,
     Object time = freezed,
     Object text = freezed,
   }) {
     return _then(_Annotation(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       authorX: authorX == freezed ? _value.authorX : authorX as Reference,
       time: time == freezed ? _value.time : time as FhirDateTime,
       text: text == freezed ? _value.text : text as String,
@@ -492,7 +496,12 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Annotation implements _Annotation {
-  _$_Annotation({this.id, this.extension, this.authorX, this.time, this.text});
+  _$_Annotation(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.authorX,
+      this.time,
+      this.text});
 
   factory _$_Annotation.fromJson(Map<String, dynamic> json) =>
       _$_$_AnnotationFromJson(json);
@@ -500,7 +509,8 @@ class _$_Annotation implements _Annotation {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Reference authorX;
   @override
@@ -510,7 +520,7 @@ class _$_Annotation implements _Annotation {
 
   @override
   String toString() {
-    return 'Annotation(id: $id, extension: $extension, authorX: $authorX, time: $time, text: $text)';
+    return 'Annotation(id: $id, fhirExtension: $fhirExtension, authorX: $authorX, time: $time, text: $text)';
   }
 
   @override
@@ -519,9 +529,9 @@ class _$_Annotation implements _Annotation {
         (other is _Annotation &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.authorX, authorX) ||
                 const DeepCollectionEquality()
                     .equals(other.authorX, authorX)) &&
@@ -535,7 +545,7 @@ class _$_Annotation implements _Annotation {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(authorX) ^
       const DeepCollectionEquality().hash(time) ^
       const DeepCollectionEquality().hash(text);
@@ -553,7 +563,7 @@ class _$_Annotation implements _Annotation {
 abstract class _Annotation implements Annotation {
   factory _Annotation(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Reference authorX,
       FhirDateTime time,
       String text}) = _$_Annotation;
@@ -564,7 +574,8 @@ abstract class _Annotation implements Annotation {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Reference get authorX;
   @override
@@ -584,7 +595,7 @@ class _$AttachmentTearOff {
 
   _Attachment call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -595,7 +606,7 @@ class _$AttachmentTearOff {
       FhirDateTime creation}) {
     return _Attachment(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       contentType: contentType,
       language: language,
       data: data,
@@ -613,7 +624,8 @@ const $Attachment = _$AttachmentTearOff();
 
 mixin _$Attachment {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Code get contentType;
   Code get language;
   Base64Binary get data;
@@ -633,7 +645,7 @@ abstract class $AttachmentCopyWith<$Res> {
       _$AttachmentCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -654,7 +666,7 @@ class _$AttachmentCopyWithImpl<$Res> implements $AttachmentCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object contentType = freezed,
     Object language = freezed,
     Object data = freezed,
@@ -666,9 +678,9 @@ class _$AttachmentCopyWithImpl<$Res> implements $AttachmentCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code,
       language: language == freezed ? _value.language : language as Code,
@@ -690,7 +702,7 @@ abstract class _$AttachmentCopyWith<$Res> implements $AttachmentCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -713,7 +725,7 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object contentType = freezed,
     Object language = freezed,
     Object data = freezed,
@@ -725,9 +737,9 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
   }) {
     return _then(_Attachment(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code,
       language: language == freezed ? _value.language : language as Code,
@@ -746,7 +758,7 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
 class _$_Attachment implements _Attachment {
   _$_Attachment(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.contentType,
       this.language,
       this.data,
@@ -762,7 +774,8 @@ class _$_Attachment implements _Attachment {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Code contentType;
   @override
@@ -782,7 +795,7 @@ class _$_Attachment implements _Attachment {
 
   @override
   String toString() {
-    return 'Attachment(id: $id, extension: $extension, contentType: $contentType, language: $language, data: $data, url: $url, size: $size, hash: $hash, title: $title, creation: $creation)';
+    return 'Attachment(id: $id, fhirExtension: $fhirExtension, contentType: $contentType, language: $language, data: $data, url: $url, size: $size, hash: $hash, title: $title, creation: $creation)';
   }
 
   @override
@@ -791,9 +804,9 @@ class _$_Attachment implements _Attachment {
         (other is _Attachment &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.contentType, contentType) ||
                 const DeepCollectionEquality()
                     .equals(other.contentType, contentType)) &&
@@ -819,7 +832,7 @@ class _$_Attachment implements _Attachment {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(contentType) ^
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(data) ^
@@ -842,7 +855,7 @@ class _$_Attachment implements _Attachment {
 abstract class _Attachment implements Attachment {
   factory _Attachment(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -858,7 +871,8 @@ abstract class _Attachment implements Attachment {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Code get contentType;
   @override
@@ -888,11 +902,11 @@ class _$BackboneElementTearOff {
 
   _BackboneElement call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension}) {
     return _BackboneElement(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
     );
   }
@@ -903,7 +917,8 @@ const $BackboneElement = _$BackboneElementTearOff();
 
 mixin _$BackboneElement {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
 
   Map<String, dynamic> toJson();
@@ -916,7 +931,7 @@ abstract class $BackboneElementCopyWith<$Res> {
       _$BackboneElementCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension});
 }
 
@@ -931,14 +946,14 @@ class _$BackboneElementCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
@@ -954,7 +969,7 @@ abstract class _$BackboneElementCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension});
 }
 
@@ -971,14 +986,14 @@ class __$BackboneElementCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object modifierExtension = freezed,
   }) {
     return _then(_BackboneElement(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
@@ -988,7 +1003,10 @@ class __$BackboneElementCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_BackboneElement implements _BackboneElement {
-  _$_BackboneElement({this.id, this.extension, this.modifierExtension});
+  _$_BackboneElement(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.modifierExtension});
 
   factory _$_BackboneElement.fromJson(Map<String, dynamic> json) =>
       _$_$_BackboneElementFromJson(json);
@@ -996,13 +1014,14 @@ class _$_BackboneElement implements _BackboneElement {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final List<FhirExtension> modifierExtension;
 
   @override
   String toString() {
-    return 'BackboneElement(id: $id, extension: $extension, modifierExtension: $modifierExtension)';
+    return 'BackboneElement(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension)';
   }
 
   @override
@@ -1011,9 +1030,9 @@ class _$_BackboneElement implements _BackboneElement {
         (other is _BackboneElement &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)));
@@ -1023,7 +1042,7 @@ class _$_BackboneElement implements _BackboneElement {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension);
 
   @override
@@ -1039,7 +1058,7 @@ class _$_BackboneElement implements _BackboneElement {
 abstract class _BackboneElement implements BackboneElement {
   factory _BackboneElement(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension}) = _$_BackboneElement;
 
   factory _BackboneElement.fromJson(Map<String, dynamic> json) =
@@ -1048,7 +1067,8 @@ abstract class _BackboneElement implements BackboneElement {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   List<FhirExtension> get modifierExtension;
   @override
@@ -1064,12 +1084,12 @@ class _$CodeableConceptTearOff {
 
   _CodeableConcept call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<Coding> coding,
       String text}) {
     return _CodeableConcept(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       coding: coding,
       text: text,
     );
@@ -1081,7 +1101,8 @@ const $CodeableConcept = _$CodeableConceptTearOff();
 
 mixin _$CodeableConcept {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   List<Coding> get coding;
   String get text;
 
@@ -1094,7 +1115,10 @@ abstract class $CodeableConceptCopyWith<$Res> {
           CodeableConcept value, $Res Function(CodeableConcept) then) =
       _$CodeableConceptCopyWithImpl<$Res>;
   $Res call(
-      {Id id, List<FhirExtension> extension, List<Coding> coding, String text});
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<Coding> coding,
+      String text});
 }
 
 class _$CodeableConceptCopyWithImpl<$Res>
@@ -1108,15 +1132,15 @@ class _$CodeableConceptCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object coding = freezed,
     Object text = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       coding: coding == freezed ? _value.coding : coding as List<Coding>,
       text: text == freezed ? _value.text : text as String,
     ));
@@ -1130,7 +1154,10 @@ abstract class _$CodeableConceptCopyWith<$Res>
       __$CodeableConceptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id, List<FhirExtension> extension, List<Coding> coding, String text});
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      List<Coding> coding,
+      String text});
 }
 
 class __$CodeableConceptCopyWithImpl<$Res>
@@ -1146,15 +1173,15 @@ class __$CodeableConceptCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object coding = freezed,
     Object text = freezed,
   }) {
     return _then(_CodeableConcept(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       coding: coding == freezed ? _value.coding : coding as List<Coding>,
       text: text == freezed ? _value.text : text as String,
     ));
@@ -1163,7 +1190,11 @@ class __$CodeableConceptCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_CodeableConcept implements _CodeableConcept {
-  _$_CodeableConcept({this.id, this.extension, this.coding, this.text});
+  _$_CodeableConcept(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.coding,
+      this.text});
 
   factory _$_CodeableConcept.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeableConceptFromJson(json);
@@ -1171,7 +1202,8 @@ class _$_CodeableConcept implements _CodeableConcept {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final List<Coding> coding;
   @override
@@ -1179,7 +1211,7 @@ class _$_CodeableConcept implements _CodeableConcept {
 
   @override
   String toString() {
-    return 'CodeableConcept(id: $id, extension: $extension, coding: $coding, text: $text)';
+    return 'CodeableConcept(id: $id, fhirExtension: $fhirExtension, coding: $coding, text: $text)';
   }
 
   @override
@@ -1188,9 +1220,9 @@ class _$_CodeableConcept implements _CodeableConcept {
         (other is _CodeableConcept &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.coding, coding) ||
                 const DeepCollectionEquality().equals(other.coding, coding)) &&
             (identical(other.text, text) ||
@@ -1201,7 +1233,7 @@ class _$_CodeableConcept implements _CodeableConcept {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(coding) ^
       const DeepCollectionEquality().hash(text);
 
@@ -1218,7 +1250,7 @@ class _$_CodeableConcept implements _CodeableConcept {
 abstract class _CodeableConcept implements CodeableConcept {
   factory _CodeableConcept(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<Coding> coding,
       String text}) = _$_CodeableConcept;
 
@@ -1228,7 +1260,8 @@ abstract class _CodeableConcept implements CodeableConcept {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   List<Coding> get coding;
   @override
@@ -1246,7 +1279,7 @@ class _$CodingTearOff {
 
   _Coding call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirUri system,
       String version,
       Code code,
@@ -1254,7 +1287,7 @@ class _$CodingTearOff {
       Boolean userSelected}) {
     return _Coding(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       system: system,
       version: version,
       code: code,
@@ -1269,7 +1302,8 @@ const $Coding = _$CodingTearOff();
 
 mixin _$Coding {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   FhirUri get system;
   String get version;
   Code get code;
@@ -1285,7 +1319,7 @@ abstract class $CodingCopyWith<$Res> {
       _$CodingCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirUri system,
       String version,
       Code code,
@@ -1303,7 +1337,7 @@ class _$CodingCopyWithImpl<$Res> implements $CodingCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object system = freezed,
     Object version = freezed,
     Object code = freezed,
@@ -1312,9 +1346,9 @@ class _$CodingCopyWithImpl<$Res> implements $CodingCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       system: system == freezed ? _value.system : system as FhirUri,
       version: version == freezed ? _value.version : version as String,
       code: code == freezed ? _value.code : code as Code,
@@ -1332,7 +1366,7 @@ abstract class _$CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirUri system,
       String version,
       Code code,
@@ -1351,7 +1385,7 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object system = freezed,
     Object version = freezed,
     Object code = freezed,
@@ -1360,9 +1394,9 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
   }) {
     return _then(_Coding(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       system: system == freezed ? _value.system : system as FhirUri,
       version: version == freezed ? _value.version : version as String,
       code: code == freezed ? _value.code : code as Code,
@@ -1378,7 +1412,7 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
 class _$_Coding implements _Coding {
   _$_Coding(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.system,
       this.version,
       this.code,
@@ -1391,7 +1425,8 @@ class _$_Coding implements _Coding {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final FhirUri system;
   @override
@@ -1405,7 +1440,7 @@ class _$_Coding implements _Coding {
 
   @override
   String toString() {
-    return 'Coding(id: $id, extension: $extension, system: $system, version: $version, code: $code, display: $display, userSelected: $userSelected)';
+    return 'Coding(id: $id, fhirExtension: $fhirExtension, system: $system, version: $version, code: $code, display: $display, userSelected: $userSelected)';
   }
 
   @override
@@ -1414,9 +1449,9 @@ class _$_Coding implements _Coding {
         (other is _Coding &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.version, version) ||
@@ -1436,7 +1471,7 @@ class _$_Coding implements _Coding {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(code) ^
@@ -1456,7 +1491,7 @@ class _$_Coding implements _Coding {
 abstract class _Coding implements Coding {
   factory _Coding(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirUri system,
       String version,
       Code code,
@@ -1468,7 +1503,8 @@ abstract class _Coding implements Coding {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   FhirUri get system;
   @override
@@ -1492,7 +1528,7 @@ class _$ContactPointTearOff {
 
   _ContactPoint call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code system,
       String value,
       Code use,
@@ -1500,7 +1536,7 @@ class _$ContactPointTearOff {
       Period period}) {
     return _ContactPoint(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       system: system,
       value: value,
       use: use,
@@ -1515,7 +1551,8 @@ const $ContactPoint = _$ContactPointTearOff();
 
 mixin _$ContactPoint {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Code get system;
   String get value;
   Code get use;
@@ -1532,7 +1569,7 @@ abstract class $ContactPointCopyWith<$Res> {
       _$ContactPointCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code system,
       String value,
       Code use,
@@ -1552,7 +1589,7 @@ class _$ContactPointCopyWithImpl<$Res> implements $ContactPointCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object system = freezed,
     Object value = freezed,
     Object use = freezed,
@@ -1561,9 +1598,9 @@ class _$ContactPointCopyWithImpl<$Res> implements $ContactPointCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       system: system == freezed ? _value.system : system as Code,
       value: value == freezed ? _value.value : value as String,
       use: use == freezed ? _value.use : use as Code,
@@ -1591,7 +1628,7 @@ abstract class _$ContactPointCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code system,
       String value,
       Code use,
@@ -1614,7 +1651,7 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object system = freezed,
     Object value = freezed,
     Object use = freezed,
@@ -1623,9 +1660,9 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
   }) {
     return _then(_ContactPoint(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       system: system == freezed ? _value.system : system as Code,
       value: value == freezed ? _value.value : value as String,
       use: use == freezed ? _value.use : use as Code,
@@ -1639,7 +1676,7 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
 class _$_ContactPoint implements _ContactPoint {
   _$_ContactPoint(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.system,
       this.value,
       this.use,
@@ -1652,7 +1689,8 @@ class _$_ContactPoint implements _ContactPoint {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Code system;
   @override
@@ -1666,7 +1704,7 @@ class _$_ContactPoint implements _ContactPoint {
 
   @override
   String toString() {
-    return 'ContactPoint(id: $id, extension: $extension, system: $system, value: $value, use: $use, rank: $rank, period: $period)';
+    return 'ContactPoint(id: $id, fhirExtension: $fhirExtension, system: $system, value: $value, use: $use, rank: $rank, period: $period)';
   }
 
   @override
@@ -1675,9 +1713,9 @@ class _$_ContactPoint implements _ContactPoint {
         (other is _ContactPoint &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.value, value) ||
@@ -1694,7 +1732,7 @@ class _$_ContactPoint implements _ContactPoint {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(use) ^
@@ -1714,7 +1752,7 @@ class _$_ContactPoint implements _ContactPoint {
 abstract class _ContactPoint implements ContactPoint {
   factory _ContactPoint(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code system,
       String value,
       Code use,
@@ -1727,7 +1765,8 @@ abstract class _ContactPoint implements ContactPoint {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Code get system;
   @override
@@ -1749,10 +1788,11 @@ Element _$ElementFromJson(Map<String, dynamic> json) {
 class _$ElementTearOff {
   const _$ElementTearOff();
 
-  _Element call({Id id, List<FhirExtension> extension}) {
+  _Element call(
+      {Id id, @JsonKey(name: 'extension') List<FhirExtension> fhirExtension}) {
     return _Element(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
     );
   }
 }
@@ -1762,7 +1802,8 @@ const $Element = _$ElementTearOff();
 
 mixin _$Element {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
 
   Map<String, dynamic> toJson();
   $ElementCopyWith<Element> get copyWith;
@@ -1771,7 +1812,8 @@ mixin _$Element {
 abstract class $ElementCopyWith<$Res> {
   factory $ElementCopyWith(Element value, $Res Function(Element) then) =
       _$ElementCopyWithImpl<$Res>;
-  $Res call({Id id, List<FhirExtension> extension});
+  $Res call(
+      {Id id, @JsonKey(name: 'extension') List<FhirExtension> fhirExtension});
 }
 
 class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
@@ -1784,13 +1826,13 @@ class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
     ));
   }
 }
@@ -1799,7 +1841,8 @@ abstract class _$ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
   factory _$ElementCopyWith(_Element value, $Res Function(_Element) then) =
       __$ElementCopyWithImpl<$Res>;
   @override
-  $Res call({Id id, List<FhirExtension> extension});
+  $Res call(
+      {Id id, @JsonKey(name: 'extension') List<FhirExtension> fhirExtension});
 }
 
 class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
@@ -1813,20 +1856,20 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
   }) {
     return _then(_Element(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_Element implements _Element {
-  _$_Element({this.id, this.extension});
+  _$_Element({this.id, @JsonKey(name: 'extension') this.fhirExtension});
 
   factory _$_Element.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementFromJson(json);
@@ -1834,11 +1877,12 @@ class _$_Element implements _Element {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
 
   @override
   String toString() {
-    return 'Element(id: $id, extension: $extension)';
+    return 'Element(id: $id, fhirExtension: $fhirExtension)';
   }
 
   @override
@@ -1847,16 +1891,16 @@ class _$_Element implements _Element {
         (other is _Element &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)));
+                    .equals(other.fhirExtension, fhirExtension)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension);
+      const DeepCollectionEquality().hash(fhirExtension);
 
   @override
   _$ElementCopyWith<_Element> get copyWith =>
@@ -1869,14 +1913,18 @@ class _$_Element implements _Element {
 }
 
 abstract class _Element implements Element {
-  factory _Element({Id id, List<FhirExtension> extension}) = _$_Element;
+  factory _Element(
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> fhirExtension}) =
+      _$_Element;
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   _$ElementCopyWith<_Element> get copyWith;
 }
@@ -1890,7 +1938,7 @@ class _$ElementDefinitionTearOff {
 
   _ElementDefinition call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String path,
       List<Code> representation,
       String name,
@@ -1924,7 +1972,7 @@ class _$ElementDefinitionTearOff {
       List<Element> mapping}) {
     return _ElementDefinition(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       path: path,
       representation: representation,
       name: name,
@@ -1965,7 +2013,8 @@ const $ElementDefinition = _$ElementDefinitionTearOff();
 
 mixin _$ElementDefinition {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   String get path;
   List<Code> get representation;
   String get name;
@@ -2008,7 +2057,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       _$ElementDefinitionCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String path,
       List<Code> representation,
       String name,
@@ -2057,7 +2106,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object path = freezed,
     Object representation = freezed,
     Object name = freezed,
@@ -2092,9 +2141,9 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       representation: representation == freezed
           ? _value.representation
@@ -2184,7 +2233,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String path,
       List<Code> representation,
       String name,
@@ -2238,7 +2287,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object path = freezed,
     Object representation = freezed,
     Object name = freezed,
@@ -2273,9 +2322,9 @@ class __$ElementDefinitionCopyWithImpl<$Res>
   }) {
     return _then(_ElementDefinition(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       representation: representation == freezed
           ? _value.representation
@@ -2331,7 +2380,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
 class _$_ElementDefinition implements _ElementDefinition {
   _$_ElementDefinition(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.path,
       this.representation,
       this.name,
@@ -2370,7 +2419,8 @@ class _$_ElementDefinition implements _ElementDefinition {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final String path;
   @override
@@ -2436,7 +2486,7 @@ class _$_ElementDefinition implements _ElementDefinition {
 
   @override
   String toString() {
-    return 'ElementDefinition(id: $id, extension: $extension, path: $path, representation: $representation, name: $name, label: $label, code: $code, slicing: $slicing, short: $short, definition: $definition, comments: $comments, requirements: $requirements, alias: $alias, min: $min, max: $max, base: $base, type: $type, nameReference: $nameReference, defaultValueX: $defaultValueX, meaningWhenMissing: $meaningWhenMissing, fixedX: $fixedX, patternX: $patternX, exampleX: $exampleX, minValueX: $minValueX, maxValueX: $maxValueX, maxLength: $maxLength, condition: $condition, constraint: $constraint, mustSupport: $mustSupport, isModifier: $isModifier, isSummary: $isSummary, binding: $binding, mapping: $mapping)';
+    return 'ElementDefinition(id: $id, fhirExtension: $fhirExtension, path: $path, representation: $representation, name: $name, label: $label, code: $code, slicing: $slicing, short: $short, definition: $definition, comments: $comments, requirements: $requirements, alias: $alias, min: $min, max: $max, base: $base, type: $type, nameReference: $nameReference, defaultValueX: $defaultValueX, meaningWhenMissing: $meaningWhenMissing, fixedX: $fixedX, patternX: $patternX, exampleX: $exampleX, minValueX: $minValueX, maxValueX: $maxValueX, maxLength: $maxLength, condition: $condition, constraint: $constraint, mustSupport: $mustSupport, isModifier: $isModifier, isSummary: $isSummary, binding: $binding, mapping: $mapping)';
   }
 
   @override
@@ -2445,9 +2495,9 @@ class _$_ElementDefinition implements _ElementDefinition {
         (other is _ElementDefinition &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.path, path) ||
                 const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.representation, representation) ||
@@ -2525,7 +2575,7 @@ class _$_ElementDefinition implements _ElementDefinition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(path) ^
       const DeepCollectionEquality().hash(representation) ^
       const DeepCollectionEquality().hash(name) ^
@@ -2571,7 +2621,7 @@ class _$_ElementDefinition implements _ElementDefinition {
 abstract class _ElementDefinition implements ElementDefinition {
   factory _ElementDefinition(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String path,
       List<Code> representation,
       String name,
@@ -2610,7 +2660,8 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   String get path;
   @override
@@ -2687,14 +2738,14 @@ class _$ElementDefinitionSlicingTearOff {
 
   _ElementDefinitionSlicing call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<String> discriminator,
       String description,
       Boolean ordered,
       Code rules}) {
     return _ElementDefinitionSlicing(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       discriminator: discriminator,
       description: description,
       ordered: ordered,
@@ -2708,7 +2759,8 @@ const $ElementDefinitionSlicing = _$ElementDefinitionSlicingTearOff();
 
 mixin _$ElementDefinitionSlicing {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   List<String> get discriminator;
   String get description;
   Boolean get ordered;
@@ -2724,7 +2776,7 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
       _$ElementDefinitionSlicingCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<String> discriminator,
       String description,
       Boolean ordered,
@@ -2742,7 +2794,7 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object discriminator = freezed,
     Object description = freezed,
     Object ordered = freezed,
@@ -2750,9 +2802,9 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       discriminator: discriminator == freezed
           ? _value.discriminator
           : discriminator as List<String>,
@@ -2772,7 +2824,7 @@ abstract class _$ElementDefinitionSlicingCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<String> discriminator,
       String description,
       Boolean ordered,
@@ -2793,7 +2845,7 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object discriminator = freezed,
     Object description = freezed,
     Object ordered = freezed,
@@ -2801,9 +2853,9 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
   }) {
     return _then(_ElementDefinitionSlicing(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       discriminator: discriminator == freezed
           ? _value.discriminator
           : discriminator as List<String>,
@@ -2819,7 +2871,7 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
 class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
   _$_ElementDefinitionSlicing(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.discriminator,
       this.description,
       this.ordered,
@@ -2831,7 +2883,8 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final List<String> discriminator;
   @override
@@ -2843,7 +2896,7 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
 
   @override
   String toString() {
-    return 'ElementDefinitionSlicing(id: $id, extension: $extension, discriminator: $discriminator, description: $description, ordered: $ordered, rules: $rules)';
+    return 'ElementDefinitionSlicing(id: $id, fhirExtension: $fhirExtension, discriminator: $discriminator, description: $description, ordered: $ordered, rules: $rules)';
   }
 
   @override
@@ -2852,9 +2905,9 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
         (other is _ElementDefinitionSlicing &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.discriminator, discriminator) ||
                 const DeepCollectionEquality()
                     .equals(other.discriminator, discriminator)) &&
@@ -2872,7 +2925,7 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(discriminator) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(ordered) ^
@@ -2892,7 +2945,7 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
 abstract class _ElementDefinitionSlicing implements ElementDefinitionSlicing {
   factory _ElementDefinitionSlicing(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<String> discriminator,
       String description,
       Boolean ordered,
@@ -2904,7 +2957,8 @@ abstract class _ElementDefinitionSlicing implements ElementDefinitionSlicing {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   List<String> get discriminator;
   @override
@@ -2927,13 +2981,13 @@ class _$ElementDefinitionBaseTearOff {
 
   _ElementDefinitionBase call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String path,
       Integer min,
       String max}) {
     return _ElementDefinitionBase(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       path: path,
       min: min,
       max: max,
@@ -2946,7 +3000,8 @@ const $ElementDefinitionBase = _$ElementDefinitionBaseTearOff();
 
 mixin _$ElementDefinitionBase {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   String get path;
   Integer get min;
   String get max;
@@ -2961,7 +3016,7 @@ abstract class $ElementDefinitionBaseCopyWith<$Res> {
       _$ElementDefinitionBaseCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String path,
       Integer min,
       String max});
@@ -2978,16 +3033,16 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object path = freezed,
     Object min = freezed,
     Object max = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       min: min == freezed ? _value.min : min as Integer,
       max: max == freezed ? _value.max : max as String,
@@ -3003,7 +3058,7 @@ abstract class _$ElementDefinitionBaseCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String path,
       Integer min,
       String max});
@@ -3022,16 +3077,16 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object path = freezed,
     Object min = freezed,
     Object max = freezed,
   }) {
     return _then(_ElementDefinitionBase(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       min: min == freezed ? _value.min : min as Integer,
       max: max == freezed ? _value.max : max as String,
@@ -3042,7 +3097,11 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionBase implements _ElementDefinitionBase {
   _$_ElementDefinitionBase(
-      {this.id, this.extension, this.path, this.min, this.max});
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.path,
+      this.min,
+      this.max});
 
   factory _$_ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionBaseFromJson(json);
@@ -3050,7 +3109,8 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final String path;
   @override
@@ -3060,7 +3120,7 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
 
   @override
   String toString() {
-    return 'ElementDefinitionBase(id: $id, extension: $extension, path: $path, min: $min, max: $max)';
+    return 'ElementDefinitionBase(id: $id, fhirExtension: $fhirExtension, path: $path, min: $min, max: $max)';
   }
 
   @override
@@ -3069,9 +3129,9 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
         (other is _ElementDefinitionBase &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.path, path) ||
                 const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.min, min) ||
@@ -3084,7 +3144,7 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(path) ^
       const DeepCollectionEquality().hash(min) ^
       const DeepCollectionEquality().hash(max);
@@ -3103,7 +3163,7 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
 abstract class _ElementDefinitionBase implements ElementDefinitionBase {
   factory _ElementDefinitionBase(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String path,
       Integer min,
       String max}) = _$_ElementDefinitionBase;
@@ -3114,7 +3174,8 @@ abstract class _ElementDefinitionBase implements ElementDefinitionBase {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   String get path;
   @override
@@ -3135,13 +3196,13 @@ class _$ElementDefinitionTypeTearOff {
 
   _ElementDefinitionType call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code code,
       List<FhirUri> profile,
       List<Code> aggregation}) {
     return _ElementDefinitionType(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       code: code,
       profile: profile,
       aggregation: aggregation,
@@ -3154,7 +3215,8 @@ const $ElementDefinitionType = _$ElementDefinitionTypeTearOff();
 
 mixin _$ElementDefinitionType {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Code get code;
   List<FhirUri> get profile;
   List<Code> get aggregation;
@@ -3169,7 +3231,7 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       _$ElementDefinitionTypeCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code code,
       List<FhirUri> profile,
       List<Code> aggregation});
@@ -3186,16 +3248,16 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object code = freezed,
     Object profile = freezed,
     Object aggregation = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
       profile: profile == freezed ? _value.profile : profile as List<FhirUri>,
       aggregation: aggregation == freezed
@@ -3213,7 +3275,7 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code code,
       List<FhirUri> profile,
       List<Code> aggregation});
@@ -3232,16 +3294,16 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object code = freezed,
     Object profile = freezed,
     Object aggregation = freezed,
   }) {
     return _then(_ElementDefinitionType(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
       profile: profile == freezed ? _value.profile : profile as List<FhirUri>,
       aggregation: aggregation == freezed
@@ -3254,7 +3316,11 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionType implements _ElementDefinitionType {
   _$_ElementDefinitionType(
-      {this.id, this.extension, this.code, this.profile, this.aggregation});
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.code,
+      this.profile,
+      this.aggregation});
 
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionTypeFromJson(json);
@@ -3262,7 +3328,8 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Code code;
   @override
@@ -3272,7 +3339,7 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
 
   @override
   String toString() {
-    return 'ElementDefinitionType(id: $id, extension: $extension, code: $code, profile: $profile, aggregation: $aggregation)';
+    return 'ElementDefinitionType(id: $id, fhirExtension: $fhirExtension, code: $code, profile: $profile, aggregation: $aggregation)';
   }
 
   @override
@@ -3281,9 +3348,9 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
         (other is _ElementDefinitionType &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.profile, profile) ||
@@ -3298,7 +3365,7 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(profile) ^
       const DeepCollectionEquality().hash(aggregation);
@@ -3317,7 +3384,7 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
 abstract class _ElementDefinitionType implements ElementDefinitionType {
   factory _ElementDefinitionType(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code code,
       List<FhirUri> profile,
       List<Code> aggregation}) = _$_ElementDefinitionType;
@@ -3328,7 +3395,8 @@ abstract class _ElementDefinitionType implements ElementDefinitionType {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Code get code;
   @override
@@ -3349,7 +3417,7 @@ class _$ElementDefinitionConstraintTearOff {
 
   _ElementDefinitionConstraint call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id key,
       String requirements,
       Code severity,
@@ -3357,7 +3425,7 @@ class _$ElementDefinitionConstraintTearOff {
       String xpath}) {
     return _ElementDefinitionConstraint(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       key: key,
       requirements: requirements,
       severity: severity,
@@ -3372,7 +3440,8 @@ const $ElementDefinitionConstraint = _$ElementDefinitionConstraintTearOff();
 
 mixin _$ElementDefinitionConstraint {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Id get key;
   String get requirements;
   Code get severity;
@@ -3391,7 +3460,7 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
       _$ElementDefinitionConstraintCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id key,
       String requirements,
       Code severity,
@@ -3410,7 +3479,7 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object key = freezed,
     Object requirements = freezed,
     Object severity = freezed,
@@ -3419,9 +3488,9 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       key: key == freezed ? _value.key : key as Id,
       requirements: requirements == freezed
           ? _value.requirements
@@ -3442,7 +3511,7 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id key,
       String requirements,
       Code severity,
@@ -3465,7 +3534,7 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object key = freezed,
     Object requirements = freezed,
     Object severity = freezed,
@@ -3474,9 +3543,9 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
   }) {
     return _then(_ElementDefinitionConstraint(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       key: key == freezed ? _value.key : key as Id,
       requirements: requirements == freezed
           ? _value.requirements
@@ -3492,7 +3561,7 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
 class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
   _$_ElementDefinitionConstraint(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.key,
       this.requirements,
       this.severity,
@@ -3505,7 +3574,8 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Id key;
   @override
@@ -3519,7 +3589,7 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
 
   @override
   String toString() {
-    return 'ElementDefinitionConstraint(id: $id, extension: $extension, key: $key, requirements: $requirements, severity: $severity, human: $human, xpath: $xpath)';
+    return 'ElementDefinitionConstraint(id: $id, fhirExtension: $fhirExtension, key: $key, requirements: $requirements, severity: $severity, human: $human, xpath: $xpath)';
   }
 
   @override
@@ -3528,9 +3598,9 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
         (other is _ElementDefinitionConstraint &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.key, key) ||
                 const DeepCollectionEquality().equals(other.key, key)) &&
             (identical(other.requirements, requirements) ||
@@ -3549,7 +3619,7 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(key) ^
       const DeepCollectionEquality().hash(requirements) ^
       const DeepCollectionEquality().hash(severity) ^
@@ -3571,7 +3641,7 @@ abstract class _ElementDefinitionConstraint
     implements ElementDefinitionConstraint {
   factory _ElementDefinitionConstraint(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id key,
       String requirements,
       Code severity,
@@ -3584,7 +3654,8 @@ abstract class _ElementDefinitionConstraint
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Id get key;
   @override
@@ -3610,13 +3681,13 @@ class _$ElementDefinitionBindingTearOff {
 
   _ElementDefinitionBinding call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code strength,
       String description,
       FhirUri valueSetX}) {
     return _ElementDefinitionBinding(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       strength: strength,
       description: description,
       valueSetX: valueSetX,
@@ -3629,7 +3700,8 @@ const $ElementDefinitionBinding = _$ElementDefinitionBindingTearOff();
 
 mixin _$ElementDefinitionBinding {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Code get strength;
   String get description;
   FhirUri get valueSetX;
@@ -3644,7 +3716,7 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       _$ElementDefinitionBindingCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code strength,
       String description,
       FhirUri valueSetX});
@@ -3661,16 +3733,16 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object strength = freezed,
     Object description = freezed,
     Object valueSetX = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       strength: strength == freezed ? _value.strength : strength as Code,
       description:
           description == freezed ? _value.description : description as String,
@@ -3687,7 +3759,7 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code strength,
       String description,
       FhirUri valueSetX});
@@ -3707,16 +3779,16 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object strength = freezed,
     Object description = freezed,
     Object valueSetX = freezed,
   }) {
     return _then(_ElementDefinitionBinding(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       strength: strength == freezed ? _value.strength : strength as Code,
       description:
           description == freezed ? _value.description : description as String,
@@ -3729,7 +3801,7 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
 class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
   _$_ElementDefinitionBinding(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.strength,
       this.description,
       this.valueSetX});
@@ -3740,7 +3812,8 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Code strength;
   @override
@@ -3750,7 +3823,7 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
 
   @override
   String toString() {
-    return 'ElementDefinitionBinding(id: $id, extension: $extension, strength: $strength, description: $description, valueSetX: $valueSetX)';
+    return 'ElementDefinitionBinding(id: $id, fhirExtension: $fhirExtension, strength: $strength, description: $description, valueSetX: $valueSetX)';
   }
 
   @override
@@ -3759,9 +3832,9 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
         (other is _ElementDefinitionBinding &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.strength, strength) ||
                 const DeepCollectionEquality()
                     .equals(other.strength, strength)) &&
@@ -3777,7 +3850,7 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(strength) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(valueSetX);
@@ -3796,7 +3869,7 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
 abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
   factory _ElementDefinitionBinding(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code strength,
       String description,
       FhirUri valueSetX}) = _$_ElementDefinitionBinding;
@@ -3807,7 +3880,8 @@ abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Code get strength;
   @override
@@ -3828,13 +3902,13 @@ class _$ElementDefinitionMappingTearOff {
 
   _ElementDefinitionMapping call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id identity,
       Code language,
       String map}) {
     return _ElementDefinitionMapping(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       identity: identity,
       language: language,
       map: map,
@@ -3847,7 +3921,8 @@ const $ElementDefinitionMapping = _$ElementDefinitionMappingTearOff();
 
 mixin _$ElementDefinitionMapping {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Id get identity;
   Code get language;
   String get map;
@@ -3862,7 +3937,7 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
       _$ElementDefinitionMappingCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id identity,
       Code language,
       String map});
@@ -3879,16 +3954,16 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object identity = freezed,
     Object language = freezed,
     Object map = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       identity: identity == freezed ? _value.identity : identity as Id,
       language: language == freezed ? _value.language : language as Code,
       map: map == freezed ? _value.map : map as String,
@@ -3904,7 +3979,7 @@ abstract class _$ElementDefinitionMappingCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id identity,
       Code language,
       String map});
@@ -3924,16 +3999,16 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object identity = freezed,
     Object language = freezed,
     Object map = freezed,
   }) {
     return _then(_ElementDefinitionMapping(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       identity: identity == freezed ? _value.identity : identity as Id,
       language: language == freezed ? _value.language : language as Code,
       map: map == freezed ? _value.map : map as String,
@@ -3944,7 +4019,11 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
   _$_ElementDefinitionMapping(
-      {this.id, this.extension, this.identity, this.language, this.map});
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.identity,
+      this.language,
+      this.map});
 
   factory _$_ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionMappingFromJson(json);
@@ -3952,7 +4031,8 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Id identity;
   @override
@@ -3962,7 +4042,7 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
 
   @override
   String toString() {
-    return 'ElementDefinitionMapping(id: $id, extension: $extension, identity: $identity, language: $language, map: $map)';
+    return 'ElementDefinitionMapping(id: $id, fhirExtension: $fhirExtension, identity: $identity, language: $language, map: $map)';
   }
 
   @override
@@ -3971,9 +4051,9 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
         (other is _ElementDefinitionMapping &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.identity, identity) ||
                 const DeepCollectionEquality()
                     .equals(other.identity, identity)) &&
@@ -3988,7 +4068,7 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(identity) ^
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(map);
@@ -4007,7 +4087,7 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
 abstract class _ElementDefinitionMapping implements ElementDefinitionMapping {
   factory _ElementDefinitionMapping(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id identity,
       Code language,
       String map}) = _$_ElementDefinitionMapping;
@@ -4018,7 +4098,8 @@ abstract class _ElementDefinitionMapping implements ElementDefinitionMapping {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Id get identity;
   @override
@@ -4037,10 +4118,13 @@ class _$FhirExtensionTearOff {
   const _$FhirExtensionTearOff();
 
   _FhirExtension call(
-      {Id id, List<FhirExtension> extension, FhirUri url, Boolean valueX}) {
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      FhirUri url,
+      Boolean valueX}) {
     return _FhirExtension(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       url: url,
       valueX: valueX,
     );
@@ -4052,7 +4136,8 @@ const $FhirExtension = _$FhirExtensionTearOff();
 
 mixin _$FhirExtension {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   FhirUri get url;
   Boolean get valueX;
 
@@ -4065,7 +4150,10 @@ abstract class $FhirExtensionCopyWith<$Res> {
           FhirExtension value, $Res Function(FhirExtension) then) =
       _$FhirExtensionCopyWithImpl<$Res>;
   $Res call(
-      {Id id, List<FhirExtension> extension, FhirUri url, Boolean valueX});
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      FhirUri url,
+      Boolean valueX});
 }
 
 class _$FhirExtensionCopyWithImpl<$Res>
@@ -4079,15 +4167,15 @@ class _$FhirExtensionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object url = freezed,
     Object valueX = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
       valueX: valueX == freezed ? _value.valueX : valueX as Boolean,
     ));
@@ -4101,7 +4189,10 @@ abstract class _$FhirExtensionCopyWith<$Res>
       __$FhirExtensionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id, List<FhirExtension> extension, FhirUri url, Boolean valueX});
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      FhirUri url,
+      Boolean valueX});
 }
 
 class __$FhirExtensionCopyWithImpl<$Res>
@@ -4117,15 +4208,15 @@ class __$FhirExtensionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object url = freezed,
     Object valueX = freezed,
   }) {
     return _then(_FhirExtension(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
       valueX: valueX == freezed ? _value.valueX : valueX as Boolean,
     ));
@@ -4134,7 +4225,11 @@ class __$FhirExtensionCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_FhirExtension implements _FhirExtension {
-  _$_FhirExtension({this.id, this.extension, this.url, this.valueX});
+  _$_FhirExtension(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.url,
+      this.valueX});
 
   factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$_$_FhirExtensionFromJson(json);
@@ -4142,7 +4237,8 @@ class _$_FhirExtension implements _FhirExtension {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final FhirUri url;
   @override
@@ -4150,7 +4246,7 @@ class _$_FhirExtension implements _FhirExtension {
 
   @override
   String toString() {
-    return 'FhirExtension(id: $id, extension: $extension, url: $url, valueX: $valueX)';
+    return 'FhirExtension(id: $id, fhirExtension: $fhirExtension, url: $url, valueX: $valueX)';
   }
 
   @override
@@ -4159,9 +4255,9 @@ class _$_FhirExtension implements _FhirExtension {
         (other is _FhirExtension &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.valueX, valueX) ||
@@ -4172,7 +4268,7 @@ class _$_FhirExtension implements _FhirExtension {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(valueX);
 
@@ -4189,7 +4285,7 @@ class _$_FhirExtension implements _FhirExtension {
 abstract class _FhirExtension implements FhirExtension {
   factory _FhirExtension(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirUri url,
       Boolean valueX}) = _$_FhirExtension;
 
@@ -4199,7 +4295,8 @@ abstract class _FhirExtension implements FhirExtension {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   FhirUri get url;
   @override
@@ -4217,7 +4314,7 @@ class _$HumanNameTearOff {
 
   _HumanName call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       String text,
       List<String> family,
@@ -4227,7 +4324,7 @@ class _$HumanNameTearOff {
       Period period}) {
     return _HumanName(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       use: use,
       text: text,
       family: family,
@@ -4244,7 +4341,8 @@ const $HumanName = _$HumanNameTearOff();
 
 mixin _$HumanName {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Code get use;
   String get text;
   List<String> get family;
@@ -4262,7 +4360,7 @@ abstract class $HumanNameCopyWith<$Res> {
       _$HumanNameCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       String text,
       List<String> family,
@@ -4284,7 +4382,7 @@ class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object use = freezed,
     Object text = freezed,
     Object family = freezed,
@@ -4295,9 +4393,9 @@ class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       use: use == freezed ? _value.use : use as Code,
       text: text == freezed ? _value.text : text as String,
       family: family == freezed ? _value.family : family as List<String>,
@@ -4326,7 +4424,7 @@ abstract class _$HumanNameCopyWith<$Res> implements $HumanNameCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       String text,
       List<String> family,
@@ -4350,7 +4448,7 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object use = freezed,
     Object text = freezed,
     Object family = freezed,
@@ -4361,9 +4459,9 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
   }) {
     return _then(_HumanName(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       use: use == freezed ? _value.use : use as Code,
       text: text == freezed ? _value.text : text as String,
       family: family == freezed ? _value.family : family as List<String>,
@@ -4379,7 +4477,7 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
 class _$_HumanName implements _HumanName {
   _$_HumanName(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.use,
       this.text,
       this.family,
@@ -4394,7 +4492,8 @@ class _$_HumanName implements _HumanName {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Code use;
   @override
@@ -4412,7 +4511,7 @@ class _$_HumanName implements _HumanName {
 
   @override
   String toString() {
-    return 'HumanName(id: $id, extension: $extension, use: $use, text: $text, family: $family, given: $given, prefix: $prefix, suffix: $suffix, period: $period)';
+    return 'HumanName(id: $id, fhirExtension: $fhirExtension, use: $use, text: $text, family: $family, given: $given, prefix: $prefix, suffix: $suffix, period: $period)';
   }
 
   @override
@@ -4421,9 +4520,9 @@ class _$_HumanName implements _HumanName {
         (other is _HumanName &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.use, use) ||
                 const DeepCollectionEquality().equals(other.use, use)) &&
             (identical(other.text, text) ||
@@ -4444,7 +4543,7 @@ class _$_HumanName implements _HumanName {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(use) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(family) ^
@@ -4466,7 +4565,7 @@ class _$_HumanName implements _HumanName {
 abstract class _HumanName implements HumanName {
   factory _HumanName(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       String text,
       List<String> family,
@@ -4481,7 +4580,8 @@ abstract class _HumanName implements HumanName {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Code get use;
   @override
@@ -4509,7 +4609,7 @@ class _$IdentifierTearOff {
 
   _Identifier call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       CodeableConcept type,
       FhirUri system,
@@ -4518,7 +4618,7 @@ class _$IdentifierTearOff {
       Reference assigner}) {
     return _Identifier(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       use: use,
       type: type,
       system: system,
@@ -4534,7 +4634,8 @@ const $Identifier = _$IdentifierTearOff();
 
 mixin _$Identifier {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Code get use;
   CodeableConcept get type;
   FhirUri get system;
@@ -4552,7 +4653,7 @@ abstract class $IdentifierCopyWith<$Res> {
       _$IdentifierCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       CodeableConcept type,
       FhirUri system,
@@ -4575,7 +4676,7 @@ class _$IdentifierCopyWithImpl<$Res> implements $IdentifierCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object use = freezed,
     Object type = freezed,
     Object system = freezed,
@@ -4585,9 +4686,9 @@ class _$IdentifierCopyWithImpl<$Res> implements $IdentifierCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       use: use == freezed ? _value.use : use as Code,
       type: type == freezed ? _value.type : type as CodeableConcept,
       system: system == freezed ? _value.system : system as FhirUri,
@@ -4635,7 +4736,7 @@ abstract class _$IdentifierCopyWith<$Res> implements $IdentifierCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       CodeableConcept type,
       FhirUri system,
@@ -4663,7 +4764,7 @@ class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object use = freezed,
     Object type = freezed,
     Object system = freezed,
@@ -4673,9 +4774,9 @@ class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
   }) {
     return _then(_Identifier(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       use: use == freezed ? _value.use : use as Code,
       type: type == freezed ? _value.type : type as CodeableConcept,
       system: system == freezed ? _value.system : system as FhirUri,
@@ -4690,7 +4791,7 @@ class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
 class _$_Identifier implements _Identifier {
   _$_Identifier(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.use,
       this.type,
       this.system,
@@ -4704,7 +4805,8 @@ class _$_Identifier implements _Identifier {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Code use;
   @override
@@ -4720,7 +4822,7 @@ class _$_Identifier implements _Identifier {
 
   @override
   String toString() {
-    return 'Identifier(id: $id, extension: $extension, use: $use, type: $type, system: $system, value: $value, period: $period, assigner: $assigner)';
+    return 'Identifier(id: $id, fhirExtension: $fhirExtension, use: $use, type: $type, system: $system, value: $value, period: $period, assigner: $assigner)';
   }
 
   @override
@@ -4729,9 +4831,9 @@ class _$_Identifier implements _Identifier {
         (other is _Identifier &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.use, use) ||
                 const DeepCollectionEquality().equals(other.use, use)) &&
             (identical(other.type, type) ||
@@ -4751,7 +4853,7 @@ class _$_Identifier implements _Identifier {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(use) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(system) ^
@@ -4772,7 +4874,7 @@ class _$_Identifier implements _Identifier {
 abstract class _Identifier implements Identifier {
   factory _Identifier(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       CodeableConcept type,
       FhirUri system,
@@ -4786,7 +4888,8 @@ abstract class _Identifier implements Identifier {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Code get use;
   @override
@@ -4812,7 +4915,7 @@ class _$MetaTearOff {
 
   _Meta call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
@@ -4820,7 +4923,7 @@ class _$MetaTearOff {
       List<Coding> tag}) {
     return _Meta(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       versionId: versionId,
       lastUpdated: lastUpdated,
       profile: profile,
@@ -4835,7 +4938,8 @@ const $Meta = _$MetaTearOff();
 
 mixin _$Meta {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Id get versionId;
   Instant get lastUpdated;
   List<FhirUri> get profile;
@@ -4851,7 +4955,7 @@ abstract class $MetaCopyWith<$Res> {
       _$MetaCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
@@ -4869,7 +4973,7 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object versionId = freezed,
     Object lastUpdated = freezed,
     Object profile = freezed,
@@ -4878,9 +4982,9 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       versionId: versionId == freezed ? _value.versionId : versionId as Id,
       lastUpdated:
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
@@ -4898,7 +5002,7 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
@@ -4917,7 +5021,7 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object versionId = freezed,
     Object lastUpdated = freezed,
     Object profile = freezed,
@@ -4926,9 +5030,9 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
   }) {
     return _then(_Meta(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       versionId: versionId == freezed ? _value.versionId : versionId as Id,
       lastUpdated:
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
@@ -4944,7 +5048,7 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
 class _$_Meta implements _Meta {
   _$_Meta(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.versionId,
       this.lastUpdated,
       this.profile,
@@ -4957,7 +5061,8 @@ class _$_Meta implements _Meta {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Id versionId;
   @override
@@ -4971,7 +5076,7 @@ class _$_Meta implements _Meta {
 
   @override
   String toString() {
-    return 'Meta(id: $id, extension: $extension, versionId: $versionId, lastUpdated: $lastUpdated, profile: $profile, security: $security, tag: $tag)';
+    return 'Meta(id: $id, fhirExtension: $fhirExtension, versionId: $versionId, lastUpdated: $lastUpdated, profile: $profile, security: $security, tag: $tag)';
   }
 
   @override
@@ -4980,9 +5085,9 @@ class _$_Meta implements _Meta {
         (other is _Meta &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.versionId, versionId) ||
                 const DeepCollectionEquality()
                     .equals(other.versionId, versionId)) &&
@@ -5003,7 +5108,7 @@ class _$_Meta implements _Meta {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(versionId) ^
       const DeepCollectionEquality().hash(lastUpdated) ^
       const DeepCollectionEquality().hash(profile) ^
@@ -5023,7 +5128,7 @@ class _$_Meta implements _Meta {
 abstract class _Meta implements Meta {
   factory _Meta(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
@@ -5035,7 +5140,8 @@ abstract class _Meta implements Meta {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Id get versionId;
   @override
@@ -5058,10 +5164,13 @@ class _$NarrativeTearOff {
   const _$NarrativeTearOff();
 
   _Narrative call(
-      {Id id, List<FhirExtension> extension, Code status, String div}) {
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      Code status,
+      String div}) {
     return _Narrative(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       status: status,
       div: div,
     );
@@ -5073,7 +5182,8 @@ const $Narrative = _$NarrativeTearOff();
 
 mixin _$Narrative {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Code get status;
   String get div;
 
@@ -5084,7 +5194,11 @@ mixin _$Narrative {
 abstract class $NarrativeCopyWith<$Res> {
   factory $NarrativeCopyWith(Narrative value, $Res Function(Narrative) then) =
       _$NarrativeCopyWithImpl<$Res>;
-  $Res call({Id id, List<FhirExtension> extension, Code status, String div});
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      Code status,
+      String div});
 }
 
 class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
@@ -5097,15 +5211,15 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object status = freezed,
     Object div = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       status: status == freezed ? _value.status : status as Code,
       div: div == freezed ? _value.div : div as String,
     ));
@@ -5117,7 +5231,11 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
           _Narrative value, $Res Function(_Narrative) then) =
       __$NarrativeCopyWithImpl<$Res>;
   @override
-  $Res call({Id id, List<FhirExtension> extension, Code status, String div});
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      Code status,
+      String div});
 }
 
 class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
@@ -5131,15 +5249,15 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object status = freezed,
     Object div = freezed,
   }) {
     return _then(_Narrative(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       status: status == freezed ? _value.status : status as Code,
       div: div == freezed ? _value.div : div as String,
     ));
@@ -5148,7 +5266,11 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Narrative implements _Narrative {
-  _$_Narrative({this.id, this.extension, this.status, this.div});
+  _$_Narrative(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.status,
+      this.div});
 
   factory _$_Narrative.fromJson(Map<String, dynamic> json) =>
       _$_$_NarrativeFromJson(json);
@@ -5156,7 +5278,8 @@ class _$_Narrative implements _Narrative {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Code status;
   @override
@@ -5164,7 +5287,7 @@ class _$_Narrative implements _Narrative {
 
   @override
   String toString() {
-    return 'Narrative(id: $id, extension: $extension, status: $status, div: $div)';
+    return 'Narrative(id: $id, fhirExtension: $fhirExtension, status: $status, div: $div)';
   }
 
   @override
@@ -5173,9 +5296,9 @@ class _$_Narrative implements _Narrative {
         (other is _Narrative &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.div, div) ||
@@ -5186,7 +5309,7 @@ class _$_Narrative implements _Narrative {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(div);
 
@@ -5203,7 +5326,7 @@ class _$_Narrative implements _Narrative {
 abstract class _Narrative implements Narrative {
   factory _Narrative(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code status,
       String div}) = _$_Narrative;
 
@@ -5213,7 +5336,8 @@ abstract class _Narrative implements Narrative {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Code get status;
   @override
@@ -5231,12 +5355,12 @@ class _$PeriodTearOff {
 
   _Period call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirDateTime start,
       FhirDateTime end}) {
     return _Period(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       start: start,
       end: end,
     );
@@ -5248,7 +5372,8 @@ const $Period = _$PeriodTearOff();
 
 mixin _$Period {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   FhirDateTime get start;
   FhirDateTime get end;
 
@@ -5261,7 +5386,7 @@ abstract class $PeriodCopyWith<$Res> {
       _$PeriodCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirDateTime start,
       FhirDateTime end});
 }
@@ -5276,15 +5401,15 @@ class _$PeriodCopyWithImpl<$Res> implements $PeriodCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object start = freezed,
     Object end = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       start: start == freezed ? _value.start : start as FhirDateTime,
       end: end == freezed ? _value.end : end as FhirDateTime,
     ));
@@ -5297,7 +5422,7 @@ abstract class _$PeriodCopyWith<$Res> implements $PeriodCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirDateTime start,
       FhirDateTime end});
 }
@@ -5313,15 +5438,15 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object start = freezed,
     Object end = freezed,
   }) {
     return _then(_Period(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       start: start == freezed ? _value.start : start as FhirDateTime,
       end: end == freezed ? _value.end : end as FhirDateTime,
     ));
@@ -5330,7 +5455,11 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Period implements _Period {
-  _$_Period({this.id, this.extension, this.start, this.end});
+  _$_Period(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.start,
+      this.end});
 
   factory _$_Period.fromJson(Map<String, dynamic> json) =>
       _$_$_PeriodFromJson(json);
@@ -5338,7 +5467,8 @@ class _$_Period implements _Period {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final FhirDateTime start;
   @override
@@ -5346,7 +5476,7 @@ class _$_Period implements _Period {
 
   @override
   String toString() {
-    return 'Period(id: $id, extension: $extension, start: $start, end: $end)';
+    return 'Period(id: $id, fhirExtension: $fhirExtension, start: $start, end: $end)';
   }
 
   @override
@@ -5355,9 +5485,9 @@ class _$_Period implements _Period {
         (other is _Period &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.start, start) ||
                 const DeepCollectionEquality().equals(other.start, start)) &&
             (identical(other.end, end) ||
@@ -5368,7 +5498,7 @@ class _$_Period implements _Period {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(start) ^
       const DeepCollectionEquality().hash(end);
 
@@ -5385,7 +5515,7 @@ class _$_Period implements _Period {
 abstract class _Period implements Period {
   factory _Period(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       FhirDateTime start,
       FhirDateTime end}) = _$_Period;
 
@@ -5394,7 +5524,8 @@ abstract class _Period implements Period {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   FhirDateTime get start;
   @override
@@ -5412,7 +5543,7 @@ class _$QuantityTearOff {
 
   _Quantity call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Decimal value,
       Code comparator,
       String unit,
@@ -5420,7 +5551,7 @@ class _$QuantityTearOff {
       Code code}) {
     return _Quantity(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       value: value,
       comparator: comparator,
       unit: unit,
@@ -5435,7 +5566,8 @@ const $Quantity = _$QuantityTearOff();
 
 mixin _$Quantity {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Decimal get value;
   Code get comparator;
   String get unit;
@@ -5451,7 +5583,7 @@ abstract class $QuantityCopyWith<$Res> {
       _$QuantityCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Decimal value,
       Code comparator,
       String unit,
@@ -5469,7 +5601,7 @@ class _$QuantityCopyWithImpl<$Res> implements $QuantityCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object value = freezed,
     Object comparator = freezed,
     Object unit = freezed,
@@ -5478,9 +5610,9 @@ class _$QuantityCopyWithImpl<$Res> implements $QuantityCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
       comparator:
           comparator == freezed ? _value.comparator : comparator as Code,
@@ -5497,7 +5629,7 @@ abstract class _$QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Decimal value,
       Code comparator,
       String unit,
@@ -5516,7 +5648,7 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object value = freezed,
     Object comparator = freezed,
     Object unit = freezed,
@@ -5525,9 +5657,9 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
   }) {
     return _then(_Quantity(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
       comparator:
           comparator == freezed ? _value.comparator : comparator as Code,
@@ -5542,7 +5674,7 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
 class _$_Quantity implements _Quantity {
   _$_Quantity(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.value,
       this.comparator,
       this.unit,
@@ -5555,7 +5687,8 @@ class _$_Quantity implements _Quantity {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Decimal value;
   @override
@@ -5569,7 +5702,7 @@ class _$_Quantity implements _Quantity {
 
   @override
   String toString() {
-    return 'Quantity(id: $id, extension: $extension, value: $value, comparator: $comparator, unit: $unit, system: $system, code: $code)';
+    return 'Quantity(id: $id, fhirExtension: $fhirExtension, value: $value, comparator: $comparator, unit: $unit, system: $system, code: $code)';
   }
 
   @override
@@ -5578,9 +5711,9 @@ class _$_Quantity implements _Quantity {
         (other is _Quantity &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
             (identical(other.comparator, comparator) ||
@@ -5598,7 +5731,7 @@ class _$_Quantity implements _Quantity {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(comparator) ^
       const DeepCollectionEquality().hash(unit) ^
@@ -5618,7 +5751,7 @@ class _$_Quantity implements _Quantity {
 abstract class _Quantity implements Quantity {
   factory _Quantity(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Decimal value,
       Code comparator,
       String unit,
@@ -5630,7 +5763,8 @@ abstract class _Quantity implements Quantity {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Decimal get value;
   @override
@@ -5653,10 +5787,13 @@ class _$RangeTearOff {
   const _$RangeTearOff();
 
   _Range call(
-      {Id id, List<FhirExtension> extension, Quantity low, Quantity high}) {
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      Quantity low,
+      Quantity high}) {
     return _Range(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       low: low,
       high: high,
     );
@@ -5668,7 +5805,8 @@ const $Range = _$RangeTearOff();
 
 mixin _$Range {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Quantity get low;
   Quantity get high;
 
@@ -5680,7 +5818,10 @@ abstract class $RangeCopyWith<$Res> {
   factory $RangeCopyWith(Range value, $Res Function(Range) then) =
       _$RangeCopyWithImpl<$Res>;
   $Res call(
-      {Id id, List<FhirExtension> extension, Quantity low, Quantity high});
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      Quantity low,
+      Quantity high});
 
   $QuantityCopyWith<$Res> get low;
   $QuantityCopyWith<$Res> get high;
@@ -5696,15 +5837,15 @@ class _$RangeCopyWithImpl<$Res> implements $RangeCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object low = freezed,
     Object high = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       low: low == freezed ? _value.low : low as Quantity,
       high: high == freezed ? _value.high : high as Quantity,
     ));
@@ -5736,7 +5877,10 @@ abstract class _$RangeCopyWith<$Res> implements $RangeCopyWith<$Res> {
       __$RangeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id, List<FhirExtension> extension, Quantity low, Quantity high});
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      Quantity low,
+      Quantity high});
 
   @override
   $QuantityCopyWith<$Res> get low;
@@ -5755,15 +5899,15 @@ class __$RangeCopyWithImpl<$Res> extends _$RangeCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object low = freezed,
     Object high = freezed,
   }) {
     return _then(_Range(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       low: low == freezed ? _value.low : low as Quantity,
       high: high == freezed ? _value.high : high as Quantity,
     ));
@@ -5772,7 +5916,11 @@ class __$RangeCopyWithImpl<$Res> extends _$RangeCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Range implements _Range {
-  _$_Range({this.id, this.extension, this.low, this.high});
+  _$_Range(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.low,
+      this.high});
 
   factory _$_Range.fromJson(Map<String, dynamic> json) =>
       _$_$_RangeFromJson(json);
@@ -5780,7 +5928,8 @@ class _$_Range implements _Range {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Quantity low;
   @override
@@ -5788,7 +5937,7 @@ class _$_Range implements _Range {
 
   @override
   String toString() {
-    return 'Range(id: $id, extension: $extension, low: $low, high: $high)';
+    return 'Range(id: $id, fhirExtension: $fhirExtension, low: $low, high: $high)';
   }
 
   @override
@@ -5797,9 +5946,9 @@ class _$_Range implements _Range {
         (other is _Range &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.low, low) ||
                 const DeepCollectionEquality().equals(other.low, low)) &&
             (identical(other.high, high) ||
@@ -5810,7 +5959,7 @@ class _$_Range implements _Range {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(low) ^
       const DeepCollectionEquality().hash(high);
 
@@ -5827,7 +5976,7 @@ class _$_Range implements _Range {
 abstract class _Range implements Range {
   factory _Range(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity low,
       Quantity high}) = _$_Range;
 
@@ -5836,7 +5985,8 @@ abstract class _Range implements Range {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Quantity get low;
   @override
@@ -5854,12 +6004,12 @@ class _$RatioTearOff {
 
   _Ratio call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity numerator,
       Quantity denominator}) {
     return _Ratio(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       numerator: numerator,
       denominator: denominator,
     );
@@ -5871,7 +6021,8 @@ const $Ratio = _$RatioTearOff();
 
 mixin _$Ratio {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Quantity get numerator;
   Quantity get denominator;
 
@@ -5884,7 +6035,7 @@ abstract class $RatioCopyWith<$Res> {
       _$RatioCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity numerator,
       Quantity denominator});
 
@@ -5902,15 +6053,15 @@ class _$RatioCopyWithImpl<$Res> implements $RatioCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object numerator = freezed,
     Object denominator = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       numerator:
           numerator == freezed ? _value.numerator : numerator as Quantity,
       denominator:
@@ -5945,7 +6096,7 @@ abstract class _$RatioCopyWith<$Res> implements $RatioCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity numerator,
       Quantity denominator});
 
@@ -5966,15 +6117,15 @@ class __$RatioCopyWithImpl<$Res> extends _$RatioCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object numerator = freezed,
     Object denominator = freezed,
   }) {
     return _then(_Ratio(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       numerator:
           numerator == freezed ? _value.numerator : numerator as Quantity,
       denominator:
@@ -5985,7 +6136,11 @@ class __$RatioCopyWithImpl<$Res> extends _$RatioCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Ratio implements _Ratio {
-  _$_Ratio({this.id, this.extension, this.numerator, this.denominator});
+  _$_Ratio(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.numerator,
+      this.denominator});
 
   factory _$_Ratio.fromJson(Map<String, dynamic> json) =>
       _$_$_RatioFromJson(json);
@@ -5993,7 +6148,8 @@ class _$_Ratio implements _Ratio {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Quantity numerator;
   @override
@@ -6001,7 +6157,7 @@ class _$_Ratio implements _Ratio {
 
   @override
   String toString() {
-    return 'Ratio(id: $id, extension: $extension, numerator: $numerator, denominator: $denominator)';
+    return 'Ratio(id: $id, fhirExtension: $fhirExtension, numerator: $numerator, denominator: $denominator)';
   }
 
   @override
@@ -6010,9 +6166,9 @@ class _$_Ratio implements _Ratio {
         (other is _Ratio &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.numerator, numerator) ||
                 const DeepCollectionEquality()
                     .equals(other.numerator, numerator)) &&
@@ -6025,7 +6181,7 @@ class _$_Ratio implements _Ratio {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(numerator) ^
       const DeepCollectionEquality().hash(denominator);
 
@@ -6042,7 +6198,7 @@ class _$_Ratio implements _Ratio {
 abstract class _Ratio implements Ratio {
   factory _Ratio(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity numerator,
       Quantity denominator}) = _$_Ratio;
 
@@ -6051,7 +6207,8 @@ abstract class _Ratio implements Ratio {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Quantity get numerator;
   @override
@@ -6069,12 +6226,12 @@ class _$ReferenceTearOff {
 
   _Reference call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String reference,
       String display}) {
     return _Reference(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       reference: reference,
       display: display,
     );
@@ -6086,7 +6243,8 @@ const $Reference = _$ReferenceTearOff();
 
 mixin _$Reference {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   String get reference;
   String get display;
 
@@ -6098,7 +6256,10 @@ abstract class $ReferenceCopyWith<$Res> {
   factory $ReferenceCopyWith(Reference value, $Res Function(Reference) then) =
       _$ReferenceCopyWithImpl<$Res>;
   $Res call(
-      {Id id, List<FhirExtension> extension, String reference, String display});
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      String reference,
+      String display});
 }
 
 class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
@@ -6111,15 +6272,15 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object reference = freezed,
     Object display = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       reference: reference == freezed ? _value.reference : reference as String,
       display: display == freezed ? _value.display : display as String,
     ));
@@ -6132,7 +6293,10 @@ abstract class _$ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
       __$ReferenceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id, List<FhirExtension> extension, String reference, String display});
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      String reference,
+      String display});
 }
 
 class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
@@ -6146,15 +6310,15 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object reference = freezed,
     Object display = freezed,
   }) {
     return _then(_Reference(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       reference: reference == freezed ? _value.reference : reference as String,
       display: display == freezed ? _value.display : display as String,
     ));
@@ -6163,7 +6327,11 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Reference implements _Reference {
-  _$_Reference({this.id, this.extension, this.reference, this.display});
+  _$_Reference(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.reference,
+      this.display});
 
   factory _$_Reference.fromJson(Map<String, dynamic> json) =>
       _$_$_ReferenceFromJson(json);
@@ -6171,7 +6339,8 @@ class _$_Reference implements _Reference {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final String reference;
   @override
@@ -6179,7 +6348,7 @@ class _$_Reference implements _Reference {
 
   @override
   String toString() {
-    return 'Reference(id: $id, extension: $extension, reference: $reference, display: $display)';
+    return 'Reference(id: $id, fhirExtension: $fhirExtension, reference: $reference, display: $display)';
   }
 
   @override
@@ -6188,9 +6357,9 @@ class _$_Reference implements _Reference {
         (other is _Reference &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.reference, reference) ||
                 const DeepCollectionEquality()
                     .equals(other.reference, reference)) &&
@@ -6202,7 +6371,7 @@ class _$_Reference implements _Reference {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(reference) ^
       const DeepCollectionEquality().hash(display);
 
@@ -6219,7 +6388,7 @@ class _$_Reference implements _Reference {
 abstract class _Reference implements Reference {
   factory _Reference(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       String reference,
       String display}) = _$_Reference;
 
@@ -6229,7 +6398,8 @@ abstract class _Reference implements Reference {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   String get reference;
   @override
@@ -6247,7 +6417,7 @@ class _$SampledDataTearOff {
 
   _SampledData call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity origin,
       Decimal period,
       Decimal factor,
@@ -6257,7 +6427,7 @@ class _$SampledDataTearOff {
       String data}) {
     return _SampledData(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       origin: origin,
       period: period,
       factor: factor,
@@ -6274,7 +6444,8 @@ const $SampledData = _$SampledDataTearOff();
 
 mixin _$SampledData {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Quantity get origin;
   Decimal get period;
   Decimal get factor;
@@ -6293,7 +6464,7 @@ abstract class $SampledDataCopyWith<$Res> {
       _$SampledDataCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity origin,
       Decimal period,
       Decimal factor,
@@ -6315,7 +6486,7 @@ class _$SampledDataCopyWithImpl<$Res> implements $SampledDataCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object origin = freezed,
     Object period = freezed,
     Object factor = freezed,
@@ -6326,9 +6497,9 @@ class _$SampledDataCopyWithImpl<$Res> implements $SampledDataCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       origin: origin == freezed ? _value.origin : origin as Quantity,
       period: period == freezed ? _value.period : period as Decimal,
       factor: factor == freezed ? _value.factor : factor as Decimal,
@@ -6361,7 +6532,7 @@ abstract class _$SampledDataCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity origin,
       Decimal period,
       Decimal factor,
@@ -6386,7 +6557,7 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object origin = freezed,
     Object period = freezed,
     Object factor = freezed,
@@ -6397,9 +6568,9 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
   }) {
     return _then(_SampledData(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       origin: origin == freezed ? _value.origin : origin as Quantity,
       period: period == freezed ? _value.period : period as Decimal,
       factor: factor == freezed ? _value.factor : factor as Decimal,
@@ -6418,7 +6589,7 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
 class _$_SampledData implements _SampledData {
   _$_SampledData(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.origin,
       this.period,
       this.factor,
@@ -6433,7 +6604,8 @@ class _$_SampledData implements _SampledData {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Quantity origin;
   @override
@@ -6451,7 +6623,7 @@ class _$_SampledData implements _SampledData {
 
   @override
   String toString() {
-    return 'SampledData(id: $id, extension: $extension, origin: $origin, period: $period, factor: $factor, lowerLimit: $lowerLimit, upperLimit: $upperLimit, dimensions: $dimensions, data: $data)';
+    return 'SampledData(id: $id, fhirExtension: $fhirExtension, origin: $origin, period: $period, factor: $factor, lowerLimit: $lowerLimit, upperLimit: $upperLimit, dimensions: $dimensions, data: $data)';
   }
 
   @override
@@ -6460,9 +6632,9 @@ class _$_SampledData implements _SampledData {
         (other is _SampledData &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.origin, origin) ||
                 const DeepCollectionEquality().equals(other.origin, origin)) &&
             (identical(other.period, period) ||
@@ -6486,7 +6658,7 @@ class _$_SampledData implements _SampledData {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(origin) ^
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(factor) ^
@@ -6508,7 +6680,7 @@ class _$_SampledData implements _SampledData {
 abstract class _SampledData implements SampledData {
   factory _SampledData(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity origin,
       Decimal period,
       Decimal factor,
@@ -6523,7 +6695,8 @@ abstract class _SampledData implements SampledData {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Quantity get origin;
   @override
@@ -6551,7 +6724,7 @@ class _$SignatureTearOff {
 
   _Signature call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<Coding> type,
       Instant when,
       FhirUri whoX,
@@ -6559,7 +6732,7 @@ class _$SignatureTearOff {
       Base64Binary blob}) {
     return _Signature(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       type: type,
       when: when,
       whoX: whoX,
@@ -6574,7 +6747,8 @@ const $Signature = _$SignatureTearOff();
 
 mixin _$Signature {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   List<Coding> get type;
   Instant get when;
   FhirUri get whoX;
@@ -6590,7 +6764,7 @@ abstract class $SignatureCopyWith<$Res> {
       _$SignatureCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<Coding> type,
       Instant when,
       FhirUri whoX,
@@ -6608,7 +6782,7 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object type = freezed,
     Object when = freezed,
     Object whoX = freezed,
@@ -6617,9 +6791,9 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as List<Coding>,
       when: when == freezed ? _value.when : when as Instant,
       whoX: whoX == freezed ? _value.whoX : whoX as FhirUri,
@@ -6637,7 +6811,7 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<Coding> type,
       Instant when,
       FhirUri whoX,
@@ -6656,7 +6830,7 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object type = freezed,
     Object when = freezed,
     Object whoX = freezed,
@@ -6665,9 +6839,9 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
   }) {
     return _then(_Signature(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as List<Coding>,
       when: when == freezed ? _value.when : when as Instant,
       whoX: whoX == freezed ? _value.whoX : whoX as FhirUri,
@@ -6682,7 +6856,7 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
 class _$_Signature implements _Signature {
   _$_Signature(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.type,
       this.when,
       this.whoX,
@@ -6695,7 +6869,8 @@ class _$_Signature implements _Signature {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final List<Coding> type;
   @override
@@ -6709,7 +6884,7 @@ class _$_Signature implements _Signature {
 
   @override
   String toString() {
-    return 'Signature(id: $id, extension: $extension, type: $type, when: $when, whoX: $whoX, contentType: $contentType, blob: $blob)';
+    return 'Signature(id: $id, fhirExtension: $fhirExtension, type: $type, when: $when, whoX: $whoX, contentType: $contentType, blob: $blob)';
   }
 
   @override
@@ -6718,9 +6893,9 @@ class _$_Signature implements _Signature {
         (other is _Signature &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.when, when) ||
@@ -6738,7 +6913,7 @@ class _$_Signature implements _Signature {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(when) ^
       const DeepCollectionEquality().hash(whoX) ^
@@ -6758,7 +6933,7 @@ class _$_Signature implements _Signature {
 abstract class _Signature implements Signature {
   factory _Signature(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<Coding> type,
       Instant when,
       FhirUri whoX,
@@ -6771,7 +6946,8 @@ abstract class _Signature implements Signature {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   List<Coding> get type;
   @override
@@ -6795,13 +6971,13 @@ class _$TimingTearOff {
 
   _Timing call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirDateTime> event,
       Element repeat,
       CodeableConcept code}) {
     return _Timing(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       event: event,
       repeat: repeat,
       code: code,
@@ -6814,7 +6990,8 @@ const $Timing = _$TimingTearOff();
 
 mixin _$Timing {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   List<FhirDateTime> get event;
   Element get repeat;
   CodeableConcept get code;
@@ -6828,7 +7005,7 @@ abstract class $TimingCopyWith<$Res> {
       _$TimingCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirDateTime> event,
       Element repeat,
       CodeableConcept code});
@@ -6847,16 +7024,16 @@ class _$TimingCopyWithImpl<$Res> implements $TimingCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object event = freezed,
     Object repeat = freezed,
     Object code = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       event: event == freezed ? _value.event : event as List<FhirDateTime>,
       repeat: repeat == freezed ? _value.repeat : repeat as Element,
       code: code == freezed ? _value.code : code as CodeableConcept,
@@ -6890,7 +7067,7 @@ abstract class _$TimingCopyWith<$Res> implements $TimingCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirDateTime> event,
       Element repeat,
       CodeableConcept code});
@@ -6912,16 +7089,16 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object event = freezed,
     Object repeat = freezed,
     Object code = freezed,
   }) {
     return _then(_Timing(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       event: event == freezed ? _value.event : event as List<FhirDateTime>,
       repeat: repeat == freezed ? _value.repeat : repeat as Element,
       code: code == freezed ? _value.code : code as CodeableConcept,
@@ -6931,7 +7108,12 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_Timing implements _Timing {
-  _$_Timing({this.id, this.extension, this.event, this.repeat, this.code});
+  _$_Timing(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.event,
+      this.repeat,
+      this.code});
 
   factory _$_Timing.fromJson(Map<String, dynamic> json) =>
       _$_$_TimingFromJson(json);
@@ -6939,7 +7121,8 @@ class _$_Timing implements _Timing {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final List<FhirDateTime> event;
   @override
@@ -6949,7 +7132,7 @@ class _$_Timing implements _Timing {
 
   @override
   String toString() {
-    return 'Timing(id: $id, extension: $extension, event: $event, repeat: $repeat, code: $code)';
+    return 'Timing(id: $id, fhirExtension: $fhirExtension, event: $event, repeat: $repeat, code: $code)';
   }
 
   @override
@@ -6958,9 +7141,9 @@ class _$_Timing implements _Timing {
         (other is _Timing &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.event, event) ||
                 const DeepCollectionEquality().equals(other.event, event)) &&
             (identical(other.repeat, repeat) ||
@@ -6973,7 +7156,7 @@ class _$_Timing implements _Timing {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(event) ^
       const DeepCollectionEquality().hash(repeat) ^
       const DeepCollectionEquality().hash(code);
@@ -6991,7 +7174,7 @@ class _$_Timing implements _Timing {
 abstract class _Timing implements Timing {
   factory _Timing(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirDateTime> event,
       Element repeat,
       CodeableConcept code}) = _$_Timing;
@@ -7001,7 +7184,8 @@ abstract class _Timing implements Timing {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   List<FhirDateTime> get event;
   @override
@@ -7021,7 +7205,7 @@ class _$TimingRepeatTearOff {
 
   _TimingRepeat call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity boundsX,
       Integer count,
       Decimal duration,
@@ -7035,7 +7219,7 @@ class _$TimingRepeatTearOff {
       Code when}) {
     return _TimingRepeat(
       id: id,
-      extension: extension,
+      fhirExtension: fhirExtension,
       boundsX: boundsX,
       count: count,
       duration: duration,
@@ -7056,7 +7240,8 @@ const $TimingRepeat = _$TimingRepeatTearOff();
 
 mixin _$TimingRepeat {
   Id get id;
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   Quantity get boundsX;
   Integer get count;
   Decimal get duration;
@@ -7079,7 +7264,7 @@ abstract class $TimingRepeatCopyWith<$Res> {
       _$TimingRepeatCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity boundsX,
       Integer count,
       Decimal duration,
@@ -7105,7 +7290,7 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object boundsX = freezed,
     Object count = freezed,
     Object duration = freezed,
@@ -7120,9 +7305,9 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       boundsX: boundsX == freezed ? _value.boundsX : boundsX as Quantity,
       count: count == freezed ? _value.count : count as Integer,
       duration: duration == freezed ? _value.duration : duration as Decimal,
@@ -7162,7 +7347,7 @@ abstract class _$TimingRepeatCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity boundsX,
       Integer count,
       Decimal duration,
@@ -7191,7 +7376,7 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object extension = freezed,
+    Object fhirExtension = freezed,
     Object boundsX = freezed,
     Object count = freezed,
     Object duration = freezed,
@@ -7206,9 +7391,9 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
   }) {
     return _then(_TimingRepeat(
       id: id == freezed ? _value.id : id as Id,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
       boundsX: boundsX == freezed ? _value.boundsX : boundsX as Quantity,
       count: count == freezed ? _value.count : count as Integer,
       duration: duration == freezed ? _value.duration : duration as Decimal,
@@ -7234,7 +7419,7 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
 class _$_TimingRepeat implements _TimingRepeat {
   _$_TimingRepeat(
       {this.id,
-      this.extension,
+      @JsonKey(name: 'extension') this.fhirExtension,
       this.boundsX,
       this.count,
       this.duration,
@@ -7253,7 +7438,8 @@ class _$_TimingRepeat implements _TimingRepeat {
   @override
   final Id id;
   @override
-  final List<FhirExtension> extension;
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
   @override
   final Quantity boundsX;
   @override
@@ -7279,7 +7465,7 @@ class _$_TimingRepeat implements _TimingRepeat {
 
   @override
   String toString() {
-    return 'TimingRepeat(id: $id, extension: $extension, boundsX: $boundsX, count: $count, duration: $duration, durationMax: $durationMax, durationUnits: $durationUnits, frequency: $frequency, frequencyMax: $frequencyMax, period: $period, periodMax: $periodMax, periodUnits: $periodUnits, when: $when)';
+    return 'TimingRepeat(id: $id, fhirExtension: $fhirExtension, boundsX: $boundsX, count: $count, duration: $duration, durationMax: $durationMax, durationUnits: $durationUnits, frequency: $frequency, frequencyMax: $frequencyMax, period: $period, periodMax: $periodMax, periodUnits: $periodUnits, when: $when)';
   }
 
   @override
@@ -7288,9 +7474,9 @@ class _$_TimingRepeat implements _TimingRepeat {
         (other is _TimingRepeat &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension, extension) ||
+            (identical(other.fhirExtension, fhirExtension) ||
                 const DeepCollectionEquality()
-                    .equals(other.extension, extension)) &&
+                    .equals(other.fhirExtension, fhirExtension)) &&
             (identical(other.boundsX, boundsX) ||
                 const DeepCollectionEquality()
                     .equals(other.boundsX, boundsX)) &&
@@ -7327,7 +7513,7 @@ class _$_TimingRepeat implements _TimingRepeat {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(boundsX) ^
       const DeepCollectionEquality().hash(count) ^
       const DeepCollectionEquality().hash(duration) ^
@@ -7353,7 +7539,7 @@ class _$_TimingRepeat implements _TimingRepeat {
 abstract class _TimingRepeat implements TimingRepeat {
   factory _TimingRepeat(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Quantity boundsX,
       Integer count,
       Decimal duration,
@@ -7372,7 +7558,8 @@ abstract class _TimingRepeat implements TimingRepeat {
   @override
   Id get id;
   @override
-  List<FhirExtension> get extension;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
   @override
   Quantity get boundsX;
   @override

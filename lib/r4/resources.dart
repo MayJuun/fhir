@@ -6,4 +6,4 @@ export 'metadata_types/metadata_types.enums.dart';
 export 'resource_types/resource_types.dart';
 export 'special_types/special_types.dart';
 export 'special_types/special_types.enums.dart';
-export 'resourceList.dart';
+export 'resource_list.dart';

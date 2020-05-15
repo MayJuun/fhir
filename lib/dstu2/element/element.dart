@@ -9,7 +9,7 @@ part 'element.g.dart';
 abstract class Address with _$Address {
   factory Address(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code use,
       Code type,
       String text,
@@ -29,7 +29,7 @@ abstract class Address with _$Address {
 abstract class Annotation with _$Annotation {
   factory Annotation({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Reference authorX,
     FhirDateTime time,
     String text,
@@ -43,7 +43,7 @@ abstract class Annotation with _$Annotation {
 abstract class Attachment with _$Attachment {
   factory Attachment({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code contentType,
     Code language,
     Base64Binary data,
@@ -62,7 +62,7 @@ abstract class Attachment with _$Attachment {
 abstract class BackboneElement with _$BackboneElement {
   factory BackboneElement({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
   }) = _BackboneElement;
 
@@ -74,7 +74,7 @@ abstract class BackboneElement with _$BackboneElement {
 abstract class CodeableConcept with _$CodeableConcept {
   factory CodeableConcept({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<Coding> coding,
     String text,
   }) = _CodeableConcept;
@@ -87,7 +87,7 @@ abstract class CodeableConcept with _$CodeableConcept {
 abstract class Coding with _$Coding {
   factory Coding({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     FhirUri system,
     String version,
     Code code,
@@ -102,7 +102,7 @@ abstract class Coding with _$Coding {
 abstract class ContactPoint with _$ContactPoint {
   factory ContactPoint({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code system,
     String value,
     Code use,
@@ -118,7 +118,7 @@ abstract class ContactPoint with _$ContactPoint {
 abstract class Element with _$Element {
   factory Element({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
   }) = _Element;
 
   factory Element.fromJson(Map<String, dynamic> json) =>
@@ -129,7 +129,7 @@ abstract class Element with _$Element {
 abstract class ElementDefinition with _$ElementDefinition {
   factory ElementDefinition({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     String path,
     List<Code> representation,
     String name,
@@ -171,7 +171,7 @@ abstract class ElementDefinition with _$ElementDefinition {
 abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   factory ElementDefinitionSlicing({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<String> discriminator,
     String description,
     Boolean ordered,
@@ -186,7 +186,7 @@ abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 abstract class ElementDefinitionBase with _$ElementDefinitionBase {
   factory ElementDefinitionBase({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     String path,
     Integer min,
     String max,
@@ -200,7 +200,7 @@ abstract class ElementDefinitionBase with _$ElementDefinitionBase {
 abstract class ElementDefinitionType with _$ElementDefinitionType {
   factory ElementDefinitionType({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code code,
     List<FhirUri> profile,
     List<Code> aggregation,
@@ -214,7 +214,7 @@ abstract class ElementDefinitionType with _$ElementDefinitionType {
 abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   factory ElementDefinitionConstraint(
       {Id id,
-      List<FhirExtension> extension,
+      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Id key,
       String requirements,
       Code severity,
@@ -229,7 +229,7 @@ abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
   factory ElementDefinitionBinding({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code strength,
     String description,
     FhirUri valueSetX,
@@ -243,7 +243,7 @@ abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
 abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
   factory ElementDefinitionMapping({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Id identity,
     Code language,
     String map,
@@ -257,7 +257,7 @@ abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
 abstract class FhirExtension with _$FhirExtension {
   factory FhirExtension({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     FhirUri url,
     Boolean valueX,
   }) = _FhirExtension;
@@ -270,7 +270,7 @@ abstract class FhirExtension with _$FhirExtension {
 abstract class HumanName with _$HumanName {
   factory HumanName({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code use,
     String text,
     List<String> family,
@@ -288,7 +288,7 @@ abstract class HumanName with _$HumanName {
 abstract class Identifier with _$Identifier {
   factory Identifier({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code use,
     CodeableConcept type,
     FhirUri system,
@@ -305,7 +305,7 @@ abstract class Identifier with _$Identifier {
 abstract class Meta with _$Meta {
   factory Meta({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Id versionId,
     Instant lastUpdated,
     List<FhirUri> profile,
@@ -320,7 +320,7 @@ abstract class Meta with _$Meta {
 abstract class Narrative with _$Narrative {
   factory Narrative({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code status,
     String div,
   }) = _Narrative;
@@ -333,7 +333,7 @@ abstract class Narrative with _$Narrative {
 abstract class Period with _$Period {
   factory Period({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     FhirDateTime start,
     FhirDateTime end,
   }) = _Period;
@@ -345,7 +345,7 @@ abstract class Period with _$Period {
 abstract class Quantity with _$Quantity {
   factory Quantity({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Decimal value,
     Code comparator,
     String unit,
@@ -361,7 +361,7 @@ abstract class Quantity with _$Quantity {
 abstract class Range with _$Range {
   factory Range({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Quantity low,
     Quantity high,
   }) = _Range;
@@ -373,7 +373,7 @@ abstract class Range with _$Range {
 abstract class Ratio with _$Ratio {
   factory Ratio({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Quantity numerator,
     Quantity denominator,
   }) = _Ratio;
@@ -385,7 +385,7 @@ abstract class Ratio with _$Ratio {
 abstract class Reference with _$Reference {
   factory Reference({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     String reference,
     String display,
   }) = _Reference;
@@ -398,7 +398,7 @@ abstract class Reference with _$Reference {
 abstract class SampledData with _$SampledData {
   factory SampledData({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Quantity origin,
     Decimal period,
     Decimal factor,
@@ -416,7 +416,7 @@ abstract class SampledData with _$SampledData {
 abstract class Signature with _$Signature {
   factory Signature({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<Coding> type,
     Instant when,
     FhirUri whoX,
@@ -432,7 +432,7 @@ abstract class Signature with _$Signature {
 abstract class Timing with _$Timing {
   factory Timing({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirDateTime> event,
     Element repeat,
     CodeableConcept code,
@@ -445,7 +445,7 @@ abstract class Timing with _$Timing {
 abstract class TimingRepeat with _$TimingRepeat {
   factory TimingRepeat({
     Id id,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Quantity boundsX,
     Integer count,
     Decimal duration,

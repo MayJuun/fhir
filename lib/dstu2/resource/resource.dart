@@ -14,7 +14,7 @@ abstract class DomainResource with _$DomainResource {
     Code language,
     Narrative text,
     List<Resource> contained,
-    List<FhirExtension> extension,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
   }) = _DomainResource;
 
