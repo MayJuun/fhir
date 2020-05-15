@@ -10,6 +10,7 @@ void main() async {
       if (entity.path.toString().contains('.dart')) {
         var text = await File(entity.path.toString()).readAsString();
         var pieces = text.split('class ');
+        var fileText = '';
         pieces.forEach((element) {
           if (element.contains(' ')) {
             var begin = element.substring(0, element.indexOf(' ')) + '\\(\\{';
@@ -25,9 +26,11 @@ void main() async {
                     '_\$${element.substring(0, element.indexOf(' '))}'
                     '\nfactory ' +
                 element;
+            fileText += element;
           }
         });
-        await File(entity.path.toString()).writeAsString(pieces.join(''));
+        print(fileText);
+        // await File(entity.path.toString()).writeAsString(pieces.join(''));
       }
     },
   );
