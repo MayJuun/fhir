@@ -13,10 +13,11 @@ void main() async {
           var primary = await File(
                   './lib/stu3/${parts[3]}/${parts[4]}/${parts[5]}/${parts[5]}.dart')
               .readAsString();
+          print(oldText);
           primary = primary + oldText;
-          await File(
-                  './lib/stu3/${parts[3]}/${parts[4]}/${parts[5]}/${parts[5]}.dart')
-              .writeAsString(primary);
+          // await File(
+          //         './lib/stu3/${parts[3]}/${parts[4]}/${parts[5]}/${parts[5]}.dart')
+          //     .writeAsString(primary);
         }
       }
     },
