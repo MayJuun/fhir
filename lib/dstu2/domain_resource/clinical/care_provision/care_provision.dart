@@ -1,30 +1,30 @@
 @freezed
 abstract class CarePlan with _$CarePlan
 factory CarePlan ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  Reference subject;
-  Code status;
-  Reference context;
-  Period period;
-  List<Reference> author;
-  FhirDateTime modified;
-  List<CodeableConcept> category;
-  String description;
-  List<Reference> addresses;
-  List<Reference> support;
-  List<CarePlanRelatedPlan> relatedPlan;
-  List<CarePlanParticipant> participant;
-  List<Reference> goal;
-  List<CarePlanActivity> activity;
-  Annotation note;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  Reference subject,
+  Code status,
+  Reference context,
+  Period period,
+  List<Reference> author,
+  FhirDateTime modified,
+  List<CodeableConcept> category,
+  String description,
+  List<Reference> addresses,
+  List<Reference> support,
+  List<CarePlanRelatedPlan> relatedPlan,
+  List<CarePlanParticipant> participant,
+  List<Reference> goal,
+  List<CarePlanActivity> activity,
+  Annotation note,
 
   }) = CarePlan;
 
@@ -37,11 +37,11 @@ factory CarePlan.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan
 factory CarePlanRelatedPlan ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Code code;
-  Reference plan;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Code code,
+  Reference plan,
 
   }) = CarePlanRelatedPlan;
 
@@ -54,11 +54,11 @@ factory CarePlanRelatedPlan.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class CarePlanParticipant with _$CarePlanParticipant
 factory CarePlanParticipant ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  CodeableConcept role;
-  Reference member;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  CodeableConcept role,
+  Reference member,
 
   }) = CarePlanParticipant;
 
@@ -71,13 +71,13 @@ factory CarePlanParticipant.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class CarePlanActivity with _$CarePlanActivity
 factory CarePlanActivity ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Reference> actionResulting;
-  List<Annotation> progress;
-  Reference reference;
-  CarePlanActivityDetail detail;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Reference> actionResulting,
+  List<Annotation> progress,
+  Reference reference,
+  CarePlanActivityDetail detail,
 
   }) = CarePlanActivity;
 
@@ -90,24 +90,24 @@ factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class CarePlanActivityDetail with _$CarePlanActivityDetail
 factory CarePlanActivityDetail ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  CodeableConcept category;
-  CodeableConcept code;
-  List<CodeableConcept> reasonCode;
-  List<Reference> reasonReference;
-  List<Reference> goal;
-  Code status;
-  CodeableConcept statusReason;
-  Boolean prohibited;
-  Timing scheduledX;
-  Reference location;
-  List<Reference> performer;
-  CodeableConcept productX;
-  Quantity dailyAmount;
-  Quantity quantity;
-  String description;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  CodeableConcept category,
+  CodeableConcept code,
+  List<CodeableConcept> reasonCode,
+  List<Reference> reasonReference,
+  List<Reference> goal,
+  Code status,
+  CodeableConcept statusReason,
+  Boolean prohibited,
+  Timing scheduledX,
+  Reference location,
+  List<Reference> performer,
+  CodeableConcept productX,
+  Quantity dailyAmount,
+  Quantity quantity,
+  String description,
 
   }) = CarePlanActivityDetail;
 
@@ -120,28 +120,28 @@ factory CarePlanActivityDetail.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class Goal with _$Goal
 factory Goal ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  Reference subject;
-  Date startX;
-  Date targetX;
-  List<CodeableConcept> category;
-  String description;
-  Code status;
-  Date statusDate;
-  CodeableConcept statusReason;
-  Reference author;
-  CodeableConcept priority;
-  List<Reference> addresses;
-  List<Annotation> note;
-  List<GoalOutcome> outcome;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  Reference subject,
+  Date startX,
+  Date targetX,
+  List<CodeableConcept> category,
+  String description,
+  Code status,
+  Date statusDate,
+  CodeableConcept statusReason,
+  Reference author,
+  CodeableConcept priority,
+  List<Reference> addresses,
+  List<Annotation> note,
+  List<GoalOutcome> outcome,
 
   }) = Goal;
 
@@ -153,10 +153,10 @@ factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
 @freezed
 abstract class GoalOutcome with _$GoalOutcome
 factory GoalOutcome ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  CodeableConcept resultX;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  CodeableConcept resultX,
 
   GoalOutcome({this.id, this.extension, this.modifierExtension, this.resultX});
 
@@ -169,26 +169,26 @@ factory GoalOutcome ({
 @freezed
 abstract class NutritionOrder with _$NutritionOrder
 factory NutritionOrder ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Reference patient;
-  Reference orderer;
-  List<Identifier> identifier;
-  Reference encounter;
-  FhirDateTime dateTime;
-  Code status;
-  List<Reference> allergyIntolerance;
-  List<CodeableConcept> foodPreferenceModifier;
-  List<CodeableConcept> excludeFoodModifier;
-  NutritionOrderOralDiet oralDiet;
-  List<NutritionOrderSupplement> supplement;
-  NutritionOrderEnteralFormula enteralFormula;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Reference patient,
+  Reference orderer,
+  List<Identifier> identifier,
+  Reference encounter,
+  FhirDateTime dateTime,
+  Code status,
+  List<Reference> allergyIntolerance,
+  List<CodeableConcept> foodPreferenceModifier,
+  List<CodeableConcept> excludeFoodModifier,
+  NutritionOrderOralDiet oralDiet,
+  List<NutritionOrderSupplement> supplement,
+  NutritionOrderEnteralFormula enteralFormula,
 
   }) = NutritionOrder;
 
@@ -201,15 +201,15 @@ factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet
 factory NutritionOrderOralDiet ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<CodeableConcept> type;
-  List<Timing> schedule;
-  List<NutritionOrderOralDietNutrient> nutrient;
-  List<NutritionOrderOralDietTexture> texture;
-  List<CodeableConcept> fluidConsistencyType;
-  String instruction;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<CodeableConcept> type,
+  List<Timing> schedule,
+  List<NutritionOrderOralDietNutrient> nutrient,
+  List<NutritionOrderOralDietTexture> texture,
+  List<CodeableConcept> fluidConsistencyType,
+  String instruction,
 
   }) = NutritionOrderOralDiet;
 
@@ -222,14 +222,14 @@ factory NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class NutritionOrderSupplement with _$NutritionOrderSupplement
 factory NutritionOrderSupplement ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  CodeableConcept type;
-  String productName;
-  List<Timing> schedule;
-  Quantity quantity;
-  String instruction;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  CodeableConcept type,
+  String productName,
+  List<Timing> schedule,
+  Quantity quantity,
+  String instruction,
 
   }) = NutritionOrderSupplement;
 
@@ -242,18 +242,18 @@ factory NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula
 factory NutritionOrderEnteralFormula ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  CodeableConcept baseFormulaType;
-  String baseFormulaProductName;
-  CodeableConcept additiveType;
-  String additiveProductName;
-  Quantity caloricDensity;
-  CodeableConcept routeofAdministration;
-  List<NutritionOrderEnteralFormulaAdministration> administration;
-  Quantity maxVolumeToDeliver;
-  String administrationInstruction;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  CodeableConcept baseFormulaType,
+  String baseFormulaProductName,
+  CodeableConcept additiveType,
+  String additiveProductName,
+  Quantity caloricDensity,
+  CodeableConcept routeofAdministration,
+  List<NutritionOrderEnteralFormulaAdministration> administration,
+  Quantity maxVolumeToDeliver,
+  String administrationInstruction,
 
   }) = NutritionOrderEnteralFormula;
 
@@ -266,11 +266,11 @@ factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class NutritionOrderOralDietNutrient with _$NutritionOrderOralDietNutrient
 factory NutritionOrderOralDietNutrient ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  CodeableConcept modifier;
-  Quantity amount;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  CodeableConcept modifier,
+  Quantity amount,
 
   }) = NutritionOrderOralDietNutrient;
 
@@ -283,11 +283,11 @@ factory NutritionOrderOralDietNutrient.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class NutritionOrderOralDietTexture with _$NutritionOrderOralDietTexture
 factory NutritionOrderOralDietTexture ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  CodeableConcept modifier;
-  CodeableConcept foodType;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  CodeableConcept modifier,
+  CodeableConcept foodType,
 
   }) = NutritionOrderOralDietTexture;
 
@@ -300,12 +300,12 @@ factory NutritionOrderOralDietTexture.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class NutritionOrderEnteralFormulaAdministration with _$NutritionOrderEnteralFormulaAdministration
 factory NutritionOrderEnteralFormulaAdministration ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Timing schedule;
-  Quantity quantity;
-  Quantity rateX;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Timing schedule,
+  Quantity quantity,
+  Quantity rateX,
 
   }) = NutritionOrderEnteralFormulaAdministration;
 
@@ -320,28 +320,28 @@ factory NutritionOrderEnteralFormulaAdministration.fromJson(
 @freezed
 abstract class ProcedureRequest with _$ProcedureRequest
 factory ProcedureRequest ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  Reference subject;
-  CodeableConcept code;
-  List<CodeableConcept> bodySite;
-  CodeableConcept reasonX;
-  FhirDateTime scheduledX;
-  Reference encounter;
-  Reference performer;
-  Code status;
-  List<Annotation> notes;
-  Boolean asNeededX;
-  FhirDateTime orderedOn;
-  Reference orderer;
-  Code priority;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  Reference subject,
+  CodeableConcept code,
+  List<CodeableConcept> bodySite,
+  CodeableConcept reasonX,
+  FhirDateTime scheduledX,
+  Reference encounter,
+  Reference performer,
+  Code status,
+  List<Annotation> notes,
+  Boolean asNeededX,
+  FhirDateTime orderedOn,
+  Reference orderer,
+  Code priority,
 
   }) = ProcedureRequest;
 
@@ -354,30 +354,30 @@ factory ProcedureRequest.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ReferralRequest with _$ReferralRequest
 factory ReferralRequest ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Code status;
-  List<Identifier> identifier;
-  FhirDateTime date;
-  CodeableConcept type;
-  CodeableConcept specialty;
-  CodeableConcept priority;
-  Reference patient;
-  Reference requester;
-  List<Reference> recipient;
-  Reference encounter;
-  FhirDateTime dateSent;
-  CodeableConcept reason;
-  String description;
-  List<CodeableConcept> serviceRequested;
-  List<Reference> supportingInformation;
-  Period fulfillmentTime;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Code status,
+  List<Identifier> identifier,
+  FhirDateTime date,
+  CodeableConcept type,
+  CodeableConcept specialty,
+  CodeableConcept priority,
+  Reference patient,
+  Reference requester,
+  List<Reference> recipient,
+  Reference encounter,
+  FhirDateTime dateSent,
+  CodeableConcept reason,
+  String description,
+  List<CodeableConcept> serviceRequested,
+  List<Reference> supportingInformation,
+  Period fulfillmentTime,
 
   }) = ReferralRequest;
 
@@ -390,21 +390,21 @@ factory ReferralRequest.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class VisionPrescription with _$VisionPrescription
 factory VisionPrescription ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  FhirDateTime dateWritten;
-  Reference patient;
-  Reference prescriber;
-  Reference encounter;
-  CodeableConcept reasonX;
-  List<VisionPrescriptionDispense> dispense;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  FhirDateTime dateWritten,
+  Reference patient,
+  Reference prescriber,
+  Reference encounter,
+  CodeableConcept reasonX,
+  List<VisionPrescriptionDispense> dispense,
 
   }) = VisionPrescription;
 
@@ -417,24 +417,24 @@ factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense
 factory VisionPrescriptionDispense ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Coding product;
-  Code eye;
-  Decimal sphere;
-  Decimal cylinder;
-  Integer axis;
-  Decimal prism;
-  Code base;
-  Decimal add;
-  Decimal power;
-  Decimal backCurve;
-  Decimal diameter;
-  Quantity duration;
-  String color;
-  String brand;
-  String notes;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Coding product,
+  Code eye,
+  Decimal sphere,
+  Decimal cylinder,
+  Integer axis,
+  Decimal prism,
+  Code base,
+  Decimal add,
+  Decimal power,
+  Decimal backCurve,
+  Decimal diameter,
+  Quantity duration,
+  String color,
+  String brand,
+  String notes,
 
   }) = VisionPrescriptionDispense;
 

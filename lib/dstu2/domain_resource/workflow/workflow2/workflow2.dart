@@ -1,30 +1,30 @@
 @freezed
 abstract class ProcessRequest with _$ProcessRequest
 factory ProcessRequest ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Code action;
-  List<Identifier> identifier;
-  Coding ruleset;
-  Coding originalRuleset;
-  FhirDateTime created;
-  Reference target;
-  Reference provider;
-  Reference organization;
-  Reference request;
-  Reference response;
-  Boolean nullify;
-  String reference;
-  List<ProcessRequestItem> item;
-  List<String> include;
-  List<String> exclude;
-  Period period;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Code action,
+  List<Identifier> identifier,
+  Coding ruleset,
+  Coding originalRuleset,
+  FhirDateTime created,
+  Reference target,
+  Reference provider,
+  Reference organization,
+  Reference request,
+  Reference response,
+  Boolean nullify,
+  String reference,
+  List<ProcessRequestItem> item,
+  List<String> include,
+  List<String> exclude,
+  Period period,
 
   }) = ProcessRequest;
 
@@ -37,10 +37,10 @@ factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ProcessRequestItem with _$ProcessRequestItem
 factory ProcessRequestItem ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Integer sequenceLinkId;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Integer sequenceLinkId,
 
   }) = ProcessRequestItem;
 
@@ -52,27 +52,27 @@ factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ProcessResponse with _$ProcessResponse
 factory ProcessResponse ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  Reference request;
-  Coding outcome;
-  String disposition;
-  Coding ruleset;
-  Coding originalRuleset;
-  FhirDateTime created;
-  Reference organization;
-  Reference requestProvider;
-  Reference requestOrganization;
-  Coding form;
-  List<ProcessResponseNotes> notes;
-  List<Coding> error;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  Reference request,
+  Coding outcome,
+  String disposition,
+  Coding ruleset,
+  Coding originalRuleset,
+  FhirDateTime created,
+  Reference organization,
+  Reference requestProvider,
+  Reference requestOrganization,
+  Coding form,
+  List<ProcessResponseNotes> notes,
+  List<Coding> error,
 
   }) = ProcessResponse;
 
@@ -85,11 +85,11 @@ factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ProcessResponseNotes with _$ProcessResponseNotes
 factory ProcessResponseNotes ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Coding type;
-  String text;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Coding type,
+  String text,
 
   }) = ProcessResponseNotes;
 
@@ -101,25 +101,25 @@ factory ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class SupplyDelivery with _$SupplyDelivery
 factory SupplyDelivery ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Identifier identifier;
-  Code status;
-  Reference patient;
-  CodeableConcept type;
-  Quantity quantity;
-  Reference suppliedItem;
-  Reference supplier;
-  Period whenPrepared;
-  FhirDateTime time;
-  Reference destination;
-  List<Reference> receiver;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Identifier identifier,
+  Code status,
+  Reference patient,
+  CodeableConcept type,
+  Quantity quantity,
+  Reference suppliedItem,
+  Reference supplier,
+  Period whenPrepared,
+  FhirDateTime time,
+  Reference destination,
+  List<Reference> receiver,
 
   }) = SupplyDelivery;
 
@@ -132,24 +132,24 @@ factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class SupplyRequest with _$SupplyRequest
 factory SupplyRequest ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Reference patient;
-  Reference source;
-  FhirDateTime date;
-  Identifier identifier;
-  Code status;
-  CodeableConcept kind;
-  Reference orderedItem;
-  List<Reference> supplier;
-  CodeableConcept reasonX;
-  SupplyRequestWhen when;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Reference patient,
+  Reference source,
+  FhirDateTime date,
+  Identifier identifier,
+  Code status,
+  CodeableConcept kind,
+  Reference orderedItem,
+  List<Reference> supplier,
+  CodeableConcept reasonX,
+  SupplyRequestWhen when,
 
   }) = SupplyRequest;
 
@@ -162,11 +162,11 @@ factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class SupplyRequestWhen with _$SupplyRequestWhen
 factory SupplyRequestWhen ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  CodeableConcept code;
-  Timing schedule;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  CodeableConcept code,
+  Timing schedule,
 
   }) = SupplyRequestWhen;
 

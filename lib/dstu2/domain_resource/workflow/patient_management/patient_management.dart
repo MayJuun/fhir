@@ -1,27 +1,27 @@
 @freezed
 abstract class Communication with _$Communication
 factory Communication ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  CodeableConcept category;
-  Reference sender;
-  List<Reference> recipient;
-  List<CommunicationPayload> payload;
-  List<CodeableConcept> medium;
-  Code status;
-  Reference encounter;
-  FhirDateTime sent;
-  FhirDateTime received;
-  List<CodeableConcept> reason;
-  Reference subject;
-  Reference requestDetail;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  CodeableConcept category,
+  Reference sender,
+  List<Reference> recipient,
+  List<CommunicationPayload> payload,
+  List<CodeableConcept> medium,
+  Code status,
+  Reference encounter,
+  FhirDateTime sent,
+  FhirDateTime received,
+  List<CodeableConcept> reason,
+  Reference subject,
+  Reference requestDetail,
 
   }) = Communication;
 
@@ -34,10 +34,10 @@ factory Communication.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class CommunicationPayload with _$CommunicationPayload
 factory CommunicationPayload ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  String contentX;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  String contentX,
 
   }) = CommunicationPayload;
 
@@ -49,33 +49,33 @@ factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class Encounter with _$Encounter
 factory Encounter ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  Code status;
-  List<EncounterStatusHistory> statusHistory;
-  Code classs;
-  List<CodeableConcept> type;
-  CodeableConcept priority;
-  Reference patient;
-  List<Reference> episodeOfCare;
-  List<Reference> incomingReferral;
-  List<EncounterParticipant> participant;
-  Reference appointment;
-  Period period;
-  Quantity length;
-  List<CodeableConcept> reason;
-  List<Reference> indication;
-  EncounterHospitalization hospitalization;
-  List<EncounterLocation> location;
-  Reference serviceProvider;
-  Reference partOf;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  Code status,
+  List<EncounterStatusHistory> statusHistory,
+  Code classs,
+  List<CodeableConcept> type,
+  CodeableConcept priority,
+  Reference patient,
+  List<Reference> episodeOfCare,
+  List<Reference> incomingReferral,
+  List<EncounterParticipant> participant,
+  Reference appointment,
+  Period period,
+  Quantity length,
+  List<CodeableConcept> reason,
+  List<Reference> indication,
+  EncounterHospitalization hospitalization,
+  List<EncounterLocation> location,
+  Reference serviceProvider,
+  Reference partOf,
 
   }) = Encounter;
 
@@ -88,11 +88,11 @@ factory Encounter.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class EncounterStatusHistory with _$EncounterStatusHistory
 factory EncounterStatusHistory ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Code status;
-  Period period;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Code status,
+  Period period,
 
   }) = EncounterStatusHistory;
 
@@ -105,12 +105,12 @@ factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class EncounterParticipant with _$EncounterParticipant
 factory EncounterParticipant ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<CodeableConcept> type;
-  Period period;
-  Reference individual;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<CodeableConcept> type,
+  Period period,
+  Reference individual,
 
   }) = EncounterParticipant;
 
@@ -123,20 +123,20 @@ factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class EncounterHospitalization with _$EncounterHospitalization
 factory EncounterHospitalization ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Identifier preAdmissionIdentifier;
-  Reference origin;
-  CodeableConcept admitSource;
-  List<Reference> admittingDiagnosis;
-  CodeableConcept reAdmission;
-  List<CodeableConcept> dietPreference;
-  List<CodeableConcept> specialCourtesy;
-  List<CodeableConcept> specialArrangement;
-  Reference destination;
-  CodeableConcept dischargeDisposition;
-  List<Reference> dischargeDiagnosis;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Identifier preAdmissionIdentifier,
+  Reference origin,
+  CodeableConcept admitSource,
+  List<Reference> admittingDiagnosis,
+  CodeableConcept reAdmission,
+  List<CodeableConcept> dietPreference,
+  List<CodeableConcept> specialCourtesy,
+  List<CodeableConcept> specialArrangement,
+  Reference destination,
+  CodeableConcept dischargeDisposition,
+  List<Reference> dischargeDiagnosis,
 
   }) = EncounterHospitalization;
 
@@ -149,12 +149,12 @@ factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class EncounterLocation with _$EncounterLocation
 factory EncounterLocation ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Reference location;
-  Code status;
-  Period period;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Reference location,
+  Code status,
+  Period period,
 
   }) = EncounterLocation;
 
@@ -166,25 +166,25 @@ factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class EpisodeOfCare with _$EpisodeOfCare
 factory EpisodeOfCare ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  Code status;
-  List<EpisodeOfCareStatusHistory> statusHistory;
-  List<CodeableConcept> type;
-  List<Reference> condition;
-  Reference patient;
-  Reference managingOrganization;
-  Period period;
-  List<Reference> referralRequest;
-  Reference careManager;
-  List<EpisodeOfCareCareTeam> careTeam;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  Code status,
+  List<EpisodeOfCareStatusHistory> statusHistory,
+  List<CodeableConcept> type,
+  List<Reference> condition,
+  Reference patient,
+  Reference managingOrganization,
+  Period period,
+  List<Reference> referralRequest,
+  Reference careManager,
+  List<EpisodeOfCareCareTeam> careTeam,
 
   }) = EpisodeOfCare;
 
@@ -197,11 +197,11 @@ factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory
 factory EpisodeOfCareStatusHistory ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Code status;
-  Period period;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Code status,
+  Period period,
 
   }) = EpisodeOfCareStatusHistory;
 
@@ -214,12 +214,12 @@ factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam
 factory EpisodeOfCareCareTeam ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<CodeableConcept> role;
-  Period period;
-  Reference member;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<CodeableConcept> role,
+  Period period,
+  Reference member,
 
   }) = EpisodeOfCareCareTeam;
 
@@ -231,22 +231,22 @@ factory EpisodeOfCareCareTeam.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class Flag with _$Flag
 factory Flag ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  CodeableConcept category;
-  Code status;
-  Period period;
-  Reference subject;
-  Reference encounter;
-  Reference author;
-  CodeableConcept code;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  CodeableConcept category,
+  Code status,
+  Period period,
+  Reference subject,
+  Reference encounter,
+  Reference author,
+  CodeableConcept code,
 
   }) = Flag;
 

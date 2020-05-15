@@ -1,19 +1,19 @@
 @freezed
 abstract class Basic with _$Basic
 factory Basic ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  CodeableConcept code;
-  Reference subject;
-  Reference author;
-  Date created;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  CodeableConcept code,
+  Reference subject,
+  Reference author,
+  Date created,
 
   }) = Basic;
 
@@ -59,26 +59,26 @@ factory Bundle with _$Bundle ({
 @freezed
 abstract class Media with _$Media
 factory Media ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Code type;
-  CodeableConcept subtype;
-  List<Identifier> identifier;
-  Reference subject;
-  Reference operator;
-  CodeableConcept view;
-  String deviceName;
-  PositiveInt height;
-  PositiveInt width;
-  PositiveInt frames;
-  UnsignedInt duration;
-  Attachment content;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Code type,
+  CodeableConcept subtype,
+  List<Identifier> identifier,
+  Reference subject,
+  Reference operator,
+  CodeableConcept view,
+  String deviceName,
+  PositiveInt height,
+  PositiveInt width,
+  PositiveInt frames,
+  UnsignedInt duration,
+  Attachment content,
 
   }) = Media;
 

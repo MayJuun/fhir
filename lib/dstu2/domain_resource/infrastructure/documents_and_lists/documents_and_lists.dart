@@ -1,28 +1,28 @@
 @freezed
 abstract class Composition with _$Composition
 factory Composition ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Identifier identifier;
-  FhirDateTime date;
-  CodeableConcept type;
-  CodeableConcept classs;
-  String title;
-  Code status;
-  Code confidentiality;
-  Reference subject;
-  List<Reference> author;
-  List<CompositionAttester> attester;
-  Reference custodian;
-  List<CompositionEvent> event;
-  Reference encounter;
-  List<CompositionSection> section;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Identifier identifier,
+  FhirDateTime date,
+  CodeableConcept type,
+  CodeableConcept classs,
+  String title,
+  Code status,
+  Code confidentiality,
+  Reference subject,
+  List<Reference> author,
+  List<CompositionAttester> attester,
+  Reference custodian,
+  List<CompositionEvent> event,
+  Reference encounter,
+  List<CompositionSection> section,
 
   }) = Composition;
 
@@ -35,12 +35,12 @@ factory Composition.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class CompositionAttester with _$CompositionAttester
 factory CompositionAttester ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Code> mode;
-  FhirDateTime time;
-  Reference party;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Code> mode,
+  FhirDateTime time,
+  Reference party,
 
   }) = CompositionAttester;
 
@@ -53,12 +53,12 @@ factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class CompositionEvent with _$CompositionEvent
 factory CompositionEvent ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<CodeableConcept> code;
-  Period period;
-  List<Reference> detail;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<CodeableConcept> code,
+  Period period,
+  List<Reference> detail,
 
   }) = CompositionEvent;
 
@@ -71,16 +71,16 @@ factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class CompositionSection with _$CompositionSection
 factory CompositionSection ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  String title;
-  CodeableConcept code;
-  Narrative text;
-  Code mode;
-  CodeableConcept orderedBy;
-  List<Reference> entry;
-  CodeableConcept emptyReason;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  String title,
+  CodeableConcept code,
+  Narrative text,
+  Code mode,
+  CodeableConcept orderedBy,
+  List<Reference> entry,
+  CodeableConcept emptyReason,
 
   }) = CompositionSection;
 
@@ -92,26 +92,26 @@ factory CompositionSection.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DocumentManifest with _$DocumentManifest
 factory DocumentManifest ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Identifier masterIdentifier;
-  List<Identifier> identifier;
-  Reference subject;
-  List<Reference> recipient;
-  CodeableConcept type;
-  List<Reference> author;
-  FhirDateTime created;
-  FhirUri source;
-  Code status;
-  String description;
-  List<DocumentManifestContent> content;
-  List<DocumentManifestRelated> related;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Identifier masterIdentifier,
+  List<Identifier> identifier,
+  Reference subject,
+  List<Reference> recipient,
+  CodeableConcept type,
+  List<Reference> author,
+  FhirDateTime created,
+  FhirUri source,
+  Code status,
+  String description,
+  List<DocumentManifestContent> content,
+  List<DocumentManifestRelated> related,
 
   }) = DocumentManifest;
 
@@ -124,10 +124,10 @@ factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DocumentManifestContent with _$DocumentManifestContent
 factory DocumentManifestContent ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Attachment pX;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Attachment pX,
 
   }) = DocumentManifestContent;
 
@@ -140,11 +140,11 @@ factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DocumentManifestRelated with _$DocumentManifestRelated
 factory DocumentManifestRelated ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Identifier identifier;
-  Reference ref;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Identifier identifier,
+  Reference ref,
 
   }) = DocumentManifestRelated;
 
@@ -156,31 +156,31 @@ factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DocumentReference with _$DocumentReference
 factory DocumentReference ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Identifier masterIdentifier;
-  List<Identifier> identifier;
-  Reference subject;
-  CodeableConcept type;
-  CodeableConcept classs;
-  List<Reference> author;
-  Reference custodian;
-  Reference authenticator;
-  FhirDateTime created;
-  Instant indexed;
-  Code status;
-  CodeableConcept docStatus;
-  List<DocumentReferenceRelatesTo> relatesTo;
-  String description;
-  List<CodeableConcept> securityLabel;
-  List<DocumentReferenceContent> content;
-  DocumentReferenceContext context;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Identifier masterIdentifier,
+  List<Identifier> identifier,
+  Reference subject,
+  CodeableConcept type,
+  CodeableConcept classs,
+  List<Reference> author,
+  Reference custodian,
+  Reference authenticator,
+  FhirDateTime created,
+  Instant indexed,
+  Code status,
+  CodeableConcept docStatus,
+  List<DocumentReferenceRelatesTo> relatesTo,
+  String description,
+  List<CodeableConcept> securityLabel,
+  List<DocumentReferenceContent> content,
+  DocumentReferenceContext context,
 
   }) = DocumentReference;
 
@@ -193,11 +193,11 @@ factory DocumentReference.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo
 factory DocumentReferenceRelatesTo ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Code code;
-  Reference target;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Code code,
+  Reference target,
 
   }) = DocumentReferenceRelatesTo;
 
@@ -210,11 +210,11 @@ factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DocumentReferenceContent with _$DocumentReferenceContent
 factory DocumentReferenceContent ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Attachment attachment;
-  List<Coding> format;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Attachment attachment,
+  List<Coding> format,
 
   }) = DocumentReferenceContent;
 
@@ -227,16 +227,16 @@ factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DocumentReferenceContext with _$DocumentReferenceContext
 factory DocumentReferenceContext ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Reference encounter;
-  List<CodeableConcept> event;
-  Period period;
-  CodeableConcept facilityType;
-  CodeableConcept practiceSetting;
-  Reference sourcePatientInfo;
-  List<DocumentReferenceContextRelated> related;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Reference encounter,
+  List<CodeableConcept> event,
+  Period period,
+  CodeableConcept facilityType,
+  CodeableConcept practiceSetting,
+  Reference sourcePatientInfo,
+  List<DocumentReferenceContextRelated> related,
 
   }) = DocumentReferenceContext;
 
@@ -249,11 +249,11 @@ factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated
 factory DocumentReferenceContextRelated ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Identifier identifier;
-  Reference ref;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  Identifier identifier,
+  Reference ref,
 
   DocumentReferenceContextRelated(
       ({this.id,
@@ -271,27 +271,27 @@ factory DocumentReferenceContextRelated ({
 @freezed
 abstract class Lists with _$Lists
 factory Lists ({
-  Id id;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<Identifier> identifier;
-  String title;
-  CodeableConcept code;
-  Reference subject;
-  Reference source;
-  Reference encounter;
-  Code status;
-  FhirDateTime date;
-  CodeableConcept orderedBy;
-  Code mode;
-  String note;
-  List<ListEntry> entry;
-  CodeableConcept emptyReason;
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  Code language,
+  Narrative text,
+  List<Resource> contained,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  List<Identifier> identifier,
+  String title,
+  CodeableConcept code,
+  Reference subject,
+  Reference source,
+  Reference encounter,
+  Code status,
+  FhirDateTime date,
+  CodeableConcept orderedBy,
+  Code mode,
+  String note,
+  List<ListEntry> entry,
+  CodeableConcept emptyReason,
 
   }) = Lists;
 
@@ -303,13 +303,13 @@ factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
 @freezed
 abstract class ListEntry with _$ListEntry
 factory ListEntry ({
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  CodeableConcept flag;
-  Boolean deleted;
-  FhirDateTime date;
-  Reference item;
+  Id id,
+  List<Extension> extension,
+  List<Extension> modifierExtension,
+  CodeableConcept flag,
+  Boolean deleted,
+  FhirDateTime date,
+  Reference item,
 
   }) = ListEntry;
 
