@@ -1220,7 +1220,7 @@ class _$BundleEntryTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri fullUrl,
-      Resource resource,
+      dynamic resource,
       BundleEntrySearch search,
       BundleEntryRequest request,
       BundleEntryResponse response}) {
@@ -1246,7 +1246,7 @@ mixin _$BundleEntry {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   FhirUri get fullUrl;
-  Resource get resource;
+  dynamic get resource;
   BundleEntrySearch get search;
   BundleEntryRequest get request;
   BundleEntryResponse get response;
@@ -1264,12 +1264,11 @@ abstract class $BundleEntryCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri fullUrl,
-      Resource resource,
+      dynamic resource,
       BundleEntrySearch search,
       BundleEntryRequest request,
       BundleEntryResponse response});
 
-  $ResourceCopyWith<$Res> get resource;
   $BundleEntrySearchCopyWith<$Res> get search;
   $BundleEntryRequestCopyWith<$Res> get request;
   $BundleEntryResponseCopyWith<$Res> get response;
@@ -1302,7 +1301,7 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri,
-      resource: resource == freezed ? _value.resource : resource as Resource,
+      resource: resource == freezed ? _value.resource : resource as dynamic,
       search: search == freezed ? _value.search : search as BundleEntrySearch,
       request:
           request == freezed ? _value.request : request as BundleEntryRequest,
@@ -1310,16 +1309,6 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
           ? _value.response
           : response as BundleEntryResponse,
     ));
-  }
-
-  @override
-  $ResourceCopyWith<$Res> get resource {
-    if (_value.resource == null) {
-      return null;
-    }
-    return $ResourceCopyWith<$Res>(_value.resource, (value) {
-      return _then(_value.copyWith(resource: value));
-    });
   }
 
   @override
@@ -1364,13 +1353,11 @@ abstract class _$BundleEntryCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri fullUrl,
-      Resource resource,
+      dynamic resource,
       BundleEntrySearch search,
       BundleEntryRequest request,
       BundleEntryResponse response});
 
-  @override
-  $ResourceCopyWith<$Res> get resource;
   @override
   $BundleEntrySearchCopyWith<$Res> get search;
   @override
@@ -1408,7 +1395,7 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri,
-      resource: resource == freezed ? _value.resource : resource as Resource,
+      resource: resource == freezed ? _value.resource : resource as dynamic,
       search: search == freezed ? _value.search : search as BundleEntrySearch,
       request:
           request == freezed ? _value.request : request as BundleEntryRequest,
@@ -1444,7 +1431,7 @@ class _$_BundleEntry implements _BundleEntry {
   @override
   final FhirUri fullUrl;
   @override
-  final Resource resource;
+  final dynamic resource;
   @override
   final BundleEntrySearch search;
   @override
@@ -1513,7 +1500,7 @@ abstract class _BundleEntry implements BundleEntry {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri fullUrl,
-      Resource resource,
+      dynamic resource,
       BundleEntrySearch search,
       BundleEntryRequest request,
       BundleEntryResponse response}) = _$_BundleEntry;
@@ -1531,7 +1518,7 @@ abstract class _BundleEntry implements BundleEntry {
   @override
   FhirUri get fullUrl;
   @override
-  Resource get resource;
+  dynamic get resource;
   @override
   BundleEntrySearch get search;
   @override

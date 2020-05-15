@@ -1420,6 +1420,1270 @@ abstract class _DiagnosticReportImage implements DiagnosticReportImage {
   _$DiagnosticReportImageCopyWith<_DiagnosticReportImage> get copyWith;
 }
 
+DiagnosticOrder _$DiagnosticOrderFromJson(Map<String, dynamic> json) {
+  return _DiagnosticOrder.fromJson(json);
+}
+
+class _$DiagnosticOrderTearOff {
+  const _$DiagnosticOrderTearOff();
+
+  _DiagnosticOrder call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      Reference subject,
+      Reference orderer,
+      List<Identifier> identifier,
+      Reference encounter,
+      List<CodeableConcept> reason,
+      List<Reference> supportingInformation,
+      Reference specimen,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
+          DiagnosticOrderPriority priority,
+      List<DiagnosticOrderEvent> event,
+      List<DiagnosticOrderItem> item,
+      Annotation note}) {
+    return _DiagnosticOrder(
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      fhirExtension: fhirExtension,
+      subject: subject,
+      orderer: orderer,
+      identifier: identifier,
+      encounter: encounter,
+      reason: reason,
+      supportingInformation: supportingInformation,
+      specimen: specimen,
+      status: status,
+      priority: priority,
+      event: event,
+      item: item,
+      note: note,
+    );
+  }
+}
+
+// ignore: unused_element
+const $DiagnosticOrder = _$DiagnosticOrderTearOff();
+
+mixin _$DiagnosticOrder {
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<dynamic> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
+  Reference get subject;
+  Reference get orderer;
+  List<Identifier> get identifier;
+  Reference get encounter;
+  List<CodeableConcept> get reason;
+  List<Reference> get supportingInformation;
+  Reference get specimen;
+  @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+  DiagnosticOrderStatus get status;
+  @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
+  DiagnosticOrderPriority get priority;
+  List<DiagnosticOrderEvent> get event;
+  List<DiagnosticOrderItem> get item;
+  Annotation get note;
+
+  Map<String, dynamic> toJson();
+  $DiagnosticOrderCopyWith<DiagnosticOrder> get copyWith;
+}
+
+abstract class $DiagnosticOrderCopyWith<$Res> {
+  factory $DiagnosticOrderCopyWith(
+          DiagnosticOrder value, $Res Function(DiagnosticOrder) then) =
+      _$DiagnosticOrderCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      Reference subject,
+      Reference orderer,
+      List<Identifier> identifier,
+      Reference encounter,
+      List<CodeableConcept> reason,
+      List<Reference> supportingInformation,
+      Reference specimen,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
+          DiagnosticOrderPriority priority,
+      List<DiagnosticOrderEvent> event,
+      List<DiagnosticOrderItem> item,
+      Annotation note});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $ReferenceCopyWith<$Res> get subject;
+  $ReferenceCopyWith<$Res> get orderer;
+  $ReferenceCopyWith<$Res> get encounter;
+  $ReferenceCopyWith<$Res> get specimen;
+  $AnnotationCopyWith<$Res> get note;
+}
+
+class _$DiagnosticOrderCopyWithImpl<$Res>
+    implements $DiagnosticOrderCopyWith<$Res> {
+  _$DiagnosticOrderCopyWithImpl(this._value, this._then);
+
+  final DiagnosticOrder _value;
+  // ignore: unused_field
+  final $Res Function(DiagnosticOrder) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object fhirExtension = freezed,
+    Object subject = freezed,
+    Object orderer = freezed,
+    Object identifier = freezed,
+    Object encounter = freezed,
+    Object reason = freezed,
+    Object supportingInformation = freezed,
+    Object specimen = freezed,
+    Object status = freezed,
+    Object priority = freezed,
+    Object event = freezed,
+    Object item = freezed,
+    Object note = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<dynamic>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
+      subject: subject == freezed ? _value.subject : subject as Reference,
+      orderer: orderer == freezed ? _value.orderer : orderer as Reference,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
+      encounter:
+          encounter == freezed ? _value.encounter : encounter as Reference,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>,
+      supportingInformation: supportingInformation == freezed
+          ? _value.supportingInformation
+          : supportingInformation as List<Reference>,
+      specimen: specimen == freezed ? _value.specimen : specimen as Reference,
+      status:
+          status == freezed ? _value.status : status as DiagnosticOrderStatus,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as DiagnosticOrderPriority,
+      event:
+          event == freezed ? _value.event : event as List<DiagnosticOrderEvent>,
+      item: item == freezed ? _value.item : item as List<DiagnosticOrderItem>,
+      note: note == freezed ? _value.note : note as Annotation,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get orderer {
+    if (_value.orderer == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.orderer, (value) {
+      return _then(_value.copyWith(orderer: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get encounter {
+    if (_value.encounter == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.encounter, (value) {
+      return _then(_value.copyWith(encounter: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get specimen {
+    if (_value.specimen == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.specimen, (value) {
+      return _then(_value.copyWith(specimen: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get note {
+    if (_value.note == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.note, (value) {
+      return _then(_value.copyWith(note: value));
+    });
+  }
+}
+
+abstract class _$DiagnosticOrderCopyWith<$Res>
+    implements $DiagnosticOrderCopyWith<$Res> {
+  factory _$DiagnosticOrderCopyWith(
+          _DiagnosticOrder value, $Res Function(_DiagnosticOrder) then) =
+      __$DiagnosticOrderCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      Reference subject,
+      Reference orderer,
+      List<Identifier> identifier,
+      Reference encounter,
+      List<CodeableConcept> reason,
+      List<Reference> supportingInformation,
+      Reference specimen,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
+          DiagnosticOrderPriority priority,
+      List<DiagnosticOrderEvent> event,
+      List<DiagnosticOrderItem> item,
+      Annotation note});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $ReferenceCopyWith<$Res> get subject;
+  @override
+  $ReferenceCopyWith<$Res> get orderer;
+  @override
+  $ReferenceCopyWith<$Res> get encounter;
+  @override
+  $ReferenceCopyWith<$Res> get specimen;
+  @override
+  $AnnotationCopyWith<$Res> get note;
+}
+
+class __$DiagnosticOrderCopyWithImpl<$Res>
+    extends _$DiagnosticOrderCopyWithImpl<$Res>
+    implements _$DiagnosticOrderCopyWith<$Res> {
+  __$DiagnosticOrderCopyWithImpl(
+      _DiagnosticOrder _value, $Res Function(_DiagnosticOrder) _then)
+      : super(_value, (v) => _then(v as _DiagnosticOrder));
+
+  @override
+  _DiagnosticOrder get _value => super._value as _DiagnosticOrder;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object fhirExtension = freezed,
+    Object subject = freezed,
+    Object orderer = freezed,
+    Object identifier = freezed,
+    Object encounter = freezed,
+    Object reason = freezed,
+    Object supportingInformation = freezed,
+    Object specimen = freezed,
+    Object status = freezed,
+    Object priority = freezed,
+    Object event = freezed,
+    Object item = freezed,
+    Object note = freezed,
+  }) {
+    return _then(_DiagnosticOrder(
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<dynamic>,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
+      subject: subject == freezed ? _value.subject : subject as Reference,
+      orderer: orderer == freezed ? _value.orderer : orderer as Reference,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
+      encounter:
+          encounter == freezed ? _value.encounter : encounter as Reference,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>,
+      supportingInformation: supportingInformation == freezed
+          ? _value.supportingInformation
+          : supportingInformation as List<Reference>,
+      specimen: specimen == freezed ? _value.specimen : specimen as Reference,
+      status:
+          status == freezed ? _value.status : status as DiagnosticOrderStatus,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as DiagnosticOrderPriority,
+      event:
+          event == freezed ? _value.event : event as List<DiagnosticOrderEvent>,
+      item: item == freezed ? _value.item : item as List<DiagnosticOrderItem>,
+      note: note == freezed ? _value.note : note as Annotation,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_DiagnosticOrder implements _DiagnosticOrder {
+  _$_DiagnosticOrder(
+      {this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.subject,
+      this.orderer,
+      this.identifier,
+      this.encounter,
+      this.reason,
+      this.supportingInformation,
+      this.specimen,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown) this.status,
+      @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown) this.priority,
+      this.event,
+      this.item,
+      this.note});
+
+  factory _$_DiagnosticOrder.fromJson(Map<String, dynamic> json) =>
+      _$_$_DiagnosticOrderFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<dynamic> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
+  @override
+  final Reference subject;
+  @override
+  final Reference orderer;
+  @override
+  final List<Identifier> identifier;
+  @override
+  final Reference encounter;
+  @override
+  final List<CodeableConcept> reason;
+  @override
+  final List<Reference> supportingInformation;
+  @override
+  final Reference specimen;
+  @override
+  @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+  final DiagnosticOrderStatus status;
+  @override
+  @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
+  final DiagnosticOrderPriority priority;
+  @override
+  final List<DiagnosticOrderEvent> event;
+  @override
+  final List<DiagnosticOrderItem> item;
+  @override
+  final Annotation note;
+
+  @override
+  String toString() {
+    return 'DiagnosticOrder(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, subject: $subject, orderer: $orderer, identifier: $identifier, encounter: $encounter, reason: $reason, supportingInformation: $supportingInformation, specimen: $specimen, status: $status, priority: $priority, event: $event, item: $item, note: $note)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _DiagnosticOrder &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.fhirExtension, fhirExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirExtension, fhirExtension)) &&
+            (identical(other.subject, subject) ||
+                const DeepCollectionEquality()
+                    .equals(other.subject, subject)) &&
+            (identical(other.orderer, orderer) ||
+                const DeepCollectionEquality()
+                    .equals(other.orderer, orderer)) &&
+            (identical(other.identifier, identifier) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifier, identifier)) &&
+            (identical(other.encounter, encounter) ||
+                const DeepCollectionEquality()
+                    .equals(other.encounter, encounter)) &&
+            (identical(other.reason, reason) ||
+                const DeepCollectionEquality().equals(other.reason, reason)) &&
+            (identical(other.supportingInformation, supportingInformation) ||
+                const DeepCollectionEquality().equals(
+                    other.supportingInformation, supportingInformation)) &&
+            (identical(other.specimen, specimen) ||
+                const DeepCollectionEquality()
+                    .equals(other.specimen, specimen)) &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.priority, priority) ||
+                const DeepCollectionEquality()
+                    .equals(other.priority, priority)) &&
+            (identical(other.event, event) ||
+                const DeepCollectionEquality().equals(other.event, event)) &&
+            (identical(other.item, item) ||
+                const DeepCollectionEquality().equals(other.item, item)) &&
+            (identical(other.note, note) ||
+                const DeepCollectionEquality().equals(other.note, note)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
+      const DeepCollectionEquality().hash(subject) ^
+      const DeepCollectionEquality().hash(orderer) ^
+      const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(reason) ^
+      const DeepCollectionEquality().hash(supportingInformation) ^
+      const DeepCollectionEquality().hash(specimen) ^
+      const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(priority) ^
+      const DeepCollectionEquality().hash(event) ^
+      const DeepCollectionEquality().hash(item) ^
+      const DeepCollectionEquality().hash(note);
+
+  @override
+  _$DiagnosticOrderCopyWith<_DiagnosticOrder> get copyWith =>
+      __$DiagnosticOrderCopyWithImpl<_DiagnosticOrder>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_DiagnosticOrderToJson(this);
+  }
+}
+
+abstract class _DiagnosticOrder implements DiagnosticOrder {
+  factory _DiagnosticOrder(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      Reference subject,
+      Reference orderer,
+      List<Identifier> identifier,
+      Reference encounter,
+      List<CodeableConcept> reason,
+      List<Reference> supportingInformation,
+      Reference specimen,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
+          DiagnosticOrderPriority priority,
+      List<DiagnosticOrderEvent> event,
+      List<DiagnosticOrderItem> item,
+      Annotation note}) = _$_DiagnosticOrder;
+
+  factory _DiagnosticOrder.fromJson(Map<String, dynamic> json) =
+      _$_DiagnosticOrder.fromJson;
+
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<dynamic> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
+  @override
+  Reference get subject;
+  @override
+  Reference get orderer;
+  @override
+  List<Identifier> get identifier;
+  @override
+  Reference get encounter;
+  @override
+  List<CodeableConcept> get reason;
+  @override
+  List<Reference> get supportingInformation;
+  @override
+  Reference get specimen;
+  @override
+  @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+  DiagnosticOrderStatus get status;
+  @override
+  @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
+  DiagnosticOrderPriority get priority;
+  @override
+  List<DiagnosticOrderEvent> get event;
+  @override
+  List<DiagnosticOrderItem> get item;
+  @override
+  Annotation get note;
+  @override
+  _$DiagnosticOrderCopyWith<_DiagnosticOrder> get copyWith;
+}
+
+DiagnosticOrderEvent _$DiagnosticOrderEventFromJson(Map<String, dynamic> json) {
+  return _DiagnosticOrderEvent.fromJson(json);
+}
+
+class _$DiagnosticOrderEventTearOff {
+  const _$DiagnosticOrderEventTearOff();
+
+  _DiagnosticOrderEvent call(
+      {Id id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      FhirExtension modifierExtension,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      CodeableConcept description,
+      FhirDateTime dateTime,
+      Reference actor}) {
+    return _DiagnosticOrderEvent(
+      id: id,
+      fhirExtension: fhirExtension,
+      modifierExtension: modifierExtension,
+      status: status,
+      description: description,
+      dateTime: dateTime,
+      actor: actor,
+    );
+  }
+}
+
+// ignore: unused_element
+const $DiagnosticOrderEvent = _$DiagnosticOrderEventTearOff();
+
+mixin _$DiagnosticOrderEvent {
+  Id get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
+  FhirExtension get modifierExtension;
+  @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+  DiagnosticOrderStatus get status;
+  CodeableConcept get description;
+  FhirDateTime get dateTime;
+  Reference get actor;
+
+  Map<String, dynamic> toJson();
+  $DiagnosticOrderEventCopyWith<DiagnosticOrderEvent> get copyWith;
+}
+
+abstract class $DiagnosticOrderEventCopyWith<$Res> {
+  factory $DiagnosticOrderEventCopyWith(DiagnosticOrderEvent value,
+          $Res Function(DiagnosticOrderEvent) then) =
+      _$DiagnosticOrderEventCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      FhirExtension modifierExtension,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      CodeableConcept description,
+      FhirDateTime dateTime,
+      Reference actor});
+
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get description;
+  $ReferenceCopyWith<$Res> get actor;
+}
+
+class _$DiagnosticOrderEventCopyWithImpl<$Res>
+    implements $DiagnosticOrderEventCopyWith<$Res> {
+  _$DiagnosticOrderEventCopyWithImpl(this._value, this._then);
+
+  final DiagnosticOrderEvent _value;
+  // ignore: unused_field
+  final $Res Function(DiagnosticOrderEvent) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object fhirExtension = freezed,
+    Object modifierExtension = freezed,
+    Object status = freezed,
+    Object description = freezed,
+    Object dateTime = freezed,
+    Object actor = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      status:
+          status == freezed ? _value.status : status as DiagnosticOrderStatus,
+      description: description == freezed
+          ? _value.description
+          : description as CodeableConcept,
+      dateTime:
+          dateTime == freezed ? _value.dateTime : dateTime as FhirDateTime,
+      actor: actor == freezed ? _value.actor : actor as Reference,
+    ));
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get description {
+    if (_value.description == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.description, (value) {
+      return _then(_value.copyWith(description: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get actor {
+    if (_value.actor == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+      return _then(_value.copyWith(actor: value));
+    });
+  }
+}
+
+abstract class _$DiagnosticOrderEventCopyWith<$Res>
+    implements $DiagnosticOrderEventCopyWith<$Res> {
+  factory _$DiagnosticOrderEventCopyWith(_DiagnosticOrderEvent value,
+          $Res Function(_DiagnosticOrderEvent) then) =
+      __$DiagnosticOrderEventCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      FhirExtension modifierExtension,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      CodeableConcept description,
+      FhirDateTime dateTime,
+      Reference actor});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get description;
+  @override
+  $ReferenceCopyWith<$Res> get actor;
+}
+
+class __$DiagnosticOrderEventCopyWithImpl<$Res>
+    extends _$DiagnosticOrderEventCopyWithImpl<$Res>
+    implements _$DiagnosticOrderEventCopyWith<$Res> {
+  __$DiagnosticOrderEventCopyWithImpl(
+      _DiagnosticOrderEvent _value, $Res Function(_DiagnosticOrderEvent) _then)
+      : super(_value, (v) => _then(v as _DiagnosticOrderEvent));
+
+  @override
+  _DiagnosticOrderEvent get _value => super._value as _DiagnosticOrderEvent;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object fhirExtension = freezed,
+    Object modifierExtension = freezed,
+    Object status = freezed,
+    Object description = freezed,
+    Object dateTime = freezed,
+    Object actor = freezed,
+  }) {
+    return _then(_DiagnosticOrderEvent(
+      id: id == freezed ? _value.id : id as Id,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      status:
+          status == freezed ? _value.status : status as DiagnosticOrderStatus,
+      description: description == freezed
+          ? _value.description
+          : description as CodeableConcept,
+      dateTime:
+          dateTime == freezed ? _value.dateTime : dateTime as FhirDateTime,
+      actor: actor == freezed ? _value.actor : actor as Reference,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_DiagnosticOrderEvent implements _DiagnosticOrderEvent {
+  _$_DiagnosticOrderEvent(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.modifierExtension,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown) this.status,
+      this.description,
+      this.dateTime,
+      this.actor});
+
+  factory _$_DiagnosticOrderEvent.fromJson(Map<String, dynamic> json) =>
+      _$_$_DiagnosticOrderEventFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
+  @override
+  final FhirExtension modifierExtension;
+  @override
+  @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+  final DiagnosticOrderStatus status;
+  @override
+  final CodeableConcept description;
+  @override
+  final FhirDateTime dateTime;
+  @override
+  final Reference actor;
+
+  @override
+  String toString() {
+    return 'DiagnosticOrderEvent(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, status: $status, description: $description, dateTime: $dateTime, actor: $actor)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _DiagnosticOrderEvent &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.fhirExtension, fhirExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirExtension, fhirExtension)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.description, description) ||
+                const DeepCollectionEquality()
+                    .equals(other.description, description)) &&
+            (identical(other.dateTime, dateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateTime, dateTime)) &&
+            (identical(other.actor, actor) ||
+                const DeepCollectionEquality().equals(other.actor, actor)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(dateTime) ^
+      const DeepCollectionEquality().hash(actor);
+
+  @override
+  _$DiagnosticOrderEventCopyWith<_DiagnosticOrderEvent> get copyWith =>
+      __$DiagnosticOrderEventCopyWithImpl<_DiagnosticOrderEvent>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_DiagnosticOrderEventToJson(this);
+  }
+}
+
+abstract class _DiagnosticOrderEvent implements DiagnosticOrderEvent {
+  factory _DiagnosticOrderEvent(
+      {Id id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      FhirExtension modifierExtension,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      CodeableConcept description,
+      FhirDateTime dateTime,
+      Reference actor}) = _$_DiagnosticOrderEvent;
+
+  factory _DiagnosticOrderEvent.fromJson(Map<String, dynamic> json) =
+      _$_DiagnosticOrderEvent.fromJson;
+
+  @override
+  Id get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
+  @override
+  FhirExtension get modifierExtension;
+  @override
+  @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+  DiagnosticOrderStatus get status;
+  @override
+  CodeableConcept get description;
+  @override
+  FhirDateTime get dateTime;
+  @override
+  Reference get actor;
+  @override
+  _$DiagnosticOrderEventCopyWith<_DiagnosticOrderEvent> get copyWith;
+}
+
+DiagnosticOrderItem _$DiagnosticOrderItemFromJson(Map<String, dynamic> json) {
+  return _DiagnosticOrderItem.fromJson(json);
+}
+
+class _$DiagnosticOrderItemTearOff {
+  const _$DiagnosticOrderItemTearOff();
+
+  _DiagnosticOrderItem call(
+      {Id id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      FhirExtension modifierExtension,
+      CodeableConcept code,
+      List<Reference> specimen,
+      CodeableConcept bodySite,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      List<DiagnosticOrderEvent> event}) {
+    return _DiagnosticOrderItem(
+      id: id,
+      fhirExtension: fhirExtension,
+      modifierExtension: modifierExtension,
+      code: code,
+      specimen: specimen,
+      bodySite: bodySite,
+      status: status,
+      event: event,
+    );
+  }
+}
+
+// ignore: unused_element
+const $DiagnosticOrderItem = _$DiagnosticOrderItemTearOff();
+
+mixin _$DiagnosticOrderItem {
+  Id get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
+  FhirExtension get modifierExtension;
+  CodeableConcept get code;
+  List<Reference> get specimen;
+  CodeableConcept get bodySite;
+  @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+  DiagnosticOrderStatus get status;
+  List<DiagnosticOrderEvent> get event;
+
+  Map<String, dynamic> toJson();
+  $DiagnosticOrderItemCopyWith<DiagnosticOrderItem> get copyWith;
+}
+
+abstract class $DiagnosticOrderItemCopyWith<$Res> {
+  factory $DiagnosticOrderItemCopyWith(
+          DiagnosticOrderItem value, $Res Function(DiagnosticOrderItem) then) =
+      _$DiagnosticOrderItemCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      FhirExtension modifierExtension,
+      CodeableConcept code,
+      List<Reference> specimen,
+      CodeableConcept bodySite,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      List<DiagnosticOrderEvent> event});
+
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res> get bodySite;
+}
+
+class _$DiagnosticOrderItemCopyWithImpl<$Res>
+    implements $DiagnosticOrderItemCopyWith<$Res> {
+  _$DiagnosticOrderItemCopyWithImpl(this._value, this._then);
+
+  final DiagnosticOrderItem _value;
+  // ignore: unused_field
+  final $Res Function(DiagnosticOrderItem) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object fhirExtension = freezed,
+    Object modifierExtension = freezed,
+    Object code = freezed,
+    Object specimen = freezed,
+    Object bodySite = freezed,
+    Object status = freezed,
+    Object event = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      specimen:
+          specimen == freezed ? _value.specimen : specimen as List<Reference>,
+      bodySite:
+          bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept,
+      status:
+          status == freezed ? _value.status : status as DiagnosticOrderStatus,
+      event:
+          event == freezed ? _value.event : event as List<DiagnosticOrderEvent>,
+    ));
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySite {
+    if (_value.bodySite == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.bodySite, (value) {
+      return _then(_value.copyWith(bodySite: value));
+    });
+  }
+}
+
+abstract class _$DiagnosticOrderItemCopyWith<$Res>
+    implements $DiagnosticOrderItemCopyWith<$Res> {
+  factory _$DiagnosticOrderItemCopyWith(_DiagnosticOrderItem value,
+          $Res Function(_DiagnosticOrderItem) then) =
+      __$DiagnosticOrderItemCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      FhirExtension modifierExtension,
+      CodeableConcept code,
+      List<Reference> specimen,
+      CodeableConcept bodySite,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      List<DiagnosticOrderEvent> event});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySite;
+}
+
+class __$DiagnosticOrderItemCopyWithImpl<$Res>
+    extends _$DiagnosticOrderItemCopyWithImpl<$Res>
+    implements _$DiagnosticOrderItemCopyWith<$Res> {
+  __$DiagnosticOrderItemCopyWithImpl(
+      _DiagnosticOrderItem _value, $Res Function(_DiagnosticOrderItem) _then)
+      : super(_value, (v) => _then(v as _DiagnosticOrderItem));
+
+  @override
+  _DiagnosticOrderItem get _value => super._value as _DiagnosticOrderItem;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object fhirExtension = freezed,
+    Object modifierExtension = freezed,
+    Object code = freezed,
+    Object specimen = freezed,
+    Object bodySite = freezed,
+    Object status = freezed,
+    Object event = freezed,
+  }) {
+    return _then(_DiagnosticOrderItem(
+      id: id == freezed ? _value.id : id as Id,
+      fhirExtension: fhirExtension == freezed
+          ? _value.fhirExtension
+          : fhirExtension as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      specimen:
+          specimen == freezed ? _value.specimen : specimen as List<Reference>,
+      bodySite:
+          bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept,
+      status:
+          status == freezed ? _value.status : status as DiagnosticOrderStatus,
+      event:
+          event == freezed ? _value.event : event as List<DiagnosticOrderEvent>,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_DiagnosticOrderItem implements _DiagnosticOrderItem {
+  _$_DiagnosticOrderItem(
+      {this.id,
+      @JsonKey(name: 'extension') this.fhirExtension,
+      this.modifierExtension,
+      this.code,
+      this.specimen,
+      this.bodySite,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown) this.status,
+      this.event});
+
+  factory _$_DiagnosticOrderItem.fromJson(Map<String, dynamic> json) =>
+      _$_$_DiagnosticOrderItemFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> fhirExtension;
+  @override
+  final FhirExtension modifierExtension;
+  @override
+  final CodeableConcept code;
+  @override
+  final List<Reference> specimen;
+  @override
+  final CodeableConcept bodySite;
+  @override
+  @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+  final DiagnosticOrderStatus status;
+  @override
+  final List<DiagnosticOrderEvent> event;
+
+  @override
+  String toString() {
+    return 'DiagnosticOrderItem(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, specimen: $specimen, bodySite: $bodySite, status: $status, event: $event)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _DiagnosticOrderItem &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.fhirExtension, fhirExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirExtension, fhirExtension)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.specimen, specimen) ||
+                const DeepCollectionEquality()
+                    .equals(other.specimen, specimen)) &&
+            (identical(other.bodySite, bodySite) ||
+                const DeepCollectionEquality()
+                    .equals(other.bodySite, bodySite)) &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.event, event) ||
+                const DeepCollectionEquality().equals(other.event, event)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(fhirExtension) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(specimen) ^
+      const DeepCollectionEquality().hash(bodySite) ^
+      const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(event);
+
+  @override
+  _$DiagnosticOrderItemCopyWith<_DiagnosticOrderItem> get copyWith =>
+      __$DiagnosticOrderItemCopyWithImpl<_DiagnosticOrderItem>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_DiagnosticOrderItemToJson(this);
+  }
+}
+
+abstract class _DiagnosticOrderItem implements DiagnosticOrderItem {
+  factory _DiagnosticOrderItem(
+      {Id id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      FhirExtension modifierExtension,
+      CodeableConcept code,
+      List<Reference> specimen,
+      CodeableConcept bodySite,
+      @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+          DiagnosticOrderStatus status,
+      List<DiagnosticOrderEvent> event}) = _$_DiagnosticOrderItem;
+
+  factory _DiagnosticOrderItem.fromJson(Map<String, dynamic> json) =
+      _$_DiagnosticOrderItem.fromJson;
+
+  @override
+  Id get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get fhirExtension;
+  @override
+  FhirExtension get modifierExtension;
+  @override
+  CodeableConcept get code;
+  @override
+  List<Reference> get specimen;
+  @override
+  CodeableConcept get bodySite;
+  @override
+  @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+  DiagnosticOrderStatus get status;
+  @override
+  List<DiagnosticOrderEvent> get event;
+  @override
+  _$DiagnosticOrderItemCopyWith<_DiagnosticOrderItem> get copyWith;
+}
+
 ImagingObjectSelection _$ImagingObjectSelectionFromJson(
     Map<String, dynamic> json) {
   return _ImagingObjectSelection.fromJson(json);

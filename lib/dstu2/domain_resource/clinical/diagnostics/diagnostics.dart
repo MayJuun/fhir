@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../fhir_dstu2.dart';
+import 'diagnostics.enums.dart';
 
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
@@ -75,6 +76,71 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
 
   factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportImageFromJson(json);
+}
+
+@freezed
+abstract class DiagnosticOrder with _$DiagnosticOrder {
+  factory DiagnosticOrder({
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+    Reference subject,
+    Reference orderer,
+    List<Identifier> identifier,
+    Reference encounter,
+    List<CodeableConcept> reason,
+    List<Reference> supportingInformation,
+    Reference specimen,
+    @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+        DiagnosticOrderStatus status,
+    @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
+        DiagnosticOrderPriority priority,
+    List<DiagnosticOrderEvent> event,
+    List<DiagnosticOrderItem> item,
+    Annotation note,
+  }) = _DiagnosticOrder;
+
+  factory DiagnosticOrder.fromJson(Map<String, dynamic> json) =>
+      _$DiagnosticOrderFromJson(json);
+}
+
+@freezed
+abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
+  factory DiagnosticOrderEvent({
+    Id id,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+    FhirExtension modifierExtension,
+    @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+        DiagnosticOrderStatus status,
+    CodeableConcept description,
+    FhirDateTime dateTime,
+    Reference actor,
+  }) = _DiagnosticOrderEvent;
+
+  factory DiagnosticOrderEvent.fromJson(Map<String, dynamic> json) =>
+      _$DiagnosticOrderEventFromJson(json);
+}
+
+@freezed
+abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
+  factory DiagnosticOrderItem({
+    Id id,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+    FhirExtension modifierExtension,
+    CodeableConcept code,
+    List<Reference> specimen,
+    CodeableConcept bodySite,
+    @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
+        DiagnosticOrderStatus status,
+    List<DiagnosticOrderEvent> event,
+  }) = _DiagnosticOrderItem;
+
+  factory DiagnosticOrderItem.fromJson(Map<String, dynamic> json) =>
+      _$DiagnosticOrderItemFromJson(json);
 }
 
 @freezed

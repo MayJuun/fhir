@@ -226,9 +226,7 @@ _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
     fullUrl: json['fullUrl'] == null
         ? null
         : FhirUri.fromJson(json['fullUrl'] as String),
-    resource: json['resource'] == null
-        ? null
-        : Resource.fromJson(json['resource'] as Map<String, dynamic>),
+    resource: json['resource'],
     search: json['search'] == null
         ? null
         : BundleEntrySearch.fromJson(json['search'] as Map<String, dynamic>),
@@ -257,7 +255,7 @@ Map<String, dynamic> _$_$_BundleEntryToJson(_$_BundleEntry instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('fullUrl', instance.fullUrl?.toJson());
-  writeNotNull('resource', instance.resource?.toJson());
+  writeNotNull('resource', instance.resource);
   writeNotNull('search', instance.search?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('response', instance.response?.toJson());

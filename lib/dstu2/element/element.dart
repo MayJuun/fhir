@@ -7,19 +7,20 @@ part 'element.g.dart';
 
 @freezed
 abstract class Address with _$Address {
-  factory Address(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      Code use,
-      Code type,
-      String text,
-      List<String> line,
-      String city,
-      String district,
-      String state,
-      String postalCode,
-      String country,
-      Period period}) = _Address;
+  factory Address({
+    Id id,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+    Code use,
+    Code type,
+    String text,
+    List<String> line,
+    String city,
+    String district,
+    String state,
+    String postalCode,
+    String country,
+    Period period,
+  }) = _Address;
 
   factory Address.fromJson(Map<String, dynamic> json) =>
       _$AddressFromJson(json);

@@ -79,7 +79,7 @@ abstract class BundleEntry with _$BundleEntry {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri fullUrl,
-    Resource resource,
+    dynamic resource,
     BundleEntrySearch search,
     BundleEntryRequest request,
     BundleEntryResponse response,

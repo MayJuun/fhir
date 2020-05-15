@@ -32,7 +32,7 @@ part '$name.g.dart';\n\n@freezed""");
         //     element = element.replaceFirst(exp,
         //         '}) = ${element.substring(0, element.indexOf(' '))};\n\nfactory');
         //     element = element.replaceAll(
-        //         '@JsonSerializable(explicitToJson: true, includeIfNull: false)',
+        //         '',
         //         '');
         //     element = '@freezed\nabstract class '
         //             '${element.substring(0, element.indexOf(' '))} with '

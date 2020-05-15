@@ -265,6 +265,268 @@ Map<String, dynamic> _$_$_DiagnosticReportImageToJson(
   return val;
 }
 
+_$_DiagnosticOrder _$_$_DiagnosticOrderFromJson(Map<String, dynamic> json) {
+  return _$_DiagnosticOrder(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] as List,
+    fhirExtension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    subject: json['subject'] == null
+        ? null
+        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    orderer: json['orderer'] == null
+        ? null
+        : Reference.fromJson(json['orderer'] as Map<String, dynamic>),
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    encounter: json['encounter'] == null
+        ? null
+        : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+    reason: (json['reason'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    supportingInformation: (json['supportingInformation'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    specimen: json['specimen'] == null
+        ? null
+        : Reference.fromJson(json['specimen'] as Map<String, dynamic>),
+    status: _$enumDecodeNullable(_$DiagnosticOrderStatusEnumMap, json['status'],
+        unknownValue: DiagnosticOrderStatus.unknown),
+    priority: _$enumDecodeNullable(
+        _$DiagnosticOrderPriorityEnumMap, json['priority'],
+        unknownValue: DiagnosticOrderPriority.unknown),
+    event: (json['event'] as List)
+        ?.map((e) => e == null
+            ? null
+            : DiagnosticOrderEvent.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    item: (json['item'] as List)
+        ?.map((e) => e == null
+            ? null
+            : DiagnosticOrderItem.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    note: json['note'] == null
+        ? null
+        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$_$_DiagnosticOrderToJson(_$_DiagnosticOrder instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('orderer', instance.orderer?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('reason', instance.reason?.map((e) => e?.toJson())?.toList());
+  writeNotNull('supportingInformation',
+      instance.supportingInformation?.map((e) => e?.toJson())?.toList());
+  writeNotNull('specimen', instance.specimen?.toJson());
+  writeNotNull('status', _$DiagnosticOrderStatusEnumMap[instance.status]);
+  writeNotNull('priority', _$DiagnosticOrderPriorityEnumMap[instance.priority]);
+  writeNotNull('event', instance.event?.map((e) => e?.toJson())?.toList());
+  writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
+  writeNotNull('note', instance.note?.toJson());
+  return val;
+}
+
+T _$enumDecode<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError('A value must be provided. Supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+
+  final value = enumValues.entries
+      .singleWhere((e) => e.value == source, orElse: () => null)
+      ?.key;
+
+  if (value == null && unknownValue == null) {
+    throw ArgumentError('`$source` is not one of the supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+  return value ?? unknownValue;
+}
+
+T _$enumDecodeNullable<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$DiagnosticOrderStatusEnumMap = {
+  DiagnosticOrderStatus.proposed: 'proposed',
+  DiagnosticOrderStatus.draft: 'draft',
+  DiagnosticOrderStatus.planned: 'planned',
+  DiagnosticOrderStatus.requested: 'requested',
+  DiagnosticOrderStatus.received: 'received',
+  DiagnosticOrderStatus.accepted: 'accepted',
+  DiagnosticOrderStatus.in_progress: 'in-progress',
+  DiagnosticOrderStatus.review: 'review',
+  DiagnosticOrderStatus.completed: 'completed',
+  DiagnosticOrderStatus.cancelled: 'cancelled',
+  DiagnosticOrderStatus.suspended: 'suspended',
+  DiagnosticOrderStatus.rejected: 'rejected',
+  DiagnosticOrderStatus.failed: 'failed',
+  DiagnosticOrderStatus.unknown: 'unknown',
+};
+
+const _$DiagnosticOrderPriorityEnumMap = {
+  DiagnosticOrderPriority.priority: 'routine',
+  DiagnosticOrderPriority.urgent: 'urgent',
+  DiagnosticOrderPriority.stat: 'stat',
+  DiagnosticOrderPriority.asap: 'asap',
+  DiagnosticOrderPriority.unknown: 'unknown',
+};
+
+_$_DiagnosticOrderEvent _$_$_DiagnosticOrderEventFromJson(
+    Map<String, dynamic> json) {
+  return _$_DiagnosticOrderEvent(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    fhirExtension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    status: _$enumDecodeNullable(_$DiagnosticOrderStatusEnumMap, json['status'],
+        unknownValue: DiagnosticOrderStatus.unknown),
+    description: json['description'] == null
+        ? null
+        : CodeableConcept.fromJson(json['description'] as Map<String, dynamic>),
+    dateTime: json['dateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['dateTime'] as String),
+    actor: json['actor'] == null
+        ? null
+        : Reference.fromJson(json['actor'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$_$_DiagnosticOrderEventToJson(
+    _$_DiagnosticOrderEvent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('status', _$DiagnosticOrderStatusEnumMap[instance.status]);
+  writeNotNull('description', instance.description?.toJson());
+  writeNotNull('dateTime', instance.dateTime?.toJson());
+  writeNotNull('actor', instance.actor?.toJson());
+  return val;
+}
+
+_$_DiagnosticOrderItem _$_$_DiagnosticOrderItemFromJson(
+    Map<String, dynamic> json) {
+  return _$_DiagnosticOrderItem(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    fhirExtension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    code: json['code'] == null
+        ? null
+        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    specimen: (json['specimen'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    bodySite: json['bodySite'] == null
+        ? null
+        : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
+    status: _$enumDecodeNullable(_$DiagnosticOrderStatusEnumMap, json['status'],
+        unknownValue: DiagnosticOrderStatus.unknown),
+    event: (json['event'] as List)
+        ?.map((e) => e == null
+            ? null
+            : DiagnosticOrderEvent.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$_$_DiagnosticOrderItemToJson(
+    _$_DiagnosticOrderItem instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull(
+      'specimen', instance.specimen?.map((e) => e?.toJson())?.toList());
+  writeNotNull('bodySite', instance.bodySite?.toJson());
+  writeNotNull('status', _$DiagnosticOrderStatusEnumMap[instance.status]);
+  writeNotNull('event', instance.event?.map((e) => e?.toJson())?.toList());
+  return val;
+}
+
 _$_ImagingObjectSelection _$_$_ImagingObjectSelectionFromJson(
     Map<String, dynamic> json) {
   return _$_ImagingObjectSelection(
