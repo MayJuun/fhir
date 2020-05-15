@@ -1,6 +1,6 @@
 @freezed
 abstract class BodySite with _$BodySite
-factory BodySite {
+factory BodySite ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -25,7 +25,7 @@ factory BodySite.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DiagnosticReport with _$DiagnosticReport
-factory DiagnosticReport {
+factory DiagnosticReport ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -62,7 +62,7 @@ factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DiagnosticReportImage with _$DiagnosticReportImage
-factory DiagnosticReportImage {
+factory DiagnosticReportImage ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -78,7 +78,7 @@ factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImagingObjectSelection with _$ImagingObjectSelection
-factory ImagingObjectSelection {
+factory ImagingObjectSelection ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -105,7 +105,7 @@ factory ImagingObjectSelection.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy
-factory ImagingObjectSelectionStudy {
+factory ImagingObjectSelectionStudy ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -115,7 +115,7 @@ factory ImagingObjectSelectionStudy {
   List<ImagingObjectSelectionStudySeries> series;
 
   ImagingObjectSelectionStudy(
-      {this.id,
+      ({this.id,
       this.extension,
       this.modifierExtension,
       this.uid,
@@ -131,7 +131,7 @@ factory ImagingObjectSelectionStudy {
 
 @freezed
 abstract class ImagingObjectSelectionStudySeries with _$ImagingObjectSelectionStudySeries
-factory ImagingObjectSelectionStudySeries {
+factory ImagingObjectSelectionStudySeries ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -151,7 +151,7 @@ factory ImagingObjectSelectionStudySeries.fromJson(
 
 @freezed
 abstract class ImagingObjectSelectionStudySeriesInstance with _$ImagingObjectSelectionStudySeriesInstance
-factory ImagingObjectSelectionStudySeriesInstance {
+factory ImagingObjectSelectionStudySeriesInstance ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -172,7 +172,7 @@ factory ImagingObjectSelectionStudySeriesInstance.fromJson(
 
 @freezed
 abstract class ImagingObjectSelectionStudySeriesInstanceFrames with _$ImagingObjectSelectionStudySeriesInstanceFrames
-factory ImagingObjectSelectionStudySeriesInstanceFrames {
+factory ImagingObjectSelectionStudySeriesInstanceFrames ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -190,7 +190,7 @@ factory ImagingObjectSelectionStudySeriesInstanceFrames.fromJson(
 
 @freezed
 abstract class ImagingStudy with _$ImagingStudy
-factory ImagingStudy {
+factory ImagingStudy ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -226,7 +226,7 @@ factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImagingStudySeries with _$ImagingStudySeries
-factory ImagingStudySeries {
+factory ImagingStudySeries ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -252,7 +252,7 @@ factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance
-factory ImagingStudySeriesInstance {
+factory ImagingStudySeriesInstance ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -272,7 +272,7 @@ factory ImagingStudySeriesInstance.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Observation with _$Observation
-factory Observation {
+factory Observation ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -312,7 +312,7 @@ factory Observation.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ObservationReferenceRange with _$ObservationReferenceRange
-factory ObservationReferenceRange {
+factory ObservationReferenceRange ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -332,7 +332,7 @@ factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ObservationRelated with _$ObservationRelated
-factory ObservationRelated {
+factory ObservationRelated ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -349,7 +349,7 @@ factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ObservationComponent with _$ObservationComponent
-factory ObservationComponent {
+factory ObservationComponent ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -366,7 +366,7 @@ factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Specimen with _$Specimen
-factory Specimen {
+factory Specimen ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -396,7 +396,7 @@ factory Specimen.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class SpecimenCollection with _$SpecimenCollection
-factory SpecimenCollection {
+factory SpecimenCollection ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -417,7 +417,7 @@ factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class SpecimenTreatment with _$SpecimenTreatment
-factory SpecimenTreatment {
+factory SpecimenTreatment ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -435,7 +435,7 @@ factory SpecimenTreatment.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class SpecimenContainer with _$SpecimenContainer
-factory SpecimenContainer {
+factory SpecimenContainer ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

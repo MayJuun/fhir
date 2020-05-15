@@ -9,7 +9,7 @@ void main() async {
     (FileSystemEntity entity) async {
       if (entity.path.toString().contains('.dart')) {
         var text = await File(entity.path.toString()).readAsString();
-        text.replaceAll('\s{', ' ({');
+        text = text.replaceAll(' \{', ' ({');
         // var pieces = text.split('class ');
         // var fileText = '';
         // pieces.forEach((element) {

@@ -1,6 +1,6 @@
 @freezed
 abstract class Account with _$Account
-factory Account {
+factory Account ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -30,7 +30,7 @@ factory Account.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ExplanationOfBenefit with _$ExplanationOfBenefit
-factory ExplanationOfBenefit {
+factory ExplanationOfBenefit ({
   Id id;
   Meta meta;
   FhirUri implicitRules;

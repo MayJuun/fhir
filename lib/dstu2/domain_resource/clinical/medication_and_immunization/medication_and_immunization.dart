@@ -1,6 +1,6 @@
 @freezed
 abstract class Immunization with _$Immunization
-factory Immunization {
+factory Immunization ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -41,7 +41,7 @@ factory Immunization.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImmunizationExplanation with _$ImmunizationExplanation
-factory ImmunizationExplanation {
+factory ImmunizationExplanation ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -58,7 +58,7 @@ factory ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImmunizationReaction with _$ImmunizationReaction
-factory ImmunizationReaction {
+factory ImmunizationReaction ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -76,7 +76,7 @@ factory ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol
-factory ImmunizationVaccinationProtocol {
+factory ImmunizationVaccinationProtocol ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -99,7 +99,7 @@ factory ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImmunizationRecommendation with _$ImmunizationRecommendation
-factory ImmunizationRecommendation {
+factory ImmunizationRecommendation ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -122,7 +122,7 @@ factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImmunizationRecommendationRecommendation with _$ImmunizationRecommendationRecommendation
-factory ImmunizationRecommendationRecommendation {
+factory ImmunizationRecommendationRecommendation ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -136,7 +136,7 @@ factory ImmunizationRecommendationRecommendation {
   List<Reference> supportingPatientInformation;
 
   ImmunizationRecommendationRecommendation(
-      {this.id,
+      ({this.id,
       this.extension,
       this.modifierExtension,
       this.date,
@@ -158,7 +158,7 @@ factory ImmunizationRecommendationRecommendation {
 
 @freezed
 abstract class ImmunizationRecommendationRecommendationDateCriterion with _$ImmunizationRecommendationRecommendationDateCriterion
-factory ImmunizationRecommendationRecommendationDateCriterion {
+factory ImmunizationRecommendationRecommendationDateCriterion ({
   Id id;
   List<Extension> extensio;
   List<Extension> modifier;
@@ -177,7 +177,7 @@ factory ImmunizationRecommendationRecommendationDateCriterion.fromJson(
 
 @freezed
 abstract class ImmunizationRecommendationRecommendationProtocol with _$ImmunizationRecommendationRecommendationProtocol
-factory ImmunizationRecommendationRecommendationProtocol {
+factory ImmunizationRecommendationRecommendationProtocol ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExten;
@@ -197,7 +197,7 @@ factory ImmunizationRecommendationRecommendationProtocol.fromJson(
 
 @freezed
 abstract class Medication with _$Medication
-factory Medication {
+factory Medication ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -222,7 +222,7 @@ factory Medication.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationProduct with _$MedicationProduct
-factory MedicationProduct {
+factory MedicationProduct ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -231,7 +231,7 @@ factory MedicationProduct {
   List<MedicationProductBatch> batch;
 
   MedicationProduct(
-      {this.id,
+      ({this.id,
       this.extension,
       this.modifierExtension,
       this.form,
@@ -246,7 +246,7 @@ factory MedicationProduct {
 
 @freezed
 abstract class MedicationPackage with _$MedicationPackage
-factory MedicationPackage {
+factory MedicationPackage ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -263,7 +263,7 @@ factory MedicationPackage.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationProductIngredient with _$MedicationProductIngredient
-factory MedicationProductIngredient {
+factory MedicationProductIngredient ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -280,7 +280,7 @@ factory MedicationProductIngredient.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationProductBatch with _$MedicationProductBatch
-factory MedicationProductBatch {
+factory MedicationProductBatch ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -297,7 +297,7 @@ factory MedicationProductBatch.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationPackageContent with _$MedicationPackageContent
-factory MedicationPackageContent {
+factory MedicationPackageContent ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -313,7 +313,7 @@ factory MedicationPackageContent.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationAdministration with _$MedicationAdministration
-factory MedicationAdministration {
+factory MedicationAdministration ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -347,7 +347,7 @@ factory MedicationAdministration.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationAdministrationDosage with _$MedicationAdministrationDosage
-factory MedicationAdministrationDosage {
+factory MedicationAdministrationDosage ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -367,7 +367,7 @@ factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationDispense with _$MedicationDispense
-factory MedicationDispense {
+factory MedicationDispense ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -403,7 +403,7 @@ factory MedicationDispense.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationDispenseDosageInstruction with _$MedicationDispenseDosageInstruction
-factory MedicationDispenseDosageInstruction {
+factory MedicationDispenseDosageInstruction ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -430,7 +430,7 @@ factory MedicationDispenseDosageInstruction.fromJson(
 
 @freezed
 abstract class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution
-factory MedicationDispenseSubstitution {
+factory MedicationDispenseSubstitution ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -447,7 +447,7 @@ factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationOrder with _$MedicationOrder
-factory MedicationOrder {
+factory MedicationOrder ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -482,7 +482,7 @@ factory MedicationOrder.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationOrderDosageInstruction with _$MedicationOrderDosageInstruction
-factory MedicationOrderDosageInstruction {
+factory MedicationOrderDosageInstruction ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -509,7 +509,7 @@ factory MedicationOrderDosageInstruction.fromJson(
 
 @freezed
 abstract class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest
-factory MedicationOrderDispenseRequest {
+factory MedicationOrderDispenseRequest ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -529,7 +529,7 @@ factory MedicationOrderDispenseRequest.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationOrderSubstitution with _$MedicationOrderSubstitution
-factory MedicationOrderSubstitution {
+factory MedicationOrderSubstitution ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -545,7 +545,7 @@ factory MedicationOrderSubstitution.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationStatement with _$MedicationStatement
-factory MedicationStatement {
+factory MedicationStatement ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -578,7 +578,7 @@ factory MedicationStatement.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class MedicationStatementDosage with _$MedicationStatementDosage
-factory MedicationStatementDosage {
+factory MedicationStatementDosage ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -593,7 +593,7 @@ factory MedicationStatementDosage {
   Ratio maxDosePerPeriod;
 
   MedicationStatementDosage(
-      {this.id,
+      ({this.id,
       this.extension,
       this.modifierExtension,
       this.text,

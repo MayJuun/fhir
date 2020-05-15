@@ -1,6 +1,6 @@
 @freezed
 abstract class Appointment with _$Appointment
-factory Appointment {
+factory Appointment ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -32,7 +32,7 @@ factory Appointment.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class AppointmentParticipant with _$AppointmentParticipant
-factory AppointmentParticipant {
+factory AppointmentParticipant ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -50,7 +50,7 @@ factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class AppointmentResponse with _$AppointmentResponse
-factory AppointmentResponse {
+factory AppointmentResponse ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -77,7 +77,7 @@ factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Schedule with _$Schedule
-factory Schedule {
+factory Schedule ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -101,7 +101,7 @@ factory Schedule.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Slot with _$Slot
-factory Slot {
+factory Slot ({
   Id id;
   Meta meta;
   FhirUri implicitRules;

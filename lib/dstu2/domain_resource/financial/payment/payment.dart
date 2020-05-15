@@ -1,6 +1,6 @@
 @freezed
 abstract class PaymentNotice with _$PaymentNotice
-factory PaymentNotice {
+factory PaymentNotice ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -29,7 +29,7 @@ factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class PaymentReconciliation with _$PaymentReconciliation
-factory PaymentReconciliation {
+factory PaymentReconciliation ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -64,7 +64,7 @@ factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail
-factory PaymentReconciliationDetail {
+factory PaymentReconciliationDetail ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -86,7 +86,7 @@ factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class PaymentReconciliationNote with _$PaymentReconciliationNote
-factory PaymentReconciliationNote {
+factory PaymentReconciliationNote ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

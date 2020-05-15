@@ -1,6 +1,6 @@
 @freezed
 abstract class Group with _$Group
-factory Group {
+factory Group ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -27,7 +27,7 @@ factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
 
 @freezed
 abstract class GroupCharacteristic with _$GroupCharacteristic
-factory GroupCharacteristic {
+factory GroupCharacteristic ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -46,7 +46,7 @@ factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class GroupMember with _$GroupMember
-factory GroupMember {
+factory GroupMember ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -63,7 +63,7 @@ factory GroupMember.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class HealthcareService with _$HealthcareService
-factory HealthcareService {
+factory HealthcareService ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -105,7 +105,7 @@ factory HealthcareService.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class HealthcareServiceServiceType with _$HealthcareServiceServiceType
-factory HealthcareServiceServiceType {
+factory HealthcareServiceServiceType ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -122,7 +122,7 @@ factory HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime
-factory HealthcareServiceAvailableTime {
+factory HealthcareServiceAvailableTime ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -141,7 +141,7 @@ factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable
-factory HealthcareServiceNotAvailable {
+factory HealthcareServiceNotAvailable ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -157,7 +157,7 @@ factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Organization with _$Organization
-factory Organization {
+factory Organization ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -185,7 +185,7 @@ factory Organization.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class OrganizationContact with _$OrganizationContact
-factory OrganizationContact {
+factory OrganizationContact ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

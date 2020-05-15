@@ -1,6 +1,6 @@
 @freezed
 abstract class ImplementationGuide with _$ImplementationGuide
-factory ImplementationGuide {
+factory ImplementationGuide ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -37,7 +37,7 @@ factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImplementationGuideContact with _$ImplementationGuideContact
-factory ImplementationGuideContact {
+factory ImplementationGuideContact ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -54,7 +54,7 @@ factory ImplementationGuideContact.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImplementationGuideDependency with _$ImplementationGuideDependency
-factory ImplementationGuideDependency {
+factory ImplementationGuideDependency ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -71,7 +71,7 @@ factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImplementationGuidePackage with _$ImplementationGuidePackage
-factory ImplementationGuidePackage {
+factory ImplementationGuidePackage ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -89,7 +89,7 @@ factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal
-factory ImplementationGuideGlobal {
+factory ImplementationGuideGlobal ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -106,7 +106,7 @@ factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImplementationGuidePage with _$ImplementationGuidePage
-factory ImplementationGuidePage {
+factory ImplementationGuidePage ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -127,7 +127,7 @@ factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ImplementationGuidePackageResource with _$ImplementationGuidePackageResource
-factory ImplementationGuidePackageResource {
+factory ImplementationGuidePackageResource ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -149,7 +149,7 @@ factory ImplementationGuidePackageResource.fromJson(
 
 @freezed
 abstract class TestScript with _$TestScript
-factory TestScript {
+factory TestScript ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -190,7 +190,7 @@ factory TestScript.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptContact with _$TestScriptContact
-factory TestScriptContact {
+factory TestScriptContact ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -207,7 +207,7 @@ factory TestScriptContact.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptMetadata with _$TestScriptMetadata
-factory TestScriptMetadata {
+factory TestScriptMetadata ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -224,7 +224,7 @@ factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptFixture with _$TestScriptFixture
-factory TestScriptFixture {
+factory TestScriptFixture ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -242,7 +242,7 @@ factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptVariable with _$TestScriptVariable
-factory TestScriptVariable {
+factory TestScriptVariable ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -261,7 +261,7 @@ factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptSetup with _$TestScriptSetup
-factory TestScriptSetup {
+factory TestScriptSetup ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -277,7 +277,7 @@ factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptTest with _$TestScriptTest
-factory TestScriptTest {
+factory TestScriptTest ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -295,7 +295,7 @@ factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptTeardown with _$TestScriptTeardown
-factory TestScriptTeardown {
+factory TestScriptTeardown ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -311,7 +311,7 @@ factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptMetadataLink with _$TestScriptMetadataLink
-factory TestScriptMetadataLink {
+factory TestScriptMetadataLink ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -328,7 +328,7 @@ factory TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptMetadataCapability with _$TestScriptMetadataCapability
-factory TestScriptMetadataCapability {
+factory TestScriptMetadataCapability ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -349,7 +349,7 @@ factory TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptSetupAction with _$TestScriptSetupAction
-factory TestScriptSetupAction {
+factory TestScriptSetupAction ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -366,7 +366,7 @@ factory TestScriptSetupAction.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptTestAction with _$TestScriptTestAction
-factory TestScriptTestAction {
+factory TestScriptTestAction ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -381,7 +381,7 @@ factory TestScriptTestAction.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptTeardownAction with _$TestScriptTeardownAction
-factory TestScriptTeardownAction {
+factory TestScriptTeardownAction ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -397,7 +397,7 @@ factory TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptSetupActionOperation with _$TestScriptSetupActionOperation
-factory TestScriptSetupActionOperation {
+factory TestScriptSetupActionOperation ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -426,7 +426,7 @@ factory TestScriptSetupActionOperation.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptSetupActionAssert with _$TestScriptSetupActionAssert
-factory TestScriptSetupActionAssert {
+factory TestScriptSetupActionAssert ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -459,7 +459,7 @@ factory TestScriptSetupActionAssert.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class TestScriptSetupActionOperationRequestHeader with _$TestScriptSetupActionOperationRequestHeader
-factory TestScriptSetupActionOperationRequestHeader {
+factory TestScriptSetupActionOperationRequestHeader ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtensio;

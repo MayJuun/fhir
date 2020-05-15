@@ -1,6 +1,6 @@
 @freezed
 abstract class ConceptMap with _$ConceptMap
-factory ConceptMap {
+factory ConceptMap ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -36,7 +36,7 @@ factory ConceptMap.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ConceptMapContact with _$ConceptMapContact
-factory ConceptMapContact {
+factory ConceptMapContact ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -53,7 +53,7 @@ factory ConceptMapContact.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ConceptMapElement with _$ConceptMapElement
-factory ConceptMapElement {
+factory ConceptMapElement ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -71,7 +71,7 @@ factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ConceptMapElementTarget with _$ConceptMapElementTarget
-factory ConceptMapElementTarget {
+factory ConceptMapElementTarget ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -91,7 +91,7 @@ factory ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ConceptMapElementTargetDependsOn with _$ConceptMapElementTargetDependsOn
-factory ConceptMapElementTargetDependsOn {
+factory ConceptMapElementTargetDependsOn ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -110,7 +110,7 @@ factory ConceptMapElementTargetDependsOn.fromJson(
 
 @freezed
 abstract class NamingSystem with _$NamingSystem
-factory NamingSystem {
+factory NamingSystem ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -143,7 +143,7 @@ factory NamingSystem.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class NamingSystemContact with _$NamingSystemContact
-factory NamingSystemContact {
+factory NamingSystemContact ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -160,7 +160,7 @@ factory NamingSystemContact.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class NamingSystemUniqueId with _$NamingSystemUniqueId
-factory NamingSystemUniqueId {
+factory NamingSystemUniqueId ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -178,7 +178,7 @@ factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSet with _$ValueSet
-factory ValueSet {
+factory ValueSet ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -217,7 +217,7 @@ factory ValueSet.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSetContact with _$ValueSetContact
-factory ValueSetContact {
+factory ValueSetContact ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -234,7 +234,7 @@ factory ValueSetContact.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSetCodeSystem with _$ValueSetCodeSystem
-factory ValueSetCodeSystem {
+factory ValueSetCodeSystem ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -253,7 +253,7 @@ factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSetCompose with _$ValueSetCompose
-factory ValueSetCompose {
+factory ValueSetCompose ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -270,7 +270,7 @@ factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSetExpansion with _$ValueSetExpansion
-factory ValueSetExpansion {
+factory ValueSetExpansion ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -291,7 +291,7 @@ factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept
-factory ValueSetCodeSystemConcept {
+factory ValueSetCodeSystemConcept ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -311,7 +311,7 @@ factory ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSetComposeInclude with _$ValueSetComposeInclude
-factory ValueSetComposeInclude {
+factory ValueSetComposeInclude ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -330,7 +330,7 @@ factory ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSetExpansionParameter with _$ValueSetExpansionParameter
-factory ValueSetExpansionParameter {
+factory ValueSetExpansionParameter ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -347,7 +347,7 @@ factory ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSetExpansionContains with _$ValueSetExpansionContains
-factory ValueSetExpansionContains {
+factory ValueSetExpansionContains ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -367,7 +367,7 @@ factory ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSetCodeSystemConceptDesignation with _$ValueSetCodeSystemConceptDesignation
-factory ValueSetCodeSystemConceptDesignation {
+factory ValueSetCodeSystemConceptDesignation ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -387,7 +387,7 @@ factory ValueSetCodeSystemConceptDesignation.fromJson(
 
 @freezed
 abstract class ValueSetComposeIncludeConcept with _$ValueSetComposeIncludeConcept
-factory ValueSetComposeIncludeConcept {
+factory ValueSetComposeIncludeConcept ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -404,7 +404,7 @@ factory ValueSetComposeIncludeConcept.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ValueSetComposeIncludeFilter with _$ValueSetComposeIncludeFilter
-factory ValueSetComposeIncludeFilter {
+factory ValueSetComposeIncludeFilter ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

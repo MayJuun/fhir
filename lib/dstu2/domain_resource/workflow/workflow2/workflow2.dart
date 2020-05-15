@@ -1,6 +1,6 @@
 @freezed
 abstract class ProcessRequest with _$ProcessRequest
-factory ProcessRequest {
+factory ProcessRequest ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -36,7 +36,7 @@ factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ProcessRequestItem with _$ProcessRequestItem
-factory ProcessRequestItem {
+factory ProcessRequestItem ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -51,7 +51,7 @@ factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ProcessResponse with _$ProcessResponse
-factory ProcessResponse {
+factory ProcessResponse ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -84,7 +84,7 @@ factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ProcessResponseNotes with _$ProcessResponseNotes
-factory ProcessResponseNotes {
+factory ProcessResponseNotes ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -100,7 +100,7 @@ factory ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class SupplyDelivery with _$SupplyDelivery
-factory SupplyDelivery {
+factory SupplyDelivery ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -131,7 +131,7 @@ factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
  
 @freezed
 abstract class SupplyRequest with _$SupplyRequest
-factory SupplyRequest {
+factory SupplyRequest ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -161,7 +161,7 @@ factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class SupplyRequestWhen with _$SupplyRequestWhen
-factory SupplyRequestWhen {
+factory SupplyRequestWhen ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

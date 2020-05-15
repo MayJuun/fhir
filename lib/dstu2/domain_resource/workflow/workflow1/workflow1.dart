@@ -1,6 +1,6 @@
 @freezed
 abstract class CommunicationRequest with _$CommunicationRequest
-factory CommunicationRequest {
+factory CommunicationRequest ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -34,7 +34,7 @@ factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class CommunicationRequestPayload with _$CommunicationRequestPayload
-factory CommunicationRequestPayload {
+factory CommunicationRequestPayload ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -49,7 +49,7 @@ factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DeviceUseRequest with _$DeviceUseRequest
-factory DeviceUseRequest {
+factory DeviceUseRequest ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -81,7 +81,7 @@ factory DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DeviceUseStatement with _$DeviceUseStatement
-factory DeviceUseStatement {
+factory DeviceUseStatement ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -109,7 +109,7 @@ factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Order with _$Order
-factory Order {
+factory Order ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -136,7 +136,7 @@ factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);
 
 @freezed
 abstract class OrderWhen with _$OrderWhen
-factory OrderWhen {
+factory OrderWhen ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -152,7 +152,7 @@ factory OrderWhen.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class OrderResponse with _$OrderResponse
-factory OrderResponse {
+factory OrderResponse ({
   Id id;
   Meta meta;
   FhirUri implicitRules;

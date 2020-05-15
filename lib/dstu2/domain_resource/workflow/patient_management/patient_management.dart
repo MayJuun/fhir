@@ -1,6 +1,6 @@
 @freezed
 abstract class Communication with _$Communication
-factory Communication {
+factory Communication ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -33,7 +33,7 @@ factory Communication.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class CommunicationPayload with _$CommunicationPayload
-factory CommunicationPayload {
+factory CommunicationPayload ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -48,7 +48,7 @@ factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Encounter with _$Encounter
-factory Encounter {
+factory Encounter ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -87,7 +87,7 @@ factory Encounter.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EncounterStatusHistory with _$EncounterStatusHistory
-factory EncounterStatusHistory {
+factory EncounterStatusHistory ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -104,7 +104,7 @@ factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EncounterParticipant with _$EncounterParticipant
-factory EncounterParticipant {
+factory EncounterParticipant ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -122,7 +122,7 @@ factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EncounterHospitalization with _$EncounterHospitalization
-factory EncounterHospitalization {
+factory EncounterHospitalization ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -148,7 +148,7 @@ factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EncounterLocation with _$EncounterLocation
-factory EncounterLocation {
+factory EncounterLocation ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -165,7 +165,7 @@ factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EpisodeOfCare with _$EpisodeOfCare
-factory EpisodeOfCare {
+factory EpisodeOfCare ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -196,7 +196,7 @@ factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory
-factory EpisodeOfCareStatusHistory {
+factory EpisodeOfCareStatusHistory ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -213,7 +213,7 @@ factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam
-factory EpisodeOfCareCareTeam {
+factory EpisodeOfCareCareTeam ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -230,7 +230,7 @@ factory EpisodeOfCareCareTeam.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Flag with _$Flag
-factory Flag {
+factory Flag ({
   Id id;
   Meta meta;
   FhirUri implicitRules;

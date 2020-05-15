@@ -1,6 +1,6 @@
 @freezed
 abstract class Device with _$Device
-factory Device {
+factory Device ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -34,7 +34,7 @@ factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
 
 @freezed
 abstract class DeviceComponent with _$DeviceComponent
-factory DeviceComponent {
+factory DeviceComponent ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -64,7 +64,7 @@ factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DeviceComponentProductionSpecification with _$DeviceComponentProductionSpecification
-factory DeviceComponentProductionSpecification {
+factory DeviceComponentProductionSpecification ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -83,7 +83,7 @@ factory DeviceComponentProductionSpecification.fromJson(
 
 @freezed
 abstract class DeviceMetric with _$DeviceMetric
-factory DeviceMetric {
+factory DeviceMetric ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -113,7 +113,7 @@ factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DeviceMetricCalibration with _$DeviceMetricCalibration
-factory DeviceMetricCalibration {
+factory DeviceMetricCalibration ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -122,7 +122,7 @@ factory DeviceMetricCalibration {
   Instant time;
 
   DeviceMetricCalibration(
-      {this.id,
+      ({this.id,
       this.extension,
       this.modifierExtension,
       this.type,

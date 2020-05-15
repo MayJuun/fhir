@@ -1,6 +1,6 @@
 @freezed
 abstract class DataElement with _$DataElement
-factory DataElement {
+factory DataElement ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -34,7 +34,7 @@ factory DataElement.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DataElementContact with _$DataElementContact
-factory DataElementContact {
+factory DataElementContact ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -51,7 +51,7 @@ factory DataElementContact.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DataElementMapping with _$DataElementMapping
-factory DataElementMapping {
+factory DataElementMapping ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -69,7 +69,7 @@ factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class StructureDefinition with _$StructureDefinition
-factory StructureDefinition {
+factory StructureDefinition ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -114,7 +114,7 @@ factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class StructureDefinitionContact with _$StructureDefinitionContact
-factory StructureDefinitionContact {
+factory StructureDefinitionContact ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -131,7 +131,7 @@ factory StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class StructureDefinitionMapping with _$StructureDefinitionMapping
-factory StructureDefinitionMapping {
+factory StructureDefinitionMapping ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -150,7 +150,7 @@ factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot
-factory StructureDefinitionSnapshot {
+factory StructureDefinitionSnapshot ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -166,7 +166,7 @@ factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class StructureDefinitionDifferential with _$StructureDefinitionDifferential
-factory StructureDefinitionDifferential {
+factory StructureDefinitionDifferential ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

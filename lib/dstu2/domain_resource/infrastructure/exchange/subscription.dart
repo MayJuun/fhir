@@ -1,6 +1,6 @@
 @freezed
 abstract class Subscription with _$Subscription
-factory Subscription {
+factory Subscription ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -28,7 +28,7 @@ factory Subscription.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class SubscriptionChannel with _$SubscriptionChannel
-factory SubscriptionChannel {
+factory SubscriptionChannel ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

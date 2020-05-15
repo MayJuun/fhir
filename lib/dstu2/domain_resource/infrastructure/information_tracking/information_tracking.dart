@@ -1,6 +1,6 @@
 @freezed
 abstract class AuditEvent with _$AuditEvent
-factory AuditEvent {
+factory AuditEvent ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -24,7 +24,7 @@ factory AuditEvent.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class AuditEventEvent with _$AuditEventEvent
-factory AuditEventEvent {
+factory AuditEventEvent ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -46,7 +46,7 @@ factory AuditEventEvent.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class AuditEventParticipant with _$AuditEventParticipant
-factory AuditEventParticipant {
+factory AuditEventParticipant ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -72,7 +72,7 @@ factory AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class AuditEventSource with _$AuditEventSource
-factory AuditEventSource {
+factory AuditEventSource ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -90,7 +90,7 @@ factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class AuditEventObject with _$AuditEventObject
-factory AuditEventObject {
+factory AuditEventObject ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -115,7 +115,7 @@ factory AuditEventObject.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class AuditEventParticipantNetwork with _$AuditEventParticipantNetwork
-factory AuditEventParticipantNetwork {
+factory AuditEventParticipantNetwork ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -132,7 +132,7 @@ factory AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class AuditEventObjectDetail with _$AuditEventObjectDetail
-factory AuditEventObjectDetail {
+factory AuditEventObjectDetail ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -148,7 +148,7 @@ factory AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Provenance with _$Provenance
-factory Provenance {
+factory Provenance ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -178,7 +178,7 @@ factory Provenance.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ProvenanceAgent with _$ProvenanceAgent
-factory ProvenanceAgent {
+factory ProvenanceAgent ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -197,7 +197,7 @@ factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ProvenanceEntity with _$ProvenanceEntity
-factory ProvenanceEntity {
+factory ProvenanceEntity ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -216,7 +216,7 @@ factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent
-factory ProvenanceAgentRelatedAgent {
+factory ProvenanceAgentRelatedAgent ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -232,7 +232,7 @@ factory ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Questionnaire with _$Questionnaire
-factory Questionnaire {
+factory Questionnaire ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -260,7 +260,7 @@ factory Questionnaire.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class QuestionnaireGroup with _$QuestionnaireGroup
-factory QuestionnaireGroup {
+factory QuestionnaireGroup ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -273,7 +273,7 @@ factory QuestionnaireGroup {
   List<QuestionnaireGroupQuestion> question;
 
   QuestionnaireGroup(
-      {this.id,
+      ({this.id,
       this.extension,
       this.modifierExtension,
       this.linkId,
@@ -292,7 +292,7 @@ factory QuestionnaireGroup {
 
 @freezed
 abstract class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion
-factory QuestionnaireGroupQuestion {
+factory QuestionnaireGroupQuestion ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -314,7 +314,7 @@ factory QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class QuestionnaireResponse with _$QuestionnaireResponse
-factory QuestionnaireResponse {
+factory QuestionnaireResponse ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -343,7 +343,7 @@ factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup
-factory QuestionnaireResponseGroup {
+factory QuestionnaireResponseGroup ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -363,7 +363,7 @@ factory QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class QuestionnaireResponseGroupQuestion with _$QuestionnaireResponseGroupQuestion
-factory QuestionnaireResponseGroupQuestion {
+factory QuestionnaireResponseGroupQuestion ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -383,7 +383,7 @@ factory QuestionnaireResponseGroupQuestion.fromJson(
 
 @freezed
 abstract class QuestionnaireResponseGroupQuestionAnswer with _$QuestionnaireResponseGroupQuestionAnswer
-factory QuestionnaireResponseGroupQuestionAnswer {
+factory QuestionnaireResponseGroupQuestionAnswer ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

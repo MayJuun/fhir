@@ -1,6 +1,6 @@
 @freezed
 abstract class Coverage with _$Coverage
-factory Coverage {
+factory Coverage ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -33,7 +33,7 @@ factory Coverage.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EligibilityRequest with _$EligibilityRequest
-factory EligibilityRequest {
+factory EligibilityRequest ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -59,7 +59,7 @@ factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EligibilityResponse with _$EligibilityResponse
-factory EligibilityResponse {
+factory EligibilityResponse ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -88,7 +88,7 @@ factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EnrollmentRequest with _$EnrollmentRequest
-factory EnrollmentRequest {
+factory EnrollmentRequest ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -117,7 +117,7 @@ factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class EnrollmentResponse with _$EnrollmentResponse
-factory EnrollmentResponse {
+factory EnrollmentResponse ({
   Id id;
   Meta meta;
   FhirUri implicitRules;

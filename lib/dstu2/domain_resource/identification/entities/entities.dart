@@ -1,6 +1,6 @@
 @freezed
 abstract class Contract with _$Contract
-factory Contract {
+factory Contract ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -38,7 +38,7 @@ factory Contract.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ContractActor with _$ContractActor
-factory ContractActor {
+factory ContractActor ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -55,7 +55,7 @@ factory ContractActor.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ContractValuedItem with _$ContractValuedItem
-factory ContractValuedItem {
+factory ContractValuedItem ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -78,7 +78,7 @@ factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ContractSigner with _$ContractSigner
-factory ContractSigner {
+factory ContractSigner ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -96,7 +96,7 @@ factory ContractSigner.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ContractTerm with _$ContractTerm
-factory ContractTerm {
+factory ContractTerm ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -122,7 +122,7 @@ factory ContractTerm.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ContractFriendly with _$ContractFriendly
-factory ContractFriendly {
+factory ContractFriendly ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -138,7 +138,7 @@ factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ContractLegal with _$ContractLegal
-factory ContractLegal {
+factory ContractLegal ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -154,7 +154,7 @@ factory ContractLegal.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ContractRule with _$ContractRule
-factory ContractRule {
+factory ContractRule ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -170,7 +170,7 @@ factory ContractRule.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ContractTermActor with _$ContractTermActor
-factory ContractTermActor {
+factory ContractTermActor ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -187,7 +187,7 @@ factory ContractTermActor.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ContractTermValuedItem with _$ContractTermValuedItem
-factory ContractTermValuedItem {
+factory ContractTermValuedItem ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -209,7 +209,7 @@ factory ContractTermValuedItem.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Location with _$Location
-factory Location {
+factory Location ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -241,7 +241,7 @@ factory Location.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class LocationPosition with _$LocationPosition
-factory LocationPosition {
+factory LocationPosition ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -259,7 +259,7 @@ factory LocationPosition.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Person with _$Person
-factory Person {
+factory Person ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -288,7 +288,7 @@ factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
 
 @freezed
 abstract class PersonLink with _$PersonLink
-factory PersonLink {
+factory PersonLink ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -304,7 +304,7 @@ factory PersonLink.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Substance with _$Substance
-factory Substance {
+factory Substance ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -330,7 +330,7 @@ factory Substance.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class SubstanceInstance with _$SubstanceInstance
-factory SubstanceInstance {
+factory SubstanceInstance ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -348,7 +348,7 @@ factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class SubstanceIngredient with _$SubstanceIngredient
-factory SubstanceIngredient {
+factory SubstanceIngredient ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

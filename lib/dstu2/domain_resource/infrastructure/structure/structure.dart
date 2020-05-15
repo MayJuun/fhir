@@ -1,6 +1,6 @@
 @freezed
 abstract class Basic with _$Basic
-factory Basic {
+factory Basic ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -24,7 +24,7 @@ factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 @freezed
 abstract @freezed
 abstract class Binary with _$Binary
-factory Binary with _$Binary {
+factory Binary with _$Binary ({
   factory Binary({
     Id id,
     Meta meta,
@@ -40,7 +40,7 @@ factory Binary with _$Binary {
 @freezed
 abstract @freezed
 abstract class Bundle with _$Bundle
-factory Bundle with _$Bundle {
+factory Bundle with _$Bundle ({
   factory Bundle({
     Id id,
     Meta meta,
@@ -58,7 +58,7 @@ factory Bundle with _$Bundle {
 
 @freezed
 abstract class Media with _$Media
-factory Media {
+factory Media ({
   Id id;
   Meta meta;
   FhirUri implicitRules;

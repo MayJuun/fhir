@@ -1,6 +1,6 @@
 @freezed
 abstract class AllergyIntolerance with _$AllergyIntolerance
-factory AllergyIntolerance {
+factory AllergyIntolerance ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -34,7 +34,7 @@ factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction
-factory AllergyIntoleranceReaction {
+factory AllergyIntoleranceReaction ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -56,7 +56,7 @@ factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ClinicalImpression with _$ClinicalImpression
-factory ClinicalImpression {
+factory ClinicalImpression ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -93,7 +93,7 @@ factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ClinicalImpressionInvestigations with _$ClinicalImpressionInvestigations
-factory ClinicalImpressionInvestigations {
+factory ClinicalImpressionInvestigations ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -112,7 +112,7 @@ factory ClinicalImpressionInvestigations.fromJson(
 
 @freezed
 abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding
-factory ClinicalImpressionFinding {
+factory ClinicalImpressionFinding ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -129,7 +129,7 @@ factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut
-factory ClinicalImpressionRuledOut {
+factory ClinicalImpressionRuledOut ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -145,7 +145,7 @@ factory ClinicalImpressionRuledOut.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class Condition with _$Condition
-factory Condition {
+factory Condition ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -181,7 +181,7 @@ factory Condition.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ConditionStage with _$ConditionStage
-factory ConditionStage {
+factory ConditionStage ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -198,7 +198,7 @@ factory ConditionStage.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ConditionEvidence with _$ConditionEvidence
-factory ConditionEvidence {
+factory ConditionEvidence ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -214,7 +214,7 @@ factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DetectedIssue with _$DetectedIssue
-factory DetectedIssue {
+factory DetectedIssue ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -244,7 +244,7 @@ factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DetectedIssueMitigation with _$DetectedIssueMitigation
-factory DetectedIssueMitigation {
+factory DetectedIssueMitigation ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -261,7 +261,7 @@ factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class FamilyMemberHistory with _$FamilyMemberHistory
-factory FamilyMemberHistory {
+factory FamilyMemberHistory ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -293,7 +293,7 @@ factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition
-factory FamilyMemberHistoryCondition {
+factory FamilyMemberHistoryCondition ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -303,7 +303,7 @@ factory FamilyMemberHistoryCondition {
   Annotation note;
 
   FamilyMemberHistoryCondition(
-      {this.id,
+      ({this.id,
       this.extension,
       this.modifierExtension,
       this.code,
@@ -318,7 +318,7 @@ factory FamilyMemberHistoryCondition {
 
 @freezed
 abstract class Procedure with _$Procedure
-factory Procedure {
+factory Procedure ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -359,7 +359,7 @@ factory Procedure.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ProcedurePerformer with _$ProcedurePerformer
-factory ProcedurePerformer {
+factory ProcedurePerformer ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -376,7 +376,7 @@ factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class ProcedureFocalDevice with _$ProcedureFocalDevice
-factory ProcedureFocalDevice {
+factory ProcedureFocalDevice ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -392,7 +392,7 @@ factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class RiskAssessment with _$RiskAssessment
-factory RiskAssessment {
+factory RiskAssessment ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -422,7 +422,7 @@ factory RiskAssessment.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction
-factory RiskAssessmentPrediction {
+factory RiskAssessmentPrediction ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

@@ -1,6 +1,6 @@
 @freezed
 abstract class Composition with _$Composition
-factory Composition {
+factory Composition ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -34,7 +34,7 @@ factory Composition.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class CompositionAttester with _$CompositionAttester
-factory CompositionAttester {
+factory CompositionAttester ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -52,7 +52,7 @@ factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class CompositionEvent with _$CompositionEvent
-factory CompositionEvent {
+factory CompositionEvent ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -70,7 +70,7 @@ factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class CompositionSection with _$CompositionSection
-factory CompositionSection {
+factory CompositionSection ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -91,7 +91,7 @@ factory CompositionSection.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DocumentManifest with _$DocumentManifest
-factory DocumentManifest {
+factory DocumentManifest ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -123,7 +123,7 @@ factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DocumentManifestContent with _$DocumentManifestContent
-factory DocumentManifestContent {
+factory DocumentManifestContent ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -139,7 +139,7 @@ factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DocumentManifestRelated with _$DocumentManifestRelated
-factory DocumentManifestRelated {
+factory DocumentManifestRelated ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -155,7 +155,7 @@ factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DocumentReference with _$DocumentReference
-factory DocumentReference {
+factory DocumentReference ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -192,7 +192,7 @@ factory DocumentReference.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo
-factory DocumentReferenceRelatesTo {
+factory DocumentReferenceRelatesTo ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -209,7 +209,7 @@ factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DocumentReferenceContent with _$DocumentReferenceContent
-factory DocumentReferenceContent {
+factory DocumentReferenceContent ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -226,7 +226,7 @@ factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DocumentReferenceContext with _$DocumentReferenceContext
-factory DocumentReferenceContext {
+factory DocumentReferenceContext ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -248,7 +248,7 @@ factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
 
 @freezed
 abstract class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated
-factory DocumentReferenceContextRelated {
+factory DocumentReferenceContextRelated ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -256,7 +256,7 @@ factory DocumentReferenceContextRelated {
   Reference ref;
 
   DocumentReferenceContextRelated(
-      {this.id,
+      ({this.id,
       this.extension,
       this.modifierExtension,
       this.identifier,
@@ -270,7 +270,7 @@ factory DocumentReferenceContextRelated {
 
 @freezed
 abstract class Lists with _$Lists
-factory Lists {
+factory Lists ({
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -302,7 +302,7 @@ factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
 
 @freezed
 abstract class ListEntry with _$ListEntry
-factory ListEntry {
+factory ListEntry ({
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
