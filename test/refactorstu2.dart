@@ -5,26 +5,29 @@ void main() async {
 
   var exp = RegExp(r'\(\{(\n.*)*\}\);\n\n.*factory');
 
-  tempDir
-      .list(recursive: true, followLinks: false)
-      .listen((FileSystemEntity entity) async {
-    if (entity.path.toString().contains('.dart')) {
-      var text = await File(entity.path.toString()).readAsString();
-      var pieces = text.split('class ');
-      pieces.forEach((element) {
-        if(element.contains(' ')){ 
-          var begin = element.substring(0,element.indexOf(' ')) + '\\(\\{';
-          var exp = RegExp('$begin(\n.*)*\\}\\);');
+  tempDir.list(recursive: true, followLinks: false).listen(
+    (FileSystemEntity entity) async {
+      if (entity.path.toString().contains('.dart')) {
+        var text = await File(entity.path.toString()).readAsString();
+        var pieces = text.split('class ');
+        pieces.forEach((element) {
+          if (element.contains(' ')) {
+            var begin = element.substring(0, element.indexOf(' ')) + '\\(\\{';
+            var exp = RegExp('(?<=$begin)(\n.*)*\\}\\);');
 
-          for(var match in exp.allMatches(text)){ 
-            print(match.group(0));
+            for(var match in exp.allMatches(text)){ 
+              print(match.group(0));
+            }
+
+            // text = text.replaceAll(
+            //     exp, '}) = _${element.substring(0, element.indexOf(' '))};');
           }
-      }});
+        });
 
-    //   for (var match in exp.allMatches(text)) {
-    //     print(match.group(0));
-    // }
-  }});
+        await File(entity.path.toString()).writeAsString(text);
+      }
+    },
+  );
 }
 
 //     if (!file.toString().contains('g.dart')) {
