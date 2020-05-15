@@ -1,6 +1,6 @@
 @freezed
 abstract class Communication with _$Communication
-factory Communication ({
+{factory Communication ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -23,32 +23,32 @@ factory Communication ({
   Reference subject,
   Reference requestDetail,
 
-  }) = Communication;
+  }) = _Communication;
 
 factory Communication.fromJson(Map<String, dynamic> json) =>
       _$CommunicationFromJson(json);
-  Map<String, dynamic> toJson() => _$CommunicationToJson(this);
+
 }
 
 
 @freezed
 abstract class CommunicationPayload with _$CommunicationPayload
-factory CommunicationPayload ({
+{factory CommunicationPayload ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   String contentX,
 
-  }) = CommunicationPayload;
+  }) = _CommunicationPayload;
 
 factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationPayloadFromJson(json);
-  Map<String, dynamic> toJson() => _$CommunicationPayloadToJson(this);
+
 }
 
 @freezed
 abstract class Encounter with _$Encounter
-factory Encounter ({
+{factory Encounter ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -77,34 +77,34 @@ factory Encounter ({
   Reference serviceProvider,
   Reference partOf,
 
-  }) = Encounter;
+  }) = _Encounter;
 
 factory Encounter.fromJson(Map<String, dynamic> json) =>
       _$EncounterFromJson(json);
-  Map<String, dynamic> toJson() => _$EncounterToJson(this);
+
 }
 
 
 @freezed
 abstract class EncounterStatusHistory with _$EncounterStatusHistory
-factory EncounterStatusHistory ({
+{factory EncounterStatusHistory ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Code status,
   Period period,
 
-  }) = EncounterStatusHistory;
+  }) = _EncounterStatusHistory;
 
 factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$EncounterStatusHistoryFromJson(json);
-  Map<String, dynamic> toJson() => _$EncounterStatusHistoryToJson(this);
+
 }
 
 
 @freezed
 abstract class EncounterParticipant with _$EncounterParticipant
-factory EncounterParticipant ({
+{factory EncounterParticipant ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -112,17 +112,17 @@ factory EncounterParticipant ({
   Period period,
   Reference individual,
 
-  }) = EncounterParticipant;
+  }) = _EncounterParticipant;
 
 factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
       _$EncounterParticipantFromJson(json);
-  Map<String, dynamic> toJson() => _$EncounterParticipantToJson(this);
+
 }
 
 
 @freezed
 abstract class EncounterHospitalization with _$EncounterHospitalization
-factory EncounterHospitalization ({
+{factory EncounterHospitalization ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -138,17 +138,17 @@ factory EncounterHospitalization ({
   CodeableConcept dischargeDisposition,
   List<Reference> dischargeDiagnosis,
 
-  }) = EncounterHospitalization;
+  }) = _EncounterHospitalization;
 
 factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
       _$EncounterHospitalizationFromJson(json);
-  Map<String, dynamic> toJson() => _$EncounterHospitalizationToJson(this);
+
 }
 
 
 @freezed
 abstract class EncounterLocation with _$EncounterLocation
-factory EncounterLocation ({
+{factory EncounterLocation ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -156,16 +156,16 @@ factory EncounterLocation ({
   Code status,
   Period period,
 
-  }) = EncounterLocation;
+  }) = _EncounterLocation;
 
 factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
       _$EncounterLocationFromJson(json);
-  Map<String, dynamic> toJson() => _$EncounterLocationToJson(this);
+
 }
 
 @freezed
 abstract class EpisodeOfCare with _$EpisodeOfCare
-factory EpisodeOfCare ({
+{factory EpisodeOfCare ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -186,34 +186,34 @@ factory EpisodeOfCare ({
   Reference careManager,
   List<EpisodeOfCareCareTeam> careTeam,
 
-  }) = EpisodeOfCare;
+  }) = _EpisodeOfCare;
 
 factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareFromJson(json);
-  Map<String, dynamic> toJson() => _$EpisodeOfCareToJson(this);
+
 }
 
 
 @freezed
 abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory
-factory EpisodeOfCareStatusHistory ({
+{factory EpisodeOfCareStatusHistory ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Code status,
   Period period,
 
-  }) = EpisodeOfCareStatusHistory;
+  }) = _EpisodeOfCareStatusHistory;
 
 factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareStatusHistoryFromJson(json);
-  Map<String, dynamic> toJson() => _$EpisodeOfCareStatusHistoryToJson(this);
+
 }
 
 
 @freezed
 abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam
-factory EpisodeOfCareCareTeam ({
+{factory EpisodeOfCareCareTeam ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -221,16 +221,16 @@ factory EpisodeOfCareCareTeam ({
   Period period,
   Reference member,
 
-  }) = EpisodeOfCareCareTeam;
+  }) = _EpisodeOfCareCareTeam;
 
 factory EpisodeOfCareCareTeam.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareCareTeamFromJson(json);
-  Map<String, dynamic> toJson() => _$EpisodeOfCareCareTeamToJson(this);
+
 }
 
 @freezed
 abstract class Flag with _$Flag
-factory Flag ({
+{factory Flag ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -248,8 +248,8 @@ factory Flag ({
   Reference author,
   CodeableConcept code,
 
-  }) = Flag;
+  }) = _Flag;
 
 factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
-  Map<String, dynamic> toJson() => _$FlagToJson(this);
+
 }

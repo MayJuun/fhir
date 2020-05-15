@@ -1,6 +1,6 @@
 @freezed
 abstract class Immunization with _$Immunization
-factory Immunization ({
+{factory Immunization ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -31,34 +31,34 @@ factory Immunization ({
   List<ImmunizationReaction> reaction,
   List<ImmunizationVaccinationProtocol> vaccinationProtocol,
 
-  }) = Immunization;
+  }) = _Immunization;
 
 factory Immunization.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationFromJson(json);
-  Map<String, dynamic> toJson() => _$ImmunizationToJson(this);
+
 }
 
 
 @freezed
 abstract class ImmunizationExplanation with _$ImmunizationExplanation
-factory ImmunizationExplanation ({
+{factory ImmunizationExplanation ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   List<CodeableConcept> reason,
   List<CodeableConcept> reasonNotGiven,
 
-  }) = ImmunizationExplanation;
+  }) = _ImmunizationExplanation;
 
 factory ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationExplanationFromJson(json);
-  Map<String, dynamic> toJson() => _$ImmunizationExplanationToJson(this);
+
 }
 
 
 @freezed
 abstract class ImmunizationReaction with _$ImmunizationReaction
-factory ImmunizationReaction ({
+{factory ImmunizationReaction ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -66,17 +66,17 @@ factory ImmunizationReaction ({
   Reference detail,
   Boolean reported,
 
-  }) = ImmunizationReaction;
+  }) = _ImmunizationReaction;
 
 factory ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationReactionFromJson(json);
-  Map<String, dynamic> toJson() => _$ImmunizationReactionToJson(this);
+
 }
 
 
 @freezed
 abstract class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol
-factory ImmunizationVaccinationProtocol ({
+{factory ImmunizationVaccinationProtocol ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -89,17 +89,17 @@ factory ImmunizationVaccinationProtocol ({
   CodeableConcept doseStatus,
   CodeableConcept doseStatusReason,
 
-  }) = ImmunizationVaccinationProtocol;
+  }) = _ImmunizationVaccinationProtocol;
 
 factory ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationVaccinationProtocolFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ImmunizationVaccinationProtocolToJson(this);
+
+
 }
 
 @freezed
 abstract class ImmunizationRecommendation with _$ImmunizationRecommendation
-factory ImmunizationRecommendation ({
+{factory ImmunizationRecommendation ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -112,17 +112,17 @@ factory ImmunizationRecommendation ({
   Reference patient,
   List<ImmunizationRecommendationRecommendation> recommendation,
 
-  }) = ImmunizationRecommendation;
+  }) = _ImmunizationRecommendation;
 
 factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationRecommendationFromJson(json);
-  Map<String, dynamic> toJson() => _$ImmunizationRecommendationToJson(this);
+
 }
 
 
 @freezed
 abstract class ImmunizationRecommendationRecommendation with _$ImmunizationRecommendationRecommendation
-factory ImmunizationRecommendationRecommendation ({
+{factory ImmunizationRecommendationRecommendation ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -151,33 +151,33 @@ factory ImmunizationRecommendationRecommendation ({
   factory ImmunizationRecommendationRecommendation.fromJson(
           Map<String, dynamic> json) =>
       _$ImmunizationRecommendationRecommendationFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ImmunizationRecommendationRecommendationToJson(this);
+
+
 }
 
 
 @freezed
 abstract class ImmunizationRecommendationRecommendationDateCriterion with _$ImmunizationRecommendationRecommendationDateCriterion
-factory ImmunizationRecommendationRecommendationDateCriterion ({
+{factory ImmunizationRecommendationRecommendationDateCriterion ({
   Id id,
   List<Extension> extensio,
   List<Extension> modifier,
   CodeableConcept code,
   FhirDateTime value,
 
-  }) = ImmunizationRecommendationRecommendationDateCriterion;
+  }) = _ImmunizationRecommendationRecommendationDateCriterion;
 
 factory ImmunizationRecommendationRecommendationDateCriterion.fromJson(
           Map<String, dynamic> json) =>
       _$ImmunizationRecommendationRecommendationDateCriterionFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ImmunizationRecommendationRecommendationDateCriterionToJson(this);
+
+
 }
 
 
 @freezed
 abstract class ImmunizationRecommendationRecommendationProtocol with _$ImmunizationRecommendationRecommendationProtocol
-factory ImmunizationRecommendationRecommendationProtocol ({
+{factory ImmunizationRecommendationRecommendationProtocol ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExten,
@@ -186,18 +186,18 @@ factory ImmunizationRecommendationRecommendationProtocol ({
   Reference authority,
   String series,
 
-  }) = ImmunizationRecommendationRecommendationProtocol;
+  }) = _ImmunizationRecommendationRecommendationProtocol;
 
 factory ImmunizationRecommendationRecommendationProtocol.fromJson(
           Map<String, dynamic> json) =>
       _$ImmunizationRecommendationRecommendationProtocolFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ImmunizationRecommendationRecommendationProtocolToJson(this);
+
+
 }
 
 @freezed
 abstract class Medication with _$Medication
-factory Medication ({
+{factory Medication ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -212,17 +212,17 @@ factory Medication ({
   MedicationProduct product,
   MedicationPackage package,
 
-  }) = Medication;
+  }) = _Medication;
 
 factory Medication.fromJson(Map<String, dynamic> json) =>
       _$MedicationFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationToJson(this);
+
 }
 
 
 @freezed
 abstract class MedicationProduct with _$MedicationProduct
-factory MedicationProduct ({
+{factory MedicationProduct ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -240,80 +240,80 @@ factory MedicationProduct ({
 
   factory MedicationProduct.fromJson(Map<String, dynamic> json) =>
       _$MedicationProductFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationProductToJson(this);
+
 }
 
 
 @freezed
 abstract class MedicationPackage with _$MedicationPackage
-factory MedicationPackage ({
+{factory MedicationPackage ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   CodeableConcept container,
   List<MedicationPackageContent> content,
 
-  }) = MedicationPackage;
+  }) = _MedicationPackage;
 
 factory MedicationPackage.fromJson(Map<String, dynamic> json) =>
       _$MedicationPackageFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationPackageToJson(this);
+
 }
 
 
 @freezed
 abstract class MedicationProductIngredient with _$MedicationProductIngredient
-factory MedicationProductIngredient ({
+{factory MedicationProductIngredient ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Reference item,
   Ratio amount,
 
-  }) = MedicationProductIngredient;
+  }) = _MedicationProductIngredient;
 
 factory MedicationProductIngredient.fromJson(Map<String, dynamic> json) =>
       _$MedicationProductIngredientFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationProductIngredientToJson(this);
+
 }
 
 
 @freezed
 abstract class MedicationProductBatch with _$MedicationProductBatch
-factory MedicationProductBatch ({
+{factory MedicationProductBatch ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   String lotNumber,
   FhirDateTime expirationDate,
 
-  }) = MedicationProductBatch;
+  }) = _MedicationProductBatch;
 
 factory MedicationProductBatch.fromJson(Map<String, dynamic> json) =>
       _$MedicationProductBatchFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationProductBatchToJson(this);
+
 }
 
 
 @freezed
 abstract class MedicationPackageContent with _$MedicationPackageContent
-factory MedicationPackageContent ({
+{factory MedicationPackageContent ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Reference item,
   Quantity amount,
 
-  }) = MedicationPackageContent;
+  }) = _MedicationPackageContent;
 
 factory MedicationPackageContent.fromJson(Map<String, dynamic> json) =>
       _$MedicationPackageContentFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationPackageContentToJson(this);
+
 }
 
 @freezed
 abstract class MedicationAdministration with _$MedicationAdministration
-factory MedicationAdministration ({
+{factory MedicationAdministration ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -337,17 +337,17 @@ factory MedicationAdministration ({
   String note,
   MedicationAdministrationDosage dosage,
 
-  }) = MedicationAdministration;
+  }) = _MedicationAdministration;
 
 factory MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationAdministrationToJson(this);
+
 }
 
 
 @freezed
 abstract class MedicationAdministrationDosage with _$MedicationAdministrationDosage
-factory MedicationAdministrationDosage ({
+{factory MedicationAdministrationDosage ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -358,16 +358,16 @@ factory MedicationAdministrationDosage ({
   Quantity quantity,
   Ratio rateX,
 
-  }) = MedicationAdministrationDosage;
+  }) = _MedicationAdministrationDosage;
 
 factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationDosageFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationAdministrationDosageToJson(this);
+
 }
 
 @freezed
 abstract class MedicationDispense with _$MedicationDispense
-factory MedicationDispense ({
+{factory MedicationDispense ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -393,17 +393,17 @@ factory MedicationDispense ({
   List<MedicationDispenseDosageInstruction> dosageInstruction,
   MedicationDispenseSubstitution substitution,
 
-  }) = MedicationDispense;
+  }) = _MedicationDispense;
 
 factory MedicationDispense.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationDispenseToJson(this);
+
 }
 
 
 @freezed
 abstract class MedicationDispenseDosageInstruction with _$MedicationDispenseDosageInstruction
-factory MedicationDispenseDosageInstruction ({
+{factory MedicationDispenseDosageInstruction ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -418,19 +418,19 @@ factory MedicationDispenseDosageInstruction ({
   Ratio rateX,
   Ratio maxDosePerPeriod,
 
-  }) = MedicationDispenseDosageInstruction;
+  }) = _MedicationDispenseDosageInstruction;
 
 factory MedicationDispenseDosageInstruction.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationDispenseDosageInstructionFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$MedicationDispenseDosageInstructionToJson(this);
+
+
 }
 
 
 @freezed
 abstract class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution
-factory MedicationDispenseSubstitution ({
+{factory MedicationDispenseSubstitution ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -438,16 +438,16 @@ factory MedicationDispenseSubstitution ({
   List<CodeableConcept> reason,
   List<Reference> responsibleParty,
 
-  }) = MedicationDispenseSubstitution;
+  }) = _MedicationDispenseSubstitution;
 
 factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseSubstitutionFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationDispenseSubstitutionToJson(this);
+
 }
 
 @freezed
 abstract class MedicationOrder with _$MedicationOrder
-factory MedicationOrder ({
+{factory MedicationOrder ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -472,17 +472,17 @@ factory MedicationOrder ({
   MedicationOrderSubstitution substitution,
   Reference priorPrescription,
 
-  }) = MedicationOrder;
+  }) = _MedicationOrder;
 
 factory MedicationOrder.fromJson(Map<String, dynamic> json) =>
       _$MedicationOrderFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationOrderToJson(this);
+
 }
 
 
 @freezed
 abstract class MedicationOrderDosageInstruction with _$MedicationOrderDosageInstruction
-factory MedicationOrderDosageInstruction ({
+{factory MedicationOrderDosageInstruction ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -497,19 +497,19 @@ factory MedicationOrderDosageInstruction ({
   Ratio rateX,
   Ratio maxDosePerPeriod,
 
-  }) = MedicationOrderDosageInstruction;
+  }) = _MedicationOrderDosageInstruction;
 
 factory MedicationOrderDosageInstruction.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationOrderDosageInstructionFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$MedicationOrderDosageInstructionToJson(this);
+
+
 }
 
 
 @freezed
 abstract class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest
-factory MedicationOrderDispenseRequest ({
+{factory MedicationOrderDispenseRequest ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -519,33 +519,33 @@ factory MedicationOrderDispenseRequest ({
   Quantity quantity,
   Quantity expectedSupplyDuration,
 
-  }) = MedicationOrderDispenseRequest;
+  }) = _MedicationOrderDispenseRequest;
 
 factory MedicationOrderDispenseRequest.fromJson(Map<String, dynamic> json) =>
       _$MedicationOrderDispenseRequestFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationOrderDispenseRequestToJson(this);
+
 }
 
 
 @freezed
 abstract class MedicationOrderSubstitution with _$MedicationOrderSubstitution
-factory MedicationOrderSubstitution ({
+{factory MedicationOrderSubstitution ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   CodeableConcept type,
   CodeableConcept reason,
 
-  }) = MedicationOrderSubstitution;
+  }) = _MedicationOrderSubstitution;
 
 factory MedicationOrderSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationOrderSubstitutionFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationOrderSubstitutionToJson(this);
+
 }
 
 @freezed
 abstract class MedicationStatement with _$MedicationStatement
-factory MedicationStatement ({
+{factory MedicationStatement ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -568,17 +568,17 @@ factory MedicationStatement ({
   CodeableConcept medicationX,
   List<MedicationStatementDosage> dosage,
 
-  }) = MedicationStatement;
+  }) = _MedicationStatement;
 
 factory MedicationStatement.fromJson(Map<String, dynamic> json) =>
       _$MedicationStatementFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationStatementToJson(this);
+
 }
 
 
 @freezed
 abstract class MedicationStatementDosage with _$MedicationStatementDosage
-factory MedicationStatementDosage ({
+{factory MedicationStatementDosage ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -608,5 +608,5 @@ factory MedicationStatementDosage ({
 
   factory MedicationStatementDosage.fromJson(Map<String, dynamic> json) =>
       _$MedicationStatementDosageFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationStatementDosageToJson(this);
+
 }

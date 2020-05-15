@@ -1,6 +1,6 @@
 @freezed
 abstract class Claim with _$Claim
-factory Claim ({
+{factory Claim ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -39,16 +39,16 @@ factory Claim ({
   List<Coding> additionalMaterials,
   List<ClaimMissingTeeth> missingTeeth,
 
-  }) = Claim;
+  }) = _Claim;
 
 factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimPayee with _$ClaimPayee
-factory ClaimPayee ({
+{factory ClaimPayee ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -57,34 +57,34 @@ factory ClaimPayee ({
   Reference organization,
   Reference person,
 
-  }) = ClaimPayee;
+  }) = _ClaimPayee;
 
 factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
       _$ClaimPayeeFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimPayeeToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimDiagnosis with _$ClaimDiagnosis
-factory ClaimDiagnosis ({
+{factory ClaimDiagnosis ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   PositiveInt sequence,
   Coding diagnosis,
 
-  }) = ClaimDiagnosis;
+  }) = _ClaimDiagnosis;
 
 factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ClaimDiagnosisFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimDiagnosisToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimCoverage with _$ClaimCoverage
-factory ClaimCoverage ({
+{factory ClaimCoverage ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -97,17 +97,17 @@ factory ClaimCoverage ({
   Reference claimResponse,
   Coding originalRuleset,
 
-  }) = ClaimCoverage;
+  }) = _ClaimCoverage;
 
 factory ClaimCoverage.fromJson(Map<String, dynamic> json) =>
       _$ClaimCoverageFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimCoverageToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimItem with _$ClaimItem
-factory ClaimItem ({
+{factory ClaimItem ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -129,17 +129,17 @@ factory ClaimItem ({
   List<ClaimItemDetail> detail,
   ClaimItemProsthesis prosthesis,
 
-  }) = ClaimItem;
+  }) = _ClaimItem;
 
 factory ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimItemToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimItemDetail with _$ClaimItemDetail
-factory ClaimItemDetail ({
+{factory ClaimItemDetail ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -171,13 +171,13 @@ factory ClaimItemDetail ({
   });
   factory ClaimItemDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimItemDetailToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimItemProsthesis with _$ClaimItemProsthesis
-factory ClaimItemProsthesis ({
+{factory ClaimItemProsthesis ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -185,17 +185,17 @@ factory ClaimItemProsthesis ({
   Date priorDate,
   Coding priorMaterial,
 
-  }) = ClaimItemProsthesis;
+  }) = _ClaimItemProsthesis;
 
 factory ClaimItemProsthesis.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemProsthesisFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimItemProsthesisToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimItemDetailSubDetail with _$ClaimItemDetailSubDetail
-factory ClaimItemDetailSubDetail ({
+{factory ClaimItemDetailSubDetail ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -209,17 +209,17 @@ factory ClaimItemDetailSubDetail ({
   Quantity net,
   Coding udi,
 
-  }) = ClaimItemDetailSubDetail;
+  }) = _ClaimItemDetailSubDetail;
 
 factory ClaimItemDetailSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemDetailSubDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimItemDetailSubDetailToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimMissingTeeth with _$ClaimMissingTeeth
-factory ClaimMissingTeeth ({
+{factory ClaimMissingTeeth ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -227,16 +227,16 @@ factory ClaimMissingTeeth ({
   Coding reason,
   Date extractionDate,
 
-  }) = ClaimMissingTeeth;
+  }) = _ClaimMissingTeeth;
 
 factory ClaimMissingTeeth.fromJson(Map<String, dynamic> json) =>
       _$ClaimMissingTeethFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimMissingTeethToJson(this);
+
 }
 
 @freezed
 abstract class ClaimResponse with _$ClaimResponse
-factory ClaimResponse ({
+{factory ClaimResponse ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -272,17 +272,17 @@ factory ClaimResponse ({
   List<ClaimResponseNote> note,
   List<ClaimResponseCoverage> coverage,
 
-  }) = ClaimResponse;
+  }) = _ClaimResponse;
 
 factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimResponseToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimResponseItem with _$ClaimResponseItem
-factory ClaimResponseItem ({
+{factory ClaimResponseItem ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -302,13 +302,13 @@ factory ClaimResponseItem ({
 
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimResponseItemToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimResponseAddItem with _$ClaimResponseAddItem
-factory ClaimResponseAddItem ({
+{factory ClaimResponseAddItem ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -319,17 +319,17 @@ factory ClaimResponseAddItem ({
   List<ClaimResponseAddItemAdjudication> adjudication,
   List<ClaimResponseAddItemDetail> detail,
 
-  }) = ClaimResponseAddItem;
+  }) = _ClaimResponseAddItem;
 
 factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimResponseAddItemToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimResponseError with _$ClaimResponseError
-factory ClaimResponseError ({
+{factory ClaimResponseError ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -338,17 +338,17 @@ factory ClaimResponseError ({
   PositiveInt subdetailSequenceLinkId,
   Coding code,
 
-  }) = ClaimResponseError;
+  }) = _ClaimResponseError;
 
 factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseErrorFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimResponseErrorToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimResponseNote with _$ClaimResponseNote
-factory ClaimResponseNote ({
+{factory ClaimResponseNote ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -356,17 +356,17 @@ factory ClaimResponseNote ({
   Coding type,
   String text,
 
-  }) = ClaimResponseNote;
+  }) = _ClaimResponseNote;
 
 factory ClaimResponseNote.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseNoteFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimResponseNoteToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimResponseCoverage with _$ClaimResponseCoverage
-factory ClaimResponseCoverage ({
+{factory ClaimResponseCoverage ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -379,17 +379,17 @@ factory ClaimResponseCoverage ({
   Reference claimResponse,
   Coding originalRuleset,
 
-  }) = ClaimResponseCoverage;
+  }) = _ClaimResponseCoverage;
 
 factory ClaimResponseCoverage.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseCoverageFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimResponseCoverageToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimResponseItemAdjudication with _$ClaimResponseItemAdjudication
-factory ClaimResponseItemAdjudication ({
+{factory ClaimResponseItemAdjudication ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -397,17 +397,17 @@ factory ClaimResponseItemAdjudication ({
   Quantity amount,
   Decimal value,
 
-  }) = ClaimResponseItemAdjudication;
+  }) = _ClaimResponseItemAdjudication;
 
 factory ClaimResponseItemAdjudication.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemAdjudicationFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimResponseItemAdjudicationToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimResponseItemDetail with _$ClaimResponseItemDetail
-factory ClaimResponseItemDetail ({
+{factory ClaimResponseItemDetail ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -415,17 +415,17 @@ factory ClaimResponseItemDetail ({
   List<ClaimResponseItemDetailAdjudication> adjudication,
   List<ClaimResponseItemDetailSubDetail> subDetail,
 
-  }) = ClaimResponseItemDetail;
+  }) = _ClaimResponseItemDetail;
 
 factory ClaimResponseItemDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimResponseItemDetailToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimResponseAddItemAdjudication with _$ClaimResponseAddItemAdjudication
-factory ClaimResponseAddItemAdjudication ({
+{factory ClaimResponseAddItemAdjudication ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -433,19 +433,19 @@ factory ClaimResponseAddItemAdjudication ({
   Quantity amount,
   Decimal value,
 
-  }) = ClaimResponseAddItemAdjudication;
+  }) = _ClaimResponseAddItemAdjudication;
 
 factory ClaimResponseAddItemAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ClaimResponseAddItemAdjudicationFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ClaimResponseAddItemAdjudicationToJson(this);
+
+
 }
 
 
 @freezed
 abstract class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail
-factory ClaimResponseAddItemDetail ({
+{factory ClaimResponseAddItemDetail ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -453,17 +453,17 @@ factory ClaimResponseAddItemDetail ({
   Quantity fee,
   List<ClaimResponseAddItemDetailAdjudication> adjudication,
 
-  }) = ClaimResponseAddItemDetail;
+  }) = _ClaimResponseAddItemDetail;
 
 factory ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimResponseAddItemDetailToJson(this);
+
 }
 
 
 @freezed
 abstract class ClaimResponseItemDetailAdjudication with _$ClaimResponseItemDetailAdjudication
-factory ClaimResponseItemDetailAdjudication ({
+{factory ClaimResponseItemDetailAdjudication ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -471,38 +471,38 @@ factory ClaimResponseItemDetailAdjudication ({
   Quantity amount,
   Decimal value,
 
-  }) = ClaimResponseItemDetailAdjudication;
+  }) = _ClaimResponseItemDetailAdjudication;
 
 factory ClaimResponseItemDetailAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ClaimResponseItemDetailAdjudicationFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ClaimResponseItemDetailAdjudicationToJson(this);
+
+
 }
 
 
 @freezed
 abstract class ClaimResponseItemDetailSubDetail with _$ClaimResponseItemDetailSubDetail
-factory ClaimResponseItemDetailSubDetail ({
+{factory ClaimResponseItemDetailSubDetail ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   PositiveInt sequenceLinkId,
   List<ClaimResponseItemDetailSubDetailAdjudication> adjudication,
 
-  }) = ClaimResponseItemDetailSubDetail;
+  }) = _ClaimResponseItemDetailSubDetail;
 
 factory ClaimResponseItemDetailSubDetail.fromJson(
           Map<String, dynamic> json) =>
       _$ClaimResponseItemDetailSubDetailFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ClaimResponseItemDetailSubDetailToJson(this);
+
+
 }
 
 
 @freezed
 abstract class ClaimResponseAddItemDetailAdjudication with _$ClaimResponseAddItemDetailAdjudication
-factory ClaimResponseAddItemDetailAdjudication ({
+{factory ClaimResponseAddItemDetailAdjudication ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -510,19 +510,19 @@ factory ClaimResponseAddItemDetailAdjudication ({
   Quantity amount,
   Decimal value,
 
-  }) = ClaimResponseAddItemDetailAdjudication;
+  }) = _ClaimResponseAddItemDetailAdjudication;
 
 factory ClaimResponseAddItemDetailAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ClaimResponseAddItemDetailAdjudicationFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ClaimResponseAddItemDetailAdjudicationToJson(this);
+
+
 }
 
 
 @freezed
 abstract class ClaimResponseItemDetailSubDetailAdjudication with _$ClaimResponseItemDetailSubDetailAdjudication
-factory ClaimResponseItemDetailSubDetailAdjudication ({
+{factory ClaimResponseItemDetailSubDetailAdjudication ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtensi,
@@ -530,11 +530,11 @@ factory ClaimResponseItemDetailSubDetailAdjudication ({
   Quantity amount,
   Decimal value,
 
-  }) = ClaimResponseItemDetailSubDetailAdjudication;
+  }) = _ClaimResponseItemDetailSubDetailAdjudication;
 
 factory ClaimResponseItemDetailSubDetailAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ClaimResponseItemDetailSubDetailAdjudicationFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ClaimResponseItemDetailSubDetailAdjudicationToJson(this);
+
+
 }

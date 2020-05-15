@@ -1,6 +1,6 @@
 @freezed
 abstract class Account with _$Account
-factory Account ({
+{factory Account ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -21,16 +21,16 @@ factory Account ({
   Reference owner,
   String description,
 
-  }) = Account;
+  }) = _Account;
 
 factory Account.fromJson(Map<String, dynamic> json) =>
       _$AccountFromJson(json);
-  Map<String, dynamic> toJson() => _$AccountToJson(this);
+
 }
 
 @freezed
 abstract class ExplanationOfBenefit with _$ExplanationOfBenefit
-factory ExplanationOfBenefit ({
+{factory ExplanationOfBenefit ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -50,9 +50,9 @@ factory ExplanationOfBenefit ({
   Reference requestProvider,
   Reference requestOrganization,
 
-  }) = ExplanationOfBenefit;
+  }) = _ExplanationOfBenefit;
 
 factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefitToJson(this);
+
 }

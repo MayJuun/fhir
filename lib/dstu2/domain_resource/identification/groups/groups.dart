@@ -1,6 +1,6 @@
 @freezed
 abstract class Group with _$Group
-factory Group ({
+{factory Group ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -18,16 +18,16 @@ factory Group ({
   List<GroupCharacteristic> characteristic,
   List<GroupMember> member,
 
-  }) = Group;
+  }) = _Group;
 
 factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
-  Map<String, dynamic> toJson() => _$GroupToJson(this);
+
 }
 
 
 @freezed
 abstract class GroupCharacteristic with _$GroupCharacteristic
-factory GroupCharacteristic ({
+{factory GroupCharacteristic ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -36,17 +36,17 @@ factory GroupCharacteristic ({
   Boolean exclude,
   Period period,
 
-  }) = GroupCharacteristic;
+  }) = _GroupCharacteristic;
 
 factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$GroupCharacteristicFromJson(json);
-  Map<String, dynamic> toJson() => _$GroupCharacteristicToJson(this);
+
 }
 
 
 @freezed
 abstract class GroupMember with _$GroupMember
-factory GroupMember ({
+{factory GroupMember ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -54,16 +54,16 @@ factory GroupMember ({
   Period period,
   Boolean inactive,
 
-  }) = GroupMember;
+  }) = _GroupMember;
 
 factory GroupMember.fromJson(Map<String, dynamic> json) =>
       _$GroupMemberFromJson(json);
-  Map<String, dynamic> toJson() => _$GroupMemberToJson(this);
+
 }
 
 @freezed
 abstract class HealthcareService with _$HealthcareService
-factory HealthcareService ({
+{factory HealthcareService ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -95,34 +95,34 @@ factory HealthcareService ({
   List<HealthcareServiceNotAvailable> notAvailable,
   String availabilityExceptions,
 
-  }) = HealthcareService;
+  }) = _HealthcareService;
 
 factory HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceFromJson(json);
-  Map<String, dynamic> toJson() => _$HealthcareServiceToJson(this);
+
 }
 
 
 @freezed
 abstract class HealthcareServiceServiceType with _$HealthcareServiceServiceType
-factory HealthcareServiceServiceType ({
+{factory HealthcareServiceServiceType ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   CodeableConcept type,
   List<CodeableConcept> specialty,
 
-  }) = HealthcareServiceServiceType;
+  }) = _HealthcareServiceServiceType;
 
 factory HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceServiceTypeFromJson(json);
-  Map<String, dynamic> toJson() => _$HealthcareServiceServiceTypeToJson(this);
+
 }
 
 
 @freezed
 abstract class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime
-factory HealthcareServiceAvailableTime ({
+{factory HealthcareServiceAvailableTime ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -131,33 +131,33 @@ factory HealthcareServiceAvailableTime ({
   Time availableStartTime,
   Time availableEndTime,
 
-  }) = HealthcareServiceAvailableTime;
+  }) = _HealthcareServiceAvailableTime;
 
 factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceAvailableTimeFromJson(json);
-  Map<String, dynamic> toJson() => _$HealthcareServiceAvailableTimeToJson(this);
+
 }
 
 
 @freezed
 abstract class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable
-factory HealthcareServiceNotAvailable ({
+{factory HealthcareServiceNotAvailable ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   String description,
   Period during,
 
-  }) = HealthcareServiceNotAvailable;
+  }) = _HealthcareServiceNotAvailable;
 
 factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceNotAvailableFromJson(json);
-  Map<String, dynamic> toJson() => _$HealthcareServiceNotAvailableToJson(this);
+
 }
 
 @freezed
 abstract class Organization with _$Organization
-factory Organization ({
+{factory Organization ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -175,17 +175,17 @@ factory Organization ({
   Reference partOf,
   List<OrganizationContact> contact,
 
-  }) = Organization;
+  }) = _Organization;
 
 factory Organization.fromJson(Map<String, dynamic> json) =>
       _$OrganizationFromJson(json);
-  Map<String, dynamic> toJson() => _$OrganizationToJson(this);
+
 }
 
 
 @freezed
 abstract class OrganizationContact with _$OrganizationContact
-factory OrganizationContact ({
+{factory OrganizationContact ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -194,9 +194,9 @@ factory OrganizationContact ({
   List<ContactPoint> telecom,
   Address address,
 
-  }) = OrganizationContact;
+  }) = _OrganizationContact;
 
 factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
       _$OrganizationContactFromJson(json);
-  Map<String, dynamic> toJson() => _$OrganizationContactToJson(this);
+
 }

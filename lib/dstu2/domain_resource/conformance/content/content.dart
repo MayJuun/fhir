@@ -1,6 +1,6 @@
 @freezed
 abstract class DataElement with _$DataElement
-factory DataElement ({
+{factory DataElement ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -24,34 +24,34 @@ factory DataElement ({
   List<DataElementMapping> mapping,
   List<ElementDefinition> element,
 
-  }) = DataElement;
+  }) = _DataElement;
 
 factory DataElement.fromJson(Map<String, dynamic> json) =>
       _$DataElementFromJson(json);
-  Map<String, dynamic> toJson() => _$DataElementToJson(this);
+
 }
 
 
 @freezed
 abstract class DataElementContact with _$DataElementContact
-factory DataElementContact ({
+{factory DataElementContact ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   String name,
   List<ContactPoint> telecom,
 
-  }) = DataElementContact;
+  }) = _DataElementContact;
 
 factory DataElementContact.fromJson(Map<String, dynamic> json) =>
       _$DataElementContactFromJson(json);
-  Map<String, dynamic> toJson() => _$DataElementContactToJson(this);
+
 }
 
 
 @freezed
 abstract class DataElementMapping with _$DataElementMapping
-factory DataElementMapping ({
+{factory DataElementMapping ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -60,16 +60,16 @@ factory DataElementMapping ({
   String name,
   String comments,
 
-  }) = DataElementMapping;
+  }) = _DataElementMapping;
 
 factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$DataElementMappingFromJson(json);
-  Map<String, dynamic> toJson() => _$DataElementMappingToJson(this);
+
 }
 
 @freezed
 abstract class StructureDefinition with _$StructureDefinition
-factory StructureDefinition ({
+{factory StructureDefinition ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -104,34 +104,34 @@ factory StructureDefinition ({
   StructureDefinitionSnapshot snapshot,
   StructureDefinitionDifferential differential,
 
-  }) = StructureDefinition;
+  }) = _StructureDefinition;
 
 factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
-  Map<String, dynamic> toJson() => _$StructureDefinitionToJson(this);
+
 }
 
 
 @freezed
 abstract class StructureDefinitionContact with _$StructureDefinitionContact
-factory StructureDefinitionContact ({
+{factory StructureDefinitionContact ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   String name,
   List<ContactPoint> telecom,
 
-  }) = StructureDefinitionContact;
+  }) = _StructureDefinitionContact;
 
 factory StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionContactFromJson(json);
-  Map<String, dynamic> toJson() => _$StructureDefinitionContactToJson(this);
+
 }
 
 
 @freezed
 abstract class StructureDefinitionMapping with _$StructureDefinitionMapping
-factory StructureDefinitionMapping ({
+{factory StructureDefinitionMapping ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -140,42 +140,42 @@ factory StructureDefinitionMapping ({
   String name,
   String comments,
 
-  }) = StructureDefinitionMapping;
+  }) = _StructureDefinitionMapping;
 
 factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionMappingFromJson(json);
-  Map<String, dynamic> toJson() => _$StructureDefinitionMappingToJson(this);
+
 }
 
 
 @freezed
 abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot
-factory StructureDefinitionSnapshot ({
+{factory StructureDefinitionSnapshot ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   List<ElementDefinition> element,
 
-  }) = StructureDefinitionSnapshot;
+  }) = _StructureDefinitionSnapshot;
 
 factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionSnapshotFromJson(json);
-  Map<String, dynamic> toJson() => _$StructureDefinitionSnapshotToJson(this);
+
 }
 
 
 @freezed
 abstract class StructureDefinitionDifferential with _$StructureDefinitionDifferential
-factory StructureDefinitionDifferential ({
+{factory StructureDefinitionDifferential ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   List<ElementDefinition> element,
 
-  }) = StructureDefinitionDifferential;
+  }) = _StructureDefinitionDifferential;
 
 factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionDifferentialFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$StructureDefinitionDifferentialToJson(this);
+
+
 }

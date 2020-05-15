@@ -1,6 +1,6 @@
 @freezed
 abstract class Subscription with _$Subscription
-factory Subscription ({
+{factory Subscription ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -18,17 +18,17 @@ factory Subscription ({
   Instant end,
   List<Coding> tag,
 
-  }) = Subscription;
+  }) = _Subscription;
 
 factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
-  Map<String, dynamic> toJson() => _$SubscriptionToJson(this);
+
 }
 
 
 @freezed
 abstract class SubscriptionChannel with _$SubscriptionChannel
-factory SubscriptionChannel ({
+{factory SubscriptionChannel ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -37,9 +37,9 @@ factory SubscriptionChannel ({
   String payload,
   String header,
 
-  }) = SubscriptionChannel;
+  }) = _SubscriptionChannel;
 
 factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);
-  Map<String, dynamic> toJson() => _$SubscriptionChannelToJson(this);
+
 }

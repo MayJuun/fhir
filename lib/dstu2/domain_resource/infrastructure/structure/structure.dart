@@ -1,6 +1,6 @@
 @freezed
 abstract class Basic with _$Basic
-factory Basic ({
+{factory Basic ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -15,24 +15,24 @@ factory Basic ({
   Reference author,
   Date created,
 
-  }) = Basic;
+  }) = _Basic;
 
 factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
-  Map<String, dynamic> toJson() => _$BasicToJson(this);
+
 }
 
 @freezed
 abstract @freezed
 abstract class Binary with _$Binary
-factory Binary with _$Binary ({
-  factory Binary({
+{factory Binary with _$Binary ({
+{{factory Binary({
     Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
     Code contentType,
     Base64Binary content,
-  }) = _Binary;
+  }) = __Binary;
 
   factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 }
@@ -40,8 +40,8 @@ factory Binary with _$Binary ({
 @freezed
 abstract @freezed
 abstract class Bundle with _$Bundle
-factory Bundle with _$Bundle ({
-  factory Bundle({
+{factory Bundle with _$Bundle ({
+{{factory Bundle({
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -51,14 +51,14 @@ factory Bundle with _$Bundle ({
     List<BundleLink> link,
     List<BundleEntry> entry,
     Signature signature,
-  }) = _Bundle;
+  }) = __Bundle;
 
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 }
 
 @freezed
 abstract class Media with _$Media
-factory Media ({
+{factory Media ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -80,8 +80,8 @@ factory Media ({
   UnsignedInt duration,
   Attachment content,
 
-  }) = Media;
+  }) = _Media;
 
 factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
-  Map<String, dynamic> toJson() => _$MediaToJson(this);
+
 }

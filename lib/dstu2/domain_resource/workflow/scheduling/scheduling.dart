@@ -1,6 +1,6 @@
 @freezed
 abstract class Appointment with _$Appointment
-factory Appointment ({
+{factory Appointment ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -22,17 +22,17 @@ factory Appointment ({
   String comment,
   List<AppointmentParticipant> participant,
 
-  }) = Appointment;
+  }) = _Appointment;
 
 factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
-  Map<String, dynamic> toJson() => _$AppointmentToJson(this);
+
 }
 
 
 @freezed
 abstract class AppointmentParticipant with _$AppointmentParticipant
-factory AppointmentParticipant ({
+{factory AppointmentParticipant ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -41,16 +41,16 @@ factory AppointmentParticipant ({
   Code required,
   Code status,
 
-  }) = AppointmentParticipant;
+  }) = _AppointmentParticipant;
 
 factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
-  Map<String, dynamic> toJson() => _$AppointmentParticipantToJson(this);
+
 }
 
 @freezed
 abstract class AppointmentResponse with _$AppointmentResponse
-factory AppointmentResponse ({
+{factory AppointmentResponse ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -68,16 +68,16 @@ factory AppointmentResponse ({
   Code participantStatus,
   String comment,
 
-  }) = AppointmentResponse;
+  }) = _AppointmentResponse;
 
 factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
-  Map<String, dynamic> toJson() => _$AppointmentResponseToJson(this);
+
 }
 
 @freezed
 abstract class Schedule with _$Schedule
-factory Schedule ({
+{factory Schedule ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -92,16 +92,16 @@ factory Schedule ({
   Period planningHorizon,
   String comment,
 
-  }) = Schedule;
+  }) = _Schedule;
 
 factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
-  Map<String, dynamic> toJson() => _$ScheduleToJson(this);
+
 }
 
 @freezed
 abstract class Slot with _$Slot
-factory Slot ({
+{factory Slot ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -119,8 +119,8 @@ factory Slot ({
   Boolean overbooked,
   String comment,
 
-  }) = Slot;
+  }) = _Slot;
 
 factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
-  Map<String, dynamic> toJson() => _$SlotToJson(this);
+
 }

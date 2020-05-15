@@ -1,6 +1,6 @@
 @freezed
 abstract class Coverage with _$Coverage
-factory Coverage ({
+{factory Coverage ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -24,16 +24,16 @@ factory Coverage ({
   Identifier network,
   List<Reference> contract,
 
-  }) = Coverage;
+  }) = _Coverage;
 
 factory Coverage.fromJson(Map<String, dynamic> json) =>
       _$CoverageFromJson(json);
-  Map<String, dynamic> toJson() => _$CoverageToJson(this);
+
 }
 
 @freezed
 abstract class EligibilityRequest with _$EligibilityRequest
-factory EligibilityRequest ({
+{factory EligibilityRequest ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -50,16 +50,16 @@ factory EligibilityRequest ({
   Reference provider,
   Reference organization,
 
-  }) = EligibilityRequest;
+  }) = _EligibilityRequest;
 
 factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$EligibilityRequestFromJson(json);
-  Map<String, dynamic> toJson() => _$EligibilityRequestToJson(this);
+
 }
 
 @freezed
 abstract class EligibilityResponse with _$EligibilityResponse
-factory EligibilityResponse ({
+{factory EligibilityResponse ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -79,16 +79,16 @@ factory EligibilityResponse ({
   Reference requestProvider,
   Reference requestOrganization,
 
-  }) = EligibilityResponse;
+  }) = _EligibilityResponse;
 
 factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFromJson(json);
-  Map<String, dynamic> toJson() => _$EligibilityResponseToJson(this);
+
 }
 
 @freezed
 abstract class EnrollmentRequest with _$EnrollmentRequest
-factory EnrollmentRequest ({
+{factory EnrollmentRequest ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -108,16 +108,16 @@ factory EnrollmentRequest ({
   Reference coverage,
   Coding relationship,
 
-  }) = EnrollmentRequest;
+  }) = _EnrollmentRequest;
 
 factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentRequestFromJson(json);
-  Map<String, dynamic> toJson() => _$EnrollmentRequestToJson(this);
+
 }
 
 @freezed
 abstract class EnrollmentResponse with _$EnrollmentResponse
-factory EnrollmentResponse ({
+{factory EnrollmentResponse ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -137,9 +137,9 @@ factory EnrollmentResponse ({
   Reference requestProvider,
   Reference requestOrganization,
 
-  }) = EnrollmentResponse;
+  }) = _EnrollmentResponse;
 
 factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentResponseFromJson(json);
-  Map<String, dynamic> toJson() => _$EnrollmentResponseToJson(this);
+
 }

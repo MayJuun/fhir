@@ -1,6 +1,6 @@
 @freezed
 abstract class Contract with _$Contract
-factory Contract ({
+{factory Contract ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -28,34 +28,34 @@ factory Contract ({
   List<ContractLegal> legal,
   List<ContractRule> rule,
 
-  }) = Contract;
+  }) = _Contract;
 
 factory Contract.fromJson(Map<String, dynamic> json) =>
       _$ContractFromJson(json);
-  Map<String, dynamic> toJson() => _$ContractToJson(this);
+
 }
 
 
 @freezed
 abstract class ContractActor with _$ContractActor
-factory ContractActor ({
+{factory ContractActor ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Reference entity,
   List<CodeableConcept> role,
 
-  }) = ContractActor;
+  }) = _ContractActor;
 
 factory ContractActor.fromJson(Map<String, dynamic> json) =>
       _$ContractActorFromJson(json);
-  Map<String, dynamic> toJson() => _$ContractActorToJson(this);
+
 }
 
 
 @freezed
 abstract class ContractValuedItem with _$ContractValuedItem
-factory ContractValuedItem ({
+{factory ContractValuedItem ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -68,17 +68,17 @@ factory ContractValuedItem ({
   Decimal points,
   Quantity net,
 
-  }) = ContractValuedItem;
+  }) = _ContractValuedItem;
 
 factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItemFromJson(json);
-  Map<String, dynamic> toJson() => _$ContractValuedItemToJson(this);
+
 }
 
 
 @freezed
 abstract class ContractSigner with _$ContractSigner
-factory ContractSigner ({
+{factory ContractSigner ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -86,17 +86,17 @@ factory ContractSigner ({
   Reference party,
   String signature,
 
-  }) = ContractSigner;
+  }) = _ContractSigner;
 
 factory ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$ContractSignerFromJson(json);
-  Map<String, dynamic> toJson() => _$ContractSignerToJson(this);
+
 }
 
 
 @freezed
 abstract class ContractTerm with _$ContractTerm
-factory ContractTerm ({
+{factory ContractTerm ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -112,82 +112,82 @@ factory ContractTerm ({
   String text,
   List<ContractTermValuedItem> valuedItem,
 
-  }) = ContractTerm;
+  }) = _ContractTerm;
 
 factory ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$ContractTermFromJson(json);
-  Map<String, dynamic> toJson() => _$ContractTermToJson(this);
+
 }
 
 
 @freezed
 abstract class ContractFriendly with _$ContractFriendly
-factory ContractFriendly ({
+{factory ContractFriendly ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Attachment contentX,
 
-  }) = ContractFriendly;
+  }) = _ContractFriendly;
 
 factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$ContractFriendlyFromJson(json);
-  Map<String, dynamic> toJson() => _$ContractFriendlyToJson(this);
+
 }
 
 
 @freezed
 abstract class ContractLegal with _$ContractLegal
-factory ContractLegal ({
+{factory ContractLegal ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Attachment contentX,
 
-  }) = ContractLegal;
+  }) = _ContractLegal;
 
 factory ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$ContractLegalFromJson(json);
-  Map<String, dynamic> toJson() => _$ContractLegalToJson(this);
+
 }
 
 
 @freezed
 abstract class ContractRule with _$ContractRule
-factory ContractRule ({
+{factory ContractRule ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Attachment contentX,
 
-  }) = ContractRule;
+  }) = _ContractRule;
 
 factory ContractRule.fromJson(Map<String, dynamic> json) =>
       _$ContractRuleFromJson(json);
-  Map<String, dynamic> toJson() => _$ContractRuleToJson(this);
+
 }
 
 
 @freezed
 abstract class ContractTermActor with _$ContractTermActor
-factory ContractTermActor ({
+{factory ContractTermActor ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Reference entity,
   List<CodeableConcept> role,
 
-  }) = ContractTermActor;
+  }) = _ContractTermActor;
 
 factory ContractTermActor.fromJson(Map<String, dynamic> json) =>
       _$ContractTermActorFromJson(json);
-  Map<String, dynamic> toJson() => _$ContractTermActorToJson(this);
+
 }
 
 
 @freezed
 abstract class ContractTermValuedItem with _$ContractTermValuedItem
-factory ContractTermValuedItem ({
+{factory ContractTermValuedItem ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -200,16 +200,16 @@ factory ContractTermValuedItem ({
   Decimal points,
   Quantity net,
 
-  }) = ContractTermValuedItem;
+  }) = _ContractTermValuedItem;
 
 factory ContractTermValuedItem.fromJson(Map<String, dynamic> json) =>
       _$ContractTermValuedItemFromJson(json);
-  Map<String, dynamic> toJson() => _$ContractTermValuedItemToJson(this);
+
 }
 
 @freezed
 abstract class Location with _$Location
-factory Location ({
+{factory Location ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -231,17 +231,17 @@ factory Location ({
   Reference managingOrganization,
   Reference partOf,
 
-  }) = Location;
+  }) = _Location;
 
 factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
-  Map<String, dynamic> toJson() => _$LocationToJson(this);
+
 }
 
 
 @freezed
 abstract class LocationPosition with _$LocationPosition
-factory LocationPosition ({
+{factory LocationPosition ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -249,17 +249,17 @@ factory LocationPosition ({
   Decimal latitude,
   Decimal altitude,
 
-  }) = LocationPosition;
+  }) = _LocationPosition;
 
 factory LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$LocationPositionFromJson(json);
-  Map<String, dynamic> toJson() => _$LocationPositionToJson(this);
+
 }
 
 
 @freezed
 abstract class Person with _$Person
-factory Person ({
+{factory Person ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -279,32 +279,32 @@ factory Person ({
   Boolean active,
   List<PersonLink> link,
 
-  }) = Person;
+  }) = _Person;
 
 factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
-  Map<String, dynamic> toJson() => _$PersonToJson(this);
+
 }
 
 
 @freezed
 abstract class PersonLink with _$PersonLink
-factory PersonLink ({
+{factory PersonLink ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Reference target,
   Code assurance,
 
-  }) = PersonLink;
+  }) = _PersonLink;
 
 factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
-  Map<String, dynamic> toJson() => _$PersonLinkToJson(this);
+
 }
 
 @freezed
 abstract class Substance with _$Substance
-factory Substance ({
+{factory Substance ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -320,17 +320,17 @@ factory Substance ({
   List<SubstanceInstance> instance,
   List<SubstanceIngredient> ingredient,
 
-  }) = Substance;
+  }) = _Substance;
 
 factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
-  Map<String, dynamic> toJson() => _$SubstanceToJson(this);
+
 }
 
 
 @freezed
 abstract class SubstanceInstance with _$SubstanceInstance
-factory SubstanceInstance ({
+{factory SubstanceInstance ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -338,26 +338,26 @@ factory SubstanceInstance ({
   FhirDateTime expiry,
   Quantity quantity,
 
-  }) = SubstanceInstance;
+  }) = _SubstanceInstance;
 
 factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceInstanceFromJson(json);
-  Map<String, dynamic> toJson() => _$SubstanceInstanceToJson(this);
+
 }
 
 
 @freezed
 abstract class SubstanceIngredient with _$SubstanceIngredient
-factory SubstanceIngredient ({
+{factory SubstanceIngredient ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Ratio quantity,
   Reference substance,
 
-  }) = SubstanceIngredient;
+  }) = _SubstanceIngredient;
 
 factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$SubstanceIngredientFromJson(json);
-  Map<String, dynamic> toJson() => _$SubstanceIngredientToJson(this);
+
 }

@@ -1,6 +1,6 @@
 @freezed
 abstract class AuditEvent with _$AuditEvent
-factory AuditEvent ({
+{factory AuditEvent ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -14,17 +14,17 @@ factory AuditEvent ({
   AuditEventSource source,
   List<AuditEventObject> object,
 
-  }) = AuditEvent;
+  }) = _AuditEvent;
 
 factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
-  Map<String, dynamic> toJson() => _$AuditEventToJson(this);
+
 }
 
 
 @freezed
 abstract class AuditEventEvent with _$AuditEventEvent
-factory AuditEventEvent ({
+{factory AuditEventEvent ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -36,17 +36,17 @@ factory AuditEventEvent ({
   String outcomeDesc,
   List<Coding> purposeOfEvent,
 
-  }) = AuditEventEvent;
+  }) = _AuditEventEvent;
 
 factory AuditEventEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventEventFromJson(json);
-  Map<String, dynamic> toJson() => _$AuditEventEventToJson(this);
+
 }
 
 
 @freezed
 abstract class AuditEventParticipant with _$AuditEventParticipant
-factory AuditEventParticipant ({
+{factory AuditEventParticipant ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -62,17 +62,17 @@ factory AuditEventParticipant ({
   AuditEventParticipantNetwork network,
   List<Coding> purposeOfUse,
 
-  }) = AuditEventParticipant;
+  }) = _AuditEventParticipant;
 
 factory AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
       _$AuditEventParticipantFromJson(json);
-  Map<String, dynamic> toJson() => _$AuditEventParticipantToJson(this);
+
 }
 
 
 @freezed
 abstract class AuditEventSource with _$AuditEventSource
-factory AuditEventSource ({
+{factory AuditEventSource ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -80,17 +80,17 @@ factory AuditEventSource ({
   Identifier identifier,
   List<Coding> type,
 
-  }) = AuditEventSource;
+  }) = _AuditEventSource;
 
 factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$AuditEventSourceFromJson(json);
-  Map<String, dynamic> toJson() => _$AuditEventSourceToJson(this);
+
 }
 
 
 @freezed
 abstract class AuditEventObject with _$AuditEventObject
-factory AuditEventObject ({
+{factory AuditEventObject ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -105,50 +105,50 @@ factory AuditEventObject ({
   Base64Binary query,
   List<AuditEventObjectDetail> detail,
 
-  }) = AuditEventObject;
+  }) = _AuditEventObject;
 
 factory AuditEventObject.fromJson(Map<String, dynamic> json) =>
       _$AuditEventObjectFromJson(json);
-  Map<String, dynamic> toJson() => _$AuditEventObjectToJson(this);
+
 }
 
 
 @freezed
 abstract class AuditEventParticipantNetwork with _$AuditEventParticipantNetwork
-factory AuditEventParticipantNetwork ({
+{factory AuditEventParticipantNetwork ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   String address,
   Code type,
 
-  }) = AuditEventParticipantNetwork;
+  }) = _AuditEventParticipantNetwork;
 
 factory AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =>
       _$AuditEventParticipantNetworkFromJson(json);
-  Map<String, dynamic> toJson() => _$AuditEventParticipantNetworkToJson(this);
+
 }
 
 
 @freezed
 abstract class AuditEventObjectDetail with _$AuditEventObjectDetail
-factory AuditEventObjectDetail ({
+{factory AuditEventObjectDetail ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   String type,
   Base64Binary value,
 
-  }) = AuditEventObjectDetail;
+  }) = _AuditEventObjectDetail;
 
 factory AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =>
       _$AuditEventObjectDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$AuditEventObjectDetailToJson(this);
+
 }
 
 @freezed
 abstract class Provenance with _$Provenance
-factory Provenance ({
+{factory Provenance ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -168,17 +168,17 @@ factory Provenance ({
   List<ProvenanceEntity> entity,
   List<Signature> signature,
 
-  }) = Provenance;
+  }) = _Provenance;
 
 factory Provenance.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceFromJson(json);
-  Map<String, dynamic> toJson() => _$ProvenanceToJson(this);
+
 }
 
 
 @freezed
 abstract class ProvenanceAgent with _$ProvenanceAgent
-factory ProvenanceAgent ({
+{factory ProvenanceAgent ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -187,17 +187,17 @@ factory ProvenanceAgent ({
   Identifier userId,
   List<ProvenanceAgentRelatedAgent> relatedAgent,
 
-  }) = ProvenanceAgent;
+  }) = _ProvenanceAgent;
 
 factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentFromJson(json);
-  Map<String, dynamic> toJson() => _$ProvenanceAgentToJson(this);
+
 }
 
 
 @freezed
 abstract class ProvenanceEntity with _$ProvenanceEntity
-factory ProvenanceEntity ({
+{factory ProvenanceEntity ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -206,33 +206,33 @@ factory ProvenanceEntity ({
   FhirUri reference,
   String display,
 
-  }) = ProvenanceEntity;
+  }) = _ProvenanceEntity;
 
 factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);
-  Map<String, dynamic> toJson() => _$ProvenanceEntityToJson(this);
+
 }
 
 
 @freezed
 abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent
-factory ProvenanceAgentRelatedAgent ({
+{factory ProvenanceAgentRelatedAgent ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   CodeableConcept type,
   FhirUri target,
 
-  }) = ProvenanceAgentRelatedAgent;
+  }) = _ProvenanceAgentRelatedAgent;
 
 factory ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentRelatedAgentFromJson(json);
-  Map<String, dynamic> toJson() => _$ProvenanceAgentRelatedAgentToJson(this);
+
 }
 
 @freezed
 abstract class Questionnaire with _$Questionnaire
-factory Questionnaire ({
+{factory Questionnaire ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -250,17 +250,17 @@ factory Questionnaire ({
   List<Code> subjectType,
   QuestionnaireGroup group,
 
-  }) = Questionnaire;
+  }) = _Questionnaire;
 
 factory Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireFromJson(json);
-  Map<String, dynamic> toJson() => _$QuestionnaireToJson(this);
+
 }
 
 
 @freezed
 abstract class QuestionnaireGroup with _$QuestionnaireGroup
-factory QuestionnaireGroup ({
+{factory QuestionnaireGroup ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -286,13 +286,13 @@ factory QuestionnaireGroup ({
 
   factory QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireGroupFromJson(json);
-  Map<String, dynamic> toJson() => _$QuestionnaireGroupToJson(this);
+
 }
 
 
 @freezed
 abstract class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion
-factory QuestionnaireGroupQuestion ({
+{factory QuestionnaireGroupQuestion ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -305,16 +305,16 @@ factory QuestionnaireGroupQuestion ({
   Reference options,
   List<Coding> option,
 
-  }) = QuestionnaireGroupQuestion;
+  }) = _QuestionnaireGroupQuestion;
 
 factory QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireGroupQuestionFromJson(json);
-  Map<String, dynamic> toJson() => _$QuestionnaireGroupQuestionToJson(this);
+
 }
 
 @freezed
 abstract class QuestionnaireResponse with _$QuestionnaireResponse
-factory QuestionnaireResponse ({
+{factory QuestionnaireResponse ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -333,17 +333,17 @@ factory QuestionnaireResponse ({
   Reference encounter,
   QuestionnaireResponseGroup group,
 
-  }) = QuestionnaireResponse;
+  }) = _QuestionnaireResponse;
 
 factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseFromJson(json);
-  Map<String, dynamic> toJson() => _$QuestionnaireResponseToJson(this);
+
 }
 
 
 @freezed
 abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup
-factory QuestionnaireResponseGroup ({
+{factory QuestionnaireResponseGroup ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -353,17 +353,17 @@ factory QuestionnaireResponseGroup ({
   Reference subject,
   List<QuestionnaireResponseGroupQuestion> question,
 
-  }) = QuestionnaireResponseGroup;
+  }) = _QuestionnaireResponseGroup;
 
 factory QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseGroupFromJson(json);
-  Map<String, dynamic> toJson() => _$QuestionnaireResponseGroupToJson(this);
+
 }
 
 
 @freezed
 abstract class QuestionnaireResponseGroupQuestion with _$QuestionnaireResponseGroupQuestion
-factory QuestionnaireResponseGroupQuestion ({
+{factory QuestionnaireResponseGroupQuestion ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -371,29 +371,29 @@ factory QuestionnaireResponseGroupQuestion ({
   String text,
   List<QuestionnaireResponseGroupQuestionAnswer> answer,
 
-  }) = QuestionnaireResponseGroupQuestion;
+  }) = _QuestionnaireResponseGroupQuestion;
 
 factory QuestionnaireResponseGroupQuestion.fromJson(
           Map<String, dynamic> json) =>
       _$QuestionnaireResponseGroupQuestionFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$QuestionnaireResponseGroupQuestionToJson(this);
+
+
 }
 
 
 @freezed
 abstract class QuestionnaireResponseGroupQuestionAnswer with _$QuestionnaireResponseGroupQuestionAnswer
-factory QuestionnaireResponseGroupQuestionAnswer ({
+{factory QuestionnaireResponseGroupQuestionAnswer ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Boolean valueX,
 
-  }) = QuestionnaireResponseGroupQuestionAnswer;
+  }) = _QuestionnaireResponseGroupQuestionAnswer;
 
 factory QuestionnaireResponseGroupQuestionAnswer.fromJson(
           Map<String, dynamic> json) =>
       _$QuestionnaireResponseGroupQuestionAnswerFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$QuestionnaireResponseGroupQuestionAnswerToJson(this);
+
+
 }

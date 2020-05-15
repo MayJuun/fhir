@@ -3,21 +3,16 @@ import 'dart:io';
 void main() async {
   var tempDir = Directory('./lib/dstu2/domain_resource');
 
-  var exp = RegExp(r'.*(?=factory.*\(\{)');
+  var exp = RegExp(r'.*toJson.*');
+  var exp2 = RegExp(r'.*ToJson.*');
   var replace = false;
 
   tempDir.list(recursive: true, followLinks: false).listen(
     (FileSystemEntity entity) async {
       if (entity.path.toString().contains('.dart')) {
         var text = await File(entity.path.toString()).readAsString();
-
-        for (var i = 1; i < text.length; i++) {
-          if (text[i] == '{' && text[i - 1] == '(') replace = true;
-          if (text[i] == ')' && text[i - 1] == '}') replace = false;
-          if (text[i] == ';' && replace) {
-            text = text.replaceRange(i, i + 1, ',');
-          }
-        }
+        text = text.replaceAll(exp, '');
+        text = text.replaceAll(exp2, '');
         // print(text);
 
         // var pieces = text.split('class ');
@@ -41,7 +36,7 @@ void main() async {
         //   }
         // });
         // print(fileText);
-        // await File(entity.path.toString()).writeAsString(text);
+        await File(entity.path.toString()).writeAsString(text);
       }
     },
   );

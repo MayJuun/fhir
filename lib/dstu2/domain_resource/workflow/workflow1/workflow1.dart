@@ -1,6 +1,6 @@
 @freezed
 abstract class CommunicationRequest with _$CommunicationRequest
-factory CommunicationRequest ({
+{factory CommunicationRequest ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -24,32 +24,32 @@ factory CommunicationRequest ({
   Reference subject,
   CodeableConcept priority,
 
-  }) = CommunicationRequest;
+  }) = _CommunicationRequest;
 
 factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
-  Map<String, dynamic> toJson() => _$CommunicationRequestToJson(this);
+
 }
 
 
 @freezed
 abstract class CommunicationRequestPayload with _$CommunicationRequestPayload
-factory CommunicationRequestPayload ({
+{factory CommunicationRequestPayload ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   String contentX,
 
-  }) = CommunicationRequestPayload;
+  }) = _CommunicationRequestPayload;
 
 factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
-  Map<String, dynamic> toJson() => _$CommunicationRequestPayloadToJson(this);
+
 }
 
 @freezed
 abstract class DeviceUseRequest with _$DeviceUseRequest
-factory DeviceUseRequest ({
+{factory DeviceUseRequest ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -72,16 +72,16 @@ factory DeviceUseRequest ({
   Timing timingX,
   Code priority,
 
-  }) = DeviceUseRequest;
+  }) = _DeviceUseRequest;
 
 factory DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseRequestFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceUseRequestToJson(this);
+
 }
 
 @freezed
 abstract class DeviceUseStatement with _$DeviceUseStatement
-factory DeviceUseStatement ({
+{factory DeviceUseStatement ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -100,16 +100,16 @@ factory DeviceUseStatement ({
   Reference subject,
   Timing timingX,
 
-  }) = DeviceUseStatement;
+  }) = _DeviceUseStatement;
 
 factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceUseStatementToJson(this);
+
 }
 
 @freezed
 abstract class Order with _$Order
-factory Order ({
+{factory Order ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -127,32 +127,32 @@ factory Order ({
   OrderWhen when,
   List<Reference> detail,
 
-  }) = Order;
+  }) = _Order;
 
 factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);
-  Map<String, dynamic> toJson() => _$OrderToJson(this);
+
 }
 
 
 @freezed
 abstract class OrderWhen with _$OrderWhen
-factory OrderWhen ({
+{factory OrderWhen ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   CodeableConcept code,
   Timing schedule,
 
-  }) = OrderWhen;
+  }) = _OrderWhen;
 
 factory OrderWhen.fromJson(Map<String, dynamic> json) =>
       _$OrderWhenFromJson(json);
-  Map<String, dynamic> toJson() => _$OrderWhenToJson(this);
+
 }
 
 @freezed
 abstract class OrderResponse with _$OrderResponse
-factory OrderResponse ({
+{factory OrderResponse ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -169,10 +169,10 @@ factory OrderResponse ({
   String description,
   List<Reference> fulfillment,
 
-  }) = OrderResponse;
+  }) = _OrderResponse;
 
 factory OrderResponse.fromJson(Map<String, dynamic> json) =>
       _$OrderResponseFromJson(json);
-  Map<String, dynamic> toJson() => _$OrderResponseToJson(this);
+
 }
 

@@ -1,6 +1,6 @@
 @freezed
 abstract class Patient with _$Patient
-factory Patient ({
+{factory Patient ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -27,17 +27,17 @@ factory Patient ({
   Reference managingOrganization,
   List<PatientLink> link,
 
-  }) = Patient;
+  }) = _Patient;
 
 factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
-  Map<String, dynamic> toJson() => _$PatientToJson(this);
+
 }
 
 
 @freezed
 abstract class PatientContact with _$PatientContact
-factory PatientContact ({
+{factory PatientContact ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -49,17 +49,17 @@ factory PatientContact ({
   Reference organization,
   Period period,
 
-  }) = PatientContact;
+  }) = _PatientContact;
 
 factory PatientContact.fromJson(Map<String, dynamic> json) =>
       _$PatientContactFromJson(json);
-  Map<String, dynamic> toJson() => _$PatientContactToJson(this);
+
 }
 
 
 @freezed
 abstract class PatientAnimal with _$PatientAnimal
-factory PatientAnimal ({
+{factory PatientAnimal ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -67,50 +67,50 @@ factory PatientAnimal ({
   CodeableConcept breed,
   CodeableConcept genderStatus,
 
-  }) = PatientAnimal;
+  }) = _PatientAnimal;
 
 factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
       _$PatientAnimalFromJson(json);
-  Map<String, dynamic> toJson() => _$PatientAnimalToJson(this);
+
 }
 
 
 @freezed
 abstract class PatientCommunication with _$PatientCommunication
-factory PatientCommunication ({
+{factory PatientCommunication ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   CodeableConcept language,
   Boolean preferred,
 
-  }) = PatientCommunication;
+  }) = _PatientCommunication;
 
 factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$PatientCommunicationFromJson(json);
-  Map<String, dynamic> toJson() => _$PatientCommunicationToJson(this);
+
 }
 
 
 @freezed
 abstract class PatientLink with _$PatientLink
-factory PatientLink ({
+{factory PatientLink ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Reference other,
   Code type,
 
-  }) = PatientLink;
+  }) = _PatientLink;
 
 factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
-  Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
+
 }
 
 @freezed
 abstract class Practitioner with _$Practitioner
-factory Practitioner ({
+{factory Practitioner ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -131,17 +131,17 @@ factory Practitioner ({
   List<PractitionerQualification> qualification,
   List<CodeableConcept> communication,
 
-  }) = Practitioner;
+  }) = _Practitioner;
 
 factory Practitioner.fromJson(Map<String, dynamic> json) =>
       _$PractitionerFromJson(json);
-  Map<String, dynamic> toJson() => _$PractitionerToJson(this);
+
 }
 
 
 @freezed
 abstract class PractitionerPractitionerRole with _$PractitionerPractitionerRole
-factory PractitionerPractitionerRole ({
+{factory PractitionerPractitionerRole ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -152,17 +152,17 @@ factory PractitionerPractitionerRole ({
   List<Reference> location,
   List<Reference> healthcareService,
 
-  }) = PractitionerPractitionerRole;
+  }) = _PractitionerPractitionerRole;
 
 factory PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$PractitionerPractitionerRoleFromJson(json);
-  Map<String, dynamic> toJson() => _$PractitionerPractitionerRoleToJson(this);
+
 }
 
 
 @freezed
 abstract class PractitionerQualification with _$PractitionerQualification
-factory PractitionerQualification ({
+{factory PractitionerQualification ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -171,16 +171,16 @@ factory PractitionerQualification ({
   Period period,
   Reference issuer,
 
-  }) = PractitionerQualification;
+  }) = _PractitionerQualification;
 
 factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$PractitionerQualificationFromJson(json);
-  Map<String, dynamic> toJson() => _$PractitionerQualificationToJson(this);
+
 }
 
 @freezed
 abstract class RelatedPerson with _$RelatedPerson
-factory RelatedPerson ({
+{factory RelatedPerson ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -200,9 +200,9 @@ factory RelatedPerson ({
   List<Attachment> photo,
   Period period,
 
-  }) = RelatedPerson;
+  }) = _RelatedPerson;
 
 factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonFromJson(json);
-  Map<String, dynamic> toJson() => _$RelatedPersonToJson(this);
+
 }

@@ -1,6 +1,6 @@
 @freezed
 abstract class Device with _$Device
-factory Device ({
+{factory Device ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -26,15 +26,15 @@ factory Device ({
   List<ContactPoint> contact,
   FhirUri url,
 
-  }) = Device;
+  }) = _Device;
 
 factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceToJson(this);
+
 }
 
 @freezed
 abstract class DeviceComponent with _$DeviceComponent
-factory DeviceComponent ({
+{factory DeviceComponent ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -54,17 +54,17 @@ factory DeviceComponent ({
   List<DeviceComponentProductionSpecification> productionSpecification,
   CodeableConcept languageCode,
 
-  }) = DeviceComponent;
+  }) = _DeviceComponent;
 
 factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$DeviceComponentFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceComponentToJson(this);
+
 }
 
 
 @freezed
 abstract class DeviceComponentProductionSpecification with _$DeviceComponentProductionSpecification
-factory DeviceComponentProductionSpecification ({
+{factory DeviceComponentProductionSpecification ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -72,18 +72,18 @@ factory DeviceComponentProductionSpecification ({
   Identifier componentId,
   String productionSpec,
 
-  }) = DeviceComponentProductionSpecification;
+  }) = _DeviceComponentProductionSpecification;
 
 factory DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
       _$DeviceComponentProductionSpecificationFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$DeviceComponentProductionSpecificationToJson(this);
+
+
 }
 
 @freezed
 abstract class DeviceMetric with _$DeviceMetric
-factory DeviceMetric ({
+{factory DeviceMetric ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -103,17 +103,17 @@ factory DeviceMetric ({
   Timing measurementPeriod,
   List<DeviceMetricCalibration> calibration,
 
-  }) = DeviceMetric;
+  }) = _DeviceMetric;
 
 factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceMetricToJson(this);
+
 }
 
 
 @freezed
 abstract class DeviceMetricCalibration with _$DeviceMetricCalibration
-factory DeviceMetricCalibration ({
+{factory DeviceMetricCalibration ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -131,5 +131,5 @@ factory DeviceMetricCalibration ({
 
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceMetricCalibrationToJson(this);
+
 }

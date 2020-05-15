@@ -1,6 +1,6 @@
 @freezed
 abstract class ProcessRequest with _$ProcessRequest
-factory ProcessRequest ({
+{factory ProcessRequest ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -26,32 +26,32 @@ factory ProcessRequest ({
   List<String> exclude,
   Period period,
 
-  }) = ProcessRequest;
+  }) = _ProcessRequest;
 
 factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestFromJson(json);
-  Map<String, dynamic> toJson() => _$ProcessRequestToJson(this);
+
 }
 
 
 @freezed
 abstract class ProcessRequestItem with _$ProcessRequestItem
-factory ProcessRequestItem ({
+{factory ProcessRequestItem ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Integer sequenceLinkId,
 
-  }) = ProcessRequestItem;
+  }) = _ProcessRequestItem;
 
 factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestItemFromJson(json);
-  Map<String, dynamic> toJson() => _$ProcessRequestItemToJson(this);
+
 }
 
 @freezed
 abstract class ProcessResponse with _$ProcessResponse
-factory ProcessResponse ({
+{factory ProcessResponse ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -74,33 +74,33 @@ factory ProcessResponse ({
   List<ProcessResponseNotes> notes,
   List<Coding> error,
 
-  }) = ProcessResponse;
+  }) = _ProcessResponse;
 
 factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseFromJson(json);
-  Map<String, dynamic> toJson() => _$ProcessResponseToJson(this);
+
 }
 
 
 @freezed
 abstract class ProcessResponseNotes with _$ProcessResponseNotes
-factory ProcessResponseNotes ({
+{factory ProcessResponseNotes ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Coding type,
   String text,
 
-  }) = ProcessResponseNotes;
+  }) = _ProcessResponseNotes;
 
 factory ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseNotesFromJson(json);
-  Map<String, dynamic> toJson() => _$ProcessResponseNotesToJson(this);
+
 }
 
 @freezed
 abstract class SupplyDelivery with _$SupplyDelivery
-factory SupplyDelivery ({
+{factory SupplyDelivery ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -121,17 +121,17 @@ factory SupplyDelivery ({
   Reference destination,
   List<Reference> receiver,
 
-  }) = SupplyDelivery;
+  }) = _SupplyDelivery;
 
 factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
-  Map<String, dynamic> toJson() => _$SupplyDeliveryToJson(this);
+
 }
 
  
 @freezed
 abstract class SupplyRequest with _$SupplyRequest
-factory SupplyRequest ({
+{factory SupplyRequest ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -151,26 +151,26 @@ factory SupplyRequest ({
   CodeableConcept reasonX,
   SupplyRequestWhen when,
 
-  }) = SupplyRequest;
+  }) = _SupplyRequest;
 
 factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);
-  Map<String, dynamic> toJson() => _$SupplyRequestToJson(this);
+
 }
 
 
 @freezed
 abstract class SupplyRequestWhen with _$SupplyRequestWhen
-factory SupplyRequestWhen ({
+{factory SupplyRequestWhen ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   CodeableConcept code,
   Timing schedule,
 
-  }) = SupplyRequestWhen;
+  }) = _SupplyRequestWhen;
 
 factory SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestWhenFromJson(json);
-  Map<String, dynamic> toJson() => _$SupplyRequestWhenToJson(this);
+
 }

@@ -1,6 +1,6 @@
 @freezed
 abstract class PaymentNotice with _$PaymentNotice
-factory PaymentNotice ({
+{factory PaymentNotice ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -20,16 +20,16 @@ factory PaymentNotice ({
   Reference response,
   Coding paymentStatus,
 
-  }) = PaymentNotice;
+  }) = _PaymentNotice;
 
 factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
-  Map<String, dynamic> toJson() => _$PaymentNoticeToJson(this);
+
 }
 
 @freezed
 abstract class PaymentReconciliation with _$PaymentReconciliation
-factory PaymentReconciliation ({
+{factory PaymentReconciliation ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -54,17 +54,17 @@ factory PaymentReconciliation ({
   Quantity total,
   List<PaymentReconciliationNote> note,
 
-  }) = PaymentReconciliation;
+  }) = _PaymentReconciliation;
 
 factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
-  Map<String, dynamic> toJson() => _$PaymentReconciliationToJson(this);
+
 }
 
 
 @freezed
 abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail
-factory PaymentReconciliationDetail ({
+{factory PaymentReconciliationDetail ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -76,26 +76,26 @@ factory PaymentReconciliationDetail ({
   Date date,
   Quantity amount,
 
-  }) = PaymentReconciliationDetail;
+  }) = _PaymentReconciliationDetail;
 
 factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$PaymentReconciliationDetailToJson(this);
+
 }
 
 
 @freezed
 abstract class PaymentReconciliationNote with _$PaymentReconciliationNote
-factory PaymentReconciliationNote ({
+{factory PaymentReconciliationNote ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Coding type,
   String text,
 
-  }) = PaymentReconciliationNote;
+  }) = _PaymentReconciliationNote;
 
 factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationNoteFromJson(json);
-  Map<String, dynamic> toJson() => _$PaymentReconciliationNoteToJson(this);
+
 }

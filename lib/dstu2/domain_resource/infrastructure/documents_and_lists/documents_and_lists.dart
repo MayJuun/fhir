@@ -1,6 +1,6 @@
 @freezed
 abstract class Composition with _$Composition
-factory Composition ({
+{factory Composition ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -24,17 +24,17 @@ factory Composition ({
   Reference encounter,
   List<CompositionSection> section,
 
-  }) = Composition;
+  }) = _Composition;
 
 factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
-  Map<String, dynamic> toJson() => _$CompositionToJson(this);
+
 }
 
 
 @freezed
 abstract class CompositionAttester with _$CompositionAttester
-factory CompositionAttester ({
+{factory CompositionAttester ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -42,17 +42,17 @@ factory CompositionAttester ({
   FhirDateTime time,
   Reference party,
 
-  }) = CompositionAttester;
+  }) = _CompositionAttester;
 
 factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$CompositionAttesterFromJson(json);
-  Map<String, dynamic> toJson() => _$CompositionAttesterToJson(this);
+
 }
 
 
 @freezed
 abstract class CompositionEvent with _$CompositionEvent
-factory CompositionEvent ({
+{factory CompositionEvent ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -60,17 +60,17 @@ factory CompositionEvent ({
   Period period,
   List<Reference> detail,
 
-  }) = CompositionEvent;
+  }) = _CompositionEvent;
 
 factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$CompositionEventFromJson(json);
-  Map<String, dynamic> toJson() => _$CompositionEventToJson(this);
+
 }
 
 
 @freezed
 abstract class CompositionSection with _$CompositionSection
-factory CompositionSection ({
+{factory CompositionSection ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -82,16 +82,16 @@ factory CompositionSection ({
   List<Reference> entry,
   CodeableConcept emptyReason,
 
-  }) = CompositionSection;
+  }) = _CompositionSection;
 
 factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);
-  Map<String, dynamic> toJson() => _$CompositionSectionToJson(this);
+
 }
 
 @freezed
 abstract class DocumentManifest with _$DocumentManifest
-factory DocumentManifest ({
+{factory DocumentManifest ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -113,49 +113,49 @@ factory DocumentManifest ({
   List<DocumentManifestContent> content,
   List<DocumentManifestRelated> related,
 
-  }) = DocumentManifest;
+  }) = _DocumentManifest;
 
 factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
-  Map<String, dynamic> toJson() => _$DocumentManifestToJson(this);
+
 }
 
 
 @freezed
 abstract class DocumentManifestContent with _$DocumentManifestContent
-factory DocumentManifestContent ({
+{factory DocumentManifestContent ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Attachment pX,
 
-  }) = DocumentManifestContent;
+  }) = _DocumentManifestContent;
 
 factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestContentFromJson(json);
-  Map<String, dynamic> toJson() => _$DocumentManifestContentToJson(this);
+
 }
 
 
 @freezed
 abstract class DocumentManifestRelated with _$DocumentManifestRelated
-factory DocumentManifestRelated ({
+{factory DocumentManifestRelated ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Identifier identifier,
   Reference ref,
 
-  }) = DocumentManifestRelated;
+  }) = _DocumentManifestRelated;
 
 factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestRelatedFromJson(json);
-  Map<String, dynamic> toJson() => _$DocumentManifestRelatedToJson(this);
+
 }
 
 @freezed
 abstract class DocumentReference with _$DocumentReference
-factory DocumentReference ({
+{factory DocumentReference ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -182,51 +182,51 @@ factory DocumentReference ({
   List<DocumentReferenceContent> content,
   DocumentReferenceContext context,
 
-  }) = DocumentReference;
+  }) = _DocumentReference;
 
 factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
-  Map<String, dynamic> toJson() => _$DocumentReferenceToJson(this);
+
 }
 
 
 @freezed
 abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo
-factory DocumentReferenceRelatesTo ({
+{factory DocumentReferenceRelatesTo ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Code code,
   Reference target,
 
-  }) = DocumentReferenceRelatesTo;
+  }) = _DocumentReferenceRelatesTo;
 
 factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatesToFromJson(json);
-  Map<String, dynamic> toJson() => _$DocumentReferenceRelatesToToJson(this);
+
 }
 
 
 @freezed
 abstract class DocumentReferenceContent with _$DocumentReferenceContent
-factory DocumentReferenceContent ({
+{factory DocumentReferenceContent ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Attachment attachment,
   List<Coding> format,
 
-  }) = DocumentReferenceContent;
+  }) = _DocumentReferenceContent;
 
 factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContentFromJson(json);
-  Map<String, dynamic> toJson() => _$DocumentReferenceContentToJson(this);
+
 }
 
 
 @freezed
 abstract class DocumentReferenceContext with _$DocumentReferenceContext
-factory DocumentReferenceContext ({
+{factory DocumentReferenceContext ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -238,17 +238,17 @@ factory DocumentReferenceContext ({
   Reference sourcePatientInfo,
   List<DocumentReferenceContextRelated> related,
 
-  }) = DocumentReferenceContext;
+  }) = _DocumentReferenceContext;
 
 factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextFromJson(json);
-  Map<String, dynamic> toJson() => _$DocumentReferenceContextToJson(this);
+
 }
 
 
 @freezed
 abstract class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated
-factory DocumentReferenceContextRelated ({
+{factory DocumentReferenceContextRelated ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -264,13 +264,13 @@ factory DocumentReferenceContextRelated ({
 
   factory DocumentReferenceContextRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextRelatedFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$DocumentReferenceContextRelatedToJson(this);
+
+
 }
 
 @freezed
 abstract class Lists with _$Lists
-factory Lists ({
+{factory Lists ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -293,16 +293,16 @@ factory Lists ({
   List<ListEntry> entry,
   CodeableConcept emptyReason,
 
-  }) = Lists;
+  }) = _Lists;
 
 factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
-  Map<String, dynamic> toJson() => _$ListsToJson(this);
+
 }
 
 
 @freezed
 abstract class ListEntry with _$ListEntry
-factory ListEntry ({
+{factory ListEntry ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -311,9 +311,9 @@ factory ListEntry ({
   FhirDateTime date,
   Reference item,
 
-  }) = ListEntry;
+  }) = _ListEntry;
 
 factory ListEntry.fromJson(Map<String, dynamic> json) =>
       _$ListEntryFromJson(json);
-  Map<String, dynamic> toJson() => _$ListEntryToJson(this);
+
 }

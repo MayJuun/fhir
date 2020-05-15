@@ -1,6 +1,6 @@
 @freezed
 abstract class ImplementationGuide with _$ImplementationGuide
-factory ImplementationGuide ({
+{factory ImplementationGuide ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -27,51 +27,51 @@ factory ImplementationGuide ({
   List<FhirUri> binary,
   ImplementationGuidePage page,
 
-  }) = ImplementationGuide;
+  }) = _ImplementationGuide;
 
 factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideFromJson(json);
-  Map<String, dynamic> toJson() => _$ImplementationGuideToJson(this);
+
 }
 
 
 @freezed
 abstract class ImplementationGuideContact with _$ImplementationGuideContact
-factory ImplementationGuideContact ({
+{factory ImplementationGuideContact ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   String name,
   List<ContactPoint> telecom,
 
-  }) = ImplementationGuideContact;
+  }) = _ImplementationGuideContact;
 
 factory ImplementationGuideContact.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideContactFromJson(json);
-  Map<String, dynamic> toJson() => _$ImplementationGuideContactToJson(this);
+
 }
 
 
 @freezed
 abstract class ImplementationGuideDependency with _$ImplementationGuideDependency
-factory ImplementationGuideDependency ({
+{factory ImplementationGuideDependency ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Code type,
   FhirUri uri,
 
-  }) = ImplementationGuideDependency;
+  }) = _ImplementationGuideDependency;
 
 factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDependencyFromJson(json);
-  Map<String, dynamic> toJson() => _$ImplementationGuideDependencyToJson(this);
+
 }
 
 
 @freezed
 abstract class ImplementationGuidePackage with _$ImplementationGuidePackage
-factory ImplementationGuidePackage ({
+{factory ImplementationGuidePackage ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -79,34 +79,34 @@ factory ImplementationGuidePackage ({
   String description,
   List<ImplementationGuidePackageResource> resource,
 
-  }) = ImplementationGuidePackage;
+  }) = _ImplementationGuidePackage;
 
 factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePackageFromJson(json);
-  Map<String, dynamic> toJson() => _$ImplementationGuidePackageToJson(this);
+
 }
 
 
 @freezed
 abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal
-factory ImplementationGuideGlobal ({
+{factory ImplementationGuideGlobal ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   Code type,
   Reference profile,
 
-  }) = ImplementationGuideGlobal;
+  }) = _ImplementationGuideGlobal;
 
 factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideGlobalFromJson(json);
-  Map<String, dynamic> toJson() => _$ImplementationGuideGlobalToJson(this);
+
 }
 
 
 @freezed
 abstract class ImplementationGuidePage with _$ImplementationGuidePage
-factory ImplementationGuidePage ({
+{factory ImplementationGuidePage ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -117,17 +117,17 @@ factory ImplementationGuidePage ({
   List<String> package,
   Code format,
 
-  }) = ImplementationGuidePage;
+  }) = _ImplementationGuidePage;
 
 factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePageFromJson(json);
-  Map<String, dynamic> toJson() => _$ImplementationGuidePageToJson(this);
+
 }
 
 
 @freezed
 abstract class ImplementationGuidePackageResource with _$ImplementationGuidePackageResource
-factory ImplementationGuidePackageResource ({
+{factory ImplementationGuidePackageResource ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -138,18 +138,18 @@ factory ImplementationGuidePackageResource ({
   FhirUri sourceX,
   Reference exampleFor,
 
-  }) = ImplementationGuidePackageResource;
+  }) = _ImplementationGuidePackageResource;
 
 factory ImplementationGuidePackageResource.fromJson(
           Map<String, dynamic> json) =>
       _$ImplementationGuidePackageResourceFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ImplementationGuidePackageResourceToJson(this);
+
+
 }
 
 @freezed
 abstract class TestScript with _$TestScript
-factory TestScript ({
+{factory TestScript ({
   Id id,
   Meta meta,
   FhirUri implicitRules,
@@ -180,51 +180,51 @@ factory TestScript ({
   List<TestScriptTest> test,
   TestScriptTeardown teardown,
 
-  }) = TestScript;
+  }) = _TestScript;
 
 factory TestScript.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptContact with _$TestScriptContact
-factory TestScriptContact ({
+{factory TestScriptContact ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   String name,
   List<ContactPoint> telecom,
 
-  }) = TestScriptContact;
+  }) = _TestScriptContact;
 
 factory TestScriptContact.fromJson(Map<String, dynamic> json) =>
       _$TestScriptContactFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptContactToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptMetadata with _$TestScriptMetadata
-factory TestScriptMetadata ({
+{factory TestScriptMetadata ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   List<TestScriptMetadataLink> link,
   List<TestScriptMetadataCapability> capability,
 
-  }) = TestScriptMetadata;
+  }) = _TestScriptMetadata;
 
 factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptMetadataToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptFixture with _$TestScriptFixture
-factory TestScriptFixture ({
+{factory TestScriptFixture ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -232,17 +232,17 @@ factory TestScriptFixture ({
   Boolean autodelete,
   Reference resource,
 
-  }) = TestScriptFixture;
+  }) = _TestScriptFixture;
 
 factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFixtureFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptFixtureToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptVariable with _$TestScriptVariable
-factory TestScriptVariable ({
+{factory TestScriptVariable ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -251,33 +251,33 @@ factory TestScriptVariable ({
   String path,
   Id sourceId,
 
-  }) = TestScriptVariable;
+  }) = _TestScriptVariable;
 
 factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$TestScriptVariableFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptVariableToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptSetup with _$TestScriptSetup
-factory TestScriptSetup ({
+{factory TestScriptSetup ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   List<TestScriptSetupAction> action,
 
-  }) = TestScriptSetup;
+  }) = _TestScriptSetup;
 
 factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptSetupToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptTest with _$TestScriptTest
-factory TestScriptTest ({
+{factory TestScriptTest ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -285,50 +285,50 @@ factory TestScriptTest ({
   String description,
   List<TestScriptTestAction> action,
 
-  }) = TestScriptTest;
+  }) = _TestScriptTest;
 
 factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTestFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptTestToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptTeardown with _$TestScriptTeardown
-factory TestScriptTeardown ({
+{factory TestScriptTeardown ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   List<TestScriptTeardownAction> action,
 
-  }) = TestScriptTeardown;
+  }) = _TestScriptTeardown;
 
 factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTeardownFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptTeardownToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptMetadataLink with _$TestScriptMetadataLink
-factory TestScriptMetadataLink ({
+{factory TestScriptMetadataLink ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   FhirUri url,
   String description,
 
-  }) = TestScriptMetadataLink;
+  }) = _TestScriptMetadataLink;
 
 factory TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataLinkFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptMetadataLinkToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptMetadataCapability with _$TestScriptMetadataCapability
-factory TestScriptMetadataCapability ({
+{factory TestScriptMetadataCapability ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -339,65 +339,65 @@ factory TestScriptMetadataCapability ({
   List<FhirUri> link,
   Reference conformance,
 
-  }) = TestScriptMetadataCapability;
+  }) = _TestScriptMetadataCapability;
 
 factory TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataCapabilityFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptMetadataCapabilityToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptSetupAction with _$TestScriptSetupAction
-factory TestScriptSetupAction ({
+{factory TestScriptSetupAction ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   TestScriptSetupActionOperation operation,
   TestScriptSetupActionAssert asserts,
 
-  }) = TestScriptSetupAction;
+  }) = _TestScriptSetupAction;
 
 factory TestScriptSetupAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupActionFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptSetupActionToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptTestAction with _$TestScriptTestAction
-factory TestScriptTestAction ({
+{factory TestScriptTestAction ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
 
-  }) = TestScriptTestAction;
+  }) = _TestScriptTestAction;
 
 factory TestScriptTestAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTestActionFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptTestActionToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptTeardownAction with _$TestScriptTeardownAction
-factory TestScriptTeardownAction ({
+{factory TestScriptTeardownAction ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
   TestScriptSetupActionOperation operation,
 
-  }) = TestScriptTeardownAction;
+  }) = _TestScriptTeardownAction;
 
 factory TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTeardownActionFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptTeardownActionToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptSetupActionOperation with _$TestScriptSetupActionOperation
-factory TestScriptSetupActionOperation ({
+{factory TestScriptSetupActionOperation ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -416,17 +416,17 @@ factory TestScriptSetupActionOperation ({
   Id targetId,
   String url,
 
-  }) = TestScriptSetupActionOperation;
+  }) = _TestScriptSetupActionOperation;
 
 factory TestScriptSetupActionOperation.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupActionOperationFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptSetupActionOperationToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptSetupActionAssert with _$TestScriptSetupActionAssert
-factory TestScriptSetupActionAssert ({
+{factory TestScriptSetupActionAssert ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtension,
@@ -449,28 +449,28 @@ factory TestScriptSetupActionAssert ({
   String value,
   Boolean warningOnly,
 
-  }) = TestScriptSetupActionAssert;
+  }) = _TestScriptSetupActionAssert;
 
 factory TestScriptSetupActionAssert.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupActionAssertFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptSetupActionAssertToJson(this);
+
 }
 
 
 @freezed
 abstract class TestScriptSetupActionOperationRequestHeader with _$TestScriptSetupActionOperationRequestHeader
-factory TestScriptSetupActionOperationRequestHeader ({
+{factory TestScriptSetupActionOperationRequestHeader ({
   Id id,
   List<Extension> extension,
   List<Extension> modifierExtensio,
   String field,
   String value,
 
-  }) = TestScriptSetupActionOperationRequestHeader;
+  }) = _TestScriptSetupActionOperationRequestHeader;
 
 factory TestScriptSetupActionOperationRequestHeader.fromJson(
           Map<String, dynamic> json) =>
       _$TestScriptSetupActionOperationRequestHeaderFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$TestScriptSetupActionOperationRequestHeaderToJson(this);
+
+
 }
