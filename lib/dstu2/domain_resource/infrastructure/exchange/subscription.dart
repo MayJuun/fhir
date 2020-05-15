@@ -1,4 +1,6 @@
-class Subscription {
+@freezed
+abstract class Subscription with _$Subscription
+factory Subscription {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -16,32 +18,17 @@ class Subscription {
   Instant end;
   List<Coding> tag;
 
-  Subscription({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.criteria,
-    this.contact,
-    this.reason,
-    this.status,
-    this.error,
-    this.channel,
-    this.end,
-    this.tag,
-  });
+  }) = Subscription;
 
-  factory Subscription.fromJson(Map<String, dynamic> json) =>
+factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
   Map<String, dynamic> toJson() => _$SubscriptionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class SubscriptionChannel {
+
+@freezed
+abstract class SubscriptionChannel with _$SubscriptionChannel
+factory SubscriptionChannel {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -50,17 +37,9 @@ class SubscriptionChannel {
   String payload;
   String header;
 
-  SubscriptionChannel({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.endpoint,
-    this.payload,
-    this.header,
-  });
+  }) = SubscriptionChannel;
 
-  factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
+factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);
   Map<String, dynamic> toJson() => _$SubscriptionChannelToJson(this);
 }

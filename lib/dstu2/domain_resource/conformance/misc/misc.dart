@@ -1,4 +1,6 @@
-class ImplementationGuide {
+@freezed
+abstract class ImplementationGuide with _$ImplementationGuide
+factory ImplementationGuide {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -25,83 +27,51 @@ class ImplementationGuide {
   List<FhirUri> binary;
   ImplementationGuidePage page;
 
-  ImplementationGuide({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.url,
-    this.version,
-    this.name,
-    this.status,
-    this.experimental,
-    this.publisher,
-    this.contact,
-    this.date,
-    this.description,
-    this.useContext,
-    this.copyright,
-    this.fhirVersion,
-    this.dependency,
-    this.package,
-    this.global,
-    this.binary,
-    this.page,
-  });
+  }) = ImplementationGuide;
 
-  factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
+factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuideToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImplementationGuideContact {
+
+@freezed
+abstract class ImplementationGuideContact with _$ImplementationGuideContact
+factory ImplementationGuideContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   List<ContactPoint> telecom;
 
-  ImplementationGuideContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.telecom,
-  });
+  }) = ImplementationGuideContact;
 
-  factory ImplementationGuideContact.fromJson(Map<String, dynamic> json) =>
+factory ImplementationGuideContact.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideContactFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuideContactToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImplementationGuideDependency {
+
+@freezed
+abstract class ImplementationGuideDependency with _$ImplementationGuideDependency
+factory ImplementationGuideDependency {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code type;
   FhirUri uri;
 
-  ImplementationGuideDependency({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.uri,
-  });
+  }) = ImplementationGuideDependency;
 
-  factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
+factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDependencyFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuideDependencyToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImplementationGuidePackage {
+
+@freezed
+abstract class ImplementationGuidePackage with _$ImplementationGuidePackage
+factory ImplementationGuidePackage {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -109,43 +79,34 @@ class ImplementationGuidePackage {
   String description;
   List<ImplementationGuidePackageResource> resource;
 
-  ImplementationGuidePackage({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.description,
-    this.resource,
-  });
+  }) = ImplementationGuidePackage;
 
-  factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
+factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePackageFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuidePackageToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImplementationGuideGlobal {
+
+@freezed
+abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal
+factory ImplementationGuideGlobal {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code type;
   Reference profile;
 
-  ImplementationGuideGlobal({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.profile,
-  });
+  }) = ImplementationGuideGlobal;
 
-  factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
+factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideGlobalFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuideGlobalToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImplementationGuidePage {
+
+@freezed
+abstract class ImplementationGuidePage with _$ImplementationGuidePage
+factory ImplementationGuidePage {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -156,25 +117,17 @@ class ImplementationGuidePage {
   List<String> package;
   Code format;
 
-  ImplementationGuidePage({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.source,
-    this.name,
-    this.kind,
-    this.type,
-    this.package,
-    this.format,
-  });
+  }) = ImplementationGuidePage;
 
-  factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
+factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePageFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuidePageToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImplementationGuidePackageResource {
+
+@freezed
+abstract class ImplementationGuidePackageResource with _$ImplementationGuidePackageResource
+factory ImplementationGuidePackageResource {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -185,26 +138,18 @@ class ImplementationGuidePackageResource {
   FhirUri sourceX;
   Reference exampleFor;
 
-  ImplementationGuidePackageResource({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.purpose,
-    this.name,
-    this.description,
-    this.acronym,
-    this.sourceX,
-    this.exampleFor,
-  });
+  }) = ImplementationGuidePackageResource;
 
-  factory ImplementationGuidePackageResource.fromJson(
+factory ImplementationGuidePackageResource.fromJson(
           Map<String, dynamic> json) =>
       _$ImplementationGuidePackageResourceFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ImplementationGuidePackageResourceToJson(this);
 }
 
-class TestScript {
+@freezed
+abstract class TestScript with _$TestScript
+factory TestScript {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -235,87 +180,51 @@ class TestScript {
   List<TestScriptTest> test;
   TestScriptTeardown teardown;
 
-  TestScript({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.url,
-    this.version,
-    this.name,
-    this.status,
-    this.identifier,
-    this.experimental,
-    this.publisher,
-    this.contact,
-    this.date,
-    this.description,
-    this.useContext,
-    this.requirements,
-    this.copyright,
-    this.metadata,
-    this.multiserver,
-    this.fixture,
-    this.profile,
-    this.variable,
-    this.setup,
-    this.test,
-    this.teardown,
-  });
+  }) = TestScript;
 
-  factory TestScript.fromJson(Map<String, dynamic> json) =>
+factory TestScript.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptContact {
+
+@freezed
+abstract class TestScriptContact with _$TestScriptContact
+factory TestScriptContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   List<ContactPoint> telecom;
 
-  TestScriptContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.telecom,
-  });
+  }) = TestScriptContact;
 
-  factory TestScriptContact.fromJson(Map<String, dynamic> json) =>
+factory TestScriptContact.fromJson(Map<String, dynamic> json) =>
       _$TestScriptContactFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptContactToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptMetadata {
+
+@freezed
+abstract class TestScriptMetadata with _$TestScriptMetadata
+factory TestScriptMetadata {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<TestScriptMetadataLink> link;
   List<TestScriptMetadataCapability> capability;
 
-  TestScriptMetadata({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.link,
-    this.capability,
-  });
+  }) = TestScriptMetadata;
 
-  factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
+factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptMetadataToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptFixture {
+
+@freezed
+abstract class TestScriptFixture with _$TestScriptFixture
+factory TestScriptFixture {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -323,22 +232,17 @@ class TestScriptFixture {
   Boolean autodelete;
   Reference resource;
 
-  TestScriptFixture({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.autocreate,
-    this.autodelete,
-    this.resource,
-  });
+  }) = TestScriptFixture;
 
-  factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
+factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFixtureFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptFixtureToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptVariable {
+
+@freezed
+abstract class TestScriptVariable with _$TestScriptVariable
+factory TestScriptVariable {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -347,42 +251,33 @@ class TestScriptVariable {
   String path;
   Id sourceId;
 
-  TestScriptVariable({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.headerField,
-    this.path,
-    this.sourceId,
-  });
+  }) = TestScriptVariable;
 
-  factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
+factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$TestScriptVariableFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptVariableToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptSetup {
+
+@freezed
+abstract class TestScriptSetup with _$TestScriptSetup
+factory TestScriptSetup {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<TestScriptSetupAction> action;
 
-  TestScriptSetup({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.action,
-  });
+  }) = TestScriptSetup;
 
-  factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
+factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptSetupToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptTest {
+
+@freezed
+abstract class TestScriptTest with _$TestScriptTest
+factory TestScriptTest {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -390,62 +285,50 @@ class TestScriptTest {
   String description;
   List<TestScriptTestAction> action;
 
-  TestScriptTest({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.description,
-    this.action,
-  });
+  }) = TestScriptTest;
 
-  factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
+factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTestFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptTestToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptTeardown {
+
+@freezed
+abstract class TestScriptTeardown with _$TestScriptTeardown
+factory TestScriptTeardown {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<TestScriptTeardownAction> action;
 
-  TestScriptTeardown({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.action,
-  });
+  }) = TestScriptTeardown;
 
-  factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
+factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTeardownFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptTeardownToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptMetadataLink {
+
+@freezed
+abstract class TestScriptMetadataLink with _$TestScriptMetadataLink
+factory TestScriptMetadataLink {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   FhirUri url;
   String description;
 
-  TestScriptMetadataLink({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.url,
-    this.description,
-  });
+  }) = TestScriptMetadataLink;
 
-  factory TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =>
+factory TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataLinkFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptMetadataLinkToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptMetadataCapability {
+
+@freezed
+abstract class TestScriptMetadataCapability with _$TestScriptMetadataCapability
+factory TestScriptMetadataCapability {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -456,82 +339,65 @@ class TestScriptMetadataCapability {
   List<FhirUri> link;
   Reference conformance;
 
-  TestScriptMetadataCapability({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.required,
-    this.validated,
-    this.description,
-    this.destination,
-    this.link,
-    this.conformance,
-  });
+  }) = TestScriptMetadataCapability;
 
-  factory TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =>
+factory TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataCapabilityFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptMetadataCapabilityToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptSetupAction {
+
+@freezed
+abstract class TestScriptSetupAction with _$TestScriptSetupAction
+factory TestScriptSetupAction {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   TestScriptSetupActionOperation operation;
   TestScriptSetupActionAssert asserts;
 
-  TestScriptSetupAction({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.operation,
-    this.asserts,
-  });
+  }) = TestScriptSetupAction;
 
-  factory TestScriptSetupAction.fromJson(Map<String, dynamic> json) =>
+factory TestScriptSetupAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupActionFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptSetupActionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptTestAction {
+
+@freezed
+abstract class TestScriptTestAction with _$TestScriptTestAction
+factory TestScriptTestAction {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
 
-  TestScriptTestAction({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-  });
+  }) = TestScriptTestAction;
 
-  factory TestScriptTestAction.fromJson(Map<String, dynamic> json) =>
+factory TestScriptTestAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTestActionFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptTestActionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptTeardownAction {
+
+@freezed
+abstract class TestScriptTeardownAction with _$TestScriptTeardownAction
+factory TestScriptTeardownAction {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   TestScriptSetupActionOperation operation;
 
-  TestScriptTeardownAction({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.operation,
-  });
+  }) = TestScriptTeardownAction;
 
-  factory TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>
+factory TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTeardownActionFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptTeardownActionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptSetupActionOperation {
+
+@freezed
+abstract class TestScriptSetupActionOperation with _$TestScriptSetupActionOperation
+factory TestScriptSetupActionOperation {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -550,33 +416,17 @@ class TestScriptSetupActionOperation {
   Id targetId;
   String url;
 
-  TestScriptSetupActionOperation({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.resource,
-    this.label,
-    this.description,
-    this.accept,
-    this.contentType,
-    this.destination,
-    this.encodeRequestUrl,
-    this.params,
-    this.requestHeader,
-    this.responseId,
-    this.sourceId,
-    this.targetId,
-    this.url,
-  });
+  }) = TestScriptSetupActionOperation;
 
-  factory TestScriptSetupActionOperation.fromJson(Map<String, dynamic> json) =>
+factory TestScriptSetupActionOperation.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupActionOperationFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptSetupActionOperationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptSetupActionAssert {
+
+@freezed
+abstract class TestScriptSetupActionAssert with _$TestScriptSetupActionAssert
+factory TestScriptSetupActionAssert {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -599,52 +449,26 @@ class TestScriptSetupActionAssert {
   String value;
   Boolean warningOnly;
 
-  TestScriptSetupActionAssert({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.label,
-    this.description,
-    this.direction,
-    this.compareToSourceId,
-    this.compareToSourcePath,
-    this.contentType,
-    this.headerField,
-    this.minimumId,
-    this.navigationLinks,
-    this.operator,
-    this.path,
-    this.resource,
-    this.response,
-    this.responseCode,
-    this.sourceId,
-    this.validateProfileId,
-    this.value,
-    this.warningOnly,
-  });
+  }) = TestScriptSetupActionAssert;
 
-  factory TestScriptSetupActionAssert.fromJson(Map<String, dynamic> json) =>
+factory TestScriptSetupActionAssert.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupActionAssertFromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptSetupActionAssertToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptSetupActionOperationRequestHeader {
+
+@freezed
+abstract class TestScriptSetupActionOperationRequestHeader with _$TestScriptSetupActionOperationRequestHeader
+factory TestScriptSetupActionOperationRequestHeader {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtensio;
   String field;
   String value;
 
-  TestScriptSetupActionOperationRequestHeader({
-    this.id,
-    this.extension,
-    this.modifierExtensio,
-    this.field,
-    this.value,
-  });
+  }) = TestScriptSetupActionOperationRequestHeader;
 
-  factory TestScriptSetupActionOperationRequestHeader.fromJson(
+factory TestScriptSetupActionOperationRequestHeader.fromJson(
           Map<String, dynamic> json) =>
       _$TestScriptSetupActionOperationRequestHeaderFromJson(json);
   Map<String, dynamic> toJson() =>

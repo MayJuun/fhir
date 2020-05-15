@@ -1,4 +1,6 @@
-class AuditEvent {
+@freezed
+abstract class AuditEvent with _$AuditEvent
+factory AuditEvent {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -12,28 +14,17 @@ class AuditEvent {
   AuditEventSource source;
   List<AuditEventObject> object;
 
-  AuditEvent({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.event,
-    this.participant,
-    this.source,
-    this.object,
-  });
+  }) = AuditEvent;
 
-  factory AuditEvent.fromJson(Map<String, dynamic> json) =>
+factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
   Map<String, dynamic> toJson() => _$AuditEventToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class AuditEventEvent {
+
+@freezed
+abstract class AuditEventEvent with _$AuditEventEvent
+factory AuditEventEvent {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -45,26 +36,17 @@ class AuditEventEvent {
   String outcomeDesc;
   List<Coding> purposeOfEvent;
 
-  AuditEventEvent({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.subtype,
-    this.action,
-    this.dateTime,
-    this.outcome,
-    this.outcomeDesc,
-    this.purposeOfEvent,
-  });
+  }) = AuditEventEvent;
 
-  factory AuditEventEvent.fromJson(Map<String, dynamic> json) =>
+factory AuditEventEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventEventFromJson(json);
   Map<String, dynamic> toJson() => _$AuditEventEventToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class AuditEventParticipant {
+
+@freezed
+abstract class AuditEventParticipant with _$AuditEventParticipant
+factory AuditEventParticipant {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -80,30 +62,17 @@ class AuditEventParticipant {
   AuditEventParticipantNetwork network;
   List<Coding> purposeOfUse;
 
-  AuditEventParticipant({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.role,
-    this.reference,
-    this.userId,
-    this.altId,
-    this.name,
-    this.requestor,
-    this.location,
-    this.policy,
-    this.media,
-    this.network,
-    this.purposeOfUse,
-  });
+  }) = AuditEventParticipant;
 
-  factory AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
+factory AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
       _$AuditEventParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$AuditEventParticipantToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class AuditEventSource {
+
+@freezed
+abstract class AuditEventSource with _$AuditEventSource
+factory AuditEventSource {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -111,22 +80,17 @@ class AuditEventSource {
   Identifier identifier;
   List<Coding> type;
 
-  AuditEventSource({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.site,
-    this.identifier,
-    this.type,
-  });
+  }) = AuditEventSource;
 
-  factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
+factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$AuditEventSourceFromJson(json);
   Map<String, dynamic> toJson() => _$AuditEventSourceToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class AuditEventObject {
+
+@freezed
+abstract class AuditEventObject with _$AuditEventObject
+factory AuditEventObject {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -141,70 +105,50 @@ class AuditEventObject {
   Base64Binary query;
   List<AuditEventObjectDetail> detail;
 
-  AuditEventObject({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.reference,
-    this.type,
-    this.role,
-    this.lifecycle,
-    this.securityLabel,
-    this.name,
-    this.description,
-    this.query,
-    this.detail,
-  });
+  }) = AuditEventObject;
 
-  factory AuditEventObject.fromJson(Map<String, dynamic> json) =>
+factory AuditEventObject.fromJson(Map<String, dynamic> json) =>
       _$AuditEventObjectFromJson(json);
   Map<String, dynamic> toJson() => _$AuditEventObjectToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class AuditEventParticipantNetwork {
+
+@freezed
+abstract class AuditEventParticipantNetwork with _$AuditEventParticipantNetwork
+factory AuditEventParticipantNetwork {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String address;
   Code type;
 
-  AuditEventParticipantNetwork({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.address,
-    this.type,
-  });
+  }) = AuditEventParticipantNetwork;
 
-  factory AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =>
+factory AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =>
       _$AuditEventParticipantNetworkFromJson(json);
   Map<String, dynamic> toJson() => _$AuditEventParticipantNetworkToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class AuditEventObjectDetail {
+
+@freezed
+abstract class AuditEventObjectDetail with _$AuditEventObjectDetail
+factory AuditEventObjectDetail {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String type;
   Base64Binary value;
 
-  AuditEventObjectDetail({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.value,
-  });
+  }) = AuditEventObjectDetail;
 
-  factory AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =>
+factory AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =>
       _$AuditEventObjectDetailFromJson(json);
   Map<String, dynamic> toJson() => _$AuditEventObjectDetailToJson(this);
 }
 
-class Provenance {
+@freezed
+abstract class Provenance with _$Provenance
+factory Provenance {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -224,34 +168,17 @@ class Provenance {
   List<ProvenanceEntity> entity;
   List<Signature> signature;
 
-  Provenance({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.target,
-    this.period,
-    this.recorded,
-    this.reason,
-    this.activity,
-    this.location,
-    this.policy,
-    this.agent,
-    this.entity,
-    this.signature,
-  });
+  }) = Provenance;
 
-  factory Provenance.fromJson(Map<String, dynamic> json) =>
+factory Provenance.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceFromJson(json);
   Map<String, dynamic> toJson() => _$ProvenanceToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ProvenanceAgent {
+
+@freezed
+abstract class ProvenanceAgent with _$ProvenanceAgent
+factory ProvenanceAgent {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -260,23 +187,17 @@ class ProvenanceAgent {
   Identifier userId;
   List<ProvenanceAgentRelatedAgent> relatedAgent;
 
-  ProvenanceAgent({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.role,
-    this.actor,
-    this.userId,
-    this.relatedAgent,
-  });
+  }) = ProvenanceAgent;
 
-  factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
+factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentFromJson(json);
   Map<String, dynamic> toJson() => _$ProvenanceAgentToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ProvenanceEntity {
+
+@freezed
+abstract class ProvenanceEntity with _$ProvenanceEntity
+factory ProvenanceEntity {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -285,43 +206,33 @@ class ProvenanceEntity {
   FhirUri reference;
   String display;
 
-  ProvenanceEntity({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.role,
-    this.type,
-    this.reference,
-    this.display,
-  });
+  }) = ProvenanceEntity;
 
-  factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
+factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);
   Map<String, dynamic> toJson() => _$ProvenanceEntityToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ProvenanceAgentRelatedAgent {
+
+@freezed
+abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent
+factory ProvenanceAgentRelatedAgent {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept type;
   FhirUri target;
 
-  ProvenanceAgentRelatedAgent({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.target,
-  });
+  }) = ProvenanceAgentRelatedAgent;
 
-  factory ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =>
+factory ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentRelatedAgentFromJson(json);
   Map<String, dynamic> toJson() => _$ProvenanceAgentRelatedAgentToJson(this);
 }
 
-class Questionnaire {
+@freezed
+abstract class Questionnaire with _$Questionnaire
+factory Questionnaire {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -339,32 +250,17 @@ class Questionnaire {
   List<Code> subjectType;
   QuestionnaireGroup group;
 
-  Questionnaire({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.version,
-    this.status,
-    this.date,
-    this.publisher,
-    this.telecom,
-    this.subjectType,
-    this.group,
-  });
+  }) = Questionnaire;
 
-  factory Questionnaire.fromJson(Map<String, dynamic> json) =>
+factory Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireFromJson(json);
   Map<String, dynamic> toJson() => _$QuestionnaireToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class QuestionnaireGroup {
+
+@freezed
+abstract class QuestionnaireGroup with _$QuestionnaireGroup
+factory QuestionnaireGroup {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -393,8 +289,10 @@ class QuestionnaireGroup {
   Map<String, dynamic> toJson() => _$QuestionnaireGroupToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class QuestionnaireGroupQuestion {
+
+@freezed
+abstract class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion
+factory QuestionnaireGroupQuestion {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -407,26 +305,16 @@ class QuestionnaireGroupQuestion {
   Reference options;
   List<Coding> option;
 
-  QuestionnaireGroupQuestion({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.linkId,
-    this.concept,
-    this.text,
-    this.type,
-    this.required,
-    this.repeats,
-    this.options,
-    this.option,
-  });
+  }) = QuestionnaireGroupQuestion;
 
-  factory QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =>
+factory QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireGroupQuestionFromJson(json);
   Map<String, dynamic> toJson() => _$QuestionnaireGroupQuestionToJson(this);
 }
 
-class QuestionnaireResponse {
+@freezed
+abstract class QuestionnaireResponse with _$QuestionnaireResponse
+factory QuestionnaireResponse {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -445,33 +333,17 @@ class QuestionnaireResponse {
   Reference encounter;
   QuestionnaireResponseGroup group;
 
-  QuestionnaireResponse({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.questionnaire,
-    this.status,
-    this.subject,
-    this.author,
-    this.authored,
-    this.source,
-    this.encounter,
-    this.group,
-  });
+  }) = QuestionnaireResponse;
 
-  factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
+factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseFromJson(json);
   Map<String, dynamic> toJson() => _$QuestionnaireResponseToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class QuestionnaireResponseGroup {
+
+@freezed
+abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup
+factory QuestionnaireResponseGroup {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -481,24 +353,17 @@ class QuestionnaireResponseGroup {
   Reference subject;
   List<QuestionnaireResponseGroupQuestion> question;
 
-  QuestionnaireResponseGroup({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.linkId,
-    this.title,
-    this.text,
-    this.subject,
-    this.question,
-  });
+  }) = QuestionnaireResponseGroup;
 
-  factory QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
+factory QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseGroupFromJson(json);
   Map<String, dynamic> toJson() => _$QuestionnaireResponseGroupToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class QuestionnaireResponseGroupQuestion {
+
+@freezed
+abstract class QuestionnaireResponseGroupQuestion with _$QuestionnaireResponseGroupQuestion
+factory QuestionnaireResponseGroupQuestion {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -506,37 +371,27 @@ class QuestionnaireResponseGroupQuestion {
   String text;
   List<QuestionnaireResponseGroupQuestionAnswer> answer;
 
-  QuestionnaireResponseGroupQuestion({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.linkId,
-    this.text,
-    this.answer,
-  });
+  }) = QuestionnaireResponseGroupQuestion;
 
-  factory QuestionnaireResponseGroupQuestion.fromJson(
+factory QuestionnaireResponseGroupQuestion.fromJson(
           Map<String, dynamic> json) =>
       _$QuestionnaireResponseGroupQuestionFromJson(json);
   Map<String, dynamic> toJson() =>
       _$QuestionnaireResponseGroupQuestionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class QuestionnaireResponseGroupQuestionAnswer {
+
+@freezed
+abstract class QuestionnaireResponseGroupQuestionAnswer with _$QuestionnaireResponseGroupQuestionAnswer
+factory QuestionnaireResponseGroupQuestionAnswer {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Boolean valueX;
 
-  QuestionnaireResponseGroupQuestionAnswer({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.valueX,
-  });
+  }) = QuestionnaireResponseGroupQuestionAnswer;
 
-  factory QuestionnaireResponseGroupQuestionAnswer.fromJson(
+factory QuestionnaireResponseGroupQuestionAnswer.fromJson(
           Map<String, dynamic> json) =>
       _$QuestionnaireResponseGroupQuestionAnswerFromJson(json);
   Map<String, dynamic> toJson() =>

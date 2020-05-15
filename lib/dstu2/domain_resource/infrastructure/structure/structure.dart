@@ -1,4 +1,6 @@
-class Basic {
+@freezed
+abstract class Basic with _$Basic
+factory Basic {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -13,28 +15,16 @@ class Basic {
   Reference author;
   Date created;
 
-  Basic({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.code,
-    this.subject,
-    this.author,
-    this.created,
-  });
+  }) = Basic;
 
-  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
+factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
   Map<String, dynamic> toJson() => _$BasicToJson(this);
 }
 
 @freezed
-abstract class Binary with _$Binary {
+abstract @freezed
+abstract class Binary with _$Binary
+factory Binary with _$Binary {
   factory Binary({
     Id id,
     Meta meta,
@@ -48,7 +38,9 @@ abstract class Binary with _$Binary {
 }
 
 @freezed
-abstract class Bundle with _$Bundle {
+abstract @freezed
+abstract class Bundle with _$Bundle
+factory Bundle with _$Bundle {
   factory Bundle({
     Id id,
     Meta meta,
@@ -64,7 +56,9 @@ abstract class Bundle with _$Bundle {
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 }
 
-class Media {
+@freezed
+abstract class Media with _$Media
+factory Media {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -86,29 +80,8 @@ class Media {
   UnsignedInt duration;
   Attachment content;
 
-  Media({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.subtype,
-    this.identifier,
-    this.subject,
-    this.operator,
-    this.view,
-    this.deviceName,
-    this.height,
-    this.width,
-    this.frames,
-    this.duration,
-    this.content,
-  });
+  }) = Media;
 
-  factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
+factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
   Map<String, dynamic> toJson() => _$MediaToJson(this);
 }

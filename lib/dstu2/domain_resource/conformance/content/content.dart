@@ -1,4 +1,6 @@
-class DataElement {
+@freezed
+abstract class DataElement with _$DataElement
+factory DataElement {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -22,59 +24,34 @@ class DataElement {
   List<DataElementMapping> mapping;
   List<ElementDefinition> element;
 
-  DataElement({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.url,
-    this.identifier,
-    this.version,
-    this.name,
-    this.status,
-    this.experimental,
-    this.publisher,
-    this.contact,
-    this.date,
-    this.useContext,
-    this.copyright,
-    this.stringency,
-    this.mapping,
-    this.element,
-  });
+  }) = DataElement;
 
-  factory DataElement.fromJson(Map<String, dynamic> json) =>
+factory DataElement.fromJson(Map<String, dynamic> json) =>
       _$DataElementFromJson(json);
   Map<String, dynamic> toJson() => _$DataElementToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DataElementContact {
+
+@freezed
+abstract class DataElementContact with _$DataElementContact
+factory DataElementContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   List<ContactPoint> telecom;
 
-  DataElementContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.telecom,
-  });
+  }) = DataElementContact;
 
-  factory DataElementContact.fromJson(Map<String, dynamic> json) =>
+factory DataElementContact.fromJson(Map<String, dynamic> json) =>
       _$DataElementContactFromJson(json);
   Map<String, dynamic> toJson() => _$DataElementContactToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DataElementMapping {
+
+@freezed
+abstract class DataElementMapping with _$DataElementMapping
+factory DataElementMapping {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -83,22 +60,16 @@ class DataElementMapping {
   String name;
   String comments;
 
-  DataElementMapping({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.identity,
-    this.uri,
-    this.name,
-    this.comments,
-  });
+  }) = DataElementMapping;
 
-  factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
+factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$DataElementMappingFromJson(json);
   Map<String, dynamic> toJson() => _$DataElementMappingToJson(this);
 }
 
-class StructureDefinition {
+@freezed
+abstract class StructureDefinition with _$StructureDefinition
+factory StructureDefinition {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -133,70 +104,34 @@ class StructureDefinition {
   StructureDefinitionSnapshot snapshot;
   StructureDefinitionDifferential differential;
 
-  StructureDefinition({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.url,
-    this.identifier,
-    this.version,
-    this.name,
-    this.display,
-    this.status,
-    this.experimental,
-    this.publisher,
-    this.contact,
-    this.date,
-    this.description,
-    this.useContext,
-    this.requirements,
-    this.copyright,
-    this.code,
-    this.fhirVersion,
-    this.mapping,
-    this.kind,
-    this.constrainedType,
-    this.abstract,
-    this.contextType,
-    this.context,
-    this.base,
-    this.snapshot,
-    this.differential,
-  });
+  }) = StructureDefinition;
 
-  factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
+factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$StructureDefinitionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class StructureDefinitionContact {
+
+@freezed
+abstract class StructureDefinitionContact with _$StructureDefinitionContact
+factory StructureDefinitionContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   List<ContactPoint> telecom;
 
-  StructureDefinitionContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.telecom,
-  });
+  }) = StructureDefinitionContact;
 
-  factory StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
+factory StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionContactFromJson(json);
   Map<String, dynamic> toJson() => _$StructureDefinitionContactToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class StructureDefinitionMapping {
+
+@freezed
+abstract class StructureDefinitionMapping with _$StructureDefinitionMapping
+factory StructureDefinitionMapping {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -205,55 +140,41 @@ class StructureDefinitionMapping {
   String name;
   String comments;
 
-  StructureDefinitionMapping({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.identity,
-    this.uri,
-    this.name,
-    this.comments,
-  });
+  }) = StructureDefinitionMapping;
 
-  factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
+factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionMappingFromJson(json);
   Map<String, dynamic> toJson() => _$StructureDefinitionMappingToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class StructureDefinitionSnapshot {
+
+@freezed
+abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot
+factory StructureDefinitionSnapshot {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<ElementDefinition> element;
 
-  StructureDefinitionSnapshot({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.element,
-  });
+  }) = StructureDefinitionSnapshot;
 
-  factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
+factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionSnapshotFromJson(json);
   Map<String, dynamic> toJson() => _$StructureDefinitionSnapshotToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class StructureDefinitionDifferential {
+
+@freezed
+abstract class StructureDefinitionDifferential with _$StructureDefinitionDifferential
+factory StructureDefinitionDifferential {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<ElementDefinition> element;
 
-  StructureDefinitionDifferential({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.element,
-  });
+  }) = StructureDefinitionDifferential;
 
-  factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
+factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionDifferentialFromJson(json);
   Map<String, dynamic> toJson() =>
       _$StructureDefinitionDifferentialToJson(this);

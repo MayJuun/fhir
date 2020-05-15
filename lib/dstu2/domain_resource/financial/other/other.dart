@@ -1,4 +1,6 @@
-class Account {
+@freezed
+abstract class Account with _$Account
+factory Account {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -19,34 +21,16 @@ class Account {
   Reference owner;
   String description;
 
-  Account({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.name,
-    this.type,
-    this.status,
-    this.activePeriod,
-    this.currency,
-    this.balance,
-    this.coveragePeriod,
-    this.subject,
-    this.owner,
-    this.description,
-  });
+  }) = Account;
 
-  factory Account.fromJson(Map<String, dynamic> json) =>
+factory Account.fromJson(Map<String, dynamic> json) =>
       _$AccountFromJson(json);
   Map<String, dynamic> toJson() => _$AccountToJson(this);
 }
 
-class ExplanationOfBenefit {
+@freezed
+abstract class ExplanationOfBenefit with _$ExplanationOfBenefit
+factory ExplanationOfBenefit {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -66,28 +50,9 @@ class ExplanationOfBenefit {
   Reference requestProvider;
   Reference requestOrganization;
 
-  ExplanationOfBenefit({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.request,
-    this.outcome,
-    this.disposition,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.organization,
-    this.requestProvider,
-    this.requestOrganization,
-  });
+  }) = ExplanationOfBenefit;
 
-  factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitToJson(this);
 }

@@ -9,28 +9,29 @@ void main() async {
     (FileSystemEntity entity) async {
       if (entity.path.toString().contains('.dart')) {
         var text = await File(entity.path.toString()).readAsString();
-        var pieces = text.split('class ');
-        var fileText = '';
-        pieces.forEach((element) {
-          if (element.contains(' ')) {
-            var begin = element.substring(0, element.indexOf(' ')) + '\\(\\{';
-            var exp = RegExp('$begin(\n.*)*\\}\\);\n\n.*factory');
+        text.replaceAll(' {', ' ({');
+        // var pieces = text.split('class ');
+        // var fileText = '';
+        // pieces.forEach((element) {
+        //   if (element.contains(' ')) {
+        //     var begin = element.substring(0, element.indexOf(' ')) + '\\(\\{';
+        //     var exp = RegExp('$begin(\n.*)*\\}\\);\n\n.*factory');
 
-            element = element.replaceFirst(exp,
-                '}) = ${element.substring(0, element.indexOf(' '))};\n\nfactory');
-            element = element.replaceAll(
-                '@JsonSerializable(explicitToJson: true, includeIfNull: false)',
-                '');
-            element = '@freezed\nabstract class '
-                    '${element.substring(0, element.indexOf(' '))} with '
-                    '_\$${element.substring(0, element.indexOf(' '))}'
-                    '\nfactory ' +
-                element;
-            fileText += element;
-          }
-        });
-        print(fileText);
-        // await File(entity.path.toString()).writeAsString(pieces.join(''));
+        //     element = element.replaceFirst(exp,
+        //         '}) = ${element.substring(0, element.indexOf(' '))};\n\nfactory');
+        //     element = element.replaceAll(
+        //         '@JsonSerializable(explicitToJson: true, includeIfNull: false)',
+        //         '');
+        //     element = '@freezed\nabstract class '
+        //             '${element.substring(0, element.indexOf(' '))} with '
+        //             '_\$${element.substring(0, element.indexOf(' '))}'
+        //             '\nfactory ' +
+        //         element;
+        //     fileText += element;
+        //   }
+        // });
+        // print(fileText);
+        await File(entity.path.toString()).writeAsString(text);
       }
     },
   );

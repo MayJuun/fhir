@@ -1,4 +1,6 @@
-class CarePlan {
+@freezed
+abstract class CarePlan with _$CarePlan
+factory CarePlan {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -24,82 +26,51 @@ class CarePlan {
   List<CarePlanActivity> activity;
   Annotation note;
 
-  CarePlan({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.subject,
-    this.status,
-    this.context,
-    this.period,
-    this.author,
-    this.modified,
-    this.category,
-    this.description,
-    this.addresses,
-    this.support,
-    this.relatedPlan,
-    this.participant,
-    this.goal,
-    this.activity,
-    this.note,
-  });
+  }) = CarePlan;
 
-  factory CarePlan.fromJson(Map<String, dynamic> json) =>
+factory CarePlan.fromJson(Map<String, dynamic> json) =>
       _$CarePlanFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class CarePlanRelatedPlan {
+
+@freezed
+abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan
+factory CarePlanRelatedPlan {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code code;
   Reference plan;
 
-  CarePlanRelatedPlan({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.plan,
-  });
+  }) = CarePlanRelatedPlan;
 
-  factory CarePlanRelatedPlan.fromJson(Map<String, dynamic> json) =>
+factory CarePlanRelatedPlan.fromJson(Map<String, dynamic> json) =>
       _$CarePlanRelatedPlanFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanRelatedPlanToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class CarePlanParticipant {
+
+@freezed
+abstract class CarePlanParticipant with _$CarePlanParticipant
+factory CarePlanParticipant {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept role;
   Reference member;
 
-  CarePlanParticipant({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.role,
-    this.member,
-  });
+  }) = CarePlanParticipant;
 
-  factory CarePlanParticipant.fromJson(Map<String, dynamic> json) =>
+factory CarePlanParticipant.fromJson(Map<String, dynamic> json) =>
       _$CarePlanParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanParticipantToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class CarePlanActivity {
+
+@freezed
+abstract class CarePlanActivity with _$CarePlanActivity
+factory CarePlanActivity {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -108,23 +79,17 @@ class CarePlanActivity {
   Reference reference;
   CarePlanActivityDetail detail;
 
-  CarePlanActivity({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.actionResulting,
-    this.progress,
-    this.reference,
-    this.detail,
-  });
+  }) = CarePlanActivity;
 
-  factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
+factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
       _$CarePlanActivityFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanActivityToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class CarePlanActivityDetail {
+
+@freezed
+abstract class CarePlanActivityDetail with _$CarePlanActivityDetail
+factory CarePlanActivityDetail {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -144,34 +109,17 @@ class CarePlanActivityDetail {
   Quantity quantity;
   String description;
 
-  CarePlanActivityDetail({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.category,
-    this.code,
-    this.reasonCode,
-    this.reasonReference,
-    this.goal,
-    this.status,
-    this.statusReason,
-    this.prohibited,
-    this.scheduledX,
-    this.location,
-    this.performer,
-    this.productX,
-    this.dailyAmount,
-    this.quantity,
-    this.description,
-  });
+  }) = CarePlanActivityDetail;
 
-  factory CarePlanActivityDetail.fromJson(Map<String, dynamic> json) =>
+factory CarePlanActivityDetail.fromJson(Map<String, dynamic> json) =>
       _$CarePlanActivityDetailFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanActivityDetailToJson(this);
 }
 
 
-class Goal {
+@freezed
+abstract class Goal with _$Goal
+factory Goal {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -195,37 +143,16 @@ class Goal {
   List<Annotation> note;
   List<GoalOutcome> outcome;
 
-  Goal({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.subject,
-    this.startX,
-    this.targetX,
-    this.category,
-    this.description,
-    this.status,
-    this.statusDate,
-    this.statusReason,
-    this.author,
-    this.priority,
-    this.addresses,
-    this.note,
-    this.outcome,
-  });
+  }) = Goal;
 
-  factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
+factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
   Map<String, dynamic> toJson() => _$GoalToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class GoalOutcome {
+
+@freezed
+abstract class GoalOutcome with _$GoalOutcome
+factory GoalOutcome {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -239,7 +166,9 @@ class GoalOutcome {
 }
 
 
-class NutritionOrder {
+@freezed
+abstract class NutritionOrder with _$NutritionOrder
+factory NutritionOrder {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -261,36 +190,17 @@ class NutritionOrder {
   List<NutritionOrderSupplement> supplement;
   NutritionOrderEnteralFormula enteralFormula;
 
-  NutritionOrder({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.patient,
-    this.orderer,
-    this.identifier,
-    this.encounter,
-    this.dateTime,
-    this.status,
-    this.allergyIntolerance,
-    this.foodPreferenceModifier,
-    this.excludeFoodModifier,
-    this.oralDiet,
-    this.supplement,
-    this.enteralFormula,
-  });
+  }) = NutritionOrder;
 
-  factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class NutritionOrderOralDiet {
+
+@freezed
+abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet
+factory NutritionOrderOralDiet {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -301,25 +211,17 @@ class NutritionOrderOralDiet {
   List<CodeableConcept> fluidConsistencyType;
   String instruction;
 
-  NutritionOrderOralDiet({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.schedule,
-    this.nutrient,
-    this.texture,
-    this.fluidConsistencyType,
-    this.instruction,
-  });
+  }) = NutritionOrderOralDiet;
 
-  factory NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderOralDietFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderOralDietToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class NutritionOrderSupplement {
+
+@freezed
+abstract class NutritionOrderSupplement with _$NutritionOrderSupplement
+factory NutritionOrderSupplement {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -329,24 +231,17 @@ class NutritionOrderSupplement {
   Quantity quantity;
   String instruction;
 
-  NutritionOrderSupplement({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.productName,
-    this.schedule,
-    this.quantity,
-    this.instruction,
-  });
+  }) = NutritionOrderSupplement;
 
-  factory NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderSupplementFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderSupplementToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class NutritionOrderEnteralFormula {
+
+@freezed
+abstract class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula
+factory NutritionOrderEnteralFormula {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -360,70 +255,51 @@ class NutritionOrderEnteralFormula {
   Quantity maxVolumeToDeliver;
   String administrationInstruction;
 
-  NutritionOrderEnteralFormula({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.baseFormulaType,
-    this.baseFormulaProductName,
-    this.additiveType,
-    this.additiveProductName,
-    this.caloricDensity,
-    this.routeofAdministration,
-    this.administration,
-    this.maxVolumeToDeliver,
-    this.administrationInstruction,
-  });
+  }) = NutritionOrderEnteralFormula;
 
-  factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderEnteralFormulaFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderEnteralFormulaToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class NutritionOrderOralDietNutrient {
+
+@freezed
+abstract class NutritionOrderOralDietNutrient with _$NutritionOrderOralDietNutrient
+factory NutritionOrderOralDietNutrient {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept modifier;
   Quantity amount;
 
-  NutritionOrderOralDietNutrient({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.modifier,
-    this.amount,
-  });
+  }) = NutritionOrderOralDietNutrient;
 
-  factory NutritionOrderOralDietNutrient.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderOralDietNutrient.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderOralDietNutrientFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderOralDietNutrientToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class NutritionOrderOralDietTexture {
+
+@freezed
+abstract class NutritionOrderOralDietTexture with _$NutritionOrderOralDietTexture
+factory NutritionOrderOralDietTexture {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept modifier;
   CodeableConcept foodType;
 
-  NutritionOrderOralDietTexture({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.modifier,
-    this.foodType,
-  });
+  }) = NutritionOrderOralDietTexture;
 
-  factory NutritionOrderOralDietTexture.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderOralDietTexture.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderOralDietTextureFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderOralDietTextureToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class NutritionOrderEnteralFormulaAdministration {
+
+@freezed
+abstract class NutritionOrderEnteralFormulaAdministration with _$NutritionOrderEnteralFormulaAdministration
+factory NutritionOrderEnteralFormulaAdministration {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -431,16 +307,9 @@ class NutritionOrderEnteralFormulaAdministration {
   Quantity quantity;
   Quantity rateX;
 
-  NutritionOrderEnteralFormulaAdministration({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.schedule,
-    this.quantity,
-    this.rateX,
-  });
+  }) = NutritionOrderEnteralFormulaAdministration;
 
-  factory NutritionOrderEnteralFormulaAdministration.fromJson(
+factory NutritionOrderEnteralFormulaAdministration.fromJson(
           Map<String, dynamic> json) =>
       _$NutritionOrderEnteralFormulaAdministrationFromJson(json);
   Map<String, dynamic> toJson() =>
@@ -448,7 +317,9 @@ class NutritionOrderEnteralFormulaAdministration {
 }
 
 
-class ProcedureRequest {
+@freezed
+abstract class ProcedureRequest with _$ProcedureRequest
+factory ProcedureRequest {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -472,38 +343,17 @@ class ProcedureRequest {
   Reference orderer;
   Code priority;
 
-  ProcedureRequest({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.subject,
-    this.code,
-    this.bodySite,
-    this.reasonX,
-    this.scheduledX,
-    this.encounter,
-    this.performer,
-    this.status,
-    this.notes,
-    this.asNeededX,
-    this.orderedOn,
-    this.orderer,
-    this.priority,
-  });
+  }) = ProcedureRequest;
 
-  factory ProcedureRequest.fromJson(Map<String, dynamic> json) =>
+factory ProcedureRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcedureRequestFromJson(json);
   Map<String, dynamic> toJson() => _$ProcedureRequestToJson(this);
 }
 
 
-class ReferralRequest {
+@freezed
+abstract class ReferralRequest with _$ReferralRequest
+factory ReferralRequest {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -529,40 +379,17 @@ class ReferralRequest {
   List<Reference> supportingInformation;
   Period fulfillmentTime;
 
-  ReferralRequest({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.status,
-    this.identifier,
-    this.date,
-    this.type,
-    this.specialty,
-    this.priority,
-    this.patient,
-    this.requester,
-    this.recipient,
-    this.encounter,
-    this.dateSent,
-    this.reason,
-    this.description,
-    this.serviceRequested,
-    this.supportingInformation,
-    this.fulfillmentTime,
-  });
+  }) = ReferralRequest;
 
-  factory ReferralRequest.fromJson(Map<String, dynamic> json) =>
+factory ReferralRequest.fromJson(Map<String, dynamic> json) =>
       _$ReferralRequestFromJson(json);
   Map<String, dynamic> toJson() => _$ReferralRequestToJson(this);
 }
 
 
-class VisionPrescription {
+@freezed
+abstract class VisionPrescription with _$VisionPrescription
+factory VisionPrescription {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -579,31 +406,17 @@ class VisionPrescription {
   CodeableConcept reasonX;
   List<VisionPrescriptionDispense> dispense;
 
-  VisionPrescription({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.dateWritten,
-    this.patient,
-    this.prescriber,
-    this.encounter,
-    this.reasonX,
-    this.dispense,
-  });
+  }) = VisionPrescription;
 
-  factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
+factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionFromJson(json);
   Map<String, dynamic> toJson() => _$VisionPrescriptionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class VisionPrescriptionDispense {
+
+@freezed
+abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense
+factory VisionPrescriptionDispense {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -623,28 +436,9 @@ class VisionPrescriptionDispense {
   String brand;
   String notes;
 
-  VisionPrescriptionDispense({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.product,
-    this.eye,
-    this.sphere,
-    this.cylinder,
-    this.axis,
-    this.prism,
-    this.base,
-    this.add,
-    this.power,
-    this.backCurve,
-    this.diameter,
-    this.duration,
-    this.color,
-    this.brand,
-    this.notes,
-  });
+  }) = VisionPrescriptionDispense;
 
-  factory VisionPrescriptionDispense.fromJson(Map<String, dynamic> json) =>
+factory VisionPrescriptionDispense.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionDispenseFromJson(json);
   Map<String, dynamic> toJson() => _$VisionPrescriptionDispenseToJson(this);
 }

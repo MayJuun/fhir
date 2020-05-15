@@ -1,5 +1,6 @@
-
-class Patient {
+@freezed
+abstract class Patient with _$Patient
+factory Patient {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -26,41 +27,17 @@ class Patient {
   Reference managingOrganization;
   List<PatientLink> link;
 
-  Patient({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.active,
-    this.name,
-    this.telecom,
-    this.gender,
-    this.birthDate,
-    this.deceasedX,
-    this.address,
-    this.maritalStatus,
-    this.multipleBirthX,
-    this.photo,
-    this.contact,
-    this.animal,
-    this.communication,
-    this.careProvider,
-    this.managingOrganization,
-    this.link,
-  });
+  }) = Patient;
 
-  factory Patient.fromJson(Map<String, dynamic> json) =>
+factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
   Map<String, dynamic> toJson() => _$PatientToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class PatientContact {
+
+@freezed
+abstract class PatientContact with _$PatientContact
+factory PatientContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -72,26 +49,17 @@ class PatientContact {
   Reference organization;
   Period period;
 
-  PatientContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.relationship,
-    this.name,
-    this.telecom,
-    this.address,
-    this.gender,
-    this.organization,
-    this.period,
-  });
+  }) = PatientContact;
 
-  factory PatientContact.fromJson(Map<String, dynamic> json) =>
+factory PatientContact.fromJson(Map<String, dynamic> json) =>
       _$PatientContactFromJson(json);
   Map<String, dynamic> toJson() => _$PatientContactToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class PatientAnimal {
+
+@freezed
+abstract class PatientAnimal with _$PatientAnimal
+factory PatientAnimal {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -99,63 +67,50 @@ class PatientAnimal {
   CodeableConcept breed;
   CodeableConcept genderStatus;
 
-  PatientAnimal({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.species,
-    this.breed,
-    this.genderStatus,
-  });
+  }) = PatientAnimal;
 
-  factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
+factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
       _$PatientAnimalFromJson(json);
   Map<String, dynamic> toJson() => _$PatientAnimalToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class PatientCommunication {
+
+@freezed
+abstract class PatientCommunication with _$PatientCommunication
+factory PatientCommunication {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept language;
   Boolean preferred;
 
-  PatientCommunication({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.language,
-    this.preferred,
-  });
+  }) = PatientCommunication;
 
-  factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
+factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$PatientCommunicationFromJson(json);
   Map<String, dynamic> toJson() => _$PatientCommunicationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class PatientLink {
+
+@freezed
+abstract class PatientLink with _$PatientLink
+factory PatientLink {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Reference other;
   Code type;
 
-  PatientLink({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.other,
-    this.type,
-  });
+  }) = PatientLink;
 
-  factory PatientLink.fromJson(Map<String, dynamic> json) =>
+factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
   Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
 }
 
-class Practitioner {
+@freezed
+abstract class Practitioner with _$Practitioner
+factory Practitioner {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -176,35 +131,17 @@ class Practitioner {
   List<PractitionerQualification> qualification;
   List<CodeableConcept> communication;
 
-  Practitioner({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.active,
-    this.name,
-    this.telecom,
-    this.address,
-    this.gender,
-    this.birthDate,
-    this.photo,
-    this.practitionerRole,
-    this.qualification,
-    this.communication,
-  });
+  }) = Practitioner;
 
-  factory Practitioner.fromJson(Map<String, dynamic> json) =>
+factory Practitioner.fromJson(Map<String, dynamic> json) =>
       _$PractitionerFromJson(json);
   Map<String, dynamic> toJson() => _$PractitionerToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class PractitionerPractitionerRole {
+
+@freezed
+abstract class PractitionerPractitionerRole with _$PractitionerPractitionerRole
+factory PractitionerPractitionerRole {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -215,25 +152,17 @@ class PractitionerPractitionerRole {
   List<Reference> location;
   List<Reference> healthcareService;
 
-  PractitionerPractitionerRole({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.managingOrganization,
-    this.role,
-    this.specialty,
-    this.period,
-    this.location,
-    this.healthcareService,
-  });
+  }) = PractitionerPractitionerRole;
 
-  factory PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) =>
+factory PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$PractitionerPractitionerRoleFromJson(json);
   Map<String, dynamic> toJson() => _$PractitionerPractitionerRoleToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class PractitionerQualification {
+
+@freezed
+abstract class PractitionerQualification with _$PractitionerQualification
+factory PractitionerQualification {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -242,22 +171,16 @@ class PractitionerQualification {
   Period period;
   Reference issuer;
 
-  PractitionerQualification({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.code,
-    this.period,
-    this.issuer,
-  });
+  }) = PractitionerQualification;
 
-  factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
+factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$PractitionerQualificationFromJson(json);
   Map<String, dynamic> toJson() => _$PractitionerQualificationToJson(this);
 }
 
-class RelatedPerson {
+@freezed
+abstract class RelatedPerson with _$RelatedPerson
+factory RelatedPerson {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -277,28 +200,9 @@ class RelatedPerson {
   List<Attachment> photo;
   Period period;
 
-  RelatedPerson({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.patient,
-    this.relationship,
-    this.name,
-    this.telecom,
-    this.gender,
-    this.birthDate,
-    this.address,
-    this.photo,
-    this.period,
-  });
+  }) = RelatedPerson;
 
-  factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
+factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonFromJson(json);
   Map<String, dynamic> toJson() => _$RelatedPersonToJson(this);
 }

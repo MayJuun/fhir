@@ -1,4 +1,6 @@
-class Device {
+@freezed
+abstract class Device with _$Device
+factory Device {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -24,38 +26,15 @@ class Device {
   List<ContactPoint> contact;
   FhirUri url;
 
-  Device({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.type,
-    this.note,
-    this.status,
-    this.manufacturer,
-    this.model,
-    this.version,
-    this.manufactureDate,
-    this.expiry,
-    this.udi,
-    this.lotNumber,
-    this.owner,
-    this.location,
-    this.patient,
-    this.contact,
-    this.url,
-  });
+  }) = Device;
 
-  factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
+factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceToJson(this);
 }
 
-class DeviceComponent {
+@freezed
+abstract class DeviceComponent with _$DeviceComponent
+factory DeviceComponent {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -75,34 +54,17 @@ class DeviceComponent {
   List<DeviceComponentProductionSpecification> productionSpecification;
   CodeableConcept languageCode;
 
-  DeviceComponent({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.identifier,
-    this.lastSystemChange,
-    this.source,
-    this.parent,
-    this.operationalStatus,
-    this.parameterGroup,
-    this.measurementPrinciple,
-    this.productionSpecification,
-    this.languageCode,
-  });
+  }) = DeviceComponent;
 
-  factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
+factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$DeviceComponentFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceComponentToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DeviceComponentProductionSpecification {
+
+@freezed
+abstract class DeviceComponentProductionSpecification with _$DeviceComponentProductionSpecification
+factory DeviceComponentProductionSpecification {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -110,23 +72,18 @@ class DeviceComponentProductionSpecification {
   Identifier componentId;
   String productionSpec;
 
-  DeviceComponentProductionSpecification({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.specType,
-    this.componentId,
-    this.productionSpec,
-  });
+  }) = DeviceComponentProductionSpecification;
 
-  factory DeviceComponentProductionSpecification.fromJson(
+factory DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
       _$DeviceComponentProductionSpecificationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$DeviceComponentProductionSpecificationToJson(this);
 }
 
-class DeviceMetric {
+@freezed
+abstract class DeviceMetric with _$DeviceMetric
+factory DeviceMetric {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -146,34 +103,17 @@ class DeviceMetric {
   Timing measurementPeriod;
   List<DeviceMetricCalibration> calibration;
 
-  DeviceMetric({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.identifier,
-    this.unit,
-    this.source,
-    this.parent,
-    this.operationalStatus,
-    this.color,
-    this.category,
-    this.measurementPeriod,
-    this.calibration,
-  });
+  }) = DeviceMetric;
 
-  factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
+factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceMetricToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DeviceMetricCalibration {
+
+@freezed
+abstract class DeviceMetricCalibration with _$DeviceMetricCalibration
+factory DeviceMetricCalibration {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;

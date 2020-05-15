@@ -1,4 +1,6 @@
-class Composition {
+@freezed
+abstract class Composition with _$Composition
+factory Composition {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -22,38 +24,17 @@ class Composition {
   Reference encounter;
   List<CompositionSection> section;
 
-  Composition({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.date,
-    this.type,
-    this.classs,
-    this.title,
-    this.status,
-    this.confidentiality,
-    this.subject,
-    this.author,
-    this.attester,
-    this.custodian,
-    this.event,
-    this.encounter,
-    this.section,
-  });
+  }) = Composition;
 
-  factory Composition.fromJson(Map<String, dynamic> json) =>
+factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
   Map<String, dynamic> toJson() => _$CompositionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class CompositionAttester {
+
+@freezed
+abstract class CompositionAttester with _$CompositionAttester
+factory CompositionAttester {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -61,22 +42,17 @@ class CompositionAttester {
   FhirDateTime time;
   Reference party;
 
-  CompositionAttester({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.mode,
-    this.time,
-    this.party,
-  });
+  }) = CompositionAttester;
 
-  factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
+factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$CompositionAttesterFromJson(json);
   Map<String, dynamic> toJson() => _$CompositionAttesterToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class CompositionEvent {
+
+@freezed
+abstract class CompositionEvent with _$CompositionEvent
+factory CompositionEvent {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -84,22 +60,17 @@ class CompositionEvent {
   Period period;
   List<Reference> detail;
 
-  CompositionEvent({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.period,
-    this.detail,
-  });
+  }) = CompositionEvent;
 
-  factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
+factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$CompositionEventFromJson(json);
   Map<String, dynamic> toJson() => _$CompositionEventToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class CompositionSection {
+
+@freezed
+abstract class CompositionSection with _$CompositionSection
+factory CompositionSection {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -111,25 +82,16 @@ class CompositionSection {
   List<Reference> entry;
   CodeableConcept emptyReason;
 
-  CompositionSection({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.title,
-    this.code,
-    this.text,
-    this.mode,
-    this.orderedBy,
-    this.entry,
-    this.emptyReason,
-  });
+  }) = CompositionSection;
 
-  factory CompositionSection.fromJson(Map<String, dynamic> json) =>
+factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);
   Map<String, dynamic> toJson() => _$CompositionSectionToJson(this);
 }
 
-class DocumentManifest {
+@freezed
+abstract class DocumentManifest with _$DocumentManifest
+factory DocumentManifest {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -151,75 +113,49 @@ class DocumentManifest {
   List<DocumentManifestContent> content;
   List<DocumentManifestRelated> related;
 
-  DocumentManifest({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.masterIdentifier,
-    this.identifier,
-    this.subject,
-    this.recipient,
-    this.type,
-    this.author,
-    this.created,
-    this.source,
-    this.status,
-    this.description,
-    this.content,
-    this.related,
-  });
+  }) = DocumentManifest;
 
-  factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
+factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentManifestToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DocumentManifestContent {
+
+@freezed
+abstract class DocumentManifestContent with _$DocumentManifestContent
+factory DocumentManifestContent {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Attachment pX;
 
-  DocumentManifestContent({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.pX,
-  });
+  }) = DocumentManifestContent;
 
-  factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
+factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestContentFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentManifestContentToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DocumentManifestRelated {
+
+@freezed
+abstract class DocumentManifestRelated with _$DocumentManifestRelated
+factory DocumentManifestRelated {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Identifier identifier;
   Reference ref;
 
-  DocumentManifestRelated({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.ref,
-  });
+  }) = DocumentManifestRelated;
 
-  factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
+factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestRelatedFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentManifestRelatedToJson(this);
 }
 
-class DocumentReference {
+@freezed
+abstract class DocumentReference with _$DocumentReference
+factory DocumentReference {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -246,83 +182,51 @@ class DocumentReference {
   List<DocumentReferenceContent> content;
   DocumentReferenceContext context;
 
-  DocumentReference({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.masterIdentifier,
-    this.identifier,
-    this.subject,
-    this.type,
-    this.classs,
-    this.author,
-    this.custodian,
-    this.authenticator,
-    this.created,
-    this.indexed,
-    this.status,
-    this.docStatus,
-    this.relatesTo,
-    this.description,
-    this.securityLabel,
-    this.content,
-    this.context,
-  });
+  }) = DocumentReference;
 
-  factory DocumentReference.fromJson(Map<String, dynamic> json) =>
+factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentReferenceToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DocumentReferenceRelatesTo {
+
+@freezed
+abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo
+factory DocumentReferenceRelatesTo {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code code;
   Reference target;
 
-  DocumentReferenceRelatesTo({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.target,
-  });
+  }) = DocumentReferenceRelatesTo;
 
-  factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
+factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatesToFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentReferenceRelatesToToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DocumentReferenceContent {
+
+@freezed
+abstract class DocumentReferenceContent with _$DocumentReferenceContent
+factory DocumentReferenceContent {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Attachment attachment;
   List<Coding> format;
 
-  DocumentReferenceContent({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.attachment,
-    this.format,
-  });
+  }) = DocumentReferenceContent;
 
-  factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
+factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContentFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentReferenceContentToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DocumentReferenceContext {
+
+@freezed
+abstract class DocumentReferenceContext with _$DocumentReferenceContext
+factory DocumentReferenceContext {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -334,26 +238,17 @@ class DocumentReferenceContext {
   Reference sourcePatientInfo;
   List<DocumentReferenceContextRelated> related;
 
-  DocumentReferenceContext({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.encounter,
-    this.event,
-    this.period,
-    this.facilityType,
-    this.practiceSetting,
-    this.sourcePatientInfo,
-    this.related,
-  });
+  }) = DocumentReferenceContext;
 
-  factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
+factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentReferenceContextToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DocumentReferenceContextRelated {
+
+@freezed
+abstract class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated
+factory DocumentReferenceContextRelated {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -373,7 +268,9 @@ class DocumentReferenceContextRelated {
       _$DocumentReferenceContextRelatedToJson(this);
 }
 
-class Lists {
+@freezed
+abstract class Lists with _$Lists
+factory Lists {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -396,36 +293,16 @@ class Lists {
   List<ListEntry> entry;
   CodeableConcept emptyReason;
 
-  Lists({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.title,
-    this.code,
-    this.subject,
-    this.source,
-    this.encounter,
-    this.status,
-    this.date,
-    this.orderedBy,
-    this.mode,
-    this.note,
-    this.entry,
-    this.emptyReason,
-  });
+  }) = Lists;
 
-  factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
+factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
   Map<String, dynamic> toJson() => _$ListsToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ListEntry {
+
+@freezed
+abstract class ListEntry with _$ListEntry
+factory ListEntry {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -434,17 +311,9 @@ class ListEntry {
   FhirDateTime date;
   Reference item;
 
-  ListEntry({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.flag,
-    this.deleted,
-    this.date,
-    this.item,
-  });
+  }) = ListEntry;
 
-  factory ListEntry.fromJson(Map<String, dynamic> json) =>
+factory ListEntry.fromJson(Map<String, dynamic> json) =>
       _$ListEntryFromJson(json);
   Map<String, dynamic> toJson() => _$ListEntryToJson(this);
 }

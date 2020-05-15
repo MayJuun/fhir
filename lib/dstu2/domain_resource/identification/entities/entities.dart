@@ -1,4 +1,6 @@
-class Contract {
+@freezed
+abstract class Contract with _$Contract
+factory Contract {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -26,63 +28,34 @@ class Contract {
   List<ContractLegal> legal;
   List<ContractRule> rule;
 
-  Contract({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.issued,
-    this.applies,
-    this.subject,
-    this.authority,
-    this.domain,
-    this.type,
-    this.subType,
-    this.action,
-    this.actionReason,
-    this.actor,
-    this.valuedItem,
-    this.signer,
-    this.term,
-    this.bindingX,
-    this.friendly,
-    this.legal,
-    this.rule,
-  });
+  }) = Contract;
 
-  factory Contract.fromJson(Map<String, dynamic> json) =>
+factory Contract.fromJson(Map<String, dynamic> json) =>
       _$ContractFromJson(json);
   Map<String, dynamic> toJson() => _$ContractToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ContractActor {
+
+@freezed
+abstract class ContractActor with _$ContractActor
+factory ContractActor {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Reference entity;
   List<CodeableConcept> role;
 
-  ContractActor({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.entity,
-    this.role,
-  });
+  }) = ContractActor;
 
-  factory ContractActor.fromJson(Map<String, dynamic> json) =>
+factory ContractActor.fromJson(Map<String, dynamic> json) =>
       _$ContractActorFromJson(json);
   Map<String, dynamic> toJson() => _$ContractActorToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ContractValuedItem {
+
+@freezed
+abstract class ContractValuedItem with _$ContractValuedItem
+factory ContractValuedItem {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -95,27 +68,17 @@ class ContractValuedItem {
   Decimal points;
   Quantity net;
 
-  ContractValuedItem({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.entityX,
-    this.identifier,
-    this.effectiveTime,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.points,
-    this.net,
-  });
+  }) = ContractValuedItem;
 
-  factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
+factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItemFromJson(json);
   Map<String, dynamic> toJson() => _$ContractValuedItemToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ContractSigner {
+
+@freezed
+abstract class ContractSigner with _$ContractSigner
+factory ContractSigner {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -123,22 +86,17 @@ class ContractSigner {
   Reference party;
   String signature;
 
-  ContractSigner({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.party,
-    this.signature,
-  });
+  }) = ContractSigner;
 
-  factory ContractSigner.fromJson(Map<String, dynamic> json) =>
+factory ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$ContractSignerFromJson(json);
   Map<String, dynamic> toJson() => _$ContractSignerToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ContractTerm {
+
+@freezed
+abstract class ContractTerm with _$ContractTerm
+factory ContractTerm {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -154,108 +112,82 @@ class ContractTerm {
   String text;
   List<ContractTermValuedItem> valuedItem;
 
-  ContractTerm({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.issued,
-    this.applies,
-    this.type,
-    this.subType,
-    this.subject,
-    this.action,
-    this.actionReason,
-    this.actor,
-    this.text,
-    this.valuedItem,
-  });
+  }) = ContractTerm;
 
-  factory ContractTerm.fromJson(Map<String, dynamic> json) =>
+factory ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$ContractTermFromJson(json);
   Map<String, dynamic> toJson() => _$ContractTermToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ContractFriendly {
+
+@freezed
+abstract class ContractFriendly with _$ContractFriendly
+factory ContractFriendly {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Attachment contentX;
 
-  ContractFriendly({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.contentX,
-  });
+  }) = ContractFriendly;
 
-  factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
+factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$ContractFriendlyFromJson(json);
   Map<String, dynamic> toJson() => _$ContractFriendlyToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ContractLegal {
+
+@freezed
+abstract class ContractLegal with _$ContractLegal
+factory ContractLegal {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Attachment contentX;
 
-  ContractLegal({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.contentX,
-  });
+  }) = ContractLegal;
 
-  factory ContractLegal.fromJson(Map<String, dynamic> json) =>
+factory ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$ContractLegalFromJson(json);
   Map<String, dynamic> toJson() => _$ContractLegalToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ContractRule {
+
+@freezed
+abstract class ContractRule with _$ContractRule
+factory ContractRule {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Attachment contentX;
 
-  ContractRule({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.contentX,
-  });
+  }) = ContractRule;
 
-  factory ContractRule.fromJson(Map<String, dynamic> json) =>
+factory ContractRule.fromJson(Map<String, dynamic> json) =>
       _$ContractRuleFromJson(json);
   Map<String, dynamic> toJson() => _$ContractRuleToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ContractTermActor {
+
+@freezed
+abstract class ContractTermActor with _$ContractTermActor
+factory ContractTermActor {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Reference entity;
   List<CodeableConcept> role;
 
-  ContractTermActor({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.entity,
-    this.role,
-  });
+  }) = ContractTermActor;
 
-  factory ContractTermActor.fromJson(Map<String, dynamic> json) =>
+factory ContractTermActor.fromJson(Map<String, dynamic> json) =>
       _$ContractTermActorFromJson(json);
   Map<String, dynamic> toJson() => _$ContractTermActorToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ContractTermValuedItem {
+
+@freezed
+abstract class ContractTermValuedItem with _$ContractTermValuedItem
+factory ContractTermValuedItem {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -268,26 +200,16 @@ class ContractTermValuedItem {
   Decimal points;
   Quantity net;
 
-  ContractTermValuedItem({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.entityX,
-    this.identifier,
-    this.effectiveTime,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.points,
-    this.net,
-  });
+  }) = ContractTermValuedItem;
 
-  factory ContractTermValuedItem.fromJson(Map<String, dynamic> json) =>
+factory ContractTermValuedItem.fromJson(Map<String, dynamic> json) =>
       _$ContractTermValuedItemFromJson(json);
   Map<String, dynamic> toJson() => _$ContractTermValuedItemToJson(this);
 }
 
-class Location {
+@freezed
+abstract class Location with _$Location
+factory Location {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -309,36 +231,17 @@ class Location {
   Reference managingOrganization;
   Reference partOf;
 
-  Location({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.status,
-    this.name,
-    this.description,
-    this.mode,
-    this.type,
-    this.telecom,
-    this.address,
-    this.physicalType,
-    this.position,
-    this.managingOrganization,
-    this.partOf,
-  });
+  }) = Location;
 
-  factory Location.fromJson(Map<String, dynamic> json) =>
+factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
   Map<String, dynamic> toJson() => _$LocationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class LocationPosition {
+
+@freezed
+abstract class LocationPosition with _$LocationPosition
+factory LocationPosition {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -346,22 +249,17 @@ class LocationPosition {
   Decimal latitude;
   Decimal altitude;
 
-  LocationPosition({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.longitude,
-    this.latitude,
-    this.altitude,
-  });
+  }) = LocationPosition;
 
-  factory LocationPosition.fromJson(Map<String, dynamic> json) =>
+factory LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$LocationPositionFromJson(json);
   Map<String, dynamic> toJson() => _$LocationPositionToJson(this);
 }
 
 
-class Person {
+@freezed
+abstract class Person with _$Person
+factory Person {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -381,53 +279,32 @@ class Person {
   Boolean active;
   List<PersonLink> link;
 
-  Person({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.name,
-    this.telecom,
-    this.gender,
-    this.birthDate,
-    this.address,
-    this.photo,
-    this.managingOrganization,
-    this.active,
-    this.link,
-  });
+  }) = Person;
 
-  factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
+factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
   Map<String, dynamic> toJson() => _$PersonToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class PersonLink {
+
+@freezed
+abstract class PersonLink with _$PersonLink
+factory PersonLink {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Reference target;
   Code assurance;
 
-  PersonLink({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.target,
-    this.assurance,
-  });
+  }) = PersonLink;
 
-  factory PersonLink.fromJson(Map<String, dynamic> json) =>
+factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
   Map<String, dynamic> toJson() => _$PersonLinkToJson(this);
 }
 
-class Substance {
+@freezed
+abstract class Substance with _$Substance
+factory Substance {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -443,30 +320,17 @@ class Substance {
   List<SubstanceInstance> instance;
   List<SubstanceIngredient> ingredient;
 
-  Substance({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.category,
-    this.code,
-    this.description,
-    this.instance,
-    this.ingredient,
-  });
+  }) = Substance;
 
-  factory Substance.fromJson(Map<String, dynamic> json) =>
+factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
   Map<String, dynamic> toJson() => _$SubstanceToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class SubstanceInstance {
+
+@freezed
+abstract class SubstanceInstance with _$SubstanceInstance
+factory SubstanceInstance {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -474,37 +338,26 @@ class SubstanceInstance {
   FhirDateTime expiry;
   Quantity quantity;
 
-  SubstanceInstance({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.expiry,
-    this.quantity,
-  });
+  }) = SubstanceInstance;
 
-  factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
+factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceInstanceFromJson(json);
   Map<String, dynamic> toJson() => _$SubstanceInstanceToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class SubstanceIngredient {
+
+@freezed
+abstract class SubstanceIngredient with _$SubstanceIngredient
+factory SubstanceIngredient {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Ratio quantity;
   Reference substance;
 
-  SubstanceIngredient({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.quantity,
-    this.substance,
-  });
+  }) = SubstanceIngredient;
 
-  factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
+factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$SubstanceIngredientFromJson(json);
   Map<String, dynamic> toJson() => _$SubstanceIngredientToJson(this);
 }

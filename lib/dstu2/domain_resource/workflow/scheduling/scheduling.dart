@@ -1,4 +1,6 @@
-class Appointment {
+@freezed
+abstract class Appointment with _$Appointment
+factory Appointment {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -20,36 +22,17 @@ class Appointment {
   String comment;
   List<AppointmentParticipant> participant;
 
-  Appointment({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.status,
-    this.type,
-    this.reason,
-    this.priority,
-    this.description,
-    this.start,
-    this.end,
-    this.minutesDuration,
-    this.slot,
-    this.comment,
-    this.participant,
-  });
+  }) = Appointment;
 
-  factory Appointment.fromJson(Map<String, dynamic> json) =>
+factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
   Map<String, dynamic> toJson() => _$AppointmentToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class AppointmentParticipant {
+
+@freezed
+abstract class AppointmentParticipant with _$AppointmentParticipant
+factory AppointmentParticipant {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -58,22 +41,16 @@ class AppointmentParticipant {
   Code required;
   Code status;
 
-  AppointmentParticipant({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.actor,
-    this.required,
-    this.status,
-  });
+  }) = AppointmentParticipant;
 
-  factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
+factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$AppointmentParticipantToJson(this);
 }
 
-class AppointmentResponse {
+@freezed
+abstract class AppointmentResponse with _$AppointmentResponse
+factory AppointmentResponse {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -91,31 +68,16 @@ class AppointmentResponse {
   Code participantStatus;
   String comment;
 
-  AppointmentResponse({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.appointment,
-    this.start,
-    this.end,
-    this.participantType,
-    this.actor,
-    this.participantStatus,
-    this.comment,
-  });
+  }) = AppointmentResponse;
 
-  factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
+factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
   Map<String, dynamic> toJson() => _$AppointmentResponseToJson(this);
 }
 
-class Schedule {
+@freezed
+abstract class Schedule with _$Schedule
+factory Schedule {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -130,28 +92,16 @@ class Schedule {
   Period planningHorizon;
   String comment;
 
-  Schedule({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.type,
-    this.actor,
-    this.planningHorizon,
-    this.comment,
-  });
+  }) = Schedule;
 
-  factory Schedule.fromJson(Map<String, dynamic> json) =>
+factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
   Map<String, dynamic> toJson() => _$ScheduleToJson(this);
 }
 
-class Slot {
+@freezed
+abstract class Slot with _$Slot
+factory Slot {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -169,25 +119,8 @@ class Slot {
   Boolean overbooked;
   String comment;
 
-  Slot({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.type,
-    this.schedule,
-    this.freeBusyType,
-    this.start,
-    this.end,
-    this.overbooked,
-    this.comment,
-  });
+  }) = Slot;
 
-  factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
+factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
   Map<String, dynamic> toJson() => _$SlotToJson(this);
 }

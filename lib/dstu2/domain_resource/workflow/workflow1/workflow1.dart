@@ -1,4 +1,6 @@
-class CommunicationRequest {
+@freezed
+abstract class CommunicationRequest with _$CommunicationRequest
+factory CommunicationRequest {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -22,56 +24,32 @@ class CommunicationRequest {
   Reference subject;
   CodeableConcept priority;
 
-  CommunicationRequest({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.category,
-    this.sender,
-    this.recipient,
-    this.payload,
-    this.medium,
-    this.requester,
-    this.status,
-    this.encounter,
-    this.scheduledX,
-    this.reason,
-    this.requestedOn,
-    this.subject,
-    this.priority,
-  });
+  }) = CommunicationRequest;
 
-  factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
+factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
   Map<String, dynamic> toJson() => _$CommunicationRequestToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class CommunicationRequestPayload {
+
+@freezed
+abstract class CommunicationRequestPayload with _$CommunicationRequestPayload
+factory CommunicationRequestPayload {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String contentX;
 
-  CommunicationRequestPayload({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.contentX,
-  });
+  }) = CommunicationRequestPayload;
 
-  factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
+factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
   Map<String, dynamic> toJson() => _$CommunicationRequestPayloadToJson(this);
 }
 
-class DeviceUseRequest {
+@freezed
+abstract class DeviceUseRequest with _$DeviceUseRequest
+factory DeviceUseRequest {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -94,36 +72,16 @@ class DeviceUseRequest {
   Timing timingX;
   Code priority;
 
-  DeviceUseRequest({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.bodySiteX,
-    this.status,
-    this.device,
-    this.encounter,
-    this.identifier,
-    this.indication,
-    this.notes,
-    this.prnReason,
-    this.orderedOn,
-    this.recordedOn,
-    this.subject,
-    this.timingX,
-    this.priority,
-  });
+  }) = DeviceUseRequest;
 
-  factory DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
+factory DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseRequestFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceUseRequestToJson(this);
 }
 
-class DeviceUseStatement {
+@freezed
+abstract class DeviceUseStatement with _$DeviceUseStatement
+factory DeviceUseStatement {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -142,32 +100,16 @@ class DeviceUseStatement {
   Reference subject;
   Timing timingX;
 
-  DeviceUseStatement({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.bodySiteX,
-    this.whenUsed,
-    this.device,
-    this.identifier,
-    this.indication,
-    this.notes,
-    this.recordedOn,
-    this.subject,
-    this.timingX,
-  });
+  }) = DeviceUseStatement;
 
-  factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
+factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceUseStatementToJson(this);
 }
 
-class Order {
+@freezed
+abstract class Order with _$Order
+factory Order {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -185,51 +127,32 @@ class Order {
   OrderWhen when;
   List<Reference> detail;
 
-  Order({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.date,
-    this.subject,
-    this.source,
-    this.target,
-    this.reasonX,
-    this.when,
-    this.detail,
-  });
+  }) = Order;
 
-  factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);
+factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);
   Map<String, dynamic> toJson() => _$OrderToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class OrderWhen {
+
+@freezed
+abstract class OrderWhen with _$OrderWhen
+factory OrderWhen {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept code;
   Timing schedule;
 
-  OrderWhen({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.schedule,
-  });
+  }) = OrderWhen;
 
-  factory OrderWhen.fromJson(Map<String, dynamic> json) =>
+factory OrderWhen.fromJson(Map<String, dynamic> json) =>
       _$OrderWhenFromJson(json);
   Map<String, dynamic> toJson() => _$OrderWhenToJson(this);
 }
 
-class OrderResponse {
+@freezed
+abstract class OrderResponse with _$OrderResponse
+factory OrderResponse {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -246,25 +169,9 @@ class OrderResponse {
   String description;
   List<Reference> fulfillment;
 
-  OrderResponse({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.request,
-    this.date,
-    this.who,
-    this.orderStatus,
-    this.description,
-    this.fulfillment,
-  });
+  }) = OrderResponse;
 
-  factory OrderResponse.fromJson(Map<String, dynamic> json) =>
+factory OrderResponse.fromJson(Map<String, dynamic> json) =>
       _$OrderResponseFromJson(json);
   Map<String, dynamic> toJson() => _$OrderResponseToJson(this);
 }

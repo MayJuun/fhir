@@ -1,4 +1,6 @@
-class Conformance {
+@freezed
+abstract class Conformance with _$Conformance
+factory Conformance {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -29,66 +31,34 @@ class Conformance {
   List<ConformanceMessaging> messaging;
   List<ConformanceDocument> document;
 
-  Conformance({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.url,
-    this.version,
-    this.name,
-    this.status,
-    this.experimental,
-    this.publisher,
-    this.contact,
-    this.date,
-    this.description,
-    this.requirements,
-    this.copyright,
-    this.kind,
-    this.software,
-    this.implementation,
-    this.fhirVersion,
-    this.acceptUnknown,
-    this.format,
-    this.profile,
-    this.rest,
-    this.messaging,
-    this.document,
-  });
+  }) = Conformance;
 
-  factory Conformance.fromJson(Map<String, dynamic> json) =>
+factory Conformance.fromJson(Map<String, dynamic> json) =>
       _$ConformanceFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceContact {
+
+@freezed
+abstract class ConformanceContact with _$ConformanceContact
+factory ConformanceContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   List<ContactPoint> telecom;
 
-  ConformanceContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.telecom,
-  });
+  }) = ConformanceContact;
 
-  factory ConformanceContact.fromJson(Map<String, dynamic> json) =>
+factory ConformanceContact.fromJson(Map<String, dynamic> json) =>
       _$ConformanceContactFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceContactToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceSoftware {
+
+@freezed
+abstract class ConformanceSoftware with _$ConformanceSoftware
+factory ConformanceSoftware {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -96,43 +66,34 @@ class ConformanceSoftware {
   String version;
   FhirDateTime releaseDate;
 
-  ConformanceSoftware({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.version,
-    this.releaseDate,
-  });
+  }) = ConformanceSoftware;
 
-  factory ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
+factory ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
       _$ConformanceSoftwareFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceSoftwareToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceImplementation {
+
+@freezed
+abstract class ConformanceImplementation with _$ConformanceImplementation
+factory ConformanceImplementation {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String description;
   FhirUri url;
 
-  ConformanceImplementation({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.description,
-    this.url,
-  });
+  }) = ConformanceImplementation;
 
-  factory ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
+factory ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
       _$ConformanceImplementationFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceImplementationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceRest {
+
+@freezed
+abstract class ConformanceRest with _$ConformanceRest
+factory ConformanceRest {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -146,27 +107,17 @@ class ConformanceRest {
   List<ConformanceRestOperation> operation;
   List<FhirUri> compartment;
 
-  ConformanceRest({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.mode,
-    this.documentation,
-    this.security,
-    this.resource,
-    this.interaction,
-    this.transactionMode,
-    this.operation,
-    this.compartment,
-  });
+  }) = ConformanceRest;
 
-  factory ConformanceRest.fromJson(Map<String, dynamic> json) =>
+factory ConformanceRest.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceRestToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceMessaging {
+
+@freezed
+abstract class ConformanceMessaging with _$ConformanceMessaging
+factory ConformanceMessaging {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -175,23 +126,17 @@ class ConformanceMessaging {
   String documentation;
   List<ConformanceMessagingEvent> event;
 
-  ConformanceMessaging({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.endpoint,
-    this.reliableCache,
-    this.documentation,
-    this.event,
-  });
+  }) = ConformanceMessaging;
 
-  factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
+factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceMessagingToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceDocument {
+
+@freezed
+abstract class ConformanceDocument with _$ConformanceDocument
+factory ConformanceDocument {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -199,22 +144,17 @@ class ConformanceDocument {
   String documentation;
   Reference profile;
 
-  ConformanceDocument({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.mode,
-    this.documentation,
-    this.profile,
-  });
+  }) = ConformanceDocument;
 
-  factory ConformanceDocument.fromJson(Map<String, dynamic> json) =>
+factory ConformanceDocument.fromJson(Map<String, dynamic> json) =>
       _$ConformanceDocumentFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceDocumentToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceRestSecurity {
+
+@freezed
+abstract class ConformanceRestSecurity with _$ConformanceRestSecurity
+factory ConformanceRestSecurity {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -223,23 +163,17 @@ class ConformanceRestSecurity {
   String description;
   List<ConformanceRestSecurityCertificate> certificate;
 
-  ConformanceRestSecurity({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.cors,
-    this.service,
-    this.description,
-    this.certificate,
-  });
+  }) = ConformanceRestSecurity;
 
-  factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
+factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestSecurityFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceRestSecurityToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceRestResource {
+
+@freezed
+abstract class ConformanceRestResource with _$ConformanceRestResource
+factory ConformanceRestResource {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -256,94 +190,68 @@ class ConformanceRestResource {
   List<String> searchRevInclude;
   List<ConformanceRestResourceSearchParam> searchParam;
 
-  ConformanceRestResource({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.profile,
-    this.interaction,
-    this.versioning,
-    this.readHistory,
-    this.updateCreate,
-    this.conditionalCreate,
-    this.conditionalUpdate,
-    this.conditionalDelete,
-    this.searchInclude,
-    this.searchRevInclude,
-    this.searchParam,
-  });
+  }) = ConformanceRestResource;
 
-  factory ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
+factory ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestResourceFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceRestResourceToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceRestInteraction {
+
+@freezed
+abstract class ConformanceRestInteraction with _$ConformanceRestInteraction
+factory ConformanceRestInteraction {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code code;
   String documentation;
 
-  ConformanceRestInteraction({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.documentation,
-  });
+  }) = ConformanceRestInteraction;
 
-  factory ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
+factory ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestInteractionFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceRestInteractionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceRestOperation {
+
+@freezed
+abstract class ConformanceRestOperation with _$ConformanceRestOperation
+factory ConformanceRestOperation {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   Reference definition;
 
-  ConformanceRestOperation({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.definition,
-  });
+  }) = ConformanceRestOperation;
 
-  factory ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
+factory ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestOperationFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceRestOperationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceMessagingEndpoint {
+
+@freezed
+abstract class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint
+factory ConformanceMessagingEndpoint {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Coding protocol;
   FhirUri address;
 
-  ConformanceMessagingEndpoint({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.protocol,
-    this.address,
-  });
+  }) = ConformanceMessagingEndpoint;
 
-  factory ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
+factory ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingEndpointFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceMessagingEndpointToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceMessagingEvent {
+
+@freezed
+abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent
+factory ConformanceMessagingEvent {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -355,72 +263,55 @@ class ConformanceMessagingEvent {
   Reference response;
   String documentation;
 
-  ConformanceMessagingEvent({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.category,
-    this.mode,
-    this.focus,
-    this.request,
-    this.response,
-    this.documentation,
-  });
+  }) = ConformanceMessagingEvent;
 
-  factory ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
+factory ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingEventFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceMessagingEventToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceRestSecurityCertificate {
+
+@freezed
+abstract class ConformanceRestSecurityCertificate with _$ConformanceRestSecurityCertificate
+factory ConformanceRestSecurityCertificate {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code type;
   Base64Binary blob;
 
-  ConformanceRestSecurityCertificate({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.blob,
-  });
+  }) = ConformanceRestSecurityCertificate;
 
-  factory ConformanceRestSecurityCertificate.fromJson(
+factory ConformanceRestSecurityCertificate.fromJson(
           Map<String, dynamic> json) =>
       _$ConformanceRestSecurityCertificateFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ConformanceRestSecurityCertificateToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceRestResourceInteraction {
+
+@freezed
+abstract class ConformanceRestResourceInteraction with _$ConformanceRestResourceInteraction
+factory ConformanceRestResourceInteraction {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code code;
   String documentation;
 
-  ConformanceRestResourceInteraction({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.documentation,
-  });
+  }) = ConformanceRestResourceInteraction;
 
-  factory ConformanceRestResourceInteraction.fromJson(
+factory ConformanceRestResourceInteraction.fromJson(
           Map<String, dynamic> json) =>
       _$ConformanceRestResourceInteractionFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ConformanceRestResourceInteractionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConformanceRestResourceSearchParam {
+
+@freezed
+abstract class ConformanceRestResourceSearchParam with _$ConformanceRestResourceSearchParam
+factory ConformanceRestResourceSearchParam {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -432,27 +323,18 @@ class ConformanceRestResourceSearchParam {
   List<Code> modifier;
   List<String> chain;
 
-  ConformanceRestResourceSearchParam({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.definition,
-    this.type,
-    this.documentation,
-    this.target,
-    this.modifier,
-    this.chain,
-  });
+  }) = ConformanceRestResourceSearchParam;
 
-  factory ConformanceRestResourceSearchParam.fromJson(
+factory ConformanceRestResourceSearchParam.fromJson(
           Map<String, dynamic> json) =>
       _$ConformanceRestResourceSearchParamFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ConformanceRestResourceSearchParamToJson(this);
 }
 
-class OperationDefinition {
+@freezed
+abstract class OperationDefinition with _$OperationDefinition
+factory OperationDefinition {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -481,64 +363,34 @@ class OperationDefinition {
   Boolean instance;
   List<OperationDefinitionParameter> parameter;
 
-  OperationDefinition({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.url,
-    this.version,
-    this.name,
-    this.status,
-    this.kind,
-    this.experimental,
-    this.publisher,
-    this.contact,
-    this.date,
-    this.description,
-    this.requirements,
-    this.idempotent,
-    this.code,
-    this.notes,
-    this.base,
-    this.system,
-    this.type,
-    this.instance,
-    this.parameter,
-  });
+  }) = OperationDefinition;
 
-  factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
+factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$OperationDefinitionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class OperationDefinitionContact {
+
+@freezed
+abstract class OperationDefinitionContact with _$OperationDefinitionContact
+factory OperationDefinitionContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   List<ContactPoint> telecom;
 
-  OperationDefinitionContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.telecom,
-  });
+  }) = OperationDefinitionContact;
 
-  factory OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
+factory OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionContactFromJson(json);
   Map<String, dynamic> toJson() => _$OperationDefinitionContactToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class OperationDefinitionParameter {
+
+@freezed
+abstract class OperationDefinitionParameter with _$OperationDefinitionParameter
+factory OperationDefinitionParameter {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -551,49 +403,35 @@ class OperationDefinitionParameter {
   Reference profile;
   OperationDefinitionParameterBinding binding;
 
-  OperationDefinitionParameter({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.use,
-    this.min,
-    this.max,
-    this.documentation,
-    this.type,
-    this.profile,
-    this.binding,
-  });
+  }) = OperationDefinitionParameter;
 
-  factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
+factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
   Map<String, dynamic> toJson() => _$OperationDefinitionParameterToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class OperationDefinitionParameterBinding {
+
+@freezed
+abstract class OperationDefinitionParameterBinding with _$OperationDefinitionParameterBinding
+factory OperationDefinitionParameterBinding {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code strength;
   FhirUri valueSetX;
 
-  OperationDefinitionParameterBinding({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.strength,
-    this.valueSetX,
-  });
+  }) = OperationDefinitionParameterBinding;
 
-  factory OperationDefinitionParameterBinding.fromJson(
+factory OperationDefinitionParameterBinding.fromJson(
           Map<String, dynamic> json) =>
       _$OperationDefinitionParameterBindingFromJson(json);
   Map<String, dynamic> toJson() =>
       _$OperationDefinitionParameterBindingToJson(this);
 }
 
-class SearchParameter {
+@freezed
+abstract class SearchParameter with _$SearchParameter
+factory SearchParameter {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -618,54 +456,26 @@ class SearchParameter {
   Code xpathUsage;
   List<Code> target;
 
-  SearchParameter({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.url,
-    this.name,
-    this.status,
-    this.experimental,
-    this.publisher,
-    this.contact,
-    this.date,
-    this.requirements,
-    this.code,
-    this.base,
-    this.type,
-    this.description,
-    this.xpath,
-    this.xpathUsage,
-    this.target,
-  });
+  }) = SearchParameter;
 
-  factory SearchParameter.fromJson(Map<String, dynamic> json) =>
+factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
   Map<String, dynamic> toJson() => _$SearchParameterToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class SearchParameterContact {
+
+@freezed
+abstract class SearchParameterContact with _$SearchParameterContact
+factory SearchParameterContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   List<ContactPoint> telecom;
 
-  SearchParameterContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.telecom,
-  });
+  }) = SearchParameterContact;
 
-  factory SearchParameterContact.fromJson(Map<String, dynamic> json) =>
+factory SearchParameterContact.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterContactFromJson(json);
   Map<String, dynamic> toJson() => _$SearchParameterContactToJson(this);
 }

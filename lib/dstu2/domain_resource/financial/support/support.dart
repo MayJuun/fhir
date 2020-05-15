@@ -1,4 +1,6 @@
-class Coverage {
+@freezed
+abstract class Coverage with _$Coverage
+factory Coverage {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -22,37 +24,16 @@ class Coverage {
   Identifier network;
   List<Reference> contract;
 
-  Coverage({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.issuer,
-    this.bin,
-    this.period,
-    this.type,
-    this.subscriberId,
-    this.identifier,
-    this.group,
-    this.plan,
-    this.subPlan,
-    this.dependent,
-    this.sequence,
-    this.subscriber,
-    this.network,
-    this.contract,
-  });
+  }) = Coverage;
 
-  factory Coverage.fromJson(Map<String, dynamic> json) =>
+factory Coverage.fromJson(Map<String, dynamic> json) =>
       _$CoverageFromJson(json);
   Map<String, dynamic> toJson() => _$CoverageToJson(this);
 }
 
-class EligibilityRequest {
+@freezed
+abstract class EligibilityRequest with _$EligibilityRequest
+factory EligibilityRequest {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -69,30 +50,16 @@ class EligibilityRequest {
   Reference provider;
   Reference organization;
 
-  EligibilityRequest({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.target,
-    this.provider,
-    this.organization,
-  });
+  }) = EligibilityRequest;
 
-  factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
+factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$EligibilityRequestFromJson(json);
   Map<String, dynamic> toJson() => _$EligibilityRequestToJson(this);
 }
 
-class EligibilityResponse {
+@freezed
+abstract class EligibilityResponse with _$EligibilityResponse
+factory EligibilityResponse {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -112,33 +79,16 @@ class EligibilityResponse {
   Reference requestProvider;
   Reference requestOrganization;
 
-  EligibilityResponse({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.request,
-    this.outcome,
-    this.disposition,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.organization,
-    this.requestProvider,
-    this.requestOrganization,
-  });
+  }) = EligibilityResponse;
 
-  factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
+factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFromJson(json);
   Map<String, dynamic> toJson() => _$EligibilityResponseToJson(this);
 }
 
-class EnrollmentRequest {
+@freezed
+abstract class EnrollmentRequest with _$EnrollmentRequest
+factory EnrollmentRequest {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -158,33 +108,16 @@ class EnrollmentRequest {
   Reference coverage;
   Coding relationship;
 
-  EnrollmentRequest({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.target,
-    this.provider,
-    this.organization,
-    this.subject,
-    this.coverage,
-    this.relationship,
-  });
+  }) = EnrollmentRequest;
 
-  factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
+factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentRequestFromJson(json);
   Map<String, dynamic> toJson() => _$EnrollmentRequestToJson(this);
 }
 
-class EnrollmentResponse {
+@freezed
+abstract class EnrollmentResponse with _$EnrollmentResponse
+factory EnrollmentResponse {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -204,28 +137,9 @@ class EnrollmentResponse {
   Reference requestProvider;
   Reference requestOrganization;
 
-  EnrollmentResponse({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.request,
-    this.outcome,
-    this.disposition,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.organization,
-    this.requestProvider,
-    this.requestOrganization,
-  });
+  }) = EnrollmentResponse;
 
-  factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
+factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentResponseFromJson(json);
   Map<String, dynamic> toJson() => _$EnrollmentResponseToJson(this);
 }

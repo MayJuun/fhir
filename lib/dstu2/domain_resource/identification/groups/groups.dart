@@ -1,4 +1,6 @@
-class Group {
+@freezed
+abstract class Group with _$Group
+factory Group {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -16,31 +18,16 @@ class Group {
   List<GroupCharacteristic> characteristic;
   List<GroupMember> member;
 
-  Group({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.type,
-    this.actual,
-    this.code,
-    this.name,
-    this.quantity,
-    this.characteristic,
-    this.member,
-  });
+  }) = Group;
 
-  factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
+factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
   Map<String, dynamic> toJson() => _$GroupToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class GroupCharacteristic {
+
+@freezed
+abstract class GroupCharacteristic with _$GroupCharacteristic
+factory GroupCharacteristic {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -49,23 +36,17 @@ class GroupCharacteristic {
   Boolean exclude;
   Period period;
 
-  GroupCharacteristic({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.valueX,
-    this.exclude,
-    this.period,
-  });
+  }) = GroupCharacteristic;
 
-  factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
+factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$GroupCharacteristicFromJson(json);
   Map<String, dynamic> toJson() => _$GroupCharacteristicToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class GroupMember {
+
+@freezed
+abstract class GroupMember with _$GroupMember
+factory GroupMember {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -73,21 +54,16 @@ class GroupMember {
   Period period;
   Boolean inactive;
 
-  GroupMember({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.entity,
-    this.period,
-    this.inactive,
-  });
+  }) = GroupMember;
 
-  factory GroupMember.fromJson(Map<String, dynamic> json) =>
+factory GroupMember.fromJson(Map<String, dynamic> json) =>
       _$GroupMemberFromJson(json);
   Map<String, dynamic> toJson() => _$GroupMemberToJson(this);
 }
 
-class HealthcareService {
+@freezed
+abstract class HealthcareService with _$HealthcareService
+factory HealthcareService {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -119,67 +95,34 @@ class HealthcareService {
   List<HealthcareServiceNotAvailable> notAvailable;
   String availabilityExceptions;
 
-  HealthcareService({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.providedBy,
-    this.serviceCategory,
-    this.serviceType,
-    this.location,
-    this.serviceName,
-    this.comment,
-    this.extraDetails,
-    this.photo,
-    this.telecom,
-    this.coverageArea,
-    this.serviceProvisionCode,
-    this.eligibility,
-    this.eligibilityNote,
-    this.programName,
-    this.characteristic,
-    this.referralMethod,
-    this.publicKey,
-    this.appointmentRequired,
-    this.availableTime,
-    this.notAvailable,
-    this.availabilityExceptions,
-  });
+  }) = HealthcareService;
 
-  factory HealthcareService.fromJson(Map<String, dynamic> json) =>
+factory HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceFromJson(json);
   Map<String, dynamic> toJson() => _$HealthcareServiceToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class HealthcareServiceServiceType {
+
+@freezed
+abstract class HealthcareServiceServiceType with _$HealthcareServiceServiceType
+factory HealthcareServiceServiceType {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept type;
   List<CodeableConcept> specialty;
 
-  HealthcareServiceServiceType({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.specialty,
-  });
+  }) = HealthcareServiceServiceType;
 
-  factory HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =>
+factory HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceServiceTypeFromJson(json);
   Map<String, dynamic> toJson() => _$HealthcareServiceServiceTypeToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class HealthcareServiceAvailableTime {
+
+@freezed
+abstract class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime
+factory HealthcareServiceAvailableTime {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -188,43 +131,33 @@ class HealthcareServiceAvailableTime {
   Time availableStartTime;
   Time availableEndTime;
 
-  HealthcareServiceAvailableTime({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.daysOfWeek,
-    this.allDay,
-    this.availableStartTime,
-    this.availableEndTime,
-  });
+  }) = HealthcareServiceAvailableTime;
 
-  factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
+factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceAvailableTimeFromJson(json);
   Map<String, dynamic> toJson() => _$HealthcareServiceAvailableTimeToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class HealthcareServiceNotAvailable {
+
+@freezed
+abstract class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable
+factory HealthcareServiceNotAvailable {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String description;
   Period during;
 
-  HealthcareServiceNotAvailable({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.description,
-    this.during,
-  });
+  }) = HealthcareServiceNotAvailable;
 
-  factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
+factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceNotAvailableFromJson(json);
   Map<String, dynamic> toJson() => _$HealthcareServiceNotAvailableToJson(this);
 }
 
-class Organization {
+@freezed
+abstract class Organization with _$Organization
+factory Organization {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -242,32 +175,17 @@ class Organization {
   Reference partOf;
   List<OrganizationContact> contact;
 
-  Organization({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.active,
-    this.type,
-    this.name,
-    this.telecom,
-    this.address,
-    this.partOf,
-    this.contact,
-  });
+  }) = Organization;
 
-  factory Organization.fromJson(Map<String, dynamic> json) =>
+factory Organization.fromJson(Map<String, dynamic> json) =>
       _$OrganizationFromJson(json);
   Map<String, dynamic> toJson() => _$OrganizationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class OrganizationContact {
+
+@freezed
+abstract class OrganizationContact with _$OrganizationContact
+factory OrganizationContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -276,17 +194,9 @@ class OrganizationContact {
   List<ContactPoint> telecom;
   Address address;
 
-  OrganizationContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.purpose,
-    this.name,
-    this.telecom,
-    this.address,
-  });
+  }) = OrganizationContact;
 
-  factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
+factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
       _$OrganizationContactFromJson(json);
   Map<String, dynamic> toJson() => _$OrganizationContactToJson(this);
 }

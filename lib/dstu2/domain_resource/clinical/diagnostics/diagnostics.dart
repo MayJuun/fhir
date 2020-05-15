@@ -1,4 +1,6 @@
-class BodySite {
+@freezed
+abstract class BodySite with _$BodySite
+factory BodySite {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -14,29 +16,16 @@ class BodySite {
   String description;
   List<Attachment> image;
 
-  BodySite({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.patient,
-    this.identifier,
-    this.code,
-    this.modifier,
-    this.description,
-    this.image,
-  });
+  }) = BodySite;
 
-  factory BodySite.fromJson(Map<String, dynamic> json) =>
+factory BodySite.fromJson(Map<String, dynamic> json) =>
       _$BodySiteFromJson(json);
   Map<String, dynamic> toJson() => _$BodySiteToJson(this);
 }
 
-class DiagnosticReport {
+@freezed
+abstract class DiagnosticReport with _$DiagnosticReport
+factory DiagnosticReport {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -63,61 +52,33 @@ class DiagnosticReport {
   List<CodeableConcept> codedDiagnosis;
   List<Attachment> presentedForm;
 
-  DiagnosticReport({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.status,
-    this.category,
-    this.code,
-    this.subject,
-    this.encounter,
-    this.effectiveX,
-    this.issued,
-    this.performer,
-    this.request,
-    this.specimen,
-    this.result,
-    this.imagingStudy,
-    this.image,
-    this.conclusion,
-    this.codedDiagnosis,
-    this.presentedForm,
-  });
+  }) = DiagnosticReport;
 
-  factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
+factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportFromJson(json);
   Map<String, dynamic> toJson() => _$DiagnosticReportToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DiagnosticReportImage {
+
+@freezed
+abstract class DiagnosticReportImage with _$DiagnosticReportImage
+factory DiagnosticReportImage {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String comment;
   Reference link;
 
-  DiagnosticReportImage({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.comment,
-    this.link,
-  });
+  }) = DiagnosticReportImage;
 
-  factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
+factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportImageFromJson(json);
   Map<String, dynamic> toJson() => _$DiagnosticReportImageToJson(this);
 }
 
-class ImagingObjectSelection {
+@freezed
+abstract class ImagingObjectSelection with _$ImagingObjectSelection
+factory ImagingObjectSelection {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -134,31 +95,17 @@ class ImagingObjectSelection {
   FhirDateTime authoringTime;
   List<ImagingObjectSelectionStudy> study;
 
-  ImagingObjectSelection({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.uid,
-    this.patient,
-    this.title,
-    this.description,
-    this.author,
-    this.authoringTime,
-    this.study,
-  });
+  }) = ImagingObjectSelection;
 
-  factory ImagingObjectSelection.fromJson(Map<String, dynamic> json) =>
+factory ImagingObjectSelection.fromJson(Map<String, dynamic> json) =>
       _$ImagingObjectSelectionFromJson(json);
   Map<String, dynamic> toJson() => _$ImagingObjectSelectionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImagingObjectSelectionStudy {
+
+@freezed
+abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy
+factory ImagingObjectSelectionStudy {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -181,8 +128,10 @@ class ImagingObjectSelectionStudy {
   Map<String, dynamic> toJson() => _$ImagingObjectSelectionStudyToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImagingObjectSelectionStudySeries {
+
+@freezed
+abstract class ImagingObjectSelectionStudySeries with _$ImagingObjectSelectionStudySeries
+factory ImagingObjectSelectionStudySeries {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -190,24 +139,19 @@ class ImagingObjectSelectionStudySeries {
   FhirUri url;
   List<ImagingObjectSelectionStudySeriesInstance> instance;
 
-  ImagingObjectSelectionStudySeries({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.uid,
-    this.url,
-    this.instance,
-  });
+  }) = ImagingObjectSelectionStudySeries;
 
-  factory ImagingObjectSelectionStudySeries.fromJson(
+factory ImagingObjectSelectionStudySeries.fromJson(
           Map<String, dynamic> json) =>
       _$ImagingObjectSelectionStudySeriesFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ImagingObjectSelectionStudySeriesToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImagingObjectSelectionStudySeriesInstance {
+
+@freezed
+abstract class ImagingObjectSelectionStudySeriesInstance with _$ImagingObjectSelectionStudySeriesInstance
+factory ImagingObjectSelectionStudySeriesInstance {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -216,47 +160,37 @@ class ImagingObjectSelectionStudySeriesInstance {
   FhirUri url;
   List<ImagingObjectSelectionStudySeriesInstanceFrames> frames;
 
-  ImagingObjectSelectionStudySeriesInstance({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sopClass,
-    this.uid,
-    this.url,
-    this.frames,
-  });
+  }) = ImagingObjectSelectionStudySeriesInstance;
 
-  factory ImagingObjectSelectionStudySeriesInstance.fromJson(
+factory ImagingObjectSelectionStudySeriesInstance.fromJson(
           Map<String, dynamic> json) =>
       _$ImagingObjectSelectionStudySeriesInstanceFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ImagingObjectSelectionStudySeriesInstanceToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImagingObjectSelectionStudySeriesInstanceFrames {
+
+@freezed
+abstract class ImagingObjectSelectionStudySeriesInstanceFrames with _$ImagingObjectSelectionStudySeriesInstanceFrames
+factory ImagingObjectSelectionStudySeriesInstanceFrames {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<UnsignedInt> frameNumbers;
   FhirUri url;
 
-  ImagingObjectSelectionStudySeriesInstanceFrames({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.frameNumbers,
-    this.url,
-  });
+  }) = ImagingObjectSelectionStudySeriesInstanceFrames;
 
-  factory ImagingObjectSelectionStudySeriesInstanceFrames.fromJson(
+factory ImagingObjectSelectionStudySeriesInstanceFrames.fromJson(
           Map<String, dynamic> json) =>
       _$ImagingObjectSelectionStudySeriesInstanceFramesFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ImagingObjectSelectionStudySeriesInstanceFramesToJson(this);
 }
 
-class ImagingStudy {
+@freezed
+abstract class ImagingStudy with _$ImagingStudy
+factory ImagingStudy {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -282,40 +216,17 @@ class ImagingStudy {
   String description;
   List<ImagingStudySeries> series;
 
-  ImagingStudy({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.started,
-    this.patient,
-    this.uid,
-    this.accession,
-    this.identifier,
-    this.order,
-    this.modalityList,
-    this.referrer,
-    this.availability,
-    this.url,
-    this.numberOfSeries,
-    this.numberOfInstances,
-    this.procedure,
-    this.interpreter,
-    this.description,
-    this.series,
-  });
+  }) = ImagingStudy;
 
-  factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
+factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyFromJson(json);
   Map<String, dynamic> toJson() => _$ImagingStudyToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImagingStudySeries {
+
+@freezed
+abstract class ImagingStudySeries with _$ImagingStudySeries
+factory ImagingStudySeries {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -331,30 +242,17 @@ class ImagingStudySeries {
   FhirDateTime started;
   List<ImagingStudySeriesInstance> instance;
 
-  ImagingStudySeries({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.number,
-    this.modality,
-    this.uid,
-    this.description,
-    this.numberOfInstances,
-    this.availability,
-    this.url,
-    this.bodySite,
-    this.laterality,
-    this.started,
-    this.instance,
-  });
+  }) = ImagingStudySeries;
 
-  factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
+factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesFromJson(json);
   Map<String, dynamic> toJson() => _$ImagingStudySeriesToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ImagingStudySeriesInstance {
+
+@freezed
+abstract class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance
+factory ImagingStudySeriesInstance {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -365,24 +263,16 @@ class ImagingStudySeriesInstance {
   String title;
   List<Attachment> content;
 
-  ImagingStudySeriesInstance({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.number,
-    this.uid,
-    this.sopClass,
-    this.type,
-    this.title,
-    this.content,
-  });
+  }) = ImagingStudySeriesInstance;
 
-  factory ImagingStudySeriesInstance.fromJson(Map<String, dynamic> json) =>
+factory ImagingStudySeriesInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesInstanceFromJson(json);
   Map<String, dynamic> toJson() => _$ImagingStudySeriesInstanceToJson(this);
 }
 
-class Observation {
+@freezed
+abstract class Observation with _$Observation
+factory Observation {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -412,44 +302,17 @@ class Observation {
   List<ObservationRelated> related;
   List<ObservationComponent> component;
 
-  Observation({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.status,
-    this.category,
-    this.code,
-    this.subject,
-    this.encounter,
-    this.effectiveX,
-    this.issued,
-    this.performer,
-    this.valueX,
-    this.dataAbsentReason,
-    this.interpretation,
-    this.comments,
-    this.bodySite,
-    this.method,
-    this.specimen,
-    this.device,
-    this.referenceRange,
-    this.related,
-    this.component,
-  });
+  }) = Observation;
 
-  factory Observation.fromJson(Map<String, dynamic> json) =>
+factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
   Map<String, dynamic> toJson() => _$ObservationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ObservationReferenceRange {
+
+@freezed
+abstract class ObservationReferenceRange with _$ObservationReferenceRange
+factory ObservationReferenceRange {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -459,45 +322,34 @@ class ObservationReferenceRange {
   Range age;
   String text;
 
-  ObservationReferenceRange({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.low,
-    this.high,
-    this.meaning,
-    this.age,
-    this.text,
-  });
+  }) = ObservationReferenceRange;
 
-  factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
+factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$ObservationReferenceRangeFromJson(json);
   Map<String, dynamic> toJson() => _$ObservationReferenceRangeToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ObservationRelated {
+
+@freezed
+abstract class ObservationRelated with _$ObservationRelated
+factory ObservationRelated {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code type;
   Reference target;
 
-  ObservationRelated({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.target,
-  });
+  }) = ObservationRelated;
 
-  factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
+factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
       _$ObservationRelatedFromJson(json);
   Map<String, dynamic> toJson() => _$ObservationRelatedToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ObservationComponent {
+
+@freezed
+abstract class ObservationComponent with _$ObservationComponent
+factory ObservationComponent {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -505,21 +357,16 @@ class ObservationComponent {
   Quantity valueX;
   CodeableConcept dataAbsentReason;
 
-  ObservationComponent({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.valueX,
-    this.dataAbsentReason,
-  });
+  }) = ObservationComponent;
 
-  factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
+factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$ObservationComponentFromJson(json);
   Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
-class Specimen {
+@freezed
+abstract class Specimen with _$Specimen
+factory Specimen {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -539,34 +386,17 @@ class Specimen {
   List<SpecimenTreatment> treatment;
   List<SpecimenContainer> container;
 
-  Specimen({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.status,
-    this.type,
-    this.parent,
-    this.subject,
-    this.accessionIdentifier,
-    this.receivedTime,
-    this.collection,
-    this.treatment,
-    this.container,
-  });
+  }) = Specimen;
 
-  factory Specimen.fromJson(Map<String, dynamic> json) =>
+factory Specimen.fromJson(Map<String, dynamic> json) =>
       _$SpecimenFromJson(json);
   Map<String, dynamic> toJson() => _$SpecimenToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class SpecimenCollection {
+
+@freezed
+abstract class SpecimenCollection with _$SpecimenCollection
+factory SpecimenCollection {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -577,25 +407,17 @@ class SpecimenCollection {
   CodeableConcept method;
   CodeableConcept bodySite;
 
-  SpecimenCollection({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.collector,
-    this.comment,
-    this.collectedX,
-    this.quantity,
-    this.method,
-    this.bodySite,
-  });
+  }) = SpecimenCollection;
 
-  factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
+factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
       _$SpecimenCollectionFromJson(json);
   Map<String, dynamic> toJson() => _$SpecimenCollectionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class SpecimenTreatment {
+
+@freezed
+abstract class SpecimenTreatment with _$SpecimenTreatment
+factory SpecimenTreatment {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -603,22 +425,17 @@ class SpecimenTreatment {
   CodeableConcept procedure;
   List<Reference> additive;
 
-  SpecimenTreatment({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.description,
-    this.procedure,
-    this.additive,
-  });
+  }) = SpecimenTreatment;
 
-  factory SpecimenTreatment.fromJson(Map<String, dynamic> json) =>
+factory SpecimenTreatment.fromJson(Map<String, dynamic> json) =>
       _$SpecimenTreatmentFromJson(json);
   Map<String, dynamic> toJson() => _$SpecimenTreatmentToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class SpecimenContainer {
+
+@freezed
+abstract class SpecimenContainer with _$SpecimenContainer
+factory SpecimenContainer {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -629,19 +446,9 @@ class SpecimenContainer {
   Quantity specimenQuantity;
   CodeableConcept additiveX;
 
-  SpecimenContainer({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.description,
-    this.type,
-    this.capacity,
-    this.specimenQuantity,
-    this.additiveX,
-  });
+  }) = SpecimenContainer;
 
-  factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
+factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$SpecimenContainerFromJson(json);
   Map<String, dynamic> toJson() => _$SpecimenContainerToJson(this);
 }

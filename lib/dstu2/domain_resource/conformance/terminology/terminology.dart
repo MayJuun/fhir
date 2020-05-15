@@ -1,4 +1,6 @@
-class ConceptMap {
+@freezed
+abstract class ConceptMap with _$ConceptMap
+factory ConceptMap {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -24,61 +26,34 @@ class ConceptMap {
   FhirUri targetX;
   List<ConceptMapElement> element;
 
-  ConceptMap({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.url,
-    this.identifier,
-    this.version,
-    this.name,
-    this.status,
-    this.experimental,
-    this.publisher,
-    this.contact,
-    this.date,
-    this.description,
-    this.useContext,
-    this.requirements,
-    this.copyright,
-    this.sourceX,
-    this.targetX,
-    this.element,
-  });
+  }) = ConceptMap;
 
-  factory ConceptMap.fromJson(Map<String, dynamic> json) =>
+factory ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapFromJson(json);
   Map<String, dynamic> toJson() => _$ConceptMapToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConceptMapContact {
+
+@freezed
+abstract class ConceptMapContact with _$ConceptMapContact
+factory ConceptMapContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   List<ContactPoint> telecom;
 
-  ConceptMapContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.telecom,
-  });
+  }) = ConceptMapContact;
 
-  factory ConceptMapContact.fromJson(Map<String, dynamic> json) =>
+factory ConceptMapContact.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapContactFromJson(json);
   Map<String, dynamic> toJson() => _$ConceptMapContactToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConceptMapElement {
+
+@freezed
+abstract class ConceptMapElement with _$ConceptMapElement
+factory ConceptMapElement {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -86,22 +61,17 @@ class ConceptMapElement {
   Code code;
   List<ConceptMapElementTarget> target;
 
-  ConceptMapElement({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.codeSystem,
-    this.code,
-    this.target,
-  });
+  }) = ConceptMapElement;
 
-  factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
+factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapElementFromJson(json);
   Map<String, dynamic> toJson() => _$ConceptMapElementToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConceptMapElementTarget {
+
+@freezed
+abstract class ConceptMapElementTarget with _$ConceptMapElementTarget
+factory ConceptMapElementTarget {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -111,24 +81,17 @@ class ConceptMapElementTarget {
   String comments;
   List<ConceptMapElementTargetDependsOn> dependsOn;
 
-  ConceptMapElementTarget({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.codeSystem,
-    this.code,
-    this.equivalence,
-    this.comments,
-    this.dependsOn,
-  });
+  }) = ConceptMapElementTarget;
 
-  factory ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
+factory ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapElementTargetFromJson(json);
   Map<String, dynamic> toJson() => _$ConceptMapElementTargetToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ConceptMapElementTargetDependsOn {
+
+@freezed
+abstract class ConceptMapElementTargetDependsOn with _$ConceptMapElementTargetDependsOn
+factory ConceptMapElementTargetDependsOn {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -136,23 +99,18 @@ class ConceptMapElementTargetDependsOn {
   FhirUri codeSystem;
   String code;
 
-  ConceptMapElementTargetDependsOn({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.element,
-    this.codeSystem,
-    this.code,
-  });
+  }) = ConceptMapElementTargetDependsOn;
 
-  factory ConceptMapElementTargetDependsOn.fromJson(
+factory ConceptMapElementTargetDependsOn.fromJson(
           Map<String, dynamic> json) =>
       _$ConceptMapElementTargetDependsOnFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ConceptMapElementTargetDependsOnToJson(this);
 }
 
-class NamingSystem {
+@freezed
+abstract class NamingSystem with _$NamingSystem
+factory NamingSystem {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -175,58 +133,34 @@ class NamingSystem {
   List<NamingSystemUniqueId> uniqueId;
   Reference replacedBy;
 
-  NamingSystem({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.status,
-    this.kind,
-    this.publisher,
-    this.contact,
-    this.responsible,
-    this.date,
-    this.type,
-    this.description,
-    this.useContext,
-    this.usage,
-    this.uniqueId,
-    this.replacedBy,
-  });
+  }) = NamingSystem;
 
-  factory NamingSystem.fromJson(Map<String, dynamic> json) =>
+factory NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemFromJson(json);
   Map<String, dynamic> toJson() => _$NamingSystemToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class NamingSystemContact {
+
+@freezed
+abstract class NamingSystemContact with _$NamingSystemContact
+factory NamingSystemContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   List<ContactPoint> telecom;
 
-  NamingSystemContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.telecom,
-  });
+  }) = NamingSystemContact;
 
-  factory NamingSystemContact.fromJson(Map<String, dynamic> json) =>
+factory NamingSystemContact.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemContactFromJson(json);
   Map<String, dynamic> toJson() => _$NamingSystemContactToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class NamingSystemUniqueId {
+
+@freezed
+abstract class NamingSystemUniqueId with _$NamingSystemUniqueId
+factory NamingSystemUniqueId {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -235,22 +169,16 @@ class NamingSystemUniqueId {
   Boolean preferred;
   Period period;
 
-  NamingSystemUniqueId({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.value,
-    this.preferred,
-    this.period,
-  });
+  }) = NamingSystemUniqueId;
 
-  factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
+factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemUniqueIdFromJson(json);
   Map<String, dynamic> toJson() => _$NamingSystemUniqueIdToJson(this);
 }
 
-class ValueSet {
+@freezed
+abstract class ValueSet with _$ValueSet
+factory ValueSet {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -279,64 +207,34 @@ class ValueSet {
   ValueSetCompose compose;
   ValueSetExpansion expansion;
 
-  ValueSet({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.url,
-    this.identifier,
-    this.version,
-    this.name,
-    this.status,
-    this.experimental,
-    this.publisher,
-    this.contact,
-    this.date,
-    this.lockedDate,
-    this.description,
-    this.useContext,
-    this.immutable,
-    this.requirements,
-    this.copyright,
-    this.extensible,
-    this.codeSystem,
-    this.compose,
-    this.expansion,
-  });
+  }) = ValueSet;
 
-  factory ValueSet.fromJson(Map<String, dynamic> json) =>
+factory ValueSet.fromJson(Map<String, dynamic> json) =>
       _$ValueSetFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetContact {
+
+@freezed
+abstract class ValueSetContact with _$ValueSetContact
+factory ValueSetContact {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   List<ContactPoint> telecom;
 
-  ValueSetContact({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.telecom,
-  });
+  }) = ValueSetContact;
 
-  factory ValueSetContact.fromJson(Map<String, dynamic> json) =>
+factory ValueSetContact.fromJson(Map<String, dynamic> json) =>
       _$ValueSetContactFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetContactToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetCodeSystem {
+
+@freezed
+abstract class ValueSetCodeSystem with _$ValueSetCodeSystem
+factory ValueSetCodeSystem {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -345,44 +243,34 @@ class ValueSetCodeSystem {
   Boolean caseSensitive;
   List<ValueSetCodeSystemConcept> concept;
 
-  ValueSetCodeSystem({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.system,
-    this.version,
-    this.caseSensitive,
-    this.concept,
-  });
+  }) = ValueSetCodeSystem;
 
-  factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
+factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
       _$ValueSetCodeSystemFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetCodeSystemToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetCompose {
+
+@freezed
+abstract class ValueSetCompose with _$ValueSetCompose
+factory ValueSetCompose {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<FhirUri> import;
   List<ValueSetComposeInclude> include;
 
-  ValueSetCompose({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.import,
-    this.include,
-  });
+  }) = ValueSetCompose;
 
-  factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
+factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetComposeToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetExpansion {
+
+@freezed
+abstract class ValueSetExpansion with _$ValueSetExpansion
+factory ValueSetExpansion {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -393,25 +281,17 @@ class ValueSetExpansion {
   List<ValueSetExpansionParameter> parameter;
   List<ValueSetExpansionContains> contains;
 
-  ValueSetExpansion({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.timestamp,
-    this.total,
-    this.offset,
-    this.parameter,
-    this.contains,
-  });
+  }) = ValueSetExpansion;
 
-  factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
+factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetExpansionToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetCodeSystemConcept {
+
+@freezed
+abstract class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept
+factory ValueSetCodeSystemConcept {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -421,24 +301,17 @@ class ValueSetCodeSystemConcept {
   String definition;
   List<ValueSetCodeSystemConceptDesignation> designation;
 
-  ValueSetCodeSystemConcept({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.abstract,
-    this.display,
-    this.definition,
-    this.designation,
-  });
+  }) = ValueSetCodeSystemConcept;
 
-  factory ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =>
+factory ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$ValueSetCodeSystemConceptFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetCodeSystemConceptToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetComposeInclude {
+
+@freezed
+abstract class ValueSetComposeInclude with _$ValueSetComposeInclude
+factory ValueSetComposeInclude {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -447,44 +320,34 @@ class ValueSetComposeInclude {
   List<ValueSetComposeIncludeConcept> concept;
   List<ValueSetComposeIncludeFilter> filter;
 
-  ValueSetComposeInclude({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.system,
-    this.version,
-    this.concept,
-    this.filter,
-  });
+  }) = ValueSetComposeInclude;
 
-  factory ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
+factory ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeIncludeFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetComposeIncludeToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetExpansionParameter {
+
+@freezed
+abstract class ValueSetExpansionParameter with _$ValueSetExpansionParameter
+factory ValueSetExpansionParameter {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
   String valueX;
 
-  ValueSetExpansionParameter({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.valueX,
-  });
+  }) = ValueSetExpansionParameter;
 
-  factory ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =>
+factory ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionParameterFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetExpansionParameterToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetExpansionContains {
+
+@freezed
+abstract class ValueSetExpansionContains with _$ValueSetExpansionContains
+factory ValueSetExpansionContains {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -494,24 +357,17 @@ class ValueSetExpansionContains {
   Code code;
   String display;
 
-  ValueSetExpansionContains({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.system,
-    this.abstract,
-    this.version,
-    this.code,
-    this.display,
-  });
+  }) = ValueSetExpansionContains;
 
-  factory ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
+factory ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionContainsFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetExpansionContainsToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetCodeSystemConceptDesignation {
+
+@freezed
+abstract class ValueSetCodeSystemConceptDesignation with _$ValueSetCodeSystemConceptDesignation
+factory ValueSetCodeSystemConceptDesignation {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -519,45 +375,36 @@ class ValueSetCodeSystemConceptDesignation {
   Coding use;
   String value;
 
-  ValueSetCodeSystemConceptDesignation({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.language,
-    this.use,
-    this.value,
-  });
+  }) = ValueSetCodeSystemConceptDesignation;
 
-  factory ValueSetCodeSystemConceptDesignation.fromJson(
+factory ValueSetCodeSystemConceptDesignation.fromJson(
           Map<String, dynamic> json) =>
       _$ValueSetCodeSystemConceptDesignationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ValueSetCodeSystemConceptDesignationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetComposeIncludeConcept {
+
+@freezed
+abstract class ValueSetComposeIncludeConcept with _$ValueSetComposeIncludeConcept
+factory ValueSetComposeIncludeConcept {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code code;
   String display;
 
-  ValueSetComposeIncludeConcept({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.display,
-  });
+  }) = ValueSetComposeIncludeConcept;
 
-  factory ValueSetComposeIncludeConcept.fromJson(Map<String, dynamic> json) =>
+factory ValueSetComposeIncludeConcept.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeIncludeConceptFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetComposeIncludeConceptToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ValueSetComposeIncludeFilter {
+
+@freezed
+abstract class ValueSetComposeIncludeFilter with _$ValueSetComposeIncludeFilter
+factory ValueSetComposeIncludeFilter {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -565,16 +412,9 @@ class ValueSetComposeIncludeFilter {
   Code op;
   Code value;
 
-  ValueSetComposeIncludeFilter({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.property,
-    this.op,
-    this.value,
-  });
+  }) = ValueSetComposeIncludeFilter;
 
-  factory ValueSetComposeIncludeFilter.fromJson(Map<String, dynamic> json) =>
+factory ValueSetComposeIncludeFilter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeIncludeFilterFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetComposeIncludeFilterToJson(this);
 }

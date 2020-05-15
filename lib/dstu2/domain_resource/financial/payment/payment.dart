@@ -1,4 +1,6 @@
-class PaymentNotice {
+@freezed
+abstract class PaymentNotice with _$PaymentNotice
+factory PaymentNotice {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -18,33 +20,16 @@ class PaymentNotice {
   Reference response;
   Coding paymentStatus;
 
-  PaymentNotice({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.target,
-    this.provider,
-    this.organization,
-    this.request,
-    this.response,
-    this.paymentStatus,
-  });
+  }) = PaymentNotice;
 
-  factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
+factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
   Map<String, dynamic> toJson() => _$PaymentNoticeToJson(this);
 }
 
-class PaymentReconciliation {
+@freezed
+abstract class PaymentReconciliation with _$PaymentReconciliation
+factory PaymentReconciliation {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -69,39 +54,17 @@ class PaymentReconciliation {
   Quantity total;
   List<PaymentReconciliationNote> note;
 
-  PaymentReconciliation({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.request,
-    this.outcome,
-    this.disposition,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.period,
-    this.organization,
-    this.requestProvider,
-    this.requestOrganization,
-    this.detail,
-    this.form,
-    this.total,
-    this.note,
-  });
+  }) = PaymentReconciliation;
 
-  factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
+factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
   Map<String, dynamic> toJson() => _$PaymentReconciliationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class PaymentReconciliationDetail {
+
+@freezed
+abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail
+factory PaymentReconciliationDetail {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -113,41 +76,26 @@ class PaymentReconciliationDetail {
   Date date;
   Quantity amount;
 
-  PaymentReconciliationDetail({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.request,
-    this.responce,
-    this.submitter,
-    this.payee,
-    this.date,
-    this.amount,
-  });
+  }) = PaymentReconciliationDetail;
 
-  factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
+factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
   Map<String, dynamic> toJson() => _$PaymentReconciliationDetailToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class PaymentReconciliationNote {
+
+@freezed
+abstract class PaymentReconciliationNote with _$PaymentReconciliationNote
+factory PaymentReconciliationNote {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Coding type;
   String text;
 
-  PaymentReconciliationNote({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.text,
-  });
+  }) = PaymentReconciliationNote;
 
-  factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
+factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationNoteFromJson(json);
   Map<String, dynamic> toJson() => _$PaymentReconciliationNoteToJson(this);
 }

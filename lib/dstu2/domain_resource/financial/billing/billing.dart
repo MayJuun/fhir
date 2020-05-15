@@ -1,4 +1,6 @@
-class Claim {
+@freezed
+abstract class Claim with _$Claim
+factory Claim {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -37,52 +39,16 @@ class Claim {
   List<Coding> additionalMaterials;
   List<ClaimMissingTeeth> missingTeeth;
 
-  Claim({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.identifier,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.target,
-    this.provider,
-    this.organization,
-    this.use,
-    this.priority,
-    this.fundsReserve,
-    this.enterer,
-    this.facility,
-    this.prescription,
-    this.originalPrescription,
-    this.payee,
-    this.referral,
-    this.diagnosis,
-    this.condition,
-    this.patient,
-    this.coverage,
-    this.exception,
-    this.school,
-    this.accident,
-    this.accidentType,
-    this.interventionException,
-    this.item,
-    this.additionalMaterials,
-    this.missingTeeth,
-  });
+  }) = Claim;
 
-  factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
+factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimPayee {
+
+@freezed
+abstract class ClaimPayee with _$ClaimPayee
+factory ClaimPayee {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -91,44 +57,34 @@ class ClaimPayee {
   Reference organization;
   Reference person;
 
-  ClaimPayee({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.provider,
-    this.organization,
-    this.person,
-  });
+  }) = ClaimPayee;
 
-  factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
+factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
       _$ClaimPayeeFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimPayeeToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimDiagnosis {
+
+@freezed
+abstract class ClaimDiagnosis with _$ClaimDiagnosis
+factory ClaimDiagnosis {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   PositiveInt sequence;
   Coding diagnosis;
 
-  ClaimDiagnosis({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequence,
-    this.diagnosis,
-  });
+  }) = ClaimDiagnosis;
 
-  factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
+factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ClaimDiagnosisFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimDiagnosisToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimCoverage {
+
+@freezed
+abstract class ClaimCoverage with _$ClaimCoverage
+factory ClaimCoverage {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -141,27 +97,17 @@ class ClaimCoverage {
   Reference claimResponse;
   Coding originalRuleset;
 
-  ClaimCoverage({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequence,
-    this.focal,
-    this.coverage,
-    this.businessArrangement,
-    this.relationship,
-    this.preAuthRef,
-    this.claimResponse,
-    this.originalRuleset,
-  });
+  }) = ClaimCoverage;
 
-  factory ClaimCoverage.fromJson(Map<String, dynamic> json) =>
+factory ClaimCoverage.fromJson(Map<String, dynamic> json) =>
       _$ClaimCoverageFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimCoverageToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimItem {
+
+@freezed
+abstract class ClaimItem with _$ClaimItem
+factory ClaimItem {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -183,36 +129,17 @@ class ClaimItem {
   List<ClaimItemDetail> detail;
   ClaimItemProsthesis prosthesis;
 
-  ClaimItem({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequence,
-    this.type,
-    this.provider,
-    this.diagnosisLinkId,
-    this.service,
-    this.serviceDate,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.points,
-    this.net,
-    this.udi,
-    this.bodySite,
-    this.subSite,
-    this.modifier,
-    this.detail,
-    this.prosthesis,
-  });
+  }) = ClaimItem;
 
-  factory ClaimItem.fromJson(Map<String, dynamic> json) =>
+factory ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimItemToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimItemDetail {
+
+@freezed
+abstract class ClaimItemDetail with _$ClaimItemDetail
+factory ClaimItemDetail {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -247,8 +174,10 @@ class ClaimItemDetail {
   Map<String, dynamic> toJson() => _$ClaimItemDetailToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimItemProsthesis {
+
+@freezed
+abstract class ClaimItemProsthesis with _$ClaimItemProsthesis
+factory ClaimItemProsthesis {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -256,22 +185,17 @@ class ClaimItemProsthesis {
   Date priorDate;
   Coding priorMaterial;
 
-  ClaimItemProsthesis({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.initial,
-    this.priorDate,
-    this.priorMaterial,
-  });
+  }) = ClaimItemProsthesis;
 
-  factory ClaimItemProsthesis.fromJson(Map<String, dynamic> json) =>
+factory ClaimItemProsthesis.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemProsthesisFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimItemProsthesisToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimItemDetailSubDetail {
+
+@freezed
+abstract class ClaimItemDetailSubDetail with _$ClaimItemDetailSubDetail
+factory ClaimItemDetailSubDetail {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -285,28 +209,17 @@ class ClaimItemDetailSubDetail {
   Quantity net;
   Coding udi;
 
-  ClaimItemDetailSubDetail({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequence,
-    this.type,
-    this.service,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.points,
-    this.net,
-    this.udi,
-  });
+  }) = ClaimItemDetailSubDetail;
 
-  factory ClaimItemDetailSubDetail.fromJson(Map<String, dynamic> json) =>
+factory ClaimItemDetailSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemDetailSubDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimItemDetailSubDetailToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimMissingTeeth {
+
+@freezed
+abstract class ClaimMissingTeeth with _$ClaimMissingTeeth
+factory ClaimMissingTeeth {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -314,21 +227,16 @@ class ClaimMissingTeeth {
   Coding reason;
   Date extractionDate;
 
-  ClaimMissingTeeth({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.tooth,
-    this.reason,
-    this.extractionDate,
-  });
+  }) = ClaimMissingTeeth;
 
-  factory ClaimMissingTeeth.fromJson(Map<String, dynamic> json) =>
+factory ClaimMissingTeeth.fromJson(Map<String, dynamic> json) =>
       _$ClaimMissingTeethFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimMissingTeethToJson(this);
 }
 
-class ClaimResponse {
+@freezed
+abstract class ClaimResponse with _$ClaimResponse
+factory ClaimResponse {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -364,50 +272,17 @@ class ClaimResponse {
   List<ClaimResponseNote> note;
   List<ClaimResponseCoverage> coverage;
 
-  ClaimResponse({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.request,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.organization,
-    this.requestProvider,
-    this.requestOrganization,
-    this.outcome,
-    this.disposition,
-    this.payeeType,
-    this.item,
-    this.addItem,
-    this.error,
-    this.totalCost,
-    this.unallocDeductable,
-    this.totalBenefit,
-    this.paymentAdjustment,
-    this.paymentAdjustmentReason,
-    this.paymentDate,
-    this.paymentAmount,
-    this.paymentRef,
-    this.reserved,
-    this.form,
-    this.note,
-    this.coverage,
-  });
+  }) = ClaimResponse;
 
-  factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseItem {
+
+@freezed
+abstract class ClaimResponseItem with _$ClaimResponseItem
+factory ClaimResponseItem {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -430,8 +305,10 @@ class ClaimResponseItem {
   Map<String, dynamic> toJson() => _$ClaimResponseItemToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseAddItem {
+
+@freezed
+abstract class ClaimResponseAddItem with _$ClaimResponseAddItem
+factory ClaimResponseAddItem {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -442,25 +319,17 @@ class ClaimResponseAddItem {
   List<ClaimResponseAddItemAdjudication> adjudication;
   List<ClaimResponseAddItemDetail> detail;
 
-  ClaimResponseAddItem({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequenceLinkId,
-    this.service,
-    this.fee,
-    this.noteNumberLinkId,
-    this.adjudication,
-    this.detail,
-  });
+  }) = ClaimResponseAddItem;
 
-  factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseAddItemToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseError {
+
+@freezed
+abstract class ClaimResponseError with _$ClaimResponseError
+factory ClaimResponseError {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -469,23 +338,17 @@ class ClaimResponseError {
   PositiveInt subdetailSequenceLinkId;
   Coding code;
 
-  ClaimResponseError({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequenceLinkId,
-    this.detailSequenceLinkId,
-    this.subdetailSequenceLinkId,
-    this.code,
-  });
+  }) = ClaimResponseError;
 
-  factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseErrorFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseErrorToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseNote {
+
+@freezed
+abstract class ClaimResponseNote with _$ClaimResponseNote
+factory ClaimResponseNote {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -493,22 +356,17 @@ class ClaimResponseNote {
   Coding type;
   String text;
 
-  ClaimResponseNote({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.number,
-    this.type,
-    this.text,
-  });
+  }) = ClaimResponseNote;
 
-  factory ClaimResponseNote.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseNote.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseNoteFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseNoteToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseCoverage {
+
+@freezed
+abstract class ClaimResponseCoverage with _$ClaimResponseCoverage
+factory ClaimResponseCoverage {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -521,27 +379,17 @@ class ClaimResponseCoverage {
   Reference claimResponse;
   Coding originalRuleset;
 
-  ClaimResponseCoverage({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequence,
-    this.focal,
-    this.coverage,
-    this.businessArrangement,
-    this.relationship,
-    this.preAuthRef,
-    this.claimResponse,
-    this.originalRuleset,
-  });
+  }) = ClaimResponseCoverage;
 
-  factory ClaimResponseCoverage.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseCoverage.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseCoverageFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseCoverageToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseItemAdjudication {
+
+@freezed
+abstract class ClaimResponseItemAdjudication with _$ClaimResponseItemAdjudication
+factory ClaimResponseItemAdjudication {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -549,22 +397,17 @@ class ClaimResponseItemAdjudication {
   Quantity amount;
   Decimal value;
 
-  ClaimResponseItemAdjudication({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.amount,
-    this.value,
-  });
+  }) = ClaimResponseItemAdjudication;
 
-  factory ClaimResponseItemAdjudication.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseItemAdjudication.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemAdjudicationFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseItemAdjudicationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseItemDetail {
+
+@freezed
+abstract class ClaimResponseItemDetail with _$ClaimResponseItemDetail
+factory ClaimResponseItemDetail {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -572,22 +415,17 @@ class ClaimResponseItemDetail {
   List<ClaimResponseItemDetailAdjudication> adjudication;
   List<ClaimResponseItemDetailSubDetail> subDetail;
 
-  ClaimResponseItemDetail({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequenceLinkId,
-    this.adjudication,
-    this.subDetail,
-  });
+  }) = ClaimResponseItemDetail;
 
-  factory ClaimResponseItemDetail.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseItemDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseItemDetailToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseAddItemAdjudication {
+
+@freezed
+abstract class ClaimResponseAddItemAdjudication with _$ClaimResponseAddItemAdjudication
+factory ClaimResponseAddItemAdjudication {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -595,24 +433,19 @@ class ClaimResponseAddItemAdjudication {
   Quantity amount;
   Decimal value;
 
-  ClaimResponseAddItemAdjudication({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.amount,
-    this.value,
-  });
+  }) = ClaimResponseAddItemAdjudication;
 
-  factory ClaimResponseAddItemAdjudication.fromJson(
+factory ClaimResponseAddItemAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ClaimResponseAddItemAdjudicationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ClaimResponseAddItemAdjudicationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseAddItemDetail {
+
+@freezed
+abstract class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail
+factory ClaimResponseAddItemDetail {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -620,22 +453,17 @@ class ClaimResponseAddItemDetail {
   Quantity fee;
   List<ClaimResponseAddItemDetailAdjudication> adjudication;
 
-  ClaimResponseAddItemDetail({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.service,
-    this.fee,
-    this.adjudication,
-  });
+  }) = ClaimResponseAddItemDetail;
 
-  factory ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseAddItemDetailToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseItemDetailAdjudication {
+
+@freezed
+abstract class ClaimResponseItemDetailAdjudication with _$ClaimResponseItemDetailAdjudication
+factory ClaimResponseItemDetailAdjudication {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -643,47 +471,38 @@ class ClaimResponseItemDetailAdjudication {
   Quantity amount;
   Decimal value;
 
-  ClaimResponseItemDetailAdjudication({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.amount,
-    this.value,
-  });
+  }) = ClaimResponseItemDetailAdjudication;
 
-  factory ClaimResponseItemDetailAdjudication.fromJson(
+factory ClaimResponseItemDetailAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ClaimResponseItemDetailAdjudicationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ClaimResponseItemDetailAdjudicationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseItemDetailSubDetail {
+
+@freezed
+abstract class ClaimResponseItemDetailSubDetail with _$ClaimResponseItemDetailSubDetail
+factory ClaimResponseItemDetailSubDetail {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   PositiveInt sequenceLinkId;
   List<ClaimResponseItemDetailSubDetailAdjudication> adjudication;
 
-  ClaimResponseItemDetailSubDetail({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequenceLinkId,
-    this.adjudication,
-  });
+  }) = ClaimResponseItemDetailSubDetail;
 
-  factory ClaimResponseItemDetailSubDetail.fromJson(
+factory ClaimResponseItemDetailSubDetail.fromJson(
           Map<String, dynamic> json) =>
       _$ClaimResponseItemDetailSubDetailFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ClaimResponseItemDetailSubDetailToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseAddItemDetailAdjudication {
+
+@freezed
+abstract class ClaimResponseAddItemDetailAdjudication with _$ClaimResponseAddItemDetailAdjudication
+factory ClaimResponseAddItemDetailAdjudication {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -691,24 +510,19 @@ class ClaimResponseAddItemDetailAdjudication {
   Quantity amount;
   Decimal value;
 
-  ClaimResponseAddItemDetailAdjudication({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.amount,
-    this.value,
-  });
+  }) = ClaimResponseAddItemDetailAdjudication;
 
-  factory ClaimResponseAddItemDetailAdjudication.fromJson(
+factory ClaimResponseAddItemDetailAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ClaimResponseAddItemDetailAdjudicationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ClaimResponseAddItemDetailAdjudicationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimResponseItemDetailSubDetailAdjudication {
+
+@freezed
+abstract class ClaimResponseItemDetailSubDetailAdjudication with _$ClaimResponseItemDetailSubDetailAdjudication
+factory ClaimResponseItemDetailSubDetailAdjudication {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtensi;
@@ -716,16 +530,9 @@ class ClaimResponseItemDetailSubDetailAdjudication {
   Quantity amount;
   Decimal value;
 
-  ClaimResponseItemDetailSubDetailAdjudication({
-    this.id,
-    this.extension,
-    this.modifierExtensi,
-    this.code,
-    this.amount,
-    this.value,
-  });
+  }) = ClaimResponseItemDetailSubDetailAdjudication;
 
-  factory ClaimResponseItemDetailSubDetailAdjudication.fromJson(
+factory ClaimResponseItemDetailSubDetailAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ClaimResponseItemDetailSubDetailAdjudicationFromJson(json);
   Map<String, dynamic> toJson() =>

@@ -1,4 +1,6 @@
-class ProcessRequest {
+@freezed
+abstract class ProcessRequest with _$ProcessRequest
+factory ProcessRequest {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -24,58 +26,32 @@ class ProcessRequest {
   List<String> exclude;
   Period period;
 
-  ProcessRequest({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.action,
-    this.identifier,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.target,
-    this.provider,
-    this.organization,
-    this.request,
-    this.response,
-    this.nullify,
-    this.reference,
-    this.item,
-    this.include,
-    this.exclude,
-    this.period,
-  });
+  }) = ProcessRequest;
 
-  factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
+factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestFromJson(json);
   Map<String, dynamic> toJson() => _$ProcessRequestToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ProcessRequestItem {
+
+@freezed
+abstract class ProcessRequestItem with _$ProcessRequestItem
+factory ProcessRequestItem {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Integer sequenceLinkId;
 
-  ProcessRequestItem({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequenceLinkId,
-  });
+  }) = ProcessRequestItem;
 
-  factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
+factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestItemFromJson(json);
   Map<String, dynamic> toJson() => _$ProcessRequestItemToJson(this);
 }
 
-class ProcessResponse {
+@freezed
+abstract class ProcessResponse with _$ProcessResponse
+factory ProcessResponse {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -98,57 +74,33 @@ class ProcessResponse {
   List<ProcessResponseNotes> notes;
   List<Coding> error;
 
-  ProcessResponse({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.request,
-    this.outcome,
-    this.disposition,
-    this.ruleset,
-    this.originalRuleset,
-    this.created,
-    this.organization,
-    this.requestProvider,
-    this.requestOrganization,
-    this.form,
-    this.notes,
-    this.error,
-  });
+  }) = ProcessResponse;
 
-  factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
+factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseFromJson(json);
   Map<String, dynamic> toJson() => _$ProcessResponseToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ProcessResponseNotes {
+
+@freezed
+abstract class ProcessResponseNotes with _$ProcessResponseNotes
+factory ProcessResponseNotes {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Coding type;
   String text;
 
-  ProcessResponseNotes({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.text,
-  });
+  }) = ProcessResponseNotes;
 
-  factory ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
+factory ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseNotesFromJson(json);
   Map<String, dynamic> toJson() => _$ProcessResponseNotesToJson(this);
 }
 
-class SupplyDelivery {
+@freezed
+abstract class SupplyDelivery with _$SupplyDelivery
+factory SupplyDelivery {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -169,35 +121,17 @@ class SupplyDelivery {
   Reference destination;
   List<Reference> receiver;
 
-  SupplyDelivery({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.status,
-    this.patient,
-    this.type,
-    this.quantity,
-    this.suppliedItem,
-    this.supplier,
-    this.whenPrepared,
-    this.time,
-    this.destination,
-    this.receiver,
-  });
+  }) = SupplyDelivery;
 
-  factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
+factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyDeliveryToJson(this);
 }
 
  
-class SupplyRequest {
+@freezed
+abstract class SupplyRequest with _$SupplyRequest
+factory SupplyRequest {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -217,49 +151,26 @@ class SupplyRequest {
   CodeableConcept reasonX;
   SupplyRequestWhen when;
 
-  SupplyRequest({
-    this.id,
-    this.meta,
-    this.implicitRules,
-    this.language,
-    this.text,
-    this.contained,
-    this.extension,
-    this.modifierExtension,
-    this.patient,
-    this.source,
-    this.date,
-    this.identifier,
-    this.status,
-    this.kind,
-    this.orderedItem,
-    this.supplier,
-    this.reasonX,
-    this.when,
-  });
+  }) = SupplyRequest;
 
-  factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
+factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyRequestToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class SupplyRequestWhen {
+
+@freezed
+abstract class SupplyRequestWhen with _$SupplyRequestWhen
+factory SupplyRequestWhen {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept code;
   Timing schedule;
 
-  SupplyRequestWhen({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.schedule,
-  });
+  }) = SupplyRequestWhen;
 
-  factory SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
+factory SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestWhenFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyRequestWhenToJson(this);
 }
