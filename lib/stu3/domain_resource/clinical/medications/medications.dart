@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'medications.freezed.dart';
@@ -14,24 +14,24 @@ part 'medications.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Quantity/duration.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/period.dart';
 
-import '../Element/dosage.dart';
 
-import '../Element/annotation.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
 
 
 part 'medicationRequest.g.dart';
@@ -151,18 +151,18 @@ class MedicationRequestSubstitution {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'immunization.g.dart';
@@ -296,20 +296,20 @@ class ImmunizationVaccinationProtocol {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/dosage.dart';
 
-import '../Element/annotation.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'medicationDispense.g.dart';
@@ -414,14 +414,14 @@ class MedicationDispenseSubstitution {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
 
 
 part 'immunizationRecommendation.g.dart';
@@ -513,22 +513,22 @@ class ImmunizationRecommendationProtocol {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/ratio.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/annotation.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
 
 
 part 'medicationAdministration.g.dart';
@@ -633,20 +633,20 @@ class MedicationAdministrationDosage {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/dosage.dart';
 
-import '../Element/annotation.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'medicationStatement.g.dart';
@@ -707,15 +707,15 @@ class MedicationStatement {
 
 
 
-import '../Element/quantity.dart';
 
-import '../Element/ratio.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
+
+
+
+
+
 
 
 part 'medication.g.dart';

@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'conformance.freezed.dart';
@@ -14,11 +14,11 @@ part 'conformance.g.dart';
 
 
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
+
+
+
 
 
 part 'compartmentDefinition.g.dart';
@@ -85,13 +85,13 @@ class CompartmentDefinitionResource {
 
 
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
+
+
+
+
 
 
 part 'operationDefinition.g.dart';
@@ -217,78 +217,78 @@ class OperationDefinitionOverload {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/triggerDefinition.dart';
 
-import '../Element/parameterDefinition.dart';
 
-import '../Element/dataRequirement.dart';
 
-import '../Element/relatedArtifact.dart';
 
-import '../Element/dosage.dart';
 
-import '../Element/contributor.dart';
 
-import '../Element/elementDefinition.dart';
 
-import '../Element/meta.dart';
 
-import '../Element/timing.dart';
 
-import '../Element/contactPoint.dart';
 
-import '../Element/address.dart';
 
-import '../Element/humanName.dart';
 
-import '../Element/signature.dart';
 
-import '../Element/sampledData.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/ratio.dart';
 
-import '../Element/period.dart';
 
-import '../Element/range.dart';
 
-import '../Quantity/age.dart';
 
-import '../Quantity/money.dart';
 
-import '../Quantity/count.dart';
 
-import '../Quantity/distance.dart';
 
-import '../Quantity/duration.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/coding.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/annotation.dart';
 
-import '../Element/narrative.dart';
 
-import '../Element/backboneElement.dart';
 
-import '../Element/extension.dart';
 
-import '../element.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 part 'structureMap.g.dart';
@@ -313,7 +313,7 @@ class StructureMap {
   String copyright;
   List<StructureMapStructure> structure;
   List<String> 
-import;
+
   List<StructureMapGroup> group;
 
   StructureMap({
@@ -336,7 +336,7 @@ import;
     this.copyright,
     this.structure,
     this.
-import,
+
     @required this.group,
   });
 
@@ -620,20 +620,20 @@ class StructureMapDependent {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/coding.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'messageDefinition.g.dart';
@@ -734,16 +734,16 @@ class MessageDefinitionAllowedResponse {
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
+
+
+
+
+
 
 
 part 'implementationGuide.g.dart';
@@ -891,18 +891,18 @@ class ImplementationGuidePage {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/elementDefinition.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'dataElement.g.dart';
@@ -972,14 +972,14 @@ class DataElementMapping {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
+
+
+
+
 
 
 part 'graphDefinition.g.dart';
@@ -1087,20 +1087,20 @@ class GraphDefinitionCompartment {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/elementDefinition.dart';
 
-import '../Element/coding.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'structureDefinition.g.dart';
@@ -1220,16 +1220,16 @@ class StructureDefinitionDifferential {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/contactPoint.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/coding.dart';
+
+
+
+
+
 
 
 part 'messageHeader.g.dart';
@@ -1325,18 +1325,18 @@ class MessageHeaderResponse {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/coding.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
+
+
+
+
+
+
 
 
 part 'capabilityStatement.g.dart';
@@ -1695,16 +1695,16 @@ class CapabilityStatementDocument {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
+
+
+
+
+
 
 
 part 'searchParameter.g.dart';

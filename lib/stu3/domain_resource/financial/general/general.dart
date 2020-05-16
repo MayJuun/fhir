@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'general.freezed.dart';
@@ -13,26 +13,26 @@ part 'general.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Quantity/money.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/signature.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/coding.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/period.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
+
 
 
 part 'contract.g.dart';
@@ -278,18 +278,18 @@ class ContractRule {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Quantity/money.dart';
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'account.g.dart';
@@ -363,24 +363,24 @@ class AccountGuarantor {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Quantity/money.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/timing.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
 
 
 part 'chargeItem.g.dart';
@@ -465,26 +465,26 @@ class ChargeItemParticipant {
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/address.dart';
 
-import '../Element/coding.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/quantity.dart';
 
-import '../Quantity/money.dart';
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
+
 
 
 part 'explanationOfBenefit.g.dart';

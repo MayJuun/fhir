@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'security.freezed.dart';
@@ -13,16 +13,16 @@ part 'security.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/identifier.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/coding.dart';
+
+
+
+
+
 
 
 part 'auditEvent.g.dart';
@@ -169,20 +169,20 @@ class AuditEventDetail {
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/identifier.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/signature.dart';
 
-import '../Element/coding.dart';
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
+
+
+
+
+
+
+
 
 
 part 'provenance.g.dart';
@@ -264,20 +264,20 @@ class ProvenanceEntity {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/coding.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'consent.g.dart';

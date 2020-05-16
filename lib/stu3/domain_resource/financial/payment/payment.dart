@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'payment.freezed.dart';
@@ -14,18 +14,18 @@ part 'payment.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Quantity/money.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/period.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'paymentReconciliation.g.dart';
@@ -114,11 +114,11 @@ class PaymentReconciliationProcessNote {
 
 
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
 
 
 part 'paymentNotice.g.dart';

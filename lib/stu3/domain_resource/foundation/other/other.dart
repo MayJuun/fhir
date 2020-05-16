@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'other.freezed.dart';
@@ -13,14 +13,14 @@ part 'other.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
 
 
 part 'basic.g.dart';
@@ -49,12 +49,12 @@ class Basic {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/coding.dart';
 
-import '../Element/contactPoint.dart';
+
+
+
 
 
 part 'subscription.g.dart';
@@ -108,20 +108,20 @@ class SubscriptionChannel {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'media.g.dart';
@@ -178,10 +178,10 @@ class Media {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/codeableConcept.dart';
+
+
 
 
 part 'operationOutcome.g.dart';
@@ -225,10 +225,10 @@ class OperationOutcomeIssue {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
+
+
 
 
 part 'linkage.g.dart';

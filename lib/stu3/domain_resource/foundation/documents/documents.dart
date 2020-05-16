@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'documents.freezed.dart';
@@ -13,20 +13,20 @@ part 'documents.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/period.dart';
 
-import '../Element/coding.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'documentReference.g.dart';
@@ -146,16 +146,16 @@ class DocumentReferenceRelated {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/attachment.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'documentManifest.g.dart';
@@ -227,18 +227,18 @@ class DocumentManifestRelated {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/narrative.dart';
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'composition.g.dart';

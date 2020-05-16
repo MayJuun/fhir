@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'diagnostics.freezed.dart';
@@ -116,18 +116,18 @@ class ImagingStudyInstance {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/attachment.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'diagnosticReport.g.dart';
@@ -212,15 +212,15 @@ class DiagnosticReportImage {
 
 
 
-import '../Element/quantity.dart';
 
-import '../Element/coding.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'questionnaireResponse.g.dart';
@@ -320,12 +320,12 @@ class QuestionnaireResponseAnswer {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
 
 
 part 'imagingManifest.g.dart';
@@ -406,13 +406,13 @@ class ImagingManifestInstance {
 
 
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
 
 
 part 'sequence.g.dart';
@@ -546,16 +546,16 @@ class SequenceRepository {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'bodySite.g.dart';
@@ -589,20 +589,20 @@ class BodySite {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/quantity.dart';
 
-import '../Element/period.dart';
 
-import '../Element/annotation.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'specimen.g.dart';
@@ -712,26 +712,26 @@ class SpecimenContainer {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/attachment.dart';
 
-import '../Element/sampledData.dart';
 
-import '../Element/ratio.dart';
 
-import '../Element/range.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
+
 
 
 part 'observation.g.dart';
@@ -935,16 +935,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -952,38 +942,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -1019,1189 +977,13 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
 
 
-part 'sequence.g.dart';
 
 
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
-
-
-
-
-
-
-
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -2238,13 +1020,1231 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 
 
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 part 'sequence.g.dart';
@@ -2259,16 +2259,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -2276,38 +2266,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -2343,16 +2301,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -2360,38 +2308,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -2427,16 +2343,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -2444,38 +2350,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -2511,16 +2385,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -2528,38 +2392,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -2595,16 +2427,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -2612,38 +2434,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -2679,16 +2469,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -2696,38 +2476,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -2763,16 +2511,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -2780,38 +2518,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -2847,16 +2553,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -2864,38 +2560,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -2931,16 +2595,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -2948,38 +2602,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -3015,16 +2637,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -3032,38 +2644,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -3099,16 +2679,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -3116,38 +2686,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -3183,16 +2721,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -3200,38 +2728,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -3267,16 +2763,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -3284,38 +2770,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -3351,16 +2805,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -3368,38 +2812,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -3435,16 +2847,6 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
-
-
-part 'sequence.g.dart';
 
 
 
@@ -3452,38 +2854,6 @@ part 'sequence.g.dart';
 
 
 
-
-Range;
-
-ObservationComponent({
-@required this.code,
-this.valueQuantity,
-this.valueCodeableConcept,
-this.valueString,
-this.valueRange,
-this.valueRatio,
-this.valueSampledData,
-this.valueAttachment,
-this.valueTime,
-this.valueDateTime,
-this.valuePeriod,
-this.dataAbsentReason,
-this.interpretation,
-this.referenceRange,
-});
-
-factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
-Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
-}
-
-
-import '../Element/codeableConcept.dart';
-
-import '../Element/quantity.dart';
-
-import '../Element/reference.dart';
-
-import '../Element/identifier.dart';
 
 
 part 'sequence.g.dart';
@@ -3519,13 +2889,643 @@ Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
+
+
+part 'sequence.g.dart';
+
+
+
+
+
+
+
+
+Range;
+
+ObservationComponent({
+@required this.code,
+this.valueQuantity,
+this.valueCodeableConcept,
+this.valueString,
+this.valueRange,
+this.valueRatio,
+this.valueSampledData,
+this.valueAttachment,
+this.valueTime,
+this.valueDateTime,
+this.valuePeriod,
+this.dataAbsentReason,
+this.interpretation,
+this.referenceRange,
+});
+
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+
+
+
+
+
+
+
+
 
 
 part 'sequence.g.dart';

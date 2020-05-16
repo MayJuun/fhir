@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'definitionalartifacts.freezed.dart';
@@ -14,29 +14,29 @@ part 'definitionalartifacts.g.dart';
 
 
 
-import '../Element/dosage.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/range.dart';
 
-import '../Element/timing.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/relatedArtifact.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/contributor.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/period.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 part 'activityDefinition.g.dart';
@@ -166,23 +166,23 @@ class ActivityDefinitionDynamicValue {
 
 
 
-import '../Element/quantity.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/coding.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/period.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
 
 
 part 'questionnaire.g.dart';
@@ -366,25 +366,25 @@ class QuestionnaireOption {
 
 
 
-import '../Element/reference.dart';
 
-import '../Element/dataRequirement.dart';
 
-import '../Element/triggerDefinition.dart';
 
-import '../Element/relatedArtifact.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/contributor.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/period.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
+
 
 
 part 'serviceDefinition.g.dart';
@@ -454,38 +454,38 @@ class ServiceDefinition {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/coding.dart';
 
-import '../Element/timing.dart';
 
-import '../Element/dataRequirement.dart';
 
-import '../Element/triggerDefinition.dart';
 
-import '../Quantity/duration.dart';
 
-import '../Element/range.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/relatedArtifact.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/contributor.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 part 'planDefinition.g.dart';

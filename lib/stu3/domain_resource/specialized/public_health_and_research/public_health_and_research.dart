@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'publichealthandresearch.freezed.dart';
@@ -14,14 +14,14 @@ part 'publichealthandresearch.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/period.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
 
 
 part 'researchSubject.g.dart';
@@ -58,19 +58,19 @@ class ResearchSubject {
 
 
 
-import '../Element/annotation.dart';
 
-import '../Element/period.dart';
 
-import '../Element/relatedArtifact.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'researchStudy.g.dart';

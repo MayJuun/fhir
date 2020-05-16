@@ -1,26 +1,26 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'management.freezed.dart';
 
 part 'management.g.dart';
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'lists.g.dart';
@@ -84,28 +84,28 @@ class ListEntry {
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/attachment.dart';
 
-import '../Element/dataRequirement.dart';
 
-import '../Element/parameterDefinition.dart';
 
-import '../Element/relatedArtifact.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/contributor.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
+
+
 
 
 part 'library.g.dart';
@@ -177,20 +177,20 @@ class Library {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Quantity/duration.dart';
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/coding.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'encounter.g.dart';
@@ -356,16 +356,16 @@ class EncounterLocation {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'flag.g.dart';
@@ -400,16 +400,16 @@ class Flag {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'episodeOfCare.g.dart';

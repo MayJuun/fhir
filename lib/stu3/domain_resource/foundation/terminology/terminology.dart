@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'terminology.freezed.dart';
@@ -13,18 +13,18 @@ part 'terminology.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/contactDetail.dart';
+
+
+
+
+
+
 
 
 part 'namingSystem.g.dart';
@@ -92,18 +92,18 @@ class NamingSystemUniqueId {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'conceptMap.g.dart';
@@ -259,18 +259,18 @@ class ConceptMapUnmapped {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/coding.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'valueSet.g.dart';
@@ -487,15 +487,15 @@ class ValueSetContains {
 
 
 
-import '../Element/coding.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'codeSystem.g.dart';
@@ -665,15 +665,15 @@ class CodeSystemProperty1 {
 
 
 
-import '../Element/coding.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'expansionProfile.g.dart';

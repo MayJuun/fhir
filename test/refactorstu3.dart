@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() async {
   var tempDir = Directory('./lib/stu3/domain_resource/');
-  var reg = RegExp(r'import.*');
+  var reg = RegExp(r"part\s'.*");
 
   await tempDir.list(recursive: true, followLinks: false).listen(
     (FileSystemEntity entity) async {

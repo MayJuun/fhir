@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'summary.freezed.dart';
@@ -14,22 +14,22 @@ part 'summary.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Element/range.dart';
 
-import '../Quantity/age.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
 
 
 part 'familyMemberHistory.g.dart';
@@ -125,22 +125,22 @@ class FamilyMemberHistoryCondition {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Element/range.dart';
 
-import '../Element/period.dart';
 
-import '../Quantity/age.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
 
 
 part 'allergyIntolerance.g.dart';
@@ -222,22 +222,22 @@ class AllergyIntoleranceReaction {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Element/range.dart';
 
-import '../Element/period.dart';
 
-import '../Quantity/age.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
 
 
 part 'condition.g.dart';
@@ -335,18 +335,18 @@ class ConditionEvidence {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'procedure.g.dart';
@@ -450,14 +450,14 @@ class ProcedureFocalDevice {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
 
 
 part 'detectedIssue.g.dart';
@@ -515,14 +515,14 @@ class DetectedIssueMitigation {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
 
 
 part 'adverseEvent.g.dart';
@@ -598,18 +598,18 @@ class AdverseEventSuspectEntity {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'clinicalImpression.g.dart';

@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'billing.freezed.dart';
@@ -14,18 +14,18 @@ part 'billing.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/coding.dart';
 
-import '../Quantity/money.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'claimResponse.g.dart';
@@ -293,24 +293,24 @@ class ClaimResponseInsurance {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/address.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/quantity.dart';
 
-import '../Quantity/money.dart';
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
 
 
 part 'claim.g.dart';

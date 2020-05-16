@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'clinicaldecisionsupport.freezed.dart';
@@ -13,18 +13,18 @@ part 'clinicaldecisionsupport.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/dataRequirement.dart';
 
-import '../Element/annotation.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'guidanceResponse.g.dart';

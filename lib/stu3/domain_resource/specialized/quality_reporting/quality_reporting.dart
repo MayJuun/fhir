@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'qualityreporting.freezed.dart';
@@ -13,16 +13,16 @@ part 'qualityreporting.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'measureReport.g.dart';
@@ -147,24 +147,24 @@ class MeasureReportPopulation1 {
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/relatedArtifact.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/contributor.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/period.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
 
 
 part 'measure.g.dart';

@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'testing.freezed.dart';
@@ -14,12 +14,12 @@ part 'testing.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
 
 
 part 'testReport.g.dart';
@@ -191,20 +191,20 @@ class TestReportAction2 {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/coding.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/usageContext.dart';
 
-import '../Element/contactDetail.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'testScript.g.dart';

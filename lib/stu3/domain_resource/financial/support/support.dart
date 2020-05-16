@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'support.freezed.dart';
@@ -14,9 +14,9 @@ part 'support.g.dart';
 
 
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
 
 
 part 'enrollmentRequest.g.dart';
@@ -53,11 +53,11 @@ class EnrollmentRequest {
 
 
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
 
 
 part 'enrollmentResponse.g.dart';
@@ -96,13 +96,13 @@ class EnrollmentResponse {
 
 
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
 
 
 part 'coverage.g.dart';
@@ -189,16 +189,16 @@ class CoverageGrouping {
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Quantity/money.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'eligibilityResponse.g.dart';
@@ -325,13 +325,13 @@ class EligibilityResponseError {
 
 
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
 
 
 part 'eligibilityRequest.g.dart';

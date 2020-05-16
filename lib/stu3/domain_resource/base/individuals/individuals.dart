@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'individuals.freezed.dart';
@@ -88,20 +88,20 @@ class PractitionerRoleNotAvailable {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/period.dart';
 
-import '../Element/range.dart';
 
-import '../Element/quantity.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'group.g.dart';
@@ -179,20 +179,20 @@ class GroupMember {
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/address.dart';
 
-import '../Element/contactPoint.dart';
 
-import '../Element/humanName.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'person.g.dart';
@@ -245,24 +245,24 @@ class PersonLink {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/period.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/address.dart';
 
-import '../Element/contactPoint.dart';
 
-import '../Element/humanName.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
 
 
 part 'relatedPerson.g.dart';
@@ -304,24 +304,24 @@ class RelatedPerson {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/address.dart';
 
-import '../Element/contactPoint.dart';
 
-import '../Element/humanName.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
 
 
 part 'patient.g.dart';
@@ -447,24 +447,24 @@ class PatientLink {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/reference.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/attachment.dart';
 
-import '../Element/address.dart';
 
-import '../Element/contactPoint.dart';
 
-import '../Element/humanName.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
+
+
 
 
 part 'practitioner.g.dart';

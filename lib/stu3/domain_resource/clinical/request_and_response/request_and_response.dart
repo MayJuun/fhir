@@ -1,10 +1,10 @@
   
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 
-import 'package:flutter/foundation.dart';
 
 
-import '../../../../fhir_stu3.dart';
+
+
 
 
 part 'requestandresponse.freezed.dart';
@@ -13,20 +13,20 @@ part 'requestandresponse.g.dart';
 
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Element/timing.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'deviceRequest.g.dart';
@@ -108,20 +108,20 @@ class DeviceRequestRequester {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/annotation.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/timing.dart';
 
-import '../Element/period.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'deviceUseStatement.g.dart';
@@ -167,20 +167,20 @@ class DeviceUseStatement {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/attachment.dart';
 
-import '../Element/annotation.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'communicationRequest.g.dart';
@@ -273,15 +273,15 @@ class CommunicationRequestRequester {
 
 
 
-import '../Element/attachment.dart';
 
-import '../Element/annotation.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
 
 
 part 'communication.g.dart';
@@ -357,20 +357,20 @@ class CommunicationPayload {
 }
 
 
-import 'package:meta/meta.dart';
 
 
-import '../Element/quantity.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/timing.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
+
 
 
 part 'supplyRequest.g.dart';
@@ -452,17 +452,17 @@ class SupplyRequestRequester {
 
 
 
-import '../Element/quantity.dart';
 
-import '../Element/timing.dart';
 
-import '../Element/period.dart';
 
-import '../Element/codeableConcept.dart';
 
-import '../Element/reference.dart';
 
-import '../Element/identifier.dart';
+
+
+
+
+
+
 
 
 part 'supplyDelivery.g.dart';
