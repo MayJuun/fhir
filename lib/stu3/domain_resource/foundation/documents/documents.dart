@@ -27,29 +27,9 @@ class DocumentReference {
   List<DocumentReferenceContent> content;
   DocumentReferenceContext context;
 
-  DocumentReference({
-    this.id,
-    this.resourceType = 'DocumentReference',
-    this.masterIdentifier,
-    this.identifier,
-    this.status,
-    this.docStatus,
-    @required this.type,
-    this.clas,
-    this.subject,
-    this.created,
-    this.indexed,
-    this.author,
-    this.authenticator,
-    this.custodian,
-    this.relatesTo,
-    this.description,
-    this.securityLabel,
-    @required this.content,
-    this.context,
-  });
+  }) = DocumentReference;
 
-  factory DocumentReference.fromJson(Map<String, dynamic> json) =>
+factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentReferenceToJson(this);
 }
@@ -58,12 +38,9 @@ class DocumentReferenceRelatesTo {
   String code;
   Reference target;
 
-  DocumentReferenceRelatesTo({
-    this.code,
-    @required this.target,
-  });
+  }) = DocumentReferenceRelatesTo;
 
-  factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
+factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatesToFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentReferenceRelatesToToJson(this);
 }
@@ -72,12 +49,9 @@ class DocumentReferenceContent {
   Attachment attachment;
   Coding format;
 
-  DocumentReferenceContent({
-    @required this.attachment,
-    this.format,
-  });
+  }) = DocumentReferenceContent;
 
-  factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
+factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContentFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentReferenceContentToJson(this);
 }
@@ -91,17 +65,9 @@ class DocumentReferenceContext {
   Reference sourcePatientInfo;
   List<DocumentReferenceRelated> related;
 
-  DocumentReferenceContext({
-    this.encounter,
-    this.event,
-    this.period,
-    this.facilityType,
-    this.practiceSetting,
-    this.sourcePatientInfo,
-    this.related,
-  });
+  }) = DocumentReferenceContext;
 
-  factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
+factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentReferenceContextToJson(this);
 }
@@ -110,12 +76,9 @@ class DocumentReferenceRelated {
   Identifier identifier;
   Reference ref;
 
-  DocumentReferenceRelated({
-    this.identifier,
-    this.ref,
-  });
+  }) = DocumentReferenceRelated;
 
-  factory DocumentReferenceRelated.fromJson(Map<String, dynamic> json) =>
+factory DocumentReferenceRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatedFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentReferenceRelatedToJson(this);
 }
@@ -136,24 +99,9 @@ class DocumentManifest {
   List<DocumentManifestContent> content;
   List<DocumentManifestRelated> related;
 
-  DocumentManifest({
-    this.id,
-    this.resourceType = 'DocumentManifest',
-    this.masterIdentifier,
-    this.identifier,
-    this.status,
-    this.type,
-    this.subject,
-    this.created,
-    this.author,
-    this.recipient,
-    this.source,
-    this.description,
-    @required this.content,
-    this.related,
-  });
+  }) = DocumentManifest;
 
-  factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
+factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentManifestToJson(this);
 }
@@ -162,12 +110,9 @@ class DocumentManifestContent {
   Attachment pAttachment;
   Reference pReference;
 
-  DocumentManifestContent({
-    this.pAttachment,
-    this.pReference,
-  });
+  }) = DocumentManifestContent;
 
-  factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
+factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestContentFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentManifestContentToJson(this);
 }
@@ -176,12 +121,9 @@ class DocumentManifestRelated {
   Identifier identifier;
   Reference ref;
 
-  DocumentManifestRelated({
-    this.identifier,
-    this.ref,
-  });
+  }) = DocumentManifestRelated;
 
-  factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
+factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestRelatedFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentManifestRelatedToJson(this);
 }
@@ -205,27 +147,9 @@ class Composition {
   List<CompositionEvent> event;
   List<CompositionSection> section;
 
-  Composition({
-    this.id,
-    this.resourceType = 'Composition',
-    this.identifier,
-    this.status,
-    @required this.type,
-    this.clas,
-    @required this.subject,
-    this.encounter,
-    this.date,
-    @required this.author,
-    this.title,
-    this.confidentiality,
-    this.attester,
-    this.custodian,
-    this.relatesTo,
-    this.event,
-    this.section,
-  });
+  }) = Composition;
 
-  factory Composition.fromJson(Map<String, dynamic> json) =>
+factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
   Map<String, dynamic> toJson() => _$CompositionToJson(this);
 }
@@ -235,13 +159,9 @@ class CompositionAttester {
   String time;
   Reference party;
 
-  CompositionAttester({
-    this.mode,
-    this.time,
-    this.party,
-  });
+  }) = CompositionAttester;
 
-  factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
+factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$CompositionAttesterFromJson(json);
   Map<String, dynamic> toJson() => _$CompositionAttesterToJson(this);
 }
@@ -251,13 +171,9 @@ class CompositionRelatesTo {
   Identifier targetIdentifier;
   Reference targetReference;
 
-  CompositionRelatesTo({
-    this.code,
-    this.targetIdentifier,
-    this.targetReference,
-  });
+  }) = CompositionRelatesTo;
 
-  factory CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
+factory CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$CompositionRelatesToFromJson(json);
   Map<String, dynamic> toJson() => _$CompositionRelatesToToJson(this);
 }
@@ -267,13 +183,9 @@ class CompositionEvent {
   Period period;
   List<Reference> detail;
 
-  CompositionEvent({
-    this.code,
-    this.period,
-    this.detail,
-  });
+  }) = CompositionEvent;
 
-  factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
+factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$CompositionEventFromJson(json);
   Map<String, dynamic> toJson() => _$CompositionEventToJson(this);
 }
@@ -288,18 +200,9 @@ class CompositionSection {
   CodeableConcept emptyReason;
   List<CompositionSection> section;
 
-  CompositionSection({
-    this.title,
-    this.code,
-    this.text,
-    this.mode,
-    this.orderedBy,
-    this.entry,
-    this.emptyReason,
-    this.section,
-  });
+  }) = CompositionSection;
 
-  factory CompositionSection.fromJson(Map<String, dynamic> json) =>
+factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);
   Map<String, dynamic> toJson() => _$CompositionSectionToJson(this);
 }

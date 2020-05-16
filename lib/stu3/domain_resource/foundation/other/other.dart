@@ -15,17 +15,9 @@ class Basic {
   String created;
   Reference author;
 
-  Basic({
-    this.id,
-    this.resourceType = 'Basic',
-    this.identifier,
-    @required this.code,
-    this.subject,
-    this.created,
-    this.author,
-  });
+  }) = Basic;
 
-  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
+factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
   Map<String, dynamic> toJson() => _$BasicToJson(this);
 }
 
@@ -41,20 +33,9 @@ class Subscription {
   SubscriptionChannel channel;
   List<Coding> tag;
 
-  Subscription({
-    this.id,
-    this.resourceType = 'Subscription',
-    this.status,
-    this.contact,
-    this.end,
-    this.reason,
-    this.criteria,
-    this.error,
-    @required this.channel,
-    this.tag,
-  });
+  }) = Subscription;
 
-  factory Subscription.fromJson(Map<String, dynamic> json) =>
+factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
   Map<String, dynamic> toJson() => _$SubscriptionToJson(this);
 }
@@ -65,14 +46,9 @@ class SubscriptionChannel {
   String payload;
   List<String> header;
 
-  SubscriptionChannel({
-    this.type,
-    this.endpoint,
-    this.payload,
-    this.header,
-  });
+  }) = SubscriptionChannel;
 
-  factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
+factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);
   Map<String, dynamic> toJson() => _$SubscriptionChannelToJson(this);
 }
@@ -100,31 +76,9 @@ class Media {
   Attachment content;
   List<Annotation> note;
 
-  Media({
-    this.id,
-    this.resourceType = 'Media',
-    this.identifier,
-    this.basedOn,
-    this.type,
-    this.subtype,
-    this.view,
-    this.subject,
-    this.context,
-    this.occurrenceDateTime,
-    this.occurrencePeriod,
-    this.operator,
-    this.reasonCode,
-    this.bodySite,
-    this.device,
-    this.height,
-    this.width,
-    this.frames,
-    this.duration,
-    @required this.content,
-    this.note,
-  });
+  }) = Media;
 
-  factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
+factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
   Map<String, dynamic> toJson() => _$MediaToJson(this);
 }
 
@@ -133,13 +87,9 @@ class OperationOutcome {
   String resourceType;
   List<OperationOutcomeIssue> issue;
 
-  OperationOutcome({
-    this.id,
-    this.resourceType = 'OperationOutcome',
-    @required this.issue,
-  });
+  }) = OperationOutcome;
 
-  factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
+factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeFromJson(json);
   Map<String, dynamic> toJson() => _$OperationOutcomeToJson(this);
 }
@@ -152,16 +102,9 @@ class OperationOutcomeIssue {
   List<String> location;
   List<String> expression;
 
-  OperationOutcomeIssue({
-    this.severity,
-    this.code,
-    this.details,
-    this.diagnostics,
-    this.location,
-    this.expression,
-  });
+  }) = OperationOutcomeIssue;
 
-  factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
+factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeIssueFromJson(json);
   Map<String, dynamic> toJson() => _$OperationOutcomeIssueToJson(this);
 }
@@ -173,15 +116,9 @@ class Linkage {
   Reference author;
   List<LinkageItem> item;
 
-  Linkage({
-    this.id,
-    this.resourceType = 'Linkage',
-    this.active,
-    this.author,
-    @required this.item,
-  });
+  }) = Linkage;
 
-  factory Linkage.fromJson(Map<String, dynamic> json) =>
+factory Linkage.fromJson(Map<String, dynamic> json) =>
       _$LinkageFromJson(json);
   Map<String, dynamic> toJson() => _$LinkageToJson(this);
 }
@@ -190,12 +127,9 @@ class LinkageItem {
   String type;
   Reference resource;
 
-  LinkageItem({
-    this.type,
-    @required this.resource,
-  });
+  }) = LinkageItem;
 
-  factory LinkageItem.fromJson(Map<String, dynamic> json) =>
+factory LinkageItem.fromJson(Map<String, dynamic> json) =>
       _$LinkageItemFromJson(json);
   Map<String, dynamic> toJson() => _$LinkageItemToJson(this);
 }

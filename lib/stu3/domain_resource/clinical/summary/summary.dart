@@ -36,38 +36,9 @@ class FamilyMemberHistory {
   List<Annotation> note;
   List<FamilyMemberHistoryCondition> condition;
 
-  FamilyMemberHistory({
-    this.id,
-    this.resourceType = 'FamilyMemberHistory',
-    this.identifier,
-    this.definition,
-    this.status,
-    this.notDone,
-    this.notDoneReason,
-    @required this.patient,
-    this.date,
-    this.name,
-    @required this.relationship,
-    this.gender,
-    this.bornPeriod,
-    this.bornDate,
-    this.bornString,
-    this.ageAge,
-    this.ageRange,
-    this.ageString,
-    this.estimatedAge,
-    this.deceasedBoolean,
-    this.deceasedAge,
-    this.deceasedRange,
-    this.deceasedDate,
-    this.deceasedString,
-    this.reasonCode,
-    this.reasonReference,
-    this.note,
-    this.condition,
-  });
+  }) = FamilyMemberHistory;
 
-  factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
+factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryFromJson(json);
   Map<String, dynamic> toJson() => _$FamilyMemberHistoryToJson(this);
 }
@@ -81,17 +52,9 @@ class FamilyMemberHistoryCondition {
   String onsetString;
   List<Annotation> note;
 
-  FamilyMemberHistoryCondition({
-    @required this.code,
-    this.outcome,
-    this.onsetAge,
-    this.onsetRange,
-    this.onsetPeriod,
-    this.onsetString,
-    this.note,
-  });
+  }) = FamilyMemberHistoryCondition;
 
-  factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
+factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryConditionFromJson(json);
   Map<String, dynamic> toJson() => _$FamilyMemberHistoryConditionToJson(this);
 }
@@ -119,31 +82,9 @@ class AllergyIntolerance {
   List<Annotation> note;
   List<AllergyIntoleranceReaction> reaction;
 
-  AllergyIntolerance({
-    this.id,
-    this.resourceType = 'AllergyIntolerance',
-    this.identifier,
-    this.clinicalStatus,
-    this.verificationStatus,
-    this.type,
-    this.category,
-    this.criticality,
-    this.code,
-    @required this.patient,
-    this.onsetDateTime,
-    this.onsetAge,
-    this.onsetPeriod,
-    this.onsetRange,
-    this.onsetString,
-    this.assertedDate,
-    this.recorder,
-    this.asserter,
-    this.lastOccurrence,
-    this.note,
-    this.reaction,
-  });
+  }) = AllergyIntolerance;
 
-  factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
+factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceFromJson(json);
   Map<String, dynamic> toJson() => _$AllergyIntoleranceToJson(this);
 }
@@ -157,17 +98,9 @@ class AllergyIntoleranceReaction {
   CodeableConcept exposureRoute;
   List<Annotation> note;
 
-  AllergyIntoleranceReaction({
-    this.substance,
-    @required this.manifestation,
-    this.description,
-    this.onset,
-    this.severity,
-    this.exposureRoute,
-    this.note,
-  });
+  }) = AllergyIntoleranceReaction;
 
-  factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
+factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceReactionFromJson(json);
   Map<String, dynamic> toJson() => _$AllergyIntoleranceReactionToJson(this);
 }
@@ -201,37 +134,9 @@ class Condition {
   List<ConditionEvidence> evidence;
   List<Annotation> note;
 
-  Condition({
-    this.id,
-    this.resourceType = 'Condition',
-    this.identifier,
-    this.clinicalStatus,
-    this.verificationStatus,
-    this.category,
-    this.severity,
-    this.code,
-    this.bodySite,
-    @required this.subject,
-    this.context,
-    this.onsetDateTime,
-    this.onsetAge,
-    this.onsetPeriod,
-    this.onsetRange,
-    this.onsetString,
-    this.abatementDateTime,
-    this.abatementAge,
-    this.abatementBoolean,
-    this.abatementPeriod,
-    this.abatementRange,
-    this.abatementString,
-    this.assertedDate,
-    this.asserter,
-    this.stage,
-    this.evidence,
-    this.note,
-  });
+  }) = Condition;
 
-  factory Condition.fromJson(Map<String, dynamic> json) =>
+factory Condition.fromJson(Map<String, dynamic> json) =>
       _$ConditionFromJson(json);
   Map<String, dynamic> toJson() => _$ConditionToJson(this);
 }
@@ -240,12 +145,9 @@ class ConditionStage {
   CodeableConcept summary;
   List<Reference> assessment;
 
-  ConditionStage({
-    this.summary,
-    this.assessment,
-  });
+  }) = ConditionStage;
 
-  factory ConditionStage.fromJson(Map<String, dynamic> json) =>
+factory ConditionStage.fromJson(Map<String, dynamic> json) =>
       _$ConditionStageFromJson(json);
   Map<String, dynamic> toJson() => _$ConditionStageToJson(this);
 }
@@ -254,12 +156,9 @@ class ConditionEvidence {
   List<CodeableConcept> code;
   List<Reference> detail;
 
-  ConditionEvidence({
-    this.code,
-    this.detail,
-  });
+  }) = ConditionEvidence;
 
-  factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
+factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
       _$ConditionEvidenceFromJson(json);
   Map<String, dynamic> toJson() => _$ConditionEvidenceToJson(this);
 }
@@ -295,39 +194,9 @@ class Procedure {
   List<Reference> usedReference;
   List<CodeableConcept> usedCode;
 
-  Procedure({
-    this.id,
-    this.resourceType = 'Procedure',
-    this.identifier,
-    this.definition,
-    this.basedOn,
-    this.partOf,
-    this.status,
-    this.notDone,
-    this.notDoneReason,
-    this.category,
-    this.code,
-    @required this.subject,
-    this.context,
-    this.performedDateTime,
-    this.performedPeriod,
-    this.performer,
-    this.location,
-    this.reasonCode,
-    this.reasonReference,
-    this.bodySite,
-    this.outcome,
-    this.report,
-    this.complication,
-    this.complicationDetail,
-    this.followUp,
-    this.note,
-    this.focalDevice,
-    this.usedReference,
-    this.usedCode,
-  });
+  }) = Procedure;
 
-  factory Procedure.fromJson(Map<String, dynamic> json) =>
+factory Procedure.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFromJson(json);
   Map<String, dynamic> toJson() => _$ProcedureToJson(this);
 }
@@ -337,13 +206,9 @@ class ProcedurePerformer {
   Reference actor;
   Reference onBehalfOf;
 
-  ProcedurePerformer({
-    this.role,
-    @required this.actor,
-    this.onBehalfOf,
-  });
+  }) = ProcedurePerformer;
 
-  factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
+factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
       _$ProcedurePerformerFromJson(json);
   Map<String, dynamic> toJson() => _$ProcedurePerformerToJson(this);
 }
@@ -352,12 +217,9 @@ class ProcedureFocalDevice {
   CodeableConcept action;
   Reference manipulated;
 
-  ProcedureFocalDevice({
-    this.action,
-    @required this.manipulated,
-  });
+  }) = ProcedureFocalDevice;
 
-  factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
+factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFocalDeviceFromJson(json);
   Map<String, dynamic> toJson() => _$ProcedureFocalDeviceToJson(this);
 }
@@ -377,23 +239,9 @@ class DetectedIssue {
   String reference;
   List<DetectedIssueMitigation> mitigation;
 
-  DetectedIssue({
-    this.id,
-    this.resourceType = 'DetectedIssue',
-    this.identifier,
-    this.status,
-    this.category,
-    this.severity,
-    this.patient,
-    this.date,
-    this.author,
-    this.implicated,
-    this.detail,
-    this.reference,
-    this.mitigation,
-  });
+  }) = DetectedIssue;
 
-  factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
+factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueFromJson(json);
   Map<String, dynamic> toJson() => _$DetectedIssueToJson(this);
 }
@@ -403,13 +251,9 @@ class DetectedIssueMitigation {
   String date;
   Reference author;
 
-  DetectedIssueMitigation({
-    @required this.action,
-    this.date,
-    this.author,
-  });
+  }) = DetectedIssueMitigation;
 
-  factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
+factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueMitigationFromJson(json);
   Map<String, dynamic> toJson() => _$DetectedIssueMitigationToJson(this);
 }
@@ -434,28 +278,9 @@ class AdverseEvent {
   List<Reference> referenceDocument;
   List<Reference> study;
 
-  AdverseEvent({
-    this.id,
-    this.resourceType = 'AdverseEvent',
-    this.identifier,
-    this.category,
-    this.type,
-    this.subject,
-    this.date,
-    this.reaction,
-    this.location,
-    this.seriousness,
-    this.outcome,
-    this.recorder,
-    this.eventParticipant,
-    this.description,
-    this.suspectEntity,
-    this.subjectMedicalHistory,
-    this.referenceDocument,
-    this.study,
-  });
+  }) = AdverseEvent;
 
-  factory AdverseEvent.fromJson(Map<String, dynamic> json) =>
+factory AdverseEvent.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventFromJson(json);
   Map<String, dynamic> toJson() => _$AdverseEventToJson(this);
 }
@@ -469,17 +294,9 @@ class AdverseEventSuspectEntity {
   Reference causalityAuthor;
   CodeableConcept causalityResult;
 
-  AdverseEventSuspectEntity({
-    @required this.instance,
-    this.causality,
-    this.causalityAssessment,
-    this.causalityProductRelatedness,
-    this.causalityMethod,
-    this.causalityAuthor,
-    this.causalityResult,
-  });
+  }) = AdverseEventSuspectEntity;
 
-  factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
+factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventSuspectEntityFromJson(json);
   Map<String, dynamic> toJson() => _$AdverseEventSuspectEntityToJson(this);
 }
@@ -508,32 +325,9 @@ class ClinicalImpression {
   List<Reference> action;
   List<Annotation> note;
 
-  ClinicalImpression({
-    this.id,
-    this.resourceType = 'ClinicalImpression',
-    this.identifier,
-    this.status,
-    this.code,
-    this.description,
-    @required this.subject,
-    this.context,
-    this.effectiveDateTime,
-    this.effectivePeriod,
-    this.date,
-    this.assessor,
-    this.previous,
-    this.problem,
-    this.investigation,
-    this.protocol,
-    this.summary,
-    this.finding,
-    this.prognosisCodeableConcept,
-    this.prognosisReference,
-    this.action,
-    this.note,
-  });
+  }) = ClinicalImpression;
 
-  factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
+factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFromJson(json);
   Map<String, dynamic> toJson() => _$ClinicalImpressionToJson(this);
 }
@@ -542,12 +336,9 @@ class ClinicalImpressionInvestigation {
   CodeableConcept code;
   List<Reference> item;
 
-  ClinicalImpressionInvestigation({
-    @required this.code,
-    this.item,
-  });
+  }) = ClinicalImpressionInvestigation;
 
-  factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =>
+factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionInvestigationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ClinicalImpressionInvestigationToJson(this);
@@ -558,13 +349,9 @@ class ClinicalImpressionFinding {
   Reference itemReference;
   String basis;
 
-  ClinicalImpressionFinding({
-    this.itemCodeableConcept,
-    this.itemReference,
-    this.basis,
-  });
+  }) = ClinicalImpressionFinding;
 
-  factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
+factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFindingFromJson(json);
   Map<String, dynamic> toJson() => _$ClinicalImpressionFindingToJson(this);
 }

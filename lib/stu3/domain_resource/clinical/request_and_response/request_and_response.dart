@@ -34,36 +34,9 @@ class DeviceRequest {
   List<Annotation> note;
   List<Reference> relevantHistory;
 
-  DeviceRequest({
-    this.id,
-    this.resourceType = 'DeviceRequest',
-    this.identifier,
-    this.definition,
-    this.basedOn,
-    this.priorRequest,
-    this.groupIdentifier,
-    this.status,
-    @required this.intent,
-    this.priority,
-    this.codeReference,
-    this.codeCodeableConcept,
-    @required this.subject,
-    this.context,
-    this.occurrenceDateTime,
-    this.occurrencePeriod,
-    this.occurrenceTiming,
-    this.authoredOn,
-    this.requester,
-    this.performerType,
-    this.performer,
-    this.reasonCode,
-    this.reasonReference,
-    this.supportingInfo,
-    this.note,
-    this.relevantHistory,
-  });
+  }) = DeviceRequest;
 
-  factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
+factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceRequestToJson(this);
 }
@@ -72,12 +45,9 @@ class DeviceRequestRequester {
   Reference agent;
   Reference onBehalfOf;
 
-  DeviceRequestRequester({
-    @required this.agent,
-    this.onBehalfOf,
-  });
+  }) = DeviceRequestRequester;
 
-  factory DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
+factory DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestRequesterFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceRequestRequesterToJson(this);
 }
@@ -99,25 +69,9 @@ class DeviceUseStatement {
   CodeableConcept bodySite;
   List<Annotation> note;
 
-  DeviceUseStatement({
-    this.id,
-    this.resourceType = 'DeviceUseStatement',
-    this.identifier,
-    this.status,
-    @required this.subject,
-    this.whenUsed,
-    this.timingTiming,
-    this.timingPeriod,
-    this.timingDateTime,
-    this.recordedOn,
-    this.source,
-    @required this.device,
-    this.indication,
-    this.bodySite,
-    this.note,
-  });
+  }) = DeviceUseStatement;
 
-  factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
+factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceUseStatementToJson(this);
 }
@@ -147,33 +101,9 @@ class CommunicationRequest {
   List<Reference> reasonReference;
   List<Annotation> note;
 
-  CommunicationRequest({
-    this.id,
-    this.resourceType = 'CommunicationRequest',
-    this.identifier,
-    this.basedOn,
-    this.replaces,
-    this.groupIdentifier,
-    this.status,
-    this.category,
-    this.priority,
-    this.medium,
-    this.subject,
-    this.recipient,
-    this.topic,
-    this.context,
-    this.payload,
-    this.occurrenceDateTime,
-    this.occurrencePeriod,
-    this.authoredOn,
-    this.sender,
-    this.requester,
-    this.reasonCode,
-    this.reasonReference,
-    this.note,
-  });
+  }) = CommunicationRequest;
 
-  factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
+factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
   Map<String, dynamic> toJson() => _$CommunicationRequestToJson(this);
 }
@@ -183,13 +113,9 @@ class CommunicationRequestPayload {
   Attachment contentAttachment;
   Reference contentReference;
 
-  CommunicationRequestPayload({
-    this.contentString,
-    this.contentAttachment,
-    this.contentReference,
-  });
+  }) = CommunicationRequestPayload;
 
-  factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
+factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
   Map<String, dynamic> toJson() => _$CommunicationRequestPayloadToJson(this);
 }
@@ -198,12 +124,9 @@ class CommunicationRequestRequester {
   Reference agent;
   Reference onBehalfOf;
 
-  CommunicationRequestRequester({
-    @required this.agent,
-    this.onBehalfOf,
-  });
+  }) = CommunicationRequestRequester;
 
-  factory CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =>
+factory CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestRequesterFromJson(json);
   Map<String, dynamic> toJson() => _$CommunicationRequestRequesterToJson(this);
 }
@@ -232,32 +155,9 @@ class Communication {
   List<CommunicationPayload> payload;
   List<Annotation> note;
 
-  Communication({
-    this.id,
-    this.resourceType = 'Communication',
-    this.identifier,
-    this.definition,
-    this.basedOn,
-    this.partOf,
-    this.status,
-    this.notDone,
-    this.notDoneReason,
-    this.category,
-    this.medium,
-    this.subject,
-    this.recipient,
-    this.topic,
-    this.context,
-    this.sent,
-    this.received,
-    this.sender,
-    this.reasonCode,
-    this.reasonReference,
-    this.payload,
-    this.note,
-  });
+  }) = Communication;
 
-  factory Communication.fromJson(Map<String, dynamic> json) =>
+factory Communication.fromJson(Map<String, dynamic> json) =>
       _$CommunicationFromJson(json);
   Map<String, dynamic> toJson() => _$CommunicationToJson(this);
 }
@@ -267,13 +167,9 @@ class CommunicationPayload {
   Attachment contentAttachment;
   Reference contentReference;
 
-  CommunicationPayload({
-    this.contentString,
-    this.contentAttachment,
-    this.contentReference,
-  });
+  }) = CommunicationPayload;
 
-  factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
+factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationPayloadFromJson(json);
   Map<String, dynamic> toJson() => _$CommunicationPayloadToJson(this);
 }
@@ -297,27 +193,9 @@ class SupplyRequest {
   Reference deliverFrom;
   Reference deliverTo;
 
-  SupplyRequest({
-    this.id,
-    this.resourceType = 'SupplyRequest',
-    this.identifier,
-    this.status,
-    this.category,
-    this.priority,
-    this.orderedItem,
-    this.occurrenceDateTime,
-    this.occurrencePeriod,
-    this.occurrenceTiming,
-    this.authoredOn,
-    this.requester,
-    this.supplier,
-    this.reasonCodeableConcept,
-    this.reasonReference,
-    this.deliverFrom,
-    this.deliverTo,
-  });
+  }) = SupplyRequest;
 
-  factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
+factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyRequestToJson(this);
 }
@@ -327,13 +205,9 @@ class SupplyRequestOrderedItem {
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
 
-  SupplyRequestOrderedItem({
-    @required this.quantity,
-    this.itemCodeableConcept,
-    this.itemReference,
-  });
+  }) = SupplyRequestOrderedItem;
 
-  factory SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =>
+factory SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestOrderedItemFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyRequestOrderedItemToJson(this);
 }
@@ -342,12 +216,9 @@ class SupplyRequestRequester {
   Reference agent;
   Reference onBehalfOf;
 
-  SupplyRequestRequester({
-    @required this.agent,
-    this.onBehalfOf,
-  });
+  }) = SupplyRequestRequester;
 
-  factory SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
+factory SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestRequesterFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyRequestRequesterToJson(this);
 }
@@ -369,25 +240,9 @@ class SupplyDelivery {
   Reference destination;
   List<Reference> receiver;
 
-  SupplyDelivery({
-    this.id,
-    this.resourceType = 'SupplyDelivery',
-    this.identifier,
-    this.basedOn,
-    this.partOf,
-    this.status,
-    this.patient,
-    this.type,
-    this.suppliedItem,
-    this.occurrenceDateTime,
-    this.occurrencePeriod,
-    this.occurrenceTiming,
-    this.supplier,
-    this.destination,
-    this.receiver,
-  });
+  }) = SupplyDelivery;
 
-  factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
+factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyDeliveryToJson(this);
 }
@@ -397,13 +252,9 @@ class SupplyDeliverySuppliedItem {
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
 
-  SupplyDeliverySuppliedItem({
-    this.quantity,
-    this.itemCodeableConcept,
-    this.itemReference,
-  });
+  }) = SupplyDeliverySuppliedItem;
 
-  factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
+factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliverySuppliedItemFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyDeliverySuppliedItemToJson(this);
 }

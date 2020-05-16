@@ -25,27 +25,9 @@ class GuidanceResponse {
   Reference result;
   List<DataRequirement> dataRequirement;
 
-  GuidanceResponse({
-    this.id,
-    this.resourceType = 'GuidanceResponse',
-    this.requestId,
-    this.identifier,
-    @required this.module,
-    this.status,
-    this.subject,
-    this.context,
-    this.occurrenceDateTime,
-    this.performer,
-    this.reasonCodeableConcept,
-    this.reasonReference,
-    this.note,
-    this.evaluationMessage,
-    this.outputParameters,
-    this.result,
-    this.dataRequirement,
-  });
+  }) = GuidanceResponse;
 
-  factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
+factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
   Map<String, dynamic> toJson() => _$GuidanceResponseToJson(this);
 }

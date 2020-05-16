@@ -30,32 +30,9 @@ class CarePlan {
   List<CarePlanActivity> activity;
   List<Annotation> note;
 
-  CarePlan({
-    this.id,
-    this.resourceType = 'CarePlan',
-    this.identifier,
-    this.definition,
-    this.basedOn,
-    this.replaces,
-    this.partOf,
-    this.status,
-    this.intent,
-    this.category,
-    this.title,
-    this.description,
-    @required this.subject,
-    this.context,
-    this.period,
-    this.author,
-    this.careTeam,
-    this.addresses,
-    this.supportingInfo,
-    this.goal,
-    this.activity,
-    this.note,
-  });
+  }) = CarePlan;
 
-  factory CarePlan.fromJson(Map<String, dynamic> json) =>
+factory CarePlan.fromJson(Map<String, dynamic> json) =>
       _$CarePlanFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanToJson(this);
 }
@@ -67,15 +44,9 @@ class CarePlanActivity {
   Reference reference;
   CarePlanDetail detail;
 
-  CarePlanActivity({
-    this.outcomeCodeableConcept,
-    this.outcomeReference,
-    this.progress,
-    this.reference,
-    this.detail,
-  });
+  }) = CarePlanActivity;
 
-  factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
+factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
       _$CarePlanActivityFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanActivityToJson(this);
 }
@@ -101,29 +72,9 @@ class CarePlanDetail {
   Quantity quantity;
   String description;
 
-  CarePlanDetail({
-    this.category,
-    this.definition,
-    this.code,
-    this.reasonCode,
-    this.reasonReference,
-    this.goal,
-    this.status,
-    this.statusReason,
-    this.prohibited,
-    this.scheduledTiming,
-    this.scheduledPeriod,
-    this.scheduledString,
-    this.location,
-    this.performer,
-    this.productCodeableConcept,
-    this.productReference,
-    this.dailyAmount,
-    this.quantity,
-    this.description,
-  });
+  }) = CarePlanDetail;
 
-  factory CarePlanDetail.fromJson(Map<String, dynamic> json) =>
+factory CarePlanDetail.fromJson(Map<String, dynamic> json) =>
       _$CarePlanDetailFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanDetailToJson(this);
 }
@@ -144,24 +95,9 @@ class CareTeam {
   List<Reference> managingOrganization;
   List<Annotation> note;
 
-  CareTeam({
-    this.id,
-    this.resourceType = 'CareTeam',
-    this.identifier,
-    this.status,
-    this.category,
-    this.name,
-    this.subject,
-    this.context,
-    this.period,
-    this.participant,
-    this.reasonCode,
-    this.reasonReference,
-    this.managingOrganization,
-    this.note,
-  });
+  }) = CareTeam;
 
-  factory CareTeam.fromJson(Map<String, dynamic> json) =>
+factory CareTeam.fromJson(Map<String, dynamic> json) =>
       _$CareTeamFromJson(json);
   Map<String, dynamic> toJson() => _$CareTeamToJson(this);
 }
@@ -172,14 +108,9 @@ class CareTeamParticipant {
   Reference onBehalfOf;
   Period period;
 
-  CareTeamParticipant({
-    this.role,
-    this.member,
-    this.onBehalfOf,
-    this.period,
-  });
+  }) = CareTeamParticipant;
 
-  factory CareTeamParticipant.fromJson(Map<String, dynamic> json) =>
+factory CareTeamParticipant.fromJson(Map<String, dynamic> json) =>
       _$CareTeamParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$CareTeamParticipantToJson(this);
 }
@@ -204,28 +135,9 @@ class Goal {
   List<CodeableConcept> outcomeCode;
   List<Reference> outcomeReference;
 
-  Goal({
-    this.id,
-    this.resourceType = 'Goal',
-    this.identifier,
-    this.status,
-    this.category,
-    this.priority,
-    @required this.description,
-    this.subject,
-    this.startDate,
-    this.startCodeableConcept,
-    this.target,
-    this.statusDate,
-    this.statusReason,
-    this.expressedBy,
-    this.addresses,
-    this.note,
-    this.outcomeCode,
-    this.outcomeReference,
-  });
+  }) = Goal;
 
-  factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
+factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
   Map<String, dynamic> toJson() => _$GoalToJson(this);
 }
 
@@ -237,16 +149,9 @@ class GoalTarget {
   DateTime dueDate;
   Duration dueDuration;
 
-  GoalTarget({
-    this.measure,
-    this.detailQuantity,
-    this.detailRange,
-    this.detailCodeableConcept,
-    this.dueDate,
-    this.dueDuration,
-  });
+  }) = GoalTarget;
 
-  factory GoalTarget.fromJson(Map<String, dynamic> json) =>
+factory GoalTarget.fromJson(Map<String, dynamic> json) =>
       _$GoalTargetFromJson(json);
   Map<String, dynamic> toJson() => _$GoalTargetToJson(this);
 }
@@ -279,36 +184,9 @@ class ReferralRequest {
   List<Annotation> note;
   List<Reference> relevantHistory;
 
-  ReferralRequest({
-    this.id,
-    this.resourceType = 'ReferralRequest',
-    this.identifier,
-    this.definition,
-    this.basedOn,
-    this.replaces,
-    this.groupIdentifier,
-    this.status,
-    this.intent,
-    this.type,
-    this.priority,
-    this.serviceRequested,
-    @required this.subject,
-    this.context,
-    this.occurrenceDateTime,
-    this.occurrencePeriod,
-    this.authoredOn,
-    this.requester,
-    this.specialty,
-    this.recipient,
-    this.reasonCode,
-    this.reasonReference,
-    this.description,
-    this.supportingInfo,
-    this.note,
-    this.relevantHistory,
-  });
+  }) = ReferralRequest;
 
-  factory ReferralRequest.fromJson(Map<String, dynamic> json) =>
+factory ReferralRequest.fromJson(Map<String, dynamic> json) =>
       _$ReferralRequestFromJson(json);
   Map<String, dynamic> toJson() => _$ReferralRequestToJson(this);
 }
@@ -317,12 +195,9 @@ class ReferralRequestRequester {
   Reference agent;
   Reference onBehalfOf;
 
-  ReferralRequestRequester({
-    @required this.agent,
-    this.onBehalfOf,
-  });
+  }) = ReferralRequestRequester;
 
-  factory ReferralRequestRequester.fromJson(Map<String, dynamic> json) =>
+factory ReferralRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$ReferralRequestRequesterFromJson(json);
   Map<String, dynamic> toJson() => _$ReferralRequestRequesterToJson(this);
 }
@@ -360,41 +235,9 @@ class ProcedureRequest {
   List<Annotation> note;
   List<Reference> relevantHistory;
 
-  ProcedureRequest({
-    this.id,
-    this.resourceType = 'ProcedureRequest',
-    this.identifier,
-    this.definition,
-    this.basedOn,
-    this.replaces,
-    this.requisition,
-    this.status,
-    this.intent,
-    this.priority,
-    this.doNotPerform,
-    this.category,
-    @required this.code,
-    @required this.subject,
-    this.context,
-    this.occurrenceDateTime,
-    this.occurrencePeriod,
-    this.occurrenceTiming,
-    this.asNeededBoolean,
-    this.asNeededCodeableConcept,
-    this.authoredOn,
-    this.requester,
-    this.performerType,
-    this.performer,
-    this.reasonCode,
-    this.reasonReference,
-    this.supportingInfo,
-    this.specimen,
-    this.bodySite,
-    this.note,
-    this.relevantHistory,
-  });
+  }) = ProcedureRequest;
 
-  factory ProcedureRequest.fromJson(Map<String, dynamic> json) =>
+factory ProcedureRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcedureRequestFromJson(json);
   Map<String, dynamic> toJson() => _$ProcedureRequestToJson(this);
 }
@@ -403,12 +246,9 @@ class ProcedureRequestRequester {
   Reference agent;
   Reference onBehalfOf;
 
-  ProcedureRequestRequester({
-    @required this.agent,
-    this.onBehalfOf,
-  });
+  }) = ProcedureRequestRequester;
 
-  factory ProcedureRequestRequester.fromJson(Map<String, dynamic> json) =>
+factory ProcedureRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$ProcedureRequestRequesterFromJson(json);
   Map<String, dynamic> toJson() => _$ProcedureRequestRequesterToJson(this);
 }
@@ -429,24 +269,9 @@ class NutritionOrder {
   List<NutritionOrderSupplement> supplement;
   NutritionOrderEnteralFormula enteralFormula;
 
-  NutritionOrder({
-    this.id,
-    this.resourceType = 'NutritionOrder',
-    this.identifier,
-    this.status,
-    @required this.patient,
-    this.encounter,
-    this.dateTime,
-    this.orderer,
-    this.allergyIntolerance,
-    this.foodPreferenceModifier,
-    this.excludeFoodModifier,
-    this.oralDiet,
-    this.supplement,
-    this.enteralFormula,
-  });
+  }) = NutritionOrder;
 
-  factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderToJson(this);
 }
@@ -459,16 +284,9 @@ class NutritionOrderOralDiet {
   List<CodeableConcept> fluidConsistencyType;
   String instruction;
 
-  NutritionOrderOralDiet({
-    this.type,
-    this.schedule,
-    this.nutrient,
-    this.texture,
-    this.fluidConsistencyType,
-    this.instruction,
-  });
+  }) = NutritionOrderOralDiet;
 
-  factory NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderOralDietFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderOralDietToJson(this);
 }
@@ -477,12 +295,9 @@ class NutritionOrderNutrient {
   CodeableConcept modifier;
   Quantity amount;
 
-  NutritionOrderNutrient({
-    this.modifier,
-    this.amount,
-  });
+  }) = NutritionOrderNutrient;
 
-  factory NutritionOrderNutrient.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderNutrient.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderNutrientFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderNutrientToJson(this);
 }
@@ -491,12 +306,9 @@ class NutritionOrderTexture {
   CodeableConcept modifier;
   CodeableConcept foodType;
 
-  NutritionOrderTexture({
-    this.modifier,
-    this.foodType,
-  });
+  }) = NutritionOrderTexture;
 
-  factory NutritionOrderTexture.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderTexture.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderTextureFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderTextureToJson(this);
 }
@@ -508,15 +320,9 @@ class NutritionOrderSupplement {
   Quantity quantity;
   String instruction;
 
-  NutritionOrderSupplement({
-    this.type,
-    this.productName,
-    this.schedule,
-    this.quantity,
-    this.instruction,
-  });
+  }) = NutritionOrderSupplement;
 
-  factory NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderSupplementFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderSupplementToJson(this);
 }
@@ -532,19 +338,9 @@ class NutritionOrderEnteralFormula {
   Quantity maxVolumeToDeliver;
   String administrationInstruction;
 
-  NutritionOrderEnteralFormula({
-    this.baseFormulaType,
-    this.baseFormulaProductName,
-    this.additiveType,
-    this.additiveProductName,
-    this.caloricDensity,
-    this.routeofAdministration,
-    this.administration,
-    this.maxVolumeToDeliver,
-    this.administrationInstruction,
-  });
+  }) = NutritionOrderEnteralFormula;
 
-  factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderEnteralFormulaFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderEnteralFormulaToJson(this);
 }
@@ -555,14 +351,9 @@ class NutritionOrderAdministration {
   Quantity rateSimpleQuantity;
   Ratio rateRatio;
 
-  NutritionOrderAdministration({
-    this.schedule,
-    this.quantity,
-    this.rateSimpleQuantity,
-    this.rateRatio,
-  });
+  }) = NutritionOrderAdministration;
 
-  factory NutritionOrderAdministration.fromJson(Map<String, dynamic> json) =>
+factory NutritionOrderAdministration.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderAdministrationFromJson(json);
   Map<String, dynamic> toJson() => _$NutritionOrderAdministrationToJson(this);
 }
@@ -580,21 +371,9 @@ class VisionPrescription {
   Reference reasonReference;
   List<VisionPrescriptionDispense> dispense;
 
-  VisionPrescription({
-    this.id,
-    this.resourceType = 'VisionPrescription',
-    this.identifier,
-    this.status,
-    this.patient,
-    this.encounter,
-    this.dateWritten,
-    this.prescriber,
-    this.reasonCodeableConcept,
-    this.reasonReference,
-    this.dispense,
-  });
+  }) = VisionPrescription;
 
-  factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
+factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionFromJson(json);
   Map<String, dynamic> toJson() => _$VisionPrescriptionToJson(this);
 }
@@ -616,25 +395,9 @@ class VisionPrescriptionDispense {
   String brand;
   List<Annotation> note;
 
-  VisionPrescriptionDispense({
-    this.product,
-    this.eye,
-    this.sphere,
-    this.cylinder,
-    this.axis,
-    this.prism,
-    this.base,
-    this.add,
-    this.power,
-    this.backCurve,
-    this.diameter,
-    this.duration,
-    this.color,
-    this.brand,
-    this.note,
-  });
+  }) = VisionPrescriptionDispense;
 
-  factory VisionPrescriptionDispense.fromJson(Map<String, dynamic> json) =>
+factory VisionPrescriptionDispense.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionDispenseFromJson(json);
   Map<String, dynamic> toJson() => _$VisionPrescriptionDispenseToJson(this);
 }
@@ -661,30 +424,9 @@ class RiskAssessment {
   String mitigation;
   String comment;
 
-  RiskAssessment({
-    this.id,
-    this.resourceType = 'RiskAssessment',
-    this.identifier,
-    this.basedOn,
-    this.parent,
-    this.status,
-    this.method,
-    this.code,
-    this.subject,
-    this.context,
-    this.occurrenceDateTime,
-    this.occurrencePeriod,
-    this.condition,
-    this.performer,
-    this.reasonCodeableConcept,
-    this.reasonReference,
-    this.basis,
-    this.prediction,
-    this.mitigation,
-    this.comment,
-  });
+  }) = RiskAssessment;
 
-  factory RiskAssessment.fromJson(Map<String, dynamic> json) =>
+factory RiskAssessment.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentFromJson(json);
   Map<String, dynamic> toJson() => _$RiskAssessmentToJson(this);
 }
@@ -699,18 +441,9 @@ class RiskAssessmentPrediction {
   Range whenRange;
   String rationale;
 
-  RiskAssessmentPrediction({
-    @required this.outcome,
-    this.probabilityDecimal,
-    this.probabilityRange,
-    this.qualitativeRisk,
-    this.relativeRisk,
-    this.whenPeriod,
-    this.whenRange,
-    this.rationale,
-  });
+  }) = RiskAssessmentPrediction;
 
-  factory RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
+factory RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentPredictionFromJson(json);
   Map<String, dynamic> toJson() => _$RiskAssessmentPredictionToJson(this);
 }
@@ -735,28 +468,9 @@ class RequestGroup {
   List<Annotation> note;
   List<RequestGroupAction> action;
 
-  RequestGroup({
-    this.id,
-    this.resourceType = 'RequestGroup',
-    this.identifier,
-    this.definition,
-    this.basedOn,
-    this.replaces,
-    this.groupIdentifier,
-    this.status,
-    this.intent,
-    this.priority,
-    this.subject,
-    this.context,
-    this.authoredOn,
-    this.author,
-    this.reasonCodeableConcept,
-    this.reasonReference,
-    this.note,
-    this.action,
-  });
+  }) = RequestGroup;
 
-  factory RequestGroup.fromJson(Map<String, dynamic> json) =>
+factory RequestGroup.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupFromJson(json);
   Map<String, dynamic> toJson() => _$RequestGroupToJson(this);
 }
@@ -785,32 +499,9 @@ class RequestGroupAction {
   Reference resource;
   List<RequestGroupAction> action;
 
-  RequestGroupAction({
-    this.label,
-    this.title,
-    this.description,
-    this.textEquivalent,
-    this.code,
-    this.documentation,
-    this.condition,
-    this.relatedAction,
-    this.timingDateTime,
-    this.timingPeriod,
-    this.timingDuration,
-    this.timingRange,
-    this.timingTiming,
-    this.participant,
-    this.type,
-    this.groupingBehavior,
-    this.selectionBehavior,
-    this.requiredBehavior,
-    this.precheckBehavior,
-    this.cardinalityBehavior,
-    this.resource,
-    this.action,
-  });
+  }) = RequestGroupAction;
 
-  factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
+factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupActionFromJson(json);
   Map<String, dynamic> toJson() => _$RequestGroupActionToJson(this);
 }
@@ -821,14 +512,9 @@ class RequestGroupCondition {
   String language;
   String expression;
 
-  RequestGroupCondition({
-    this.kind,
-    this.description,
-    this.language,
-    this.expression,
-  });
+  }) = RequestGroupCondition;
 
-  factory RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
+factory RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupConditionFromJson(json);
   Map<String, dynamic> toJson() => _$RequestGroupConditionToJson(this);
 }
@@ -839,14 +525,9 @@ class RequestGroupRelatedAction {
   Duration offsetDuration;
   Range offsetRange;
 
-  RequestGroupRelatedAction({
-    this.actionId,
-    this.relationship,
-    this.offsetDuration,
-    this.offsetRange,
-  });
+  }) = RequestGroupRelatedAction;
 
-  factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
+factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupRelatedActionFromJson(json);
   Map<String, dynamic> toJson() => _$RequestGroupRelatedActionToJson(this);
 }

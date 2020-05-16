@@ -21,23 +21,9 @@ class Slot {
   bool overbooked;
   String comment;
 
-  Slot({
-    this.id,
-    this.resourceType = 'Slot',
-    this.identifier,
-    this.serviceCategory,
-    this.serviceType,
-    this.specialty,
-    this.appointmentType,
-    @required this.schedule,
-    this.status,
-    this.start,
-    this.end,
-    this.overbooked,
-    this.comment,
-  });
+  }) = Slot;
 
-  factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
+factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
   Map<String, dynamic> toJson() => _$SlotToJson(this);
 }
 
@@ -58,25 +44,9 @@ class ProcessResponse {
   List<CodeableConcept> error;
   List<Reference> communicationRequest;
 
-  ProcessResponse({
-    this.id,
-    this.resourceType = 'ProcessResponse',
-    this.identifier,
-    this.status,
-    this.created,
-    this.organization,
-    this.request,
-    this.outcome,
-    this.disposition,
-    this.requestProvider,
-    this.requestOrganization,
-    this.form,
-    this.processNote,
-    this.error,
-    this.communicationRequest,
-  });
+  }) = ProcessResponse;
 
-  factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
+factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseFromJson(json);
   Map<String, dynamic> toJson() => _$ProcessResponseToJson(this);
 }
@@ -85,12 +55,9 @@ class ProcessResponseProcessNote {
   CodeableConcept type;
   String text;
 
-  ProcessResponseProcessNote({
-    this.type,
-    this.text,
-  });
+  }) = ProcessResponseProcessNote;
 
-  factory ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
+factory ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseProcessNoteFromJson(json);
   Map<String, dynamic> toJson() => _$ProcessResponseProcessNoteToJson(this);
 }
@@ -119,32 +86,9 @@ class Appointment {
   List<AppointmentParticipant> participant;
   List<Period> requestedPeriod;
 
-  Appointment({
-    this.id,
-    this.resourceType = 'Appointment',
-    this.identifier,
-    this.status,
-    this.serviceCategory,
-    this.serviceType,
-    this.specialty,
-    this.appointmentType,
-    this.reason,
-    this.indication,
-    this.priority,
-    this.description,
-    this.supportingInformation,
-    this.start,
-    this.end,
-    this.minutesDuration,
-    this.slot,
-    this.created,
-    this.comment,
-    this.incomingReferral,
-    @required this.participant,
-    this.requestedPeriod,
-  });
+  }) = Appointment;
 
-  factory Appointment.fromJson(Map<String, dynamic> json) =>
+factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
   Map<String, dynamic> toJson() => _$AppointmentToJson(this);
 }
@@ -155,14 +99,9 @@ class AppointmentParticipant {
   String required;
   String status;
 
-  AppointmentParticipant({
-    this.type,
-    this.actor,
-    this.required,
-    this.status,
-  });
+  }) = AppointmentParticipant;
 
-  factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
+factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$AppointmentParticipantToJson(this);
 }
@@ -199,40 +138,9 @@ class Task {
   List<TaskInput> input;
   List<TaskOutput> output;
 
-  Task({
-    this.id,
-    this.resourceType = 'Task',
-    this.identifier,
-    this.definitionUri,
-    this.definitionReference,
-    this.basedOn,
-    this.groupIdentifier,
-    this.partOf,
-    this.status,
-    this.statusReason,
-    this.businessStatus,
-    this.intent,
-    this.priority,
-    this.code,
-    this.description,
-    this.focus,
-    this.fore,
-    this.context,
-    this.executionPeriod,
-    this.authoredOn,
-    this.lastModified,
-    this.requester,
-    this.performerType,
-    this.owner,
-    this.reason,
-    this.note,
-    this.relevantHistory,
-    this.restriction,
-    this.input,
-    this.output,
-  });
+  }) = Task;
 
-  factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
+factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
   Map<String, dynamic> toJson() => _$TaskToJson(this);
 }
 
@@ -240,12 +148,9 @@ class TaskRequester {
   Reference agent;
   Reference onBehalfOf;
 
-  TaskRequester({
-    @required this.agent,
-    this.onBehalfOf,
-  });
+  }) = TaskRequester;
 
-  factory TaskRequester.fromJson(Map<String, dynamic> json) =>
+factory TaskRequester.fromJson(Map<String, dynamic> json) =>
       _$TaskRequesterFromJson(json);
   Map<String, dynamic> toJson() => _$TaskRequesterToJson(this);
 }
@@ -255,13 +160,9 @@ class TaskRestriction {
   Period period;
   List<Reference> recipient;
 
-  TaskRestriction({
-    this.repetitions,
-    this.period,
-    this.recipient,
-  });
+  }) = TaskRestriction;
 
-  factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
+factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
       _$TaskRestrictionFromJson(json);
   Map<String, dynamic> toJson() => _$TaskRestrictionToJson(this);
 }
@@ -322,64 +223,9 @@ class TaskInput {
   ParameterDefinition valueParameterDefinition;
   TriggerDefinition valueTriggerDefinition;
 
-  TaskInput({
-    @required this.type,
-    this.valueBoolean,
-    this.valueInteger,
-    this.valueDecimal,
-    this.valueBase64Binary,
-    this.valueInstant,
-    this.valueString,
-    this.valueUri,
-    this.valueDate,
-    this.valueDateTime,
-    this.valueTime,
-    this.valueCode,
-    this.valueOid,
-    this.valueUuid,
-    this.valueId,
-    this.valueUnsignedInt,
-    this.valuePositiveInt,
-    this.valueMarkdown,
-    this.valueElement,
-    this.valueExtension,
-    this.valueBackboneElement,
-    this.valueNarrative,
-    this.valueAnnotation,
-    this.valueAttachment,
-    this.valueIdentifier,
-    this.valueCodeableConcept,
-    this.valueCoding,
-    this.valueQuantity,
-    this.valueDuration,
-    this.valueSimpleQuantity,
-    this.valueDistance,
-    this.valueCount,
-    this.valueMoney,
-    this.valueAge,
-    this.valueRange,
-    this.valuePeriod,
-    this.valueRatio,
-    this.valueReference,
-    this.valueSampledData,
-    this.valueSignature,
-    this.valueHumanName,
-    this.valueAddress,
-    this.valueContactPoint,
-    this.valueTiming,
-    this.valueMeta,
-    this.valueElementDefinition,
-    this.valueContactDetail,
-    this.valueContributor,
-    this.valueDosage,
-    this.valueRelatedArtifact,
-    this.valueUsageContext,
-    this.valueDataRequirement,
-    this.valueParameterDefinition,
-    this.valueTriggerDefinition,
-  });
+  }) = TaskInput;
 
-  factory TaskInput.fromJson(Map<String, dynamic> json) =>
+factory TaskInput.fromJson(Map<String, dynamic> json) =>
       _$TaskInputFromJson(json);
   Map<String, dynamic> toJson() => _$TaskInputToJson(this);
 }
@@ -440,64 +286,9 @@ class TaskOutput {
   ParameterDefinition valueParameterDefinition;
   TriggerDefinition valueTriggerDefinition;
 
-  TaskOutput({
-    @required this.type,
-    this.valueBoolean,
-    this.valueInteger,
-    this.valueDecimal,
-    this.valueBase64Binary,
-    this.valueInstant,
-    this.valueString,
-    this.valueUri,
-    this.valueDate,
-    this.valueDateTime,
-    this.valueTime,
-    this.valueCode,
-    this.valueOid,
-    this.valueUuid,
-    this.valueId,
-    this.valueUnsignedInt,
-    this.valuePositiveInt,
-    this.valueMarkdown,
-    this.valueElement,
-    this.valueExtension,
-    this.valueBackboneElement,
-    this.valueNarrative,
-    this.valueAnnotation,
-    this.valueAttachment,
-    this.valueIdentifier,
-    this.valueCodeableConcept,
-    this.valueCoding,
-    this.valueQuantity,
-    this.valueDuration,
-    this.valueSimpleQuantity,
-    this.valueDistance,
-    this.valueCount,
-    this.valueMoney,
-    this.valueAge,
-    this.valueRange,
-    this.valuePeriod,
-    this.valueRatio,
-    this.valueReference,
-    this.valueSampledData,
-    this.valueSignature,
-    this.valueHumanName,
-    this.valueAddress,
-    this.valueContactPoint,
-    this.valueTiming,
-    this.valueMeta,
-    this.valueElementDefinition,
-    this.valueContactDetail,
-    this.valueContributor,
-    this.valueDosage,
-    this.valueRelatedArtifact,
-    this.valueUsageContext,
-    this.valueDataRequirement,
-    this.valueParameterDefinition,
-    this.valueTriggerDefinition,
-  });
+  }) = TaskOutput;
 
-  factory TaskOutput.fromJson(Map<String, dynamic> json) =>
+factory TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$TaskOutputFromJson(json);
   Map<String, dynamic> toJson() => _$TaskOutputToJson(this);
 }
@@ -521,27 +312,9 @@ class ProcessRequest {
   List<String> exclude;
   Period period;
 
-  ProcessRequest({
-    this.id,
-    this.resourceType = 'ProcessRequest',
-    this.identifier,
-    this.status,
-    this.action,
-    this.target,
-    this.created,
-    this.provider,
-    this.organization,
-    this.request,
-    this.response,
-    this.nullify,
-    this.reference,
-    this.item,
-    this.include,
-    this.exclude,
-    this.period,
-  });
+  }) = ProcessRequest;
 
-  factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
+factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestFromJson(json);
   Map<String, dynamic> toJson() => _$ProcessRequestToJson(this);
 }
@@ -549,11 +322,9 @@ class ProcessRequest {
 class ProcessRequestItem {
   double sequenceLinkId;
 
-  ProcessRequestItem({
-    this.sequenceLinkId,
-  });
+  }) = ProcessRequestItem;
 
-  factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
+factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestItemFromJson(json);
   Map<String, dynamic> toJson() => _$ProcessRequestItemToJson(this);
 }
@@ -570,20 +341,9 @@ class AppointmentResponse {
   String participantStatus;
   String comment;
 
-  AppointmentResponse({
-    this.id,
-    this.resourceType = 'AppointmentResponse',
-    this.identifier,
-    @required this.appointment,
-    this.start,
-    this.end,
-    this.participantType,
-    this.actor,
-    this.participantStatus,
-    this.comment,
-  });
+  }) = AppointmentResponse;
 
-  factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
+factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
   Map<String, dynamic> toJson() => _$AppointmentResponseToJson(this);
 }
@@ -600,20 +360,9 @@ class Schedule {
   Period planningHorizon;
   String comment;
 
-  Schedule({
-    this.id,
-    this.resourceType = 'Schedule',
-    this.identifier,
-    this.active,
-    this.serviceCategory,
-    this.serviceType,
-    this.specialty,
-    @required this.actor,
-    this.planningHorizon,
-    this.comment,
-  });
+  }) = Schedule;
 
-  factory Schedule.fromJson(Map<String, dynamic> json) =>
+factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
   Map<String, dynamic> toJson() => _$ScheduleToJson(this);
 }

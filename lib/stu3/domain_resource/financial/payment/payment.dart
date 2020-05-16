@@ -24,26 +24,9 @@ class PaymentReconciliation {
   Money total;
   List<PaymentReconciliationProcessNote> processNote;
 
-  PaymentReconciliation({
-    this.id,
-    this.resourceType = 'PaymentReconciliation',
-    this.identifier,
-    this.status,
-    this.period,
-    this.created,
-    this.organization,
-    this.request,
-    this.outcome,
-    this.disposition,
-    this.requestProvider,
-    this.requestOrganization,
-    this.detail,
-    this.form,
-    this.total,
-    this.processNote,
-  });
+  }) = PaymentReconciliation;
 
-  factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
+factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
   Map<String, dynamic> toJson() => _$PaymentReconciliationToJson(this);
 }
@@ -57,17 +40,9 @@ class PaymentReconciliationDetail {
   String date;
   Money amount;
 
-  PaymentReconciliationDetail({
-    @required this.type,
-    this.request,
-    this.response,
-    this.submitter,
-    this.payee,
-    this.date,
-    this.amount,
-  });
+  }) = PaymentReconciliationDetail;
 
-  factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
+factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
   Map<String, dynamic> toJson() => _$PaymentReconciliationDetailToJson(this);
 }
@@ -76,12 +51,9 @@ class PaymentReconciliationProcessNote {
   CodeableConcept type;
   String text;
 
-  PaymentReconciliationProcessNote({
-    this.type,
-    this.text,
-  });
+  }) = PaymentReconciliationProcessNote;
 
-  factory PaymentReconciliationProcessNote.fromJson(
+factory PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>
       _$PaymentReconciliationProcessNoteFromJson(json);
   Map<String, dynamic> toJson() =>
@@ -102,22 +74,9 @@ class PaymentNotice {
   Reference organization;
   CodeableConcept paymentStatus;
 
-  PaymentNotice({
-    this.id,
-    this.resourceType = 'PaymentNotice',
-    this.identifier,
-    this.status,
-    this.request,
-    this.response,
-    this.statusDate,
-    this.created,
-    this.target,
-    this.provider,
-    this.organization,
-    this.paymentStatus,
-  });
+  }) = PaymentNotice;
 
-  factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
+factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
   Map<String, dynamic> toJson() => _$PaymentNoticeToJson(this);
 }

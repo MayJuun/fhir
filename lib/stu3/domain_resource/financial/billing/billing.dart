@@ -33,35 +33,9 @@ class ClaimResponse {
   List<Reference> communicationRequest;
   List<ClaimResponseInsurance> insurance;
 
-  ClaimResponse({
-    this.id,
-    this.resourceType = 'ClaimResponse',
-    this.identifier,
-    this.status,
-    this.patient,
-    this.created,
-    this.insurer,
-    this.requestProvider,
-    this.requestOrganization,
-    this.request,
-    this.outcome,
-    this.disposition,
-    this.payeeType,
-    this.item,
-    this.addItem,
-    this.error,
-    this.totalCost,
-    this.unallocDeductable,
-    this.totalBenefit,
-    this.payment,
-    this.reserved,
-    this.form,
-    this.processNote,
-    this.communicationRequest,
-    this.insurance,
-  });
+  }) = ClaimResponse;
 
-  factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseToJson(this);
 }
@@ -72,14 +46,9 @@ class ClaimResponseItem {
   List<ClaimResponseAdjudication> adjudication;
   List<ClaimResponseDetail> detail;
 
-  ClaimResponseItem({
-    this.sequenceLinkId,
-    this.noteNumber,
-    this.adjudication,
-    this.detail,
-  });
+  }) = ClaimResponseItem;
 
-  factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseItemToJson(this);
 }
@@ -90,14 +59,9 @@ class ClaimResponseAdjudication {
   Money amount;
   double value;
 
-  ClaimResponseAdjudication({
-    @required this.category,
-    this.reason,
-    this.amount,
-    this.value,
-  });
+  }) = ClaimResponseAdjudication;
 
-  factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAdjudicationFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseAdjudicationToJson(this);
 }
@@ -108,14 +72,9 @@ class ClaimResponseDetail {
   List<ClaimResponseAdjudication> adjudication;
   List<ClaimResponseSubDetail> subDetail;
 
-  ClaimResponseDetail({
-    this.sequenceLinkId,
-    this.noteNumber,
-    this.adjudication,
-    this.subDetail,
-  });
+  }) = ClaimResponseDetail;
 
-  factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseDetailToJson(this);
 }
@@ -125,13 +84,9 @@ class ClaimResponseSubDetail {
   List<String> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
 
-  ClaimResponseSubDetail({
-    this.sequenceLinkId,
-    this.noteNumber,
-    this.adjudication,
-  });
+  }) = ClaimResponseSubDetail;
 
-  factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseSubDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseSubDetailToJson(this);
 }
@@ -147,19 +102,9 @@ class ClaimResponseAddItem {
   List<ClaimResponseAdjudication> adjudication;
   List<ClaimResponseDetail1> detail;
 
-  ClaimResponseAddItem({
-    this.sequenceLinkId,
-    this.revenue,
-    this.category,
-    this.service,
-    this.modifier,
-    this.fee,
-    this.noteNumber,
-    this.adjudication,
-    this.detail,
-  });
+  }) = ClaimResponseAddItem;
 
-  factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseAddItemToJson(this);
 }
@@ -173,17 +118,9 @@ class ClaimResponseDetail1 {
   List<String> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
 
-  ClaimResponseDetail1({
-    this.revenue,
-    this.category,
-    this.service,
-    this.modifier,
-    this.fee,
-    this.noteNumber,
-    this.adjudication,
-  });
+  }) = ClaimResponseDetail1;
 
-  factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetail1FromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseDetail1ToJson(this);
 }
@@ -194,14 +131,9 @@ class ClaimResponseError {
   double subdetailSequenceLinkId;
   CodeableConcept code;
 
-  ClaimResponseError({
-    this.sequenceLinkId,
-    this.detailSequenceLinkId,
-    this.subdetailSequenceLinkId,
-    @required this.code,
-  });
+  }) = ClaimResponseError;
 
-  factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseErrorFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseErrorToJson(this);
 }
@@ -214,16 +146,9 @@ class ClaimResponsePayment {
   Money amount;
   Identifier identifier;
 
-  ClaimResponsePayment({
-    this.type,
-    this.adjustment,
-    this.adjustmentReason,
-    this.date,
-    this.amount,
-    this.identifier,
-  });
+  }) = ClaimResponsePayment;
 
-  factory ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponsePaymentFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponsePaymentToJson(this);
 }
@@ -234,14 +159,9 @@ class ClaimResponseProcessNote {
   String text;
   CodeableConcept language;
 
-  ClaimResponseProcessNote({
-    this.number,
-    this.type,
-    this.text,
-    this.language,
-  });
+  }) = ClaimResponseProcessNote;
 
-  factory ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseProcessNoteFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseProcessNoteToJson(this);
 }
@@ -254,16 +174,9 @@ class ClaimResponseInsurance {
   List<String> preAuthRef;
   Reference claimResponse;
 
-  ClaimResponseInsurance({
-    this.sequence,
-    this.focal,
-    @required this.coverage,
-    this.businessArrangement,
-    this.preAuthRef,
-    this.claimResponse,
-  });
+  }) = ClaimResponseInsurance;
 
-  factory ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
+factory ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseInsuranceFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseInsuranceToJson(this);
 }
@@ -302,42 +215,9 @@ class Claim {
   List<ClaimItem> item;
   Money total;
 
-  Claim({
-    this.id,
-    this.resourceType = 'Claim',
-    this.identifier,
-    this.status,
-    this.type,
-    this.subType,
-    this.use,
-    this.patient,
-    this.billablePeriod,
-    this.created,
-    this.enterer,
-    this.insurer,
-    this.provider,
-    this.organization,
-    this.priority,
-    this.fundsReserve,
-    this.related,
-    this.prescription,
-    this.originalPrescription,
-    this.payee,
-    this.referral,
-    this.facility,
-    this.careTeam,
-    this.information,
-    this.diagnosis,
-    this.procedure,
-    this.insurance,
-    this.accident,
-    this.employmentImpacted,
-    this.hospitalization,
-    this.item,
-    this.total,
-  });
+  }) = Claim;
 
-  factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
+factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimToJson(this);
 }
 
@@ -346,13 +226,9 @@ class ClaimRelated {
   CodeableConcept relationship;
   Identifier reference;
 
-  ClaimRelated({
-    this.claim,
-    this.relationship,
-    this.reference,
-  });
+  }) = ClaimRelated;
 
-  factory ClaimRelated.fromJson(Map<String, dynamic> json) =>
+factory ClaimRelated.fromJson(Map<String, dynamic> json) =>
       _$ClaimRelatedFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimRelatedToJson(this);
 }
@@ -362,13 +238,9 @@ class ClaimPayee {
   String resourceType;
   Reference party;
 
-  ClaimPayee({
-    @required this.type,
-    this.resourceType = 'ClaimPayee',
-    this.party,
-  });
+  }) = ClaimPayee;
 
-  factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
+factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
       _$ClaimPayeeFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimPayeeToJson(this);
 }
@@ -380,15 +252,9 @@ class ClaimCareTeam {
   CodeableConcept role;
   CodeableConcept qualification;
 
-  ClaimCareTeam({
-    this.sequence,
-    @required this.provider,
-    this.responsible,
-    this.role,
-    this.qualification,
-  });
+  }) = ClaimCareTeam;
 
-  factory ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
+factory ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
       _$ClaimCareTeamFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimCareTeamToJson(this);
 }
@@ -405,20 +271,9 @@ class ClaimInformation {
   Reference valueReference;
   CodeableConcept reason;
 
-  ClaimInformation({
-    this.sequence,
-    @required this.category,
-    this.code,
-    this.timingDate,
-    this.timingPeriod,
-    this.valueString,
-    this.valueQuantity,
-    this.valueAttachment,
-    this.valueReference,
-    this.reason,
-  });
+  }) = ClaimInformation;
 
-  factory ClaimInformation.fromJson(Map<String, dynamic> json) =>
+factory ClaimInformation.fromJson(Map<String, dynamic> json) =>
       _$ClaimInformationFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimInformationToJson(this);
 }
@@ -430,15 +285,9 @@ class ClaimDiagnosis {
   List<CodeableConcept> type;
   CodeableConcept packageCode;
 
-  ClaimDiagnosis({
-    this.sequence,
-    this.diagnosisCodeableConcept,
-    this.diagnosisReference,
-    this.type,
-    this.packageCode,
-  });
+  }) = ClaimDiagnosis;
 
-  factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
+factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ClaimDiagnosisFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimDiagnosisToJson(this);
 }
@@ -449,14 +298,9 @@ class ClaimProcedure {
   CodeableConcept procedureCodeableConcept;
   Reference procedureReference;
 
-  ClaimProcedure({
-    this.sequence,
-    this.date,
-    this.procedureCodeableConcept,
-    this.procedureReference,
-  });
+  }) = ClaimProcedure;
 
-  factory ClaimProcedure.fromJson(Map<String, dynamic> json) =>
+factory ClaimProcedure.fromJson(Map<String, dynamic> json) =>
       _$ClaimProcedureFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimProcedureToJson(this);
 }
@@ -469,16 +313,9 @@ class ClaimInsurance {
   List<String> preAuthRef;
   Reference claimResponse;
 
-  ClaimInsurance({
-    this.sequence,
-    this.focal,
-    @required this.coverage,
-    this.businessArrangement,
-    this.preAuthRef,
-    this.claimResponse,
-  });
+  }) = ClaimInsurance;
 
-  factory ClaimInsurance.fromJson(Map<String, dynamic> json) =>
+factory ClaimInsurance.fromJson(Map<String, dynamic> json) =>
       _$ClaimInsuranceFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimInsuranceToJson(this);
 }
@@ -489,14 +326,9 @@ class ClaimAccident {
   Address locationAddress;
   Reference locationReference;
 
-  ClaimAccident({
-    this.date,
-    this.type,
-    this.locationAddress,
-    this.locationReference,
-  });
+  }) = ClaimAccident;
 
-  factory ClaimAccident.fromJson(Map<String, dynamic> json) =>
+factory ClaimAccident.fromJson(Map<String, dynamic> json) =>
       _$ClaimAccidentFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimAccidentToJson(this);
 }
@@ -527,34 +359,9 @@ class ClaimItem {
   List<Reference> encounter;
   List<ClaimDetail> detail;
 
-  ClaimItem({
-    this.sequence,
-    this.careTeamLinkId,
-    this.diagnosisLinkId,
-    this.procedureLinkId,
-    this.informationLinkId,
-    this.revenue,
-    this.category,
-    this.service,
-    this.modifier,
-    this.programCode,
-    this.servicedDate,
-    this.servicedPeriod,
-    this.locationCodeableConcept,
-    this.locationAddress,
-    this.locationReference,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.net,
-    this.udi,
-    this.bodySite,
-    this.subSite,
-    this.encounter,
-    this.detail,
-  });
+  }) = ClaimItem;
 
-  factory ClaimItem.fromJson(Map<String, dynamic> json) =>
+factory ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimItemToJson(this);
 }
@@ -573,22 +380,9 @@ class ClaimDetail {
   List<Reference> udi;
   List<ClaimSubDetail> subDetail;
 
-  ClaimDetail({
-    this.sequence,
-    this.revenue,
-    this.category,
-    this.service,
-    this.modifier,
-    this.programCode,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.net,
-    this.udi,
-    this.subDetail,
-  });
+  }) = ClaimDetail;
 
-  factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
+factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimDetailToJson(this);
 }
@@ -606,21 +400,9 @@ class ClaimSubDetail {
   Money net;
   List<Reference> udi;
 
-  ClaimSubDetail({
-    this.sequence,
-    this.revenue,
-    this.category,
-    this.service,
-    this.modifier,
-    this.programCode,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.net,
-    this.udi,
-  });
+  }) = ClaimSubDetail;
 
-  factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
+factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimSubDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimSubDetailToJson(this);
 }

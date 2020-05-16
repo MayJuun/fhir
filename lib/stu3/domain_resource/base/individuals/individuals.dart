@@ -24,26 +24,9 @@ class PractitionerRole {
   String availabilityExceptions;
   List<Reference> endpoint;
 
-  PractitionerRole({
-    this.id,
-    this.resourceType = 'PractitionerRole',
-    this.identifier,
-    this.active,
-    this.period,
-    this.practitioner,
-    this.organization,
-    this.code,
-    this.specialty,
-    this.location,
-    this.healthcareService,
-    this.telecom,
-    this.availableTime,
-    this.notAvailable,
-    this.availabilityExceptions,
-    this.endpoint,
-  });
+  }) = PractitionerRole;
 
-  factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
+factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleFromJson(json);
   Map<String, dynamic> toJson() => _$PractitionerRoleToJson(this);
 }
@@ -54,14 +37,9 @@ class PractitionerRoleAvailableTime {
   String availableStartTime;
   String availableEndTime;
 
-  PractitionerRoleAvailableTime({
-    this.daysOfWeek,
-    this.allDay,
-    this.availableStartTime,
-    this.availableEndTime,
-  });
+  }) = PractitionerRoleAvailableTime;
 
-  factory PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =>
+factory PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleAvailableTimeFromJson(json);
   Map<String, dynamic> toJson() => _$PractitionerRoleAvailableTimeToJson(this);
 }
@@ -70,12 +48,9 @@ class PractitionerRoleNotAvailable {
   String description;
   Period during;
 
-  PractitionerRoleNotAvailable({
-    this.description,
-    this.during,
-  });
+  }) = PractitionerRoleNotAvailable;
 
-  factory PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
+factory PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleNotAvailableFromJson(json);
   Map<String, dynamic> toJson() => _$PractitionerRoleNotAvailableToJson(this);
 }
@@ -93,21 +68,9 @@ class Group {
   List<GroupCharacteristic> characteristic;
   List<GroupMember> member;
 
-  Group({
-    this.id,
-    this.resourceType = 'Group',
-    this.identifier,
-    this.active,
-    this.type,
-    this.actual,
-    this.code,
-    this.name,
-    this.quantity,
-    this.characteristic,
-    this.member,
-  });
+  }) = Group;
 
-  factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
+factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
   Map<String, dynamic> toJson() => _$GroupToJson(this);
 }
 
@@ -120,17 +83,9 @@ class GroupCharacteristic {
   bool exclude;
   Period period;
 
-  GroupCharacteristic({
-    @required this.code,
-    this.valueCodeableConcept,
-    this.valueBoolean,
-    this.valueQuantity,
-    this.valueRange,
-    this.exclude,
-    this.period,
-  });
+  }) = GroupCharacteristic;
 
-  factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
+factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$GroupCharacteristicFromJson(json);
   Map<String, dynamic> toJson() => _$GroupCharacteristicToJson(this);
 }
@@ -140,13 +95,9 @@ class GroupMember {
   Period period;
   bool inactive;
 
-  GroupMember({
-    @required this.entity,
-    this.period,
-    this.inactive,
-  });
+  }) = GroupMember;
 
-  factory GroupMember.fromJson(Map<String, dynamic> json) =>
+factory GroupMember.fromJson(Map<String, dynamic> json) =>
       _$GroupMemberFromJson(json);
   Map<String, dynamic> toJson() => _$GroupMemberToJson(this);
 }
@@ -165,22 +116,9 @@ class Person {
   bool active;
   List<PersonLink> link;
 
-  Person({
-    this.id,
-    this.resourceType = 'Person',
-    this.identifier,
-    this.name,
-    this.telecom,
-    this.gender,
-    this.birthDate,
-    this.address,
-    this.photo,
-    this.managingOrganization,
-    this.active,
-    this.link,
-  });
+  }) = Person;
 
-  factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
+factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
   Map<String, dynamic> toJson() => _$PersonToJson(this);
 }
 
@@ -188,12 +126,9 @@ class PersonLink {
   Reference target;
   String assurance;
 
-  PersonLink({
-    @required this.target,
-    this.assurance,
-  });
+  }) = PersonLink;
 
-  factory PersonLink.fromJson(Map<String, dynamic> json) =>
+factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
   Map<String, dynamic> toJson() => _$PersonLinkToJson(this);
 }
@@ -213,23 +148,9 @@ class RelatedPerson {
   List<Attachment> photo;
   Period period;
 
-  RelatedPerson({
-    this.id,
-    this.resourceType = 'RelatedPerson',
-    this.identifier,
-    this.active,
-    @required this.patient,
-    this.relationship,
-    this.name,
-    this.telecom,
-    this.gender,
-    this.birthDate,
-    this.address,
-    this.photo,
-    this.period,
-  });
+  }) = RelatedPerson;
 
-  factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
+factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonFromJson(json);
   Map<String, dynamic> toJson() => _$RelatedPersonToJson(this);
 }
@@ -257,31 +178,9 @@ class Patient {
   Reference managingOrganization;
   List<PatientLink> link;
 
-  Patient({
-    this.id,
-    this.resourceType = 'Patient',
-    this.identifier,
-    this.active,
-    this.name,
-    this.telecom,
-    this.gender,
-    this.birthDate,
-    this.deceasedBoolean,
-    this.deceasedDateTime,
-    this.address,
-    this.maritalStatus,
-    this.multipleBirthBoolean,
-    this.multipleBirthInteger,
-    this.photo,
-    this.contact,
-    this.animal,
-    this.communication,
-    this.generalPractitioner,
-    this.managingOrganization,
-    this.link,
-  });
+  }) = Patient;
 
-  factory Patient.fromJson(Map<String, dynamic> json) =>
+factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
   Map<String, dynamic> toJson() => _$PatientToJson(this);
 }
@@ -295,17 +194,9 @@ class PatientContact {
   Reference organization;
   Period period;
 
-  PatientContact({
-    this.relationship,
-    this.name,
-    this.telecom,
-    this.address,
-    this.gender,
-    this.organization,
-    this.period,
-  });
+  }) = PatientContact;
 
-  factory PatientContact.fromJson(Map<String, dynamic> json) =>
+factory PatientContact.fromJson(Map<String, dynamic> json) =>
       _$PatientContactFromJson(json);
   Map<String, dynamic> toJson() => _$PatientContactToJson(this);
 }
@@ -315,13 +206,9 @@ class PatientAnimal {
   CodeableConcept breed;
   CodeableConcept genderStatus;
 
-  PatientAnimal({
-    @required this.species,
-    this.breed,
-    this.genderStatus,
-  });
+  }) = PatientAnimal;
 
-  factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
+factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
       _$PatientAnimalFromJson(json);
   Map<String, dynamic> toJson() => _$PatientAnimalToJson(this);
 }
@@ -330,12 +217,9 @@ class PatientCommunication {
   CodeableConcept language;
   bool preferred;
 
-  PatientCommunication({
-    @required this.language,
-    this.preferred,
-  });
+  }) = PatientCommunication;
 
-  factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
+factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$PatientCommunicationFromJson(json);
   Map<String, dynamic> toJson() => _$PatientCommunicationToJson(this);
 }
@@ -344,12 +228,9 @@ class PatientLink {
   Reference other;
   String type;
 
-  PatientLink({
-    @required this.other,
-    this.type,
-  });
+  }) = PatientLink;
 
-  factory PatientLink.fromJson(Map<String, dynamic> json) =>
+factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
   Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
 }
@@ -368,22 +249,9 @@ class Practitioner {
   List<PractitionerQualification> qualification;
   List<CodeableConcept> communication;
 
-  Practitioner({
-    this.id,
-    this.resourceType = 'Practitioner',
-    this.identifier,
-    this.active,
-    this.name,
-    this.telecom,
-    this.address,
-    this.gender,
-    this.birthDate,
-    this.photo,
-    this.qualification,
-    this.communication,
-  });
+  }) = Practitioner;
 
-  factory Practitioner.fromJson(Map<String, dynamic> json) =>
+factory Practitioner.fromJson(Map<String, dynamic> json) =>
       _$PractitionerFromJson(json);
   Map<String, dynamic> toJson() => _$PractitionerToJson(this);
 }
@@ -394,14 +262,9 @@ class PractitionerQualification {
   Period period;
   Reference issuer;
 
-  PractitionerQualification({
-    this.identifier,
-    @required this.code,
-    this.period,
-    this.issuer,
-  });
+  }) = PractitionerQualification;
 
-  factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
+factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$PractitionerQualificationFromJson(json);
   Map<String, dynamic> toJson() => _$PractitionerQualificationToJson(this);
 }

@@ -23,25 +23,9 @@ class Lists {
   List<ListEntry> entry;
   CodeableConcept emptyReason;
 
-  Lists({
-    this.id,
-    this.resourceType = 'List',
-    this.identifier,
-    this.status,
-    this.mode,
-    this.title,
-    this.code,
-    this.subject,
-    this.encounter,
-    this.date,
-    this.source,
-    this.orderedBy,
-    this.note,
-    this.entry,
-    this.emptyReason,
-  });
+  }) = Lists;
 
-  factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
+factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
   Map<String, dynamic> toJson() => _$ListsToJson(this);
 }
 
@@ -51,14 +35,9 @@ class ListEntry {
   String date;
   Reference item;
 
-  ListEntry({
-    this.flag,
-    this.deleted,
-    this.date,
-    @required this.item,
-  });
+  }) = ListEntry;
 
-  factory ListEntry.fromJson(Map<String, dynamic> json) =>
+factory ListEntry.fromJson(Map<String, dynamic> json) =>
       _$ListEntryFromJson(json);
   Map<String, dynamic> toJson() => _$ListEntryToJson(this);
 }
@@ -93,38 +72,9 @@ class Library {
   List<DataRequirement> dataRequirement;
   List<Attachment> content;
 
-  Library({
-    this.id,
-    this.resourceType = 'Library',
-    this.url,
-    this.identifier,
-    this.version,
-    this.name,
-    this.title,
-    this.status,
-    this.experimental,
-    @required this.type,
-    this.date,
-    this.publisher,
-    this.description,
-    this.purpose,
-    this.usage,
-    this.approvalDate,
-    this.lastReviewDate,
-    this.effectivePeriod,
-    this.useContext,
-    this.jurisdiction,
-    this.topic,
-    this.contributor,
-    this.contact,
-    this.copyright,
-    this.relatedArtifact,
-    this.parameter,
-    this.dataRequirement,
-    this.content,
-  });
+  }) = Library;
 
-  factory Library.fromJson(Map<String, dynamic> json) =>
+factory Library.fromJson(Map<String, dynamic> json) =>
       _$LibraryFromJson(json);
   Map<String, dynamic> toJson() => _$LibraryToJson(this);
 }
@@ -154,33 +104,9 @@ class Encounter {
   Reference serviceProvider;
   Reference partOf;
 
-  Encounter({
-    this.id,
-    this.resourceType = 'Encounter',
-    this.identifier,
-    this.status,
-    this.statusHistory,
-    this.clas,
-    this.classHistory,
-    this.type,
-    this.priority,
-    this.subject,
-    this.episodeOfCare,
-    this.incomingReferral,
-    this.participant,
-    this.appointment,
-    this.period,
-    this.length,
-    this.reason,
-    this.diagnosis,
-    this.account,
-    this.hospitalization,
-    this.location,
-    this.serviceProvider,
-    this.partOf,
-  });
+  }) = Encounter;
 
-  factory Encounter.fromJson(Map<String, dynamic> json) =>
+factory Encounter.fromJson(Map<String, dynamic> json) =>
       _$EncounterFromJson(json);
   Map<String, dynamic> toJson() => _$EncounterToJson(this);
 }
@@ -189,12 +115,9 @@ class EncounterStatusHistory {
   String status;
   Period period;
 
-  EncounterStatusHistory({
-    this.status,
-    @required this.period,
-  });
+  }) = EncounterStatusHistory;
 
-  factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
+factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$EncounterStatusHistoryFromJson(json);
   Map<String, dynamic> toJson() => _$EncounterStatusHistoryToJson(this);
 }
@@ -203,12 +126,9 @@ class EncounterClassHistory {
   Coding clas;
   Period period;
 
-  EncounterClassHistory({
-    @required this.clas,
-    @required this.period,
-  });
+  }) = EncounterClassHistory;
 
-  factory EncounterClassHistory.fromJson(Map<String, dynamic> json) =>
+factory EncounterClassHistory.fromJson(Map<String, dynamic> json) =>
       _$EncounterClassHistoryFromJson(json);
   Map<String, dynamic> toJson() => _$EncounterClassHistoryToJson(this);
 }
@@ -218,13 +138,9 @@ class EncounterParticipant {
   Period period;
   Reference individual;
 
-  EncounterParticipant({
-    this.type,
-    this.period,
-    this.individual,
-  });
+  }) = EncounterParticipant;
 
-  factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
+factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
       _$EncounterParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$EncounterParticipantToJson(this);
 }
@@ -234,13 +150,9 @@ class EncounterDiagnosis {
   CodeableConcept role;
   double rank;
 
-  EncounterDiagnosis({
-    @required this.condition,
-    this.role,
-    this.rank,
-  });
+  }) = EncounterDiagnosis;
 
-  factory EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
+factory EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$EncounterDiagnosisFromJson(json);
   Map<String, dynamic> toJson() => _$EncounterDiagnosisToJson(this);
 }
@@ -256,19 +168,9 @@ class EncounterHospitalization {
   Reference destination;
   CodeableConcept dischargeDisposition;
 
-  EncounterHospitalization({
-    this.preAdmissionIdentifier,
-    this.origin,
-    this.admitSource,
-    this.reAdmission,
-    this.dietPreference,
-    this.specialCourtesy,
-    this.specialArrangement,
-    this.destination,
-    this.dischargeDisposition,
-  });
+  }) = EncounterHospitalization;
 
-  factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
+factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
       _$EncounterHospitalizationFromJson(json);
   Map<String, dynamic> toJson() => _$EncounterHospitalizationToJson(this);
 }
@@ -278,13 +180,9 @@ class EncounterLocation {
   String status;
   Period period;
 
-  EncounterLocation({
-    @required this.location,
-    this.status,
-    this.period,
-  });
+  }) = EncounterLocation;
 
-  factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
+factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
       _$EncounterLocationFromJson(json);
   Map<String, dynamic> toJson() => _$EncounterLocationToJson(this);
 }
@@ -301,20 +199,9 @@ class Flag {
   Reference encounter;
   Reference author;
 
-  Flag({
-    this.id,
-    this.resourceType = 'Flag',
-    this.identifier,
-    this.status,
-    this.category,
-    @required this.code,
-    @required this.subject,
-    this.period,
-    this.encounter,
-    this.author,
-  });
+  }) = Flag;
 
-  factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
+factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
   Map<String, dynamic> toJson() => _$FlagToJson(this);
 }
 
@@ -334,24 +221,9 @@ class EpisodeOfCare {
   List<Reference> team;
   List<Reference> account;
 
-  EpisodeOfCare({
-    this.id,
-    this.resourceType = 'EpisodeOfCare',
-    this.identifier,
-    this.status,
-    this.statusHistory,
-    this.type,
-    this.diagnosis,
-    @required this.patient,
-    this.managingOrganization,
-    this.period,
-    this.referralRequest,
-    this.careManager,
-    this.team,
-    this.account,
-  });
+  }) = EpisodeOfCare;
 
-  factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
+factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareFromJson(json);
   Map<String, dynamic> toJson() => _$EpisodeOfCareToJson(this);
 }
@@ -360,12 +232,9 @@ class EpisodeOfCareStatusHistory {
   String status;
   Period period;
 
-  EpisodeOfCareStatusHistory({
-    this.status,
-    @required this.period,
-  });
+  }) = EpisodeOfCareStatusHistory;
 
-  factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
+factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareStatusHistoryFromJson(json);
   Map<String, dynamic> toJson() => _$EpisodeOfCareStatusHistoryToJson(this);
 }
@@ -375,13 +244,9 @@ class EpisodeOfCareDiagnosis {
   CodeableConcept role;
   double rank;
 
-  EpisodeOfCareDiagnosis({
-    @required this.condition,
-    this.role,
-    this.rank,
-  });
+  }) = EpisodeOfCareDiagnosis;
 
-  factory EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
+factory EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareDiagnosisFromJson(json);
   Map<String, dynamic> toJson() => _$EpisodeOfCareDiagnosisToJson(this);
 }

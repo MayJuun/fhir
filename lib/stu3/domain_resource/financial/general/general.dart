@@ -34,36 +34,9 @@ class Contract {
   List<ContractLegal> legal;
   List<ContractRule> rule;
 
-  Contract({
-    this.id,
-    this.resourceType = 'Contract',
-    this.identifier,
-    this.status,
-    this.issued,
-    this.applies,
-    this.subject,
-    this.topic,
-    this.authority,
-    this.domain,
-    this.type,
-    this.subType,
-    this.action,
-    this.actionReason,
-    this.decisionType,
-    this.contentDerivative,
-    this.securityLabel,
-    this.agent,
-    this.signer,
-    this.valuedItem,
-    this.term,
-    this.bindingAttachment,
-    this.bindingReference,
-    this.friendly,
-    this.legal,
-    this.rule,
-  });
+  }) = Contract;
 
-  factory Contract.fromJson(Map<String, dynamic> json) =>
+factory Contract.fromJson(Map<String, dynamic> json) =>
       _$ContractFromJson(json);
   Map<String, dynamic> toJson() => _$ContractToJson(this);
 }
@@ -72,12 +45,9 @@ class ContractAgent {
   Reference actor;
   List<CodeableConcept> role;
 
-  ContractAgent({
-    @required this.actor,
-    this.role,
-  });
+  }) = ContractAgent;
 
-  factory ContractAgent.fromJson(Map<String, dynamic> json) =>
+factory ContractAgent.fromJson(Map<String, dynamic> json) =>
       _$ContractAgentFromJson(json);
   Map<String, dynamic> toJson() => _$ContractAgentToJson(this);
 }
@@ -87,13 +57,9 @@ class ContractSigner {
   Reference party;
   List<Signature> signature;
 
-  ContractSigner({
-    @required this.type,
-    @required this.party,
-    @required this.signature,
-  });
+  }) = ContractSigner;
 
-  factory ContractSigner.fromJson(Map<String, dynamic> json) =>
+factory ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$ContractSignerFromJson(json);
   Map<String, dynamic> toJson() => _$ContractSignerToJson(this);
 }
@@ -109,19 +75,9 @@ class ContractValuedItem {
   double points;
   Money net;
 
-  ContractValuedItem({
-    this.entityCodeableConcept,
-    this.entityReference,
-    this.identifier,
-    this.effectiveTime,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.points,
-    this.net,
-  });
+  }) = ContractValuedItem;
 
-  factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
+factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItemFromJson(json);
   Map<String, dynamic> toJson() => _$ContractValuedItemToJson(this);
 }
@@ -141,23 +97,9 @@ class ContractTerm {
   List<ContractValuedItem1> valuedItem;
   List<ContractTerm> group;
 
-  ContractTerm({
-    this.identifier,
-    this.issued,
-    this.applies,
-    this.type,
-    this.subType,
-    this.topic,
-    this.action,
-    this.actionReason,
-    this.securityLabel,
-    this.agent,
-    this.text,
-    this.valuedItem,
-    this.group,
-  });
+  }) = ContractTerm;
 
-  factory ContractTerm.fromJson(Map<String, dynamic> json) =>
+factory ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$ContractTermFromJson(json);
   Map<String, dynamic> toJson() => _$ContractTermToJson(this);
 }
@@ -166,12 +108,9 @@ class ContractAgent1 {
   Reference actor;
   List<CodeableConcept> role;
 
-  ContractAgent1({
-    @required this.actor,
-    this.role,
-  });
+  }) = ContractAgent1;
 
-  factory ContractAgent1.fromJson(Map<String, dynamic> json) =>
+factory ContractAgent1.fromJson(Map<String, dynamic> json) =>
       _$ContractAgent1FromJson(json);
   Map<String, dynamic> toJson() => _$ContractAgent1ToJson(this);
 }
@@ -187,19 +126,9 @@ class ContractValuedItem1 {
   double points;
   Money net;
 
-  ContractValuedItem1({
-    this.entityCodeableConcept,
-    this.entityReference,
-    this.identifier,
-    this.effectiveTime,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.points,
-    this.net,
-  });
+  }) = ContractValuedItem1;
 
-  factory ContractValuedItem1.fromJson(Map<String, dynamic> json) =>
+factory ContractValuedItem1.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItem1FromJson(json);
   Map<String, dynamic> toJson() => _$ContractValuedItem1ToJson(this);
 }
@@ -208,12 +137,9 @@ class ContractFriendly {
   Attachment contentAttachment;
   Reference contentReference;
 
-  ContractFriendly({
-    this.contentAttachment,
-    this.contentReference,
-  });
+  }) = ContractFriendly;
 
-  factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
+factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$ContractFriendlyFromJson(json);
   Map<String, dynamic> toJson() => _$ContractFriendlyToJson(this);
 }
@@ -222,12 +148,9 @@ class ContractLegal {
   Attachment contentAttachment;
   Reference contentReference;
 
-  ContractLegal({
-    this.contentAttachment,
-    this.contentReference,
-  });
+  }) = ContractLegal;
 
-  factory ContractLegal.fromJson(Map<String, dynamic> json) =>
+factory ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$ContractLegalFromJson(json);
   Map<String, dynamic> toJson() => _$ContractLegalToJson(this);
 }
@@ -236,12 +159,9 @@ class ContractRule {
   Attachment contentAttachment;
   Reference contentReference;
 
-  ContractRule({
-    this.contentAttachment,
-    this.contentReference,
-  });
+  }) = ContractRule;
 
-  factory ContractRule.fromJson(Map<String, dynamic> json) =>
+factory ContractRule.fromJson(Map<String, dynamic> json) =>
       _$ContractRuleFromJson(json);
   Map<String, dynamic> toJson() => _$ContractRuleToJson(this);
 }
@@ -262,24 +182,9 @@ class Account {
   String description;
   List<AccountGuarantor> guarantor;
 
-  Account({
-    this.id,
-    this.resourceType = 'Account',
-    this.identifier,
-    this.status,
-    this.type,
-    this.name,
-    this.subject,
-    this.period,
-    this.active,
-    this.balance,
-    this.coverage,
-    this.owner,
-    this.description,
-    this.guarantor,
-  });
+  }) = Account;
 
-  factory Account.fromJson(Map<String, dynamic> json) =>
+factory Account.fromJson(Map<String, dynamic> json) =>
       _$AccountFromJson(json);
   Map<String, dynamic> toJson() => _$AccountToJson(this);
 }
@@ -288,12 +193,9 @@ class AccountCoverage {
   Reference coverage;
   double priority;
 
-  AccountCoverage({
-    @required this.coverage,
-    this.priority,
-  });
+  }) = AccountCoverage;
 
-  factory AccountCoverage.fromJson(Map<String, dynamic> json) =>
+factory AccountCoverage.fromJson(Map<String, dynamic> json) =>
       _$AccountCoverageFromJson(json);
   Map<String, dynamic> toJson() => _$AccountCoverageToJson(this);
 }
@@ -303,13 +205,9 @@ class AccountGuarantor {
   bool onHold;
   Period period;
 
-  AccountGuarantor({
-    @required this.party,
-    this.onHold,
-    this.period,
-  });
+  }) = AccountGuarantor;
 
-  factory AccountGuarantor.fromJson(Map<String, dynamic> json) =>
+factory AccountGuarantor.fromJson(Map<String, dynamic> json) =>
       _$AccountGuarantorFromJson(json);
   Map<String, dynamic> toJson() => _$AccountGuarantorToJson(this);
 }
@@ -343,37 +241,9 @@ class ChargeItem {
   List<Annotation> note;
   List<Reference> supportingInformation;
 
-  ChargeItem({
-    this.id,
-    this.resourceType = 'ChargeItem',
-    this.identifier,
-    this.definition,
-    this.status,
-    this.partOf,
-    @required this.code,
-    @required this.subject,
-    this.context,
-    this.occurrenceDateTime,
-    this.occurrencePeriod,
-    this.occurrenceTiming,
-    this.participant,
-    this.performingOrganization,
-    this.requestingOrganization,
-    this.quantity,
-    this.bodysite,
-    this.factorOverride,
-    this.priceOverride,
-    this.overrideReason,
-    this.enterer,
-    this.enteredDate,
-    this.reason,
-    this.service,
-    this.account,
-    this.note,
-    this.supportingInformation,
-  });
+  }) = ChargeItem;
 
-  factory ChargeItem.fromJson(Map<String, dynamic> json) =>
+factory ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemFromJson(json);
   Map<String, dynamic> toJson() => _$ChargeItemToJson(this);
 }
@@ -382,12 +252,9 @@ class ChargeItemParticipant {
   CodeableConcept role;
   Reference actor;
 
-  ChargeItemParticipant({
-    this.role,
-    @required this.actor,
-  });
+  }) = ChargeItemParticipant;
 
-  factory ChargeItemParticipant.fromJson(Map<String, dynamic> json) =>
+factory ChargeItemParticipant.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$ChargeItemParticipantToJson(this);
 }
@@ -435,51 +302,9 @@ class ExplanationOfBenefit {
   List<ExplanationOfBenefitProcessNote> processNote;
   List<ExplanationOfBenefitBenefitBalance> benefitBalance;
 
-  ExplanationOfBenefit({
-    this.id,
-    this.resourceType = 'ExplanationOfBenefit',
-    this.identifier,
-    this.status,
-    this.type,
-    this.subType,
-    this.patient,
-    this.billablePeriod,
-    this.created,
-    this.enterer,
-    this.insurer,
-    this.provider,
-    this.organization,
-    this.referral,
-    this.facility,
-    this.claim,
-    this.claimResponse,
-    this.outcome,
-    this.disposition,
-    this.related,
-    this.prescription,
-    this.originalPrescription,
-    this.payee,
-    this.information,
-    this.careTeam,
-    this.diagnosis,
-    this.procedure,
-    this.precedence,
-    this.insurance,
-    this.accident,
-    this.employmentImpacted,
-    this.hospitalization,
-    this.item,
-    this.addItem,
-    this.totalCost,
-    this.unallocDeductable,
-    this.totalBenefit,
-    this.payment,
-    this.form,
-    this.processNote,
-    this.benefitBalance,
-  });
+  }) = ExplanationOfBenefit;
 
-  factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitToJson(this);
 }
@@ -489,13 +314,9 @@ class ExplanationOfBenefitRelated {
   CodeableConcept relationship;
   Identifier reference;
 
-  ExplanationOfBenefitRelated({
-    this.claim,
-    this.relationship,
-    this.reference,
-  });
+  }) = ExplanationOfBenefitRelated;
 
-  factory ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitRelatedFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitRelatedToJson(this);
 }
@@ -505,13 +326,9 @@ class ExplanationOfBenefitPayee {
   String resourceType;
   Reference party;
 
-  ExplanationOfBenefitPayee({
-    this.type,
-    this.resourceType = 'ExplanationOfBenefitPayee',
-    this.party,
-  });
+  }) = ExplanationOfBenefitPayee;
 
-  factory ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitPayeeFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitPayeeToJson(this);
 }
@@ -528,20 +345,9 @@ class ExplanationOfBenefitInformation {
   Reference valueReference;
   Coding reason;
 
-  ExplanationOfBenefitInformation({
-    this.sequence,
-    @required this.category,
-    this.code,
-    this.timingDate,
-    this.timingPeriod,
-    this.valueString,
-    this.valueQuantity,
-    this.valueAttachment,
-    this.valueReference,
-    this.reason,
-  });
+  }) = ExplanationOfBenefitInformation;
 
-  factory ExplanationOfBenefitInformation.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitInformation.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitInformationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ExplanationOfBenefitInformationToJson(this);
@@ -554,15 +360,9 @@ class ExplanationOfBenefitCareTeam {
   CodeableConcept role;
   CodeableConcept qualification;
 
-  ExplanationOfBenefitCareTeam({
-    this.sequence,
-    @required this.provider,
-    this.responsible,
-    this.role,
-    this.qualification,
-  });
+  }) = ExplanationOfBenefitCareTeam;
 
-  factory ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitCareTeamFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitCareTeamToJson(this);
 }
@@ -574,15 +374,9 @@ class ExplanationOfBenefitDiagnosis {
   List<CodeableConcept> type;
   CodeableConcept packageCode;
 
-  ExplanationOfBenefitDiagnosis({
-    this.sequence,
-    this.diagnosisCodeableConcept,
-    this.diagnosisReference,
-    this.type,
-    this.packageCode,
-  });
+  }) = ExplanationOfBenefitDiagnosis;
 
-  factory ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDiagnosisFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitDiagnosisToJson(this);
 }
@@ -593,14 +387,9 @@ class ExplanationOfBenefitProcedure {
   CodeableConcept procedureCodeableConcept;
   Reference procedureReference;
 
-  ExplanationOfBenefitProcedure({
-    this.sequence,
-    this.date,
-    this.procedureCodeableConcept,
-    this.procedureReference,
-  });
+  }) = ExplanationOfBenefitProcedure;
 
-  factory ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcedureFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitProcedureToJson(this);
 }
@@ -609,12 +398,9 @@ class ExplanationOfBenefitInsurance {
   Reference coverage;
   List<String> preAuthRef;
 
-  ExplanationOfBenefitInsurance({
-    this.coverage,
-    this.preAuthRef,
-  });
+  }) = ExplanationOfBenefitInsurance;
 
-  factory ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitInsuranceFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitInsuranceToJson(this);
 }
@@ -625,14 +411,9 @@ class ExplanationOfBenefitAccident {
   Address locationAddress;
   Reference locationReference;
 
-  ExplanationOfBenefitAccident({
-    this.date,
-    this.type,
-    this.locationAddress,
-    this.locationReference,
-  });
+  }) = ExplanationOfBenefitAccident;
 
-  factory ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAccidentFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitAccidentToJson(this);
 }
@@ -665,36 +446,9 @@ class ExplanationOfBenefitItem {
   List<ExplanationOfBenefitAdjudication> adjudication;
   List<ExplanationOfBenefitDetail> detail;
 
-  ExplanationOfBenefitItem({
-    this.sequence,
-    this.careTeamLinkId,
-    this.diagnosisLinkId,
-    this.procedureLinkId,
-    this.informationLinkId,
-    this.revenue,
-    this.category,
-    this.service,
-    this.modifier,
-    this.programCode,
-    this.servicedDate,
-    this.servicedPeriod,
-    this.locationCodeableConcept,
-    this.locationAddress,
-    this.locationReference,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.net,
-    this.udi,
-    this.bodySite,
-    this.subSite,
-    this.encounter,
-    this.noteNumber,
-    this.adjudication,
-    this.detail,
-  });
+  }) = ExplanationOfBenefitItem;
 
-  factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitItemFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitItemToJson(this);
 }
@@ -705,14 +459,9 @@ class ExplanationOfBenefitAdjudication {
   Money amount;
   double value;
 
-  ExplanationOfBenefitAdjudication({
-    @required this.category,
-    this.reason,
-    this.amount,
-    this.value,
-  });
+  }) = ExplanationOfBenefitAdjudication;
 
-  factory ExplanationOfBenefitAdjudication.fromJson(
+factory ExplanationOfBenefitAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAdjudicationFromJson(json);
   Map<String, dynamic> toJson() =>
@@ -736,25 +485,9 @@ class ExplanationOfBenefitDetail {
   List<ExplanationOfBenefitAdjudication> adjudication;
   List<ExplanationOfBenefitSubDetail> subDetail;
 
-  ExplanationOfBenefitDetail({
-    this.sequence,
-    @required this.type,
-    this.revenue,
-    this.category,
-    this.service,
-    this.modifier,
-    this.programCode,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.net,
-    this.udi,
-    this.noteNumber,
-    this.adjudication,
-    this.subDetail,
-  });
+  }) = ExplanationOfBenefitDetail;
 
-  factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitDetailToJson(this);
 }
@@ -775,24 +508,9 @@ class ExplanationOfBenefitSubDetail {
   List<String> noteNumber;
   List<ExplanationOfBenefitAdjudication> adjudication;
 
-  ExplanationOfBenefitSubDetail({
-    this.sequence,
-    @required this.type,
-    this.revenue,
-    this.category,
-    this.service,
-    this.modifier,
-    this.programCode,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.net,
-    this.udi,
-    this.noteNumber,
-    this.adjudication,
-  });
+  }) = ExplanationOfBenefitSubDetail;
 
-  factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitSubDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitSubDetailToJson(this);
 }
@@ -808,19 +526,9 @@ class ExplanationOfBenefitAddItem {
   List<ExplanationOfBenefitAdjudication> adjudication;
   List<ExplanationOfBenefitDetail1> detail;
 
-  ExplanationOfBenefitAddItem({
-    this.sequenceLinkId,
-    this.revenue,
-    this.category,
-    this.service,
-    this.modifier,
-    this.fee,
-    this.noteNumber,
-    this.adjudication,
-    this.detail,
-  });
+  }) = ExplanationOfBenefitAddItem;
 
-  factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAddItemFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitAddItemToJson(this);
 }
@@ -834,17 +542,9 @@ class ExplanationOfBenefitDetail1 {
   List<String> noteNumber;
   List<ExplanationOfBenefitAdjudication> adjudication;
 
-  ExplanationOfBenefitDetail1({
-    this.revenue,
-    this.category,
-    this.service,
-    this.modifier,
-    this.fee,
-    this.noteNumber,
-    this.adjudication,
-  });
+  }) = ExplanationOfBenefitDetail1;
 
-  factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetail1FromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitDetail1ToJson(this);
 }
@@ -857,16 +557,9 @@ class ExplanationOfBenefitPayment {
   Money amount;
   Identifier identifier;
 
-  ExplanationOfBenefitPayment({
-    this.type,
-    this.adjustment,
-    this.adjustmentReason,
-    this.date,
-    this.amount,
-    this.identifier,
-  });
+  }) = ExplanationOfBenefitPayment;
 
-  factory ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitPaymentFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitPaymentToJson(this);
 }
@@ -877,14 +570,9 @@ class ExplanationOfBenefitProcessNote {
   String text;
   CodeableConcept language;
 
-  ExplanationOfBenefitProcessNote({
-    this.number,
-    this.type,
-    this.text,
-    this.language,
-  });
+  }) = ExplanationOfBenefitProcessNote;
 
-  factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcessNoteFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ExplanationOfBenefitProcessNoteToJson(this);
@@ -901,19 +589,9 @@ class ExplanationOfBenefitBenefitBalance {
   CodeableConcept term;
   List<ExplanationOfBenefitFinancial> financial;
 
-  ExplanationOfBenefitBenefitBalance({
-    @required this.category,
-    this.subCategory,
-    this.excluded,
-    this.name,
-    this.description,
-    this.network,
-    this.unit,
-    this.term,
-    this.financial,
-  });
+  }) = ExplanationOfBenefitBenefitBalance;
 
-  factory ExplanationOfBenefitBenefitBalance.fromJson(
+factory ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
       _$ExplanationOfBenefitBenefitBalanceFromJson(json);
   Map<String, dynamic> toJson() =>
@@ -928,16 +606,9 @@ class ExplanationOfBenefitFinancial {
   int usedUnsignedInt;
   Money usedMoney;
 
-  ExplanationOfBenefitFinancial({
-    @required this.type,
-    this.allowedUnsignedInt,
-    this.allowedString,
-    this.allowedMoney,
-    this.usedUnsignedInt,
-    this.usedMoney,
-  });
+  }) = ExplanationOfBenefitFinancial;
 
-  factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>
+factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFinancialFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitFinancialToJson(this);
 }

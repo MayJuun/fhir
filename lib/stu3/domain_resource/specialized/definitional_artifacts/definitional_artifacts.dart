@@ -48,50 +48,9 @@ class ActivityDefinition {
   Reference transform;
   List<ActivityDefinitionDynamicValue> dynamicValue;
 
-  ActivityDefinition({
-    this.id,
-    this.resourceType = 'ActivityDefinition',
-    this.url,
-    this.identifier,
-    this.version,
-    this.name,
-    this.title,
-    this.status,
-    this.experimental,
-    this.date,
-    this.publisher,
-    this.description,
-    this.purpose,
-    this.usage,
-    this.approvalDate,
-    this.lastReviewDate,
-    this.effectivePeriod,
-    this.useContext,
-    this.jurisdiction,
-    this.topic,
-    this.contributor,
-    this.contact,
-    this.copyright,
-    this.relatedArtifact,
-    this.library,
-    this.kind,
-    this.code,
-    this.timingTiming,
-    this.timingDateTime,
-    this.timingPeriod,
-    this.timingRange,
-    this.location,
-    this.participant,
-    this.productReference,
-    this.productCodeableConcept,
-    this.quantity,
-    this.dosage,
-    this.bodySite,
-    this.transform,
-    this.dynamicValue,
-  });
+  }) = ActivityDefinition;
 
-  factory ActivityDefinition.fromJson(Map<String, dynamic> json) =>
+factory ActivityDefinition.fromJson(Map<String, dynamic> json) =>
       _$ActivityDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$ActivityDefinitionToJson(this);
 }
@@ -100,12 +59,9 @@ class ActivityDefinitionParticipant {
   String type;
   CodeableConcept role;
 
-  ActivityDefinitionParticipant({
-    this.type,
-    this.role,
-  });
+  }) = ActivityDefinitionParticipant;
 
-  factory ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
+factory ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
       _$ActivityDefinitionParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$ActivityDefinitionParticipantToJson(this);
 }
@@ -116,14 +72,9 @@ class ActivityDefinitionDynamicValue {
   String language;
   String expression;
 
-  ActivityDefinitionDynamicValue({
-    this.description,
-    this.path,
-    this.language,
-    this.expression,
-  });
+  }) = ActivityDefinitionDynamicValue;
 
-  factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
+factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
       _$ActivityDefinitionDynamicValueFromJson(json);
   Map<String, dynamic> toJson() => _$ActivityDefinitionDynamicValueToJson(this);
 }
@@ -153,33 +104,9 @@ class Questionnaire {
   List<String> subjectType;
   List<QuestionnaireItem> item;
 
-  Questionnaire({
-    this.id,
-    this.resourceType = 'Questionnaire',
-    this.url,
-    this.identifier,
-    this.version,
-    this.name,
-    this.title,
-    this.status,
-    this.experimental,
-    this.date,
-    this.publisher,
-    this.description,
-    this.purpose,
-    this.approvalDate,
-    this.lastReviewDate,
-    this.effectivePeriod,
-    this.useContext,
-    this.jurisdiction,
-    this.contact,
-    this.copyright,
-    this.code,
-    this.subjectType,
-    this.item,
-  });
+  }) = Questionnaire;
 
-  factory Questionnaire.fromJson(Map<String, dynamic> json) =>
+factory Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireFromJson(json);
   Map<String, dynamic> toJson() => _$QuestionnaireToJson(this);
 }
@@ -212,36 +139,9 @@ class QuestionnaireItem {
   Reference initialReference;
   List<QuestionnaireItem> item;
 
-  QuestionnaireItem({
-    this.linkId,
-    this.definition,
-    this.code,
-    this.prefix,
-    this.text,
-    this.type,
-    this.enableWhen,
-    this.required,
-    this.repeats,
-    this.readOnly,
-    this.maxLength,
-    this.options,
-    this.option,
-    this.initialBoolean,
-    this.initialDecimal,
-    this.initialInteger,
-    this.initialDate,
-    this.initialDateTime,
-    this.initialTime,
-    this.initialString,
-    this.initialUri,
-    this.initialAttachment,
-    this.initialCoding,
-    this.initialQuantity,
-    this.initialReference,
-    this.item,
-  });
+  }) = QuestionnaireItem;
 
-  factory QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
+factory QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireItemFromJson(json);
   Map<String, dynamic> toJson() => _$QuestionnaireItemToJson(this);
 }
@@ -262,24 +162,9 @@ class QuestionnaireEnableWhen {
   Quantity answerQuantity;
   Reference answerReference;
 
-  QuestionnaireEnableWhen({
-    this.question,
-    this.hasAnswer,
-    this.answerBoolean,
-    this.answerDecimal,
-    this.answerInteger,
-    this.answerDate,
-    this.answerDateTime,
-    this.answerTime,
-    this.answerString,
-    this.answerUri,
-    this.answerAttachment,
-    this.answerCoding,
-    this.answerQuantity,
-    this.answerReference,
-  });
+  }) = QuestionnaireEnableWhen;
 
-  factory QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
+factory QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireEnableWhenFromJson(json);
   Map<String, dynamic> toJson() => _$QuestionnaireEnableWhenToJson(this);
 }
@@ -291,15 +176,9 @@ class QuestionnaireOption {
   String valueString;
   Coding valueCoding;
 
-  QuestionnaireOption({
-    this.valueInteger,
-    this.valueDate,
-    this.valueTime,
-    this.valueString,
-    this.valueCoding,
-  });
+  }) = QuestionnaireOption;
 
-  factory QuestionnaireOption.fromJson(Map<String, dynamic> json) =>
+factory QuestionnaireOption.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireOptionFromJson(json);
   Map<String, dynamic> toJson() => _$QuestionnaireOptionToJson(this);
 }
@@ -333,37 +212,9 @@ class ServiceDefinition {
   List<DataRequirement> dataRequirement;
   Reference operationDefinition;
 
-  ServiceDefinition({
-    this.id,
-    this.resourceType = 'ServiceDefinition',
-    this.url,
-    this.identifier,
-    this.version,
-    this.name,
-    this.title,
-    this.status,
-    this.experimental,
-    this.date,
-    this.publisher,
-    this.description,
-    this.purpose,
-    this.usage,
-    this.approvalDate,
-    this.lastReviewDate,
-    this.effectivePeriod,
-    this.useContext,
-    this.jurisdiction,
-    this.topic,
-    this.contributor,
-    this.contact,
-    this.copyright,
-    this.relatedArtifact,
-    this.trigger,
-    this.dataRequirement,
-    this.operationDefinition,
-  });
+  }) = ServiceDefinition;
 
-  factory ServiceDefinition.fromJson(Map<String, dynamic> json) =>
+factory ServiceDefinition.fromJson(Map<String, dynamic> json) =>
       _$ServiceDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$ServiceDefinitionToJson(this);
 }
@@ -398,38 +249,9 @@ class PlanDefinition {
   List<PlanDefinitionGoal> goal;
   List<PlanDefinitionAction> action;
 
-  PlanDefinition({
-    this.id,
-    this.resourceType = 'PlanDefinition',
-    this.url,
-    this.identifier,
-    this.version,
-    this.name,
-    this.title,
-    this.type,
-    this.status,
-    this.experimental,
-    this.date,
-    this.publisher,
-    this.description,
-    this.purpose,
-    this.usage,
-    this.approvalDate,
-    this.lastReviewDate,
-    this.effectivePeriod,
-    this.useContext,
-    this.jurisdiction,
-    this.topic,
-    this.contributor,
-    this.contact,
-    this.copyright,
-    this.relatedArtifact,
-    this.library,
-    this.goal,
-    this.action,
-  });
+  }) = PlanDefinition;
 
-  factory PlanDefinition.fromJson(Map<String, dynamic> json) =>
+factory PlanDefinition.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$PlanDefinitionToJson(this);
 }
@@ -443,17 +265,9 @@ class PlanDefinitionGoal {
   List<RelatedArtifact> documentation;
   List<PlanDefinitionTarget> target;
 
-  PlanDefinitionGoal({
-    this.category,
-    @required this.description,
-    this.priority,
-    this.start,
-    this.addresses,
-    this.documentation,
-    this.target,
-  });
+  }) = PlanDefinitionGoal;
 
-  factory PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
+factory PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionGoalFromJson(json);
   Map<String, dynamic> toJson() => _$PlanDefinitionGoalToJson(this);
 }
@@ -465,15 +279,9 @@ class PlanDefinitionTarget {
   CodeableConcept detailCodeableConcept;
   Duration due;
 
-  PlanDefinitionTarget({
-    this.measure,
-    this.detailQuantity,
-    this.detailRange,
-    this.detailCodeableConcept,
-    this.due,
-  });
+  }) = PlanDefinitionTarget;
 
-  factory PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
+factory PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionTargetFromJson(json);
   Map<String, dynamic> toJson() => _$PlanDefinitionTargetToJson(this);
 }
@@ -509,39 +317,9 @@ class PlanDefinitionAction {
   List<PlanDefinitionDynamicValue> dynamicValue;
   List<PlanDefinitionAction> action;
 
-  PlanDefinitionAction({
-    this.label,
-    this.title,
-    this.description,
-    this.textEquivalent,
-    this.code,
-    this.reason,
-    this.documentation,
-    this.goalId,
-    this.triggerDefinition,
-    this.condition,
-    this.input,
-    this.output,
-    this.relatedAction,
-    this.timingDateTime,
-    this.timingPeriod,
-    this.timingDuration,
-    this.timingRange,
-    this.timingTiming,
-    this.participant,
-    this.type,
-    this.groupingBehavior,
-    this.selectionBehavior,
-    this.requiredBehavior,
-    this.precheckBehavior,
-    this.cardinalityBehavior,
-    this.definition,
-    this.transform,
-    this.dynamicValue,
-    this.action,
-  });
+  }) = PlanDefinitionAction;
 
-  factory PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
+factory PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionActionFromJson(json);
   Map<String, dynamic> toJson() => _$PlanDefinitionActionToJson(this);
 }
@@ -552,14 +330,9 @@ class PlanDefinitionCondition {
   String language;
   String expression;
 
-  PlanDefinitionCondition({
-    this.kind,
-    this.description,
-    this.language,
-    this.expression,
-  });
+  }) = PlanDefinitionCondition;
 
-  factory PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
+factory PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionConditionFromJson(json);
   Map<String, dynamic> toJson() => _$PlanDefinitionConditionToJson(this);
 }
@@ -570,14 +343,9 @@ class PlanDefinitionRelatedAction {
   Duration offsetDuration;
   Range offsetRange;
 
-  PlanDefinitionRelatedAction({
-    this.actionId,
-    this.relationship,
-    this.offsetDuration,
-    this.offsetRange,
-  });
+  }) = PlanDefinitionRelatedAction;
 
-  factory PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
+factory PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionRelatedActionFromJson(json);
   Map<String, dynamic> toJson() => _$PlanDefinitionRelatedActionToJson(this);
 }
@@ -586,12 +354,9 @@ class PlanDefinitionParticipant {
   String type;
   CodeableConcept role;
 
-  PlanDefinitionParticipant({
-    this.type,
-    this.role,
-  });
+  }) = PlanDefinitionParticipant;
 
-  factory PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
+factory PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$PlanDefinitionParticipantToJson(this);
 }
@@ -602,14 +367,9 @@ class PlanDefinitionDynamicValue {
   String language;
   String expression;
 
-  PlanDefinitionDynamicValue({
-    this.description,
-    this.path,
-    this.language,
-    this.expression,
-  });
+  }) = PlanDefinitionDynamicValue;
 
-  factory PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
+factory PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionDynamicValueFromJson(json);
   Map<String, dynamic> toJson() => _$PlanDefinitionDynamicValueToJson(this);
 }
