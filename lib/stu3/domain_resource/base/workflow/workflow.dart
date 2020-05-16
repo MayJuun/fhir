@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
-class Slot {
+@freezed
+abstract class Slot with _$Slot {
+factory Slot({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -27,7 +29,9 @@ factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
   Map<String, dynamic> toJson() => _$SlotToJson(this);
 }
 
-class ProcessResponse {
+@freezed
+abstract class ProcessResponse with _$ProcessResponse {
+factory ProcessResponse({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -51,7 +55,9 @@ factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ProcessResponseToJson(this);
 }
 
-class ProcessResponseProcessNote {
+@freezed
+abstract class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
+factory ProcessResponseProcessNote({
   CodeableConcept type;
   String text;
 
@@ -62,7 +68,9 @@ factory ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ProcessResponseProcessNoteToJson(this);
 }
 
-class Appointment {
+@freezed
+abstract class Appointment with _$Appointment {
+factory Appointment({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -93,7 +101,9 @@ factory Appointment.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AppointmentToJson(this);
 }
 
-class AppointmentParticipant {
+@freezed
+abstract class AppointmentParticipant with _$AppointmentParticipant {
+factory AppointmentParticipant({
   List<CodeableConcept> type;
   Reference actor;
   String required;
@@ -106,7 +116,9 @@ factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AppointmentParticipantToJson(this);
 }
 
-class Task {
+@freezed
+abstract class Task with _$Task {
+factory Task({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -144,7 +156,9 @@ factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
   Map<String, dynamic> toJson() => _$TaskToJson(this);
 }
 
-class TaskRequester {
+@freezed
+abstract class TaskRequester with _$TaskRequester {
+factory TaskRequester({
   Reference agent;
   Reference onBehalfOf;
 
@@ -155,7 +169,9 @@ factory TaskRequester.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TaskRequesterToJson(this);
 }
 
-class TaskRestriction {
+@freezed
+abstract class TaskRestriction with _$TaskRestriction {
+factory TaskRestriction({
   double repetitions;
   Period period;
   List<Reference> recipient;
@@ -167,7 +183,9 @@ factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TaskRestrictionToJson(this);
 }
 
-class TaskInput {
+@freezed
+abstract class TaskInput with _$TaskInput {
+factory TaskInput({
   CodeableConcept type;
   bool valueBoolean;
   int valueInteger;
@@ -230,7 +248,9 @@ factory TaskInput.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TaskInputToJson(this);
 }
 
-class TaskOutput {
+@freezed
+abstract class TaskOutput with _$TaskOutput {
+factory TaskOutput({
   CodeableConcept type;
   bool valueBoolean;
   int valueInteger;
@@ -293,7 +313,9 @@ factory TaskOutput.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TaskOutputToJson(this);
 }
 
-class ProcessRequest {
+@freezed
+abstract class ProcessRequest with _$ProcessRequest {
+factory ProcessRequest({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -319,7 +341,9 @@ factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ProcessRequestToJson(this);
 }
 
-class ProcessRequestItem {
+@freezed
+abstract class ProcessRequestItem with _$ProcessRequestItem {
+factory ProcessRequestItem({
   double sequenceLinkId;
 
   }) = ProcessRequestItem;
@@ -329,7 +353,9 @@ factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ProcessRequestItemToJson(this);
 }
 
-class AppointmentResponse {
+@freezed
+abstract class AppointmentResponse with _$AppointmentResponse {
+factory AppointmentResponse({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -348,7 +374,9 @@ factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AppointmentResponseToJson(this);
 }
 
-class Schedule {
+@freezed
+abstract class Schedule with _$Schedule {
+factory Schedule({
   String id;
   String resourceType;
   List<Identifier> identifier;

@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'general.freezed.dart';
 part 'general.g.dart';
 
-class Contract {
+@freezed
+abstract class Contract with _$Contract {
+factory Contract({
   String id;
   String resourceType;
   Identifier identifier;
@@ -41,7 +43,9 @@ factory Contract.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ContractToJson(this);
 }
 
-class ContractAgent {
+@freezed
+abstract class ContractAgent with _$ContractAgent {
+factory ContractAgent({
   Reference actor;
   List<CodeableConcept> role;
 
@@ -52,7 +56,9 @@ factory ContractAgent.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ContractAgentToJson(this);
 }
 
-class ContractSigner {
+@freezed
+abstract class ContractSigner with _$ContractSigner {
+factory ContractSigner({
   Coding type;
   Reference party;
   List<Signature> signature;
@@ -64,7 +70,9 @@ factory ContractSigner.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ContractSignerToJson(this);
 }
 
-class ContractValuedItem {
+@freezed
+abstract class ContractValuedItem with _$ContractValuedItem {
+factory ContractValuedItem({
   CodeableConcept entityCodeableConcept;
   Reference entityReference;
   Identifier identifier;
@@ -82,7 +90,9 @@ factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ContractValuedItemToJson(this);
 }
 
-class ContractTerm {
+@freezed
+abstract class ContractTerm with _$ContractTerm {
+factory ContractTerm({
   Identifier identifier;
   String issued;
   Period applies;
@@ -104,7 +114,9 @@ factory ContractTerm.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ContractTermToJson(this);
 }
 
-class ContractAgent1 {
+@freezed
+abstract class ContractAgent1 with _$ContractAgent1 {
+factory ContractAgent1({
   Reference actor;
   List<CodeableConcept> role;
 
@@ -115,7 +127,9 @@ factory ContractAgent1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ContractAgent1ToJson(this);
 }
 
-class ContractValuedItem1 {
+@freezed
+abstract class ContractValuedItem1 with _$ContractValuedItem1 {
+factory ContractValuedItem1({
   CodeableConcept entityCodeableConcept;
   Reference entityReference;
   Identifier identifier;
@@ -133,7 +147,9 @@ factory ContractValuedItem1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ContractValuedItem1ToJson(this);
 }
 
-class ContractFriendly {
+@freezed
+abstract class ContractFriendly with _$ContractFriendly {
+factory ContractFriendly({
   Attachment contentAttachment;
   Reference contentReference;
 
@@ -144,7 +160,9 @@ factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ContractFriendlyToJson(this);
 }
 
-class ContractLegal {
+@freezed
+abstract class ContractLegal with _$ContractLegal {
+factory ContractLegal({
   Attachment contentAttachment;
   Reference contentReference;
 
@@ -155,7 +173,9 @@ factory ContractLegal.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ContractLegalToJson(this);
 }
 
-class ContractRule {
+@freezed
+abstract class ContractRule with _$ContractRule {
+factory ContractRule({
   Attachment contentAttachment;
   Reference contentReference;
 
@@ -166,7 +186,9 @@ factory ContractRule.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ContractRuleToJson(this);
 }
 
-class Account {
+@freezed
+abstract class Account with _$Account {
+factory Account({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -189,7 +211,9 @@ factory Account.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AccountToJson(this);
 }
 
-class AccountCoverage {
+@freezed
+abstract class AccountCoverage with _$AccountCoverage {
+factory AccountCoverage({
   Reference coverage;
   double priority;
 
@@ -200,7 +224,9 @@ factory AccountCoverage.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AccountCoverageToJson(this);
 }
 
-class AccountGuarantor {
+@freezed
+abstract class AccountGuarantor with _$AccountGuarantor {
+factory AccountGuarantor({
   Reference party;
   bool onHold;
   Period period;
@@ -212,7 +238,9 @@ factory AccountGuarantor.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AccountGuarantorToJson(this);
 }
 
-class ChargeItem {
+@freezed
+abstract class ChargeItem with _$ChargeItem {
+factory ChargeItem({
   String id;
   String resourceType;
   Identifier identifier;
@@ -248,7 +276,9 @@ factory ChargeItem.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ChargeItemToJson(this);
 }
 
-class ChargeItemParticipant {
+@freezed
+abstract class ChargeItemParticipant with _$ChargeItemParticipant {
+factory ChargeItemParticipant({
   CodeableConcept role;
   Reference actor;
 
@@ -259,7 +289,9 @@ factory ChargeItemParticipant.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ChargeItemParticipantToJson(this);
 }
 
-class ExplanationOfBenefit {
+@freezed
+abstract class ExplanationOfBenefit with _$ExplanationOfBenefit {
+factory ExplanationOfBenefit({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -309,7 +341,9 @@ factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitToJson(this);
 }
 
-class ExplanationOfBenefitRelated {
+@freezed
+abstract class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
+factory ExplanationOfBenefitRelated({
   Reference claim;
   CodeableConcept relationship;
   Identifier reference;
@@ -321,7 +355,9 @@ factory ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitRelatedToJson(this);
 }
 
-class ExplanationOfBenefitPayee {
+@freezed
+abstract class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
+factory ExplanationOfBenefitPayee({
   CodeableConcept type;
   String resourceType;
   Reference party;
@@ -333,7 +369,9 @@ factory ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitPayeeToJson(this);
 }
 
-class ExplanationOfBenefitInformation {
+@freezed
+abstract class ExplanationOfBenefitInformation with _$ExplanationOfBenefitInformation {
+factory ExplanationOfBenefitInformation({
   double sequence;
   CodeableConcept category;
   CodeableConcept code;
@@ -353,7 +391,9 @@ factory ExplanationOfBenefitInformation.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitInformationToJson(this);
 }
 
-class ExplanationOfBenefitCareTeam {
+@freezed
+abstract class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
+factory ExplanationOfBenefitCareTeam({
   double sequence;
   Reference provider;
   bool responsible;
@@ -367,7 +407,9 @@ factory ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitCareTeamToJson(this);
 }
 
-class ExplanationOfBenefitDiagnosis {
+@freezed
+abstract class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
+factory ExplanationOfBenefitDiagnosis({
   double sequence;
   CodeableConcept diagnosisCodeableConcept;
   Reference diagnosisReference;
@@ -381,7 +423,9 @@ factory ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitDiagnosisToJson(this);
 }
 
-class ExplanationOfBenefitProcedure {
+@freezed
+abstract class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
+factory ExplanationOfBenefitProcedure({
   double sequence;
   String date;
   CodeableConcept procedureCodeableConcept;
@@ -394,7 +438,9 @@ factory ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitProcedureToJson(this);
 }
 
-class ExplanationOfBenefitInsurance {
+@freezed
+abstract class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
+factory ExplanationOfBenefitInsurance({
   Reference coverage;
   List<String> preAuthRef;
 
@@ -405,7 +451,9 @@ factory ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitInsuranceToJson(this);
 }
 
-class ExplanationOfBenefitAccident {
+@freezed
+abstract class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
+factory ExplanationOfBenefitAccident({
   String date;
   CodeableConcept type;
   Address locationAddress;
@@ -418,7 +466,9 @@ factory ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitAccidentToJson(this);
 }
 
-class ExplanationOfBenefitItem {
+@freezed
+abstract class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
+factory ExplanationOfBenefitItem({
   double sequence;
   List<String> careTeamLinkId;
   List<String> diagnosisLinkId;
@@ -453,7 +503,9 @@ factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitItemToJson(this);
 }
 
-class ExplanationOfBenefitAdjudication {
+@freezed
+abstract class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
+factory ExplanationOfBenefitAdjudication({
   CodeableConcept category;
   CodeableConcept reason;
   Money amount;
@@ -468,7 +520,9 @@ factory ExplanationOfBenefitAdjudication.fromJson(
       _$ExplanationOfBenefitAdjudicationToJson(this);
 }
 
-class ExplanationOfBenefitDetail {
+@freezed
+abstract class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
+factory ExplanationOfBenefitDetail({
   double sequence;
   CodeableConcept type;
   CodeableConcept revenue;
@@ -492,7 +546,9 @@ factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitDetailToJson(this);
 }
 
-class ExplanationOfBenefitSubDetail {
+@freezed
+abstract class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
+factory ExplanationOfBenefitSubDetail({
   double sequence;
   CodeableConcept type;
   CodeableConcept revenue;
@@ -515,7 +571,9 @@ factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitSubDetailToJson(this);
 }
 
-class ExplanationOfBenefitAddItem {
+@freezed
+abstract class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
+factory ExplanationOfBenefitAddItem({
   List<String> sequenceLinkId;
   CodeableConcept revenue;
   CodeableConcept category;
@@ -533,7 +591,9 @@ factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitAddItemToJson(this);
 }
 
-class ExplanationOfBenefitDetail1 {
+@freezed
+abstract class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
+factory ExplanationOfBenefitDetail1({
   CodeableConcept revenue;
   CodeableConcept category;
   CodeableConcept service;
@@ -549,7 +609,9 @@ factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitDetail1ToJson(this);
 }
 
-class ExplanationOfBenefitPayment {
+@freezed
+abstract class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
+factory ExplanationOfBenefitPayment({
   CodeableConcept type;
   Money adjustment;
   CodeableConcept adjustmentReason;
@@ -564,7 +626,9 @@ factory ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitPaymentToJson(this);
 }
 
-class ExplanationOfBenefitProcessNote {
+@freezed
+abstract class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
+factory ExplanationOfBenefitProcessNote({
   double number;
   CodeableConcept type;
   String text;
@@ -578,7 +642,9 @@ factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcessNoteToJson(this);
 }
 
-class ExplanationOfBenefitBenefitBalance {
+@freezed
+abstract class ExplanationOfBenefitBenefitBalance with _$ExplanationOfBenefitBenefitBalance {
+factory ExplanationOfBenefitBenefitBalance({
   CodeableConcept category;
   CodeableConcept subCategory;
   bool excluded;
@@ -598,7 +664,9 @@ factory ExplanationOfBenefitBenefitBalance.fromJson(
       _$ExplanationOfBenefitBenefitBalanceToJson(this);
 }
 
-class ExplanationOfBenefitFinancial {
+@freezed
+abstract class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
+factory ExplanationOfBenefitFinancial({
   CodeableConcept type;
   int allowedUnsignedInt;
   String allowedString;

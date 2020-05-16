@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'support.freezed.dart';
 part 'support.g.dart';
 
-class EnrollmentRequest {
+@freezed
+abstract class EnrollmentRequest with _$EnrollmentRequest {
+factory EnrollmentRequest({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -25,7 +27,9 @@ factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EnrollmentRequestToJson(this);
 }
 
-class EnrollmentResponse {
+@freezed
+abstract class EnrollmentResponse with _$EnrollmentResponse {
+factory EnrollmentResponse({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -45,7 +49,9 @@ factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EnrollmentResponseToJson(this);
 }
 
-class Coverage {
+@freezed
+abstract class Coverage with _$Coverage {
+factory Coverage({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -72,7 +78,9 @@ factory Coverage.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CoverageToJson(this);
 }
 
-class CoverageGrouping {
+@freezed
+abstract class CoverageGrouping with _$CoverageGrouping {
+factory CoverageGrouping({
   String group;
   String groupDisplay;
   String subGroup;
@@ -93,7 +101,9 @@ factory CoverageGrouping.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CoverageGroupingToJson(this);
 }
 
-class EligibilityResponse {
+@freezed
+abstract class EligibilityResponse with _$EligibilityResponse {
+factory EligibilityResponse({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -117,7 +127,9 @@ factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EligibilityResponseToJson(this);
 }
 
-class EligibilityResponseInsurance {
+@freezed
+abstract class EligibilityResponseInsurance with _$EligibilityResponseInsurance {
+factory EligibilityResponseInsurance({
   Reference coverage;
   Reference contract;
   List<EligibilityResponseBenefitBalance> benefitBalance;
@@ -129,7 +141,9 @@ factory EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EligibilityResponseInsuranceToJson(this);
 }
 
-class EligibilityResponseBenefitBalance {
+@freezed
+abstract class EligibilityResponseBenefitBalance with _$EligibilityResponseBenefitBalance {
+factory EligibilityResponseBenefitBalance({
   CodeableConcept category;
   CodeableConcept subCategory;
   bool excluded;
@@ -149,7 +163,9 @@ factory EligibilityResponseBenefitBalance.fromJson(
       _$EligibilityResponseBenefitBalanceToJson(this);
 }
 
-class EligibilityResponseFinancial {
+@freezed
+abstract class EligibilityResponseFinancial with _$EligibilityResponseFinancial {
+factory EligibilityResponseFinancial({
   CodeableConcept type;
   int allowedUnsignedInt;
   String allowedString;
@@ -164,7 +180,9 @@ factory EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EligibilityResponseFinancialToJson(this);
 }
 
-class EligibilityResponseError {
+@freezed
+abstract class EligibilityResponseError with _$EligibilityResponseError {
+factory EligibilityResponseError({
   CodeableConcept code;
 
   }) = EligibilityResponseError;
@@ -174,7 +192,9 @@ factory EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EligibilityResponseErrorToJson(this);
 }
 
-class EligibilityRequest {
+@freezed
+abstract class EligibilityRequest with _$EligibilityRequest {
+factory EligibilityRequest({
   String id;
   String resourceType;
   List<Identifier> identifier;

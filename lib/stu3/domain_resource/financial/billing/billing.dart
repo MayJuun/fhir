@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'billing.freezed.dart';
 part 'billing.g.dart';
 
-class ClaimResponse {
+@freezed
+abstract class ClaimResponse with _$ClaimResponse {
+factory ClaimResponse({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -40,7 +42,9 @@ factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponseToJson(this);
 }
 
-class ClaimResponseItem {
+@freezed
+abstract class ClaimResponseItem with _$ClaimResponseItem {
+factory ClaimResponseItem({
   double sequenceLinkId;
   List<String> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
@@ -53,7 +57,9 @@ factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponseItemToJson(this);
 }
 
-class ClaimResponseAdjudication {
+@freezed
+abstract class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
+factory ClaimResponseAdjudication({
   CodeableConcept category;
   CodeableConcept reason;
   Money amount;
@@ -66,7 +72,9 @@ factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponseAdjudicationToJson(this);
 }
 
-class ClaimResponseDetail {
+@freezed
+abstract class ClaimResponseDetail with _$ClaimResponseDetail {
+factory ClaimResponseDetail({
   double sequenceLinkId;
   List<String> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
@@ -79,7 +87,9 @@ factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponseDetailToJson(this);
 }
 
-class ClaimResponseSubDetail {
+@freezed
+abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
+factory ClaimResponseSubDetail({
   double sequenceLinkId;
   List<String> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
@@ -91,7 +101,9 @@ factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponseSubDetailToJson(this);
 }
 
-class ClaimResponseAddItem {
+@freezed
+abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
+factory ClaimResponseAddItem({
   List<String> sequenceLinkId;
   CodeableConcept revenue;
   CodeableConcept category;
@@ -109,7 +121,9 @@ factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponseAddItemToJson(this);
 }
 
-class ClaimResponseDetail1 {
+@freezed
+abstract class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
+factory ClaimResponseDetail1({
   CodeableConcept revenue;
   CodeableConcept category;
   CodeableConcept service;
@@ -125,7 +139,9 @@ factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponseDetail1ToJson(this);
 }
 
-class ClaimResponseError {
+@freezed
+abstract class ClaimResponseError with _$ClaimResponseError {
+factory ClaimResponseError({
   double sequenceLinkId;
   double detailSequenceLinkId;
   double subdetailSequenceLinkId;
@@ -138,7 +154,9 @@ factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponseErrorToJson(this);
 }
 
-class ClaimResponsePayment {
+@freezed
+abstract class ClaimResponsePayment with _$ClaimResponsePayment {
+factory ClaimResponsePayment({
   CodeableConcept type;
   Money adjustment;
   CodeableConcept adjustmentReason;
@@ -153,7 +171,9 @@ factory ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponsePaymentToJson(this);
 }
 
-class ClaimResponseProcessNote {
+@freezed
+abstract class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
+factory ClaimResponseProcessNote({
   double number;
   CodeableConcept type;
   String text;
@@ -166,7 +186,9 @@ factory ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponseProcessNoteToJson(this);
 }
 
-class ClaimResponseInsurance {
+@freezed
+abstract class ClaimResponseInsurance with _$ClaimResponseInsurance {
+factory ClaimResponseInsurance({
   double sequence;
   bool focal;
   Reference coverage;
@@ -181,7 +203,9 @@ factory ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimResponseInsuranceToJson(this);
 }
 
-class Claim {
+@freezed
+abstract class Claim with _$Claim {
+factory Claim({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -221,7 +245,9 @@ factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimToJson(this);
 }
 
-class ClaimRelated {
+@freezed
+abstract class ClaimRelated with _$ClaimRelated {
+factory ClaimRelated({
   Reference claim;
   CodeableConcept relationship;
   Identifier reference;
@@ -233,7 +259,9 @@ factory ClaimRelated.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimRelatedToJson(this);
 }
 
-class ClaimPayee {
+@freezed
+abstract class ClaimPayee with _$ClaimPayee {
+factory ClaimPayee({
   CodeableConcept type;
   String resourceType;
   Reference party;
@@ -245,7 +273,9 @@ factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimPayeeToJson(this);
 }
 
-class ClaimCareTeam {
+@freezed
+abstract class ClaimCareTeam with _$ClaimCareTeam {
+factory ClaimCareTeam({
   double sequence;
   Reference provider;
   bool responsible;
@@ -259,7 +289,9 @@ factory ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimCareTeamToJson(this);
 }
 
-class ClaimInformation {
+@freezed
+abstract class ClaimInformation with _$ClaimInformation {
+factory ClaimInformation({
   double sequence;
   CodeableConcept category;
   CodeableConcept code;
@@ -278,7 +310,9 @@ factory ClaimInformation.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimInformationToJson(this);
 }
 
-class ClaimDiagnosis {
+@freezed
+abstract class ClaimDiagnosis with _$ClaimDiagnosis {
+factory ClaimDiagnosis({
   double sequence;
   CodeableConcept diagnosisCodeableConcept;
   Reference diagnosisReference;
@@ -292,7 +326,9 @@ factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimDiagnosisToJson(this);
 }
 
-class ClaimProcedure {
+@freezed
+abstract class ClaimProcedure with _$ClaimProcedure {
+factory ClaimProcedure({
   double sequence;
   String date;
   CodeableConcept procedureCodeableConcept;
@@ -305,7 +341,9 @@ factory ClaimProcedure.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimProcedureToJson(this);
 }
 
-class ClaimInsurance {
+@freezed
+abstract class ClaimInsurance with _$ClaimInsurance {
+factory ClaimInsurance({
   double sequence;
   bool focal;
   Reference coverage;
@@ -320,7 +358,9 @@ factory ClaimInsurance.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimInsuranceToJson(this);
 }
 
-class ClaimAccident {
+@freezed
+abstract class ClaimAccident with _$ClaimAccident {
+factory ClaimAccident({
   String date;
   CodeableConcept type;
   Address locationAddress;
@@ -333,7 +373,9 @@ factory ClaimAccident.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimAccidentToJson(this);
 }
 
-class ClaimItem {
+@freezed
+abstract class ClaimItem with _$ClaimItem {
+factory ClaimItem({
   double sequence;
   List<String> careTeamLinkId;
   List<String> diagnosisLinkId;
@@ -366,7 +408,9 @@ factory ClaimItem.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimItemToJson(this);
 }
 
-class ClaimDetail {
+@freezed
+abstract class ClaimDetail with _$ClaimDetail {
+factory ClaimDetail({
   double sequence;
   CodeableConcept revenue;
   CodeableConcept category;
@@ -387,7 +431,9 @@ factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClaimDetailToJson(this);
 }
 
-class ClaimSubDetail {
+@freezed
+abstract class ClaimSubDetail with _$ClaimSubDetail {
+factory ClaimSubDetail({
   double sequence;
   CodeableConcept revenue;
   CodeableConcept category;

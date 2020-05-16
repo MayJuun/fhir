@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'payment.freezed.dart';
 part 'payment.g.dart';
 
-class PaymentReconciliation {
+@freezed
+abstract class PaymentReconciliation with _$PaymentReconciliation {
+factory PaymentReconciliation({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -31,7 +33,9 @@ factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PaymentReconciliationToJson(this);
 }
 
-class PaymentReconciliationDetail {
+@freezed
+abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
+factory PaymentReconciliationDetail({
   CodeableConcept type;
   Reference request;
   Reference response;
@@ -47,7 +51,9 @@ factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PaymentReconciliationDetailToJson(this);
 }
 
-class PaymentReconciliationProcessNote {
+@freezed
+abstract class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
+factory PaymentReconciliationProcessNote({
   CodeableConcept type;
   String text;
 
@@ -60,7 +66,9 @@ factory PaymentReconciliationProcessNote.fromJson(
       _$PaymentReconciliationProcessNoteToJson(this);
 }
 
-class PaymentNotice {
+@freezed
+abstract class PaymentNotice with _$PaymentNotice {
+factory PaymentNotice({
   String id;
   String resourceType;
   List<Identifier> identifier;

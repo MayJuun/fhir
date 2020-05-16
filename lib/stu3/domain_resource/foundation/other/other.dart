@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'other.freezed.dart';
 part 'other.g.dart';
 
-class Basic {
+@freezed
+abstract class Basic with _$Basic {
+factory Basic({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -21,7 +23,9 @@ factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
   Map<String, dynamic> toJson() => _$BasicToJson(this);
 }
 
-class Subscription {
+@freezed
+abstract class Subscription with _$Subscription {
+factory Subscription({
   String id;
   String resourceType;
   String status;
@@ -40,7 +44,9 @@ factory Subscription.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$SubscriptionToJson(this);
 }
 
-class SubscriptionChannel {
+@freezed
+abstract class SubscriptionChannel with _$SubscriptionChannel {
+factory SubscriptionChannel({
   String type;
   String endpoint;
   String payload;
@@ -53,7 +59,9 @@ factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$SubscriptionChannelToJson(this);
 }
 
-class Media {
+@freezed
+abstract class Media with _$Media {
+factory Media({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -82,7 +90,9 @@ factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
   Map<String, dynamic> toJson() => _$MediaToJson(this);
 }
 
-class OperationOutcome {
+@freezed
+abstract class OperationOutcome with _$OperationOutcome {
+factory OperationOutcome({
   String id;
   String resourceType;
   List<OperationOutcomeIssue> issue;
@@ -94,7 +104,9 @@ factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$OperationOutcomeToJson(this);
 }
 
-class OperationOutcomeIssue {
+@freezed
+abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
+factory OperationOutcomeIssue({
   String severity;
   String code;
   CodeableConcept details;
@@ -109,7 +121,9 @@ factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$OperationOutcomeIssueToJson(this);
 }
 
-class Linkage {
+@freezed
+abstract class Linkage with _$Linkage {
+factory Linkage({
   String id;
   String resourceType;
   bool active;
@@ -123,7 +137,9 @@ factory Linkage.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$LinkageToJson(this);
 }
 
-class LinkageItem {
+@freezed
+abstract class LinkageItem with _$LinkageItem {
+factory LinkageItem({
   String type;
   Reference resource;
 

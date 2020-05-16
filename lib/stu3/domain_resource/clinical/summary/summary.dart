@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'summary.freezed.dart';
 part 'summary.g.dart';
 
-class FamilyMemberHistory {
+@freezed
+abstract class FamilyMemberHistory with _$FamilyMemberHistory {
+factory FamilyMemberHistory({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -43,7 +45,9 @@ factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$FamilyMemberHistoryToJson(this);
 }
 
-class FamilyMemberHistoryCondition {
+@freezed
+abstract class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
+factory FamilyMemberHistoryCondition({
   CodeableConcept code;
   CodeableConcept outcome;
   Age onsetAge;
@@ -59,7 +63,9 @@ factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$FamilyMemberHistoryConditionToJson(this);
 }
 
-class AllergyIntolerance {
+@freezed
+abstract class AllergyIntolerance with _$AllergyIntolerance {
+factory AllergyIntolerance({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -89,7 +95,9 @@ factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AllergyIntoleranceToJson(this);
 }
 
-class AllergyIntoleranceReaction {
+@freezed
+abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
+factory AllergyIntoleranceReaction({
   CodeableConcept substance;
   List<CodeableConcept> manifestation;
   String description;
@@ -105,7 +113,9 @@ factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AllergyIntoleranceReactionToJson(this);
 }
 
-class Condition {
+@freezed
+abstract class Condition with _$Condition {
+factory Condition({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -141,7 +151,9 @@ factory Condition.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ConditionToJson(this);
 }
 
-class ConditionStage {
+@freezed
+abstract class ConditionStage with _$ConditionStage {
+factory ConditionStage({
   CodeableConcept summary;
   List<Reference> assessment;
 
@@ -152,7 +164,9 @@ factory ConditionStage.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ConditionStageToJson(this);
 }
 
-class ConditionEvidence {
+@freezed
+abstract class ConditionEvidence with _$ConditionEvidence {
+factory ConditionEvidence({
   List<CodeableConcept> code;
   List<Reference> detail;
 
@@ -163,7 +177,9 @@ factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ConditionEvidenceToJson(this);
 }
 
-class Procedure {
+@freezed
+abstract class Procedure with _$Procedure {
+factory Procedure({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -201,7 +217,9 @@ factory Procedure.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ProcedureToJson(this);
 }
 
-class ProcedurePerformer {
+@freezed
+abstract class ProcedurePerformer with _$ProcedurePerformer {
+factory ProcedurePerformer({
   CodeableConcept role;
   Reference actor;
   Reference onBehalfOf;
@@ -213,7 +231,9 @@ factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ProcedurePerformerToJson(this);
 }
 
-class ProcedureFocalDevice {
+@freezed
+abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
+factory ProcedureFocalDevice({
   CodeableConcept action;
   Reference manipulated;
 
@@ -224,7 +244,9 @@ factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ProcedureFocalDeviceToJson(this);
 }
 
-class DetectedIssue {
+@freezed
+abstract class DetectedIssue with _$DetectedIssue {
+factory DetectedIssue({
   String id;
   String resourceType;
   Identifier identifier;
@@ -246,7 +268,9 @@ factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DetectedIssueToJson(this);
 }
 
-class DetectedIssueMitigation {
+@freezed
+abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
+factory DetectedIssueMitigation({
   CodeableConcept action;
   String date;
   Reference author;
@@ -258,7 +282,9 @@ factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DetectedIssueMitigationToJson(this);
 }
 
-class AdverseEvent {
+@freezed
+abstract class AdverseEvent with _$AdverseEvent {
+factory AdverseEvent({
   String id;
   String resourceType;
   Identifier identifier;
@@ -285,7 +311,9 @@ factory AdverseEvent.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AdverseEventToJson(this);
 }
 
-class AdverseEventSuspectEntity {
+@freezed
+abstract class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
+factory AdverseEventSuspectEntity({
   Reference instance;
   String causality;
   CodeableConcept causalityAssessment;
@@ -301,7 +329,9 @@ factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AdverseEventSuspectEntityToJson(this);
 }
 
-class ClinicalImpression {
+@freezed
+abstract class ClinicalImpression with _$ClinicalImpression {
+factory ClinicalImpression({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -332,7 +362,9 @@ factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ClinicalImpressionToJson(this);
 }
 
-class ClinicalImpressionInvestigation {
+@freezed
+abstract class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
+factory ClinicalImpressionInvestigation({
   CodeableConcept code;
   List<Reference> item;
 
@@ -344,7 +376,9 @@ factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionInvestigationToJson(this);
 }
 
-class ClinicalImpressionFinding {
+@freezed
+abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
+factory ClinicalImpressionFinding({
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
   String basis;

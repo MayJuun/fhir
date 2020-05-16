@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'quality_reporting.freezed.dart';
 part 'quality_reporting.g.dart';
 
-class MeasureReport {
+@freezed
+abstract class MeasureReport with _$MeasureReport {
+factory MeasureReport({
   String id;
   String resourceType;
   Identifier identifier;
@@ -27,7 +29,9 @@ factory MeasureReport.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MeasureReportToJson(this);
 }
 
-class MeasureReportGroup {
+@freezed
+abstract class MeasureReportGroup with _$MeasureReportGroup {
+factory MeasureReportGroup({
   Identifier identifier;
   List<MeasureReportPopulation> population;
   double measureScore;
@@ -40,7 +44,9 @@ factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MeasureReportGroupToJson(this);
 }
 
-class MeasureReportPopulation {
+@freezed
+abstract class MeasureReportPopulation with _$MeasureReportPopulation {
+factory MeasureReportPopulation({
   Identifier identifier;
   CodeableConcept code;
   double count;
@@ -53,7 +59,9 @@ factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MeasureReportPopulationToJson(this);
 }
 
-class MeasureReportStratifier {
+@freezed
+abstract class MeasureReportStratifier with _$MeasureReportStratifier {
+factory MeasureReportStratifier({
   Identifier identifier;
   List<MeasureReportStratum> stratum;
 
@@ -64,7 +72,9 @@ factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MeasureReportStratifierToJson(this);
 }
 
-class MeasureReportStratum {
+@freezed
+abstract class MeasureReportStratum with _$MeasureReportStratum {
+factory MeasureReportStratum({
   String value;
   List<MeasureReportPopulation1> population;
   double measureScore;
@@ -76,7 +86,9 @@ factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MeasureReportStratumToJson(this);
 }
 
-class MeasureReportPopulation1 {
+@freezed
+abstract class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
+factory MeasureReportPopulation1({
   Identifier identifier;
   CodeableConcept code;
   double count;
@@ -89,7 +101,9 @@ factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MeasureReportPopulation1ToJson(this);
 }
 
-class Measure {
+@freezed
+abstract class Measure with _$Measure {
+factory Measure({
   String id;
   String resourceType;
   String url;
@@ -137,7 +151,9 @@ factory Measure.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MeasureToJson(this);
 }
 
-class MeasureGroup {
+@freezed
+abstract class MeasureGroup with _$MeasureGroup {
+factory MeasureGroup({
   Identifier identifier;
   String name;
   String description;
@@ -151,7 +167,9 @@ factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MeasureGroupToJson(this);
 }
 
-class MeasurePopulation {
+@freezed
+abstract class MeasurePopulation with _$MeasurePopulation {
+factory MeasurePopulation({
   Identifier identifier;
   CodeableConcept code;
   String name;
@@ -165,7 +183,9 @@ factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MeasurePopulationToJson(this);
 }
 
-class MeasureStratifier {
+@freezed
+abstract class MeasureStratifier with _$MeasureStratifier {
+factory MeasureStratifier({
   Identifier identifier;
   String criteria;
   String path;
@@ -177,7 +197,9 @@ factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MeasureStratifierToJson(this);
 }
 
-class MeasureSupplementalData {
+@freezed
+abstract class MeasureSupplementalData with _$MeasureSupplementalData {
+factory MeasureSupplementalData({
   Identifier identifier;
   List<CodeableConcept> usage;
   String criteria;

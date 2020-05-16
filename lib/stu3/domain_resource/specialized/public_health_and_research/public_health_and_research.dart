@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
 
-class ResearchSubject {
+@freezed
+abstract class ResearchSubject with _$ResearchSubject {
+factory ResearchSubject({
   String id;
   String resourceType;
   Identifier identifier;
@@ -25,7 +27,9 @@ factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ResearchSubjectToJson(this);
 }
 
-class ResearchStudy {
+@freezed
+abstract class ResearchStudy with _$ResearchStudy {
+factory ResearchStudy({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -56,7 +60,9 @@ factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ResearchStudyToJson(this);
 }
 
-class ResearchStudyArm {
+@freezed
+abstract class ResearchStudyArm with _$ResearchStudyArm {
+factory ResearchStudyArm({
   String name;
   CodeableConcept code;
   String description;

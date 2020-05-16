@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'clinical_decision_support.freezed.dart';
 part 'clinical_decision_support.g.dart';
 
-class GuidanceResponse {
+@freezed
+abstract class GuidanceResponse with _$GuidanceResponse {
+factory GuidanceResponse({
   String id;
   String resourceType;
   String requestId;

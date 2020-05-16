@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'management.freezed.dart';
 part 'management.g.dart';
 
-class Lists {
+@freezed
+abstract class Lists with _$Lists {
+factory Lists({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -29,7 +31,9 @@ factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
   Map<String, dynamic> toJson() => _$ListsToJson(this);
 }
 
-class ListEntry {
+@freezed
+abstract class ListEntry with _$ListEntry {
+factory ListEntry({
   CodeableConcept flag;
   bool deleted;
   String date;
@@ -42,7 +46,9 @@ factory ListEntry.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ListEntryToJson(this);
 }
 
-class Library {
+@freezed
+abstract class Library with _$Library {
+factory Library({
   String id;
   String resourceType;
   String url;
@@ -79,7 +85,9 @@ factory Library.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$LibraryToJson(this);
 }
 
-class Encounter {
+@freezed
+abstract class Encounter with _$Encounter {
+factory Encounter({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -111,7 +119,9 @@ factory Encounter.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EncounterToJson(this);
 }
 
-class EncounterStatusHistory {
+@freezed
+abstract class EncounterStatusHistory with _$EncounterStatusHistory {
+factory EncounterStatusHistory({
   String status;
   Period period;
 
@@ -122,7 +132,9 @@ factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EncounterStatusHistoryToJson(this);
 }
 
-class EncounterClassHistory {
+@freezed
+abstract class EncounterClassHistory with _$EncounterClassHistory {
+factory EncounterClassHistory({
   Coding clas;
   Period period;
 
@@ -133,7 +145,9 @@ factory EncounterClassHistory.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EncounterClassHistoryToJson(this);
 }
 
-class EncounterParticipant {
+@freezed
+abstract class EncounterParticipant with _$EncounterParticipant {
+factory EncounterParticipant({
   List<CodeableConcept> type;
   Period period;
   Reference individual;
@@ -145,7 +159,9 @@ factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EncounterParticipantToJson(this);
 }
 
-class EncounterDiagnosis {
+@freezed
+abstract class EncounterDiagnosis with _$EncounterDiagnosis {
+factory EncounterDiagnosis({
   Reference condition;
   CodeableConcept role;
   double rank;
@@ -157,7 +173,9 @@ factory EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EncounterDiagnosisToJson(this);
 }
 
-class EncounterHospitalization {
+@freezed
+abstract class EncounterHospitalization with _$EncounterHospitalization {
+factory EncounterHospitalization({
   Identifier preAdmissionIdentifier;
   Reference origin;
   CodeableConcept admitSource;
@@ -175,7 +193,9 @@ factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EncounterHospitalizationToJson(this);
 }
 
-class EncounterLocation {
+@freezed
+abstract class EncounterLocation with _$EncounterLocation {
+factory EncounterLocation({
   Reference location;
   String status;
   Period period;
@@ -187,7 +207,9 @@ factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EncounterLocationToJson(this);
 }
 
-class Flag {
+@freezed
+abstract class Flag with _$Flag {
+factory Flag({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -205,7 +227,9 @@ factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
   Map<String, dynamic> toJson() => _$FlagToJson(this);
 }
 
-class EpisodeOfCare {
+@freezed
+abstract class EpisodeOfCare with _$EpisodeOfCare {
+factory EpisodeOfCare({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -228,7 +252,9 @@ factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EpisodeOfCareToJson(this);
 }
 
-class EpisodeOfCareStatusHistory {
+@freezed
+abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
+factory EpisodeOfCareStatusHistory({
   String status;
   Period period;
 
@@ -239,7 +265,9 @@ factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$EpisodeOfCareStatusHistoryToJson(this);
 }
 
-class EpisodeOfCareDiagnosis {
+@freezed
+abstract class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
+factory EpisodeOfCareDiagnosis({
   Reference condition;
   CodeableConcept role;
   double rank;

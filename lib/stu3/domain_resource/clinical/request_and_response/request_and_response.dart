@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
-class DeviceRequest {
+@freezed
+abstract class DeviceRequest with _$DeviceRequest {
+factory DeviceRequest({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -41,7 +43,9 @@ factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DeviceRequestToJson(this);
 }
 
-class DeviceRequestRequester {
+@freezed
+abstract class DeviceRequestRequester with _$DeviceRequestRequester {
+factory DeviceRequestRequester({
   Reference agent;
   Reference onBehalfOf;
 
@@ -52,7 +56,9 @@ factory DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DeviceRequestRequesterToJson(this);
 }
 
-class DeviceUseStatement {
+@freezed
+abstract class DeviceUseStatement with _$DeviceUseStatement {
+factory DeviceUseStatement({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -76,7 +82,9 @@ factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DeviceUseStatementToJson(this);
 }
 
-class CommunicationRequest {
+@freezed
+abstract class CommunicationRequest with _$CommunicationRequest {
+factory CommunicationRequest({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -108,7 +116,9 @@ factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CommunicationRequestToJson(this);
 }
 
-class CommunicationRequestPayload {
+@freezed
+abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
+factory CommunicationRequestPayload({
   String contentString;
   Attachment contentAttachment;
   Reference contentReference;
@@ -120,7 +130,9 @@ factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CommunicationRequestPayloadToJson(this);
 }
 
-class CommunicationRequestRequester {
+@freezed
+abstract class CommunicationRequestRequester with _$CommunicationRequestRequester {
+factory CommunicationRequestRequester({
   Reference agent;
   Reference onBehalfOf;
 
@@ -131,7 +143,9 @@ factory CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CommunicationRequestRequesterToJson(this);
 }
 
-class Communication {
+@freezed
+abstract class Communication with _$Communication {
+factory Communication({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -162,7 +176,9 @@ factory Communication.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CommunicationToJson(this);
 }
 
-class CommunicationPayload {
+@freezed
+abstract class CommunicationPayload with _$CommunicationPayload {
+factory CommunicationPayload({
   String contentString;
   Attachment contentAttachment;
   Reference contentReference;
@@ -174,7 +190,9 @@ factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CommunicationPayloadToJson(this);
 }
 
-class SupplyRequest {
+@freezed
+abstract class SupplyRequest with _$SupplyRequest {
+factory SupplyRequest({
   String id;
   String resourceType;
   Identifier identifier;
@@ -200,7 +218,9 @@ factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$SupplyRequestToJson(this);
 }
 
-class SupplyRequestOrderedItem {
+@freezed
+abstract class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
+factory SupplyRequestOrderedItem({
   Quantity quantity;
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
@@ -212,7 +232,9 @@ factory SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$SupplyRequestOrderedItemToJson(this);
 }
 
-class SupplyRequestRequester {
+@freezed
+abstract class SupplyRequestRequester with _$SupplyRequestRequester {
+factory SupplyRequestRequester({
   Reference agent;
   Reference onBehalfOf;
 
@@ -223,7 +245,9 @@ factory SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$SupplyRequestRequesterToJson(this);
 }
 
-class SupplyDelivery {
+@freezed
+abstract class SupplyDelivery with _$SupplyDelivery {
+factory SupplyDelivery({
   String id;
   String resourceType;
   Identifier identifier;
@@ -247,7 +271,9 @@ factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$SupplyDeliveryToJson(this);
 }
 
-class SupplyDeliverySuppliedItem {
+@freezed
+abstract class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
+factory SupplyDeliverySuppliedItem({
   Quantity quantity;
   CodeableConcept itemCodeableConcept;
   Reference itemReference;

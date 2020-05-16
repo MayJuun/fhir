@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'medications.freezed.dart';
 part 'medications.g.dart';
 
-class MedicationRequest {
+@freezed
+abstract class MedicationRequest with _$MedicationRequest {
+factory MedicationRequest({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -42,7 +44,9 @@ factory MedicationRequest.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationRequestToJson(this);
 }
 
-class MedicationRequestRequester {
+@freezed
+abstract class MedicationRequestRequester with _$MedicationRequestRequester {
+factory MedicationRequestRequester({
   Reference agent;
   Reference onBehalfOf;
 
@@ -53,7 +57,9 @@ factory MedicationRequestRequester.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationRequestRequesterToJson(this);
 }
 
-class MedicationRequestDispenseRequest {
+@freezed
+abstract class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
+factory MedicationRequestDispenseRequest({
   Period validityPeriod;
   double numberOfRepeatsAllowed;
   Quantity quantity;
@@ -69,7 +75,9 @@ factory MedicationRequestDispenseRequest.fromJson(
       _$MedicationRequestDispenseRequestToJson(this);
 }
 
-class MedicationRequestSubstitution {
+@freezed
+abstract class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
+factory MedicationRequestSubstitution({
   bool allowed;
   CodeableConcept reason;
 
@@ -80,7 +88,9 @@ factory MedicationRequestSubstitution.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationRequestSubstitutionToJson(this);
 }
 
-class Immunization {
+@freezed
+abstract class Immunization with _$Immunization {
+factory Immunization({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -112,7 +122,9 @@ factory Immunization.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ImmunizationToJson(this);
 }
 
-class ImmunizationPractitioner {
+@freezed
+abstract class ImmunizationPractitioner with _$ImmunizationPractitioner {
+factory ImmunizationPractitioner({
   CodeableConcept role;
   Reference actor;
 
@@ -123,7 +135,9 @@ factory ImmunizationPractitioner.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ImmunizationPractitionerToJson(this);
 }
 
-class ImmunizationExplanation {
+@freezed
+abstract class ImmunizationExplanation with _$ImmunizationExplanation {
+factory ImmunizationExplanation({
   List<CodeableConcept> reason;
   List<CodeableConcept> reasonNotGiven;
 
@@ -134,7 +148,9 @@ factory ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ImmunizationExplanationToJson(this);
 }
 
-class ImmunizationReaction {
+@freezed
+abstract class ImmunizationReaction with _$ImmunizationReaction {
+factory ImmunizationReaction({
   String date;
   Reference detail;
   bool reported;
@@ -146,7 +162,9 @@ factory ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ImmunizationReactionToJson(this);
 }
 
-class ImmunizationVaccinationProtocol {
+@freezed
+abstract class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
+factory ImmunizationVaccinationProtocol({
   double doseSequence;
   String description;
   Reference authority;
@@ -164,7 +182,9 @@ factory ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationVaccinationProtocolToJson(this);
 }
 
-class MedicationDispense {
+@freezed
+abstract class MedicationDispense with _$MedicationDispense {
+factory MedicationDispense({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -201,7 +221,9 @@ factory MedicationDispense.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationDispenseToJson(this);
 }
 
-class MedicationDispensePerformer {
+@freezed
+abstract class MedicationDispensePerformer with _$MedicationDispensePerformer {
+factory MedicationDispensePerformer({
   Reference actor;
   Reference onBehalfOf;
 
@@ -212,7 +234,9 @@ factory MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationDispensePerformerToJson(this);
 }
 
-class MedicationDispenseSubstitution {
+@freezed
+abstract class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
+factory MedicationDispenseSubstitution({
   bool wasSubstituted;
   CodeableConcept type;
   List<CodeableConcept> reason;
@@ -225,7 +249,9 @@ factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationDispenseSubstitutionToJson(this);
 }
 
-class ImmunizationRecommendation {
+@freezed
+abstract class ImmunizationRecommendation with _$ImmunizationRecommendation {
+factory ImmunizationRecommendation({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -239,7 +265,9 @@ factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ImmunizationRecommendationToJson(this);
 }
 
-class ImmunizationRecommendationRecommendation {
+@freezed
+abstract class ImmunizationRecommendationRecommendation with _$ImmunizationRecommendationRecommendation {
+factory ImmunizationRecommendationRecommendation({
   String date;
   CodeableConcept vaccineCode;
   CodeableConcept targetDisease;
@@ -259,7 +287,9 @@ factory ImmunizationRecommendationRecommendation.fromJson(
       _$ImmunizationRecommendationRecommendationToJson(this);
 }
 
-class ImmunizationRecommendationDateCriterion {
+@freezed
+abstract class ImmunizationRecommendationDateCriterion with _$ImmunizationRecommendationDateCriterion {
+factory ImmunizationRecommendationDateCriterion({
   CodeableConcept code;
   String value;
 
@@ -272,7 +302,9 @@ factory ImmunizationRecommendationDateCriterion.fromJson(
       _$ImmunizationRecommendationDateCriterionToJson(this);
 }
 
-class ImmunizationRecommendationProtocol {
+@freezed
+abstract class ImmunizationRecommendationProtocol with _$ImmunizationRecommendationProtocol {
+factory ImmunizationRecommendationProtocol({
   double doseSequence;
   String description;
   Reference authority;
@@ -287,7 +319,9 @@ factory ImmunizationRecommendationProtocol.fromJson(
       _$ImmunizationRecommendationProtocolToJson(this);
 }
 
-class MedicationAdministration {
+@freezed
+abstract class MedicationAdministration with _$MedicationAdministration {
+factory MedicationAdministration({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -320,7 +354,9 @@ factory MedicationAdministration.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationAdministrationToJson(this);
 }
 
-class MedicationAdministrationPerformer {
+@freezed
+abstract class MedicationAdministrationPerformer with _$MedicationAdministrationPerformer {
+factory MedicationAdministrationPerformer({
   Reference actor;
   Reference onBehalfOf;
 
@@ -333,7 +369,9 @@ factory MedicationAdministrationPerformer.fromJson(
       _$MedicationAdministrationPerformerToJson(this);
 }
 
-class MedicationAdministrationDosage {
+@freezed
+abstract class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
+factory MedicationAdministrationDosage({
   String text;
   CodeableConcept site;
   CodeableConcept route;
@@ -349,7 +387,9 @@ factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationAdministrationDosageToJson(this);
 }
 
-class MedicationStatement {
+@freezed
+abstract class MedicationStatement with _$MedicationStatement {
+factory MedicationStatement({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -380,7 +420,9 @@ factory MedicationStatement.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationStatementToJson(this);
 }
 
-class Medication {
+@freezed
+abstract class Medication with _$Medication {
+factory Medication({
   String id;
   String resourceType;
   CodeableConcept code;
@@ -400,7 +442,9 @@ factory Medication.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationToJson(this);
 }
 
-class MedicationIngredient {
+@freezed
+abstract class MedicationIngredient with _$MedicationIngredient {
+factory MedicationIngredient({
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
   bool isActive;
@@ -413,7 +457,9 @@ factory MedicationIngredient.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationIngredientToJson(this);
 }
 
-class MedicationPackage {
+@freezed
+abstract class MedicationPackage with _$MedicationPackage {
+factory MedicationPackage({
   CodeableConcept container;
   List<MedicationContent> content;
   List<MedicationBatch> batch;
@@ -425,7 +471,9 @@ factory MedicationPackage.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationPackageToJson(this);
 }
 
-class MedicationContent {
+@freezed
+abstract class MedicationContent with _$MedicationContent {
+factory MedicationContent({
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
   Quantity amount;
@@ -437,7 +485,9 @@ factory MedicationContent.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$MedicationContentToJson(this);
 }
 
-class MedicationBatch {
+@freezed
+abstract class MedicationBatch with _$MedicationBatch {
+factory MedicationBatch({
   String lotNumber;
   DateTime expirationDate;
 

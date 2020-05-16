@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'security.freezed.dart';
 part 'security.g.dart';
 
-class AuditEvent {
+@freezed
+abstract class AuditEvent with _$AuditEvent {
+factory AuditEvent({
   String id;
   String resourceType;
   Coding type;
@@ -27,7 +29,9 @@ factory AuditEvent.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AuditEventToJson(this);
 }
 
-class AuditEventAgent {
+@freezed
+abstract class AuditEventAgent with _$AuditEventAgent {
+factory AuditEventAgent({
   List<CodeableConcept> role;
   Reference reference;
   Identifier userId;
@@ -47,7 +51,9 @@ factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AuditEventAgentToJson(this);
 }
 
-class AuditEventNetwork {
+@freezed
+abstract class AuditEventNetwork with _$AuditEventNetwork {
+factory AuditEventNetwork({
   String address;
   String type;
 
@@ -58,7 +64,9 @@ factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AuditEventNetworkToJson(this);
 }
 
-class AuditEventSource {
+@freezed
+abstract class AuditEventSource with _$AuditEventSource {
+factory AuditEventSource({
   String site;
   Identifier identifier;
   List<Coding> type;
@@ -70,7 +78,9 @@ factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AuditEventSourceToJson(this);
 }
 
-class AuditEventEntity {
+@freezed
+abstract class AuditEventEntity with _$AuditEventEntity {
+factory AuditEventEntity({
   Identifier identifier;
   Reference reference;
   Coding type;
@@ -89,7 +99,9 @@ factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AuditEventEntityToJson(this);
 }
 
-class AuditEventDetail {
+@freezed
+abstract class AuditEventDetail with _$AuditEventDetail {
+factory AuditEventDetail({
   String type;
   String value;
 
@@ -100,7 +112,9 @@ factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$AuditEventDetailToJson(this);
 }
 
-class Provenance {
+@freezed
+abstract class Provenance with _$Provenance {
+factory Provenance({
   String id;
   String resourceType;
   List<Reference> target;
@@ -121,7 +135,9 @@ factory Provenance.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ProvenanceToJson(this);
 }
 
-class ProvenanceAgent {
+@freezed
+abstract class ProvenanceAgent with _$ProvenanceAgent {
+factory ProvenanceAgent({
   List<CodeableConcept> role;
   String whoUri;
   Reference whoReference;
@@ -136,7 +152,9 @@ factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ProvenanceAgentToJson(this);
 }
 
-class ProvenanceEntity {
+@freezed
+abstract class ProvenanceEntity with _$ProvenanceEntity {
+factory ProvenanceEntity({
   String role;
   String whatUri;
   Reference whatReference;
@@ -150,7 +168,9 @@ factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ProvenanceEntityToJson(this);
 }
 
-class Consent {
+@freezed
+abstract class Consent with _$Consent {
+factory Consent({
   String id;
   String resourceType;
   Identifier identifier;
@@ -181,7 +201,9 @@ factory Consent.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ConsentToJson(this);
 }
 
-class ConsentActor {
+@freezed
+abstract class ConsentActor with _$ConsentActor {
+factory ConsentActor({
   CodeableConcept role;
   Reference reference;
 
@@ -192,7 +214,9 @@ factory ConsentActor.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ConsentActorToJson(this);
 }
 
-class ConsentPolicy {
+@freezed
+abstract class ConsentPolicy with _$ConsentPolicy {
+factory ConsentPolicy({
   String authority;
   String uri;
 
@@ -203,7 +227,9 @@ factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ConsentPolicyToJson(this);
 }
 
-class ConsentData {
+@freezed
+abstract class ConsentData with _$ConsentData {
+factory ConsentData({
   String meaning;
   Reference reference;
 
@@ -214,7 +240,9 @@ factory ConsentData.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ConsentDataToJson(this);
 }
 
-class ConsentExcept {
+@freezed
+abstract class ConsentExcept with _$ConsentExcept {
+factory ConsentExcept({
   String type;
   Period period;
   List<ConsentActor1> actor;
@@ -233,7 +261,9 @@ factory ConsentExcept.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ConsentExceptToJson(this);
 }
 
-class ConsentActor1 {
+@freezed
+abstract class ConsentActor1 with _$ConsentActor1 {
+factory ConsentActor1({
   CodeableConcept role;
   Reference reference;
 
@@ -244,7 +274,9 @@ factory ConsentActor1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ConsentActor1ToJson(this);
 }
 
-class ConsentData1 {
+@freezed
+abstract class ConsentData1 with _$ConsentData1 {
+factory ConsentData1({
   String meaning;
   Reference reference;
 

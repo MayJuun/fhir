@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'documents.freezed.dart';
 part 'documents.g.dart';
 
-class DocumentReference {
+@freezed
+abstract class DocumentReference with _$DocumentReference {
+factory DocumentReference({
   String id;
   String resourceType;
   Identifier masterIdentifier;
@@ -34,7 +36,9 @@ factory DocumentReference.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DocumentReferenceToJson(this);
 }
 
-class DocumentReferenceRelatesTo {
+@freezed
+abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
+factory DocumentReferenceRelatesTo({
   String code;
   Reference target;
 
@@ -45,7 +49,9 @@ factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DocumentReferenceRelatesToToJson(this);
 }
 
-class DocumentReferenceContent {
+@freezed
+abstract class DocumentReferenceContent with _$DocumentReferenceContent {
+factory DocumentReferenceContent({
   Attachment attachment;
   Coding format;
 
@@ -56,7 +62,9 @@ factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DocumentReferenceContentToJson(this);
 }
 
-class DocumentReferenceContext {
+@freezed
+abstract class DocumentReferenceContext with _$DocumentReferenceContext {
+factory DocumentReferenceContext({
   Reference encounter;
   List<CodeableConcept> event;
   Period period;
@@ -72,7 +80,9 @@ factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DocumentReferenceContextToJson(this);
 }
 
-class DocumentReferenceRelated {
+@freezed
+abstract class DocumentReferenceRelated with _$DocumentReferenceRelated {
+factory DocumentReferenceRelated({
   Identifier identifier;
   Reference ref;
 
@@ -83,7 +93,9 @@ factory DocumentReferenceRelated.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DocumentReferenceRelatedToJson(this);
 }
 
-class DocumentManifest {
+@freezed
+abstract class DocumentManifest with _$DocumentManifest {
+factory DocumentManifest({
   String id;
   String resourceType;
   Identifier masterIdentifier;
@@ -106,7 +118,9 @@ factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DocumentManifestToJson(this);
 }
 
-class DocumentManifestContent {
+@freezed
+abstract class DocumentManifestContent with _$DocumentManifestContent {
+factory DocumentManifestContent({
   Attachment pAttachment;
   Reference pReference;
 
@@ -117,7 +131,9 @@ factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DocumentManifestContentToJson(this);
 }
 
-class DocumentManifestRelated {
+@freezed
+abstract class DocumentManifestRelated with _$DocumentManifestRelated {
+factory DocumentManifestRelated({
   Identifier identifier;
   Reference ref;
 
@@ -128,7 +144,9 @@ factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$DocumentManifestRelatedToJson(this);
 }
 
-class Composition {
+@freezed
+abstract class Composition with _$Composition {
+factory Composition({
   String id;
   String resourceType;
   Identifier identifier;
@@ -154,7 +172,9 @@ factory Composition.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CompositionToJson(this);
 }
 
-class CompositionAttester {
+@freezed
+abstract class CompositionAttester with _$CompositionAttester {
+factory CompositionAttester({
   List<String> mode;
   String time;
   Reference party;
@@ -166,7 +186,9 @@ factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CompositionAttesterToJson(this);
 }
 
-class CompositionRelatesTo {
+@freezed
+abstract class CompositionRelatesTo with _$CompositionRelatesTo {
+factory CompositionRelatesTo({
   String code;
   Identifier targetIdentifier;
   Reference targetReference;
@@ -178,7 +200,9 @@ factory CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CompositionRelatesToToJson(this);
 }
 
-class CompositionEvent {
+@freezed
+abstract class CompositionEvent with _$CompositionEvent {
+factory CompositionEvent({
   List<CodeableConcept> code;
   Period period;
   List<Reference> detail;
@@ -190,7 +214,9 @@ factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$CompositionEventToJson(this);
 }
 
-class CompositionSection {
+@freezed
+abstract class CompositionSection with _$CompositionSection {
+factory CompositionSection({
   String title;
   CodeableConcept code;
   Narrative text;

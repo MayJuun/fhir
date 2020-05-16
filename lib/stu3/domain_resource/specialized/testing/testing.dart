@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'testing.freezed.dart';
 part 'testing.g.dart';
 
-class TestReport {
+@freezed
+abstract class TestReport with _$TestReport {
+factory TestReport({
   String id;
   String resourceType;
   Identifier identifier;
@@ -29,7 +31,9 @@ factory TestReport.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestReportToJson(this);
 }
 
-class TestReportParticipant {
+@freezed
+abstract class TestReportParticipant with _$TestReportParticipant {
+factory TestReportParticipant({
   String type;
   String uri;
   String display;
@@ -41,7 +45,9 @@ factory TestReportParticipant.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestReportParticipantToJson(this);
 }
 
-class TestReportSetup {
+@freezed
+abstract class TestReportSetup with _$TestReportSetup {
+factory TestReportSetup({
   List<TestReportAction> action;
 
   }) = TestReportSetup;
@@ -51,7 +57,9 @@ factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestReportSetupToJson(this);
 }
 
-class TestReportAction {
+@freezed
+abstract class TestReportAction with _$TestReportAction {
+factory TestReportAction({
   TestReportOperation operation;
   TestReportAssert asserts;
 
@@ -62,7 +70,9 @@ factory TestReportAction.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestReportActionToJson(this);
 }
 
-class TestReportOperation {
+@freezed
+abstract class TestReportOperation with _$TestReportOperation {
+factory TestReportOperation({
   String result;
   String message;
   String detail;
@@ -74,7 +84,9 @@ factory TestReportOperation.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestReportOperationToJson(this);
 }
 
-class TestReportAssert {
+@freezed
+abstract class TestReportAssert with _$TestReportAssert {
+factory TestReportAssert({
   String result;
   String message;
   String detail;
@@ -86,7 +98,9 @@ factory TestReportAssert.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestReportAssertToJson(this);
 }
 
-class TestReportTest {
+@freezed
+abstract class TestReportTest with _$TestReportTest {
+factory TestReportTest({
   String name;
   String description;
   List<TestReportAction1> action;
@@ -98,7 +112,9 @@ factory TestReportTest.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestReportTestToJson(this);
 }
 
-class TestReportAction1 {
+@freezed
+abstract class TestReportAction1 with _$TestReportAction1 {
+factory TestReportAction1({
   TestReportOperation operation;
   TestReportAssert asserts;
 
@@ -109,7 +125,9 @@ factory TestReportAction1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestReportAction1ToJson(this);
 }
 
-class TestReportTeardown {
+@freezed
+abstract class TestReportTeardown with _$TestReportTeardown {
+factory TestReportTeardown({
   List<TestReportAction2> action;
 
   }) = TestReportTeardown;
@@ -119,7 +137,9 @@ factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestReportTeardownToJson(this);
 }
 
-class TestReportAction2 {
+@freezed
+abstract class TestReportAction2 with _$TestReportAction2 {
+factory TestReportAction2({
   TestReportOperation operation;
 
   }) = TestReportAction2;
@@ -129,7 +149,9 @@ factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestReportAction2ToJson(this);
 }
 
-class TestScript {
+@freezed
+abstract class TestScript with _$TestScript {
+factory TestScript({
   String id;
   String resourceType;
   String url;
@@ -166,7 +188,9 @@ factory TestScript.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptToJson(this);
 }
 
-class TestScriptOrigin {
+@freezed
+abstract class TestScriptOrigin with _$TestScriptOrigin {
+factory TestScriptOrigin({
   double index;
   Coding profile;
 
@@ -177,7 +201,9 @@ factory TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptOriginToJson(this);
 }
 
-class TestScriptDestination {
+@freezed
+abstract class TestScriptDestination with _$TestScriptDestination {
+factory TestScriptDestination({
   double index;
   Coding profile;
 
@@ -188,7 +214,9 @@ factory TestScriptDestination.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptDestinationToJson(this);
 }
 
-class TestScriptMetadata {
+@freezed
+abstract class TestScriptMetadata with _$TestScriptMetadata {
+factory TestScriptMetadata({
   List<TestScriptLink> link;
   List<TestScriptCapability> capability;
 
@@ -199,7 +227,9 @@ factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptMetadataToJson(this);
 }
 
-class TestScriptLink {
+@freezed
+abstract class TestScriptLink with _$TestScriptLink {
+factory TestScriptLink({
   String url;
   String description;
 
@@ -210,7 +240,9 @@ factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptLinkToJson(this);
 }
 
-class TestScriptCapability {
+@freezed
+abstract class TestScriptCapability with _$TestScriptCapability {
+factory TestScriptCapability({
   bool require;
   bool validated;
   String description;
@@ -226,7 +258,9 @@ factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptCapabilityToJson(this);
 }
 
-class TestScriptFixture {
+@freezed
+abstract class TestScriptFixture with _$TestScriptFixture {
+factory TestScriptFixture({
   bool autocreate;
   bool autodelete;
   Reference resource;
@@ -238,7 +272,9 @@ factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptFixtureToJson(this);
 }
 
-class TestScriptVariable {
+@freezed
+abstract class TestScriptVariable with _$TestScriptVariable {
+factory TestScriptVariable({
   String name;
   String defaultValue;
   String description;
@@ -255,7 +291,9 @@ factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptVariableToJson(this);
 }
 
-class TestScriptRule {
+@freezed
+abstract class TestScriptRule with _$TestScriptRule {
+factory TestScriptRule({
   Reference resource;
   List<TestScriptParam> param;
 
@@ -266,7 +304,9 @@ factory TestScriptRule.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptRuleToJson(this);
 }
 
-class TestScriptParam {
+@freezed
+abstract class TestScriptParam with _$TestScriptParam {
+factory TestScriptParam({
   String name;
   String value;
 
@@ -277,7 +317,9 @@ factory TestScriptParam.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptParamToJson(this);
 }
 
-class TestScriptRuleset {
+@freezed
+abstract class TestScriptRuleset with _$TestScriptRuleset {
+factory TestScriptRuleset({
   Reference resource;
   List<TestScriptRule1> rule;
 
@@ -288,7 +330,9 @@ factory TestScriptRuleset.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptRulesetToJson(this);
 }
 
-class TestScriptRule1 {
+@freezed
+abstract class TestScriptRule1 with _$TestScriptRule1 {
+factory TestScriptRule1({
   String ruleId;
   List<TestScriptParam1> param;
 
@@ -299,7 +343,9 @@ factory TestScriptRule1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptRule1ToJson(this);
 }
 
-class TestScriptParam1 {
+@freezed
+abstract class TestScriptParam1 with _$TestScriptParam1 {
+factory TestScriptParam1({
   String name;
   String value;
 
@@ -310,7 +356,9 @@ factory TestScriptParam1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptParam1ToJson(this);
 }
 
-class TestScriptSetup {
+@freezed
+abstract class TestScriptSetup with _$TestScriptSetup {
+factory TestScriptSetup({
   List<TestScriptAction> action;
 
   }) = TestScriptSetup;
@@ -320,7 +368,9 @@ factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptSetupToJson(this);
 }
 
-class TestScriptAction {
+@freezed
+abstract class TestScriptAction with _$TestScriptAction {
+factory TestScriptAction({
   TestScriptOperation operation;
   TestScriptAssert asserts;
 
@@ -331,7 +381,9 @@ factory TestScriptAction.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptActionToJson(this);
 }
 
-class TestScriptOperation {
+@freezed
+abstract class TestScriptOperation with _$TestScriptOperation {
+factory TestScriptOperation({
   Coding type;
   String resource;
   String label;
@@ -356,7 +408,9 @@ factory TestScriptOperation.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptOperationToJson(this);
 }
 
-class TestScriptRequestHeader {
+@freezed
+abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
+factory TestScriptRequestHeader({
   String field;
   String value;
 
@@ -367,7 +421,9 @@ factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptRequestHeaderToJson(this);
 }
 
-class TestScriptAssert {
+@freezed
+abstract class TestScriptAssert with _$TestScriptAssert {
+factory TestScriptAssert({
   String label;
   String description;
   String direction;
@@ -400,7 +456,9 @@ factory TestScriptAssert.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptAssertToJson(this);
 }
 
-class TestScriptRule2 {
+@freezed
+abstract class TestScriptRule2 with _$TestScriptRule2 {
+factory TestScriptRule2({
   String ruleId;
   List<TestScriptParam2> param;
 
@@ -411,7 +469,9 @@ factory TestScriptRule2.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptRule2ToJson(this);
 }
 
-class TestScriptParam2 {
+@freezed
+abstract class TestScriptParam2 with _$TestScriptParam2 {
+factory TestScriptParam2({
   String name;
   String value;
 
@@ -422,7 +482,9 @@ factory TestScriptParam2.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptParam2ToJson(this);
 }
 
-class TestScriptRuleset1 {
+@freezed
+abstract class TestScriptRuleset1 with _$TestScriptRuleset1 {
+factory TestScriptRuleset1({
   String rulesetId;
   List<TestScriptRule3> rule;
 
@@ -433,7 +495,9 @@ factory TestScriptRuleset1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptRuleset1ToJson(this);
 }
 
-class TestScriptRule3 {
+@freezed
+abstract class TestScriptRule3 with _$TestScriptRule3 {
+factory TestScriptRule3({
   String ruleId;
   List<TestScriptParam3> param;
 
@@ -444,7 +508,9 @@ factory TestScriptRule3.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptRule3ToJson(this);
 }
 
-class TestScriptParam3 {
+@freezed
+abstract class TestScriptParam3 with _$TestScriptParam3 {
+factory TestScriptParam3({
   String name;
   String value;
 
@@ -455,7 +521,9 @@ factory TestScriptParam3.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptParam3ToJson(this);
 }
 
-class TestScriptTest {
+@freezed
+abstract class TestScriptTest with _$TestScriptTest {
+factory TestScriptTest({
   String name;
   String description;
   List<TestScriptAction1> action;
@@ -467,7 +535,9 @@ factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptTestToJson(this);
 }
 
-class TestScriptAction1 {
+@freezed
+abstract class TestScriptAction1 with _$TestScriptAction1 {
+factory TestScriptAction1({
   TestScriptOperation operation;
   TestScriptAssert asserts;
 
@@ -478,7 +548,9 @@ factory TestScriptAction1.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptAction1ToJson(this);
 }
 
-class TestScriptTeardown {
+@freezed
+abstract class TestScriptTeardown with _$TestScriptTeardown {
+factory TestScriptTeardown({
   List<TestScriptAction2> action;
 
   }) = TestScriptTeardown;
@@ -488,7 +560,9 @@ factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$TestScriptTeardownToJson(this);
 }
 
-class TestScriptAction2 {
+@freezed
+abstract class TestScriptAction2 with _$TestScriptAction2 {
+factory TestScriptAction2({
   TestScriptOperation operation;
 
   }) = TestScriptAction2;

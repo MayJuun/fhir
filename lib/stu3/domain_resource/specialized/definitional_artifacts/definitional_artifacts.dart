@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';
 
-class ActivityDefinition {
+@freezed
+abstract class ActivityDefinition with _$ActivityDefinition {
+factory ActivityDefinition({
   String id;
   String resourceType;
   String url;
@@ -55,7 +57,9 @@ factory ActivityDefinition.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ActivityDefinitionToJson(this);
 }
 
-class ActivityDefinitionParticipant {
+@freezed
+abstract class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
+factory ActivityDefinitionParticipant({
   String type;
   CodeableConcept role;
 
@@ -66,7 +70,9 @@ factory ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ActivityDefinitionParticipantToJson(this);
 }
 
-class ActivityDefinitionDynamicValue {
+@freezed
+abstract class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
+factory ActivityDefinitionDynamicValue({
   String description;
   String path;
   String language;
@@ -79,7 +85,9 @@ factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ActivityDefinitionDynamicValueToJson(this);
 }
 
-class Questionnaire {
+@freezed
+abstract class Questionnaire with _$Questionnaire {
+factory Questionnaire({
   String id;
   String resourceType;
   String url;
@@ -111,7 +119,9 @@ factory Questionnaire.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$QuestionnaireToJson(this);
 }
 
-class QuestionnaireItem {
+@freezed
+abstract class QuestionnaireItem with _$QuestionnaireItem {
+factory QuestionnaireItem({
   String linkId;
   String definition;
   List<Coding> code;
@@ -146,7 +156,9 @@ factory QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$QuestionnaireItemToJson(this);
 }
 
-class QuestionnaireEnableWhen {
+@freezed
+abstract class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
+factory QuestionnaireEnableWhen({
   String question;
   bool hasAnswer;
   bool answerBoolean;
@@ -169,7 +181,9 @@ factory QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$QuestionnaireEnableWhenToJson(this);
 }
 
-class QuestionnaireOption {
+@freezed
+abstract class QuestionnaireOption with _$QuestionnaireOption {
+factory QuestionnaireOption({
   int valueInteger;
   DateTime valueDate;
   String valueTime;
@@ -183,7 +197,9 @@ factory QuestionnaireOption.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$QuestionnaireOptionToJson(this);
 }
 
-class ServiceDefinition {
+@freezed
+abstract class ServiceDefinition with _$ServiceDefinition {
+factory ServiceDefinition({
   String id;
   String resourceType;
   String url;
@@ -219,7 +235,9 @@ factory ServiceDefinition.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$ServiceDefinitionToJson(this);
 }
 
-class PlanDefinition {
+@freezed
+abstract class PlanDefinition with _$PlanDefinition {
+factory PlanDefinition({
   String id;
   String resourceType;
   String url;
@@ -256,7 +274,9 @@ factory PlanDefinition.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PlanDefinitionToJson(this);
 }
 
-class PlanDefinitionGoal {
+@freezed
+abstract class PlanDefinitionGoal with _$PlanDefinitionGoal {
+factory PlanDefinitionGoal({
   CodeableConcept category;
   CodeableConcept description;
   CodeableConcept priority;
@@ -272,7 +292,9 @@ factory PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PlanDefinitionGoalToJson(this);
 }
 
-class PlanDefinitionTarget {
+@freezed
+abstract class PlanDefinitionTarget with _$PlanDefinitionTarget {
+factory PlanDefinitionTarget({
   CodeableConcept measure;
   Quantity detailQuantity;
   Range detailRange;
@@ -286,7 +308,9 @@ factory PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PlanDefinitionTargetToJson(this);
 }
 
-class PlanDefinitionAction {
+@freezed
+abstract class PlanDefinitionAction with _$PlanDefinitionAction {
+factory PlanDefinitionAction({
   String label;
   String title;
   String description;
@@ -324,7 +348,9 @@ factory PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PlanDefinitionActionToJson(this);
 }
 
-class PlanDefinitionCondition {
+@freezed
+abstract class PlanDefinitionCondition with _$PlanDefinitionCondition {
+factory PlanDefinitionCondition({
   String kind;
   String description;
   String language;
@@ -337,7 +363,9 @@ factory PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PlanDefinitionConditionToJson(this);
 }
 
-class PlanDefinitionRelatedAction {
+@freezed
+abstract class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
+factory PlanDefinitionRelatedAction({
   String actionId;
   String relationship;
   Duration offsetDuration;
@@ -350,7 +378,9 @@ factory PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PlanDefinitionRelatedActionToJson(this);
 }
 
-class PlanDefinitionParticipant {
+@freezed
+abstract class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
+factory PlanDefinitionParticipant({
   String type;
   CodeableConcept role;
 
@@ -361,7 +391,9 @@ factory PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PlanDefinitionParticipantToJson(this);
 }
 
-class PlanDefinitionDynamicValue {
+@freezed
+abstract class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
+factory PlanDefinitionDynamicValue({
   String description;
   String path;
   String language;

@@ -6,7 +6,9 @@ import '../../../../fhir_stu3.dart';
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
-class PractitionerRole {
+@freezed
+abstract class PractitionerRole with _$PractitionerRole {
+factory PractitionerRole({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -31,7 +33,9 @@ factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PractitionerRoleToJson(this);
 }
 
-class PractitionerRoleAvailableTime {
+@freezed
+abstract class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
+factory PractitionerRoleAvailableTime({
   List<String> daysOfWeek;
   bool allDay;
   String availableStartTime;
@@ -44,7 +48,9 @@ factory PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PractitionerRoleAvailableTimeToJson(this);
 }
 
-class PractitionerRoleNotAvailable {
+@freezed
+abstract class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
+factory PractitionerRoleNotAvailable({
   String description;
   Period during;
 
@@ -55,7 +61,9 @@ factory PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PractitionerRoleNotAvailableToJson(this);
 }
 
-class Group {
+@freezed
+abstract class Group with _$Group {
+factory Group({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -74,7 +82,9 @@ factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
   Map<String, dynamic> toJson() => _$GroupToJson(this);
 }
 
-class GroupCharacteristic {
+@freezed
+abstract class GroupCharacteristic with _$GroupCharacteristic {
+factory GroupCharacteristic({
   CodeableConcept code;
   CodeableConcept valueCodeableConcept;
   bool valueBoolean;
@@ -90,7 +100,9 @@ factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$GroupCharacteristicToJson(this);
 }
 
-class GroupMember {
+@freezed
+abstract class GroupMember with _$GroupMember {
+factory GroupMember({
   Reference entity;
   Period period;
   bool inactive;
@@ -102,7 +114,9 @@ factory GroupMember.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$GroupMemberToJson(this);
 }
 
-class Person {
+@freezed
+abstract class Person with _$Person {
+factory Person({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -122,7 +136,9 @@ factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
   Map<String, dynamic> toJson() => _$PersonToJson(this);
 }
 
-class PersonLink {
+@freezed
+abstract class PersonLink with _$PersonLink {
+factory PersonLink({
   Reference target;
   String assurance;
 
@@ -133,7 +149,9 @@ factory PersonLink.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PersonLinkToJson(this);
 }
 
-class RelatedPerson {
+@freezed
+abstract class RelatedPerson with _$RelatedPerson {
+factory RelatedPerson({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -155,7 +173,9 @@ factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$RelatedPersonToJson(this);
 }
 
-class Patient {
+@freezed
+abstract class Patient with _$Patient {
+factory Patient({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -185,7 +205,9 @@ factory Patient.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PatientToJson(this);
 }
 
-class PatientContact {
+@freezed
+abstract class PatientContact with _$PatientContact {
+factory PatientContact({
   List<CodeableConcept> relationship;
   HumanName name;
   List<ContactPoint> telecom;
@@ -201,7 +223,9 @@ factory PatientContact.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PatientContactToJson(this);
 }
 
-class PatientAnimal {
+@freezed
+abstract class PatientAnimal with _$PatientAnimal {
+factory PatientAnimal({
   CodeableConcept species;
   CodeableConcept breed;
   CodeableConcept genderStatus;
@@ -213,7 +237,9 @@ factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PatientAnimalToJson(this);
 }
 
-class PatientCommunication {
+@freezed
+abstract class PatientCommunication with _$PatientCommunication {
+factory PatientCommunication({
   CodeableConcept language;
   bool preferred;
 
@@ -224,7 +250,9 @@ factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PatientCommunicationToJson(this);
 }
 
-class PatientLink {
+@freezed
+abstract class PatientLink with _$PatientLink {
+factory PatientLink({
   Reference other;
   String type;
 
@@ -235,7 +263,9 @@ factory PatientLink.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
 }
 
-class Practitioner {
+@freezed
+abstract class Practitioner with _$Practitioner {
+factory Practitioner({
   String id;
   String resourceType;
   List<Identifier> identifier;
@@ -256,7 +286,9 @@ factory Practitioner.fromJson(Map<String, dynamic> json) =>
   Map<String, dynamic> toJson() => _$PractitionerToJson(this);
 }
 
-class PractitionerQualification {
+@freezed
+abstract class PractitionerQualification with _$PractitionerQualification {
+factory PractitionerQualification({
   List<Identifier> identifier;
   CodeableConcept code;
   Period period;
