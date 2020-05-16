@@ -1,27 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'conformance.freezed.dart';
-
 part 'conformance.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-part 'compartmentDefinition.g.dart';
 
 class CompartmentDefinition {
   String id;
@@ -41,7 +24,6 @@ class CompartmentDefinition {
   String code;
   bool search;
   List<CompartmentDefinitionResource> resource;
-
   CompartmentDefinition({
     this.id,
     this.resourceType = 'CompartmentDefinition',
@@ -61,7 +43,6 @@ class CompartmentDefinition {
     this.search,
     this.resource,
   });
-
   factory CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$CompartmentDefinitionToJson(this);
@@ -71,30 +52,15 @@ class CompartmentDefinitionResource {
   String code;
   List<String> param;
   String documentation;
-
   CompartmentDefinitionResource({
     this.code,
     this.param,
     this.documentation,
   });
-
   factory CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionResourceFromJson(json);
   Map<String, dynamic> toJson() => _$CompartmentDefinitionResourceToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-part 'operationDefinition.g.dart';
 
 class OperationDefinition {
   String id;
@@ -122,7 +88,6 @@ class OperationDefinition {
   bool instance;
   List<OperationDefinitionParameter> parameter;
   List<OperationDefinitionOverload> overload;
-
   OperationDefinition({
     this.id,
     this.resourceType = 'OperationDefinition',
@@ -150,7 +115,6 @@ class OperationDefinition {
     this.parameter,
     this.overload,
   });
-
   factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$OperationDefinitionToJson(this);
@@ -167,7 +131,6 @@ class OperationDefinitionParameter {
   Reference profile;
   OperationDefinitionBinding binding;
   List<OperationDefinitionParameter> part;
-
   OperationDefinitionParameter({
     this.name,
     this.use,
@@ -180,7 +143,6 @@ class OperationDefinitionParameter {
     this.binding,
     this.part,
   });
-
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
   Map<String, dynamic> toJson() => _$OperationDefinitionParameterToJson(this);
@@ -190,13 +152,11 @@ class OperationDefinitionBinding {
   String strength;
   String valueSetUri;
   Reference valueSetReference;
-
   OperationDefinitionBinding({
     this.strength,
     this.valueSetUri,
     this.valueSetReference,
   });
-
   factory OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionBindingFromJson(json);
   Map<String, dynamic> toJson() => _$OperationDefinitionBindingToJson(this);
@@ -205,93 +165,14 @@ class OperationDefinitionBinding {
 class OperationDefinitionOverload {
   List<String> parameterName;
   String comment;
-
   OperationDefinitionOverload({
     this.parameterName,
     this.comment,
   });
-
   factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionOverloadFromJson(json);
   Map<String, dynamic> toJson() => _$OperationDefinitionOverloadToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'structureMap.g.dart';
 
 class StructureMap {
   String id;
@@ -312,10 +193,7 @@ class StructureMap {
   String purpose;
   String copyright;
   List<StructureMapStructure> structure;
-  List<String> 
-
   List<StructureMapGroup> group;
-
   StructureMap({
     this.id,
     this.resourceType = 'StructureMap',
@@ -335,11 +213,8 @@ class StructureMap {
     this.purpose,
     this.copyright,
     this.structure,
-    this.
-
     @required this.group,
   });
-
   factory StructureMap.fromJson(Map<String, dynamic> json) =>
       _$StructureMapFromJson(json);
   Map<String, dynamic> toJson() => _$StructureMapToJson(this);
@@ -350,14 +225,12 @@ class StructureMapStructure {
   String mode;
   String alias;
   String documentation;
-
   StructureMapStructure({
     this.url,
     this.mode,
     this.alias,
     this.documentation,
   });
-
   factory StructureMapStructure.fromJson(Map<String, dynamic> json) =>
       _$StructureMapStructureFromJson(json);
   Map<String, dynamic> toJson() => _$StructureMapStructureToJson(this);
@@ -370,7 +243,6 @@ class StructureMapGroup {
   String documentation;
   List<StructureMapInput> input;
   List<StructureMapRule> rule;
-
   StructureMapGroup({
     this.name,
     this.extend,
@@ -379,7 +251,6 @@ class StructureMapGroup {
     @required this.input,
     @required this.rule,
   });
-
   factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>
       _$StructureMapGroupFromJson(json);
   Map<String, dynamic> toJson() => _$StructureMapGroupToJson(this);
@@ -390,14 +261,12 @@ class StructureMapInput {
   String type;
   String mode;
   String documentation;
-
   StructureMapInput({
     this.name,
     this.type,
     this.mode,
     this.documentation,
   });
-
   factory StructureMapInput.fromJson(Map<String, dynamic> json) =>
       _$StructureMapInputFromJson(json);
   Map<String, dynamic> toJson() => _$StructureMapInputToJson(this);
@@ -410,7 +279,6 @@ class StructureMapRule {
   List<StructureMapRule> rule;
   List<StructureMapDependent> dependent;
   String documentation;
-
   StructureMapRule({
     this.name,
     @required this.source,
@@ -419,7 +287,6 @@ class StructureMapRule {
     this.dependent,
     this.documentation,
   });
-
   factory StructureMapRule.fromJson(Map<String, dynamic> json) =>
       _$StructureMapRuleFromJson(json);
   Map<String, dynamic> toJson() => _$StructureMapRuleToJson(this);
@@ -488,7 +355,6 @@ class StructureMapSource {
   String variable;
   String condition;
   String check;
-
   StructureMapSource({
     this.context,
     this.min,
@@ -553,7 +419,6 @@ class StructureMapSource {
     this.condition,
     this.check,
   });
-
   factory StructureMapSource.fromJson(Map<String, dynamic> json) =>
       _$StructureMapSourceFromJson(json);
   Map<String, dynamic> toJson() => _$StructureMapSourceToJson(this);
@@ -568,7 +433,6 @@ class StructureMapTarget {
   String listRuleId;
   String transform;
   List<StructureMapParameter> parameter;
-
   StructureMapTarget({
     this.context,
     this.contextType,
@@ -579,7 +443,6 @@ class StructureMapTarget {
     this.transform,
     this.parameter,
   });
-
   factory StructureMapTarget.fromJson(Map<String, dynamic> json) =>
       _$StructureMapTargetFromJson(json);
   Map<String, dynamic> toJson() => _$StructureMapTargetToJson(this);
@@ -591,7 +454,6 @@ class StructureMapParameter {
   bool valueBoolean;
   int valueInteger;
   double valueDecimal;
-
   StructureMapParameter({
     this.valueId,
     this.valueString,
@@ -599,7 +461,6 @@ class StructureMapParameter {
     this.valueInteger,
     this.valueDecimal,
   });
-
   factory StructureMapParameter.fromJson(Map<String, dynamic> json) =>
       _$StructureMapParameterFromJson(json);
   Map<String, dynamic> toJson() => _$StructureMapParameterToJson(this);
@@ -608,35 +469,14 @@ class StructureMapParameter {
 class StructureMapDependent {
   String name;
   List<String> variable;
-
   StructureMapDependent({
     this.name,
     this.variable,
   });
-
   factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>
       _$StructureMapDependentFromJson(json);
   Map<String, dynamic> toJson() => _$StructureMapDependentToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'messageDefinition.g.dart';
 
 class MessageDefinition {
   String id;
@@ -664,7 +504,6 @@ class MessageDefinition {
   List<MessageDefinitionFocus> focus;
   bool responseRequired;
   List<MessageDefinitionAllowedResponse> allowedResponse;
-
   MessageDefinition({
     this.id,
     this.resourceType = 'MessageDefinition',
@@ -692,7 +531,6 @@ class MessageDefinition {
     this.responseRequired,
     this.allowedResponse,
   });
-
   factory MessageDefinition.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$MessageDefinitionToJson(this);
@@ -703,14 +541,12 @@ class MessageDefinitionFocus {
   Reference profile;
   double min;
   String max;
-
   MessageDefinitionFocus({
     this.code,
     this.profile,
     this.min,
     this.max,
   });
-
   factory MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFocusFromJson(json);
   Map<String, dynamic> toJson() => _$MessageDefinitionFocusToJson(this);
@@ -719,34 +555,16 @@ class MessageDefinitionFocus {
 class MessageDefinitionAllowedResponse {
   Reference message;
   String situation;
-
   MessageDefinitionAllowedResponse({
     @required this.message,
     this.situation,
   });
-
   factory MessageDefinitionAllowedResponse.fromJson(
           Map<String, dynamic> json) =>
       _$MessageDefinitionAllowedResponseFromJson(json);
   Map<String, dynamic> toJson() =>
       _$MessageDefinitionAllowedResponseToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'implementationGuide.g.dart';
 
 class ImplementationGuide {
   String id;
@@ -769,7 +587,6 @@ class ImplementationGuide {
   List<ImplementationGuideGlobal> global;
   List<String> binary;
   ImplementationGuidePage page;
-
   ImplementationGuide({
     this.id,
     this.resourceType = 'ImplementationGuide',
@@ -792,7 +609,6 @@ class ImplementationGuide {
     this.binary,
     this.page,
   });
-
   factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuideToJson(this);
@@ -801,12 +617,10 @@ class ImplementationGuide {
 class ImplementationGuideDependency {
   String type;
   String uri;
-
   ImplementationGuideDependency({
     this.type,
     this.uri,
   });
-
   factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDependencyFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuideDependencyToJson(this);
@@ -816,13 +630,11 @@ class ImplementationGuidePackage {
   String name;
   String description;
   List<ImplementationGuideResource> resource;
-
   ImplementationGuidePackage({
     this.name,
     this.description,
     @required this.resource,
   });
-
   factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePackageFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuidePackageToJson(this);
@@ -836,7 +648,6 @@ class ImplementationGuideResource {
   String sourceUri;
   Reference sourceReference;
   Reference exampleFor;
-
   ImplementationGuideResource({
     this.example,
     this.name,
@@ -846,7 +657,6 @@ class ImplementationGuideResource {
     this.sourceReference,
     this.exampleFor,
   });
-
   factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideResourceFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuideResourceToJson(this);
@@ -855,12 +665,10 @@ class ImplementationGuideResource {
 class ImplementationGuideGlobal {
   String type;
   Reference profile;
-
   ImplementationGuideGlobal({
     this.type,
     @required this.profile,
   });
-
   factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideGlobalFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuideGlobalToJson(this);
@@ -874,7 +682,6 @@ class ImplementationGuidePage {
   List<String> package;
   String format;
   List<ImplementationGuidePage> page;
-
   ImplementationGuidePage({
     this.source,
     this.title,
@@ -884,28 +691,10 @@ class ImplementationGuidePage {
     this.format,
     this.page,
   });
-
   factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePageFromJson(json);
   Map<String, dynamic> toJson() => _$ImplementationGuidePageToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'dataElement.g.dart';
 
 class DataElement {
   String id;
@@ -926,7 +715,6 @@ class DataElement {
   String stringency;
   List<DataElementMapping> mapping;
   List<ElementDefinition> element;
-
   DataElement({
     this.id,
     this.resourceType = 'DataElement',
@@ -947,7 +735,6 @@ class DataElement {
     this.mapping,
     @required this.element,
   });
-
   factory DataElement.fromJson(Map<String, dynamic> json) =>
       _$DataElementFromJson(json);
   Map<String, dynamic> toJson() => _$DataElementToJson(this);
@@ -958,31 +745,16 @@ class DataElementMapping {
   String uri;
   String name;
   String comment;
-
   DataElementMapping({
     this.identity,
     this.uri,
     this.name,
     this.comment,
   });
-
   factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$DataElementMappingFromJson(json);
   Map<String, dynamic> toJson() => _$DataElementMappingToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-part 'graphDefinition.g.dart';
 
 class GraphDefinition {
   String id;
@@ -1002,7 +774,6 @@ class GraphDefinition {
   String start;
   String profile;
   List<GraphDefinitionLink> link;
-
   GraphDefinition({
     this.id,
     this.resourceType = 'GraphDefinition',
@@ -1022,7 +793,6 @@ class GraphDefinition {
     this.profile,
     this.link,
   });
-
   factory GraphDefinition.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$GraphDefinitionToJson(this);
@@ -1035,7 +805,6 @@ class GraphDefinitionLink {
   String max;
   String description;
   List<GraphDefinitionTarget> target;
-
   GraphDefinitionLink({
     this.path,
     this.sliceName,
@@ -1044,7 +813,6 @@ class GraphDefinitionLink {
     this.description,
     @required this.target,
   });
-
   factory GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionLinkFromJson(json);
   Map<String, dynamic> toJson() => _$GraphDefinitionLinkToJson(this);
@@ -1055,14 +823,12 @@ class GraphDefinitionTarget {
   String profile;
   List<GraphDefinitionCompartment> compartment;
   List<GraphDefinitionLink> link;
-
   GraphDefinitionTarget({
     this.type,
     this.profile,
     this.compartment,
     this.link,
   });
-
   factory GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionTargetFromJson(json);
   Map<String, dynamic> toJson() => _$GraphDefinitionTargetToJson(this);
@@ -1073,37 +839,16 @@ class GraphDefinitionCompartment {
   String rule;
   String expression;
   String description;
-
   GraphDefinitionCompartment({
     this.code,
     this.rule,
     this.expression,
     this.description,
   });
-
   factory GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionCompartmentFromJson(json);
   Map<String, dynamic> toJson() => _$GraphDefinitionCompartmentToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'structureDefinition.g.dart';
 
 class StructureDefinition {
   String id;
@@ -1136,7 +881,6 @@ class StructureDefinition {
   String derivation;
   StructureDefinitionSnapshot snapshot;
   StructureDefinitionDifferential differential;
-
   StructureDefinition({
     this.id,
     this.resourceType = 'StructureDefinition',
@@ -1169,7 +913,6 @@ class StructureDefinition {
     this.snapshot,
     this.differential,
   });
-
   factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$StructureDefinitionToJson(this);
@@ -1180,14 +923,12 @@ class StructureDefinitionMapping {
   String uri;
   String name;
   String comment;
-
   StructureDefinitionMapping({
     this.identity,
     this.uri,
     this.name,
     this.comment,
   });
-
   factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionMappingFromJson(json);
   Map<String, dynamic> toJson() => _$StructureDefinitionMappingToJson(this);
@@ -1195,11 +936,9 @@ class StructureDefinitionMapping {
 
 class StructureDefinitionSnapshot {
   List<ElementDefinition> element;
-
   StructureDefinitionSnapshot({
     @required this.element,
   });
-
   factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionSnapshotFromJson(json);
   Map<String, dynamic> toJson() => _$StructureDefinitionSnapshotToJson(this);
@@ -1207,32 +946,14 @@ class StructureDefinitionSnapshot {
 
 class StructureDefinitionDifferential {
   List<ElementDefinition> element;
-
   StructureDefinitionDifferential({
     @required this.element,
   });
-
-  factory StructureDefinitionDifferential.fromJson(
-          Map<String, dynamic> json) =>
+  factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionDifferentialFromJson(json);
   Map<String, dynamic> toJson() =>
       _$StructureDefinitionDifferentialToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'messageHeader.g.dart';
 
 class MessageHeader {
   String id;
@@ -1249,7 +970,6 @@ class MessageHeader {
   CodeableConcept reason;
   MessageHeaderResponse response;
   List<Reference> focus;
-
   MessageHeader({
     this.id,
     this.resourceType = 'MessageHeader',
@@ -1266,7 +986,6 @@ class MessageHeader {
     this.response,
     this.focus,
   });
-
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderFromJson(json);
   Map<String, dynamic> toJson() => _$MessageHeaderToJson(this);
@@ -1276,13 +995,11 @@ class MessageHeaderDestination {
   String name;
   Reference target;
   String endpoint;
-
   MessageHeaderDestination({
     this.name,
     this.target,
     this.endpoint,
   });
-
   factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderDestinationFromJson(json);
   Map<String, dynamic> toJson() => _$MessageHeaderDestinationToJson(this);
@@ -1294,7 +1011,6 @@ class MessageHeaderSource {
   String version;
   ContactPoint contact;
   String endpoint;
-
   MessageHeaderSource({
     this.name,
     this.software,
@@ -1302,7 +1018,6 @@ class MessageHeaderSource {
     this.contact,
     this.endpoint,
   });
-
   factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderSourceFromJson(json);
   Map<String, dynamic> toJson() => _$MessageHeaderSourceToJson(this);
@@ -1312,34 +1027,15 @@ class MessageHeaderResponse {
   String identifier;
   String code;
   Reference details;
-
   MessageHeaderResponse({
     this.identifier,
     this.code,
     this.details,
   });
-
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderResponseFromJson(json);
   Map<String, dynamic> toJson() => _$MessageHeaderResponseToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'capabilityStatement.g.dart';
 
 class CapabilityStatement {
   String id;
@@ -1371,7 +1067,6 @@ class CapabilityStatement {
   List<CapabilityStatementRest> rest;
   List<CapabilityStatementMessaging> messaging;
   List<CapabilityStatementDocument> document;
-
   CapabilityStatement({
     this.id,
     this.resourceType = 'CapabilityStatement',
@@ -1403,7 +1098,6 @@ class CapabilityStatement {
     this.messaging,
     this.document,
   });
-
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementToJson(this);
@@ -1413,13 +1107,11 @@ class CapabilityStatementSoftware {
   String name;
   String version;
   DateTime releaseDate;
-
   CapabilityStatementSoftware({
     this.name,
     this.version,
     this.releaseDate,
   });
-
   factory CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSoftwareFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementSoftwareToJson(this);
@@ -1428,12 +1120,10 @@ class CapabilityStatementSoftware {
 class CapabilityStatementImplementation {
   String description;
   String url;
-
   CapabilityStatementImplementation({
     this.description,
     this.url,
   });
-
   factory CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatementImplementationFromJson(json);
@@ -1450,7 +1140,6 @@ class CapabilityStatementRest {
   List<CapabilityStatementSearchParam> searchParam;
   List<CapabilityStatementOperation> operation;
   List<String> compartment;
-
   CapabilityStatementRest({
     this.mode,
     this.documentation,
@@ -1461,7 +1150,6 @@ class CapabilityStatementRest {
     this.operation,
     this.compartment,
   });
-
   factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementRestFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementRestToJson(this);
@@ -1472,14 +1160,12 @@ class CapabilityStatementSecurity {
   List<CodeableConcept> service;
   String description;
   List<CapabilityStatementCertificate> certificate;
-
   CapabilityStatementSecurity({
     this.cors,
     this.service,
     this.description,
     this.certificate,
   });
-
   factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSecurityFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementSecurityToJson(this);
@@ -1488,16 +1174,13 @@ class CapabilityStatementSecurity {
 class CapabilityStatementCertificate {
   String type;
   String blob;
-
   CapabilityStatementCertificate({
     this.type,
     this.blob,
   });
-
   factory CapabilityStatementCertificate.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementCertificateFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$CapabilityStatementCertificateToJson(this);
+  Map<String, dynamic> toJson() => _$CapabilityStatementCertificateToJson(this);
 }
 
 class CapabilityStatementResource {
@@ -1516,7 +1199,6 @@ class CapabilityStatementResource {
   List<String> searchInclude;
   List<String> searchRevInclude;
   List<CapabilityStatementSearchParam> searchParam;
-
   CapabilityStatementResource({
     this.type,
     this.profile,
@@ -1534,7 +1216,6 @@ class CapabilityStatementResource {
     this.searchRevInclude,
     this.searchParam,
   });
-
   factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementResourceFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementResourceToJson(this);
@@ -1543,16 +1224,13 @@ class CapabilityStatementResource {
 class CapabilityStatementInteraction {
   String code;
   String documentation;
-
   CapabilityStatementInteraction({
     this.code,
     this.documentation,
   });
-
   factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteractionFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$CapabilityStatementInteractionToJson(this);
+  Map<String, dynamic> toJson() => _$CapabilityStatementInteractionToJson(this);
 }
 
 class CapabilityStatementSearchParam {
@@ -1560,31 +1238,25 @@ class CapabilityStatementSearchParam {
   String definition;
   String type;
   String documentation;
-
   CapabilityStatementSearchParam({
     this.name,
     this.definition,
     this.type,
     this.documentation,
   });
-
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSearchParamFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$CapabilityStatementSearchParamToJson(this);
+  Map<String, dynamic> toJson() => _$CapabilityStatementSearchParamToJson(this);
 }
 
 class CapabilityStatementInteraction1 {
   String code;
   String documentation;
-
   CapabilityStatementInteraction1({
     this.code,
     this.documentation,
   });
-
-  factory CapabilityStatementInteraction1.fromJson(
-          Map<String, dynamic> json) =>
+  factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteraction1FromJson(json);
   Map<String, dynamic> toJson() =>
       _$CapabilityStatementInteraction1ToJson(this);
@@ -1593,12 +1265,10 @@ class CapabilityStatementInteraction1 {
 class CapabilityStatementOperation {
   String name;
   Reference definition;
-
   CapabilityStatementOperation({
     this.name,
     @required this.definition,
   });
-
   factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementOperationFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementOperationToJson(this);
@@ -1610,7 +1280,6 @@ class CapabilityStatementMessaging {
   String documentation;
   List<CapabilityStatementSupportedMessage> supportedMessage;
   List<CapabilityStatementEvent> event;
-
   CapabilityStatementMessaging({
     this.endpoint,
     this.reliableCache,
@@ -1618,7 +1287,6 @@ class CapabilityStatementMessaging {
     this.supportedMessage,
     this.event,
   });
-
   factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementMessagingFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementMessagingToJson(this);
@@ -1627,12 +1295,10 @@ class CapabilityStatementMessaging {
 class CapabilityStatementEndpoint {
   Coding protocol;
   String address;
-
   CapabilityStatementEndpoint({
     @required this.protocol,
     this.address,
   });
-
   factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEndpointFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementEndpointToJson(this);
@@ -1641,12 +1307,10 @@ class CapabilityStatementEndpoint {
 class CapabilityStatementSupportedMessage {
   String mode;
   Reference definition;
-
   CapabilityStatementSupportedMessage({
     this.mode,
     @required this.definition,
   });
-
   factory CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatementSupportedMessageFromJson(json);
@@ -1662,7 +1326,6 @@ class CapabilityStatementEvent {
   Reference request;
   Reference response;
   String documentation;
-
   CapabilityStatementEvent({
     @required this.code,
     this.category,
@@ -1672,7 +1335,6 @@ class CapabilityStatementEvent {
     @required this.response,
     this.documentation,
   });
-
   factory CapabilityStatementEvent.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEventFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementEventToJson(this);
@@ -1682,32 +1344,15 @@ class CapabilityStatementDocument {
   String mode;
   String documentation;
   Reference profile;
-
   CapabilityStatementDocument({
     this.mode,
     this.documentation,
     @required this.profile,
   });
-
   factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementDocumentFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementDocumentToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'searchParameter.g.dart';
 
 class SearchParameter {
   String id;
@@ -1736,7 +1381,6 @@ class SearchParameter {
   List<String> modifier;
   List<String> chain;
   List<SearchParameterComponent> component;
-
   SearchParameter({
     this.id,
     this.resourceType = 'SearchParameter',
@@ -1765,7 +1409,6 @@ class SearchParameter {
     this.chain,
     this.component,
   });
-
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
   Map<String, dynamic> toJson() => _$SearchParameterToJson(this);
@@ -1774,12 +1417,10 @@ class SearchParameter {
 class SearchParameterComponent {
   Reference definition;
   String expression;
-
   SearchParameterComponent({
     @required this.definition,
     this.expression,
   });
-
   factory SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterComponentFromJson(json);
   Map<String, dynamic> toJson() => _$SearchParameterComponentToJson(this);

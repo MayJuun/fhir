@@ -1,35 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
+import '../../../../fhir_stu3.dart';
 
-
-
-
-
-
-part 'requestandresponse.freezed.dart';
-
-part 'requestandresponse.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'deviceRequest.g.dart';
+part 'request_and_response.freezed.dart';
+part 'request_and_response.g.dart';
 
 class DeviceRequest {
   String id;
@@ -107,25 +82,6 @@ class DeviceRequestRequester {
   Map<String, dynamic> toJson() => _$DeviceRequestRequesterToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'deviceUseStatement.g.dart';
-
 class DeviceUseStatement {
   String id;
   String resourceType;
@@ -165,25 +121,6 @@ class DeviceUseStatement {
       _$DeviceUseStatementFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceUseStatementToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'communicationRequest.g.dart';
 
 class CommunicationRequest {
   String id;
@@ -271,21 +208,6 @@ class CommunicationRequestRequester {
   Map<String, dynamic> toJson() => _$CommunicationRequestRequesterToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'communication.g.dart';
-
 class Communication {
   String id;
   String resourceType;
@@ -355,25 +277,6 @@ class CommunicationPayload {
       _$CommunicationPayloadFromJson(json);
   Map<String, dynamic> toJson() => _$CommunicationPayloadToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'supplyRequest.g.dart';
 
 class SupplyRequest {
   String id;
@@ -448,24 +351,6 @@ class SupplyRequestRequester {
       _$SupplyRequestRequesterFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyRequestRequesterToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'supplyDelivery.g.dart';
 
 class SupplyDelivery {
   String id;

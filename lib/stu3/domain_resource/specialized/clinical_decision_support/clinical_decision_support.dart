@@ -1,33 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
+import '../../../../fhir_stu3.dart';
 
-
-
-
-
-
-part 'clinicaldecisionsupport.freezed.dart';
-
-part 'clinicaldecisionsupport.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'guidanceResponse.g.dart';
+part 'clinical_decision_support.freezed.dart';
+part 'clinical_decision_support.g.dart';
 
 class GuidanceResponse {
   String id;
@@ -72,4 +49,3 @@ class GuidanceResponse {
       _$GuidanceResponseFromJson(json);
   Map<String, dynamic> toJson() => _$GuidanceResponseToJson(this);
 }
-

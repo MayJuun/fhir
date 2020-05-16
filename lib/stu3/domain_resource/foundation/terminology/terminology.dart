@@ -1,33 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'terminology.freezed.dart';
-
 part 'terminology.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'namingSystem.g.dart';
 
 class NamingSystem {
   String id;
@@ -90,23 +67,6 @@ class NamingSystemUniqueId {
       _$NamingSystemUniqueIdFromJson(json);
   Map<String, dynamic> toJson() => _$NamingSystemUniqueIdToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'conceptMap.g.dart';
 
 class ConceptMap {
   String id;
@@ -257,23 +217,6 @@ class ConceptMapUnmapped {
       _$ConceptMapUnmappedFromJson(json);
   Map<String, dynamic> toJson() => _$ConceptMapUnmappedToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'valueSet.g.dart';
 
 class ValueSet {
   String id;
@@ -485,21 +428,6 @@ class ValueSetContains {
   Map<String, dynamic> toJson() => _$ValueSetContainsToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'codeSystem.g.dart';
-
 class CodeSystem {
   String id;
   String resourceType;
@@ -662,22 +590,6 @@ class CodeSystemProperty1 {
   Map<String, dynamic> toJson() => _$CodeSystemProperty1ToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'expansionProfile.g.dart';
-
 class ExpansionProfile {
   String id;
   String resourceType;
@@ -765,8 +677,7 @@ class ExpansionProfileExcludedSystem {
 
   factory ExpansionProfileExcludedSystem.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileExcludedSystemFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ExpansionProfileExcludedSystemToJson(this);
+  Map<String, dynamic> toJson() => _$ExpansionProfileExcludedSystemToJson(this);
 }
 
 class ExpansionProfileDesignation {

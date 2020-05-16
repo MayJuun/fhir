@@ -1,41 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'general.freezed.dart';
-
 part 'general.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'contract.g.dart';
 
 class Contract {
   String id;
@@ -277,23 +246,6 @@ class ContractRule {
   Map<String, dynamic> toJson() => _$ContractRuleToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'account.g.dart';
-
 class Account {
   String id;
   String resourceType;
@@ -361,29 +313,6 @@ class AccountGuarantor {
       _$AccountGuarantorFromJson(json);
   Map<String, dynamic> toJson() => _$AccountGuarantorToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'chargeItem.g.dart';
 
 class ChargeItem {
   String id;
@@ -462,32 +391,6 @@ class ChargeItemParticipant {
       _$ChargeItemParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$ChargeItemParticipantToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'explanationOfBenefit.g.dart';
 
 class ExplanationOfBenefit {
   String id;
@@ -638,8 +541,7 @@ class ExplanationOfBenefitInformation {
     this.reason,
   });
 
-  factory ExplanationOfBenefitInformation.fromJson(
-          Map<String, dynamic> json) =>
+  factory ExplanationOfBenefitInformation.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitInformationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ExplanationOfBenefitInformationToJson(this);
@@ -982,8 +884,7 @@ class ExplanationOfBenefitProcessNote {
     this.language,
   });
 
-  factory ExplanationOfBenefitProcessNote.fromJson(
-          Map<String, dynamic> json) =>
+  factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcessNoteFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ExplanationOfBenefitProcessNoteToJson(this);

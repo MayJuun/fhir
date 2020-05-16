@@ -1,28 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'testing.freezed.dart';
-
 part 'testing.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-part 'testReport.g.dart';
 
 class TestReport {
   String id;
@@ -189,25 +171,6 @@ class TestReportAction2 {
       _$TestReportAction2FromJson(json);
   Map<String, dynamic> toJson() => _$TestReportAction2ToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'testScript.g.dart';
 
 class TestScript {
   String id;

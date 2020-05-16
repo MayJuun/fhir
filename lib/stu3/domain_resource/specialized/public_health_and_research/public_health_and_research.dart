@@ -1,30 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
+import '../../../../fhir_stu3.dart';
 
-
-
-
-
-
-part 'publichealthandresearch.freezed.dart';
-
-part 'publichealthandresearch.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'researchSubject.g.dart';
+part 'public_health_and_research.freezed.dart';
+part 'public_health_and_research.g.dart';
 
 class ResearchSubject {
   String id;
@@ -55,25 +35,6 @@ class ResearchSubject {
       _$ResearchSubjectFromJson(json);
   Map<String, dynamic> toJson() => _$ResearchSubjectToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'researchStudy.g.dart';
 
 class ResearchStudy {
   String id;

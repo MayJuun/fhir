@@ -1,34 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'billing.freezed.dart';
-
 part 'billing.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'claimResponse.g.dart';
 
 class ClaimResponse {
   String id;
@@ -291,29 +267,6 @@ class ClaimResponseInsurance {
       _$ClaimResponseInsuranceFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseInsuranceToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'claim.g.dart';
 
 class Claim {
   String id;

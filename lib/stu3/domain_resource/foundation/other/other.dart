@@ -1,29 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'other.freezed.dart';
-
 part 'other.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'basic.g.dart';
 
 class Basic {
   String id;
@@ -47,17 +28,6 @@ class Basic {
   factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
   Map<String, dynamic> toJson() => _$BasicToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-part 'subscription.g.dart';
 
 class Subscription {
   String id;
@@ -106,25 +76,6 @@ class SubscriptionChannel {
       _$SubscriptionChannelFromJson(json);
   Map<String, dynamic> toJson() => _$SubscriptionChannelToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'media.g.dart';
 
 class Media {
   String id;
@@ -177,15 +128,6 @@ class Media {
   Map<String, dynamic> toJson() => _$MediaToJson(this);
 }
 
-
-
-
-
-
-
-
-part 'operationOutcome.g.dart';
-
 class OperationOutcome {
   String id;
   String resourceType;
@@ -223,15 +165,6 @@ class OperationOutcomeIssue {
       _$OperationOutcomeIssueFromJson(json);
   Map<String, dynamic> toJson() => _$OperationOutcomeIssueToJson(this);
 }
-
-
-
-
-
-
-
-
-part 'linkage.g.dart';
 
 class Linkage {
   String id;

@@ -1,31 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'security.freezed.dart';
-
 part 'security.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'auditEvent.g.dart';
 
 class AuditEvent {
   String id;
@@ -167,26 +146,6 @@ class AuditEventDetail {
   Map<String, dynamic> toJson() => _$AuditEventDetailToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'provenance.g.dart';
-
 class Provenance {
   String id;
   String resourceType;
@@ -262,25 +221,6 @@ class ProvenanceEntity {
       _$ProvenanceEntityFromJson(json);
   Map<String, dynamic> toJson() => _$ProvenanceEntityToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'consent.g.dart';
 
 class Consent {
   String id;

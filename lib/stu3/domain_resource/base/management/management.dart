@@ -1,29 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'management.freezed.dart';
-
 part 'management.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'lists.g.dart';
 
 class Lists {
   String id;
@@ -81,34 +62,6 @@ class ListEntry {
       _$ListEntryFromJson(json);
   Map<String, dynamic> toJson() => _$ListEntryToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'library.g.dart';
 
 class Library {
   String id;
@@ -175,25 +128,6 @@ class Library {
       _$LibraryFromJson(json);
   Map<String, dynamic> toJson() => _$LibraryToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'encounter.g.dart';
 
 class Encounter {
   String id;
@@ -355,21 +289,6 @@ class EncounterLocation {
   Map<String, dynamic> toJson() => _$EncounterLocationToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'flag.g.dart';
-
 class Flag {
   String id;
   String resourceType;
@@ -398,21 +317,6 @@ class Flag {
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
   Map<String, dynamic> toJson() => _$FlagToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'episodeOfCare.g.dart';
 
 class EpisodeOfCare {
   String id;

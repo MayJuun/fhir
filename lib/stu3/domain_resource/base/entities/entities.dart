@@ -1,14 +1,9 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'entities.freezed.dart';
-
 part 'entities.g.dart';
 
 class Substance {
@@ -70,6 +65,7 @@ class SubstanceIngredient {
       _$SubstanceIngredientFromJson(json);
   Map<String, dynamic> toJson() => _$SubstanceIngredientToJson(this);
 }
+
 class Endpoint {
   String id;
   String resourceType;
@@ -105,6 +101,7 @@ class Endpoint {
       _$EndpointFromJson(json);
   Map<String, dynamic> toJson() => _$EndpointToJson(this);
 }
+
 class DeviceComponent {
   String id;
   String resourceType;
@@ -156,6 +153,7 @@ class DeviceComponentProductionSpecification {
   Map<String, dynamic> toJson() =>
       _$DeviceComponentProductionSpecificationToJson(this);
 }
+
 class DeviceMetric {
   String id;
   String resourceType;
@@ -205,6 +203,7 @@ class DeviceMetricCalibration {
       _$DeviceMetricCalibrationFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceMetricCalibrationToJson(this);
 }
+
 class Location {
   String id;
   String resourceType;
@@ -264,6 +263,7 @@ class LocationPosition {
       _$LocationPositionFromJson(json);
   Map<String, dynamic> toJson() => _$LocationPositionToJson(this);
 }
+
 class Device {
   String id;
   String resourceType;
@@ -334,6 +334,7 @@ class DeviceUdi {
       _$DeviceUdiFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceUdiToJson(this);
 }
+
 class HealthcareService {
   String id;
   String resourceType;
@@ -411,8 +412,7 @@ class HealthcareServiceAvailableTime {
 
   factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceAvailableTimeFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$HealthcareServiceAvailableTimeToJson(this);
+  Map<String, dynamic> toJson() => _$HealthcareServiceAvailableTimeToJson(this);
 }
 
 class HealthcareServiceNotAvailable {
@@ -428,6 +428,7 @@ class HealthcareServiceNotAvailable {
       _$HealthcareServiceNotAvailableFromJson(json);
   Map<String, dynamic> toJson() => _$HealthcareServiceNotAvailableToJson(this);
 }
+
 class Organization {
   String id;
   String resourceType;

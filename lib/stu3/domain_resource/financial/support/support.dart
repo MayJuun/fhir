@@ -1,25 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'support.freezed.dart';
-
 part 'support.g.dart';
-
-
-
-
-
-
-
-
-
-part 'enrollmentRequest.g.dart';
 
 class EnrollmentRequest {
   String id;
@@ -50,17 +35,6 @@ class EnrollmentRequest {
       _$EnrollmentRequestFromJson(json);
   Map<String, dynamic> toJson() => _$EnrollmentRequestToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-part 'enrollmentResponse.g.dart';
 
 class EnrollmentResponse {
   String id;
@@ -93,19 +67,6 @@ class EnrollmentResponse {
       _$EnrollmentResponseFromJson(json);
   Map<String, dynamic> toJson() => _$EnrollmentResponseToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-part 'coverage.g.dart';
 
 class Coverage {
   String id;
@@ -186,22 +147,6 @@ class CoverageGrouping {
       _$CoverageGroupingFromJson(json);
   Map<String, dynamic> toJson() => _$CoverageGroupingToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'eligibilityResponse.g.dart';
 
 class EligibilityResponse {
   String id;
@@ -322,19 +267,6 @@ class EligibilityResponseError {
       _$EligibilityResponseErrorFromJson(json);
   Map<String, dynamic> toJson() => _$EligibilityResponseErrorToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-part 'eligibilityRequest.g.dart';
 
 class EligibilityRequest {
   String id;

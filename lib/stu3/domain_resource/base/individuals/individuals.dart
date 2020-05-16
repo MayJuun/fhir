@@ -1,17 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'individuals.freezed.dart';
-
 part 'individuals.g.dart';
-
-
 
 class PractitionerRole {
   String id;
@@ -87,25 +80,6 @@ class PractitionerRoleNotAvailable {
   Map<String, dynamic> toJson() => _$PractitionerRoleNotAvailableToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'group.g.dart';
-
 class Group {
   String id;
   String resourceType;
@@ -177,26 +151,6 @@ class GroupMember {
   Map<String, dynamic> toJson() => _$GroupMemberToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'person.g.dart';
-
 class Person {
   String id;
   String resourceType;
@@ -244,29 +198,6 @@ class PersonLink {
   Map<String, dynamic> toJson() => _$PersonLinkToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'relatedPerson.g.dart';
-
 class RelatedPerson {
   String id;
   String resourceType;
@@ -302,29 +233,6 @@ class RelatedPerson {
       _$RelatedPersonFromJson(json);
   Map<String, dynamic> toJson() => _$RelatedPersonToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'patient.g.dart';
 
 class Patient {
   String id;
@@ -445,29 +353,6 @@ class PatientLink {
       _$PatientLinkFromJson(json);
   Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'practitioner.g.dart';
 
 class Practitioner {
   String id;

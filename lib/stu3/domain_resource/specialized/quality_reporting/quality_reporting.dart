@@ -1,31 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
+import '../../../../fhir_stu3.dart';
 
-
-
-
-
-
-part 'qualityreporting.freezed.dart';
-
-part 'qualityreporting.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'measureReport.g.dart';
+part 'quality_reporting.freezed.dart';
+part 'quality_reporting.g.dart';
 
 class MeasureReport {
   String id;
@@ -144,30 +123,6 @@ class MeasureReportPopulation1 {
       _$MeasureReportPopulation1FromJson(json);
   Map<String, dynamic> toJson() => _$MeasureReportPopulation1ToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'measure.g.dart';
 
 class Measure {
   String id;

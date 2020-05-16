@@ -1,14 +1,9 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
+import '../../../../fhir_stu3.dart';
 
-
-
-
-
-
-part 'carep_rovision.freezed.dart';
-
+part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
 class CarePlan {
@@ -719,7 +714,6 @@ class RiskAssessmentPrediction {
       _$RiskAssessmentPredictionFromJson(json);
   Map<String, dynamic> toJson() => _$RiskAssessmentPredictionToJson(this);
 }
-
 
 class RequestGroup {
   String id;

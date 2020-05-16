@@ -1,45 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
+import '../../../../fhir_stu3.dart';
 
-
-
-
-
-
-part 'definitionalartifacts.freezed.dart';
-
-part 'definitionalartifacts.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'activityDefinition.g.dart';
+part 'definitional_artifacts.freezed.dart';
+part 'definitional_artifacts.g.dart';
 
 class ActivityDefinition {
   String id;
@@ -160,32 +125,8 @@ class ActivityDefinitionDynamicValue {
 
   factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
       _$ActivityDefinitionDynamicValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ActivityDefinitionDynamicValueToJson(this);
+  Map<String, dynamic> toJson() => _$ActivityDefinitionDynamicValueToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'questionnaire.g.dart';
 
 class Questionnaire {
   String id;
@@ -363,32 +304,6 @@ class QuestionnaireOption {
   Map<String, dynamic> toJson() => _$QuestionnaireOptionToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'serviceDefinition.g.dart';
-
 class ServiceDefinition {
   String id;
   String resourceType;
@@ -452,43 +367,6 @@ class ServiceDefinition {
       _$ServiceDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$ServiceDefinitionToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'planDefinition.g.dart';
 
 class PlanDefinition {
   String id;

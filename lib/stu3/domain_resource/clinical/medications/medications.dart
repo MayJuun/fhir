@@ -1,40 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'medications.freezed.dart';
-
 part 'medications.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'medicationRequest.g.dart';
 
 class MedicationRequest {
   String id;
@@ -149,23 +119,6 @@ class MedicationRequestSubstitution {
       _$MedicationRequestSubstitutionFromJson(json);
   Map<String, dynamic> toJson() => _$MedicationRequestSubstitutionToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'immunization.g.dart';
 
 class Immunization {
   String id;
@@ -288,31 +241,11 @@ class ImmunizationVaccinationProtocol {
     this.doseStatusReason,
   });
 
-  factory ImmunizationVaccinationProtocol.fromJson(
-          Map<String, dynamic> json) =>
+  factory ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationVaccinationProtocolFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ImmunizationVaccinationProtocolToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'medicationDispense.g.dart';
 
 class MedicationDispense {
   String id;
@@ -409,22 +342,8 @@ class MedicationDispenseSubstitution {
 
   factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseSubstitutionFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$MedicationDispenseSubstitutionToJson(this);
+  Map<String, dynamic> toJson() => _$MedicationDispenseSubstitutionToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-part 'immunizationRecommendation.g.dart';
 
 class ImmunizationRecommendation {
   String id;
@@ -511,27 +430,6 @@ class ImmunizationRecommendationProtocol {
   Map<String, dynamic> toJson() =>
       _$ImmunizationRecommendationProtocolToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'medicationAdministration.g.dart';
 
 class MedicationAdministration {
   String id;
@@ -628,28 +526,8 @@ class MedicationAdministrationDosage {
 
   factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationDosageFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$MedicationAdministrationDosageToJson(this);
+  Map<String, dynamic> toJson() => _$MedicationAdministrationDosageToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'medicationStatement.g.dart';
 
 class MedicationStatement {
   String id;
@@ -704,21 +582,6 @@ class MedicationStatement {
       _$MedicationStatementFromJson(json);
   Map<String, dynamic> toJson() => _$MedicationStatementToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'medication.g.dart';
 
 class Medication {
   String id;

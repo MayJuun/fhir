@@ -1,34 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'payment.freezed.dart';
-
 part 'payment.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'paymentReconciliation.g.dart';
 
 class PaymentReconciliation {
   String id;
@@ -111,17 +87,6 @@ class PaymentReconciliationProcessNote {
   Map<String, dynamic> toJson() =>
       _$PaymentReconciliationProcessNoteToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-part 'paymentNotice.g.dart';
 
 class PaymentNotice {
   String id;

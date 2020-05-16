@@ -1,38 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'summary.freezed.dart';
-
 part 'summary.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'familyMemberHistory.g.dart';
 
 class FamilyMemberHistory {
   String id;
@@ -124,27 +96,6 @@ class FamilyMemberHistoryCondition {
   Map<String, dynamic> toJson() => _$FamilyMemberHistoryConditionToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'allergyIntolerance.g.dart';
-
 class AllergyIntolerance {
   String id;
   String resourceType;
@@ -220,27 +171,6 @@ class AllergyIntoleranceReaction {
       _$AllergyIntoleranceReactionFromJson(json);
   Map<String, dynamic> toJson() => _$AllergyIntoleranceReactionToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'condition.g.dart';
 
 class Condition {
   String id;
@@ -333,23 +263,6 @@ class ConditionEvidence {
       _$ConditionEvidenceFromJson(json);
   Map<String, dynamic> toJson() => _$ConditionEvidenceToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'procedure.g.dart';
 
 class Procedure {
   String id;
@@ -449,19 +362,6 @@ class ProcedureFocalDevice {
   Map<String, dynamic> toJson() => _$ProcedureFocalDeviceToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-part 'detectedIssue.g.dart';
-
 class DetectedIssue {
   String id;
   String resourceType;
@@ -513,19 +413,6 @@ class DetectedIssueMitigation {
       _$DetectedIssueMitigationFromJson(json);
   Map<String, dynamic> toJson() => _$DetectedIssueMitigationToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-part 'adverseEvent.g.dart';
 
 class AdverseEvent {
   String id;
@@ -597,23 +484,6 @@ class AdverseEventSuspectEntity {
   Map<String, dynamic> toJson() => _$AdverseEventSuspectEntityToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'clinicalImpression.g.dart';
-
 class ClinicalImpression {
   String id;
   String resourceType;
@@ -677,8 +547,7 @@ class ClinicalImpressionInvestigation {
     this.item,
   });
 
-  factory ClinicalImpressionInvestigation.fromJson(
-          Map<String, dynamic> json) =>
+  factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionInvestigationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ClinicalImpressionInvestigationToJson(this);

@@ -1,35 +1,10 @@
-  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-// 
-
-
-
-
-
+import '../../../../fhir_stu3.dart';
 
 part 'documents.freezed.dart';
-
 part 'documents.g.dart';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'documentReference.g.dart';
 
 class DocumentReference {
   String id;
@@ -145,21 +120,6 @@ class DocumentReferenceRelated {
   Map<String, dynamic> toJson() => _$DocumentReferenceRelatedToJson(this);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'documentManifest.g.dart';
-
 class DocumentManifest {
   String id;
   String resourceType;
@@ -225,23 +185,6 @@ class DocumentManifestRelated {
       _$DocumentManifestRelatedFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentManifestRelatedToJson(this);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-part 'composition.g.dart';
 
 class Composition {
   String id;
@@ -360,4 +303,3 @@ class CompositionSection {
       _$CompositionSectionFromJson(json);
   Map<String, dynamic> toJson() => _$CompositionSectionToJson(this);
 }
-
