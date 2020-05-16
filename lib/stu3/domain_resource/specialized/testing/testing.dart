@@ -9,22 +9,22 @@ part 'testing.g.dart';
 @freezed
 abstract class TestReport with _$TestReport {
 factory TestReport({
-  String id;
-  String resourceType;
-  Identifier identifier;
-  String name;
-  String status;
-  Reference testScript;
-  String result;
-  double score;
-  String tester;
-  String issued;
-  List<TestReportParticipant> participant;
-  TestReportSetup setup;
-  List<TestReportTest> test;
-  TestReportTeardown teardown;
+  String id,
+  String resourceType,
+  Identifier identifier,
+  String name,
+  String status,
+  Reference testScript,
+  String result,
+  double score,
+  String tester,
+  String issued,
+  List<TestReportParticipant> participant,
+  TestReportSetup setup,
+  List<TestReportTest> test,
+  TestReportTeardown teardown,
 
-  }) = _TestReport;
+  }) = _TestReport,
 
 factory TestReport.fromJson(Map<String, dynamic> json) =>
       _$TestReportFromJson(json);
@@ -34,11 +34,11 @@ factory TestReport.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestReportParticipant with _$TestReportParticipant {
 factory TestReportParticipant({
-  String type;
-  String uri;
-  String display;
+  String type,
+  String uri,
+  String display,
 
-  }) = _TestReportParticipant;
+  }) = _TestReportParticipant,
 
 factory TestReportParticipant.fromJson(Map<String, dynamic> json) =>
       _$TestReportParticipantFromJson(json);
@@ -48,9 +48,9 @@ factory TestReportParticipant.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestReportSetup with _$TestReportSetup {
 factory TestReportSetup({
-  List<TestReportAction> action;
+  List<TestReportAction> action,
 
-  }) = _TestReportSetup;
+  }) = _TestReportSetup,
 
 factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
       _$TestReportSetupFromJson(json);
@@ -60,10 +60,10 @@ factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestReportAction with _$TestReportAction {
 factory TestReportAction({
-  TestReportOperation operation;
-  TestReportAssert asserts;
+  TestReportOperation operation,
+  TestReportAssert asserts,
 
-  }) = _TestReportAction;
+  }) = _TestReportAction,
 
 factory TestReportAction.fromJson(Map<String, dynamic> json) =>
       _$TestReportActionFromJson(json);
@@ -73,11 +73,11 @@ factory TestReportAction.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestReportOperation with _$TestReportOperation {
 factory TestReportOperation({
-  String result;
-  String message;
-  String detail;
+  String result,
+  String message,
+  String detail,
 
-  }) = _TestReportOperation;
+  }) = _TestReportOperation,
 
 factory TestReportOperation.fromJson(Map<String, dynamic> json) =>
       _$TestReportOperationFromJson(json);
@@ -87,11 +87,11 @@ factory TestReportOperation.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestReportAssert with _$TestReportAssert {
 factory TestReportAssert({
-  String result;
-  String message;
-  String detail;
+  String result,
+  String message,
+  String detail,
 
-  }) = _TestReportAssert;
+  }) = _TestReportAssert,
 
 factory TestReportAssert.fromJson(Map<String, dynamic> json) =>
       _$TestReportAssertFromJson(json);
@@ -101,11 +101,11 @@ factory TestReportAssert.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestReportTest with _$TestReportTest {
 factory TestReportTest({
-  String name;
-  String description;
-  List<TestReportAction1> action;
+  String name,
+  String description,
+  List<TestReportAction1> action,
 
-  }) = _TestReportTest;
+  }) = _TestReportTest,
 
 factory TestReportTest.fromJson(Map<String, dynamic> json) =>
       _$TestReportTestFromJson(json);
@@ -115,10 +115,10 @@ factory TestReportTest.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestReportAction1 with _$TestReportAction1 {
 factory TestReportAction1({
-  TestReportOperation operation;
-  TestReportAssert asserts;
+  TestReportOperation operation,
+  TestReportAssert asserts,
 
-  }) = _TestReportAction1;
+  }) = _TestReportAction1,
 
 factory TestReportAction1.fromJson(Map<String, dynamic> json) =>
       _$TestReportAction1FromJson(json);
@@ -128,9 +128,9 @@ factory TestReportAction1.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestReportTeardown with _$TestReportTeardown {
 factory TestReportTeardown({
-  List<TestReportAction2> action;
+  List<TestReportAction2> action,
 
-  }) = _TestReportTeardown;
+  }) = _TestReportTeardown,
 
 factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestReportTeardownFromJson(json);
@@ -140,9 +140,9 @@ factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestReportAction2 with _$TestReportAction2 {
 factory TestReportAction2({
-  TestReportOperation operation;
+  TestReportOperation operation,
 
-  }) = _TestReportAction2;
+  }) = _TestReportAction2,
 
 factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
       _$TestReportAction2FromJson(json);
@@ -152,36 +152,36 @@ factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScript with _$TestScript {
 factory TestScript({
-  String id;
-  String resourceType;
-  String url;
-  Identifier identifier;
-  String version;
-  String name;
-  String title;
-  String status;
-  bool experimental;
-  String date;
-  String publisher;
-  List<ContactDetail> contact;
-  String description;
-  List<UsageContext> useContext;
-  List<CodeableConcept> jurisdiction;
-  String purpose;
-  String copyright;
-  List<TestScriptOrigin> origin;
-  List<TestScriptDestination> destination;
-  TestScriptMetadata metadata;
-  List<TestScriptFixture> fixture;
-  List<Reference> profile;
-  List<TestScriptVariable> variable;
-  List<TestScriptRule> rule;
-  List<TestScriptRuleset> ruleset;
-  TestScriptSetup setup;
-  List<TestScriptTest> test;
-  TestScriptTeardown teardown;
+  String id,
+  String resourceType,
+  String url,
+  Identifier identifier,
+  String version,
+  String name,
+  String title,
+  String status,
+  bool experimental,
+  String date,
+  String publisher,
+  List<ContactDetail> contact,
+  String description,
+  List<UsageContext> useContext,
+  List<CodeableConcept> jurisdiction,
+  String purpose,
+  String copyright,
+  List<TestScriptOrigin> origin,
+  List<TestScriptDestination> destination,
+  TestScriptMetadata metadata,
+  List<TestScriptFixture> fixture,
+  List<Reference> profile,
+  List<TestScriptVariable> variable,
+  List<TestScriptRule> rule,
+  List<TestScriptRuleset> ruleset,
+  TestScriptSetup setup,
+  List<TestScriptTest> test,
+  TestScriptTeardown teardown,
 
-  }) = _TestScript;
+  }) = _TestScript,
 
 factory TestScript.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFromJson(json);
@@ -191,10 +191,10 @@ factory TestScript.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptOrigin with _$TestScriptOrigin {
 factory TestScriptOrigin({
-  double index;
-  Coding profile;
+  double index,
+  Coding profile,
 
-  }) = _TestScriptOrigin;
+  }) = _TestScriptOrigin,
 
 factory TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
       _$TestScriptOriginFromJson(json);
@@ -204,10 +204,10 @@ factory TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptDestination with _$TestScriptDestination {
 factory TestScriptDestination({
-  double index;
-  Coding profile;
+  double index,
+  Coding profile,
 
-  }) = _TestScriptDestination;
+  }) = _TestScriptDestination,
 
 factory TestScriptDestination.fromJson(Map<String, dynamic> json) =>
       _$TestScriptDestinationFromJson(json);
@@ -217,10 +217,10 @@ factory TestScriptDestination.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptMetadata with _$TestScriptMetadata {
 factory TestScriptMetadata({
-  List<TestScriptLink> link;
-  List<TestScriptCapability> capability;
+  List<TestScriptLink> link,
+  List<TestScriptCapability> capability,
 
-  }) = _TestScriptMetadata;
+  }) = _TestScriptMetadata,
 
 factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataFromJson(json);
@@ -230,10 +230,10 @@ factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptLink with _$TestScriptLink {
 factory TestScriptLink({
-  String url;
-  String description;
+  String url,
+  String description,
 
-  }) = _TestScriptLink;
+  }) = _TestScriptLink,
 
 factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
       _$TestScriptLinkFromJson(json);
@@ -243,15 +243,15 @@ factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptCapability with _$TestScriptCapability {
 factory TestScriptCapability({
-  bool require;
-  bool validated;
-  String description;
-  List<String> origin;
-  double destination;
-  List<String> link;
-  Reference capabilities;
+  bool require,
+  bool validated,
+  String description,
+  List<String> origin,
+  double destination,
+  List<String> link,
+  Reference capabilities,
 
-  }) = _TestScriptCapability;
+  }) = _TestScriptCapability,
 
 factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
       _$TestScriptCapabilityFromJson(json);
@@ -261,11 +261,11 @@ factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptFixture with _$TestScriptFixture {
 factory TestScriptFixture({
-  bool autocreate;
-  bool autodelete;
-  Reference resource;
+  bool autocreate,
+  bool autodelete,
+  Reference resource,
 
-  }) = _TestScriptFixture;
+  }) = _TestScriptFixture,
 
 factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFixtureFromJson(json);
@@ -275,16 +275,16 @@ factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptVariable with _$TestScriptVariable {
 factory TestScriptVariable({
-  String name;
-  String defaultValue;
-  String description;
-  String expression;
-  String headerField;
-  String hint;
-  String path;
-  String sourceId;
+  String name,
+  String defaultValue,
+  String description,
+  String expression,
+  String headerField,
+  String hint,
+  String path,
+  String sourceId,
 
-  }) = _TestScriptVariable;
+  }) = _TestScriptVariable,
 
 factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$TestScriptVariableFromJson(json);
@@ -294,10 +294,10 @@ factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptRule with _$TestScriptRule {
 factory TestScriptRule({
-  Reference resource;
-  List<TestScriptParam> param;
+  Reference resource,
+  List<TestScriptParam> param,
 
-  }) = _TestScriptRule;
+  }) = _TestScriptRule,
 
 factory TestScriptRule.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRuleFromJson(json);
@@ -307,10 +307,10 @@ factory TestScriptRule.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptParam with _$TestScriptParam {
 factory TestScriptParam({
-  String name;
-  String value;
+  String name,
+  String value,
 
-  }) = _TestScriptParam;
+  }) = _TestScriptParam,
 
 factory TestScriptParam.fromJson(Map<String, dynamic> json) =>
       _$TestScriptParamFromJson(json);
@@ -320,10 +320,10 @@ factory TestScriptParam.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptRuleset with _$TestScriptRuleset {
 factory TestScriptRuleset({
-  Reference resource;
-  List<TestScriptRule1> rule;
+  Reference resource,
+  List<TestScriptRule1> rule,
 
-  }) = _TestScriptRuleset;
+  }) = _TestScriptRuleset,
 
 factory TestScriptRuleset.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRulesetFromJson(json);
@@ -333,10 +333,10 @@ factory TestScriptRuleset.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptRule1 with _$TestScriptRule1 {
 factory TestScriptRule1({
-  String ruleId;
-  List<TestScriptParam1> param;
+  String ruleId,
+  List<TestScriptParam1> param,
 
-  }) = _TestScriptRule1;
+  }) = _TestScriptRule1,
 
 factory TestScriptRule1.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRule1FromJson(json);
@@ -346,10 +346,10 @@ factory TestScriptRule1.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptParam1 with _$TestScriptParam1 {
 factory TestScriptParam1({
-  String name;
-  String value;
+  String name,
+  String value,
 
-  }) = _TestScriptParam1;
+  }) = _TestScriptParam1,
 
 factory TestScriptParam1.fromJson(Map<String, dynamic> json) =>
       _$TestScriptParam1FromJson(json);
@@ -359,9 +359,9 @@ factory TestScriptParam1.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptSetup with _$TestScriptSetup {
 factory TestScriptSetup({
-  List<TestScriptAction> action;
+  List<TestScriptAction> action,
 
-  }) = _TestScriptSetup;
+  }) = _TestScriptSetup,
 
 factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupFromJson(json);
@@ -371,10 +371,10 @@ factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptAction with _$TestScriptAction {
 factory TestScriptAction({
-  TestScriptOperation operation;
-  TestScriptAssert asserts;
+  TestScriptOperation operation,
+  TestScriptAssert asserts,
 
-  }) = _TestScriptAction;
+  }) = _TestScriptAction,
 
 factory TestScriptAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptActionFromJson(json);
@@ -384,24 +384,24 @@ factory TestScriptAction.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptOperation with _$TestScriptOperation {
 factory TestScriptOperation({
-  Coding type;
-  String resource;
-  String label;
-  String description;
-  String accept;
-  String contentType;
-  double destination;
-  bool encodeRequestUrl;
-  double origin;
-  String params;
-  List<TestScriptRequestHeader> requestHeader;
-  String requestId;
-  String responseId;
-  String sourceId;
-  String targetId;
-  String url;
+  Coding type,
+  String resource,
+  String label,
+  String description,
+  String accept,
+  String contentType,
+  double destination,
+  bool encodeRequestUrl,
+  double origin,
+  String params,
+  List<TestScriptRequestHeader> requestHeader,
+  String requestId,
+  String responseId,
+  String sourceId,
+  String targetId,
+  String url,
 
-  }) = _TestScriptOperation;
+  }) = _TestScriptOperation,
 
 factory TestScriptOperation.fromJson(Map<String, dynamic> json) =>
       _$TestScriptOperationFromJson(json);
@@ -411,10 +411,10 @@ factory TestScriptOperation.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
 factory TestScriptRequestHeader({
-  String field;
-  String value;
+  String field,
+  String value,
 
-  }) = _TestScriptRequestHeader;
+  }) = _TestScriptRequestHeader,
 
 factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRequestHeaderFromJson(json);
@@ -424,32 +424,32 @@ factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptAssert with _$TestScriptAssert {
 factory TestScriptAssert({
-  String label;
-  String description;
-  String direction;
-  String compareToSourceId;
-  String compareToSourceExpression;
-  String compareToSourcePath;
-  String contentType;
-  String expression;
-  String headerField;
-  String minimumId;
-  bool navigationLinks;
-  String operator;
-  String path;
-  String requestMethod;
-  String requestURL;
-  String resource;
-  String response;
-  String responseCode;
-  TestScriptRule2 rule;
-  TestScriptRuleset1 ruleset;
-  String sourceId;
-  String validateProfileId;
-  String value;
-  bool warningOnly;
+  String label,
+  String description,
+  String direction,
+  String compareToSourceId,
+  String compareToSourceExpression,
+  String compareToSourcePath,
+  String contentType,
+  String expression,
+  String headerField,
+  String minimumId,
+  bool navigationLinks,
+  String operator,
+  String path,
+  String requestMethod,
+  String requestURL,
+  String resource,
+  String response,
+  String responseCode,
+  TestScriptRule2 rule,
+  TestScriptRuleset1 ruleset,
+  String sourceId,
+  String validateProfileId,
+  String value,
+  bool warningOnly,
 
-  }) = _TestScriptAssert;
+  }) = _TestScriptAssert,
 
 factory TestScriptAssert.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAssertFromJson(json);
@@ -459,10 +459,10 @@ factory TestScriptAssert.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptRule2 with _$TestScriptRule2 {
 factory TestScriptRule2({
-  String ruleId;
-  List<TestScriptParam2> param;
+  String ruleId,
+  List<TestScriptParam2> param,
 
-  }) = _TestScriptRule2;
+  }) = _TestScriptRule2,
 
 factory TestScriptRule2.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRule2FromJson(json);
@@ -472,10 +472,10 @@ factory TestScriptRule2.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptParam2 with _$TestScriptParam2 {
 factory TestScriptParam2({
-  String name;
-  String value;
+  String name,
+  String value,
 
-  }) = _TestScriptParam2;
+  }) = _TestScriptParam2,
 
 factory TestScriptParam2.fromJson(Map<String, dynamic> json) =>
       _$TestScriptParam2FromJson(json);
@@ -485,10 +485,10 @@ factory TestScriptParam2.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptRuleset1 with _$TestScriptRuleset1 {
 factory TestScriptRuleset1({
-  String rulesetId;
-  List<TestScriptRule3> rule;
+  String rulesetId,
+  List<TestScriptRule3> rule,
 
-  }) = _TestScriptRuleset1;
+  }) = _TestScriptRuleset1,
 
 factory TestScriptRuleset1.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRuleset1FromJson(json);
@@ -498,10 +498,10 @@ factory TestScriptRuleset1.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptRule3 with _$TestScriptRule3 {
 factory TestScriptRule3({
-  String ruleId;
-  List<TestScriptParam3> param;
+  String ruleId,
+  List<TestScriptParam3> param,
 
-  }) = _TestScriptRule3;
+  }) = _TestScriptRule3,
 
 factory TestScriptRule3.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRule3FromJson(json);
@@ -511,10 +511,10 @@ factory TestScriptRule3.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptParam3 with _$TestScriptParam3 {
 factory TestScriptParam3({
-  String name;
-  String value;
+  String name,
+  String value,
 
-  }) = _TestScriptParam3;
+  }) = _TestScriptParam3,
 
 factory TestScriptParam3.fromJson(Map<String, dynamic> json) =>
       _$TestScriptParam3FromJson(json);
@@ -524,11 +524,11 @@ factory TestScriptParam3.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptTest with _$TestScriptTest {
 factory TestScriptTest({
-  String name;
-  String description;
-  List<TestScriptAction1> action;
+  String name,
+  String description,
+  List<TestScriptAction1> action,
 
-  }) = _TestScriptTest;
+  }) = _TestScriptTest,
 
 factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTestFromJson(json);
@@ -538,10 +538,10 @@ factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptAction1 with _$TestScriptAction1 {
 factory TestScriptAction1({
-  TestScriptOperation operation;
-  TestScriptAssert asserts;
+  TestScriptOperation operation,
+  TestScriptAssert asserts,
 
-  }) = _TestScriptAction1;
+  }) = _TestScriptAction1,
 
 factory TestScriptAction1.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAction1FromJson(json);
@@ -551,9 +551,9 @@ factory TestScriptAction1.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptTeardown with _$TestScriptTeardown {
 factory TestScriptTeardown({
-  List<TestScriptAction2> action;
+  List<TestScriptAction2> action,
 
-  }) = _TestScriptTeardown;
+  }) = _TestScriptTeardown,
 
 factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTeardownFromJson(json);
@@ -563,9 +563,9 @@ factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class TestScriptAction2 with _$TestScriptAction2 {
 factory TestScriptAction2({
-  TestScriptOperation operation;
+  TestScriptOperation operation,
 
-  }) = _TestScriptAction2;
+  }) = _TestScriptAction2,
 
 factory TestScriptAction2.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAction2FromJson(json);

@@ -18,29 +18,29 @@ part 'diagnostics.g.dart';
 @freezed
 abstract class ImagingStudy with _$ImagingStudy {
 factory ImagingStudy({
-  String id;
-  String resourceType;
-  String uid;
-  Identifier accession;
-  List<Identifier> identifier;
-  String availability;
-  List<Coding> modalityList;
-  Reference patient;
-  Reference context;
-  String started;
-  List<Reference> basedOn;
-  Reference referrer;
-  List<Reference> interpreter;
-  List<Reference> endpoint;
-  double numberOfSeries;
-  double numberOfInstances;
-  List<Reference> procedureReference;
-  List<CodeableConcept> procedureCode;
-  CodeableConcept reason;
-  String description;
-  List<ImagingStudySeries> series;
+  String id,
+  String resourceType,
+  String uid,
+  Identifier accession,
+  List<Identifier> identifier,
+  String availability,
+  List<Coding> modalityList,
+  Reference patient,
+  Reference context,
+  String started,
+  List<Reference> basedOn,
+  Reference referrer,
+  List<Reference> interpreter,
+  List<Reference> endpoint,
+  double numberOfSeries,
+  double numberOfInstances,
+  List<Reference> procedureReference,
+  List<CodeableConcept> procedureCode,
+  CodeableConcept reason,
+  String description,
+  List<ImagingStudySeries> series,
 
-  }) = _ImagingStudy;
+  }) = _ImagingStudy,
 
 factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyFromJson(json);
@@ -50,20 +50,20 @@ factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ImagingStudySeries with _$ImagingStudySeries {
 factory ImagingStudySeries({
-  String uid;
-  double number;
-  Coding modality;
-  String description;
-  double numberOfInstances;
-  String availability;
-  List<Reference> endpoint;
-  Coding bodySite;
-  Coding laterality;
-  String started;
-  List<Reference> performer;
-  List<ImagingStudyInstance> instance;
+  String uid,
+  double number,
+  Coding modality,
+  String description,
+  double numberOfInstances,
+  String availability,
+  List<Reference> endpoint,
+  Coding bodySite,
+  Coding laterality,
+  String started,
+  List<Reference> performer,
+  List<ImagingStudyInstance> instance,
 
-  }) = _ImagingStudySeries;
+  }) = _ImagingStudySeries,
 
 factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesFromJson(json);
@@ -73,12 +73,12 @@ factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ImagingStudyInstance with _$ImagingStudyInstance {
 factory ImagingStudyInstance({
-  String uid;
-  double number;
-  String sopClass;
-  String title;
+  String uid,
+  double number,
+  String sopClass,
+  String title,
 
-  }) = _ImagingStudyInstance;
+  }) = _ImagingStudyInstance,
 
 factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyInstanceFromJson(json);
@@ -105,28 +105,28 @@ factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DiagnosticReport with _$DiagnosticReport {
 factory DiagnosticReport({
-  String id;
-  String resourceType;
-  List<Identifier> identifier;
-  List<Reference> basedOn;
-  String status;
-  CodeableConcept category;
-  CodeableConcept code;
-  Reference subject;
-  Reference context;
-  DateTime effectiveDateTime;
-  Period effectivePeriod;
-  String issued;
-  List<DiagnosticReportPerformer> performer;
-  List<Reference> specimen;
-  List<Reference> result;
-  List<Reference> imagingStudy;
-  List<DiagnosticReportImage> image;
-  String conclusion;
-  List<CodeableConcept> codedDiagnosis;
-  List<Attachment> presentedForm;
+  String id,
+  String resourceType,
+  List<Identifier> identifier,
+  List<Reference> basedOn,
+  String status,
+  CodeableConcept category,
+  CodeableConcept code,
+  Reference subject,
+  Reference context,
+  DateTime effectiveDateTime,
+  Period effectivePeriod,
+  String issued,
+  List<DiagnosticReportPerformer> performer,
+  List<Reference> specimen,
+  List<Reference> result,
+  List<Reference> imagingStudy,
+  List<DiagnosticReportImage> image,
+  String conclusion,
+  List<CodeableConcept> codedDiagnosis,
+  List<Attachment> presentedForm,
 
-  }) = _DiagnosticReport;
+  }) = _DiagnosticReport,
 
 factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportFromJson(json);
@@ -136,10 +136,10 @@ factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DiagnosticReportPerformer with _$DiagnosticReportPerformer {
 factory DiagnosticReportPerformer({
-  CodeableConcept role;
-  Reference actor;
+  CodeableConcept role,
+  Reference actor,
 
-  }) = _DiagnosticReportPerformer;
+  }) = _DiagnosticReportPerformer,
 
 factory DiagnosticReportPerformer.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportPerformerFromJson(json);
@@ -149,10 +149,10 @@ factory DiagnosticReportPerformer.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class DiagnosticReportImage with _$DiagnosticReportImage {
 factory DiagnosticReportImage({
-  String comment;
-  Reference link;
+  String comment,
+  Reference link,
 
-  }) = _DiagnosticReportImage;
+  }) = _DiagnosticReportImage,
 
 factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportImageFromJson(json);
@@ -177,21 +177,21 @@ factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class QuestionnaireResponse with _$QuestionnaireResponse {
 factory QuestionnaireResponse({
-  String id;
-  String resourceType;
-  Identifier identifier;
-  List<Reference> basedOn;
-  List<Reference> parent;
-  Reference questionnaire;
-  String status;
-  Reference subject;
-  Reference context;
-  String authored;
-  Reference author;
-  Reference source;
-  List<QuestionnaireResponseItem> item;
+  String id,
+  String resourceType,
+  Identifier identifier,
+  List<Reference> basedOn,
+  List<Reference> parent,
+  Reference questionnaire,
+  String status,
+  Reference subject,
+  Reference context,
+  String authored,
+  Reference author,
+  Reference source,
+  List<QuestionnaireResponseItem> item,
 
-  }) = _QuestionnaireResponse;
+  }) = _QuestionnaireResponse,
 
 factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseFromJson(json);
@@ -201,14 +201,14 @@ factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
 factory QuestionnaireResponseItem({
-  String linkId;
-  String definition;
-  String text;
-  Reference subject;
-  List<QuestionnaireResponseAnswer> answer;
-  List<QuestionnaireResponseItem> item;
+  String linkId,
+  String definition,
+  String text,
+  Reference subject,
+  List<QuestionnaireResponseAnswer> answer,
+  List<QuestionnaireResponseItem> item,
 
-  }) = _QuestionnaireResponseItem;
+  }) = _QuestionnaireResponseItem,
 
 factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseItemFromJson(json);
@@ -218,21 +218,21 @@ factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 factory QuestionnaireResponseAnswer({
-  bool valueBoolean;
-  double valueDecimal;
-  int valueInteger;
-  DateTime valueDate;
-  DateTime valueDateTime;
-  String valueTime;
-  String valueString;
-  String valueUri;
-  Attachment valueAttachment;
-  Coding valueCoding;
-  Quantity valueQuantity;
-  Reference valueReference;
-  List<QuestionnaireResponseItem> item;
+  bool valueBoolean,
+  double valueDecimal,
+  int valueInteger,
+  DateTime valueDate,
+  DateTime valueDateTime,
+  String valueTime,
+  String valueString,
+  String valueUri,
+  Attachment valueAttachment,
+  Coding valueCoding,
+  Quantity valueQuantity,
+  Reference valueReference,
+  List<QuestionnaireResponseItem> item,
 
-  }) = _QuestionnaireResponseAnswer;
+  }) = _QuestionnaireResponseAnswer,
 
 factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseAnswerFromJson(json);
@@ -253,16 +253,16 @@ factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ImagingManifest with _$ImagingManifest {
 factory ImagingManifest({
-  String id;
-  String resourceType;
-  Identifier identifier;
-  Reference patient;
-  String authoringTime;
-  Reference author;
-  String description;
-  List<ImagingManifestStudy> study;
+  String id,
+  String resourceType,
+  Identifier identifier,
+  Reference patient,
+  String authoringTime,
+  Reference author,
+  String description,
+  List<ImagingManifestStudy> study,
 
-  }) = _ImagingManifest;
+  }) = _ImagingManifest,
 
 factory ImagingManifest.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestFromJson(json);
@@ -272,12 +272,12 @@ factory ImagingManifest.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ImagingManifestStudy with _$ImagingManifestStudy {
 factory ImagingManifestStudy({
-  String uid;
-  Reference imagingStudy;
-  List<Reference> endpoint;
-  List<ImagingManifestSeries> series;
+  String uid,
+  Reference imagingStudy,
+  List<Reference> endpoint,
+  List<ImagingManifestSeries> series,
 
-  }) = _ImagingManifestStudy;
+  }) = _ImagingManifestStudy,
 
 factory ImagingManifestStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestStudyFromJson(json);
@@ -287,11 +287,11 @@ factory ImagingManifestStudy.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ImagingManifestSeries with _$ImagingManifestSeries {
 factory ImagingManifestSeries({
-  String uid;
-  List<Reference> endpoint;
-  List<ImagingManifestInstance> instance;
+  String uid,
+  List<Reference> endpoint,
+  List<ImagingManifestInstance> instance,
 
-  }) = _ImagingManifestSeries;
+  }) = _ImagingManifestSeries,
 
 factory ImagingManifestSeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestSeriesFromJson(json);
@@ -301,10 +301,10 @@ factory ImagingManifestSeries.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ImagingManifestInstance with _$ImagingManifestInstance {
 factory ImagingManifestInstance({
-  String sopClass;
-  String uid;
+  String sopClass,
+  String uid,
 
-  }) = _ImagingManifestInstance;
+  }) = _ImagingManifestInstance,
 
 factory ImagingManifestInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestInstanceFromJson(json);
@@ -327,25 +327,25 @@ factory ImagingManifestInstance.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class Sequence with _$Sequence {
 factory Sequence({
-  String id;
-  String resourceType;
-  List<Identifier> identifier;
-  String type;
-  double coordinateSystem;
-  Reference patient;
-  Reference specimen;
-  Reference device;
-  Reference performer;
-  Quantity quantity;
-  SequenceReferenceSeq referenceSeq;
-  List<SequenceVariant> variant;
-  String observedSeq;
-  List<SequenceQuality> quality;
-  double readCoverage;
-  List<SequenceRepository> repository;
-  List<Reference> pointer;
+  String id,
+  String resourceType,
+  List<Identifier> identifier,
+  String type,
+  double coordinateSystem,
+  Reference patient,
+  Reference specimen,
+  Reference device,
+  Reference performer,
+  Quantity quantity,
+  SequenceReferenceSeq referenceSeq,
+  List<SequenceVariant> variant,
+  String observedSeq,
+  List<SequenceQuality> quality,
+  double readCoverage,
+  List<SequenceRepository> repository,
+  List<Reference> pointer,
 
-  }) = _Sequence;
+  }) = _Sequence,
 
 factory Sequence.fromJson(Map<String, dynamic> json) =>
       _$SequenceFromJson(json);
@@ -357,14 +357,14 @@ factory Sequence.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class SequenceVariant with _$SequenceVariant {
 factory SequenceVariant({
-  double start;
-  double end;
-  String observedAllele;
-  String referenceAllele;
-  String cigar;
-  Reference variantPointer;
+  double start,
+  double end,
+  String observedAllele,
+  String referenceAllele,
+  String cigar,
+  Reference variantPointer,
 
-  }) = _SequenceVariant;
+  }) = _SequenceVariant,
 
 factory SequenceVariant.fromJson(Map<String, dynamic> json) =>
       _$SequenceVariantFromJson(json);
@@ -374,22 +374,22 @@ factory SequenceVariant.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class SequenceQuality with _$SequenceQuality {
 factory SequenceQuality({
-  String type;
-  CodeableConcept standardSequence;
-  double start;
-  double end;
-  Quantity score;
-  CodeableConcept method;
-  double truthTP;
-  double queryTP;
-  double truthFN;
-  double queryFP;
-  double gtFP;
-  double precision;
-  double recall;
-  double fScore;
+  String type,
+  CodeableConcept standardSequence,
+  double start,
+  double end,
+  Quantity score,
+  CodeableConcept method,
+  double truthTP,
+  double queryTP,
+  double truthFN,
+  double queryFP,
+  double gtFP,
+  double precision,
+  double recall,
+  double fScore,
 
-  }) = _SequenceQuality;
+  }) = _SequenceQuality,
 
 factory SequenceQuality.fromJson(Map<String, dynamic> json) =>
       _$SequenceQualityFromJson(json);
@@ -399,14 +399,14 @@ factory SequenceQuality.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class SequenceRepository with _$SequenceRepository {
 factory SequenceRepository({
-  String type;
-  String url;
-  String name;
-  String datasetId;
-  String variantsetId;
-  String readsetId;
+  String type,
+  String url,
+  String name,
+  String datasetId,
+  String variantsetId,
+  String readsetId,
 
-  }) = _SequenceRepository;
+  }) = _SequenceRepository,
 
 factory SequenceRepository.fromJson(Map<String, dynamic> json) =>
       _$SequenceRepositoryFromJson(json);
@@ -431,17 +431,17 @@ factory SequenceRepository.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class BodySite with _$BodySite {
 factory BodySite({
-  String id;
-  String resourceType;
-  List<Identifier> identifier;
-  bool active;
-  CodeableConcept code;
-  List<CodeableConcept> qualifier;
-  String description;
-  List<Attachment> image;
-  Reference patient;
+  String id,
+  String resourceType,
+  List<Identifier> identifier,
+  bool active,
+  CodeableConcept code,
+  List<CodeableConcept> qualifier,
+  String description,
+  List<Attachment> image,
+  Reference patient,
 
-  }) = _BodySite;
+  }) = _BodySite,
 
 factory BodySite.fromJson(Map<String, dynamic> json) =>
       _$BodySiteFromJson(json);
@@ -470,22 +470,22 @@ factory BodySite.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class Specimen with _$Specimen {
 factory Specimen({
-  String id;
-  String resourceType;
-  List<Identifier> identifier;
-  Identifier accessionIdentifier;
-  String status;
-  CodeableConcept type;
-  Reference subject;
-  String receivedTime;
-  List<Reference> parent;
-  List<Reference> request;
-  SpecimenCollection collection;
-  List<SpecimenProcessing> processing;
-  List<SpecimenContainer> container;
-  List<Annotation> note;
+  String id,
+  String resourceType,
+  List<Identifier> identifier,
+  Identifier accessionIdentifier,
+  String status,
+  CodeableConcept type,
+  Reference subject,
+  String receivedTime,
+  List<Reference> parent,
+  List<Reference> request,
+  SpecimenCollection collection,
+  List<SpecimenProcessing> processing,
+  List<SpecimenContainer> container,
+  List<Annotation> note,
 
-  }) = _Specimen;
+  }) = _Specimen,
 
 factory Specimen.fromJson(Map<String, dynamic> json) =>
       _$SpecimenFromJson(json);
@@ -495,14 +495,14 @@ factory Specimen.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class SpecimenCollection with _$SpecimenCollection {
 factory SpecimenCollection({
-  Reference collector;
-  DateTime collectedDateTime;
-  Period collectedPeriod;
-  Quantity quantity;
-  CodeableConcept method;
-  CodeableConcept bodySite;
+  Reference collector,
+  DateTime collectedDateTime,
+  Period collectedPeriod,
+  Quantity quantity,
+  CodeableConcept method,
+  CodeableConcept bodySite,
 
-  }) = _SpecimenCollection;
+  }) = _SpecimenCollection,
 
 factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
       _$SpecimenCollectionFromJson(json);
@@ -512,13 +512,13 @@ factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class SpecimenProcessing with _$SpecimenProcessing {
 factory SpecimenProcessing({
-  String description;
-  CodeableConcept procedure;
-  List<Reference> additive;
-  DateTime timeDateTime;
-  Period timePeriod;
+  String description,
+  CodeableConcept procedure,
+  List<Reference> additive,
+  DateTime timeDateTime,
+  Period timePeriod,
 
-  }) = _SpecimenProcessing;
+  }) = _SpecimenProcessing,
 
 factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
       _$SpecimenProcessingFromJson(json);
@@ -528,15 +528,15 @@ factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class SpecimenContainer with _$SpecimenContainer {
 factory SpecimenContainer({
-  List<Identifier> identifier;
-  String description;
-  CodeableConcept type;
-  Quantity capacity;
-  Quantity specimenQuantity;
-  CodeableConcept additiveCodeableConcept;
-  Reference additiveReference;
+  List<Identifier> identifier,
+  String description,
+  CodeableConcept type,
+  Quantity capacity,
+  Quantity specimenQuantity,
+  CodeableConcept additiveCodeableConcept,
+  Reference additiveReference,
 
-  }) = _SpecimenContainer;
+  }) = _SpecimenContainer,
 
 factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$SpecimenContainerFromJson(json);
@@ -571,42 +571,42 @@ factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class Observation with _$Observation {
 factory Observation({
-  String id;
-  String resourceType;
-  List<Identifier> identifier;
-  List<Reference> basedOn;
-  String status;
-  List<CodeableConcept> category;
-  CodeableConcept code;
-  Reference subject;
-  Reference context;
-  DateTime effectiveDateTime;
-  Period effectivePeriod;
-  String issued;
-  List<Reference> performer;
-  Quantity valueQuantity;
-  CodeableConcept valueCodeableConcept;
-  String valueString;
-  bool valueBoolean;
-  Range valueRange;
-  Ratio valueRatio;
-  SampledData valueSampledData;
-  Attachment valueAttachment;
-  String valueTime;
-  DateTime valueDateTime;
-  Period valuePeriod;
-  CodeableConcept dataAbsentReason;
-  CodeableConcept interpretation;
-  String comment;
-  CodeableConcept bodySite;
-  CodeableConcept method;
-  Reference specimen;
-  Reference device;
-  List<ObservationReferenceRange> referenceRange;
-  List<ObservationRelated> related;
-  List<ObservationComponent> component;
+  String id,
+  String resourceType,
+  List<Identifier> identifier,
+  List<Reference> basedOn,
+  String status,
+  List<CodeableConcept> category,
+  CodeableConcept code,
+  Reference subject,
+  Reference context,
+  DateTime effectiveDateTime,
+  Period effectivePeriod,
+  String issued,
+  List<Reference> performer,
+  Quantity valueQuantity,
+  CodeableConcept valueCodeableConcept,
+  String valueString,
+  bool valueBoolean,
+  Range valueRange,
+  Ratio valueRatio,
+  SampledData valueSampledData,
+  Attachment valueAttachment,
+  String valueTime,
+  DateTime valueDateTime,
+  Period valuePeriod,
+  CodeableConcept dataAbsentReason,
+  CodeableConcept interpretation,
+  String comment,
+  CodeableConcept bodySite,
+  CodeableConcept method,
+  Reference specimen,
+  Reference device,
+  List<ObservationReferenceRange> referenceRange,
+  List<ObservationRelated> related,
+  List<ObservationComponent> component,
 
-  }) = _Observation;
+  }) = _Observation,
 
 factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
@@ -616,14 +616,14 @@ factory Observation.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ObservationReferenceRange with _$ObservationReferenceRange {
 factory ObservationReferenceRange({
-  Quantity low;
-  Quantity high;
-  CodeableConcept type;
-  List<CodeableConcept> appliesTo;
-  Range age;
-  String text;
+  Quantity low,
+  Quantity high,
+  CodeableConcept type,
+  List<CodeableConcept> appliesTo,
+  Range age,
+  String text,
 
-  }) = _ObservationReferenceRange;
+  }) = _ObservationReferenceRange,
 
 factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$ObservationReferenceRangeFromJson(json);
@@ -633,10 +633,10 @@ factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ObservationRelated with _$ObservationRelated {
 factory ObservationRelated({
-  String type;
-  Reference target;
+  String type,
+  Reference target,
 
-  }) = _ObservationRelated;
+  }) = _ObservationRelated,
 
 factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
       _$ObservationRelatedFromJson(json);
@@ -646,22 +646,22 @@ factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ObservationComponent with _$ObservationComponent {
 factory ObservationComponent({
-  CodeableConcept code;
-  Quantity valueQuantity;
-  CodeableConcept valueCodeableConcept;
-  String valueString;
-  Range valueRange;
-  Ratio valueRatio;
-  SampledData valueSampledData;
-  Attachment valueAttachment;
-  String valueTime;
-  DateTime valueDateTime;
-  Period valuePeriod;
-  CodeableConcept dataAbsentReason;
-  CodeableConcept interpretation;
-  List<ObservationReferenceRange> referenceRange;
+  CodeableConcept code,
+  Quantity valueQuantity,
+  CodeableConcept valueCodeableConcept,
+  String valueString,
+  Range valueRange,
+  Ratio valueRatio,
+  SampledData valueSampledData,
+  Attachment valueAttachment,
+  String valueTime,
+  DateTime valueDateTime,
+  Period valuePeriod,
+  CodeableConcept dataAbsentReason,
+  CodeableConcept interpretation,
+  List<ObservationReferenceRange> referenceRange,
 
-  }) = _ObservationComponent;
+  }) = _ObservationComponent,
 
 factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
 Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);

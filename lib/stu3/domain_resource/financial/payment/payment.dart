@@ -9,24 +9,24 @@ part 'payment.g.dart';
 @freezed
 abstract class PaymentReconciliation with _$PaymentReconciliation {
 factory PaymentReconciliation({
-  String id;
-  String resourceType;
-  List<Identifier> identifier;
-  String status;
-  Period period;
-  String created;
-  Reference organization;
-  Reference request;
-  CodeableConcept outcome;
-  String disposition;
-  Reference requestProvider;
-  Reference requestOrganization;
-  List<PaymentReconciliationDetail> detail;
-  CodeableConcept form;
-  Money total;
-  List<PaymentReconciliationProcessNote> processNote;
+  String id,
+  String resourceType,
+  List<Identifier> identifier,
+  String status,
+  Period period,
+  String created,
+  Reference organization,
+  Reference request,
+  CodeableConcept outcome,
+  String disposition,
+  Reference requestProvider,
+  Reference requestOrganization,
+  List<PaymentReconciliationDetail> detail,
+  CodeableConcept form,
+  Money total,
+  List<PaymentReconciliationProcessNote> processNote,
 
-  }) = _PaymentReconciliation;
+  }) = _PaymentReconciliation,
 
 factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
@@ -36,15 +36,15 @@ factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 factory PaymentReconciliationDetail({
-  CodeableConcept type;
-  Reference request;
-  Reference response;
-  Reference submitter;
-  Reference payee;
-  String date;
-  Money amount;
+  CodeableConcept type,
+  Reference request,
+  Reference response,
+  Reference submitter,
+  Reference payee,
+  String date,
+  Money amount,
 
-  }) = _PaymentReconciliationDetail;
+  }) = _PaymentReconciliationDetail,
 
 factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
@@ -54,10 +54,10 @@ factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
 factory PaymentReconciliationProcessNote({
-  CodeableConcept type;
-  String text;
+  CodeableConcept type,
+  String text,
 
-  }) = _PaymentReconciliationProcessNote;
+  }) = _PaymentReconciliationProcessNote,
 
 factory PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>
@@ -69,20 +69,20 @@ factory PaymentReconciliationProcessNote.fromJson(
 @freezed
 abstract class PaymentNotice with _$PaymentNotice {
 factory PaymentNotice({
-  String id;
-  String resourceType;
-  List<Identifier> identifier;
-  String status;
-  Reference request;
-  Reference response;
-  DateTime statusDate;
-  String created;
-  Reference target;
-  Reference provider;
-  Reference organization;
-  CodeableConcept paymentStatus;
+  String id,
+  String resourceType,
+  List<Identifier> identifier,
+  String status,
+  Reference request,
+  Reference response,
+  DateTime statusDate,
+  String created,
+  Reference target,
+  Reference provider,
+  Reference organization,
+  CodeableConcept paymentStatus,
 
-  }) = _PaymentNotice;
+  }) = _PaymentNotice,
 
 factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);

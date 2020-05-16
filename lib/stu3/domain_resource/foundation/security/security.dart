@@ -9,20 +9,20 @@ part 'security.g.dart';
 @freezed
 abstract class AuditEvent with _$AuditEvent {
 factory AuditEvent({
-  String id;
-  String resourceType;
-  Coding type;
-  List<Coding> subtype;
-  String action;
-  String recorded;
-  String outcome;
-  String outcomeDesc;
-  List<CodeableConcept> purposeOfEvent;
-  List<AuditEventAgent> agent;
-  AuditEventSource source;
-  List<AuditEventEntity> entity;
+  String id,
+  String resourceType,
+  Coding type,
+  List<Coding> subtype,
+  String action,
+  String recorded,
+  String outcome,
+  String outcomeDesc,
+  List<CodeableConcept> purposeOfEvent,
+  List<AuditEventAgent> agent,
+  AuditEventSource source,
+  List<AuditEventEntity> entity,
 
-  }) = _AuditEvent;
+  }) = _AuditEvent,
 
 factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
@@ -32,19 +32,19 @@ factory AuditEvent.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class AuditEventAgent with _$AuditEventAgent {
 factory AuditEventAgent({
-  List<CodeableConcept> role;
-  Reference reference;
-  Identifier userId;
-  String altId;
-  String name;
-  bool requestor;
-  Reference location;
-  List<String> policy;
-  Coding media;
-  AuditEventNetwork network;
-  List<CodeableConcept> purposeOfUse;
+  List<CodeableConcept> role,
+  Reference reference,
+  Identifier userId,
+  String altId,
+  String name,
+  bool requestor,
+  Reference location,
+  List<String> policy,
+  Coding media,
+  AuditEventNetwork network,
+  List<CodeableConcept> purposeOfUse,
 
-  }) = _AuditEventAgent;
+  }) = _AuditEventAgent,
 
 factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventAgentFromJson(json);
@@ -54,10 +54,10 @@ factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class AuditEventNetwork with _$AuditEventNetwork {
 factory AuditEventNetwork({
-  String address;
-  String type;
+  String address,
+  String type,
 
-  }) = _AuditEventNetwork;
+  }) = _AuditEventNetwork,
 
 factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
       _$AuditEventNetworkFromJson(json);
@@ -67,11 +67,11 @@ factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class AuditEventSource with _$AuditEventSource {
 factory AuditEventSource({
-  String site;
-  Identifier identifier;
-  List<Coding> type;
+  String site,
+  Identifier identifier,
+  List<Coding> type,
 
-  }) = _AuditEventSource;
+  }) = _AuditEventSource,
 
 factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$AuditEventSourceFromJson(json);
@@ -81,18 +81,18 @@ factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class AuditEventEntity with _$AuditEventEntity {
 factory AuditEventEntity({
-  Identifier identifier;
-  Reference reference;
-  Coding type;
-  Coding role;
-  Coding lifecycle;
-  List<Coding> securityLabel;
-  String name;
-  String description;
-  String query;
-  List<AuditEventDetail> detail;
+  Identifier identifier,
+  Reference reference,
+  Coding type,
+  Coding role,
+  Coding lifecycle,
+  List<Coding> securityLabel,
+  String name,
+  String description,
+  String query,
+  List<AuditEventDetail> detail,
 
-  }) = _AuditEventEntity;
+  }) = _AuditEventEntity,
 
 factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
       _$AuditEventEntityFromJson(json);
@@ -102,10 +102,10 @@ factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class AuditEventDetail with _$AuditEventDetail {
 factory AuditEventDetail({
-  String type;
-  String value;
+  String type,
+  String value,
 
-  }) = _AuditEventDetail;
+  }) = _AuditEventDetail,
 
 factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
       _$AuditEventDetailFromJson(json);
@@ -115,20 +115,20 @@ factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class Provenance with _$Provenance {
 factory Provenance({
-  String id;
-  String resourceType;
-  List<Reference> target;
-  Period period;
-  String recorded;
-  List<String> policy;
-  Reference location;
-  List<Coding> reason;
-  Coding activity;
-  List<ProvenanceAgent> agent;
-  List<ProvenanceEntity> entity;
-  List<Signature> signature;
+  String id,
+  String resourceType,
+  List<Reference> target,
+  Period period,
+  String recorded,
+  List<String> policy,
+  Reference location,
+  List<Coding> reason,
+  Coding activity,
+  List<ProvenanceAgent> agent,
+  List<ProvenanceEntity> entity,
+  List<Signature> signature,
 
-  }) = _Provenance;
+  }) = _Provenance,
 
 factory Provenance.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceFromJson(json);
@@ -138,14 +138,14 @@ factory Provenance.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ProvenanceAgent with _$ProvenanceAgent {
 factory ProvenanceAgent({
-  List<CodeableConcept> role;
-  String whoUri;
-  Reference whoReference;
-  String onBehalfOfUri;
-  Reference onBehalfOfReference;
-  CodeableConcept relatedAgentType;
+  List<CodeableConcept> role,
+  String whoUri,
+  Reference whoReference,
+  String onBehalfOfUri,
+  Reference onBehalfOfReference,
+  CodeableConcept relatedAgentType,
 
-  }) = _ProvenanceAgent;
+  }) = _ProvenanceAgent,
 
 factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentFromJson(json);
@@ -155,13 +155,13 @@ factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ProvenanceEntity with _$ProvenanceEntity {
 factory ProvenanceEntity({
-  String role;
-  String whatUri;
-  Reference whatReference;
-  Identifier whatIdentifier;
-  List<ProvenanceAgent> agent;
+  String role,
+  String whatUri,
+  Reference whatReference,
+  Identifier whatIdentifier,
+  List<ProvenanceAgent> agent,
 
-  }) = _ProvenanceEntity;
+  }) = _ProvenanceEntity,
 
 factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);
@@ -171,30 +171,30 @@ factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class Consent with _$Consent {
 factory Consent({
-  String id;
-  String resourceType;
-  Identifier identifier;
-  String status;
-  List<CodeableConcept> category;
-  Reference patient;
-  Period period;
-  String dateTime;
-  List<Reference> consentingParty;
-  List<ConsentActor> actor;
-  List<CodeableConcept> action;
-  List<Reference> organization;
-  Attachment sourceAttachment;
-  Identifier sourceIdentifier;
-  Reference sourceReference;
-  List<ConsentPolicy> policy;
-  String policyRule;
-  List<Coding> securityLabel;
-  List<Coding> purpose;
-  Period dataPeriod;
-  List<ConsentData> data;
-  List<ConsentExcept> except;
+  String id,
+  String resourceType,
+  Identifier identifier,
+  String status,
+  List<CodeableConcept> category,
+  Reference patient,
+  Period period,
+  String dateTime,
+  List<Reference> consentingParty,
+  List<ConsentActor> actor,
+  List<CodeableConcept> action,
+  List<Reference> organization,
+  Attachment sourceAttachment,
+  Identifier sourceIdentifier,
+  Reference sourceReference,
+  List<ConsentPolicy> policy,
+  String policyRule,
+  List<Coding> securityLabel,
+  List<Coding> purpose,
+  Period dataPeriod,
+  List<ConsentData> data,
+  List<ConsentExcept> except,
 
-  }) = _Consent;
+  }) = _Consent,
 
 factory Consent.fromJson(Map<String, dynamic> json) =>
       _$ConsentFromJson(json);
@@ -204,10 +204,10 @@ factory Consent.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ConsentActor with _$ConsentActor {
 factory ConsentActor({
-  CodeableConcept role;
-  Reference reference;
+  CodeableConcept role,
+  Reference reference,
 
-  }) = _ConsentActor;
+  }) = _ConsentActor,
 
 factory ConsentActor.fromJson(Map<String, dynamic> json) =>
       _$ConsentActorFromJson(json);
@@ -217,10 +217,10 @@ factory ConsentActor.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ConsentPolicy with _$ConsentPolicy {
 factory ConsentPolicy({
-  String authority;
-  String uri;
+  String authority,
+  String uri,
 
-  }) = _ConsentPolicy;
+  }) = _ConsentPolicy,
 
 factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
       _$ConsentPolicyFromJson(json);
@@ -230,10 +230,10 @@ factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ConsentData with _$ConsentData {
 factory ConsentData({
-  String meaning;
-  Reference reference;
+  String meaning,
+  Reference reference,
 
-  }) = _ConsentData;
+  }) = _ConsentData,
 
 factory ConsentData.fromJson(Map<String, dynamic> json) =>
       _$ConsentDataFromJson(json);
@@ -243,18 +243,18 @@ factory ConsentData.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ConsentExcept with _$ConsentExcept {
 factory ConsentExcept({
-  String type;
-  Period period;
-  List<ConsentActor1> actor;
-  List<CodeableConcept> action;
-  List<Coding> securityLabel;
-  List<Coding> purpose;
-  List<Coding> clas;
-  List<Coding> code;
-  Period dataPeriod;
-  List<ConsentData1> data;
+  String type,
+  Period period,
+  List<ConsentActor1> actor,
+  List<CodeableConcept> action,
+  List<Coding> securityLabel,
+  List<Coding> purpose,
+  List<Coding> clas,
+  List<Coding> code,
+  Period dataPeriod,
+  List<ConsentData1> data,
 
-  }) = _ConsentExcept;
+  }) = _ConsentExcept,
 
 factory ConsentExcept.fromJson(Map<String, dynamic> json) =>
       _$ConsentExceptFromJson(json);
@@ -264,10 +264,10 @@ factory ConsentExcept.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ConsentActor1 with _$ConsentActor1 {
 factory ConsentActor1({
-  CodeableConcept role;
-  Reference reference;
+  CodeableConcept role,
+  Reference reference,
 
-  }) = _ConsentActor1;
+  }) = _ConsentActor1,
 
 factory ConsentActor1.fromJson(Map<String, dynamic> json) =>
       _$ConsentActor1FromJson(json);
@@ -277,10 +277,10 @@ factory ConsentActor1.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ConsentData1 with _$ConsentData1 {
 factory ConsentData1({
-  String meaning;
-  Reference reference;
+  String meaning,
+  Reference reference,
 
-  }) = _ConsentData1;
+  }) = _ConsentData1,
 
 factory ConsentData1.fromJson(Map<String, dynamic> json) =>
       _$ConsentData1FromJson(json);

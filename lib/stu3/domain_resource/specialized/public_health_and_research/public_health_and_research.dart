@@ -9,18 +9,18 @@ part 'public_health_and_research.g.dart';
 @freezed
 abstract class ResearchSubject with _$ResearchSubject {
 factory ResearchSubject({
-  String id;
-  String resourceType;
-  Identifier identifier;
-  String status;
-  Period period;
-  Reference study;
-  Reference individual;
-  String assignedArm;
-  String actualArm;
-  Reference consent;
+  String id,
+  String resourceType,
+  Identifier identifier,
+  String status,
+  Period period,
+  Reference study,
+  Reference individual,
+  String assignedArm,
+  String actualArm,
+  Reference consent,
 
-  }) = _ResearchSubject;
+  }) = _ResearchSubject,
 
 factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$ResearchSubjectFromJson(json);
@@ -30,30 +30,30 @@ factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ResearchStudy with _$ResearchStudy {
 factory ResearchStudy({
-  String id;
-  String resourceType;
-  List<Identifier> identifier;
-  String title;
-  List<Reference> protocol;
-  List<Reference> partOf;
-  String status;
-  List<CodeableConcept> category;
-  List<CodeableConcept> focus;
-  List<ContactDetail> contact;
-  List<RelatedArtifact> relatedArtifact;
-  List<CodeableConcept> keyword;
-  List<CodeableConcept> jurisdiction;
-  String description;
-  List<Reference> enrollment;
-  Period period;
-  Reference sponsor;
-  Reference principalInvestigator;
-  List<Reference> site;
-  CodeableConcept reasonStopped;
-  List<Annotation> note;
-  List<ResearchStudyArm> arm;
+  String id,
+  String resourceType,
+  List<Identifier> identifier,
+  String title,
+  List<Reference> protocol,
+  List<Reference> partOf,
+  String status,
+  List<CodeableConcept> category,
+  List<CodeableConcept> focus,
+  List<ContactDetail> contact,
+  List<RelatedArtifact> relatedArtifact,
+  List<CodeableConcept> keyword,
+  List<CodeableConcept> jurisdiction,
+  String description,
+  List<Reference> enrollment,
+  Period period,
+  Reference sponsor,
+  Reference principalInvestigator,
+  List<Reference> site,
+  CodeableConcept reasonStopped,
+  List<Annotation> note,
+  List<ResearchStudyArm> arm,
 
-  }) = _ResearchStudy;
+  }) = _ResearchStudy,
 
 factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyFromJson(json);
@@ -63,11 +63,11 @@ factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
 @freezed
 abstract class ResearchStudyArm with _$ResearchStudyArm {
 factory ResearchStudyArm({
-  String name;
-  CodeableConcept code;
-  String description;
+  String name,
+  CodeableConcept code,
+  String description,
 
-  }) = _ResearchStudyArm;
+  }) = _ResearchStudyArm,
 
 factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyArmFromJson(json);
