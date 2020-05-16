@@ -25,7 +25,7 @@ factory Lists({
   List<ListEntry> entry,
   CodeableConcept emptyReason,
 
-  }) = _Lists,
+  }) = _Lists;
 
 factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
   Map<String, dynamic> toJson() => _$ListsToJson(this);
@@ -39,7 +39,7 @@ factory ListEntry({
   String date,
   Reference item,
 
-  }) = _ListEntry,
+  }) = _ListEntry;
 
 factory ListEntry.fromJson(Map<String, dynamic> json) =>
       _$ListEntryFromJson(json);
@@ -78,7 +78,7 @@ factory Library({
   List<DataRequirement> dataRequirement,
   List<Attachment> content,
 
-  }) = _Library,
+  }) = _Library;
 
 factory Library.fromJson(Map<String, dynamic> json) =>
       _$LibraryFromJson(json);
@@ -112,7 +112,7 @@ factory Encounter({
   Reference serviceProvider,
   Reference partOf,
 
-  }) = _Encounter,
+  }) = _Encounter;
 
 factory Encounter.fromJson(Map<String, dynamic> json) =>
       _$EncounterFromJson(json);
@@ -125,7 +125,7 @@ factory EncounterStatusHistory({
   String status,
   Period period,
 
-  }) = _EncounterStatusHistory,
+  }) = _EncounterStatusHistory;
 
 factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$EncounterStatusHistoryFromJson(json);
@@ -138,7 +138,7 @@ factory EncounterClassHistory({
   Coding clas,
   Period period,
 
-  }) = _EncounterClassHistory,
+  }) = _EncounterClassHistory;
 
 factory EncounterClassHistory.fromJson(Map<String, dynamic> json) =>
       _$EncounterClassHistoryFromJson(json);
@@ -152,7 +152,7 @@ factory EncounterParticipant({
   Period period,
   Reference individual,
 
-  }) = _EncounterParticipant,
+  }) = _EncounterParticipant;
 
 factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
       _$EncounterParticipantFromJson(json);
@@ -166,7 +166,7 @@ factory EncounterDiagnosis({
   CodeableConcept role,
   double rank,
 
-  }) = _EncounterDiagnosis,
+  }) = _EncounterDiagnosis;
 
 factory EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$EncounterDiagnosisFromJson(json);
@@ -186,7 +186,7 @@ factory EncounterHospitalization({
   Reference destination,
   CodeableConcept dischargeDisposition,
 
-  }) = _EncounterHospitalization,
+  }) = _EncounterHospitalization;
 
 factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
       _$EncounterHospitalizationFromJson(json);
@@ -200,7 +200,7 @@ factory EncounterLocation({
   String status,
   Period period,
 
-  }) = _EncounterLocation,
+  }) = _EncounterLocation;
 
 factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
       _$EncounterLocationFromJson(json);
@@ -221,7 +221,7 @@ factory Flag({
   Reference encounter,
   Reference author,
 
-  }) = _Flag,
+  }) = _Flag;
 
 factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
   Map<String, dynamic> toJson() => _$FlagToJson(this);
@@ -245,7 +245,7 @@ factory EpisodeOfCare({
   List<Reference> team,
   List<Reference> account,
 
-  }) = _EpisodeOfCare,
+  }) = _EpisodeOfCare;
 
 factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareFromJson(json);
@@ -258,7 +258,7 @@ factory EpisodeOfCareStatusHistory({
   String status,
   Period period,
 
-  }) = _EpisodeOfCareStatusHistory,
+  }) = _EpisodeOfCareStatusHistory;
 
 factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareStatusHistoryFromJson(json);
@@ -272,7 +272,7 @@ factory EpisodeOfCareDiagnosis({
   CodeableConcept role,
   double rank,
 
-  }) = _EpisodeOfCareDiagnosis,
+  }) = _EpisodeOfCareDiagnosis;
 
 factory EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareDiagnosisFromJson(json);

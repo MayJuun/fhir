@@ -20,7 +20,7 @@ factory ResearchSubject({
   String actualArm,
   Reference consent,
 
-  }) = _ResearchSubject,
+  }) = _ResearchSubject;
 
 factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$ResearchSubjectFromJson(json);
@@ -53,7 +53,7 @@ factory ResearchStudy({
   List<Annotation> note,
   List<ResearchStudyArm> arm,
 
-  }) = _ResearchStudy,
+  }) = _ResearchStudy;
 
 factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyFromJson(json);
@@ -67,7 +67,7 @@ factory ResearchStudyArm({
   CodeableConcept code,
   String description,
 
-  }) = _ResearchStudyArm,
+  }) = _ResearchStudyArm;
 
 factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyArmFromJson(json);

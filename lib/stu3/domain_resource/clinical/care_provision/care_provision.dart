@@ -32,7 +32,7 @@ factory CarePlan({
   List<CarePlanActivity> activity,
   List<Annotation> note,
 
-  }) = _CarePlan,
+  }) = _CarePlan;
 
 factory CarePlan.fromJson(Map<String, dynamic> json) =>
       _$CarePlanFromJson(json);
@@ -48,7 +48,7 @@ factory CarePlanActivity({
   Reference reference,
   CarePlanDetail detail,
 
-  }) = _CarePlanActivity,
+  }) = _CarePlanActivity;
 
 factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
       _$CarePlanActivityFromJson(json);
@@ -78,7 +78,7 @@ factory CarePlanDetail({
   Quantity quantity,
   String description,
 
-  }) = _CarePlanDetail,
+  }) = _CarePlanDetail;
 
 factory CarePlanDetail.fromJson(Map<String, dynamic> json) =>
       _$CarePlanDetailFromJson(json);
@@ -103,7 +103,7 @@ factory CareTeam({
   List<Reference> managingOrganization,
   List<Annotation> note,
 
-  }) = _CareTeam,
+  }) = _CareTeam;
 
 factory CareTeam.fromJson(Map<String, dynamic> json) =>
       _$CareTeamFromJson(json);
@@ -118,7 +118,7 @@ factory CareTeamParticipant({
   Reference onBehalfOf,
   Period period,
 
-  }) = _CareTeamParticipant,
+  }) = _CareTeamParticipant;
 
 factory CareTeamParticipant.fromJson(Map<String, dynamic> json) =>
       _$CareTeamParticipantFromJson(json);
@@ -147,7 +147,7 @@ factory Goal({
   List<CodeableConcept> outcomeCode,
   List<Reference> outcomeReference,
 
-  }) = _Goal,
+  }) = _Goal;
 
 factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
   Map<String, dynamic> toJson() => _$GoalToJson(this);
@@ -163,7 +163,7 @@ factory GoalTarget({
   DateTime dueDate,
   Duration dueDuration,
 
-  }) = _GoalTarget,
+  }) = _GoalTarget;
 
 factory GoalTarget.fromJson(Map<String, dynamic> json) =>
       _$GoalTargetFromJson(json);
@@ -200,7 +200,7 @@ factory ReferralRequest({
   List<Annotation> note,
   List<Reference> relevantHistory,
 
-  }) = _ReferralRequest,
+  }) = _ReferralRequest;
 
 factory ReferralRequest.fromJson(Map<String, dynamic> json) =>
       _$ReferralRequestFromJson(json);
@@ -213,7 +213,7 @@ factory ReferralRequestRequester({
   Reference agent,
   Reference onBehalfOf,
 
-  }) = _ReferralRequestRequester,
+  }) = _ReferralRequestRequester;
 
 factory ReferralRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$ReferralRequestRequesterFromJson(json);
@@ -255,7 +255,7 @@ factory ProcedureRequest({
   List<Annotation> note,
   List<Reference> relevantHistory,
 
-  }) = _ProcedureRequest,
+  }) = _ProcedureRequest;
 
 factory ProcedureRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcedureRequestFromJson(json);
@@ -268,7 +268,7 @@ factory ProcedureRequestRequester({
   Reference agent,
   Reference onBehalfOf,
 
-  }) = _ProcedureRequestRequester,
+  }) = _ProcedureRequestRequester;
 
 factory ProcedureRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$ProcedureRequestRequesterFromJson(json);
@@ -293,7 +293,7 @@ factory NutritionOrder({
   List<NutritionOrderSupplement> supplement,
   NutritionOrderEnteralFormula enteralFormula,
 
-  }) = _NutritionOrder,
+  }) = _NutritionOrder;
 
 factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderFromJson(json);
@@ -310,7 +310,7 @@ factory NutritionOrderOralDiet({
   List<CodeableConcept> fluidConsistencyType,
   String instruction,
 
-  }) = _NutritionOrderOralDiet,
+  }) = _NutritionOrderOralDiet;
 
 factory NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderOralDietFromJson(json);
@@ -323,7 +323,7 @@ factory NutritionOrderNutrient({
   CodeableConcept modifier,
   Quantity amount,
 
-  }) = _NutritionOrderNutrient,
+  }) = _NutritionOrderNutrient;
 
 factory NutritionOrderNutrient.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderNutrientFromJson(json);
@@ -336,7 +336,7 @@ factory NutritionOrderTexture({
   CodeableConcept modifier,
   CodeableConcept foodType,
 
-  }) = _NutritionOrderTexture,
+  }) = _NutritionOrderTexture;
 
 factory NutritionOrderTexture.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderTextureFromJson(json);
@@ -352,7 +352,7 @@ factory NutritionOrderSupplement({
   Quantity quantity,
   String instruction,
 
-  }) = _NutritionOrderSupplement,
+  }) = _NutritionOrderSupplement;
 
 factory NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderSupplementFromJson(json);
@@ -372,7 +372,7 @@ factory NutritionOrderEnteralFormula({
   Quantity maxVolumeToDeliver,
   String administrationInstruction,
 
-  }) = _NutritionOrderEnteralFormula,
+  }) = _NutritionOrderEnteralFormula;
 
 factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderEnteralFormulaFromJson(json);
@@ -387,7 +387,7 @@ factory NutritionOrderAdministration({
   Quantity rateSimpleQuantity,
   Ratio rateRatio,
 
-  }) = _NutritionOrderAdministration,
+  }) = _NutritionOrderAdministration;
 
 factory NutritionOrderAdministration.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderAdministrationFromJson(json);
@@ -409,7 +409,7 @@ factory VisionPrescription({
   Reference reasonReference,
   List<VisionPrescriptionDispense> dispense,
 
-  }) = _VisionPrescription,
+  }) = _VisionPrescription;
 
 factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionFromJson(json);
@@ -435,7 +435,7 @@ factory VisionPrescriptionDispense({
   String brand,
   List<Annotation> note,
 
-  }) = _VisionPrescriptionDispense,
+  }) = _VisionPrescriptionDispense;
 
 factory VisionPrescriptionDispense.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionDispenseFromJson(json);
@@ -466,7 +466,7 @@ factory RiskAssessment({
   String mitigation,
   String comment,
 
-  }) = _RiskAssessment,
+  }) = _RiskAssessment;
 
 factory RiskAssessment.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentFromJson(json);
@@ -485,7 +485,7 @@ factory RiskAssessmentPrediction({
   Range whenRange,
   String rationale,
 
-  }) = _RiskAssessmentPrediction,
+  }) = _RiskAssessmentPrediction;
 
 factory RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentPredictionFromJson(json);
@@ -514,7 +514,7 @@ factory RequestGroup({
   List<Annotation> note,
   List<RequestGroupAction> action,
 
-  }) = _RequestGroup,
+  }) = _RequestGroup;
 
 factory RequestGroup.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupFromJson(json);
@@ -547,7 +547,7 @@ factory RequestGroupAction({
   Reference resource,
   List<RequestGroupAction> action,
 
-  }) = _RequestGroupAction,
+  }) = _RequestGroupAction;
 
 factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupActionFromJson(json);
@@ -562,7 +562,7 @@ factory RequestGroupCondition({
   String language,
   String expression,
 
-  }) = _RequestGroupCondition,
+  }) = _RequestGroupCondition;
 
 factory RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupConditionFromJson(json);
@@ -577,7 +577,7 @@ factory RequestGroupRelatedAction({
   Duration offsetDuration,
   Range offsetRange,
 
-  }) = _RequestGroupRelatedAction,
+  }) = _RequestGroupRelatedAction;
 
 factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupRelatedActionFromJson(json);

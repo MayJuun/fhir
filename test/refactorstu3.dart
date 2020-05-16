@@ -8,11 +8,8 @@ void main() async {
     (FileSystemEntity entity) async {
       if (entity.path.toString().contains('.dart')) {
         var oldText = await File(entity.path.toString()).readAsString();
-        oldText = oldText
-        for (var match in reg.allMatches(oldText)) {
-          print(match.group(0));
-        }
-        // await File(entity.path.toString()).writeAsString(oldText);
+        oldText = oldText.replaceAll(reg, ';\n\nfactory');
+        await File(entity.path.toString()).writeAsString(oldText);
       }
     },
   );

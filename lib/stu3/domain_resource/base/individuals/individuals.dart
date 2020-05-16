@@ -26,7 +26,7 @@ factory PractitionerRole({
   String availabilityExceptions,
   List<Reference> endpoint,
 
-  }) = _PractitionerRole,
+  }) = _PractitionerRole;
 
 factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleFromJson(json);
@@ -41,7 +41,7 @@ factory PractitionerRoleAvailableTime({
   String availableStartTime,
   String availableEndTime,
 
-  }) = _PractitionerRoleAvailableTime,
+  }) = _PractitionerRoleAvailableTime;
 
 factory PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleAvailableTimeFromJson(json);
@@ -54,7 +54,7 @@ factory PractitionerRoleNotAvailable({
   String description,
   Period during,
 
-  }) = _PractitionerRoleNotAvailable,
+  }) = _PractitionerRoleNotAvailable;
 
 factory PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleNotAvailableFromJson(json);
@@ -76,7 +76,7 @@ factory Group({
   List<GroupCharacteristic> characteristic,
   List<GroupMember> member,
 
-  }) = _Group,
+  }) = _Group;
 
 factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
   Map<String, dynamic> toJson() => _$GroupToJson(this);
@@ -93,7 +93,7 @@ factory GroupCharacteristic({
   bool exclude,
   Period period,
 
-  }) = _GroupCharacteristic,
+  }) = _GroupCharacteristic;
 
 factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$GroupCharacteristicFromJson(json);
@@ -107,7 +107,7 @@ factory GroupMember({
   Period period,
   bool inactive,
 
-  }) = _GroupMember,
+  }) = _GroupMember;
 
 factory GroupMember.fromJson(Map<String, dynamic> json) =>
       _$GroupMemberFromJson(json);
@@ -130,7 +130,7 @@ factory Person({
   bool active,
   List<PersonLink> link,
 
-  }) = _Person,
+  }) = _Person;
 
 factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
   Map<String, dynamic> toJson() => _$PersonToJson(this);
@@ -142,7 +142,7 @@ factory PersonLink({
   Reference target,
   String assurance,
 
-  }) = _PersonLink,
+  }) = _PersonLink;
 
 factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
@@ -166,7 +166,7 @@ factory RelatedPerson({
   List<Attachment> photo,
   Period period,
 
-  }) = _RelatedPerson,
+  }) = _RelatedPerson;
 
 factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonFromJson(json);
@@ -198,7 +198,7 @@ factory Patient({
   Reference managingOrganization,
   List<PatientLink> link,
 
-  }) = _Patient,
+  }) = _Patient;
 
 factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
@@ -216,7 +216,7 @@ factory PatientContact({
   Reference organization,
   Period period,
 
-  }) = _PatientContact,
+  }) = _PatientContact;
 
 factory PatientContact.fromJson(Map<String, dynamic> json) =>
       _$PatientContactFromJson(json);
@@ -230,7 +230,7 @@ factory PatientAnimal({
   CodeableConcept breed,
   CodeableConcept genderStatus,
 
-  }) = _PatientAnimal,
+  }) = _PatientAnimal;
 
 factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
       _$PatientAnimalFromJson(json);
@@ -243,7 +243,7 @@ factory PatientCommunication({
   CodeableConcept language,
   bool preferred,
 
-  }) = _PatientCommunication,
+  }) = _PatientCommunication;
 
 factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$PatientCommunicationFromJson(json);
@@ -256,7 +256,7 @@ factory PatientLink({
   Reference other,
   String type,
 
-  }) = _PatientLink,
+  }) = _PatientLink;
 
 factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
@@ -279,7 +279,7 @@ factory Practitioner({
   List<PractitionerQualification> qualification,
   List<CodeableConcept> communication,
 
-  }) = _Practitioner,
+  }) = _Practitioner;
 
 factory Practitioner.fromJson(Map<String, dynamic> json) =>
       _$PractitionerFromJson(json);
@@ -294,7 +294,7 @@ factory PractitionerQualification({
   Period period,
   Reference issuer,
 
-  }) = _PractitionerQualification,
+  }) = _PractitionerQualification;
 
 factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$PractitionerQualificationFromJson(json);

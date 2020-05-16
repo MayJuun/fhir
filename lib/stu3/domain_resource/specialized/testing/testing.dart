@@ -24,7 +24,7 @@ factory TestReport({
   List<TestReportTest> test,
   TestReportTeardown teardown,
 
-  }) = _TestReport,
+  }) = _TestReport;
 
 factory TestReport.fromJson(Map<String, dynamic> json) =>
       _$TestReportFromJson(json);
@@ -38,7 +38,7 @@ factory TestReportParticipant({
   String uri,
   String display,
 
-  }) = _TestReportParticipant,
+  }) = _TestReportParticipant;
 
 factory TestReportParticipant.fromJson(Map<String, dynamic> json) =>
       _$TestReportParticipantFromJson(json);
@@ -50,7 +50,7 @@ abstract class TestReportSetup with _$TestReportSetup {
 factory TestReportSetup({
   List<TestReportAction> action,
 
-  }) = _TestReportSetup,
+  }) = _TestReportSetup;
 
 factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
       _$TestReportSetupFromJson(json);
@@ -63,7 +63,7 @@ factory TestReportAction({
   TestReportOperation operation,
   TestReportAssert asserts,
 
-  }) = _TestReportAction,
+  }) = _TestReportAction;
 
 factory TestReportAction.fromJson(Map<String, dynamic> json) =>
       _$TestReportActionFromJson(json);
@@ -77,7 +77,7 @@ factory TestReportOperation({
   String message,
   String detail,
 
-  }) = _TestReportOperation,
+  }) = _TestReportOperation;
 
 factory TestReportOperation.fromJson(Map<String, dynamic> json) =>
       _$TestReportOperationFromJson(json);
@@ -91,7 +91,7 @@ factory TestReportAssert({
   String message,
   String detail,
 
-  }) = _TestReportAssert,
+  }) = _TestReportAssert;
 
 factory TestReportAssert.fromJson(Map<String, dynamic> json) =>
       _$TestReportAssertFromJson(json);
@@ -105,7 +105,7 @@ factory TestReportTest({
   String description,
   List<TestReportAction1> action,
 
-  }) = _TestReportTest,
+  }) = _TestReportTest;
 
 factory TestReportTest.fromJson(Map<String, dynamic> json) =>
       _$TestReportTestFromJson(json);
@@ -118,7 +118,7 @@ factory TestReportAction1({
   TestReportOperation operation,
   TestReportAssert asserts,
 
-  }) = _TestReportAction1,
+  }) = _TestReportAction1;
 
 factory TestReportAction1.fromJson(Map<String, dynamic> json) =>
       _$TestReportAction1FromJson(json);
@@ -130,7 +130,7 @@ abstract class TestReportTeardown with _$TestReportTeardown {
 factory TestReportTeardown({
   List<TestReportAction2> action,
 
-  }) = _TestReportTeardown,
+  }) = _TestReportTeardown;
 
 factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestReportTeardownFromJson(json);
@@ -142,7 +142,7 @@ abstract class TestReportAction2 with _$TestReportAction2 {
 factory TestReportAction2({
   TestReportOperation operation,
 
-  }) = _TestReportAction2,
+  }) = _TestReportAction2;
 
 factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
       _$TestReportAction2FromJson(json);
@@ -181,7 +181,7 @@ factory TestScript({
   List<TestScriptTest> test,
   TestScriptTeardown teardown,
 
-  }) = _TestScript,
+  }) = _TestScript;
 
 factory TestScript.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFromJson(json);
@@ -194,7 +194,7 @@ factory TestScriptOrigin({
   double index,
   Coding profile,
 
-  }) = _TestScriptOrigin,
+  }) = _TestScriptOrigin;
 
 factory TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
       _$TestScriptOriginFromJson(json);
@@ -207,7 +207,7 @@ factory TestScriptDestination({
   double index,
   Coding profile,
 
-  }) = _TestScriptDestination,
+  }) = _TestScriptDestination;
 
 factory TestScriptDestination.fromJson(Map<String, dynamic> json) =>
       _$TestScriptDestinationFromJson(json);
@@ -220,7 +220,7 @@ factory TestScriptMetadata({
   List<TestScriptLink> link,
   List<TestScriptCapability> capability,
 
-  }) = _TestScriptMetadata,
+  }) = _TestScriptMetadata;
 
 factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataFromJson(json);
@@ -233,7 +233,7 @@ factory TestScriptLink({
   String url,
   String description,
 
-  }) = _TestScriptLink,
+  }) = _TestScriptLink;
 
 factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
       _$TestScriptLinkFromJson(json);
@@ -251,7 +251,7 @@ factory TestScriptCapability({
   List<String> link,
   Reference capabilities,
 
-  }) = _TestScriptCapability,
+  }) = _TestScriptCapability;
 
 factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
       _$TestScriptCapabilityFromJson(json);
@@ -265,7 +265,7 @@ factory TestScriptFixture({
   bool autodelete,
   Reference resource,
 
-  }) = _TestScriptFixture,
+  }) = _TestScriptFixture;
 
 factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFixtureFromJson(json);
@@ -284,7 +284,7 @@ factory TestScriptVariable({
   String path,
   String sourceId,
 
-  }) = _TestScriptVariable,
+  }) = _TestScriptVariable;
 
 factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$TestScriptVariableFromJson(json);
@@ -297,7 +297,7 @@ factory TestScriptRule({
   Reference resource,
   List<TestScriptParam> param,
 
-  }) = _TestScriptRule,
+  }) = _TestScriptRule;
 
 factory TestScriptRule.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRuleFromJson(json);
@@ -310,7 +310,7 @@ factory TestScriptParam({
   String name,
   String value,
 
-  }) = _TestScriptParam,
+  }) = _TestScriptParam;
 
 factory TestScriptParam.fromJson(Map<String, dynamic> json) =>
       _$TestScriptParamFromJson(json);
@@ -323,7 +323,7 @@ factory TestScriptRuleset({
   Reference resource,
   List<TestScriptRule1> rule,
 
-  }) = _TestScriptRuleset,
+  }) = _TestScriptRuleset;
 
 factory TestScriptRuleset.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRulesetFromJson(json);
@@ -336,7 +336,7 @@ factory TestScriptRule1({
   String ruleId,
   List<TestScriptParam1> param,
 
-  }) = _TestScriptRule1,
+  }) = _TestScriptRule1;
 
 factory TestScriptRule1.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRule1FromJson(json);
@@ -349,7 +349,7 @@ factory TestScriptParam1({
   String name,
   String value,
 
-  }) = _TestScriptParam1,
+  }) = _TestScriptParam1;
 
 factory TestScriptParam1.fromJson(Map<String, dynamic> json) =>
       _$TestScriptParam1FromJson(json);
@@ -361,7 +361,7 @@ abstract class TestScriptSetup with _$TestScriptSetup {
 factory TestScriptSetup({
   List<TestScriptAction> action,
 
-  }) = _TestScriptSetup,
+  }) = _TestScriptSetup;
 
 factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupFromJson(json);
@@ -374,7 +374,7 @@ factory TestScriptAction({
   TestScriptOperation operation,
   TestScriptAssert asserts,
 
-  }) = _TestScriptAction,
+  }) = _TestScriptAction;
 
 factory TestScriptAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptActionFromJson(json);
@@ -401,7 +401,7 @@ factory TestScriptOperation({
   String targetId,
   String url,
 
-  }) = _TestScriptOperation,
+  }) = _TestScriptOperation;
 
 factory TestScriptOperation.fromJson(Map<String, dynamic> json) =>
       _$TestScriptOperationFromJson(json);
@@ -414,7 +414,7 @@ factory TestScriptRequestHeader({
   String field,
   String value,
 
-  }) = _TestScriptRequestHeader,
+  }) = _TestScriptRequestHeader;
 
 factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRequestHeaderFromJson(json);
@@ -449,7 +449,7 @@ factory TestScriptAssert({
   String value,
   bool warningOnly,
 
-  }) = _TestScriptAssert,
+  }) = _TestScriptAssert;
 
 factory TestScriptAssert.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAssertFromJson(json);
@@ -462,7 +462,7 @@ factory TestScriptRule2({
   String ruleId,
   List<TestScriptParam2> param,
 
-  }) = _TestScriptRule2,
+  }) = _TestScriptRule2;
 
 factory TestScriptRule2.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRule2FromJson(json);
@@ -475,7 +475,7 @@ factory TestScriptParam2({
   String name,
   String value,
 
-  }) = _TestScriptParam2,
+  }) = _TestScriptParam2;
 
 factory TestScriptParam2.fromJson(Map<String, dynamic> json) =>
       _$TestScriptParam2FromJson(json);
@@ -488,7 +488,7 @@ factory TestScriptRuleset1({
   String rulesetId,
   List<TestScriptRule3> rule,
 
-  }) = _TestScriptRuleset1,
+  }) = _TestScriptRuleset1;
 
 factory TestScriptRuleset1.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRuleset1FromJson(json);
@@ -501,7 +501,7 @@ factory TestScriptRule3({
   String ruleId,
   List<TestScriptParam3> param,
 
-  }) = _TestScriptRule3,
+  }) = _TestScriptRule3;
 
 factory TestScriptRule3.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRule3FromJson(json);
@@ -514,7 +514,7 @@ factory TestScriptParam3({
   String name,
   String value,
 
-  }) = _TestScriptParam3,
+  }) = _TestScriptParam3;
 
 factory TestScriptParam3.fromJson(Map<String, dynamic> json) =>
       _$TestScriptParam3FromJson(json);
@@ -528,7 +528,7 @@ factory TestScriptTest({
   String description,
   List<TestScriptAction1> action,
 
-  }) = _TestScriptTest,
+  }) = _TestScriptTest;
 
 factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTestFromJson(json);
@@ -541,7 +541,7 @@ factory TestScriptAction1({
   TestScriptOperation operation,
   TestScriptAssert asserts,
 
-  }) = _TestScriptAction1,
+  }) = _TestScriptAction1;
 
 factory TestScriptAction1.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAction1FromJson(json);
@@ -553,7 +553,7 @@ abstract class TestScriptTeardown with _$TestScriptTeardown {
 factory TestScriptTeardown({
   List<TestScriptAction2> action,
 
-  }) = _TestScriptTeardown,
+  }) = _TestScriptTeardown;
 
 factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTeardownFromJson(json);
@@ -565,7 +565,7 @@ abstract class TestScriptAction2 with _$TestScriptAction2 {
 factory TestScriptAction2({
   TestScriptOperation operation,
 
-  }) = _TestScriptAction2,
+  }) = _TestScriptAction2;
 
 factory TestScriptAction2.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAction2FromJson(json);

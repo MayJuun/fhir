@@ -29,7 +29,7 @@ factory DocumentReference({
   List<DocumentReferenceContent> content,
   DocumentReferenceContext context,
 
-  }) = _DocumentReference,
+  }) = _DocumentReference;
 
 factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
@@ -42,7 +42,7 @@ factory DocumentReferenceRelatesTo({
   String code,
   Reference target,
 
-  }) = _DocumentReferenceRelatesTo,
+  }) = _DocumentReferenceRelatesTo;
 
 factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatesToFromJson(json);
@@ -55,7 +55,7 @@ factory DocumentReferenceContent({
   Attachment attachment,
   Coding format,
 
-  }) = _DocumentReferenceContent,
+  }) = _DocumentReferenceContent;
 
 factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContentFromJson(json);
@@ -73,7 +73,7 @@ factory DocumentReferenceContext({
   Reference sourcePatientInfo,
   List<DocumentReferenceRelated> related,
 
-  }) = _DocumentReferenceContext,
+  }) = _DocumentReferenceContext;
 
 factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextFromJson(json);
@@ -86,7 +86,7 @@ factory DocumentReferenceRelated({
   Identifier identifier,
   Reference ref,
 
-  }) = _DocumentReferenceRelated,
+  }) = _DocumentReferenceRelated;
 
 factory DocumentReferenceRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatedFromJson(json);
@@ -111,7 +111,7 @@ factory DocumentManifest({
   List<DocumentManifestContent> content,
   List<DocumentManifestRelated> related,
 
-  }) = _DocumentManifest,
+  }) = _DocumentManifest;
 
 factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
@@ -124,7 +124,7 @@ factory DocumentManifestContent({
   Attachment pAttachment,
   Reference pReference,
 
-  }) = _DocumentManifestContent,
+  }) = _DocumentManifestContent;
 
 factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestContentFromJson(json);
@@ -137,7 +137,7 @@ factory DocumentManifestRelated({
   Identifier identifier,
   Reference ref,
 
-  }) = _DocumentManifestRelated,
+  }) = _DocumentManifestRelated;
 
 factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestRelatedFromJson(json);
@@ -165,7 +165,7 @@ factory Composition({
   List<CompositionEvent> event,
   List<CompositionSection> section,
 
-  }) = _Composition,
+  }) = _Composition;
 
 factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
@@ -179,7 +179,7 @@ factory CompositionAttester({
   String time,
   Reference party,
 
-  }) = _CompositionAttester,
+  }) = _CompositionAttester;
 
 factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$CompositionAttesterFromJson(json);
@@ -193,7 +193,7 @@ factory CompositionRelatesTo({
   Identifier targetIdentifier,
   Reference targetReference,
 
-  }) = _CompositionRelatesTo,
+  }) = _CompositionRelatesTo;
 
 factory CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$CompositionRelatesToFromJson(json);
@@ -207,7 +207,7 @@ factory CompositionEvent({
   Period period,
   List<Reference> detail,
 
-  }) = _CompositionEvent,
+  }) = _CompositionEvent;
 
 factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$CompositionEventFromJson(json);
@@ -226,7 +226,7 @@ factory CompositionSection({
   CodeableConcept emptyReason,
   List<CompositionSection> section,
 
-  }) = _CompositionSection,
+  }) = _CompositionSection;
 
 factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);

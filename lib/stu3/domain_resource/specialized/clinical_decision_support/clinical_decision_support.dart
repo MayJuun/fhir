@@ -27,7 +27,7 @@ factory GuidanceResponse({
   Reference result,
   List<DataRequirement> dataRequirement,
 
-  }) = _GuidanceResponse,
+  }) = _GuidanceResponse;
 
 factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);

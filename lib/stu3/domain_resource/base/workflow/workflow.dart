@@ -23,7 +23,7 @@ factory Slot({
   bool overbooked,
   String comment,
 
-  }) = _Slot,
+  }) = _Slot;
 
 factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
   Map<String, dynamic> toJson() => _$SlotToJson(this);
@@ -48,7 +48,7 @@ factory ProcessResponse({
   List<CodeableConcept> error,
   List<Reference> communicationRequest,
 
-  }) = _ProcessResponse,
+  }) = _ProcessResponse;
 
 factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseFromJson(json);
@@ -61,7 +61,7 @@ factory ProcessResponseProcessNote({
   CodeableConcept type,
   String text,
 
-  }) = _ProcessResponseProcessNote,
+  }) = _ProcessResponseProcessNote;
 
 factory ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseProcessNoteFromJson(json);
@@ -94,7 +94,7 @@ factory Appointment({
   List<AppointmentParticipant> participant,
   List<Period> requestedPeriod,
 
-  }) = _Appointment,
+  }) = _Appointment;
 
 factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
@@ -109,7 +109,7 @@ factory AppointmentParticipant({
   String required,
   String status,
 
-  }) = _AppointmentParticipant,
+  }) = _AppointmentParticipant;
 
 factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
@@ -150,7 +150,7 @@ factory Task({
   List<TaskInput> input,
   List<TaskOutput> output,
 
-  }) = _Task,
+  }) = _Task;
 
 factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
   Map<String, dynamic> toJson() => _$TaskToJson(this);
@@ -162,7 +162,7 @@ factory TaskRequester({
   Reference agent,
   Reference onBehalfOf,
 
-  }) = _TaskRequester,
+  }) = _TaskRequester;
 
 factory TaskRequester.fromJson(Map<String, dynamic> json) =>
       _$TaskRequesterFromJson(json);
@@ -176,7 +176,7 @@ factory TaskRestriction({
   Period period,
   List<Reference> recipient,
 
-  }) = _TaskRestriction,
+  }) = _TaskRestriction;
 
 factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
       _$TaskRestrictionFromJson(json);
@@ -241,7 +241,7 @@ factory TaskInput({
   ParameterDefinition valueParameterDefinition,
   TriggerDefinition valueTriggerDefinition,
 
-  }) = _TaskInput,
+  }) = _TaskInput;
 
 factory TaskInput.fromJson(Map<String, dynamic> json) =>
       _$TaskInputFromJson(json);
@@ -306,7 +306,7 @@ factory TaskOutput({
   ParameterDefinition valueParameterDefinition,
   TriggerDefinition valueTriggerDefinition,
 
-  }) = _TaskOutput,
+  }) = _TaskOutput;
 
 factory TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$TaskOutputFromJson(json);
@@ -334,7 +334,7 @@ factory ProcessRequest({
   List<String> exclude,
   Period period,
 
-  }) = _ProcessRequest,
+  }) = _ProcessRequest;
 
 factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestFromJson(json);
@@ -346,7 +346,7 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
 factory ProcessRequestItem({
   double sequenceLinkId,
 
-  }) = _ProcessRequestItem,
+  }) = _ProcessRequestItem;
 
 factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestItemFromJson(json);
@@ -367,7 +367,7 @@ factory AppointmentResponse({
   String participantStatus,
   String comment,
 
-  }) = _AppointmentResponse,
+  }) = _AppointmentResponse;
 
 factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
@@ -388,7 +388,7 @@ factory Schedule({
   Period planningHorizon,
   String comment,
 
-  }) = _Schedule,
+  }) = _Schedule;
 
 factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);

@@ -35,7 +35,7 @@ factory ClaimResponse({
   List<Reference> communicationRequest,
   List<ClaimResponseInsurance> insurance,
 
-  }) = _ClaimResponse,
+  }) = _ClaimResponse;
 
 factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseFromJson(json);
@@ -50,7 +50,7 @@ factory ClaimResponseItem({
   List<ClaimResponseAdjudication> adjudication,
   List<ClaimResponseDetail> detail,
 
-  }) = _ClaimResponseItem,
+  }) = _ClaimResponseItem;
 
 factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemFromJson(json);
@@ -65,7 +65,7 @@ factory ClaimResponseAdjudication({
   Money amount,
   double value,
 
-  }) = _ClaimResponseAdjudication,
+  }) = _ClaimResponseAdjudication;
 
 factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAdjudicationFromJson(json);
@@ -80,7 +80,7 @@ factory ClaimResponseDetail({
   List<ClaimResponseAdjudication> adjudication,
   List<ClaimResponseSubDetail> subDetail,
 
-  }) = _ClaimResponseDetail,
+  }) = _ClaimResponseDetail;
 
 factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetailFromJson(json);
@@ -94,7 +94,7 @@ factory ClaimResponseSubDetail({
   List<String> noteNumber,
   List<ClaimResponseAdjudication> adjudication,
 
-  }) = _ClaimResponseSubDetail,
+  }) = _ClaimResponseSubDetail;
 
 factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseSubDetailFromJson(json);
@@ -114,7 +114,7 @@ factory ClaimResponseAddItem({
   List<ClaimResponseAdjudication> adjudication,
   List<ClaimResponseDetail1> detail,
 
-  }) = _ClaimResponseAddItem,
+  }) = _ClaimResponseAddItem;
 
 factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemFromJson(json);
@@ -132,7 +132,7 @@ factory ClaimResponseDetail1({
   List<String> noteNumber,
   List<ClaimResponseAdjudication> adjudication,
 
-  }) = _ClaimResponseDetail1,
+  }) = _ClaimResponseDetail1;
 
 factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetail1FromJson(json);
@@ -147,7 +147,7 @@ factory ClaimResponseError({
   double subdetailSequenceLinkId,
   CodeableConcept code,
 
-  }) = _ClaimResponseError,
+  }) = _ClaimResponseError;
 
 factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseErrorFromJson(json);
@@ -164,7 +164,7 @@ factory ClaimResponsePayment({
   Money amount,
   Identifier identifier,
 
-  }) = _ClaimResponsePayment,
+  }) = _ClaimResponsePayment;
 
 factory ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponsePaymentFromJson(json);
@@ -179,7 +179,7 @@ factory ClaimResponseProcessNote({
   String text,
   CodeableConcept language,
 
-  }) = _ClaimResponseProcessNote,
+  }) = _ClaimResponseProcessNote;
 
 factory ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseProcessNoteFromJson(json);
@@ -196,7 +196,7 @@ factory ClaimResponseInsurance({
   List<String> preAuthRef,
   Reference claimResponse,
 
-  }) = _ClaimResponseInsurance,
+  }) = _ClaimResponseInsurance;
 
 factory ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseInsuranceFromJson(json);
@@ -239,7 +239,7 @@ factory Claim({
   List<ClaimItem> item,
   Money total,
 
-  }) = _Claim,
+  }) = _Claim;
 
 factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimToJson(this);
@@ -252,7 +252,7 @@ factory ClaimRelated({
   CodeableConcept relationship,
   Identifier reference,
 
-  }) = _ClaimRelated,
+  }) = _ClaimRelated;
 
 factory ClaimRelated.fromJson(Map<String, dynamic> json) =>
       _$ClaimRelatedFromJson(json);
@@ -266,7 +266,7 @@ factory ClaimPayee({
   String resourceType,
   Reference party,
 
-  }) = _ClaimPayee,
+  }) = _ClaimPayee;
 
 factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
       _$ClaimPayeeFromJson(json);
@@ -282,7 +282,7 @@ factory ClaimCareTeam({
   CodeableConcept role,
   CodeableConcept qualification,
 
-  }) = _ClaimCareTeam,
+  }) = _ClaimCareTeam;
 
 factory ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
       _$ClaimCareTeamFromJson(json);
@@ -303,7 +303,7 @@ factory ClaimInformation({
   Reference valueReference,
   CodeableConcept reason,
 
-  }) = _ClaimInformation,
+  }) = _ClaimInformation;
 
 factory ClaimInformation.fromJson(Map<String, dynamic> json) =>
       _$ClaimInformationFromJson(json);
@@ -319,7 +319,7 @@ factory ClaimDiagnosis({
   List<CodeableConcept> type,
   CodeableConcept packageCode,
 
-  }) = _ClaimDiagnosis,
+  }) = _ClaimDiagnosis;
 
 factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ClaimDiagnosisFromJson(json);
@@ -334,7 +334,7 @@ factory ClaimProcedure({
   CodeableConcept procedureCodeableConcept,
   Reference procedureReference,
 
-  }) = _ClaimProcedure,
+  }) = _ClaimProcedure;
 
 factory ClaimProcedure.fromJson(Map<String, dynamic> json) =>
       _$ClaimProcedureFromJson(json);
@@ -351,7 +351,7 @@ factory ClaimInsurance({
   List<String> preAuthRef,
   Reference claimResponse,
 
-  }) = _ClaimInsurance,
+  }) = _ClaimInsurance;
 
 factory ClaimInsurance.fromJson(Map<String, dynamic> json) =>
       _$ClaimInsuranceFromJson(json);
@@ -366,7 +366,7 @@ factory ClaimAccident({
   Address locationAddress,
   Reference locationReference,
 
-  }) = _ClaimAccident,
+  }) = _ClaimAccident;
 
 factory ClaimAccident.fromJson(Map<String, dynamic> json) =>
       _$ClaimAccidentFromJson(json);
@@ -401,7 +401,7 @@ factory ClaimItem({
   List<Reference> encounter,
   List<ClaimDetail> detail,
 
-  }) = _ClaimItem,
+  }) = _ClaimItem;
 
 factory ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemFromJson(json);
@@ -424,7 +424,7 @@ factory ClaimDetail({
   List<Reference> udi,
   List<ClaimSubDetail> subDetail,
 
-  }) = _ClaimDetail,
+  }) = _ClaimDetail;
 
 factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimDetailFromJson(json);
@@ -446,7 +446,7 @@ factory ClaimSubDetail({
   Money net,
   List<Reference> udi,
 
-  }) = _ClaimSubDetail,
+  }) = _ClaimSubDetail;
 
 factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimSubDetailFromJson(json);

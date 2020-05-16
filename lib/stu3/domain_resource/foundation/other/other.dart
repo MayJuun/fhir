@@ -17,7 +17,7 @@ factory Basic({
   String created,
   Reference author,
 
-  }) = _Basic,
+  }) = _Basic;
 
 factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
   Map<String, dynamic> toJson() => _$BasicToJson(this);
@@ -37,7 +37,7 @@ factory Subscription({
   SubscriptionChannel channel,
   List<Coding> tag,
 
-  }) = _Subscription,
+  }) = _Subscription;
 
 factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
@@ -52,7 +52,7 @@ factory SubscriptionChannel({
   String payload,
   List<String> header,
 
-  }) = _SubscriptionChannel,
+  }) = _SubscriptionChannel;
 
 factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);
@@ -84,7 +84,7 @@ factory Media({
   Attachment content,
   List<Annotation> note,
 
-  }) = _Media,
+  }) = _Media;
 
 factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
   Map<String, dynamic> toJson() => _$MediaToJson(this);
@@ -97,7 +97,7 @@ factory OperationOutcome({
   String resourceType,
   List<OperationOutcomeIssue> issue,
 
-  }) = _OperationOutcome,
+  }) = _OperationOutcome;
 
 factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeFromJson(json);
@@ -114,7 +114,7 @@ factory OperationOutcomeIssue({
   List<String> location,
   List<String> expression,
 
-  }) = _OperationOutcomeIssue,
+  }) = _OperationOutcomeIssue;
 
 factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeIssueFromJson(json);
@@ -130,7 +130,7 @@ factory Linkage({
   Reference author,
   List<LinkageItem> item,
 
-  }) = _Linkage,
+  }) = _Linkage;
 
 factory Linkage.fromJson(Map<String, dynamic> json) =>
       _$LinkageFromJson(json);
@@ -143,7 +143,7 @@ factory LinkageItem({
   String type,
   Reference resource,
 
-  }) = _LinkageItem,
+  }) = _LinkageItem;
 
 factory LinkageItem.fromJson(Map<String, dynamic> json) =>
       _$LinkageItemFromJson(json);

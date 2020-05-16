@@ -36,7 +36,7 @@ factory Contract({
   List<ContractLegal> legal,
   List<ContractRule> rule,
 
-  }) = _Contract,
+  }) = _Contract;
 
 factory Contract.fromJson(Map<String, dynamic> json) =>
       _$ContractFromJson(json);
@@ -49,7 +49,7 @@ factory ContractAgent({
   Reference actor,
   List<CodeableConcept> role,
 
-  }) = _ContractAgent,
+  }) = _ContractAgent;
 
 factory ContractAgent.fromJson(Map<String, dynamic> json) =>
       _$ContractAgentFromJson(json);
@@ -63,7 +63,7 @@ factory ContractSigner({
   Reference party,
   List<Signature> signature,
 
-  }) = _ContractSigner,
+  }) = _ContractSigner;
 
 factory ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$ContractSignerFromJson(json);
@@ -83,7 +83,7 @@ factory ContractValuedItem({
   double points,
   Money net,
 
-  }) = _ContractValuedItem,
+  }) = _ContractValuedItem;
 
 factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItemFromJson(json);
@@ -107,7 +107,7 @@ factory ContractTerm({
   List<ContractValuedItem1> valuedItem,
   List<ContractTerm> group,
 
-  }) = _ContractTerm,
+  }) = _ContractTerm;
 
 factory ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$ContractTermFromJson(json);
@@ -120,7 +120,7 @@ factory ContractAgent1({
   Reference actor,
   List<CodeableConcept> role,
 
-  }) = _ContractAgent1,
+  }) = _ContractAgent1;
 
 factory ContractAgent1.fromJson(Map<String, dynamic> json) =>
       _$ContractAgent1FromJson(json);
@@ -140,7 +140,7 @@ factory ContractValuedItem1({
   double points,
   Money net,
 
-  }) = _ContractValuedItem1,
+  }) = _ContractValuedItem1;
 
 factory ContractValuedItem1.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItem1FromJson(json);
@@ -153,7 +153,7 @@ factory ContractFriendly({
   Attachment contentAttachment,
   Reference contentReference,
 
-  }) = _ContractFriendly,
+  }) = _ContractFriendly;
 
 factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$ContractFriendlyFromJson(json);
@@ -166,7 +166,7 @@ factory ContractLegal({
   Attachment contentAttachment,
   Reference contentReference,
 
-  }) = _ContractLegal,
+  }) = _ContractLegal;
 
 factory ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$ContractLegalFromJson(json);
@@ -179,7 +179,7 @@ factory ContractRule({
   Attachment contentAttachment,
   Reference contentReference,
 
-  }) = _ContractRule,
+  }) = _ContractRule;
 
 factory ContractRule.fromJson(Map<String, dynamic> json) =>
       _$ContractRuleFromJson(json);
@@ -204,7 +204,7 @@ factory Account({
   String description,
   List<AccountGuarantor> guarantor,
 
-  }) = _Account,
+  }) = _Account;
 
 factory Account.fromJson(Map<String, dynamic> json) =>
       _$AccountFromJson(json);
@@ -217,7 +217,7 @@ factory AccountCoverage({
   Reference coverage,
   double priority,
 
-  }) = _AccountCoverage,
+  }) = _AccountCoverage;
 
 factory AccountCoverage.fromJson(Map<String, dynamic> json) =>
       _$AccountCoverageFromJson(json);
@@ -231,7 +231,7 @@ factory AccountGuarantor({
   bool onHold,
   Period period,
 
-  }) = _AccountGuarantor,
+  }) = _AccountGuarantor;
 
 factory AccountGuarantor.fromJson(Map<String, dynamic> json) =>
       _$AccountGuarantorFromJson(json);
@@ -269,7 +269,7 @@ factory ChargeItem({
   List<Annotation> note,
   List<Reference> supportingInformation,
 
-  }) = _ChargeItem,
+  }) = _ChargeItem;
 
 factory ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemFromJson(json);
@@ -282,7 +282,7 @@ factory ChargeItemParticipant({
   CodeableConcept role,
   Reference actor,
 
-  }) = _ChargeItemParticipant,
+  }) = _ChargeItemParticipant;
 
 factory ChargeItemParticipant.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemParticipantFromJson(json);
@@ -334,7 +334,7 @@ factory ExplanationOfBenefit({
   List<ExplanationOfBenefitProcessNote> processNote,
   List<ExplanationOfBenefitBenefitBalance> benefitBalance,
 
-  }) = _ExplanationOfBenefit,
+  }) = _ExplanationOfBenefit;
 
 factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFromJson(json);
@@ -348,7 +348,7 @@ factory ExplanationOfBenefitRelated({
   CodeableConcept relationship,
   Identifier reference,
 
-  }) = _ExplanationOfBenefitRelated,
+  }) = _ExplanationOfBenefitRelated;
 
 factory ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitRelatedFromJson(json);
@@ -362,7 +362,7 @@ factory ExplanationOfBenefitPayee({
   String resourceType,
   Reference party,
 
-  }) = _ExplanationOfBenefitPayee,
+  }) = _ExplanationOfBenefitPayee;
 
 factory ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitPayeeFromJson(json);
@@ -383,7 +383,7 @@ factory ExplanationOfBenefitInformation({
   Reference valueReference,
   Coding reason,
 
-  }) = _ExplanationOfBenefitInformation,
+  }) = _ExplanationOfBenefitInformation;
 
 factory ExplanationOfBenefitInformation.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitInformationFromJson(json);
@@ -400,7 +400,7 @@ factory ExplanationOfBenefitCareTeam({
   CodeableConcept role,
   CodeableConcept qualification,
 
-  }) = _ExplanationOfBenefitCareTeam,
+  }) = _ExplanationOfBenefitCareTeam;
 
 factory ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitCareTeamFromJson(json);
@@ -416,7 +416,7 @@ factory ExplanationOfBenefitDiagnosis({
   List<CodeableConcept> type,
   CodeableConcept packageCode,
 
-  }) = _ExplanationOfBenefitDiagnosis,
+  }) = _ExplanationOfBenefitDiagnosis;
 
 factory ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDiagnosisFromJson(json);
@@ -431,7 +431,7 @@ factory ExplanationOfBenefitProcedure({
   CodeableConcept procedureCodeableConcept,
   Reference procedureReference,
 
-  }) = _ExplanationOfBenefitProcedure,
+  }) = _ExplanationOfBenefitProcedure;
 
 factory ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcedureFromJson(json);
@@ -444,7 +444,7 @@ factory ExplanationOfBenefitInsurance({
   Reference coverage,
   List<String> preAuthRef,
 
-  }) = _ExplanationOfBenefitInsurance,
+  }) = _ExplanationOfBenefitInsurance;
 
 factory ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitInsuranceFromJson(json);
@@ -459,7 +459,7 @@ factory ExplanationOfBenefitAccident({
   Address locationAddress,
   Reference locationReference,
 
-  }) = _ExplanationOfBenefitAccident,
+  }) = _ExplanationOfBenefitAccident;
 
 factory ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAccidentFromJson(json);
@@ -496,7 +496,7 @@ factory ExplanationOfBenefitItem({
   List<ExplanationOfBenefitAdjudication> adjudication,
   List<ExplanationOfBenefitDetail> detail,
 
-  }) = _ExplanationOfBenefitItem,
+  }) = _ExplanationOfBenefitItem;
 
 factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitItemFromJson(json);
@@ -511,7 +511,7 @@ factory ExplanationOfBenefitAdjudication({
   Money amount,
   double value,
 
-  }) = _ExplanationOfBenefitAdjudication,
+  }) = _ExplanationOfBenefitAdjudication;
 
 factory ExplanationOfBenefitAdjudication.fromJson(
           Map<String, dynamic> json) =>
@@ -539,7 +539,7 @@ factory ExplanationOfBenefitDetail({
   List<ExplanationOfBenefitAdjudication> adjudication,
   List<ExplanationOfBenefitSubDetail> subDetail,
 
-  }) = _ExplanationOfBenefitDetail,
+  }) = _ExplanationOfBenefitDetail;
 
 factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetailFromJson(json);
@@ -564,7 +564,7 @@ factory ExplanationOfBenefitSubDetail({
   List<String> noteNumber,
   List<ExplanationOfBenefitAdjudication> adjudication,
 
-  }) = _ExplanationOfBenefitSubDetail,
+  }) = _ExplanationOfBenefitSubDetail;
 
 factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitSubDetailFromJson(json);
@@ -584,7 +584,7 @@ factory ExplanationOfBenefitAddItem({
   List<ExplanationOfBenefitAdjudication> adjudication,
   List<ExplanationOfBenefitDetail1> detail,
 
-  }) = _ExplanationOfBenefitAddItem,
+  }) = _ExplanationOfBenefitAddItem;
 
 factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAddItemFromJson(json);
@@ -602,7 +602,7 @@ factory ExplanationOfBenefitDetail1({
   List<String> noteNumber,
   List<ExplanationOfBenefitAdjudication> adjudication,
 
-  }) = _ExplanationOfBenefitDetail1,
+  }) = _ExplanationOfBenefitDetail1;
 
 factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetail1FromJson(json);
@@ -619,7 +619,7 @@ factory ExplanationOfBenefitPayment({
   Money amount,
   Identifier identifier,
 
-  }) = _ExplanationOfBenefitPayment,
+  }) = _ExplanationOfBenefitPayment;
 
 factory ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitPaymentFromJson(json);
@@ -634,7 +634,7 @@ factory ExplanationOfBenefitProcessNote({
   String text,
   CodeableConcept language,
 
-  }) = _ExplanationOfBenefitProcessNote,
+  }) = _ExplanationOfBenefitProcessNote;
 
 factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcessNoteFromJson(json);
@@ -655,7 +655,7 @@ factory ExplanationOfBenefitBenefitBalance({
   CodeableConcept term,
   List<ExplanationOfBenefitFinancial> financial,
 
-  }) = _ExplanationOfBenefitBenefitBalance,
+  }) = _ExplanationOfBenefitBenefitBalance;
 
 factory ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
@@ -674,7 +674,7 @@ factory ExplanationOfBenefitFinancial({
   int usedUnsignedInt,
   Money usedMoney,
 
-  }) = _ExplanationOfBenefitFinancial,
+  }) = _ExplanationOfBenefitFinancial;
 
 factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFinancialFromJson(json);

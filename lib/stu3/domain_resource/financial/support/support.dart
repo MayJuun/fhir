@@ -20,7 +20,7 @@ factory EnrollmentRequest({
   Reference subject,
   Reference coverage,
 
-  }) = _EnrollmentRequest,
+  }) = _EnrollmentRequest;
 
 factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentRequestFromJson(json);
@@ -42,7 +42,7 @@ factory EnrollmentResponse({
   Reference requestProvider,
   Reference requestOrganization,
 
-  }) = _EnrollmentResponse,
+  }) = _EnrollmentResponse;
 
 factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentResponseFromJson(json);
@@ -71,7 +71,7 @@ factory Coverage({
   String network,
   List<Reference> contract,
 
-  }) = _Coverage,
+  }) = _Coverage;
 
 factory Coverage.fromJson(Map<String, dynamic> json) =>
       _$CoverageFromJson(json);
@@ -94,7 +94,7 @@ factory CoverageGrouping({
   String subClass,
   String subClassDisplay,
 
-  }) = _CoverageGrouping,
+  }) = _CoverageGrouping;
 
 factory CoverageGrouping.fromJson(Map<String, dynamic> json) =>
       _$CoverageGroupingFromJson(json);
@@ -120,7 +120,7 @@ factory EligibilityResponse({
   CodeableConcept form,
   List<EligibilityResponseError> error,
 
-  }) = _EligibilityResponse,
+  }) = _EligibilityResponse;
 
 factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFromJson(json);
@@ -134,7 +134,7 @@ factory EligibilityResponseInsurance({
   Reference contract,
   List<EligibilityResponseBenefitBalance> benefitBalance,
 
-  }) = _EligibilityResponseInsurance,
+  }) = _EligibilityResponseInsurance;
 
 factory EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseInsuranceFromJson(json);
@@ -154,7 +154,7 @@ factory EligibilityResponseBenefitBalance({
   CodeableConcept term,
   List<EligibilityResponseFinancial> financial,
 
-  }) = _EligibilityResponseBenefitBalance,
+  }) = _EligibilityResponseBenefitBalance;
 
 factory EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
@@ -173,7 +173,7 @@ factory EligibilityResponseFinancial({
   int usedUnsignedInt,
   Money usedMoney,
 
-  }) = _EligibilityResponseFinancial,
+  }) = _EligibilityResponseFinancial;
 
 factory EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFinancialFromJson(json);
@@ -185,7 +185,7 @@ abstract class EligibilityResponseError with _$EligibilityResponseError {
 factory EligibilityResponseError({
   CodeableConcept code,
 
-  }) = _EligibilityResponseError,
+  }) = _EligibilityResponseError;
 
 factory EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseErrorFromJson(json);
@@ -214,7 +214,7 @@ factory EligibilityRequest({
   CodeableConcept benefitCategory,
   CodeableConcept benefitSubCategory,
 
-  }) = _EligibilityRequest,
+  }) = _EligibilityRequest;
 
 factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$EligibilityRequestFromJson(json);

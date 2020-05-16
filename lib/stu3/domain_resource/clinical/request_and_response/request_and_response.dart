@@ -36,7 +36,7 @@ factory DeviceRequest({
   List<Annotation> note,
   List<Reference> relevantHistory,
 
-  }) = _DeviceRequest,
+  }) = _DeviceRequest;
 
 factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestFromJson(json);
@@ -49,7 +49,7 @@ factory DeviceRequestRequester({
   Reference agent,
   Reference onBehalfOf,
 
-  }) = _DeviceRequestRequester,
+  }) = _DeviceRequestRequester;
 
 factory DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestRequesterFromJson(json);
@@ -75,7 +75,7 @@ factory DeviceUseStatement({
   CodeableConcept bodySite,
   List<Annotation> note,
 
-  }) = _DeviceUseStatement,
+  }) = _DeviceUseStatement;
 
 factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
@@ -109,7 +109,7 @@ factory CommunicationRequest({
   List<Reference> reasonReference,
   List<Annotation> note,
 
-  }) = _CommunicationRequest,
+  }) = _CommunicationRequest;
 
 factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
@@ -123,7 +123,7 @@ factory CommunicationRequestPayload({
   Attachment contentAttachment,
   Reference contentReference,
 
-  }) = _CommunicationRequestPayload,
+  }) = _CommunicationRequestPayload;
 
 factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
@@ -136,7 +136,7 @@ factory CommunicationRequestRequester({
   Reference agent,
   Reference onBehalfOf,
 
-  }) = _CommunicationRequestRequester,
+  }) = _CommunicationRequestRequester;
 
 factory CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestRequesterFromJson(json);
@@ -169,7 +169,7 @@ factory Communication({
   List<CommunicationPayload> payload,
   List<Annotation> note,
 
-  }) = _Communication,
+  }) = _Communication;
 
 factory Communication.fromJson(Map<String, dynamic> json) =>
       _$CommunicationFromJson(json);
@@ -183,7 +183,7 @@ factory CommunicationPayload({
   Attachment contentAttachment,
   Reference contentReference,
 
-  }) = _CommunicationPayload,
+  }) = _CommunicationPayload;
 
 factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationPayloadFromJson(json);
@@ -211,7 +211,7 @@ factory SupplyRequest({
   Reference deliverFrom,
   Reference deliverTo,
 
-  }) = _SupplyRequest,
+  }) = _SupplyRequest;
 
 factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);
@@ -225,7 +225,7 @@ factory SupplyRequestOrderedItem({
   CodeableConcept itemCodeableConcept,
   Reference itemReference,
 
-  }) = _SupplyRequestOrderedItem,
+  }) = _SupplyRequestOrderedItem;
 
 factory SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestOrderedItemFromJson(json);
@@ -238,7 +238,7 @@ factory SupplyRequestRequester({
   Reference agent,
   Reference onBehalfOf,
 
-  }) = _SupplyRequestRequester,
+  }) = _SupplyRequestRequester;
 
 factory SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestRequesterFromJson(json);
@@ -264,7 +264,7 @@ factory SupplyDelivery({
   Reference destination,
   List<Reference> receiver,
 
-  }) = _SupplyDelivery,
+  }) = _SupplyDelivery;
 
 factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
@@ -278,7 +278,7 @@ factory SupplyDeliverySuppliedItem({
   CodeableConcept itemCodeableConcept,
   Reference itemReference,
 
-  }) = _SupplyDeliverySuppliedItem,
+  }) = _SupplyDeliverySuppliedItem;
 
 factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliverySuppliedItemFromJson(json);
