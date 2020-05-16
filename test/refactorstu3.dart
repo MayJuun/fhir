@@ -1,25 +1,23 @@
 import 'dart:io';
 
 void main() async {
-  var tempDir = Directory('./lib/stu3/domain_resource/');
+  var dir = 'specialized';
+  var file = 'testing';
+  var tempDir = Directory('./lib/stu3/domain_resource/$dir/$file/');
+var text = '''  import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-  tempDir.list(recursive: true, followLinks: false).listen(
+import '../../../../fhir_stu3.dart';
+
+part '$file.freezed.dart';
+part '$file.g.dart';\n\n''';
+
+  await tempDir.list(recursive: true, followLinks: false).listen(
     (FileSystemEntity entity) async {
-      if (!entity.path.toString().contains('g.dart') &&
-          entity.path.toString().contains('.dart')) {
-        var parts = entity.path.toString().split('/');
-        if (parts.length == 7) {
-          var oldText = await File(entity.path.toString()).readAsString();
-          var primary = await File(
-                  './lib/stu3/${parts[3]}/${parts[4]}/${parts[5]}/${parts[5]}.dart')
-              .readAsString();
-          print(oldText);
-          primary = primary + oldText;
-          // await File(
-          //         './lib/stu3/${parts[3]}/${parts[4]}/${parts[5]}/${parts[5]}.dart')
-          //     .writeAsString(primary);
-        }
-      }
+      var oldText = await File(entity.path.toString()).readAsString();
+      text += oldText;
+      await File('./lib/stu3/domain_resource/$dir/$file/$file.dart')
+          .writeAsString(text);
     },
   );
 }
