@@ -26,7 +26,7 @@ factory PaymentReconciliation({
   Money total;
   List<PaymentReconciliationProcessNote> processNote;
 
-  }) = PaymentReconciliation;
+  }) = _PaymentReconciliation;
 
 factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
@@ -44,7 +44,7 @@ factory PaymentReconciliationDetail({
   String date;
   Money amount;
 
-  }) = PaymentReconciliationDetail;
+  }) = _PaymentReconciliationDetail;
 
 factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
@@ -57,7 +57,7 @@ factory PaymentReconciliationProcessNote({
   CodeableConcept type;
   String text;
 
-  }) = PaymentReconciliationProcessNote;
+  }) = _PaymentReconciliationProcessNote;
 
 factory PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>
@@ -82,7 +82,7 @@ factory PaymentNotice({
   Reference organization;
   CodeableConcept paymentStatus;
 
-  }) = PaymentNotice;
+  }) = _PaymentNotice;
 
 factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);

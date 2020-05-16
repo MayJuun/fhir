@@ -38,7 +38,7 @@ factory FamilyMemberHistory({
   List<Annotation> note;
   List<FamilyMemberHistoryCondition> condition;
 
-  }) = FamilyMemberHistory;
+  }) = _FamilyMemberHistory;
 
 factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryFromJson(json);
@@ -56,7 +56,7 @@ factory FamilyMemberHistoryCondition({
   String onsetString;
   List<Annotation> note;
 
-  }) = FamilyMemberHistoryCondition;
+  }) = _FamilyMemberHistoryCondition;
 
 factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryConditionFromJson(json);
@@ -88,7 +88,7 @@ factory AllergyIntolerance({
   List<Annotation> note;
   List<AllergyIntoleranceReaction> reaction;
 
-  }) = AllergyIntolerance;
+  }) = _AllergyIntolerance;
 
 factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceFromJson(json);
@@ -106,7 +106,7 @@ factory AllergyIntoleranceReaction({
   CodeableConcept exposureRoute;
   List<Annotation> note;
 
-  }) = AllergyIntoleranceReaction;
+  }) = _AllergyIntoleranceReaction;
 
 factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceReactionFromJson(json);
@@ -144,7 +144,7 @@ factory Condition({
   List<ConditionEvidence> evidence;
   List<Annotation> note;
 
-  }) = Condition;
+  }) = _Condition;
 
 factory Condition.fromJson(Map<String, dynamic> json) =>
       _$ConditionFromJson(json);
@@ -157,7 +157,7 @@ factory ConditionStage({
   CodeableConcept summary;
   List<Reference> assessment;
 
-  }) = ConditionStage;
+  }) = _ConditionStage;
 
 factory ConditionStage.fromJson(Map<String, dynamic> json) =>
       _$ConditionStageFromJson(json);
@@ -170,7 +170,7 @@ factory ConditionEvidence({
   List<CodeableConcept> code;
   List<Reference> detail;
 
-  }) = ConditionEvidence;
+  }) = _ConditionEvidence;
 
 factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
       _$ConditionEvidenceFromJson(json);
@@ -210,7 +210,7 @@ factory Procedure({
   List<Reference> usedReference;
   List<CodeableConcept> usedCode;
 
-  }) = Procedure;
+  }) = _Procedure;
 
 factory Procedure.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFromJson(json);
@@ -224,7 +224,7 @@ factory ProcedurePerformer({
   Reference actor;
   Reference onBehalfOf;
 
-  }) = ProcedurePerformer;
+  }) = _ProcedurePerformer;
 
 factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
       _$ProcedurePerformerFromJson(json);
@@ -237,7 +237,7 @@ factory ProcedureFocalDevice({
   CodeableConcept action;
   Reference manipulated;
 
-  }) = ProcedureFocalDevice;
+  }) = _ProcedureFocalDevice;
 
 factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFocalDeviceFromJson(json);
@@ -261,7 +261,7 @@ factory DetectedIssue({
   String reference;
   List<DetectedIssueMitigation> mitigation;
 
-  }) = DetectedIssue;
+  }) = _DetectedIssue;
 
 factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueFromJson(json);
@@ -275,7 +275,7 @@ factory DetectedIssueMitigation({
   String date;
   Reference author;
 
-  }) = DetectedIssueMitigation;
+  }) = _DetectedIssueMitigation;
 
 factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueMitigationFromJson(json);
@@ -304,7 +304,7 @@ factory AdverseEvent({
   List<Reference> referenceDocument;
   List<Reference> study;
 
-  }) = AdverseEvent;
+  }) = _AdverseEvent;
 
 factory AdverseEvent.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventFromJson(json);
@@ -322,7 +322,7 @@ factory AdverseEventSuspectEntity({
   Reference causalityAuthor;
   CodeableConcept causalityResult;
 
-  }) = AdverseEventSuspectEntity;
+  }) = _AdverseEventSuspectEntity;
 
 factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventSuspectEntityFromJson(json);
@@ -355,7 +355,7 @@ factory ClinicalImpression({
   List<Reference> action;
   List<Annotation> note;
 
-  }) = ClinicalImpression;
+  }) = _ClinicalImpression;
 
 factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFromJson(json);
@@ -368,7 +368,7 @@ factory ClinicalImpressionInvestigation({
   CodeableConcept code;
   List<Reference> item;
 
-  }) = ClinicalImpressionInvestigation;
+  }) = _ClinicalImpressionInvestigation;
 
 factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionInvestigationFromJson(json);
@@ -383,7 +383,7 @@ factory ClinicalImpressionFinding({
   Reference itemReference;
   String basis;
 
-  }) = ClinicalImpressionFinding;
+  }) = _ClinicalImpressionFinding;
 
 factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFindingFromJson(json);

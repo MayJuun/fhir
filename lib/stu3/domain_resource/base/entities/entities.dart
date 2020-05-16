@@ -19,7 +19,7 @@ factory Substance({
   List<SubstanceInstance> instance;
   List<SubstanceIngredient> ingredient;
 
-  }) = Substance;
+  }) = _Substance;
 
 factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
@@ -33,7 +33,7 @@ factory SubstanceInstance({
   String expiry;
   Quantity quantity;
 
-  }) = SubstanceInstance;
+  }) = _SubstanceInstance;
 
 factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceInstanceFromJson(json);
@@ -47,7 +47,7 @@ factory SubstanceIngredient({
   CodeableConcept substanceCodeableConcept;
   Reference substanceReference;
 
-  }) = SubstanceIngredient;
+  }) = _SubstanceIngredient;
 
 factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$SubstanceIngredientFromJson(json);
@@ -71,7 +71,7 @@ factory Endpoint({
   String address;
   List<String> header;
 
-  }) = Endpoint;
+  }) = _Endpoint;
 
 factory Endpoint.fromJson(Map<String, dynamic> json) =>
       _$EndpointFromJson(json);
@@ -94,7 +94,7 @@ factory DeviceComponent({
   List<DeviceComponentProductionSpecification> productionSpecification;
   CodeableConcept languageCode;
 
-  }) = DeviceComponent;
+  }) = _DeviceComponent;
 
 factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$DeviceComponentFromJson(json);
@@ -108,7 +108,7 @@ factory DeviceComponentProductionSpecification({
   Identifier componentId;
   String productionSpec;
 
-  }) = DeviceComponentProductionSpecification;
+  }) = _DeviceComponentProductionSpecification;
 
 factory DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
@@ -133,7 +133,7 @@ factory DeviceMetric({
   Timing measurementPeriod;
   List<DeviceMetricCalibration> calibration;
 
-  }) = DeviceMetric;
+  }) = _DeviceMetric;
 
 factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
@@ -147,7 +147,7 @@ factory DeviceMetricCalibration({
   String state;
   String time;
 
-  }) = DeviceMetricCalibration;
+  }) = _DeviceMetricCalibration;
 
 factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
@@ -175,7 +175,7 @@ factory Location({
   Reference partOf;
   List<Reference> endpoint;
 
-  }) = Location;
+  }) = _Location;
 
 factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
@@ -189,7 +189,7 @@ factory LocationPosition({
   double latitude;
   double altitude;
 
-  }) = LocationPosition;
+  }) = _LocationPosition;
 
 factory LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$LocationPositionFromJson(json);
@@ -219,7 +219,7 @@ factory Device({
   List<Annotation> note;
   List<CodeableConcept> safety;
 
-  }) = Device;
+  }) = _Device;
 
 factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceToJson(this);
@@ -236,7 +236,7 @@ factory DeviceUdi({
   String issuer;
   String entryType;
 
-  }) = DeviceUdi;
+  }) = _DeviceUdi;
 
 factory DeviceUdi.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiFromJson(json);
@@ -273,7 +273,7 @@ factory HealthcareService({
   String availabilityExceptions;
   List<Reference> endpoint;
 
-  }) = HealthcareService;
+  }) = _HealthcareService;
 
 factory HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceFromJson(json);
@@ -288,7 +288,7 @@ factory HealthcareServiceAvailableTime({
   String availableStartTime;
   String availableEndTime;
 
-  }) = HealthcareServiceAvailableTime;
+  }) = _HealthcareServiceAvailableTime;
 
 factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceAvailableTimeFromJson(json);
@@ -301,7 +301,7 @@ factory HealthcareServiceNotAvailable({
   String description;
   Period during;
 
-  }) = HealthcareServiceNotAvailable;
+  }) = _HealthcareServiceNotAvailable;
 
 factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceNotAvailableFromJson(json);
@@ -324,7 +324,7 @@ factory Organization({
   List<OrganizationContact> contact;
   List<Reference> endpoint;
 
-  }) = Organization;
+  }) = _Organization;
 
 factory Organization.fromJson(Map<String, dynamic> json) =>
       _$OrganizationFromJson(json);
@@ -339,7 +339,7 @@ factory OrganizationContact({
   List<ContactPoint> telecom;
   Address address;
 
-  }) = OrganizationContact;
+  }) = _OrganizationContact;
 
 factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
       _$OrganizationContactFromJson(json);

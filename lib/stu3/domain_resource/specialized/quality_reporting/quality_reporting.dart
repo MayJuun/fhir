@@ -22,7 +22,7 @@ factory MeasureReport({
   List<MeasureReportGroup> group;
   Reference evaluatedResources;
 
-  }) = MeasureReport;
+  }) = _MeasureReport;
 
 factory MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportFromJson(json);
@@ -37,7 +37,7 @@ factory MeasureReportGroup({
   double measureScore;
   List<MeasureReportStratifier> stratifier;
 
-  }) = MeasureReportGroup;
+  }) = _MeasureReportGroup;
 
 factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportGroupFromJson(json);
@@ -52,7 +52,7 @@ factory MeasureReportPopulation({
   double count;
   Reference patients;
 
-  }) = MeasureReportPopulation;
+  }) = _MeasureReportPopulation;
 
 factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulationFromJson(json);
@@ -65,7 +65,7 @@ factory MeasureReportStratifier({
   Identifier identifier;
   List<MeasureReportStratum> stratum;
 
-  }) = MeasureReportStratifier;
+  }) = _MeasureReportStratifier;
 
 factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratifierFromJson(json);
@@ -79,7 +79,7 @@ factory MeasureReportStratum({
   List<MeasureReportPopulation1> population;
   double measureScore;
 
-  }) = MeasureReportStratum;
+  }) = _MeasureReportStratum;
 
 factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratumFromJson(json);
@@ -94,7 +94,7 @@ factory MeasureReportPopulation1({
   double count;
   Reference patients;
 
-  }) = MeasureReportPopulation1;
+  }) = _MeasureReportPopulation1;
 
 factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulation1FromJson(json);
@@ -144,7 +144,7 @@ factory Measure({
   List<MeasureGroup> group;
   List<MeasureSupplementalData> supplementalData;
 
-  }) = Measure;
+  }) = _Measure;
 
 factory Measure.fromJson(Map<String, dynamic> json) =>
       _$MeasureFromJson(json);
@@ -160,7 +160,7 @@ factory MeasureGroup({
   List<MeasurePopulation> population;
   List<MeasureStratifier> stratifier;
 
-  }) = MeasureGroup;
+  }) = _MeasureGroup;
 
 factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureGroupFromJson(json);
@@ -176,7 +176,7 @@ factory MeasurePopulation({
   String description;
   String criteria;
 
-  }) = MeasurePopulation;
+  }) = _MeasurePopulation;
 
 factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasurePopulationFromJson(json);
@@ -190,7 +190,7 @@ factory MeasureStratifier({
   String criteria;
   String path;
 
-  }) = MeasureStratifier;
+  }) = _MeasureStratifier;
 
 factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureStratifierFromJson(json);
@@ -205,7 +205,7 @@ factory MeasureSupplementalData({
   String criteria;
   String path;
 
-  }) = MeasureSupplementalData;
+  }) = _MeasureSupplementalData;
 
 factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
       _$MeasureSupplementalDataFromJson(json);

@@ -40,7 +40,7 @@ factory ImagingStudy({
   String description;
   List<ImagingStudySeries> series;
 
-  }) = ImagingStudy;
+  }) = _ImagingStudy;
 
 factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyFromJson(json);
@@ -63,7 +63,7 @@ factory ImagingStudySeries({
   List<Reference> performer;
   List<ImagingStudyInstance> instance;
 
-  }) = ImagingStudySeries;
+  }) = _ImagingStudySeries;
 
 factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesFromJson(json);
@@ -78,7 +78,7 @@ factory ImagingStudyInstance({
   String sopClass;
   String title;
 
-  }) = ImagingStudyInstance;
+  }) = _ImagingStudyInstance;
 
 factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyInstanceFromJson(json);
@@ -126,7 +126,7 @@ factory DiagnosticReport({
   List<CodeableConcept> codedDiagnosis;
   List<Attachment> presentedForm;
 
-  }) = DiagnosticReport;
+  }) = _DiagnosticReport;
 
 factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportFromJson(json);
@@ -139,7 +139,7 @@ factory DiagnosticReportPerformer({
   CodeableConcept role;
   Reference actor;
 
-  }) = DiagnosticReportPerformer;
+  }) = _DiagnosticReportPerformer;
 
 factory DiagnosticReportPerformer.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportPerformerFromJson(json);
@@ -152,7 +152,7 @@ factory DiagnosticReportImage({
   String comment;
   Reference link;
 
-  }) = DiagnosticReportImage;
+  }) = _DiagnosticReportImage;
 
 factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportImageFromJson(json);
@@ -191,7 +191,7 @@ factory QuestionnaireResponse({
   Reference source;
   List<QuestionnaireResponseItem> item;
 
-  }) = QuestionnaireResponse;
+  }) = _QuestionnaireResponse;
 
 factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseFromJson(json);
@@ -208,7 +208,7 @@ factory QuestionnaireResponseItem({
   List<QuestionnaireResponseAnswer> answer;
   List<QuestionnaireResponseItem> item;
 
-  }) = QuestionnaireResponseItem;
+  }) = _QuestionnaireResponseItem;
 
 factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseItemFromJson(json);
@@ -232,7 +232,7 @@ factory QuestionnaireResponseAnswer({
   Reference valueReference;
   List<QuestionnaireResponseItem> item;
 
-  }) = QuestionnaireResponseAnswer;
+  }) = _QuestionnaireResponseAnswer;
 
 factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseAnswerFromJson(json);
@@ -262,7 +262,7 @@ factory ImagingManifest({
   String description;
   List<ImagingManifestStudy> study;
 
-  }) = ImagingManifest;
+  }) = _ImagingManifest;
 
 factory ImagingManifest.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestFromJson(json);
@@ -277,7 +277,7 @@ factory ImagingManifestStudy({
   List<Reference> endpoint;
   List<ImagingManifestSeries> series;
 
-  }) = ImagingManifestStudy;
+  }) = _ImagingManifestStudy;
 
 factory ImagingManifestStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestStudyFromJson(json);
@@ -291,7 +291,7 @@ factory ImagingManifestSeries({
   List<Reference> endpoint;
   List<ImagingManifestInstance> instance;
 
-  }) = ImagingManifestSeries;
+  }) = _ImagingManifestSeries;
 
 factory ImagingManifestSeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestSeriesFromJson(json);
@@ -304,7 +304,7 @@ factory ImagingManifestInstance({
   String sopClass;
   String uid;
 
-  }) = ImagingManifestInstance;
+  }) = _ImagingManifestInstance;
 
 factory ImagingManifestInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestInstanceFromJson(json);
@@ -345,7 +345,7 @@ factory Sequence({
   List<SequenceRepository> repository;
   List<Reference> pointer;
 
-  }) = Sequence;
+  }) = _Sequence;
 
 factory Sequence.fromJson(Map<String, dynamic> json) =>
       _$SequenceFromJson(json);
@@ -364,7 +364,7 @@ factory SequenceVariant({
   String cigar;
   Reference variantPointer;
 
-  }) = SequenceVariant;
+  }) = _SequenceVariant;
 
 factory SequenceVariant.fromJson(Map<String, dynamic> json) =>
       _$SequenceVariantFromJson(json);
@@ -389,7 +389,7 @@ factory SequenceQuality({
   double recall;
   double fScore;
 
-  }) = SequenceQuality;
+  }) = _SequenceQuality;
 
 factory SequenceQuality.fromJson(Map<String, dynamic> json) =>
       _$SequenceQualityFromJson(json);
@@ -406,7 +406,7 @@ factory SequenceRepository({
   String variantsetId;
   String readsetId;
 
-  }) = SequenceRepository;
+  }) = _SequenceRepository;
 
 factory SequenceRepository.fromJson(Map<String, dynamic> json) =>
       _$SequenceRepositoryFromJson(json);
@@ -441,7 +441,7 @@ factory BodySite({
   List<Attachment> image;
   Reference patient;
 
-  }) = BodySite;
+  }) = _BodySite;
 
 factory BodySite.fromJson(Map<String, dynamic> json) =>
       _$BodySiteFromJson(json);
@@ -485,7 +485,7 @@ factory Specimen({
   List<SpecimenContainer> container;
   List<Annotation> note;
 
-  }) = Specimen;
+  }) = _Specimen;
 
 factory Specimen.fromJson(Map<String, dynamic> json) =>
       _$SpecimenFromJson(json);
@@ -502,7 +502,7 @@ factory SpecimenCollection({
   CodeableConcept method;
   CodeableConcept bodySite;
 
-  }) = SpecimenCollection;
+  }) = _SpecimenCollection;
 
 factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
       _$SpecimenCollectionFromJson(json);
@@ -518,7 +518,7 @@ factory SpecimenProcessing({
   DateTime timeDateTime;
   Period timePeriod;
 
-  }) = SpecimenProcessing;
+  }) = _SpecimenProcessing;
 
 factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
       _$SpecimenProcessingFromJson(json);
@@ -536,7 +536,7 @@ factory SpecimenContainer({
   CodeableConcept additiveCodeableConcept;
   Reference additiveReference;
 
-  }) = SpecimenContainer;
+  }) = _SpecimenContainer;
 
 factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$SpecimenContainerFromJson(json);
@@ -606,7 +606,7 @@ factory Observation({
   List<ObservationRelated> related;
   List<ObservationComponent> component;
 
-  }) = Observation;
+  }) = _Observation;
 
 factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
@@ -623,7 +623,7 @@ factory ObservationReferenceRange({
   Range age;
   String text;
 
-  }) = ObservationReferenceRange;
+  }) = _ObservationReferenceRange;
 
 factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$ObservationReferenceRangeFromJson(json);
@@ -636,7 +636,7 @@ factory ObservationRelated({
   String type;
   Reference target;
 
-  }) = ObservationRelated;
+  }) = _ObservationRelated;
 
 factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
       _$ObservationRelatedFromJson(json);
@@ -661,7 +661,7 @@ factory ObservationComponent({
   CodeableConcept interpretation;
   List<ObservationReferenceRange> referenceRange;
 
-  }) = ObservationComponent;
+  }) = _ObservationComponent;
 
 factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
 Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);

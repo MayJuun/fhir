@@ -22,7 +22,7 @@ factory AuditEvent({
   AuditEventSource source;
   List<AuditEventEntity> entity;
 
-  }) = AuditEvent;
+  }) = _AuditEvent;
 
 factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
@@ -44,7 +44,7 @@ factory AuditEventAgent({
   AuditEventNetwork network;
   List<CodeableConcept> purposeOfUse;
 
-  }) = AuditEventAgent;
+  }) = _AuditEventAgent;
 
 factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventAgentFromJson(json);
@@ -57,7 +57,7 @@ factory AuditEventNetwork({
   String address;
   String type;
 
-  }) = AuditEventNetwork;
+  }) = _AuditEventNetwork;
 
 factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
       _$AuditEventNetworkFromJson(json);
@@ -71,7 +71,7 @@ factory AuditEventSource({
   Identifier identifier;
   List<Coding> type;
 
-  }) = AuditEventSource;
+  }) = _AuditEventSource;
 
 factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$AuditEventSourceFromJson(json);
@@ -92,7 +92,7 @@ factory AuditEventEntity({
   String query;
   List<AuditEventDetail> detail;
 
-  }) = AuditEventEntity;
+  }) = _AuditEventEntity;
 
 factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
       _$AuditEventEntityFromJson(json);
@@ -105,7 +105,7 @@ factory AuditEventDetail({
   String type;
   String value;
 
-  }) = AuditEventDetail;
+  }) = _AuditEventDetail;
 
 factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
       _$AuditEventDetailFromJson(json);
@@ -128,7 +128,7 @@ factory Provenance({
   List<ProvenanceEntity> entity;
   List<Signature> signature;
 
-  }) = Provenance;
+  }) = _Provenance;
 
 factory Provenance.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceFromJson(json);
@@ -145,7 +145,7 @@ factory ProvenanceAgent({
   Reference onBehalfOfReference;
   CodeableConcept relatedAgentType;
 
-  }) = ProvenanceAgent;
+  }) = _ProvenanceAgent;
 
 factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentFromJson(json);
@@ -161,7 +161,7 @@ factory ProvenanceEntity({
   Identifier whatIdentifier;
   List<ProvenanceAgent> agent;
 
-  }) = ProvenanceEntity;
+  }) = _ProvenanceEntity;
 
 factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);
@@ -194,7 +194,7 @@ factory Consent({
   List<ConsentData> data;
   List<ConsentExcept> except;
 
-  }) = Consent;
+  }) = _Consent;
 
 factory Consent.fromJson(Map<String, dynamic> json) =>
       _$ConsentFromJson(json);
@@ -207,7 +207,7 @@ factory ConsentActor({
   CodeableConcept role;
   Reference reference;
 
-  }) = ConsentActor;
+  }) = _ConsentActor;
 
 factory ConsentActor.fromJson(Map<String, dynamic> json) =>
       _$ConsentActorFromJson(json);
@@ -220,7 +220,7 @@ factory ConsentPolicy({
   String authority;
   String uri;
 
-  }) = ConsentPolicy;
+  }) = _ConsentPolicy;
 
 factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
       _$ConsentPolicyFromJson(json);
@@ -233,7 +233,7 @@ factory ConsentData({
   String meaning;
   Reference reference;
 
-  }) = ConsentData;
+  }) = _ConsentData;
 
 factory ConsentData.fromJson(Map<String, dynamic> json) =>
       _$ConsentDataFromJson(json);
@@ -254,7 +254,7 @@ factory ConsentExcept({
   Period dataPeriod;
   List<ConsentData1> data;
 
-  }) = ConsentExcept;
+  }) = _ConsentExcept;
 
 factory ConsentExcept.fromJson(Map<String, dynamic> json) =>
       _$ConsentExceptFromJson(json);
@@ -267,7 +267,7 @@ factory ConsentActor1({
   CodeableConcept role;
   Reference reference;
 
-  }) = ConsentActor1;
+  }) = _ConsentActor1;
 
 factory ConsentActor1.fromJson(Map<String, dynamic> json) =>
       _$ConsentActor1FromJson(json);
@@ -280,7 +280,7 @@ factory ConsentData1({
   String meaning;
   Reference reference;
 
-  }) = ConsentData1;
+  }) = _ConsentData1;
 
 factory ConsentData1.fromJson(Map<String, dynamic> json) =>
       _$ConsentData1FromJson(json);

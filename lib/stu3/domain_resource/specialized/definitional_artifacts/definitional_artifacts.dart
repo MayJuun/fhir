@@ -50,7 +50,7 @@ factory ActivityDefinition({
   Reference transform;
   List<ActivityDefinitionDynamicValue> dynamicValue;
 
-  }) = ActivityDefinition;
+  }) = _ActivityDefinition;
 
 factory ActivityDefinition.fromJson(Map<String, dynamic> json) =>
       _$ActivityDefinitionFromJson(json);
@@ -63,7 +63,7 @@ factory ActivityDefinitionParticipant({
   String type;
   CodeableConcept role;
 
-  }) = ActivityDefinitionParticipant;
+  }) = _ActivityDefinitionParticipant;
 
 factory ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
       _$ActivityDefinitionParticipantFromJson(json);
@@ -78,7 +78,7 @@ factory ActivityDefinitionDynamicValue({
   String language;
   String expression;
 
-  }) = ActivityDefinitionDynamicValue;
+  }) = _ActivityDefinitionDynamicValue;
 
 factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
       _$ActivityDefinitionDynamicValueFromJson(json);
@@ -112,7 +112,7 @@ factory Questionnaire({
   List<String> subjectType;
   List<QuestionnaireItem> item;
 
-  }) = Questionnaire;
+  }) = _Questionnaire;
 
 factory Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireFromJson(json);
@@ -149,7 +149,7 @@ factory QuestionnaireItem({
   Reference initialReference;
   List<QuestionnaireItem> item;
 
-  }) = QuestionnaireItem;
+  }) = _QuestionnaireItem;
 
 factory QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireItemFromJson(json);
@@ -174,7 +174,7 @@ factory QuestionnaireEnableWhen({
   Quantity answerQuantity;
   Reference answerReference;
 
-  }) = QuestionnaireEnableWhen;
+  }) = _QuestionnaireEnableWhen;
 
 factory QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireEnableWhenFromJson(json);
@@ -190,7 +190,7 @@ factory QuestionnaireOption({
   String valueString;
   Coding valueCoding;
 
-  }) = QuestionnaireOption;
+  }) = _QuestionnaireOption;
 
 factory QuestionnaireOption.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireOptionFromJson(json);
@@ -228,7 +228,7 @@ factory ServiceDefinition({
   List<DataRequirement> dataRequirement;
   Reference operationDefinition;
 
-  }) = ServiceDefinition;
+  }) = _ServiceDefinition;
 
 factory ServiceDefinition.fromJson(Map<String, dynamic> json) =>
       _$ServiceDefinitionFromJson(json);
@@ -267,7 +267,7 @@ factory PlanDefinition({
   List<PlanDefinitionGoal> goal;
   List<PlanDefinitionAction> action;
 
-  }) = PlanDefinition;
+  }) = _PlanDefinition;
 
 factory PlanDefinition.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionFromJson(json);
@@ -285,7 +285,7 @@ factory PlanDefinitionGoal({
   List<RelatedArtifact> documentation;
   List<PlanDefinitionTarget> target;
 
-  }) = PlanDefinitionGoal;
+  }) = _PlanDefinitionGoal;
 
 factory PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionGoalFromJson(json);
@@ -301,7 +301,7 @@ factory PlanDefinitionTarget({
   CodeableConcept detailCodeableConcept;
   Duration due;
 
-  }) = PlanDefinitionTarget;
+  }) = _PlanDefinitionTarget;
 
 factory PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionTargetFromJson(json);
@@ -341,7 +341,7 @@ factory PlanDefinitionAction({
   List<PlanDefinitionDynamicValue> dynamicValue;
   List<PlanDefinitionAction> action;
 
-  }) = PlanDefinitionAction;
+  }) = _PlanDefinitionAction;
 
 factory PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionActionFromJson(json);
@@ -356,7 +356,7 @@ factory PlanDefinitionCondition({
   String language;
   String expression;
 
-  }) = PlanDefinitionCondition;
+  }) = _PlanDefinitionCondition;
 
 factory PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionConditionFromJson(json);
@@ -371,7 +371,7 @@ factory PlanDefinitionRelatedAction({
   Duration offsetDuration;
   Range offsetRange;
 
-  }) = PlanDefinitionRelatedAction;
+  }) = _PlanDefinitionRelatedAction;
 
 factory PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionRelatedActionFromJson(json);
@@ -384,7 +384,7 @@ factory PlanDefinitionParticipant({
   String type;
   CodeableConcept role;
 
-  }) = PlanDefinitionParticipant;
+  }) = _PlanDefinitionParticipant;
 
 factory PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionParticipantFromJson(json);
@@ -399,7 +399,7 @@ factory PlanDefinitionDynamicValue({
   String language;
   String expression;
 
-  }) = PlanDefinitionDynamicValue;
+  }) = _PlanDefinitionDynamicValue;
 
 factory PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionDynamicValueFromJson(json);

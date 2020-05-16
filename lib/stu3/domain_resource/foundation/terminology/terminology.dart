@@ -26,7 +26,7 @@ factory NamingSystem({
   List<NamingSystemUniqueId> uniqueId;
   Reference replacedBy;
 
-  }) = NamingSystem;
+  }) = _NamingSystem;
 
 factory NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemFromJson(json);
@@ -42,7 +42,7 @@ factory NamingSystemUniqueId({
   String comment;
   Period period;
 
-  }) = NamingSystemUniqueId;
+  }) = _NamingSystemUniqueId;
 
 factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemUniqueIdFromJson(json);
@@ -75,7 +75,7 @@ factory ConceptMap({
   Reference targetReference;
   List<ConceptMapGroup> group;
 
-  }) = ConceptMap;
+  }) = _ConceptMap;
 
 factory ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapFromJson(json);
@@ -92,7 +92,7 @@ factory ConceptMapGroup({
   List<ConceptMapElement> element;
   ConceptMapUnmapped unmapped;
 
-  }) = ConceptMapGroup;
+  }) = _ConceptMapGroup;
 
 factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapGroupFromJson(json);
@@ -106,7 +106,7 @@ factory ConceptMapElement({
   String display;
   List<ConceptMapTarget> target;
 
-  }) = ConceptMapElement;
+  }) = _ConceptMapElement;
 
 factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapElementFromJson(json);
@@ -123,7 +123,7 @@ factory ConceptMapTarget({
   List<ConceptMapDependsOn> dependsOn;
   List<ConceptMapDependsOn> product;
 
-  }) = ConceptMapTarget;
+  }) = _ConceptMapTarget;
 
 factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapTargetFromJson(json);
@@ -138,7 +138,7 @@ factory ConceptMapDependsOn({
   String code;
   String display;
 
-  }) = ConceptMapDependsOn;
+  }) = _ConceptMapDependsOn;
 
 factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapDependsOnFromJson(json);
@@ -153,7 +153,7 @@ factory ConceptMapUnmapped({
   String display;
   String url;
 
-  }) = ConceptMapUnmapped;
+  }) = _ConceptMapUnmapped;
 
 factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapUnmappedFromJson(json);
@@ -185,7 +185,7 @@ factory ValueSet({
   ValueSetCompose compose;
   ValueSetExpansion expansion;
 
-  }) = ValueSet;
+  }) = _ValueSet;
 
 factory ValueSet.fromJson(Map<String, dynamic> json) =>
       _$ValueSetFromJson(json);
@@ -200,7 +200,7 @@ factory ValueSetCompose({
   List<ValueSetInclude> include;
   List<ValueSetInclude> exclude;
 
-  }) = ValueSetCompose;
+  }) = _ValueSetCompose;
 
 factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeFromJson(json);
@@ -216,7 +216,7 @@ factory ValueSetInclude({
   List<ValueSetFilter> filter;
   List<String> valueSet;
 
-  }) = ValueSetInclude;
+  }) = _ValueSetInclude;
 
 factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
       _$ValueSetIncludeFromJson(json);
@@ -230,7 +230,7 @@ factory ValueSetConcept({
   String display;
   List<ValueSetDesignation> designation;
 
-  }) = ValueSetConcept;
+  }) = _ValueSetConcept;
 
 factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
       _$ValueSetConceptFromJson(json);
@@ -244,7 +244,7 @@ factory ValueSetDesignation({
   Coding use;
   String value;
 
-  }) = ValueSetDesignation;
+  }) = _ValueSetDesignation;
 
 factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
       _$ValueSetDesignationFromJson(json);
@@ -258,7 +258,7 @@ factory ValueSetFilter({
   String op;
   String value;
 
-  }) = ValueSetFilter;
+  }) = _ValueSetFilter;
 
 factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetFilterFromJson(json);
@@ -275,7 +275,7 @@ factory ValueSetExpansion({
   List<ValueSetParameter> parameter;
   List<ValueSetContains> contains;
 
-  }) = ValueSetExpansion;
+  }) = _ValueSetExpansion;
 
 factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionFromJson(json);
@@ -293,7 +293,7 @@ factory ValueSetParameter({
   String valueUri;
   String valueCode;
 
-  }) = ValueSetParameter;
+  }) = _ValueSetParameter;
 
 factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetParameterFromJson(json);
@@ -312,7 +312,7 @@ factory ValueSetContains({
   List<ValueSetDesignation> designation;
   List<ValueSetContains> contains;
 
-  }) = ValueSetContains;
+  }) = _ValueSetContains;
 
 factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
       _$ValueSetContainsFromJson(json);
@@ -350,7 +350,7 @@ factory CodeSystem({
   List<CodeSystemProperty> property;
   List<CodeSystemConcept> concept;
 
-  }) = CodeSystem;
+  }) = _CodeSystem;
 
 factory CodeSystem.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemFromJson(json);
@@ -365,7 +365,7 @@ factory CodeSystemFilter({
   List<String> operator;
   String value;
 
-  }) = CodeSystemFilter;
+  }) = _CodeSystemFilter;
 
 factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemFilterFromJson(json);
@@ -380,7 +380,7 @@ factory CodeSystemProperty({
   String description;
   String type;
 
-  }) = CodeSystemProperty;
+  }) = _CodeSystemProperty;
 
 factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemPropertyFromJson(json);
@@ -397,7 +397,7 @@ factory CodeSystemConcept({
   List<CodeSystemProperty1> property;
   List<CodeSystemConcept> concept;
 
-  }) = CodeSystemConcept;
+  }) = _CodeSystemConcept;
 
 factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemConceptFromJson(json);
@@ -411,7 +411,7 @@ factory CodeSystemDesignation({
   Coding use;
   String value;
 
-  }) = CodeSystemDesignation;
+  }) = _CodeSystemDesignation;
 
 factory CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemDesignationFromJson(json);
@@ -429,7 +429,7 @@ factory CodeSystemProperty1({
   bool valueBoolean;
   DateTime valueDateTime;
 
-  }) = CodeSystemProperty1;
+  }) = _CodeSystemProperty1;
 
 factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemProperty1FromJson(json);
@@ -465,7 +465,7 @@ factory ExpansionProfile({
   String displayLanguage;
   bool limitedExpansion;
 
-  }) = ExpansionProfile;
+  }) = _ExpansionProfile;
 
 factory ExpansionProfile.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileFromJson(json);
@@ -479,7 +479,7 @@ factory ExpansionProfileFixedVersion({
   String version;
   String mode;
 
-  }) = ExpansionProfileFixedVersion;
+  }) = _ExpansionProfileFixedVersion;
 
 factory ExpansionProfileFixedVersion.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileFixedVersionFromJson(json);
@@ -492,7 +492,7 @@ factory ExpansionProfileExcludedSystem({
   String system;
   String version;
 
-  }) = ExpansionProfileExcludedSystem;
+  }) = _ExpansionProfileExcludedSystem;
 
 factory ExpansionProfileExcludedSystem.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileExcludedSystemFromJson(json);
@@ -505,7 +505,7 @@ factory ExpansionProfileDesignation({
   ExpansionProfileInclude include;
   ExpansionProfileExclude exclude;
 
-  }) = ExpansionProfileDesignation;
+  }) = _ExpansionProfileDesignation;
 
 factory ExpansionProfileDesignation.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileDesignationFromJson(json);
@@ -517,7 +517,7 @@ abstract class ExpansionProfileInclude with _$ExpansionProfileInclude {
 factory ExpansionProfileInclude({
   List<ExpansionProfileDesignation1> designation;
 
-  }) = ExpansionProfileInclude;
+  }) = _ExpansionProfileInclude;
 
 factory ExpansionProfileInclude.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileIncludeFromJson(json);
@@ -530,7 +530,7 @@ factory ExpansionProfileDesignation1({
   String language;
   Coding use;
 
-  }) = ExpansionProfileDesignation1;
+  }) = _ExpansionProfileDesignation1;
 
 factory ExpansionProfileDesignation1.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileDesignation1FromJson(json);
@@ -542,7 +542,7 @@ abstract class ExpansionProfileExclude with _$ExpansionProfileExclude {
 factory ExpansionProfileExclude({
   List<ExpansionProfileDesignation2> designation;
 
-  }) = ExpansionProfileExclude;
+  }) = _ExpansionProfileExclude;
 
 factory ExpansionProfileExclude.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileExcludeFromJson(json);
@@ -555,7 +555,7 @@ factory ExpansionProfileDesignation2({
   String language;
   Coding use;
 
-  }) = ExpansionProfileDesignation2;
+  }) = _ExpansionProfileDesignation2;
 
 factory ExpansionProfileDesignation2.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileDesignation2FromJson(json);

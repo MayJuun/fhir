@@ -26,7 +26,7 @@ factory CompartmentDefinition({
   String code;
   bool search;
   List<CompartmentDefinitionResource> resource;
-  }) = CompartmentDefinition;
+  }) = _CompartmentDefinition;
 
 factory CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionFromJson(json);
@@ -39,7 +39,7 @@ factory CompartmentDefinitionResource({
   String code;
   List<String> param;
   String documentation;
-  }) = CompartmentDefinitionResource;
+  }) = _CompartmentDefinitionResource;
 
 factory CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionResourceFromJson(json);
@@ -74,7 +74,7 @@ factory OperationDefinition({
   bool instance;
   List<OperationDefinitionParameter> parameter;
   List<OperationDefinitionOverload> overload;
-  }) = OperationDefinition;
+  }) = _OperationDefinition;
 
 factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
@@ -94,7 +94,7 @@ factory OperationDefinitionParameter({
   Reference profile;
   OperationDefinitionBinding binding;
   List<OperationDefinitionParameter> part;
-  }) = OperationDefinitionParameter;
+  }) = _OperationDefinitionParameter;
 
 factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
@@ -107,7 +107,7 @@ factory OperationDefinitionBinding({
   String strength;
   String valueSetUri;
   Reference valueSetReference;
-  }) = OperationDefinitionBinding;
+  }) = _OperationDefinitionBinding;
 
 factory OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionBindingFromJson(json);
@@ -119,7 +119,7 @@ abstract class OperationDefinitionOverload with _$OperationDefinitionOverload {
 factory OperationDefinitionOverload({
   List<String> parameterName;
   String comment;
-  }) = OperationDefinitionOverload;
+  }) = _OperationDefinitionOverload;
 
 factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionOverloadFromJson(json);
@@ -148,7 +148,7 @@ factory StructureMap({
   String copyright;
   List<StructureMapStructure> structure;
   List<StructureMapGroup> group;
-  }) = StructureMap;
+  }) = _StructureMap;
 
 factory StructureMap.fromJson(Map<String, dynamic> json) =>
       _$StructureMapFromJson(json);
@@ -162,7 +162,7 @@ factory StructureMapStructure({
   String mode;
   String alias;
   String documentation;
-  }) = StructureMapStructure;
+  }) = _StructureMapStructure;
 
 factory StructureMapStructure.fromJson(Map<String, dynamic> json) =>
       _$StructureMapStructureFromJson(json);
@@ -178,7 +178,7 @@ factory StructureMapGroup({
   String documentation;
   List<StructureMapInput> input;
   List<StructureMapRule> rule;
-  }) = StructureMapGroup;
+  }) = _StructureMapGroup;
 
 factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>
       _$StructureMapGroupFromJson(json);
@@ -192,7 +192,7 @@ factory StructureMapInput({
   String type;
   String mode;
   String documentation;
-  }) = StructureMapInput;
+  }) = _StructureMapInput;
 
 factory StructureMapInput.fromJson(Map<String, dynamic> json) =>
       _$StructureMapInputFromJson(json);
@@ -208,7 +208,7 @@ factory StructureMapRule({
   List<StructureMapRule> rule;
   List<StructureMapDependent> dependent;
   String documentation;
-  }) = StructureMapRule;
+  }) = _StructureMapRule;
 
 factory StructureMapRule.fromJson(Map<String, dynamic> json) =>
       _$StructureMapRuleFromJson(json);
@@ -280,7 +280,7 @@ factory StructureMapSource({
   String variable;
   String condition;
   String check;
-  }) = StructureMapSource;
+  }) = _StructureMapSource;
 
 factory StructureMapSource.fromJson(Map<String, dynamic> json) =>
       _$StructureMapSourceFromJson(json);
@@ -298,7 +298,7 @@ factory StructureMapTarget({
   String listRuleId;
   String transform;
   List<StructureMapParameter> parameter;
-  }) = StructureMapTarget;
+  }) = _StructureMapTarget;
 
 factory StructureMapTarget.fromJson(Map<String, dynamic> json) =>
       _$StructureMapTargetFromJson(json);
@@ -313,7 +313,7 @@ factory StructureMapParameter({
   bool valueBoolean;
   int valueInteger;
   double valueDecimal;
-  }) = StructureMapParameter;
+  }) = _StructureMapParameter;
 
 factory StructureMapParameter.fromJson(Map<String, dynamic> json) =>
       _$StructureMapParameterFromJson(json);
@@ -325,7 +325,7 @@ abstract class StructureMapDependent with _$StructureMapDependent {
 factory StructureMapDependent({
   String name;
   List<String> variable;
-  }) = StructureMapDependent;
+  }) = _StructureMapDependent;
 
 factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>
       _$StructureMapDependentFromJson(json);
@@ -360,7 +360,7 @@ factory MessageDefinition({
   List<MessageDefinitionFocus> focus;
   bool responseRequired;
   List<MessageDefinitionAllowedResponse> allowedResponse;
-  }) = MessageDefinition;
+  }) = _MessageDefinition;
 
 factory MessageDefinition.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFromJson(json);
@@ -374,7 +374,7 @@ factory MessageDefinitionFocus({
   Reference profile;
   double min;
   String max;
-  }) = MessageDefinitionFocus;
+  }) = _MessageDefinitionFocus;
 
 factory MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFocusFromJson(json);
@@ -386,7 +386,7 @@ abstract class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedR
 factory MessageDefinitionAllowedResponse({
   Reference message;
   String situation;
-  }) = MessageDefinitionAllowedResponse;
+  }) = _MessageDefinitionAllowedResponse;
 
 factory MessageDefinitionAllowedResponse.fromJson(
           Map<String, dynamic> json) =>
@@ -418,7 +418,7 @@ factory ImplementationGuide({
   List<ImplementationGuideGlobal> global;
   List<String> binary;
   ImplementationGuidePage page;
-  }) = ImplementationGuide;
+  }) = _ImplementationGuide;
 
 factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideFromJson(json);
@@ -430,7 +430,7 @@ abstract class ImplementationGuideDependency with _$ImplementationGuideDependenc
 factory ImplementationGuideDependency({
   String type;
   String uri;
-  }) = ImplementationGuideDependency;
+  }) = _ImplementationGuideDependency;
 
 factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDependencyFromJson(json);
@@ -443,7 +443,7 @@ factory ImplementationGuidePackage({
   String name;
   String description;
   List<ImplementationGuideResource> resource;
-  }) = ImplementationGuidePackage;
+  }) = _ImplementationGuidePackage;
 
 factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePackageFromJson(json);
@@ -460,7 +460,7 @@ factory ImplementationGuideResource({
   String sourceUri;
   Reference sourceReference;
   Reference exampleFor;
-  }) = ImplementationGuideResource;
+  }) = _ImplementationGuideResource;
 
 factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideResourceFromJson(json);
@@ -472,7 +472,7 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 factory ImplementationGuideGlobal({
   String type;
   Reference profile;
-  }) = ImplementationGuideGlobal;
+  }) = _ImplementationGuideGlobal;
 
 factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideGlobalFromJson(json);
@@ -489,7 +489,7 @@ factory ImplementationGuidePage({
   List<String> package;
   String format;
   List<ImplementationGuidePage> page;
-  }) = ImplementationGuidePage;
+  }) = _ImplementationGuidePage;
 
 factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePageFromJson(json);
@@ -517,7 +517,7 @@ factory DataElement({
   String stringency;
   List<DataElementMapping> mapping;
   List<ElementDefinition> element;
-  }) = DataElement;
+  }) = _DataElement;
 
 factory DataElement.fromJson(Map<String, dynamic> json) =>
       _$DataElementFromJson(json);
@@ -531,7 +531,7 @@ factory DataElementMapping({
   String uri;
   String name;
   String comment;
-  }) = DataElementMapping;
+  }) = _DataElementMapping;
 
 factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$DataElementMappingFromJson(json);
@@ -558,7 +558,7 @@ factory GraphDefinition({
   String start;
   String profile;
   List<GraphDefinitionLink> link;
-  }) = GraphDefinition;
+  }) = _GraphDefinition;
 
 factory GraphDefinition.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionFromJson(json);
@@ -574,7 +574,7 @@ factory GraphDefinitionLink({
   String max;
   String description;
   List<GraphDefinitionTarget> target;
-  }) = GraphDefinitionLink;
+  }) = _GraphDefinitionLink;
 
 factory GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionLinkFromJson(json);
@@ -588,7 +588,7 @@ factory GraphDefinitionTarget({
   String profile;
   List<GraphDefinitionCompartment> compartment;
   List<GraphDefinitionLink> link;
-  }) = GraphDefinitionTarget;
+  }) = _GraphDefinitionTarget;
 
 factory GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionTargetFromJson(json);
@@ -602,7 +602,7 @@ factory GraphDefinitionCompartment({
   String rule;
   String expression;
   String description;
-  }) = GraphDefinitionCompartment;
+  }) = _GraphDefinitionCompartment;
 
 factory GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionCompartmentFromJson(json);
@@ -642,7 +642,7 @@ factory StructureDefinition({
   String derivation;
   StructureDefinitionSnapshot snapshot;
   StructureDefinitionDifferential differential;
-  }) = StructureDefinition;
+  }) = _StructureDefinition;
 
 factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
@@ -656,7 +656,7 @@ factory StructureDefinitionMapping({
   String uri;
   String name;
   String comment;
-  }) = StructureDefinitionMapping;
+  }) = _StructureDefinitionMapping;
 
 factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionMappingFromJson(json);
@@ -667,7 +667,7 @@ factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
 abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 factory StructureDefinitionSnapshot({
   List<ElementDefinition> element;
-  }) = StructureDefinitionSnapshot;
+  }) = _StructureDefinitionSnapshot;
 
 factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionSnapshotFromJson(json);
@@ -678,7 +678,7 @@ factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
 abstract class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
 factory StructureDefinitionDifferential({
   List<ElementDefinition> element;
-  }) = StructureDefinitionDifferential;
+  }) = _StructureDefinitionDifferential;
 
 factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionDifferentialFromJson(json);
@@ -703,7 +703,7 @@ factory MessageHeader({
   CodeableConcept reason;
   MessageHeaderResponse response;
   List<Reference> focus;
-  }) = MessageHeader;
+  }) = _MessageHeader;
 
 factory MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderFromJson(json);
@@ -716,7 +716,7 @@ factory MessageHeaderDestination({
   String name;
   Reference target;
   String endpoint;
-  }) = MessageHeaderDestination;
+  }) = _MessageHeaderDestination;
 
 factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderDestinationFromJson(json);
@@ -731,7 +731,7 @@ factory MessageHeaderSource({
   String version;
   ContactPoint contact;
   String endpoint;
-  }) = MessageHeaderSource;
+  }) = _MessageHeaderSource;
 
 factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderSourceFromJson(json);
@@ -744,7 +744,7 @@ factory MessageHeaderResponse({
   String identifier;
   String code;
   Reference details;
-  }) = MessageHeaderResponse;
+  }) = _MessageHeaderResponse;
 
 factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderResponseFromJson(json);
@@ -783,7 +783,7 @@ factory CapabilityStatement({
   List<CapabilityStatementRest> rest;
   List<CapabilityStatementMessaging> messaging;
   List<CapabilityStatementDocument> document;
-  }) = CapabilityStatement;
+  }) = _CapabilityStatement;
 
 factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
@@ -796,7 +796,7 @@ factory CapabilityStatementSoftware({
   String name;
   String version;
   DateTime releaseDate;
-  }) = CapabilityStatementSoftware;
+  }) = _CapabilityStatementSoftware;
 
 factory CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSoftwareFromJson(json);
@@ -808,7 +808,7 @@ abstract class CapabilityStatementImplementation with _$CapabilityStatementImple
 factory CapabilityStatementImplementation({
   String description;
   String url;
-  }) = CapabilityStatementImplementation;
+  }) = _CapabilityStatementImplementation;
 
 factory CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =>
@@ -828,7 +828,7 @@ factory CapabilityStatementRest({
   List<CapabilityStatementSearchParam> searchParam;
   List<CapabilityStatementOperation> operation;
   List<String> compartment;
-  }) = CapabilityStatementRest;
+  }) = _CapabilityStatementRest;
 
 factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementRestFromJson(json);
@@ -842,7 +842,7 @@ factory CapabilityStatementSecurity({
   List<CodeableConcept> service;
   String description;
   List<CapabilityStatementCertificate> certificate;
-  }) = CapabilityStatementSecurity;
+  }) = _CapabilityStatementSecurity;
 
 factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSecurityFromJson(json);
@@ -854,7 +854,7 @@ abstract class CapabilityStatementCertificate with _$CapabilityStatementCertific
 factory CapabilityStatementCertificate({
   String type;
   String blob;
-  }) = CapabilityStatementCertificate;
+  }) = _CapabilityStatementCertificate;
 
 factory CapabilityStatementCertificate.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementCertificateFromJson(json);
@@ -879,7 +879,7 @@ factory CapabilityStatementResource({
   List<String> searchInclude;
   List<String> searchRevInclude;
   List<CapabilityStatementSearchParam> searchParam;
-  }) = CapabilityStatementResource;
+  }) = _CapabilityStatementResource;
 
 factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementResourceFromJson(json);
@@ -891,7 +891,7 @@ abstract class CapabilityStatementInteraction with _$CapabilityStatementInteract
 factory CapabilityStatementInteraction({
   String code;
   String documentation;
-  }) = CapabilityStatementInteraction;
+  }) = _CapabilityStatementInteraction;
 
 factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteractionFromJson(json);
@@ -905,7 +905,7 @@ factory CapabilityStatementSearchParam({
   String definition;
   String type;
   String documentation;
-  }) = CapabilityStatementSearchParam;
+  }) = _CapabilityStatementSearchParam;
 
 factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSearchParamFromJson(json);
@@ -917,7 +917,7 @@ abstract class CapabilityStatementInteraction1 with _$CapabilityStatementInterac
 factory CapabilityStatementInteraction1({
   String code;
   String documentation;
-  }) = CapabilityStatementInteraction1;
+  }) = _CapabilityStatementInteraction1;
 
 factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteraction1FromJson(json);
@@ -930,7 +930,7 @@ abstract class CapabilityStatementOperation with _$CapabilityStatementOperation 
 factory CapabilityStatementOperation({
   String name;
   Reference definition;
-  }) = CapabilityStatementOperation;
+  }) = _CapabilityStatementOperation;
 
 factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementOperationFromJson(json);
@@ -945,7 +945,7 @@ factory CapabilityStatementMessaging({
   String documentation;
   List<CapabilityStatementSupportedMessage> supportedMessage;
   List<CapabilityStatementEvent> event;
-  }) = CapabilityStatementMessaging;
+  }) = _CapabilityStatementMessaging;
 
 factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementMessagingFromJson(json);
@@ -957,7 +957,7 @@ abstract class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
 factory CapabilityStatementEndpoint({
   Coding protocol;
   String address;
-  }) = CapabilityStatementEndpoint;
+  }) = _CapabilityStatementEndpoint;
 
 factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEndpointFromJson(json);
@@ -969,7 +969,7 @@ abstract class CapabilityStatementSupportedMessage with _$CapabilityStatementSup
 factory CapabilityStatementSupportedMessage({
   String mode;
   Reference definition;
-  }) = CapabilityStatementSupportedMessage;
+  }) = _CapabilityStatementSupportedMessage;
 
 factory CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =>
@@ -988,7 +988,7 @@ factory CapabilityStatementEvent({
   Reference request;
   Reference response;
   String documentation;
-  }) = CapabilityStatementEvent;
+  }) = _CapabilityStatementEvent;
 
 factory CapabilityStatementEvent.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEventFromJson(json);
@@ -1001,7 +1001,7 @@ factory CapabilityStatementDocument({
   String mode;
   String documentation;
   Reference profile;
-  }) = CapabilityStatementDocument;
+  }) = _CapabilityStatementDocument;
 
 factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementDocumentFromJson(json);
@@ -1037,7 +1037,7 @@ factory SearchParameter({
   List<String> modifier;
   List<String> chain;
   List<SearchParameterComponent> component;
-  }) = SearchParameter;
+  }) = _SearchParameter;
 
 factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
@@ -1049,7 +1049,7 @@ abstract class SearchParameterComponent with _$SearchParameterComponent {
 factory SearchParameterComponent({
   Reference definition;
   String expression;
-  }) = SearchParameterComponent;
+  }) = _SearchParameterComponent;
 
 factory SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterComponentFromJson(json);

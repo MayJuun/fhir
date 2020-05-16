@@ -37,7 +37,7 @@ factory MedicationRequest({
   List<Reference> detectedIssue;
   List<Reference> eventHistory;
 
-  }) = MedicationRequest;
+  }) = _MedicationRequest;
 
 factory MedicationRequest.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestFromJson(json);
@@ -50,7 +50,7 @@ factory MedicationRequestRequester({
   Reference agent;
   Reference onBehalfOf;
 
-  }) = MedicationRequestRequester;
+  }) = _MedicationRequestRequester;
 
 factory MedicationRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestRequesterFromJson(json);
@@ -66,7 +66,7 @@ factory MedicationRequestDispenseRequest({
   Duration expectedSupplyDuration;
   Reference performer;
 
-  }) = MedicationRequestDispenseRequest;
+  }) = _MedicationRequestDispenseRequest;
 
 factory MedicationRequestDispenseRequest.fromJson(
           Map<String, dynamic> json) =>
@@ -81,7 +81,7 @@ factory MedicationRequestSubstitution({
   bool allowed;
   CodeableConcept reason;
 
-  }) = MedicationRequestSubstitution;
+  }) = _MedicationRequestSubstitution;
 
 factory MedicationRequestSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestSubstitutionFromJson(json);
@@ -115,7 +115,7 @@ factory Immunization({
   List<ImmunizationReaction> reaction;
   List<ImmunizationVaccinationProtocol> vaccinationProtocol;
 
-  }) = Immunization;
+  }) = _Immunization;
 
 factory Immunization.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationFromJson(json);
@@ -128,7 +128,7 @@ factory ImmunizationPractitioner({
   CodeableConcept role;
   Reference actor;
 
-  }) = ImmunizationPractitioner;
+  }) = _ImmunizationPractitioner;
 
 factory ImmunizationPractitioner.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationPractitionerFromJson(json);
@@ -141,7 +141,7 @@ factory ImmunizationExplanation({
   List<CodeableConcept> reason;
   List<CodeableConcept> reasonNotGiven;
 
-  }) = ImmunizationExplanation;
+  }) = _ImmunizationExplanation;
 
 factory ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationExplanationFromJson(json);
@@ -155,7 +155,7 @@ factory ImmunizationReaction({
   Reference detail;
   bool reported;
 
-  }) = ImmunizationReaction;
+  }) = _ImmunizationReaction;
 
 factory ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationReactionFromJson(json);
@@ -174,7 +174,7 @@ factory ImmunizationVaccinationProtocol({
   CodeableConcept doseStatus;
   CodeableConcept doseStatusReason;
 
-  }) = ImmunizationVaccinationProtocol;
+  }) = _ImmunizationVaccinationProtocol;
 
 factory ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationVaccinationProtocolFromJson(json);
@@ -214,7 +214,7 @@ factory MedicationDispense({
   Reference notDoneReasonReference;
   List<Reference> eventHistory;
 
-  }) = MedicationDispense;
+  }) = _MedicationDispense;
 
 factory MedicationDispense.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseFromJson(json);
@@ -227,7 +227,7 @@ factory MedicationDispensePerformer({
   Reference actor;
   Reference onBehalfOf;
 
-  }) = MedicationDispensePerformer;
+  }) = _MedicationDispensePerformer;
 
 factory MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispensePerformerFromJson(json);
@@ -242,7 +242,7 @@ factory MedicationDispenseSubstitution({
   List<CodeableConcept> reason;
   List<Reference> responsibleParty;
 
-  }) = MedicationDispenseSubstitution;
+  }) = _MedicationDispenseSubstitution;
 
 factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseSubstitutionFromJson(json);
@@ -258,7 +258,7 @@ factory ImmunizationRecommendation({
   Reference patient;
   List<ImmunizationRecommendationRecommendation> recommendation;
 
-  }) = ImmunizationRecommendation;
+  }) = _ImmunizationRecommendation;
 
 factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationRecommendationFromJson(json);
@@ -278,7 +278,7 @@ factory ImmunizationRecommendationRecommendation({
   List<Reference> supportingImmunization;
   List<Reference> supportingPatientInformation;
 
-  }) = ImmunizationRecommendationRecommendation;
+  }) = _ImmunizationRecommendationRecommendation;
 
 factory ImmunizationRecommendationRecommendation.fromJson(
           Map<String, dynamic> json) =>
@@ -293,7 +293,7 @@ factory ImmunizationRecommendationDateCriterion({
   CodeableConcept code;
   String value;
 
-  }) = ImmunizationRecommendationDateCriterion;
+  }) = _ImmunizationRecommendationDateCriterion;
 
 factory ImmunizationRecommendationDateCriterion.fromJson(
           Map<String, dynamic> json) =>
@@ -310,7 +310,7 @@ factory ImmunizationRecommendationProtocol({
   Reference authority;
   String series;
 
-  }) = ImmunizationRecommendationProtocol;
+  }) = _ImmunizationRecommendationProtocol;
 
 factory ImmunizationRecommendationProtocol.fromJson(
           Map<String, dynamic> json) =>
@@ -347,7 +347,7 @@ factory MedicationAdministration({
   MedicationAdministrationDosage dosage;
   List<Reference> eventHistory;
 
-  }) = MedicationAdministration;
+  }) = _MedicationAdministration;
 
 factory MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationFromJson(json);
@@ -360,7 +360,7 @@ factory MedicationAdministrationPerformer({
   Reference actor;
   Reference onBehalfOf;
 
-  }) = MedicationAdministrationPerformer;
+  }) = _MedicationAdministrationPerformer;
 
 factory MedicationAdministrationPerformer.fromJson(
           Map<String, dynamic> json) =>
@@ -380,7 +380,7 @@ factory MedicationAdministrationDosage({
   Ratio rateRatio;
   Quantity rateSimpleQuantity;
 
-  }) = MedicationAdministrationDosage;
+  }) = _MedicationAdministrationDosage;
 
 factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationDosageFromJson(json);
@@ -413,7 +413,7 @@ factory MedicationStatement({
   List<Annotation> note;
   List<Dosage> dosage;
 
-  }) = MedicationStatement;
+  }) = _MedicationStatement;
 
 factory MedicationStatement.fromJson(Map<String, dynamic> json) =>
       _$MedicationStatementFromJson(json);
@@ -435,7 +435,7 @@ factory Medication({
   MedicationPackage package;
   List<Attachment> image;
 
-  }) = Medication;
+  }) = _Medication;
 
 factory Medication.fromJson(Map<String, dynamic> json) =>
       _$MedicationFromJson(json);
@@ -450,7 +450,7 @@ factory MedicationIngredient({
   bool isActive;
   Ratio amount;
 
-  }) = MedicationIngredient;
+  }) = _MedicationIngredient;
 
 factory MedicationIngredient.fromJson(Map<String, dynamic> json) =>
       _$MedicationIngredientFromJson(json);
@@ -464,7 +464,7 @@ factory MedicationPackage({
   List<MedicationContent> content;
   List<MedicationBatch> batch;
 
-  }) = MedicationPackage;
+  }) = _MedicationPackage;
 
 factory MedicationPackage.fromJson(Map<String, dynamic> json) =>
       _$MedicationPackageFromJson(json);
@@ -478,7 +478,7 @@ factory MedicationContent({
   Reference itemReference;
   Quantity amount;
 
-  }) = MedicationContent;
+  }) = _MedicationContent;
 
 factory MedicationContent.fromJson(Map<String, dynamic> json) =>
       _$MedicationContentFromJson(json);
@@ -491,7 +491,7 @@ factory MedicationBatch({
   String lotNumber;
   DateTime expirationDate;
 
-  }) = MedicationBatch;
+  }) = _MedicationBatch;
 
 factory MedicationBatch.fromJson(Map<String, dynamic> json) =>
       _$MedicationBatchFromJson(json);
