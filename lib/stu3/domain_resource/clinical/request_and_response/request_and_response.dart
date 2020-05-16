@@ -1,20 +1,33 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
-part 'request_and_response.freezed.dart';
-part 'request_and_response.g.dart';
 
-import 'package:json_annotation/json_annotation.dart';
+part 'requestandresponse.freezed.dart';
+
+part 'requestandresponse.g.dart';
+
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Element/timing.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'deviceRequest.g.dart';
 
@@ -37,7 +50,7 @@ class DeviceRequest {
   Period occurrencePeriod;
   Timing occurrenceTiming;
   String authoredOn;
-  DeviceRequest_Requester requester;
+  DeviceRequestRequester requester;
   CodeableConcept performerType;
   Reference performer;
   List<CodeableConcept> reasonCode;
@@ -80,28 +93,36 @@ class DeviceRequest {
   Map<String, dynamic> toJson() => _$DeviceRequestToJson(this);
 }
 
-class DeviceRequest_Requester {
+class DeviceRequestRequester {
   Reference agent;
   Reference onBehalfOf;
 
-  DeviceRequest_Requester({
+  DeviceRequestRequester({
     @required this.agent,
     this.onBehalfOf,
   });
 
-  factory DeviceRequest_Requester.fromJson(Map<String, dynamic> json) =>
-      _$DeviceRequest_RequesterFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceRequest_RequesterToJson(this);
+  factory DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
+      _$DeviceRequestRequesterFromJson(json);
+  Map<String, dynamic> toJson() => _$DeviceRequestRequesterToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/timing.dart';
+
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'deviceUseStatement.g.dart';
 
@@ -144,15 +165,23 @@ class DeviceUseStatement {
       _$DeviceUseStatementFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceUseStatementToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/attachment.dart';
+
 import '../Element/annotation.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'communicationRequest.g.dart';
 
@@ -171,12 +200,12 @@ class CommunicationRequest {
   List<Reference> recipient;
   List<Reference> topic;
   Reference context;
-  List<CommunicationRequest_Payload> payload;
+  List<CommunicationRequestPayload> payload;
   DateTime occurrenceDateTime;
   Period occurrencePeriod;
   String authoredOn;
   Reference sender;
-  CommunicationRequest_Requester requester;
+  CommunicationRequestRequester requester;
   List<CodeableConcept> reasonCode;
   List<Reference> reasonReference;
   List<Annotation> note;
@@ -212,42 +241,48 @@ class CommunicationRequest {
   Map<String, dynamic> toJson() => _$CommunicationRequestToJson(this);
 }
 
-class CommunicationRequest_Payload {
+class CommunicationRequestPayload {
   String contentString;
   Attachment contentAttachment;
   Reference contentReference;
 
-  CommunicationRequest_Payload({
+  CommunicationRequestPayload({
     this.contentString,
     this.contentAttachment,
     this.contentReference,
   });
 
-  factory CommunicationRequest_Payload.fromJson(Map<String, dynamic> json) =>
-      _$CommunicationRequest_PayloadFromJson(json);
-  Map<String, dynamic> toJson() => _$CommunicationRequest_PayloadToJson(this);
+  factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
+      _$CommunicationRequestPayloadFromJson(json);
+  Map<String, dynamic> toJson() => _$CommunicationRequestPayloadToJson(this);
 }
 
-class CommunicationRequest_Requester {
+class CommunicationRequestRequester {
   Reference agent;
   Reference onBehalfOf;
 
-  CommunicationRequest_Requester({
+  CommunicationRequestRequester({
     @required this.agent,
     this.onBehalfOf,
   });
 
-  factory CommunicationRequest_Requester.fromJson(Map<String, dynamic> json) =>
-      _$CommunicationRequest_RequesterFromJson(json);
-  Map<String, dynamic> toJson() => _$CommunicationRequest_RequesterToJson(this);
+  factory CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =>
+      _$CommunicationRequestRequesterFromJson(json);
+  Map<String, dynamic> toJson() => _$CommunicationRequestRequesterToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/attachment.dart';
+
 import '../Element/annotation.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'communication.g.dart';
 
@@ -272,7 +307,7 @@ class Communication {
   Reference sender;
   List<CodeableConcept> reasonCode;
   List<Reference> reasonReference;
-  List<Communication_Payload> payload;
+  List<CommunicationPayload> payload;
   List<Annotation> note;
 
   Communication({
@@ -305,30 +340,38 @@ class Communication {
   Map<String, dynamic> toJson() => _$CommunicationToJson(this);
 }
 
-class Communication_Payload {
+class CommunicationPayload {
   String contentString;
   Attachment contentAttachment;
   Reference contentReference;
 
-  Communication_Payload({
+  CommunicationPayload({
     this.contentString,
     this.contentAttachment,
     this.contentReference,
   });
 
-  factory Communication_Payload.fromJson(Map<String, dynamic> json) =>
-      _$Communication_PayloadFromJson(json);
-  Map<String, dynamic> toJson() => _$Communication_PayloadToJson(this);
+  factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
+      _$CommunicationPayloadFromJson(json);
+  Map<String, dynamic> toJson() => _$CommunicationPayloadToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/timing.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'supplyRequest.g.dart';
 
@@ -339,12 +382,12 @@ class SupplyRequest {
   String status;
   CodeableConcept category;
   String priority;
-  SupplyRequest_OrderedItem orderedItem;
+  SupplyRequestOrderedItem orderedItem;
   DateTime occurrenceDateTime;
   Period occurrencePeriod;
   Timing occurrenceTiming;
   String authoredOn;
-  SupplyRequest_Requester requester;
+  SupplyRequestRequester requester;
   List<Reference> supplier;
   CodeableConcept reasonCodeableConcept;
   Reference reasonReference;
@@ -376,44 +419,51 @@ class SupplyRequest {
   Map<String, dynamic> toJson() => _$SupplyRequestToJson(this);
 }
 
-class SupplyRequest_OrderedItem {
+class SupplyRequestOrderedItem {
   Quantity quantity;
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
 
-  SupplyRequest_OrderedItem({
+  SupplyRequestOrderedItem({
     @required this.quantity,
     this.itemCodeableConcept,
     this.itemReference,
   });
 
-  factory SupplyRequest_OrderedItem.fromJson(Map<String, dynamic> json) =>
-      _$SupplyRequest_OrderedItemFromJson(json);
-  Map<String, dynamic> toJson() => _$SupplyRequest_OrderedItemToJson(this);
+  factory SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =>
+      _$SupplyRequestOrderedItemFromJson(json);
+  Map<String, dynamic> toJson() => _$SupplyRequestOrderedItemToJson(this);
 }
 
-class SupplyRequest_Requester {
+class SupplyRequestRequester {
   Reference agent;
   Reference onBehalfOf;
 
-  SupplyRequest_Requester({
+  SupplyRequestRequester({
     @required this.agent,
     this.onBehalfOf,
   });
 
-  factory SupplyRequest_Requester.fromJson(Map<String, dynamic> json) =>
-      _$SupplyRequest_RequesterFromJson(json);
-  Map<String, dynamic> toJson() => _$SupplyRequest_RequesterToJson(this);
+  factory SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
+      _$SupplyRequestRequesterFromJson(json);
+  Map<String, dynamic> toJson() => _$SupplyRequestRequesterToJson(this);
 }
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/quantity.dart';
+
 import '../Element/timing.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'supplyDelivery.g.dart';
 
@@ -426,7 +476,7 @@ class SupplyDelivery {
   String status;
   Reference patient;
   CodeableConcept type;
-  SupplyDelivery_SuppliedItem suppliedItem;
+  SupplyDeliverySuppliedItem suppliedItem;
   DateTime occurrenceDateTime;
   Period occurrencePeriod;
   Timing occurrenceTiming;
@@ -457,18 +507,18 @@ class SupplyDelivery {
   Map<String, dynamic> toJson() => _$SupplyDeliveryToJson(this);
 }
 
-class SupplyDelivery_SuppliedItem {
+class SupplyDeliverySuppliedItem {
   Quantity quantity;
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
 
-  SupplyDelivery_SuppliedItem({
+  SupplyDeliverySuppliedItem({
     this.quantity,
     this.itemCodeableConcept,
     this.itemReference,
   });
 
-  factory SupplyDelivery_SuppliedItem.fromJson(Map<String, dynamic> json) =>
-      _$SupplyDelivery_SuppliedItemFromJson(json);
-  Map<String, dynamic> toJson() => _$SupplyDelivery_SuppliedItemToJson(this);
+  factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
+      _$SupplyDeliverySuppliedItemFromJson(json);
+  Map<String, dynamic> toJson() => _$SupplyDeliverySuppliedItemToJson(this);
 }

@@ -1,19 +1,31 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'terminology.freezed.dart';
+
 part 'terminology.g.dart';
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/contactDetail.dart';
+
 
 part 'namingSystem.g.dart';
 
@@ -32,7 +44,7 @@ class NamingSystem {
   List<UsageContext> useContext;
   List<CodeableConcept> jurisdiction;
   String usage;
-  List<NamingSystem_UniqueId> uniqueId;
+  List<NamingSystemUniqueId> uniqueId;
   Reference replacedBy;
 
   NamingSystem({
@@ -59,14 +71,14 @@ class NamingSystem {
   Map<String, dynamic> toJson() => _$NamingSystemToJson(this);
 }
 
-class NamingSystem_UniqueId {
+class NamingSystemUniqueId {
   String type;
   String value;
   bool preferred;
   String comment;
   Period period;
 
-  NamingSystem_UniqueId({
+  NamingSystemUniqueId({
     this.type,
     this.value,
     this.preferred,
@@ -74,18 +86,25 @@ class NamingSystem_UniqueId {
     this.period,
   });
 
-  factory NamingSystem_UniqueId.fromJson(Map<String, dynamic> json) =>
-      _$NamingSystem_UniqueIdFromJson(json);
-  Map<String, dynamic> toJson() => _$NamingSystem_UniqueIdToJson(this);
+  factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
+      _$NamingSystemUniqueIdFromJson(json);
+  Map<String, dynamic> toJson() => _$NamingSystemUniqueIdToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'conceptMap.g.dart';
 
@@ -111,7 +130,7 @@ class ConceptMap {
   Reference sourceReference;
   String targetUri;
   Reference targetReference;
-  List<ConceptMap_Group> group;
+  List<ConceptMapGroup> group;
 
   ConceptMap({
     this.id,
@@ -143,15 +162,15 @@ class ConceptMap {
   Map<String, dynamic> toJson() => _$ConceptMapToJson(this);
 }
 
-class ConceptMap_Group {
+class ConceptMapGroup {
   String source;
   String sourceVersion;
   String target;
   String targetVersion;
-  List<ConceptMap_Element> element;
-  ConceptMap_Unmapped unmapped;
+  List<ConceptMapElement> element;
+  ConceptMapUnmapped unmapped;
 
-  ConceptMap_Group({
+  ConceptMapGroup({
     this.source,
     this.sourceVersion,
     this.target,
@@ -160,36 +179,36 @@ class ConceptMap_Group {
     this.unmapped,
   });
 
-  factory ConceptMap_Group.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMap_GroupFromJson(json);
-  Map<String, dynamic> toJson() => _$ConceptMap_GroupToJson(this);
+  factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapGroupFromJson(json);
+  Map<String, dynamic> toJson() => _$ConceptMapGroupToJson(this);
 }
 
-class ConceptMap_Element {
+class ConceptMapElement {
   String code;
   String display;
-  List<ConceptMap_Target> target;
+  List<ConceptMapTarget> target;
 
-  ConceptMap_Element({
+  ConceptMapElement({
     this.code,
     this.display,
     this.target,
   });
 
-  factory ConceptMap_Element.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMap_ElementFromJson(json);
-  Map<String, dynamic> toJson() => _$ConceptMap_ElementToJson(this);
+  factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapElementFromJson(json);
+  Map<String, dynamic> toJson() => _$ConceptMapElementToJson(this);
 }
 
-class ConceptMap_Target {
+class ConceptMapTarget {
   String code;
   String display;
   String equivalence;
   String comment;
-  List<ConceptMap_DependsOn> dependsOn;
-  List<ConceptMap_DependsOn> product;
+  List<ConceptMapDependsOn> dependsOn;
+  List<ConceptMapDependsOn> product;
 
-  ConceptMap_Target({
+  ConceptMapTarget({
     this.code,
     this.display,
     this.equivalence,
@@ -198,54 +217,61 @@ class ConceptMap_Target {
     this.product,
   });
 
-  factory ConceptMap_Target.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMap_TargetFromJson(json);
-  Map<String, dynamic> toJson() => _$ConceptMap_TargetToJson(this);
+  factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapTargetFromJson(json);
+  Map<String, dynamic> toJson() => _$ConceptMapTargetToJson(this);
 }
 
-class ConceptMap_DependsOn {
+class ConceptMapDependsOn {
   String property;
   String system;
   String code;
   String display;
 
-  ConceptMap_DependsOn({
+  ConceptMapDependsOn({
     this.property,
     this.system,
     this.code,
     this.display,
   });
 
-  factory ConceptMap_DependsOn.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMap_DependsOnFromJson(json);
-  Map<String, dynamic> toJson() => _$ConceptMap_DependsOnToJson(this);
+  factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapDependsOnFromJson(json);
+  Map<String, dynamic> toJson() => _$ConceptMapDependsOnToJson(this);
 }
 
-class ConceptMap_Unmapped {
+class ConceptMapUnmapped {
   String mode;
   String code;
   String display;
   String url;
 
-  ConceptMap_Unmapped({
+  ConceptMapUnmapped({
     this.mode,
     this.code,
     this.display,
     this.url,
   });
 
-  factory ConceptMap_Unmapped.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMap_UnmappedFromJson(json);
-  Map<String, dynamic> toJson() => _$ConceptMap_UnmappedToJson(this);
+  factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapUnmappedFromJson(json);
+  Map<String, dynamic> toJson() => _$ConceptMapUnmappedToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/coding.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'valueSet.g.dart';
 
@@ -269,8 +295,8 @@ class ValueSet {
   String purpose;
   String copyright;
   bool extensible;
-  ValueSet_Compose compose;
-  ValueSet_Expansion expansion;
+  ValueSetCompose compose;
+  ValueSetExpansion expansion;
 
   ValueSet({
     this.id,
@@ -301,32 +327,32 @@ class ValueSet {
   Map<String, dynamic> toJson() => _$ValueSetToJson(this);
 }
 
-class ValueSet_Compose {
+class ValueSetCompose {
   DateTime lockedDate;
   bool inactive;
-  List<ValueSet_Include> include;
-  List<ValueSet_Include> exclude;
+  List<ValueSetInclude> include;
+  List<ValueSetInclude> exclude;
 
-  ValueSet_Compose({
+  ValueSetCompose({
     this.lockedDate,
     this.inactive,
     @required this.include,
     this.exclude,
   });
 
-  factory ValueSet_Compose.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ComposeFromJson(json);
-  Map<String, dynamic> toJson() => _$ValueSet_ComposeToJson(this);
+  factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetComposeFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetComposeToJson(this);
 }
 
-class ValueSet_Include {
+class ValueSetInclude {
   String system;
   String version;
-  List<ValueSet_Concept> concept;
-  List<ValueSet_Filter> filter;
+  List<ValueSetConcept> concept;
+  List<ValueSetFilter> filter;
   List<String> valueSet;
 
-  ValueSet_Include({
+  ValueSetInclude({
     this.system,
     this.version,
     this.concept,
@@ -334,68 +360,68 @@ class ValueSet_Include {
     this.valueSet,
   });
 
-  factory ValueSet_Include.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_IncludeFromJson(json);
-  Map<String, dynamic> toJson() => _$ValueSet_IncludeToJson(this);
+  factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetIncludeFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetIncludeToJson(this);
 }
 
-class ValueSet_Concept {
+class ValueSetConcept {
   String code;
   String display;
-  List<ValueSet_Designation> designation;
+  List<ValueSetDesignation> designation;
 
-  ValueSet_Concept({
+  ValueSetConcept({
     this.code,
     this.display,
     this.designation,
   });
 
-  factory ValueSet_Concept.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ConceptFromJson(json);
-  Map<String, dynamic> toJson() => _$ValueSet_ConceptToJson(this);
+  factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetConceptFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetConceptToJson(this);
 }
 
-class ValueSet_Designation {
+class ValueSetDesignation {
   String language;
   Coding use;
   String value;
 
-  ValueSet_Designation({
+  ValueSetDesignation({
     this.language,
     this.use,
     this.value,
   });
 
-  factory ValueSet_Designation.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_DesignationFromJson(json);
-  Map<String, dynamic> toJson() => _$ValueSet_DesignationToJson(this);
+  factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetDesignationFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetDesignationToJson(this);
 }
 
-class ValueSet_Filter {
+class ValueSetFilter {
   String property;
   String op;
   String value;
 
-  ValueSet_Filter({
+  ValueSetFilter({
     this.property,
     this.op,
     this.value,
   });
 
-  factory ValueSet_Filter.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_FilterFromJson(json);
-  Map<String, dynamic> toJson() => _$ValueSet_FilterToJson(this);
+  factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetFilterFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetFilterToJson(this);
 }
 
-class ValueSet_Expansion {
+class ValueSetExpansion {
   String identifier;
   String timestamp;
   double total;
   double offset;
-  List<ValueSet_Parameter> parameter;
-  List<ValueSet_Contains> contains;
+  List<ValueSetParameter> parameter;
+  List<ValueSetContains> contains;
 
-  ValueSet_Expansion({
+  ValueSetExpansion({
     this.identifier,
     this.timestamp,
     this.total,
@@ -404,12 +430,12 @@ class ValueSet_Expansion {
     this.contains,
   });
 
-  factory ValueSet_Expansion.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ExpansionFromJson(json);
-  Map<String, dynamic> toJson() => _$ValueSet_ExpansionToJson(this);
+  factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetExpansionFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetExpansionToJson(this);
 }
 
-class ValueSet_Parameter {
+class ValueSetParameter {
   String name;
   String valueString;
   bool valueBoolean;
@@ -418,7 +444,7 @@ class ValueSet_Parameter {
   String valueUri;
   String valueCode;
 
-  ValueSet_Parameter({
+  ValueSetParameter({
     this.name,
     this.valueString,
     this.valueBoolean,
@@ -428,22 +454,22 @@ class ValueSet_Parameter {
     this.valueCode,
   });
 
-  factory ValueSet_Parameter.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ParameterFromJson(json);
-  Map<String, dynamic> toJson() => _$ValueSet_ParameterToJson(this);
+  factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetParameterFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetParameterToJson(this);
 }
 
-class ValueSet_Contains {
+class ValueSetContains {
   String system;
   bool abstract;
   bool inactive;
   String version;
   String code;
   String display;
-  List<ValueSet_Designation> designation;
-  List<ValueSet_Contains> contains;
+  List<ValueSetDesignation> designation;
+  List<ValueSetContains> contains;
 
-  ValueSet_Contains({
+  ValueSetContains({
     this.system,
     this.abstract,
     this.inactive,
@@ -454,17 +480,23 @@ class ValueSet_Contains {
     this.contains,
   });
 
-  factory ValueSet_Contains.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ContainsFromJson(json);
-  Map<String, dynamic> toJson() => _$ValueSet_ContainsToJson(this);
+  factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetContainsFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetContainsToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/coding.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'codeSystem.g.dart';
 
@@ -493,9 +525,9 @@ class CodeSystem {
   bool versionNeeded;
   String content;
   double count;
-  List<CodeSystem_Filter> filter;
-  List<CodeSystem_Property> property;
-  List<CodeSystem_Concept> concept;
+  List<CodeSystemFilter> filter;
+  List<CodeSystemProperty> property;
+  List<CodeSystemConcept> concept;
 
   CodeSystem({
     this.id,
@@ -532,51 +564,51 @@ class CodeSystem {
   Map<String, dynamic> toJson() => _$CodeSystemToJson(this);
 }
 
-class CodeSystem_Filter {
+class CodeSystemFilter {
   String code;
   String description;
   List<String> operator;
   String value;
 
-  CodeSystem_Filter({
+  CodeSystemFilter({
     this.code,
     this.description,
     this.operator,
     this.value,
   });
 
-  factory CodeSystem_Filter.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystem_FilterFromJson(json);
-  Map<String, dynamic> toJson() => _$CodeSystem_FilterToJson(this);
+  factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemFilterFromJson(json);
+  Map<String, dynamic> toJson() => _$CodeSystemFilterToJson(this);
 }
 
-class CodeSystem_Property {
+class CodeSystemProperty {
   String code;
   String uri;
   String description;
   String type;
 
-  CodeSystem_Property({
+  CodeSystemProperty({
     this.code,
     this.uri,
     this.description,
     this.type,
   });
 
-  factory CodeSystem_Property.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystem_PropertyFromJson(json);
-  Map<String, dynamic> toJson() => _$CodeSystem_PropertyToJson(this);
+  factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemPropertyFromJson(json);
+  Map<String, dynamic> toJson() => _$CodeSystemPropertyToJson(this);
 }
 
-class CodeSystem_Concept {
+class CodeSystemConcept {
   String code;
   String display;
   String definition;
-  List<CodeSystem_Designation> designation;
-  List<CodeSystem_Property1> property;
-  List<CodeSystem_Concept> concept;
+  List<CodeSystemDesignation> designation;
+  List<CodeSystemProperty1> property;
+  List<CodeSystemConcept> concept;
 
-  CodeSystem_Concept({
+  CodeSystemConcept({
     this.code,
     this.display,
     this.definition,
@@ -585,28 +617,28 @@ class CodeSystem_Concept {
     this.concept,
   });
 
-  factory CodeSystem_Concept.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystem_ConceptFromJson(json);
-  Map<String, dynamic> toJson() => _$CodeSystem_ConceptToJson(this);
+  factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemConceptFromJson(json);
+  Map<String, dynamic> toJson() => _$CodeSystemConceptToJson(this);
 }
 
-class CodeSystem_Designation {
+class CodeSystemDesignation {
   String language;
   Coding use;
   String value;
 
-  CodeSystem_Designation({
+  CodeSystemDesignation({
     this.language,
     this.use,
     this.value,
   });
 
-  factory CodeSystem_Designation.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystem_DesignationFromJson(json);
-  Map<String, dynamic> toJson() => _$CodeSystem_DesignationToJson(this);
+  factory CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemDesignationFromJson(json);
+  Map<String, dynamic> toJson() => _$CodeSystemDesignationToJson(this);
 }
 
-class CodeSystem_Property1 {
+class CodeSystemProperty1 {
   String code;
   String valueCode;
   Coding valueCoding;
@@ -615,7 +647,7 @@ class CodeSystem_Property1 {
   bool valueBoolean;
   DateTime valueDateTime;
 
-  CodeSystem_Property1({
+  CodeSystemProperty1({
     this.code,
     this.valueCode,
     this.valueCoding,
@@ -625,18 +657,24 @@ class CodeSystem_Property1 {
     this.valueDateTime,
   });
 
-  factory CodeSystem_Property1.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystem_Property1FromJson(json);
-  Map<String, dynamic> toJson() => _$CodeSystem_Property1ToJson(this);
+  factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemProperty1FromJson(json);
+  Map<String, dynamic> toJson() => _$CodeSystemProperty1ToJson(this);
 }
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/coding.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'expansionProfile.g.dart';
 
@@ -655,10 +693,10 @@ class ExpansionProfile {
   String description;
   List<UsageContext> useContext;
   List<CodeableConcept> jurisdiction;
-  List<ExpansionProfile_FixedVersion> fixedVersion;
-  ExpansionProfile_ExcludedSystem excludedSystem;
+  List<ExpansionProfileFixedVersion> fixedVersion;
+  ExpansionProfileExcludedSystem excludedSystem;
   bool includeDesignations;
-  ExpansionProfile_Designation designation;
+  ExpansionProfileDesignation designation;
   bool includeDefinition;
   bool activeOnly;
   bool excludeNested;
@@ -700,99 +738,99 @@ class ExpansionProfile {
   Map<String, dynamic> toJson() => _$ExpansionProfileToJson(this);
 }
 
-class ExpansionProfile_FixedVersion {
+class ExpansionProfileFixedVersion {
   String system;
   String version;
   String mode;
 
-  ExpansionProfile_FixedVersion({
+  ExpansionProfileFixedVersion({
     this.system,
     this.version,
     this.mode,
   });
 
-  factory ExpansionProfile_FixedVersion.fromJson(Map<String, dynamic> json) =>
-      _$ExpansionProfile_FixedVersionFromJson(json);
-  Map<String, dynamic> toJson() => _$ExpansionProfile_FixedVersionToJson(this);
+  factory ExpansionProfileFixedVersion.fromJson(Map<String, dynamic> json) =>
+      _$ExpansionProfileFixedVersionFromJson(json);
+  Map<String, dynamic> toJson() => _$ExpansionProfileFixedVersionToJson(this);
 }
 
-class ExpansionProfile_ExcludedSystem {
+class ExpansionProfileExcludedSystem {
   String system;
   String version;
 
-  ExpansionProfile_ExcludedSystem({
+  ExpansionProfileExcludedSystem({
     this.system,
     this.version,
   });
 
-  factory ExpansionProfile_ExcludedSystem.fromJson(Map<String, dynamic> json) =>
-      _$ExpansionProfile_ExcludedSystemFromJson(json);
+  factory ExpansionProfileExcludedSystem.fromJson(Map<String, dynamic> json) =>
+      _$ExpansionProfileExcludedSystemFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$ExpansionProfile_ExcludedSystemToJson(this);
+      _$ExpansionProfileExcludedSystemToJson(this);
 }
 
-class ExpansionProfile_Designation {
-  ExpansionProfile_Include include;
-  ExpansionProfile_Exclude exclude;
+class ExpansionProfileDesignation {
+  ExpansionProfileInclude include;
+  ExpansionProfileExclude exclude;
 
-  ExpansionProfile_Designation({
+  ExpansionProfileDesignation({
     this.include,
     this.exclude,
   });
 
-  factory ExpansionProfile_Designation.fromJson(Map<String, dynamic> json) =>
-      _$ExpansionProfile_DesignationFromJson(json);
-  Map<String, dynamic> toJson() => _$ExpansionProfile_DesignationToJson(this);
+  factory ExpansionProfileDesignation.fromJson(Map<String, dynamic> json) =>
+      _$ExpansionProfileDesignationFromJson(json);
+  Map<String, dynamic> toJson() => _$ExpansionProfileDesignationToJson(this);
 }
 
-class ExpansionProfile_Include {
-  List<ExpansionProfile_Designation1> designation;
+class ExpansionProfileInclude {
+  List<ExpansionProfileDesignation1> designation;
 
-  ExpansionProfile_Include({
+  ExpansionProfileInclude({
     this.designation,
   });
 
-  factory ExpansionProfile_Include.fromJson(Map<String, dynamic> json) =>
-      _$ExpansionProfile_IncludeFromJson(json);
-  Map<String, dynamic> toJson() => _$ExpansionProfile_IncludeToJson(this);
+  factory ExpansionProfileInclude.fromJson(Map<String, dynamic> json) =>
+      _$ExpansionProfileIncludeFromJson(json);
+  Map<String, dynamic> toJson() => _$ExpansionProfileIncludeToJson(this);
 }
 
-class ExpansionProfile_Designation1 {
+class ExpansionProfileDesignation1 {
   String language;
   Coding use;
 
-  ExpansionProfile_Designation1({
+  ExpansionProfileDesignation1({
     this.language,
     this.use,
   });
 
-  factory ExpansionProfile_Designation1.fromJson(Map<String, dynamic> json) =>
-      _$ExpansionProfile_Designation1FromJson(json);
-  Map<String, dynamic> toJson() => _$ExpansionProfile_Designation1ToJson(this);
+  factory ExpansionProfileDesignation1.fromJson(Map<String, dynamic> json) =>
+      _$ExpansionProfileDesignation1FromJson(json);
+  Map<String, dynamic> toJson() => _$ExpansionProfileDesignation1ToJson(this);
 }
 
-class ExpansionProfile_Exclude {
-  List<ExpansionProfile_Designation2> designation;
+class ExpansionProfileExclude {
+  List<ExpansionProfileDesignation2> designation;
 
-  ExpansionProfile_Exclude({
+  ExpansionProfileExclude({
     this.designation,
   });
 
-  factory ExpansionProfile_Exclude.fromJson(Map<String, dynamic> json) =>
-      _$ExpansionProfile_ExcludeFromJson(json);
-  Map<String, dynamic> toJson() => _$ExpansionProfile_ExcludeToJson(this);
+  factory ExpansionProfileExclude.fromJson(Map<String, dynamic> json) =>
+      _$ExpansionProfileExcludeFromJson(json);
+  Map<String, dynamic> toJson() => _$ExpansionProfileExcludeToJson(this);
 }
 
-class ExpansionProfile_Designation2 {
+class ExpansionProfileDesignation2 {
   String language;
   Coding use;
 
-  ExpansionProfile_Designation2({
+  ExpansionProfileDesignation2({
     this.language,
     this.use,
   });
 
-  factory ExpansionProfile_Designation2.fromJson(Map<String, dynamic> json) =>
-      _$ExpansionProfile_Designation2FromJson(json);
-  Map<String, dynamic> toJson() => _$ExpansionProfile_Designation2ToJson(this);
+  factory ExpansionProfileDesignation2.fromJson(Map<String, dynamic> json) =>
+      _$ExpansionProfileDesignation2FromJson(json);
+  Map<String, dynamic> toJson() => _$ExpansionProfileDesignation2ToJson(this);
 }

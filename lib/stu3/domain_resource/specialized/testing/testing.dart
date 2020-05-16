@@ -1,17 +1,26 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'testing.freezed.dart';
+
 part 'testing.g.dart';
 
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'testReport.g.dart';
 
@@ -26,10 +35,10 @@ class TestReport {
   double score;
   String tester;
   String issued;
-  List<TestReport_Participant> participant;
-  TestReport_Setup setup;
-  List<TestReport_Test> test;
-  TestReport_Teardown teardown;
+  List<TestReportParticipant> participant;
+  TestReportSetup setup;
+  List<TestReportTest> test;
+  TestReportTeardown teardown;
 
   TestReport({
     this.id,
@@ -53,142 +62,150 @@ class TestReport {
   Map<String, dynamic> toJson() => _$TestReportToJson(this);
 }
 
-class TestReport_Participant {
+class TestReportParticipant {
   String type;
   String uri;
   String display;
 
-  TestReport_Participant({
+  TestReportParticipant({
     this.type,
     this.uri,
     this.display,
   });
 
-  factory TestReport_Participant.fromJson(Map<String, dynamic> json) =>
-      _$TestReport_ParticipantFromJson(json);
-  Map<String, dynamic> toJson() => _$TestReport_ParticipantToJson(this);
+  factory TestReportParticipant.fromJson(Map<String, dynamic> json) =>
+      _$TestReportParticipantFromJson(json);
+  Map<String, dynamic> toJson() => _$TestReportParticipantToJson(this);
 }
 
-class TestReport_Setup {
-  List<TestReport_Action> action;
+class TestReportSetup {
+  List<TestReportAction> action;
 
-  TestReport_Setup({
+  TestReportSetup({
     @required this.action,
   });
 
-  factory TestReport_Setup.fromJson(Map<String, dynamic> json) =>
-      _$TestReport_SetupFromJson(json);
-  Map<String, dynamic> toJson() => _$TestReport_SetupToJson(this);
+  factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
+      _$TestReportSetupFromJson(json);
+  Map<String, dynamic> toJson() => _$TestReportSetupToJson(this);
 }
 
-class TestReport_Action {
-  TestReport_Operation operation;
-  TestReport_Assert asserts;
+class TestReportAction {
+  TestReportOperation operation;
+  TestReportAssert asserts;
 
-  TestReport_Action({
+  TestReportAction({
     this.operation,
     this.asserts,
   });
 
-  factory TestReport_Action.fromJson(Map<String, dynamic> json) =>
-      _$TestReport_ActionFromJson(json);
-  Map<String, dynamic> toJson() => _$TestReport_ActionToJson(this);
+  factory TestReportAction.fromJson(Map<String, dynamic> json) =>
+      _$TestReportActionFromJson(json);
+  Map<String, dynamic> toJson() => _$TestReportActionToJson(this);
 }
 
-class TestReport_Operation {
+class TestReportOperation {
   String result;
   String message;
   String detail;
 
-  TestReport_Operation({
+  TestReportOperation({
     this.result,
     this.message,
     this.detail,
   });
 
-  factory TestReport_Operation.fromJson(Map<String, dynamic> json) =>
-      _$TestReport_OperationFromJson(json);
-  Map<String, dynamic> toJson() => _$TestReport_OperationToJson(this);
+  factory TestReportOperation.fromJson(Map<String, dynamic> json) =>
+      _$TestReportOperationFromJson(json);
+  Map<String, dynamic> toJson() => _$TestReportOperationToJson(this);
 }
 
-class TestReport_Assert {
+class TestReportAssert {
   String result;
   String message;
   String detail;
 
-  TestReport_Assert({
+  TestReportAssert({
     this.result,
     this.message,
     this.detail,
   });
 
-  factory TestReport_Assert.fromJson(Map<String, dynamic> json) =>
-      _$TestReport_AssertFromJson(json);
-  Map<String, dynamic> toJson() => _$TestReport_AssertToJson(this);
+  factory TestReportAssert.fromJson(Map<String, dynamic> json) =>
+      _$TestReportAssertFromJson(json);
+  Map<String, dynamic> toJson() => _$TestReportAssertToJson(this);
 }
 
-class TestReport_Test {
+class TestReportTest {
   String name;
   String description;
-  List<TestReport_Action1> action;
+  List<TestReportAction1> action;
 
-  TestReport_Test({
+  TestReportTest({
     this.name,
     this.description,
     @required this.action,
   });
 
-  factory TestReport_Test.fromJson(Map<String, dynamic> json) =>
-      _$TestReport_TestFromJson(json);
-  Map<String, dynamic> toJson() => _$TestReport_TestToJson(this);
+  factory TestReportTest.fromJson(Map<String, dynamic> json) =>
+      _$TestReportTestFromJson(json);
+  Map<String, dynamic> toJson() => _$TestReportTestToJson(this);
 }
 
-class TestReport_Action1 {
-  TestReport_Operation operation;
-  TestReport_Assert asserts;
+class TestReportAction1 {
+  TestReportOperation operation;
+  TestReportAssert asserts;
 
-  TestReport_Action1({
+  TestReportAction1({
     this.operation,
     this.asserts,
   });
 
-  factory TestReport_Action1.fromJson(Map<String, dynamic> json) =>
-      _$TestReport_Action1FromJson(json);
-  Map<String, dynamic> toJson() => _$TestReport_Action1ToJson(this);
+  factory TestReportAction1.fromJson(Map<String, dynamic> json) =>
+      _$TestReportAction1FromJson(json);
+  Map<String, dynamic> toJson() => _$TestReportAction1ToJson(this);
 }
 
-class TestReport_Teardown {
-  List<TestReport_Action2> action;
+class TestReportTeardown {
+  List<TestReportAction2> action;
 
-  TestReport_Teardown({
+  TestReportTeardown({
     @required this.action,
   });
 
-  factory TestReport_Teardown.fromJson(Map<String, dynamic> json) =>
-      _$TestReport_TeardownFromJson(json);
-  Map<String, dynamic> toJson() => _$TestReport_TeardownToJson(this);
+  factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
+      _$TestReportTeardownFromJson(json);
+  Map<String, dynamic> toJson() => _$TestReportTeardownToJson(this);
 }
 
-class TestReport_Action2 {
-  TestReport_Operation operation;
+class TestReportAction2 {
+  TestReportOperation operation;
 
-  TestReport_Action2({
+  TestReportAction2({
     @required this.operation,
   });
 
-  factory TestReport_Action2.fromJson(Map<String, dynamic> json) =>
-      _$TestReport_Action2FromJson(json);
-  Map<String, dynamic> toJson() => _$TestReport_Action2ToJson(this);
+  factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
+      _$TestReportAction2FromJson(json);
+  Map<String, dynamic> toJson() => _$TestReportAction2ToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/coding.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'testScript.g.dart';
 
@@ -210,17 +227,17 @@ class TestScript {
   List<CodeableConcept> jurisdiction;
   String purpose;
   String copyright;
-  List<TestScript_Origin> origin;
-  List<TestScript_Destination> destination;
-  TestScript_Metadata metadata;
-  List<TestScript_Fixture> fixture;
+  List<TestScriptOrigin> origin;
+  List<TestScriptDestination> destination;
+  TestScriptMetadata metadata;
+  List<TestScriptFixture> fixture;
   List<Reference> profile;
-  List<TestScript_Variable> variable;
-  List<TestScript_Rule> rule;
-  List<TestScript_Ruleset> ruleset;
-  TestScript_Setup setup;
-  List<TestScript_Test> test;
-  TestScript_Teardown teardown;
+  List<TestScriptVariable> variable;
+  List<TestScriptRule> rule;
+  List<TestScriptRuleset> ruleset;
+  TestScriptSetup setup;
+  List<TestScriptTest> test;
+  TestScriptTeardown teardown;
 
   TestScript({
     this.id,
@@ -258,63 +275,63 @@ class TestScript {
   Map<String, dynamic> toJson() => _$TestScriptToJson(this);
 }
 
-class TestScript_Origin {
+class TestScriptOrigin {
   double index;
   Coding profile;
 
-  TestScript_Origin({
+  TestScriptOrigin({
     this.index,
     @required this.profile,
   });
 
-  factory TestScript_Origin.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_OriginFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_OriginToJson(this);
+  factory TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptOriginFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptOriginToJson(this);
 }
 
-class TestScript_Destination {
+class TestScriptDestination {
   double index;
   Coding profile;
 
-  TestScript_Destination({
+  TestScriptDestination({
     this.index,
     @required this.profile,
   });
 
-  factory TestScript_Destination.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_DestinationFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_DestinationToJson(this);
+  factory TestScriptDestination.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptDestinationFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptDestinationToJson(this);
 }
 
-class TestScript_Metadata {
-  List<TestScript_Link> link;
-  List<TestScript_Capability> capability;
+class TestScriptMetadata {
+  List<TestScriptLink> link;
+  List<TestScriptCapability> capability;
 
-  TestScript_Metadata({
+  TestScriptMetadata({
     this.link,
     @required this.capability,
   });
 
-  factory TestScript_Metadata.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_MetadataFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_MetadataToJson(this);
+  factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptMetadataFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptMetadataToJson(this);
 }
 
-class TestScript_Link {
+class TestScriptLink {
   String url;
   String description;
 
-  TestScript_Link({
+  TestScriptLink({
     this.url,
     this.description,
   });
 
-  factory TestScript_Link.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_LinkFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_LinkToJson(this);
+  factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptLinkFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptLinkToJson(this);
 }
 
-class TestScript_Capability {
+class TestScriptCapability {
   bool require;
   bool validated;
   String description;
@@ -323,7 +340,7 @@ class TestScript_Capability {
   List<String> link;
   Reference capabilities;
 
-  TestScript_Capability({
+  TestScriptCapability({
     this.require,
     this.validated,
     this.description,
@@ -333,28 +350,28 @@ class TestScript_Capability {
     @required this.capabilities,
   });
 
-  factory TestScript_Capability.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_CapabilityFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_CapabilityToJson(this);
+  factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptCapabilityFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptCapabilityToJson(this);
 }
 
-class TestScript_Fixture {
+class TestScriptFixture {
   bool autocreate;
   bool autodelete;
   Reference resource;
 
-  TestScript_Fixture({
+  TestScriptFixture({
     this.autocreate,
     this.autodelete,
     this.resource,
   });
 
-  factory TestScript_Fixture.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_FixtureFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_FixtureToJson(this);
+  factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptFixtureFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptFixtureToJson(this);
 }
 
-class TestScript_Variable {
+class TestScriptVariable {
   String name;
   String defaultValue;
   String description;
@@ -364,7 +381,7 @@ class TestScript_Variable {
   String path;
   String sourceId;
 
-  TestScript_Variable({
+  TestScriptVariable({
     this.name,
     this.defaultValue,
     this.description,
@@ -375,108 +392,108 @@ class TestScript_Variable {
     this.sourceId,
   });
 
-  factory TestScript_Variable.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_VariableFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_VariableToJson(this);
+  factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptVariableFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptVariableToJson(this);
 }
 
-class TestScript_Rule {
+class TestScriptRule {
   Reference resource;
-  List<TestScript_Param> param;
+  List<TestScriptParam> param;
 
-  TestScript_Rule({
+  TestScriptRule({
     @required this.resource,
     this.param,
   });
 
-  factory TestScript_Rule.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_RuleFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_RuleToJson(this);
+  factory TestScriptRule.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptRuleFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptRuleToJson(this);
 }
 
-class TestScript_Param {
+class TestScriptParam {
   String name;
   String value;
 
-  TestScript_Param({
+  TestScriptParam({
     this.name,
     this.value,
   });
 
-  factory TestScript_Param.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_ParamFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_ParamToJson(this);
+  factory TestScriptParam.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptParamFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptParamToJson(this);
 }
 
-class TestScript_Ruleset {
+class TestScriptRuleset {
   Reference resource;
-  List<TestScript_Rule1> rule;
+  List<TestScriptRule1> rule;
 
-  TestScript_Ruleset({
+  TestScriptRuleset({
     @required this.resource,
     @required this.rule,
   });
 
-  factory TestScript_Ruleset.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_RulesetFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_RulesetToJson(this);
+  factory TestScriptRuleset.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptRulesetFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptRulesetToJson(this);
 }
 
-class TestScript_Rule1 {
+class TestScriptRule1 {
   String ruleId;
-  List<TestScript_Param1> param;
+  List<TestScriptParam1> param;
 
-  TestScript_Rule1({
+  TestScriptRule1({
     this.ruleId,
     this.param,
   });
 
-  factory TestScript_Rule1.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_Rule1FromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_Rule1ToJson(this);
+  factory TestScriptRule1.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptRule1FromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptRule1ToJson(this);
 }
 
-class TestScript_Param1 {
+class TestScriptParam1 {
   String name;
   String value;
 
-  TestScript_Param1({
+  TestScriptParam1({
     this.name,
     this.value,
   });
 
-  factory TestScript_Param1.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_Param1FromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_Param1ToJson(this);
+  factory TestScriptParam1.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptParam1FromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptParam1ToJson(this);
 }
 
-class TestScript_Setup {
-  List<TestScript_Action> action;
+class TestScriptSetup {
+  List<TestScriptAction> action;
 
-  TestScript_Setup({
+  TestScriptSetup({
     @required this.action,
   });
 
-  factory TestScript_Setup.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_SetupFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_SetupToJson(this);
+  factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptSetupFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptSetupToJson(this);
 }
 
-class TestScript_Action {
-  TestScript_Operation operation;
-  TestScript_Assert asserts;
+class TestScriptAction {
+  TestScriptOperation operation;
+  TestScriptAssert asserts;
 
-  TestScript_Action({
+  TestScriptAction({
     this.operation,
     this.asserts,
   });
 
-  factory TestScript_Action.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_ActionFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_ActionToJson(this);
+  factory TestScriptAction.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptActionFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptActionToJson(this);
 }
 
-class TestScript_Operation {
+class TestScriptOperation {
   Coding type;
   String resource;
   String label;
@@ -487,14 +504,14 @@ class TestScript_Operation {
   bool encodeRequestUrl;
   double origin;
   String params;
-  List<TestScript_RequestHeader> requestHeader;
+  List<TestScriptRequestHeader> requestHeader;
   String requestId;
   String responseId;
   String sourceId;
   String targetId;
   String url;
 
-  TestScript_Operation({
+  TestScriptOperation({
     this.type,
     this.resource,
     this.label,
@@ -513,26 +530,26 @@ class TestScript_Operation {
     this.url,
   });
 
-  factory TestScript_Operation.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_OperationFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_OperationToJson(this);
+  factory TestScriptOperation.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptOperationFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptOperationToJson(this);
 }
 
-class TestScript_RequestHeader {
+class TestScriptRequestHeader {
   String field;
   String value;
 
-  TestScript_RequestHeader({
+  TestScriptRequestHeader({
     this.field,
     this.value,
   });
 
-  factory TestScript_RequestHeader.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_RequestHeaderFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_RequestHeaderToJson(this);
+  factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptRequestHeaderFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptRequestHeaderToJson(this);
 }
 
-class TestScript_Assert {
+class TestScriptAssert {
   String label;
   String description;
   String direction;
@@ -551,14 +568,14 @@ class TestScript_Assert {
   String resource;
   String response;
   String responseCode;
-  TestScript_Rule2 rule;
-  TestScript_Ruleset1 ruleset;
+  TestScriptRule2 rule;
+  TestScriptRuleset1 ruleset;
   String sourceId;
   String validateProfileId;
   String value;
   bool warningOnly;
 
-  TestScript_Assert({
+  TestScriptAssert({
     this.label,
     this.description,
     this.direction,
@@ -585,131 +602,131 @@ class TestScript_Assert {
     this.warningOnly,
   });
 
-  factory TestScript_Assert.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_AssertFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_AssertToJson(this);
+  factory TestScriptAssert.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptAssertFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptAssertToJson(this);
 }
 
-class TestScript_Rule2 {
+class TestScriptRule2 {
   String ruleId;
-  List<TestScript_Param2> param;
+  List<TestScriptParam2> param;
 
-  TestScript_Rule2({
+  TestScriptRule2({
     this.ruleId,
     this.param,
   });
 
-  factory TestScript_Rule2.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_Rule2FromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_Rule2ToJson(this);
+  factory TestScriptRule2.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptRule2FromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptRule2ToJson(this);
 }
 
-class TestScript_Param2 {
+class TestScriptParam2 {
   String name;
   String value;
 
-  TestScript_Param2({
+  TestScriptParam2({
     this.name,
     this.value,
   });
 
-  factory TestScript_Param2.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_Param2FromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_Param2ToJson(this);
+  factory TestScriptParam2.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptParam2FromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptParam2ToJson(this);
 }
 
-class TestScript_Ruleset1 {
+class TestScriptRuleset1 {
   String rulesetId;
-  List<TestScript_Rule3> rule;
+  List<TestScriptRule3> rule;
 
-  TestScript_Ruleset1({
+  TestScriptRuleset1({
     this.rulesetId,
     this.rule,
   });
 
-  factory TestScript_Ruleset1.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_Ruleset1FromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_Ruleset1ToJson(this);
+  factory TestScriptRuleset1.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptRuleset1FromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptRuleset1ToJson(this);
 }
 
-class TestScript_Rule3 {
+class TestScriptRule3 {
   String ruleId;
-  List<TestScript_Param3> param;
+  List<TestScriptParam3> param;
 
-  TestScript_Rule3({
+  TestScriptRule3({
     this.ruleId,
     this.param,
   });
 
-  factory TestScript_Rule3.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_Rule3FromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_Rule3ToJson(this);
+  factory TestScriptRule3.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptRule3FromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptRule3ToJson(this);
 }
 
-class TestScript_Param3 {
+class TestScriptParam3 {
   String name;
   String value;
 
-  TestScript_Param3({
+  TestScriptParam3({
     this.name,
     this.value,
   });
 
-  factory TestScript_Param3.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_Param3FromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_Param3ToJson(this);
+  factory TestScriptParam3.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptParam3FromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptParam3ToJson(this);
 }
 
-class TestScript_Test {
+class TestScriptTest {
   String name;
   String description;
-  List<TestScript_Action1> action;
+  List<TestScriptAction1> action;
 
-  TestScript_Test({
+  TestScriptTest({
     this.name,
     this.description,
     @required this.action,
   });
 
-  factory TestScript_Test.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_TestFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_TestToJson(this);
+  factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptTestFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptTestToJson(this);
 }
 
-class TestScript_Action1 {
-  TestScript_Operation operation;
-  TestScript_Assert asserts;
+class TestScriptAction1 {
+  TestScriptOperation operation;
+  TestScriptAssert asserts;
 
-  TestScript_Action1({
+  TestScriptAction1({
     this.operation,
     this.asserts,
   });
 
-  factory TestScript_Action1.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_Action1FromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_Action1ToJson(this);
+  factory TestScriptAction1.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptAction1FromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptAction1ToJson(this);
 }
 
-class TestScript_Teardown {
-  List<TestScript_Action2> action;
+class TestScriptTeardown {
+  List<TestScriptAction2> action;
 
-  TestScript_Teardown({
+  TestScriptTeardown({
     @required this.action,
   });
 
-  factory TestScript_Teardown.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_TeardownFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_TeardownToJson(this);
+  factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptTeardownFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptTeardownToJson(this);
 }
 
-class TestScript_Action2 {
-  TestScript_Operation operation;
+class TestScriptAction2 {
+  TestScriptOperation operation;
 
-  TestScript_Action2({
+  TestScriptAction2({
     @required this.operation,
   });
 
-  factory TestScript_Action2.fromJson(Map<String, dynamic> json) =>
-      _$TestScript_Action2FromJson(json);
-  Map<String, dynamic> toJson() => _$TestScript_Action2ToJson(this);
+  factory TestScriptAction2.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptAction2FromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptAction2ToJson(this);
 }

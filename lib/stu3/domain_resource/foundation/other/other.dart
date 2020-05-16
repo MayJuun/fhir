@@ -1,17 +1,27 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'other.freezed.dart';
+
 part 'other.g.dart';
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'basic.g.dart';
 
@@ -37,11 +47,15 @@ class Basic {
   factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
   Map<String, dynamic> toJson() => _$BasicToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/coding.dart';
+
 import '../Element/contactPoint.dart';
+
 
 part 'subscription.g.dart';
 
@@ -54,7 +68,7 @@ class Subscription {
   String reason;
   String criteria;
   String error;
-  Subscription_Channel channel;
+  SubscriptionChannel channel;
   List<Coding> tag;
 
   Subscription({
@@ -75,32 +89,40 @@ class Subscription {
   Map<String, dynamic> toJson() => _$SubscriptionToJson(this);
 }
 
-class Subscription_Channel {
+class SubscriptionChannel {
   String type;
   String endpoint;
   String payload;
   List<String> header;
 
-  Subscription_Channel({
+  SubscriptionChannel({
     this.type,
     this.endpoint,
     this.payload,
     this.header,
   });
 
-  factory Subscription_Channel.fromJson(Map<String, dynamic> json) =>
-      _$Subscription_ChannelFromJson(json);
-  Map<String, dynamic> toJson() => _$Subscription_ChannelToJson(this);
+  factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionChannelFromJson(json);
+  Map<String, dynamic> toJson() => _$SubscriptionChannelToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'media.g.dart';
 
@@ -154,17 +176,20 @@ class Media {
   factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
   Map<String, dynamic> toJson() => _$MediaToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/codeableConcept.dart';
+
 
 part 'operationOutcome.g.dart';
 
 class OperationOutcome {
   String id;
   String resourceType;
-  List<OperationOutcome_Issue> issue;
+  List<OperationOutcomeIssue> issue;
 
   OperationOutcome({
     this.id,
@@ -177,7 +202,7 @@ class OperationOutcome {
   Map<String, dynamic> toJson() => _$OperationOutcomeToJson(this);
 }
 
-class OperationOutcome_Issue {
+class OperationOutcomeIssue {
   String severity;
   String code;
   CodeableConcept details;
@@ -185,7 +210,7 @@ class OperationOutcome_Issue {
   List<String> location;
   List<String> expression;
 
-  OperationOutcome_Issue({
+  OperationOutcomeIssue({
     this.severity,
     this.code,
     this.details,
@@ -194,14 +219,17 @@ class OperationOutcome_Issue {
     this.expression,
   });
 
-  factory OperationOutcome_Issue.fromJson(Map<String, dynamic> json) =>
-      _$OperationOutcome_IssueFromJson(json);
-  Map<String, dynamic> toJson() => _$OperationOutcome_IssueToJson(this);
+  factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
+      _$OperationOutcomeIssueFromJson(json);
+  Map<String, dynamic> toJson() => _$OperationOutcomeIssueToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 
 part 'linkage.g.dart';
 
@@ -210,7 +238,7 @@ class Linkage {
   String resourceType;
   bool active;
   Reference author;
-  List<Linkage_Item> item;
+  List<LinkageItem> item;
 
   Linkage({
     this.id,
@@ -225,16 +253,16 @@ class Linkage {
   Map<String, dynamic> toJson() => _$LinkageToJson(this);
 }
 
-class Linkage_Item {
+class LinkageItem {
   String type;
   Reference resource;
 
-  Linkage_Item({
+  LinkageItem({
     this.type,
     @required this.resource,
   });
 
-  factory Linkage_Item.fromJson(Map<String, dynamic> json) =>
-      _$Linkage_ItemFromJson(json);
-  Map<String, dynamic> toJson() => _$Linkage_ItemToJson(this);
+  factory LinkageItem.fromJson(Map<String, dynamic> json) =>
+      _$LinkageItemFromJson(json);
+  Map<String, dynamic> toJson() => _$LinkageItemToJson(this);
 }

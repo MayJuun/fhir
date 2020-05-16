@@ -1,22 +1,36 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'summary.freezed.dart';
+
 part 'summary.g.dart';
 
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Element/range.dart';
+
 import '../Quantity/age.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'familyMemberHistory.g.dart';
 
@@ -48,7 +62,7 @@ class FamilyMemberHistory {
   List<CodeableConcept> reasonCode;
   List<Reference> reasonReference;
   List<Annotation> note;
-  List<FamilyMemberHistory_Condition> condition;
+  List<FamilyMemberHistoryCondition> condition;
 
   FamilyMemberHistory({
     this.id,
@@ -86,7 +100,7 @@ class FamilyMemberHistory {
   Map<String, dynamic> toJson() => _$FamilyMemberHistoryToJson(this);
 }
 
-class FamilyMemberHistory_Condition {
+class FamilyMemberHistoryCondition {
   CodeableConcept code;
   CodeableConcept outcome;
   Age onsetAge;
@@ -95,7 +109,7 @@ class FamilyMemberHistory_Condition {
   String onsetString;
   List<Annotation> note;
 
-  FamilyMemberHistory_Condition({
+  FamilyMemberHistoryCondition({
     @required this.code,
     this.outcome,
     this.onsetAge,
@@ -105,20 +119,29 @@ class FamilyMemberHistory_Condition {
     this.note,
   });
 
-  factory FamilyMemberHistory_Condition.fromJson(Map<String, dynamic> json) =>
-      _$FamilyMemberHistory_ConditionFromJson(json);
-  Map<String, dynamic> toJson() => _$FamilyMemberHistory_ConditionToJson(this);
+  factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
+      _$FamilyMemberHistoryConditionFromJson(json);
+  Map<String, dynamic> toJson() => _$FamilyMemberHistoryConditionToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Element/range.dart';
+
 import '../Element/period.dart';
+
 import '../Quantity/age.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'allergyIntolerance.g.dart';
 
@@ -143,7 +166,7 @@ class AllergyIntolerance {
   Reference asserter;
   String lastOccurrence;
   List<Annotation> note;
-  List<AllergyIntolerance_Reaction> reaction;
+  List<AllergyIntoleranceReaction> reaction;
 
   AllergyIntolerance({
     this.id,
@@ -174,7 +197,7 @@ class AllergyIntolerance {
   Map<String, dynamic> toJson() => _$AllergyIntoleranceToJson(this);
 }
 
-class AllergyIntolerance_Reaction {
+class AllergyIntoleranceReaction {
   CodeableConcept substance;
   List<CodeableConcept> manifestation;
   String description;
@@ -183,7 +206,7 @@ class AllergyIntolerance_Reaction {
   CodeableConcept exposureRoute;
   List<Annotation> note;
 
-  AllergyIntolerance_Reaction({
+  AllergyIntoleranceReaction({
     this.substance,
     @required this.manifestation,
     this.description,
@@ -193,20 +216,29 @@ class AllergyIntolerance_Reaction {
     this.note,
   });
 
-  factory AllergyIntolerance_Reaction.fromJson(Map<String, dynamic> json) =>
-      _$AllergyIntolerance_ReactionFromJson(json);
-  Map<String, dynamic> toJson() => _$AllergyIntolerance_ReactionToJson(this);
+  factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
+      _$AllergyIntoleranceReactionFromJson(json);
+  Map<String, dynamic> toJson() => _$AllergyIntoleranceReactionToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Element/range.dart';
+
 import '../Element/period.dart';
+
 import '../Quantity/age.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'condition.g.dart';
 
@@ -235,8 +267,8 @@ class Condition {
   String abatementString;
   DateTime assertedDate;
   Reference asserter;
-  Condition_Stage stage;
-  List<Condition_Evidence> evidence;
+  ConditionStage stage;
+  List<ConditionEvidence> evidence;
   List<Annotation> note;
 
   Condition({
@@ -274,41 +306,48 @@ class Condition {
   Map<String, dynamic> toJson() => _$ConditionToJson(this);
 }
 
-class Condition_Stage {
+class ConditionStage {
   CodeableConcept summary;
   List<Reference> assessment;
 
-  Condition_Stage({
+  ConditionStage({
     this.summary,
     this.assessment,
   });
 
-  factory Condition_Stage.fromJson(Map<String, dynamic> json) =>
-      _$Condition_StageFromJson(json);
-  Map<String, dynamic> toJson() => _$Condition_StageToJson(this);
+  factory ConditionStage.fromJson(Map<String, dynamic> json) =>
+      _$ConditionStageFromJson(json);
+  Map<String, dynamic> toJson() => _$ConditionStageToJson(this);
 }
 
-class Condition_Evidence {
+class ConditionEvidence {
   List<CodeableConcept> code;
   List<Reference> detail;
 
-  Condition_Evidence({
+  ConditionEvidence({
     this.code,
     this.detail,
   });
 
-  factory Condition_Evidence.fromJson(Map<String, dynamic> json) =>
-      _$Condition_EvidenceFromJson(json);
-  Map<String, dynamic> toJson() => _$Condition_EvidenceToJson(this);
+  factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
+      _$ConditionEvidenceFromJson(json);
+  Map<String, dynamic> toJson() => _$ConditionEvidenceToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'procedure.g.dart';
 
@@ -328,7 +367,7 @@ class Procedure {
   Reference context;
   DateTime performedDateTime;
   Period performedPeriod;
-  List<Procedure_Performer> performer;
+  List<ProcedurePerformer> performer;
   Reference location;
   List<CodeableConcept> reasonCode;
   List<Reference> reasonReference;
@@ -339,7 +378,7 @@ class Procedure {
   List<Reference> complicationDetail;
   List<CodeableConcept> followUp;
   List<Annotation> note;
-  List<Procedure_FocalDevice> focalDevice;
+  List<ProcedureFocalDevice> focalDevice;
   List<Reference> usedReference;
   List<CodeableConcept> usedCode;
 
@@ -380,41 +419,46 @@ class Procedure {
   Map<String, dynamic> toJson() => _$ProcedureToJson(this);
 }
 
-class Procedure_Performer {
+class ProcedurePerformer {
   CodeableConcept role;
   Reference actor;
   Reference onBehalfOf;
 
-  Procedure_Performer({
+  ProcedurePerformer({
     this.role,
     @required this.actor,
     this.onBehalfOf,
   });
 
-  factory Procedure_Performer.fromJson(Map<String, dynamic> json) =>
-      _$Procedure_PerformerFromJson(json);
-  Map<String, dynamic> toJson() => _$Procedure_PerformerToJson(this);
+  factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
+      _$ProcedurePerformerFromJson(json);
+  Map<String, dynamic> toJson() => _$ProcedurePerformerToJson(this);
 }
 
-class Procedure_FocalDevice {
+class ProcedureFocalDevice {
   CodeableConcept action;
   Reference manipulated;
 
-  Procedure_FocalDevice({
+  ProcedureFocalDevice({
     this.action,
     @required this.manipulated,
   });
 
-  factory Procedure_FocalDevice.fromJson(Map<String, dynamic> json) =>
-      _$Procedure_FocalDeviceFromJson(json);
-  Map<String, dynamic> toJson() => _$Procedure_FocalDeviceToJson(this);
+  factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
+      _$ProcedureFocalDeviceFromJson(json);
+  Map<String, dynamic> toJson() => _$ProcedureFocalDeviceToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'detectedIssue.g.dart';
 
@@ -431,7 +475,7 @@ class DetectedIssue {
   List<Reference> implicated;
   String detail;
   String reference;
-  List<DetectedIssue_Mitigation> mitigation;
+  List<DetectedIssueMitigation> mitigation;
 
   DetectedIssue({
     this.id,
@@ -454,27 +498,32 @@ class DetectedIssue {
   Map<String, dynamic> toJson() => _$DetectedIssueToJson(this);
 }
 
-class DetectedIssue_Mitigation {
+class DetectedIssueMitigation {
   CodeableConcept action;
   String date;
   Reference author;
 
-  DetectedIssue_Mitigation({
+  DetectedIssueMitigation({
     @required this.action,
     this.date,
     this.author,
   });
 
-  factory DetectedIssue_Mitigation.fromJson(Map<String, dynamic> json) =>
-      _$DetectedIssue_MitigationFromJson(json);
-  Map<String, dynamic> toJson() => _$DetectedIssue_MitigationToJson(this);
+  factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
+      _$DetectedIssueMitigationFromJson(json);
+  Map<String, dynamic> toJson() => _$DetectedIssueMitigationToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'adverseEvent.g.dart';
 
@@ -493,7 +542,7 @@ class AdverseEvent {
   Reference recorder;
   Reference eventParticipant;
   String description;
-  List<AdverseEvent_SuspectEntity> suspectEntity;
+  List<AdverseEventSuspectEntity> suspectEntity;
   List<Reference> subjectMedicalHistory;
   List<Reference> referenceDocument;
   List<Reference> study;
@@ -524,7 +573,7 @@ class AdverseEvent {
   Map<String, dynamic> toJson() => _$AdverseEventToJson(this);
 }
 
-class AdverseEvent_SuspectEntity {
+class AdverseEventSuspectEntity {
   Reference instance;
   String causality;
   CodeableConcept causalityAssessment;
@@ -533,7 +582,7 @@ class AdverseEvent_SuspectEntity {
   Reference causalityAuthor;
   CodeableConcept causalityResult;
 
-  AdverseEvent_SuspectEntity({
+  AdverseEventSuspectEntity({
     @required this.instance,
     this.causality,
     this.causalityAssessment,
@@ -543,18 +592,25 @@ class AdverseEvent_SuspectEntity {
     this.causalityResult,
   });
 
-  factory AdverseEvent_SuspectEntity.fromJson(Map<String, dynamic> json) =>
-      _$AdverseEvent_SuspectEntityFromJson(json);
-  Map<String, dynamic> toJson() => _$AdverseEvent_SuspectEntityToJson(this);
+  factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
+      _$AdverseEventSuspectEntityFromJson(json);
+  Map<String, dynamic> toJson() => _$AdverseEventSuspectEntityToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'clinicalImpression.g.dart';
 
@@ -573,10 +629,10 @@ class ClinicalImpression {
   Reference assessor;
   Reference previous;
   List<Reference> problem;
-  List<ClinicalImpression_Investigation> investigation;
+  List<ClinicalImpressionInvestigation> investigation;
   List<String> protocol;
   String summary;
-  List<ClinicalImpression_Finding> finding;
+  List<ClinicalImpressionFinding> finding;
   List<CodeableConcept> prognosisCodeableConcept;
   List<Reference> prognosisReference;
   List<Reference> action;
@@ -612,34 +668,34 @@ class ClinicalImpression {
   Map<String, dynamic> toJson() => _$ClinicalImpressionToJson(this);
 }
 
-class ClinicalImpression_Investigation {
+class ClinicalImpressionInvestigation {
   CodeableConcept code;
   List<Reference> item;
 
-  ClinicalImpression_Investigation({
+  ClinicalImpressionInvestigation({
     @required this.code,
     this.item,
   });
 
-  factory ClinicalImpression_Investigation.fromJson(
+  factory ClinicalImpressionInvestigation.fromJson(
           Map<String, dynamic> json) =>
-      _$ClinicalImpression_InvestigationFromJson(json);
+      _$ClinicalImpressionInvestigationFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$ClinicalImpression_InvestigationToJson(this);
+      _$ClinicalImpressionInvestigationToJson(this);
 }
 
-class ClinicalImpression_Finding {
+class ClinicalImpressionFinding {
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
   String basis;
 
-  ClinicalImpression_Finding({
+  ClinicalImpressionFinding({
     this.itemCodeableConcept,
     this.itemReference,
     this.basis,
   });
 
-  factory ClinicalImpression_Finding.fromJson(Map<String, dynamic> json) =>
-      _$ClinicalImpression_FindingFromJson(json);
-  Map<String, dynamic> toJson() => _$ClinicalImpression_FindingToJson(this);
+  factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
+      _$ClinicalImpressionFindingFromJson(json);
+  Map<String, dynamic> toJson() => _$ClinicalImpressionFindingToJson(this);
 }

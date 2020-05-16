@@ -1,20 +1,15 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'diagnostics.freezed.dart';
+
 part 'diagnostics.g.dart';
-
-import 'package:json_annotation/json_annotation.dart';
-import 'package:meta/meta.dart';
-
-import '../Element/codeableConcept.dart';
-import '../Element/reference.dart';
-import '../Element/coding.dart';
-import '../Element/identifier.dart';
-
-part 'imagingStudy.g.dart';
 
 class ImagingStudy {
   String id;
@@ -37,7 +32,7 @@ class ImagingStudy {
   List<CodeableConcept> procedureCode;
   CodeableConcept reason;
   String description;
-  List<ImagingStudy_Series> series;
+  List<ImagingStudySeries> series;
 
   ImagingStudy({
     this.id,
@@ -68,7 +63,7 @@ class ImagingStudy {
   Map<String, dynamic> toJson() => _$ImagingStudyToJson(this);
 }
 
-class ImagingStudy_Series {
+class ImagingStudySeries {
   String uid;
   double number;
   Coding modality;
@@ -80,9 +75,9 @@ class ImagingStudy_Series {
   Coding laterality;
   String started;
   List<Reference> performer;
-  List<ImagingStudy_Instance> instance;
+  List<ImagingStudyInstance> instance;
 
-  ImagingStudy_Series({
+  ImagingStudySeries({
     this.uid,
     this.number,
     @required this.modality,
@@ -97,36 +92,43 @@ class ImagingStudy_Series {
     this.instance,
   });
 
-  factory ImagingStudy_Series.fromJson(Map<String, dynamic> json) =>
-      _$ImagingStudy_SeriesFromJson(json);
-  Map<String, dynamic> toJson() => _$ImagingStudy_SeriesToJson(this);
+  factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
+      _$ImagingStudySeriesFromJson(json);
+  Map<String, dynamic> toJson() => _$ImagingStudySeriesToJson(this);
 }
 
-class ImagingStudy_Instance {
+class ImagingStudyInstance {
   String uid;
   double number;
   String sopClass;
   String title;
 
-  ImagingStudy_Instance({
+  ImagingStudyInstance({
     this.uid,
     this.number,
     this.sopClass,
     this.title,
   });
 
-  factory ImagingStudy_Instance.fromJson(Map<String, dynamic> json) =>
-      _$ImagingStudy_InstanceFromJson(json);
-  Map<String, dynamic> toJson() => _$ImagingStudy_InstanceToJson(this);
+  factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
+      _$ImagingStudyInstanceFromJson(json);
+  Map<String, dynamic> toJson() => _$ImagingStudyInstanceToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/attachment.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'diagnosticReport.g.dart';
 
@@ -143,11 +145,11 @@ class DiagnosticReport {
   DateTime effectiveDateTime;
   Period effectivePeriod;
   String issued;
-  List<DiagnosticReport_Performer> performer;
+  List<DiagnosticReportPerformer> performer;
   List<Reference> specimen;
   List<Reference> result;
   List<Reference> imagingStudy;
-  List<DiagnosticReport_Image> image;
+  List<DiagnosticReportImage> image;
   String conclusion;
   List<CodeableConcept> codedDiagnosis;
   List<Attachment> presentedForm;
@@ -180,40 +182,46 @@ class DiagnosticReport {
   Map<String, dynamic> toJson() => _$DiagnosticReportToJson(this);
 }
 
-class DiagnosticReport_Performer {
+class DiagnosticReportPerformer {
   CodeableConcept role;
   Reference actor;
 
-  DiagnosticReport_Performer({
+  DiagnosticReportPerformer({
     this.role,
     @required this.actor,
   });
 
-  factory DiagnosticReport_Performer.fromJson(Map<String, dynamic> json) =>
-      _$DiagnosticReport_PerformerFromJson(json);
-  Map<String, dynamic> toJson() => _$DiagnosticReport_PerformerToJson(this);
+  factory DiagnosticReportPerformer.fromJson(Map<String, dynamic> json) =>
+      _$DiagnosticReportPerformerFromJson(json);
+  Map<String, dynamic> toJson() => _$DiagnosticReportPerformerToJson(this);
 }
 
-class DiagnosticReport_Image {
+class DiagnosticReportImage {
   String comment;
   Reference link;
 
-  DiagnosticReport_Image({
+  DiagnosticReportImage({
     this.comment,
     @required this.link,
   });
 
-  factory DiagnosticReport_Image.fromJson(Map<String, dynamic> json) =>
-      _$DiagnosticReport_ImageFromJson(json);
-  Map<String, dynamic> toJson() => _$DiagnosticReport_ImageToJson(this);
+  factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
+      _$DiagnosticReportImageFromJson(json);
+  Map<String, dynamic> toJson() => _$DiagnosticReportImageToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/quantity.dart';
+
 import '../Element/coding.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'questionnaireResponse.g.dart';
 
@@ -230,7 +238,7 @@ class QuestionnaireResponse {
   String authored;
   Reference author;
   Reference source;
-  List<QuestionnaireResponse_Item> item;
+  List<QuestionnaireResponseItem> item;
 
   QuestionnaireResponse({
     this.id,
@@ -253,15 +261,15 @@ class QuestionnaireResponse {
   Map<String, dynamic> toJson() => _$QuestionnaireResponseToJson(this);
 }
 
-class QuestionnaireResponse_Item {
+class QuestionnaireResponseItem {
   String linkId;
   String definition;
   String text;
   Reference subject;
-  List<QuestionnaireResponse_Answer> answer;
-  List<QuestionnaireResponse_Item> item;
+  List<QuestionnaireResponseAnswer> answer;
+  List<QuestionnaireResponseItem> item;
 
-  QuestionnaireResponse_Item({
+  QuestionnaireResponseItem({
     this.linkId,
     this.definition,
     this.text,
@@ -270,12 +278,12 @@ class QuestionnaireResponse_Item {
     this.item,
   });
 
-  factory QuestionnaireResponse_Item.fromJson(Map<String, dynamic> json) =>
-      _$QuestionnaireResponse_ItemFromJson(json);
-  Map<String, dynamic> toJson() => _$QuestionnaireResponse_ItemToJson(this);
+  factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireResponseItemFromJson(json);
+  Map<String, dynamic> toJson() => _$QuestionnaireResponseItemToJson(this);
 }
 
-class QuestionnaireResponse_Answer {
+class QuestionnaireResponseAnswer {
   bool valueBoolean;
   double valueDecimal;
   int valueInteger;
@@ -288,9 +296,9 @@ class QuestionnaireResponse_Answer {
   Coding valueCoding;
   Quantity valueQuantity;
   Reference valueReference;
-  List<QuestionnaireResponse_Item> item;
+  List<QuestionnaireResponseItem> item;
 
-  QuestionnaireResponse_Answer({
+  QuestionnaireResponseAnswer({
     this.valueBoolean,
     this.valueDecimal,
     this.valueInteger,
@@ -306,15 +314,19 @@ class QuestionnaireResponse_Answer {
     this.item,
   });
 
-  factory QuestionnaireResponse_Answer.fromJson(Map<String, dynamic> json) =>
-      _$QuestionnaireResponse_AnswerFromJson(json);
-  Map<String, dynamic> toJson() => _$QuestionnaireResponse_AnswerToJson(this);
+  factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireResponseAnswerFromJson(json);
+  Map<String, dynamic> toJson() => _$QuestionnaireResponseAnswerToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'imagingManifest.g.dart';
 
@@ -326,7 +338,7 @@ class ImagingManifest {
   String authoringTime;
   Reference author;
   String description;
-  List<ImagingManifest_Study> study;
+  List<ImagingManifestStudy> study;
 
   ImagingManifest({
     this.id,
@@ -344,59 +356,64 @@ class ImagingManifest {
   Map<String, dynamic> toJson() => _$ImagingManifestToJson(this);
 }
 
-class ImagingManifest_Study {
+class ImagingManifestStudy {
   String uid;
   Reference imagingStudy;
   List<Reference> endpoint;
-  List<ImagingManifest_Series> series;
+  List<ImagingManifestSeries> series;
 
-  ImagingManifest_Study({
+  ImagingManifestStudy({
     this.uid,
     this.imagingStudy,
     this.endpoint,
     @required this.series,
   });
 
-  factory ImagingManifest_Study.fromJson(Map<String, dynamic> json) =>
-      _$ImagingManifest_StudyFromJson(json);
-  Map<String, dynamic> toJson() => _$ImagingManifest_StudyToJson(this);
+  factory ImagingManifestStudy.fromJson(Map<String, dynamic> json) =>
+      _$ImagingManifestStudyFromJson(json);
+  Map<String, dynamic> toJson() => _$ImagingManifestStudyToJson(this);
 }
 
-class ImagingManifest_Series {
+class ImagingManifestSeries {
   String uid;
   List<Reference> endpoint;
-  List<ImagingManifest_Instance> instance;
+  List<ImagingManifestInstance> instance;
 
-  ImagingManifest_Series({
+  ImagingManifestSeries({
     this.uid,
     this.endpoint,
     @required this.instance,
   });
 
-  factory ImagingManifest_Series.fromJson(Map<String, dynamic> json) =>
-      _$ImagingManifest_SeriesFromJson(json);
-  Map<String, dynamic> toJson() => _$ImagingManifest_SeriesToJson(this);
+  factory ImagingManifestSeries.fromJson(Map<String, dynamic> json) =>
+      _$ImagingManifestSeriesFromJson(json);
+  Map<String, dynamic> toJson() => _$ImagingManifestSeriesToJson(this);
 }
 
-class ImagingManifest_Instance {
+class ImagingManifestInstance {
   String sopClass;
   String uid;
 
-  ImagingManifest_Instance({
+  ImagingManifestInstance({
     this.sopClass,
     this.uid,
   });
 
-  factory ImagingManifest_Instance.fromJson(Map<String, dynamic> json) =>
-      _$ImagingManifest_InstanceFromJson(json);
-  Map<String, dynamic> toJson() => _$ImagingManifest_InstanceToJson(this);
+  factory ImagingManifestInstance.fromJson(Map<String, dynamic> json) =>
+      _$ImagingManifestInstanceFromJson(json);
+  Map<String, dynamic> toJson() => _$ImagingManifestInstanceToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
@@ -411,12 +428,12 @@ class Sequence {
   Reference device;
   Reference performer;
   Quantity quantity;
-  Sequence_ReferenceSeq referenceSeq;
-  List<Sequence_Variant> variant;
+  SequenceReferenceSeq referenceSeq;
+  List<SequenceVariant> variant;
   String observedSeq;
-  List<Sequence_Quality> quality;
+  List<SequenceQuality> quality;
   double readCoverage;
-  List<Sequence_Repository> repository;
+  List<SequenceRepository> repository;
   List<Reference> pointer;
 
   Sequence({
@@ -444,33 +461,9 @@ class Sequence {
   Map<String, dynamic> toJson() => _$SequenceToJson(this);
 }
 
-class Sequence_ReferenceSeq {
-  CodeableConcept chromosome;
-  String genomeBuild;
-  CodeableConcept referenceSeqId;
-  Reference referenceSeqPointer;
-  String referenceSeqString;
-  double strand;
-  double windowStart;
-  double windowEnd;
 
-  Sequence_ReferenceSeq({
-    this.chromosome,
-    this.genomeBuild,
-    this.referenceSeqId,
-    this.referenceSeqPointer,
-    this.referenceSeqString,
-    this.strand,
-    this.windowStart,
-    this.windowEnd,
-  });
 
-  factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) =>
-      _$Sequence_ReferenceSeqFromJson(json);
-  Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
-
-class Sequence_Variant {
+class SequenceVariant {
   double start;
   double end;
   String observedAllele;
@@ -478,7 +471,7 @@ class Sequence_Variant {
   String cigar;
   Reference variantPointer;
 
-  Sequence_Variant({
+  SequenceVariant({
     this.start,
     this.end,
     this.observedAllele,
@@ -487,12 +480,12 @@ class Sequence_Variant {
     this.variantPointer,
   });
 
-  factory Sequence_Variant.fromJson(Map<String, dynamic> json) =>
-      _$Sequence_VariantFromJson(json);
-  Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
+  factory SequenceVariant.fromJson(Map<String, dynamic> json) =>
+      _$SequenceVariantFromJson(json);
+  Map<String, dynamic> toJson() => _$SequenceVariantToJson(this);
 }
 
-class Sequence_Quality {
+class SequenceQuality {
   String type;
   CodeableConcept standardSequence;
   double start;
@@ -508,7 +501,7 @@ class Sequence_Quality {
   double recall;
   double fScore;
 
-  Sequence_Quality({
+  SequenceQuality({
     this.type,
     this.standardSequence,
     this.start,
@@ -525,12 +518,12 @@ class Sequence_Quality {
     this.fScore,
   });
 
-  factory Sequence_Quality.fromJson(Map<String, dynamic> json) =>
-      _$Sequence_QualityFromJson(json);
-  Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
+  factory SequenceQuality.fromJson(Map<String, dynamic> json) =>
+      _$SequenceQualityFromJson(json);
+  Map<String, dynamic> toJson() => _$SequenceQualityToJson(this);
 }
 
-class Sequence_Repository {
+class SequenceRepository {
   String type;
   String url;
   String name;
@@ -538,7 +531,7 @@ class Sequence_Repository {
   String variantsetId;
   String readsetId;
 
-  Sequence_Repository({
+  SequenceRepository({
     this.type,
     this.url,
     this.name,
@@ -547,17 +540,23 @@ class Sequence_Repository {
     this.readsetId,
   });
 
-  factory Sequence_Repository.fromJson(Map<String, dynamic> json) =>
-      _$Sequence_RepositoryFromJson(json);
-  Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
+  factory SequenceRepository.fromJson(Map<String, dynamic> json) =>
+      _$SequenceRepositoryFromJson(json);
+  Map<String, dynamic> toJson() => _$SequenceRepositoryToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'bodySite.g.dart';
 
@@ -588,15 +587,23 @@ class BodySite {
       _$BodySiteFromJson(json);
   Map<String, dynamic> toJson() => _$BodySiteToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/quantity.dart';
+
 import '../Element/period.dart';
+
 import '../Element/annotation.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'specimen.g.dart';
 
@@ -611,9 +618,9 @@ class Specimen {
   String receivedTime;
   List<Reference> parent;
   List<Reference> request;
-  Specimen_Collection collection;
-  List<Specimen_Processing> processing;
-  List<Specimen_Container> container;
+  SpecimenCollection collection;
+  List<SpecimenProcessing> processing;
+  List<SpecimenContainer> container;
   List<Annotation> note;
 
   Specimen({
@@ -638,7 +645,7 @@ class Specimen {
   Map<String, dynamic> toJson() => _$SpecimenToJson(this);
 }
 
-class Specimen_Collection {
+class SpecimenCollection {
   Reference collector;
   DateTime collectedDateTime;
   Period collectedPeriod;
@@ -646,7 +653,7 @@ class Specimen_Collection {
   CodeableConcept method;
   CodeableConcept bodySite;
 
-  Specimen_Collection({
+  SpecimenCollection({
     this.collector,
     this.collectedDateTime,
     this.collectedPeriod,
@@ -655,19 +662,19 @@ class Specimen_Collection {
     this.bodySite,
   });
 
-  factory Specimen_Collection.fromJson(Map<String, dynamic> json) =>
-      _$Specimen_CollectionFromJson(json);
-  Map<String, dynamic> toJson() => _$Specimen_CollectionToJson(this);
+  factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenCollectionFromJson(json);
+  Map<String, dynamic> toJson() => _$SpecimenCollectionToJson(this);
 }
 
-class Specimen_Processing {
+class SpecimenProcessing {
   String description;
   CodeableConcept procedure;
   List<Reference> additive;
   DateTime timeDateTime;
   Period timePeriod;
 
-  Specimen_Processing({
+  SpecimenProcessing({
     this.description,
     this.procedure,
     this.additive,
@@ -675,12 +682,12 @@ class Specimen_Processing {
     this.timePeriod,
   });
 
-  factory Specimen_Processing.fromJson(Map<String, dynamic> json) =>
-      _$Specimen_ProcessingFromJson(json);
-  Map<String, dynamic> toJson() => _$Specimen_ProcessingToJson(this);
+  factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenProcessingFromJson(json);
+  Map<String, dynamic> toJson() => _$SpecimenProcessingToJson(this);
 }
 
-class Specimen_Container {
+class SpecimenContainer {
   List<Identifier> identifier;
   String description;
   CodeableConcept type;
@@ -689,7 +696,7 @@ class Specimen_Container {
   CodeableConcept additiveCodeableConcept;
   Reference additiveReference;
 
-  Specimen_Container({
+  SpecimenContainer({
     this.identifier,
     this.description,
     this.type,
@@ -699,22 +706,33 @@ class Specimen_Container {
     this.additiveReference,
   });
 
-  factory Specimen_Container.fromJson(Map<String, dynamic> json) =>
-      _$Specimen_ContainerFromJson(json);
-  Map<String, dynamic> toJson() => _$Specimen_ContainerToJson(this);
+  factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenContainerFromJson(json);
+  Map<String, dynamic> toJson() => _$SpecimenContainerToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/attachment.dart';
+
 import '../Element/sampledData.dart';
+
 import '../Element/ratio.dart';
+
 import '../Element/range.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'observation.g.dart';
 
@@ -750,9 +768,9 @@ class Observation {
   CodeableConcept method;
   Reference specimen;
   Reference device;
-  List<Observation_ReferenceRange> referenceRange;
-  List<Observation_Related> related;
-  List<Observation_Component> component;
+  List<ObservationReferenceRange> referenceRange;
+  List<ObservationRelated> related;
+  List<ObservationComponent> component;
 
   Observation({
     this.id,
@@ -796,7 +814,7 @@ class Observation {
   Map<String, dynamic> toJson() => _$ObservationToJson(this);
 }
 
-class Observation_ReferenceRange {
+class ObservationReferenceRange {
   Quantity low;
   Quantity high;
   CodeableConcept type;
@@ -804,7 +822,7 @@ class Observation_ReferenceRange {
   Range age;
   String text;
 
-  Observation_ReferenceRange({
+  ObservationReferenceRange({
     this.low,
     this.high,
     this.type,
@@ -813,26 +831,26 @@ class Observation_ReferenceRange {
     this.text,
   });
 
-  factory Observation_ReferenceRange.fromJson(Map<String, dynamic> json) =>
-      _$Observation_ReferenceRangeFromJson(json);
-  Map<String, dynamic> toJson() => _$Observation_ReferenceRangeToJson(this);
+  factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
+      _$ObservationReferenceRangeFromJson(json);
+  Map<String, dynamic> toJson() => _$ObservationReferenceRangeToJson(this);
 }
 
-class Observation_Related {
+class ObservationRelated {
   String type;
   Reference target;
 
-  Observation_Related({
+  ObservationRelated({
     this.type,
     @required this.target,
   });
 
-  factory Observation_Related.fromJson(Map<String, dynamic> json) =>
-      _$Observation_RelatedFromJson(json);
-  Map<String, dynamic> toJson() => _$Observation_RelatedToJson(this);
+  factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
+      _$ObservationRelatedFromJson(json);
+  Map<String, dynamic> toJson() => _$ObservationRelatedToJson(this);
 }
 
-class Observation_Component {
+class ObservationComponent {
   CodeableConcept code;
   Quantity valueQuantity;
   CodeableConcept valueCodeableConcept;
@@ -846,9 +864,9 @@ class Observation_Component {
   Period valuePeriod;
   CodeableConcept dataAbsentReason;
   CodeableConcept interpretation;
-  List<Observation_ReferenceRange> referenceRange;
+  List<ObservationReferenceRange> referenceRange;
 
-  Observation_Component({
+  ObservationComponent({
     @required this.code,
     this.valueQuantity,
     this.valueCodeableConcept,
@@ -865,65 +883,12 @@ class Observation_Component {
     this.referenceRange,
   });
 
-  factory Observation_Component.fromJson(Map<String, dynamic> json) =>
-      _$Observation_ComponentFromJson(json);
-  Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}
-import 'package:json_annotation/json_annotation.dart';
-
-import '../Element/codeableConcept.dart';
-import '../Element/quantity.dart';
-import '../Element/reference.dart';
-import '../Element/identifier.dart';
-
-part 'sequence.g.dart';
-
-
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
+  factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
+      _$ObservationComponentFromJson(json);
+  Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
-
-class Sequence_ReferenceSeq {
+class SequenceReferenceSeq {
 CodeableConcept chromosome;
 String genomeBuild;
 CodeableConcept referenceSeqId;
@@ -933,7 +898,7 @@ double strand;
 double windowStart;
 double windowEnd;
 
-Sequence_ReferenceSeq({
+SequenceReferenceSeq({
 this.chromosome,
 this.genomeBuild,
 this.referenceSeqId,
@@ -944,93 +909,11 @@ this.windowStart,
 this.windowEnd,
 });
 
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
+factory SequenceReferenceSeq.fromJson(Map<String, dynamic> json) => _$SequenceReferenceSeqFromJson(json);
+Map<String, dynamic> toJson() => _$SequenceReferenceSeqToJson(this);
 }
 
-
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
-
-
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
-
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -1047,170 +930,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -1227,170 +972,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -1407,170 +1014,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -1587,170 +1056,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -1767,170 +1098,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -1947,170 +1140,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -2127,170 +1182,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -2307,170 +1224,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -2487,170 +1266,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -2667,170 +1308,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -2847,170 +1350,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -3027,170 +1392,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -3207,170 +1434,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -3387,170 +1476,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -3567,170 +1518,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -3747,170 +1560,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -3927,170 +1602,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -4107,170 +1644,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -4287,170 +1686,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -4467,170 +1728,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -4647,170 +1770,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -4827,170 +1812,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -5007,170 +1854,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -5187,170 +1896,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -5367,170 +1938,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -5547,170 +1980,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -5727,170 +2022,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -5907,170 +2064,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -6087,170 +2106,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -6267,170 +2148,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -6447,170 +2190,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -6627,333 +2232,54 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
 
-part 'sequence.g.dart';
-
-class Sequence {
-  String id;
-  String resourceType;
-  List<Identifier> identifier;
-  String type;
-  double coordinateSystem;
-  Reference patient;
-  Reference specimen;
-  Reference device;
-  Reference performer;
-  Quantity quantity;
-  Sequence_ReferenceSeq referenceSeq;
-  List<Sequence_Variant> variant;
-  String observedSeq;
-  List<Sequence_Quality> quality;
-  double readCoverage;
-  List<Sequence_Repository> repository;
-  List<Reference> pointer;
-
-  Sequence({
-    this.id,
-    this.resourceType = 'Sequence',
-    this.identifier,
-    this.type,
-    this.coordinateSystem,
-    this.patient,
-    this.specimen,
-    this.device,
-    this.performer,
-    this.quantity,
-    this.referenceSeq,
-    this.variant,
-    this.observedSeq,
-    this.quality,
-    this.readCoverage,
-    this.repository,
-    this.pointer,
-  });
-
-  factory Sequence.fromJson(Map<String, dynamic> json) =>
-      _$SequenceFromJson(json);
-  Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
-
-class Sequence_ReferenceSeq {
-  CodeableConcept chromosome;
-  String genomeBuild;
-  CodeableConcept referenceSeqId;
-  Reference referenceSeqPointer;
-  String referenceSeqString;
-  double strand;
-  double windowStart;
-  double windowEnd;
-
-  Sequence_ReferenceSeq({
-    this.chromosome,
-    this.genomeBuild,
-    this.referenceSeqId,
-    this.referenceSeqPointer,
-    this.referenceSeqString,
-    this.strand,
-    this.windowStart,
-    this.windowEnd,
-  });
-
-  factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) =>
-      _$Sequence_ReferenceSeqFromJson(json);
-  Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
-
-class Sequence_Variant {
-  double start;
-  double end;
-  String observedAllele;
-  String referenceAllele;
-  String cigar;
-  Reference variantPointer;
-
-  Sequence_Variant({
-    this.start,
-    this.end,
-    this.observedAllele,
-    this.referenceAllele,
-    this.cigar,
-    this.variantPointer,
-  });
-
-  factory Sequence_Variant.fromJson(Map<String, dynamic> json) =>
-      _$Sequence_VariantFromJson(json);
-  Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
-
-class Sequence_Quality {
-  String type;
-  CodeableConcept standardSequence;
-  double start;
-  double end;
-  Quantity score;
-  CodeableConcept method;
-  double truthTP;
-  double queryTP;
-  double truthFN;
-  double queryFP;
-  double gtFP;
-  double precision;
-  double recall;
-  double fScore;
-
-  Sequence_Quality({
-    this.type,
-    this.standardSequence,
-    this.start,
-    this.end,
-    this.score,
-    this.method,
-    this.truthTP,
-    this.queryTP,
-    this.truthFN,
-    this.queryFP,
-    this.gtFP,
-    this.precision,
-    this.recall,
-    this.fScore,
-  });
-
-  factory Sequence_Quality.fromJson(Map<String, dynamic> json) =>
-      _$Sequence_QualityFromJson(json);
-  Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-class Sequence_Repository {
-  String type;
-  String url;
-  String name;
-  String datasetId;
-  String variantsetId;
-  String readsetId;
-
-  Sequence_Repository({
-    this.type,
-    this.url,
-    this.name,
-    this.datasetId,
-    this.variantsetId,
-    this.readsetId,
-  });
-
-  factory Sequence_Repository.fromJson(Map<String, dynamic> json) =>
-      _$Sequence_RepositoryFromJson(json);
-  Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}
-dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
-
-import '../Element/codeableConcept.dart';
-import '../Element/quantity.dart';
-import '../Element/reference.dart';
-import '../Element/identifier.dart';
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
 
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
 
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
+
+
+dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
+import '../Element/codeableConcept.dart';
 
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
+import '../Element/quantity.dart';
 
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
+import '../Element/reference.dart';
+
+import '../Element/identifier.dart';
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
+part 'sequence.g.dart';
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
-
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
 
 
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
 
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
 
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
 
-Observation_Component({
+
+Range;
+
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -6970,170 +2296,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -7150,170 +2338,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -7330,170 +2380,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -7510,170 +2422,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -7690,170 +2464,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -7870,170 +2506,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -8050,170 +2548,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -8230,170 +2590,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -8410,170 +2632,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -8590,170 +2674,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -8770,170 +2716,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -8950,170 +2758,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -9130,170 +2800,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -9310,170 +2842,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -9490,170 +2884,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -9670,170 +2926,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -9850,170 +2968,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -10030,170 +3010,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -10210,170 +3052,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -10390,170 +3094,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -10570,170 +3136,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -10750,170 +3178,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -10930,170 +3220,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -11110,170 +3262,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -11290,170 +3304,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -11470,170 +3346,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -11650,170 +3388,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -11830,170 +3430,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -12010,170 +3472,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -12190,170 +3514,32 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
-}import 'package:json_annotation/json_annotation.dart';
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'sequence.g.dart';
 
 
-class Sequence {
-String id;
-String resourceType;
-List<Identifier> identifier;
-String type;
-double coordinateSystem;
-Reference patient;
-Reference specimen;
-Reference device;
-Reference performer;
-Quantity quantity;
-Sequence_ReferenceSeq referenceSeq;
-List<Sequence_Variant> variant;
-String observedSeq;
-List<Sequence_Quality> quality;
-double readCoverage;
-List<Sequence_Repository> repository;
-List<Reference> pointer;
-
-Sequence({
-this.id,
-this.resourceType = 'Sequence',
-this.identifier,
-this.type,
-this.coordinateSystem,
-this.patient,
-this.specimen,
-this.device,
-this.performer,
-this.quantity,
-this.referenceSeq,
-this.variant,
-this.observedSeq,
-this.quality,
-this.readCoverage,
-this.repository,
-this.pointer,
-});
-
-factory Sequence.fromJson(Map<String, dynamic> json) => _$SequenceFromJson(json);
-Map<String, dynamic> toJson() => _$SequenceToJson(this);
-}
 
 
-class Sequence_ReferenceSeq {
-CodeableConcept chromosome;
-String genomeBuild;
-CodeableConcept referenceSeqId;
-Reference referenceSeqPointer;
-String referenceSeqString;
-double strand;
-double windowStart;
-double windowEnd;
-
-Sequence_ReferenceSeq({
-this.chromosome,
-this.genomeBuild,
-this.referenceSeqId,
-this.referenceSeqPointer,
-this.referenceSeqString,
-this.strand,
-this.windowStart,
-this.windowEnd,
-});
-
-factory Sequence_ReferenceSeq.fromJson(Map<String, dynamic> json) => _$Sequence_ReferenceSeqFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_ReferenceSeqToJson(this);
-}
 
 
-class Sequence_Variant {
-double start;
-double end;
-String observedAllele;
-String referenceAllele;
-String cigar;
-Reference variantPointer;
-
-Sequence_Variant({
-this.start,
-this.end,
-this.observedAllele,
-this.referenceAllele,
-this.cigar,
-this.variantPointer,
-});
-
-factory Sequence_Variant.fromJson(Map<String, dynamic> json) => _$Sequence_VariantFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_VariantToJson(this);
-}
 
 
-class Sequence_Quality {
-String type;
-CodeableConcept standardSequence;
-double start;
-double end;
-Quantity score;
-CodeableConcept method;
-double truthTP;
-double queryTP;
-double truthFN;
-double queryFP;
-double gtFP;
-double precision;
-double recall;
-double fScore;
+Range;
 
-Sequence_Quality({
-this.type,
-this.standardSequence,
-this.start,
-this.end,
-this.score,
-this.method,
-this.truthTP,
-this.queryTP,
-this.truthFN,
-this.queryFP,
-this.gtFP,
-this.precision,
-this.recall,
-this.fScore,
-});
-
-factory Sequence_Quality.fromJson(Map<String, dynamic> json) => _$Sequence_QualityFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_QualityToJson(this);
-}
-
-
-class Sequence_Repository {
-String type;
-String url;
-String name;
-String datasetId;
-String variantsetId;
-String readsetId;
-
-Sequence_Repository({
-this.type,
-this.url,
-this.name,
-this.datasetId,
-this.variantsetId,
-this.readsetId,
-});
-
-factory Sequence_Repository.fromJson(Map<String, dynamic> json) => _$Sequence_RepositoryFromJson(json);
-Map<String, dynamic> toJson() => _$Sequence_RepositoryToJson(this);
-}Range;
-
-Observation_Component({
+ObservationComponent({
 @required this.code,
 this.valueQuantity,
 this.valueCodeableConcept,
@@ -12370,6 +3556,6 @@ this.interpretation,
 this.referenceRange,
 });
 
-factory Observation_Component.fromJson(Map<String, dynamic> json) => _$Observation_ComponentFromJson(json);
-Map<String, dynamic> toJson() => _$Observation_ComponentToJson(this);
+factory ObservationComponent.fromJson(Map<String, dynamic> json) => _$ObservationComponentFromJson(json);
+Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }

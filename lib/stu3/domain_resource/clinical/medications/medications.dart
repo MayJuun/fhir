@@ -1,23 +1,38 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'medications.freezed.dart';
+
 part 'medications.g.dart';
 
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Quantity/duration.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/period.dart';
+
 import '../Element/dosage.dart';
+
 import '../Element/annotation.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'medicationRequest.g.dart';
 
@@ -38,14 +53,14 @@ class MedicationRequest {
   Reference context;
   List<Reference> supportingInformation;
   String authoredOn;
-  MedicationRequest_Requester requester;
+  MedicationRequestRequester requester;
   Reference recorder;
   List<CodeableConcept> reasonCode;
   List<Reference> reasonReference;
   List<Annotation> note;
   List<Dosage> dosageInstruction;
-  MedicationRequest_DispenseRequest dispenseRequest;
-  MedicationRequest_Substitution substitution;
+  MedicationRequestDispenseRequest dispenseRequest;
+  MedicationRequestSubstitution substitution;
   Reference priorPrescription;
   List<Reference> detectedIssue;
   List<Reference> eventHistory;
@@ -85,28 +100,28 @@ class MedicationRequest {
   Map<String, dynamic> toJson() => _$MedicationRequestToJson(this);
 }
 
-class MedicationRequest_Requester {
+class MedicationRequestRequester {
   Reference agent;
   Reference onBehalfOf;
 
-  MedicationRequest_Requester({
+  MedicationRequestRequester({
     @required this.agent,
     this.onBehalfOf,
   });
 
-  factory MedicationRequest_Requester.fromJson(Map<String, dynamic> json) =>
-      _$MedicationRequest_RequesterFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationRequest_RequesterToJson(this);
+  factory MedicationRequestRequester.fromJson(Map<String, dynamic> json) =>
+      _$MedicationRequestRequesterFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationRequestRequesterToJson(this);
 }
 
-class MedicationRequest_DispenseRequest {
+class MedicationRequestDispenseRequest {
   Period validityPeriod;
   double numberOfRepeatsAllowed;
   Quantity quantity;
   Duration expectedSupplyDuration;
   Reference performer;
 
-  MedicationRequest_DispenseRequest({
+  MedicationRequestDispenseRequest({
     this.validityPeriod,
     this.numberOfRepeatsAllowed,
     this.quantity,
@@ -114,34 +129,41 @@ class MedicationRequest_DispenseRequest {
     this.performer,
   });
 
-  factory MedicationRequest_DispenseRequest.fromJson(
+  factory MedicationRequestDispenseRequest.fromJson(
           Map<String, dynamic> json) =>
-      _$MedicationRequest_DispenseRequestFromJson(json);
+      _$MedicationRequestDispenseRequestFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$MedicationRequest_DispenseRequestToJson(this);
+      _$MedicationRequestDispenseRequestToJson(this);
 }
 
-class MedicationRequest_Substitution {
+class MedicationRequestSubstitution {
   bool allowed;
   CodeableConcept reason;
 
-  MedicationRequest_Substitution({
+  MedicationRequestSubstitution({
     this.allowed,
     this.reason,
   });
 
-  factory MedicationRequest_Substitution.fromJson(Map<String, dynamic> json) =>
-      _$MedicationRequest_SubstitutionFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationRequest_SubstitutionToJson(this);
+  factory MedicationRequestSubstitution.fromJson(Map<String, dynamic> json) =>
+      _$MedicationRequestSubstitutionFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationRequestSubstitutionToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'immunization.g.dart';
 
@@ -164,11 +186,11 @@ class Immunization {
   CodeableConcept site;
   CodeableConcept route;
   Quantity doseQuantity;
-  List<Immunization_Practitioner> practitioner;
+  List<ImmunizationPractitioner> practitioner;
   List<Annotation> note;
-  Immunization_Explanation explanation;
-  List<Immunization_Reaction> reaction;
-  List<Immunization_VaccinationProtocol> vaccinationProtocol;
+  ImmunizationExplanation explanation;
+  List<ImmunizationReaction> reaction;
+  List<ImmunizationVaccinationProtocol> vaccinationProtocol;
 
   Immunization({
     this.id,
@@ -201,51 +223,51 @@ class Immunization {
   Map<String, dynamic> toJson() => _$ImmunizationToJson(this);
 }
 
-class Immunization_Practitioner {
+class ImmunizationPractitioner {
   CodeableConcept role;
   Reference actor;
 
-  Immunization_Practitioner({
+  ImmunizationPractitioner({
     this.role,
     @required this.actor,
   });
 
-  factory Immunization_Practitioner.fromJson(Map<String, dynamic> json) =>
-      _$Immunization_PractitionerFromJson(json);
-  Map<String, dynamic> toJson() => _$Immunization_PractitionerToJson(this);
+  factory ImmunizationPractitioner.fromJson(Map<String, dynamic> json) =>
+      _$ImmunizationPractitionerFromJson(json);
+  Map<String, dynamic> toJson() => _$ImmunizationPractitionerToJson(this);
 }
 
-class Immunization_Explanation {
+class ImmunizationExplanation {
   List<CodeableConcept> reason;
   List<CodeableConcept> reasonNotGiven;
 
-  Immunization_Explanation({
+  ImmunizationExplanation({
     this.reason,
     this.reasonNotGiven,
   });
 
-  factory Immunization_Explanation.fromJson(Map<String, dynamic> json) =>
-      _$Immunization_ExplanationFromJson(json);
-  Map<String, dynamic> toJson() => _$Immunization_ExplanationToJson(this);
+  factory ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
+      _$ImmunizationExplanationFromJson(json);
+  Map<String, dynamic> toJson() => _$ImmunizationExplanationToJson(this);
 }
 
-class Immunization_Reaction {
+class ImmunizationReaction {
   String date;
   Reference detail;
   bool reported;
 
-  Immunization_Reaction({
+  ImmunizationReaction({
     this.date,
     this.detail,
     this.reported,
   });
 
-  factory Immunization_Reaction.fromJson(Map<String, dynamic> json) =>
-      _$Immunization_ReactionFromJson(json);
-  Map<String, dynamic> toJson() => _$Immunization_ReactionToJson(this);
+  factory ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
+      _$ImmunizationReactionFromJson(json);
+  Map<String, dynamic> toJson() => _$ImmunizationReactionToJson(this);
 }
 
-class Immunization_VaccinationProtocol {
+class ImmunizationVaccinationProtocol {
   double doseSequence;
   String description;
   Reference authority;
@@ -255,7 +277,7 @@ class Immunization_VaccinationProtocol {
   CodeableConcept doseStatus;
   CodeableConcept doseStatusReason;
 
-  Immunization_VaccinationProtocol({
+  ImmunizationVaccinationProtocol({
     this.doseSequence,
     this.description,
     this.authority,
@@ -266,21 +288,29 @@ class Immunization_VaccinationProtocol {
     this.doseStatusReason,
   });
 
-  factory Immunization_VaccinationProtocol.fromJson(
+  factory ImmunizationVaccinationProtocol.fromJson(
           Map<String, dynamic> json) =>
-      _$Immunization_VaccinationProtocolFromJson(json);
+      _$ImmunizationVaccinationProtocolFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$Immunization_VaccinationProtocolToJson(this);
+      _$ImmunizationVaccinationProtocolToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/dosage.dart';
+
 import '../Element/annotation.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'medicationDispense.g.dart';
 
@@ -296,7 +326,7 @@ class MedicationDispense {
   Reference subject;
   Reference context;
   List<Reference> supportingInformation;
-  List<MedicationDispense_Performer> performer;
+  List<MedicationDispensePerformer> performer;
   List<Reference> authorizingPrescription;
   CodeableConcept type;
   Quantity quantity;
@@ -307,7 +337,7 @@ class MedicationDispense {
   List<Reference> receiver;
   List<Annotation> note;
   List<Dosage> dosageInstruction;
-  MedicationDispense_Substitution substitution;
+  MedicationDispenseSubstitution substitution;
   List<Reference> detectedIssue;
   bool notDone;
   CodeableConcept notDoneReasonCodeableConcept;
@@ -350,44 +380,49 @@ class MedicationDispense {
   Map<String, dynamic> toJson() => _$MedicationDispenseToJson(this);
 }
 
-class MedicationDispense_Performer {
+class MedicationDispensePerformer {
   Reference actor;
   Reference onBehalfOf;
 
-  MedicationDispense_Performer({
+  MedicationDispensePerformer({
     @required this.actor,
     this.onBehalfOf,
   });
 
-  factory MedicationDispense_Performer.fromJson(Map<String, dynamic> json) =>
-      _$MedicationDispense_PerformerFromJson(json);
-  Map<String, dynamic> toJson() => _$MedicationDispense_PerformerToJson(this);
+  factory MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =>
+      _$MedicationDispensePerformerFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationDispensePerformerToJson(this);
 }
 
-class MedicationDispense_Substitution {
+class MedicationDispenseSubstitution {
   bool wasSubstituted;
   CodeableConcept type;
   List<CodeableConcept> reason;
   List<Reference> responsibleParty;
 
-  MedicationDispense_Substitution({
+  MedicationDispenseSubstitution({
     this.wasSubstituted,
     this.type,
     this.reason,
     this.responsibleParty,
   });
 
-  factory MedicationDispense_Substitution.fromJson(Map<String, dynamic> json) =>
-      _$MedicationDispense_SubstitutionFromJson(json);
+  factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
+      _$MedicationDispenseSubstitutionFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$MedicationDispense_SubstitutionToJson(this);
+      _$MedicationDispenseSubstitutionToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'immunizationRecommendation.g.dart';
 
@@ -396,7 +431,7 @@ class ImmunizationRecommendation {
   String resourceType;
   List<Identifier> identifier;
   Reference patient;
-  List<ImmunizationRecommendation_Recommendation> recommendation;
+  List<ImmunizationRecommendationRecommendation> recommendation;
 
   ImmunizationRecommendation({
     this.id,
@@ -411,18 +446,18 @@ class ImmunizationRecommendation {
   Map<String, dynamic> toJson() => _$ImmunizationRecommendationToJson(this);
 }
 
-class ImmunizationRecommendation_Recommendation {
+class ImmunizationRecommendationRecommendation {
   String date;
   CodeableConcept vaccineCode;
   CodeableConcept targetDisease;
   double doseNumber;
   CodeableConcept forecastStatus;
-  List<ImmunizationRecommendation_DateCriterion> dateCriterion;
-  ImmunizationRecommendation_Protocol protocol;
+  List<ImmunizationRecommendationDateCriterion> dateCriterion;
+  ImmunizationRecommendationProtocol protocol;
   List<Reference> supportingImmunization;
   List<Reference> supportingPatientInformation;
 
-  ImmunizationRecommendation_Recommendation({
+  ImmunizationRecommendationRecommendation({
     this.date,
     this.vaccineCode,
     this.targetDisease,
@@ -434,58 +469,67 @@ class ImmunizationRecommendation_Recommendation {
     this.supportingPatientInformation,
   });
 
-  factory ImmunizationRecommendation_Recommendation.fromJson(
+  factory ImmunizationRecommendationRecommendation.fromJson(
           Map<String, dynamic> json) =>
-      _$ImmunizationRecommendation_RecommendationFromJson(json);
+      _$ImmunizationRecommendationRecommendationFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$ImmunizationRecommendation_RecommendationToJson(this);
+      _$ImmunizationRecommendationRecommendationToJson(this);
 }
 
-class ImmunizationRecommendation_DateCriterion {
+class ImmunizationRecommendationDateCriterion {
   CodeableConcept code;
   String value;
 
-  ImmunizationRecommendation_DateCriterion({
+  ImmunizationRecommendationDateCriterion({
     @required this.code,
     this.value,
   });
 
-  factory ImmunizationRecommendation_DateCriterion.fromJson(
+  factory ImmunizationRecommendationDateCriterion.fromJson(
           Map<String, dynamic> json) =>
-      _$ImmunizationRecommendation_DateCriterionFromJson(json);
+      _$ImmunizationRecommendationDateCriterionFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$ImmunizationRecommendation_DateCriterionToJson(this);
+      _$ImmunizationRecommendationDateCriterionToJson(this);
 }
 
-class ImmunizationRecommendation_Protocol {
+class ImmunizationRecommendationProtocol {
   double doseSequence;
   String description;
   Reference authority;
   String series;
 
-  ImmunizationRecommendation_Protocol({
+  ImmunizationRecommendationProtocol({
     this.doseSequence,
     this.description,
     this.authority,
     this.series,
   });
 
-  factory ImmunizationRecommendation_Protocol.fromJson(
+  factory ImmunizationRecommendationProtocol.fromJson(
           Map<String, dynamic> json) =>
-      _$ImmunizationRecommendation_ProtocolFromJson(json);
+      _$ImmunizationRecommendationProtocolFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$ImmunizationRecommendation_ProtocolToJson(this);
+      _$ImmunizationRecommendationProtocolToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/ratio.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/annotation.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'medicationAdministration.g.dart';
 
@@ -504,7 +548,7 @@ class MedicationAdministration {
   List<Reference> supportingInformation;
   DateTime effectiveDateTime;
   Period effectivePeriod;
-  List<MedicationAdministration_Performer> performer;
+  List<MedicationAdministrationPerformer> performer;
   bool notGiven;
   List<CodeableConcept> reasonNotGiven;
   List<CodeableConcept> reasonCode;
@@ -512,7 +556,7 @@ class MedicationAdministration {
   Reference prescription;
   List<Reference> device;
   List<Annotation> note;
-  MedicationAdministration_Dosage dosage;
+  MedicationAdministrationDosage dosage;
   List<Reference> eventHistory;
 
   MedicationAdministration({
@@ -547,23 +591,23 @@ class MedicationAdministration {
   Map<String, dynamic> toJson() => _$MedicationAdministrationToJson(this);
 }
 
-class MedicationAdministration_Performer {
+class MedicationAdministrationPerformer {
   Reference actor;
   Reference onBehalfOf;
 
-  MedicationAdministration_Performer({
+  MedicationAdministrationPerformer({
     @required this.actor,
     this.onBehalfOf,
   });
 
-  factory MedicationAdministration_Performer.fromJson(
+  factory MedicationAdministrationPerformer.fromJson(
           Map<String, dynamic> json) =>
-      _$MedicationAdministration_PerformerFromJson(json);
+      _$MedicationAdministrationPerformerFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$MedicationAdministration_PerformerToJson(this);
+      _$MedicationAdministrationPerformerToJson(this);
 }
 
-class MedicationAdministration_Dosage {
+class MedicationAdministrationDosage {
   String text;
   CodeableConcept site;
   CodeableConcept route;
@@ -572,7 +616,7 @@ class MedicationAdministration_Dosage {
   Ratio rateRatio;
   Quantity rateSimpleQuantity;
 
-  MedicationAdministration_Dosage({
+  MedicationAdministrationDosage({
     this.text,
     this.site,
     this.route,
@@ -582,20 +626,28 @@ class MedicationAdministration_Dosage {
     this.rateSimpleQuantity,
   });
 
-  factory MedicationAdministration_Dosage.fromJson(Map<String, dynamic> json) =>
-      _$MedicationAdministration_DosageFromJson(json);
+  factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
+      _$MedicationAdministrationDosageFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$MedicationAdministration_DosageToJson(this);
+      _$MedicationAdministrationDosageToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/dosage.dart';
+
 import '../Element/annotation.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'medicationStatement.g.dart';
 
@@ -652,13 +704,19 @@ class MedicationStatement {
       _$MedicationStatementFromJson(json);
   Map<String, dynamic> toJson() => _$MedicationStatementToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/quantity.dart';
+
 import '../Element/ratio.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 
 part 'medication.g.dart';
 
@@ -671,8 +729,8 @@ class Medication {
   bool isOverTheCounter;
   Reference manufacturer;
   CodeableConcept form;
-  List<Medication_Ingredient> ingredient;
-  Medication_Package package;
+  List<MedicationIngredient> ingredient;
+  MedicationPackage package;
   List<Attachment> image;
 
   Medication({
@@ -694,66 +752,66 @@ class Medication {
   Map<String, dynamic> toJson() => _$MedicationToJson(this);
 }
 
-class Medication_Ingredient {
+class MedicationIngredient {
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
   bool isActive;
   Ratio amount;
 
-  Medication_Ingredient({
+  MedicationIngredient({
     this.itemCodeableConcept,
     this.itemReference,
     this.isActive,
     this.amount,
   });
 
-  factory Medication_Ingredient.fromJson(Map<String, dynamic> json) =>
-      _$Medication_IngredientFromJson(json);
-  Map<String, dynamic> toJson() => _$Medication_IngredientToJson(this);
+  factory MedicationIngredient.fromJson(Map<String, dynamic> json) =>
+      _$MedicationIngredientFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationIngredientToJson(this);
 }
 
-class Medication_Package {
+class MedicationPackage {
   CodeableConcept container;
-  List<Medication_Content> content;
-  List<Medication_Batch> batch;
+  List<MedicationContent> content;
+  List<MedicationBatch> batch;
 
-  Medication_Package({
+  MedicationPackage({
     this.container,
     this.content,
     this.batch,
   });
 
-  factory Medication_Package.fromJson(Map<String, dynamic> json) =>
-      _$Medication_PackageFromJson(json);
-  Map<String, dynamic> toJson() => _$Medication_PackageToJson(this);
+  factory MedicationPackage.fromJson(Map<String, dynamic> json) =>
+      _$MedicationPackageFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationPackageToJson(this);
 }
 
-class Medication_Content {
+class MedicationContent {
   CodeableConcept itemCodeableConcept;
   Reference itemReference;
   Quantity amount;
 
-  Medication_Content({
+  MedicationContent({
     this.itemCodeableConcept,
     this.itemReference,
     this.amount,
   });
 
-  factory Medication_Content.fromJson(Map<String, dynamic> json) =>
-      _$Medication_ContentFromJson(json);
-  Map<String, dynamic> toJson() => _$Medication_ContentToJson(this);
+  factory MedicationContent.fromJson(Map<String, dynamic> json) =>
+      _$MedicationContentFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationContentToJson(this);
 }
 
-class Medication_Batch {
+class MedicationBatch {
   String lotNumber;
   DateTime expirationDate;
 
-  Medication_Batch({
+  MedicationBatch({
     this.lotNumber,
     this.expirationDate,
   });
 
-  factory Medication_Batch.fromJson(Map<String, dynamic> json) =>
-      _$Medication_BatchFromJson(json);
-  Map<String, dynamic> toJson() => _$Medication_BatchToJson(this);
+  factory MedicationBatch.fromJson(Map<String, dynamic> json) =>
+      _$MedicationBatchFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationBatchToJson(this);
 }

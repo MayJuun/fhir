@@ -1,15 +1,23 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'support.freezed.dart';
+
 part 'support.g.dart';
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'enrollmentRequest.g.dart';
 
@@ -42,11 +50,15 @@ class EnrollmentRequest {
       _$EnrollmentRequestFromJson(json);
   Map<String, dynamic> toJson() => _$EnrollmentRequestToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'enrollmentResponse.g.dart';
 
@@ -81,12 +93,17 @@ class EnrollmentResponse {
       _$EnrollmentResponseFromJson(json);
   Map<String, dynamic> toJson() => _$EnrollmentResponseToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'coverage.g.dart';
 
@@ -103,7 +120,7 @@ class Coverage {
   CodeableConcept relationship;
   Period period;
   List<Reference> payor;
-  Coverage_Grouping grouping;
+  CoverageGrouping grouping;
   String dependent;
   String sequence;
   double order;
@@ -136,7 +153,7 @@ class Coverage {
   Map<String, dynamic> toJson() => _$CoverageToJson(this);
 }
 
-class Coverage_Grouping {
+class CoverageGrouping {
   String group;
   String groupDisplay;
   String subGroup;
@@ -150,7 +167,7 @@ class Coverage_Grouping {
   String subClass;
   String subClassDisplay;
 
-  Coverage_Grouping({
+  CoverageGrouping({
     this.group,
     this.groupDisplay,
     this.subGroup,
@@ -165,18 +182,24 @@ class Coverage_Grouping {
     this.subClassDisplay,
   });
 
-  factory Coverage_Grouping.fromJson(Map<String, dynamic> json) =>
-      _$Coverage_GroupingFromJson(json);
-  Map<String, dynamic> toJson() => _$Coverage_GroupingToJson(this);
+  factory CoverageGrouping.fromJson(Map<String, dynamic> json) =>
+      _$CoverageGroupingFromJson(json);
+  Map<String, dynamic> toJson() => _$CoverageGroupingToJson(this);
 }
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Quantity/money.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'eligibilityResponse.g.dart';
 
@@ -193,9 +216,9 @@ class EligibilityResponse {
   String disposition;
   Reference insurer;
   bool inforce;
-  List<EligibilityResponse_Insurance> insurance;
+  List<EligibilityResponseInsurance> insurance;
   CodeableConcept form;
-  List<EligibilityResponse_Error> error;
+  List<EligibilityResponseError> error;
 
   EligibilityResponse({
     this.id,
@@ -220,23 +243,23 @@ class EligibilityResponse {
   Map<String, dynamic> toJson() => _$EligibilityResponseToJson(this);
 }
 
-class EligibilityResponse_Insurance {
+class EligibilityResponseInsurance {
   Reference coverage;
   Reference contract;
-  List<EligibilityResponse_BenefitBalance> benefitBalance;
+  List<EligibilityResponseBenefitBalance> benefitBalance;
 
-  EligibilityResponse_Insurance({
+  EligibilityResponseInsurance({
     this.coverage,
     this.contract,
     this.benefitBalance,
   });
 
-  factory EligibilityResponse_Insurance.fromJson(Map<String, dynamic> json) =>
-      _$EligibilityResponse_InsuranceFromJson(json);
-  Map<String, dynamic> toJson() => _$EligibilityResponse_InsuranceToJson(this);
+  factory EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
+      _$EligibilityResponseInsuranceFromJson(json);
+  Map<String, dynamic> toJson() => _$EligibilityResponseInsuranceToJson(this);
 }
 
-class EligibilityResponse_BenefitBalance {
+class EligibilityResponseBenefitBalance {
   CodeableConcept category;
   CodeableConcept subCategory;
   bool excluded;
@@ -245,9 +268,9 @@ class EligibilityResponse_BenefitBalance {
   CodeableConcept network;
   CodeableConcept unit;
   CodeableConcept term;
-  List<EligibilityResponse_Financial> financial;
+  List<EligibilityResponseFinancial> financial;
 
-  EligibilityResponse_BenefitBalance({
+  EligibilityResponseBenefitBalance({
     @required this.category,
     this.subCategory,
     this.excluded,
@@ -259,14 +282,14 @@ class EligibilityResponse_BenefitBalance {
     this.financial,
   });
 
-  factory EligibilityResponse_BenefitBalance.fromJson(
+  factory EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
-      _$EligibilityResponse_BenefitBalanceFromJson(json);
+      _$EligibilityResponseBenefitBalanceFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$EligibilityResponse_BenefitBalanceToJson(this);
+      _$EligibilityResponseBenefitBalanceToJson(this);
 }
 
-class EligibilityResponse_Financial {
+class EligibilityResponseFinancial {
   CodeableConcept type;
   int allowedUnsignedInt;
   String allowedString;
@@ -274,7 +297,7 @@ class EligibilityResponse_Financial {
   int usedUnsignedInt;
   Money usedMoney;
 
-  EligibilityResponse_Financial({
+  EligibilityResponseFinancial({
     @required this.type,
     this.allowedUnsignedInt,
     this.allowedString,
@@ -283,28 +306,33 @@ class EligibilityResponse_Financial {
     this.usedMoney,
   });
 
-  factory EligibilityResponse_Financial.fromJson(Map<String, dynamic> json) =>
-      _$EligibilityResponse_FinancialFromJson(json);
-  Map<String, dynamic> toJson() => _$EligibilityResponse_FinancialToJson(this);
+  factory EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
+      _$EligibilityResponseFinancialFromJson(json);
+  Map<String, dynamic> toJson() => _$EligibilityResponseFinancialToJson(this);
 }
 
-class EligibilityResponse_Error {
+class EligibilityResponseError {
   CodeableConcept code;
 
-  EligibilityResponse_Error({
+  EligibilityResponseError({
     @required this.code,
   });
 
-  factory EligibilityResponse_Error.fromJson(Map<String, dynamic> json) =>
-      _$EligibilityResponse_ErrorFromJson(json);
-  Map<String, dynamic> toJson() => _$EligibilityResponse_ErrorToJson(this);
+  factory EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
+      _$EligibilityResponseErrorFromJson(json);
+  Map<String, dynamic> toJson() => _$EligibilityResponseErrorToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'eligibilityRequest.g.dart';
 

@@ -1,16 +1,27 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'management.freezed.dart';
-part 'management.g.dart';import 'package:json_annotation/json_annotation.dart';
+
+part 'management.g.dart';
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'lists.g.dart';
 
@@ -28,7 +39,7 @@ class Lists {
   Reference source;
   CodeableConcept orderedBy;
   List<Annotation> note;
-  List<List_Entry> entry;
+  List<ListEntry> entry;
   CodeableConcept emptyReason;
 
   Lists({
@@ -53,37 +64,49 @@ class Lists {
   Map<String, dynamic> toJson() => _$ListsToJson(this);
 }
 
-class List_Entry {
+class ListEntry {
   CodeableConcept flag;
   bool deleted;
   String date;
   Reference item;
 
-  List_Entry({
+  ListEntry({
     this.flag,
     this.deleted,
     this.date,
     @required this.item,
   });
 
-  factory List_Entry.fromJson(Map<String, dynamic> json) =>
-      _$List_EntryFromJson(json);
-  Map<String, dynamic> toJson() => _$List_EntryToJson(this);
+  factory ListEntry.fromJson(Map<String, dynamic> json) =>
+      _$ListEntryFromJson(json);
+  Map<String, dynamic> toJson() => _$ListEntryToJson(this);
 }
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/attachment.dart';
+
 import '../Element/dataRequirement.dart';
+
 import '../Element/parameterDefinition.dart';
+
 import '../Element/relatedArtifact.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/contributor.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'library.g.dart';
 
@@ -152,15 +175,23 @@ class Library {
       _$LibraryFromJson(json);
   Map<String, dynamic> toJson() => _$LibraryToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Quantity/duration.dart';
+
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/coding.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'encounter.g.dart';
 
@@ -169,23 +200,23 @@ class Encounter {
   String resourceType;
   List<Identifier> identifier;
   String status;
-  List<Encounter_StatusHistory> statusHistory;
+  List<EncounterStatusHistory> statusHistory;
   Coding clas;
-  List<Encounter_ClassHistory> classHistory;
+  List<EncounterClassHistory> classHistory;
   List<CodeableConcept> type;
   CodeableConcept priority;
   Reference subject;
   List<Reference> episodeOfCare;
   List<Reference> incomingReferral;
-  List<Encounter_Participant> participant;
+  List<EncounterParticipant> participant;
   Reference appointment;
   Period period;
   Duration length;
   List<CodeableConcept> reason;
-  List<Encounter_Diagnosis> diagnosis;
+  List<EncounterDiagnosis> diagnosis;
   List<Reference> account;
-  Encounter_Hospitalization hospitalization;
-  List<Encounter_Location> location;
+  EncounterHospitalization hospitalization;
+  List<EncounterLocation> location;
   Reference serviceProvider;
   Reference partOf;
 
@@ -220,67 +251,67 @@ class Encounter {
   Map<String, dynamic> toJson() => _$EncounterToJson(this);
 }
 
-class Encounter_StatusHistory {
+class EncounterStatusHistory {
   String status;
   Period period;
 
-  Encounter_StatusHistory({
+  EncounterStatusHistory({
     this.status,
     @required this.period,
   });
 
-  factory Encounter_StatusHistory.fromJson(Map<String, dynamic> json) =>
-      _$Encounter_StatusHistoryFromJson(json);
-  Map<String, dynamic> toJson() => _$Encounter_StatusHistoryToJson(this);
+  factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
+      _$EncounterStatusHistoryFromJson(json);
+  Map<String, dynamic> toJson() => _$EncounterStatusHistoryToJson(this);
 }
 
-class Encounter_ClassHistory {
+class EncounterClassHistory {
   Coding clas;
   Period period;
 
-  Encounter_ClassHistory({
+  EncounterClassHistory({
     @required this.clas,
     @required this.period,
   });
 
-  factory Encounter_ClassHistory.fromJson(Map<String, dynamic> json) =>
-      _$Encounter_ClassHistoryFromJson(json);
-  Map<String, dynamic> toJson() => _$Encounter_ClassHistoryToJson(this);
+  factory EncounterClassHistory.fromJson(Map<String, dynamic> json) =>
+      _$EncounterClassHistoryFromJson(json);
+  Map<String, dynamic> toJson() => _$EncounterClassHistoryToJson(this);
 }
 
-class Encounter_Participant {
+class EncounterParticipant {
   List<CodeableConcept> type;
   Period period;
   Reference individual;
 
-  Encounter_Participant({
+  EncounterParticipant({
     this.type,
     this.period,
     this.individual,
   });
 
-  factory Encounter_Participant.fromJson(Map<String, dynamic> json) =>
-      _$Encounter_ParticipantFromJson(json);
-  Map<String, dynamic> toJson() => _$Encounter_ParticipantToJson(this);
+  factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
+      _$EncounterParticipantFromJson(json);
+  Map<String, dynamic> toJson() => _$EncounterParticipantToJson(this);
 }
 
-class Encounter_Diagnosis {
+class EncounterDiagnosis {
   Reference condition;
   CodeableConcept role;
   double rank;
 
-  Encounter_Diagnosis({
+  EncounterDiagnosis({
     @required this.condition,
     this.role,
     this.rank,
   });
 
-  factory Encounter_Diagnosis.fromJson(Map<String, dynamic> json) =>
-      _$Encounter_DiagnosisFromJson(json);
-  Map<String, dynamic> toJson() => _$Encounter_DiagnosisToJson(this);
+  factory EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
+      _$EncounterDiagnosisFromJson(json);
+  Map<String, dynamic> toJson() => _$EncounterDiagnosisToJson(this);
 }
 
-class Encounter_Hospitalization {
+class EncounterHospitalization {
   Identifier preAdmissionIdentifier;
   Reference origin;
   CodeableConcept admitSource;
@@ -291,7 +322,7 @@ class Encounter_Hospitalization {
   Reference destination;
   CodeableConcept dischargeDisposition;
 
-  Encounter_Hospitalization({
+  EncounterHospitalization({
     this.preAdmissionIdentifier,
     this.origin,
     this.admitSource,
@@ -303,33 +334,39 @@ class Encounter_Hospitalization {
     this.dischargeDisposition,
   });
 
-  factory Encounter_Hospitalization.fromJson(Map<String, dynamic> json) =>
-      _$Encounter_HospitalizationFromJson(json);
-  Map<String, dynamic> toJson() => _$Encounter_HospitalizationToJson(this);
+  factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
+      _$EncounterHospitalizationFromJson(json);
+  Map<String, dynamic> toJson() => _$EncounterHospitalizationToJson(this);
 }
 
-class Encounter_Location {
+class EncounterLocation {
   Reference location;
   String status;
   Period period;
 
-  Encounter_Location({
+  EncounterLocation({
     @required this.location,
     this.status,
     this.period,
   });
 
-  factory Encounter_Location.fromJson(Map<String, dynamic> json) =>
-      _$Encounter_LocationFromJson(json);
-  Map<String, dynamic> toJson() => _$Encounter_LocationToJson(this);
+  factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
+      _$EncounterLocationFromJson(json);
+  Map<String, dynamic> toJson() => _$EncounterLocationToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'flag.g.dart';
 
@@ -361,13 +398,19 @@ class Flag {
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
   Map<String, dynamic> toJson() => _$FlagToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'episodeOfCare.g.dart';
 
@@ -376,9 +419,9 @@ class EpisodeOfCare {
   String resourceType;
   List<Identifier> identifier;
   String status;
-  List<EpisodeOfCare_StatusHistory> statusHistory;
+  List<EpisodeOfCareStatusHistory> statusHistory;
   List<CodeableConcept> type;
-  List<EpisodeOfCare_Diagnosis> diagnosis;
+  List<EpisodeOfCareDiagnosis> diagnosis;
   Reference patient;
   Reference managingOrganization;
   Period period;
@@ -409,32 +452,32 @@ class EpisodeOfCare {
   Map<String, dynamic> toJson() => _$EpisodeOfCareToJson(this);
 }
 
-class EpisodeOfCare_StatusHistory {
+class EpisodeOfCareStatusHistory {
   String status;
   Period period;
 
-  EpisodeOfCare_StatusHistory({
+  EpisodeOfCareStatusHistory({
     this.status,
     @required this.period,
   });
 
-  factory EpisodeOfCare_StatusHistory.fromJson(Map<String, dynamic> json) =>
-      _$EpisodeOfCare_StatusHistoryFromJson(json);
-  Map<String, dynamic> toJson() => _$EpisodeOfCare_StatusHistoryToJson(this);
+  factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
+      _$EpisodeOfCareStatusHistoryFromJson(json);
+  Map<String, dynamic> toJson() => _$EpisodeOfCareStatusHistoryToJson(this);
 }
 
-class EpisodeOfCare_Diagnosis {
+class EpisodeOfCareDiagnosis {
   Reference condition;
   CodeableConcept role;
   double rank;
 
-  EpisodeOfCare_Diagnosis({
+  EpisodeOfCareDiagnosis({
     @required this.condition,
     this.role,
     this.rank,
   });
 
-  factory EpisodeOfCare_Diagnosis.fromJson(Map<String, dynamic> json) =>
-      _$EpisodeOfCare_DiagnosisFromJson(json);
-  Map<String, dynamic> toJson() => _$EpisodeOfCare_DiagnosisToJson(this);
+  factory EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
+      _$EpisodeOfCareDiagnosisFromJson(json);
+  Map<String, dynamic> toJson() => _$EpisodeOfCareDiagnosisToJson(this);
 }

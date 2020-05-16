@@ -1,18 +1,28 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
-part 'public_health_and_research.freezed.dart';
-part 'public_health_and_research.g.dart';
+
+part 'publichealthandresearch.freezed.dart';
+
+part 'publichealthandresearch.g.dart';
 
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/period.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'researchSubject.g.dart';
 
@@ -45,15 +55,23 @@ class ResearchSubject {
       _$ResearchSubjectFromJson(json);
   Map<String, dynamic> toJson() => _$ResearchSubjectToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/annotation.dart';
+
 import '../Element/period.dart';
+
 import '../Element/relatedArtifact.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'researchStudy.g.dart';
 
@@ -79,7 +97,7 @@ class ResearchStudy {
   List<Reference> site;
   CodeableConcept reasonStopped;
   List<Annotation> note;
-  List<ResearchStudy_Arm> arm;
+  List<ResearchStudyArm> arm;
 
   ResearchStudy({
     this.id,
@@ -111,18 +129,18 @@ class ResearchStudy {
   Map<String, dynamic> toJson() => _$ResearchStudyToJson(this);
 }
 
-class ResearchStudy_Arm {
+class ResearchStudyArm {
   String name;
   CodeableConcept code;
   String description;
 
-  ResearchStudy_Arm({
+  ResearchStudyArm({
     this.name,
     this.code,
     this.description,
   });
 
-  factory ResearchStudy_Arm.fromJson(Map<String, dynamic> json) =>
-      _$ResearchStudy_ArmFromJson(json);
-  Map<String, dynamic> toJson() => _$ResearchStudy_ArmToJson(this);
+  factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
+      _$ResearchStudyArmFromJson(json);
+  Map<String, dynamic> toJson() => _$ResearchStudyArmToJson(this);
 }

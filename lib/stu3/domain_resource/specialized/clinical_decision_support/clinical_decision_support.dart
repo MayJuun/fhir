@@ -1,19 +1,31 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
-part 'clinical_decision_support.freezed.dart';
-part 'clinical_decision_support.g.dart';
 
-import 'package:json_annotation/json_annotation.dart';
+part 'clinicaldecisionsupport.freezed.dart';
+
+part 'clinicaldecisionsupport.g.dart';
+
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/dataRequirement.dart';
+
 import '../Element/annotation.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'guidanceResponse.g.dart';
 

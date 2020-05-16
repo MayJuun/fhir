@@ -1,25 +1,43 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
-part 'definitional_artifacts.freezed.dart';
-part 'definitional_artifacts.g.dart';
 
-import 'package:json_annotation/json_annotation.dart';
+part 'definitionalartifacts.freezed.dart';
+
+part 'definitionalartifacts.g.dart';
+
+
+
 
 import '../Element/dosage.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/range.dart';
+
 import '../Element/timing.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/relatedArtifact.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/contributor.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/period.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'activityDefinition.g.dart';
 
@@ -56,14 +74,14 @@ class ActivityDefinition {
   Period timingPeriod;
   Range timingRange;
   Reference location;
-  List<ActivityDefinition_Participant> participant;
+  List<ActivityDefinitionParticipant> participant;
   Reference productReference;
   CodeableConcept productCodeableConcept;
   Quantity quantity;
   List<Dosage> dosage;
   List<CodeableConcept> bodySite;
   Reference transform;
-  List<ActivityDefinition_DynamicValue> dynamicValue;
+  List<ActivityDefinitionDynamicValue> dynamicValue;
 
   ActivityDefinition({
     this.id,
@@ -113,49 +131,59 @@ class ActivityDefinition {
   Map<String, dynamic> toJson() => _$ActivityDefinitionToJson(this);
 }
 
-class ActivityDefinition_Participant {
+class ActivityDefinitionParticipant {
   String type;
   CodeableConcept role;
 
-  ActivityDefinition_Participant({
+  ActivityDefinitionParticipant({
     this.type,
     this.role,
   });
 
-  factory ActivityDefinition_Participant.fromJson(Map<String, dynamic> json) =>
-      _$ActivityDefinition_ParticipantFromJson(json);
-  Map<String, dynamic> toJson() => _$ActivityDefinition_ParticipantToJson(this);
+  factory ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
+      _$ActivityDefinitionParticipantFromJson(json);
+  Map<String, dynamic> toJson() => _$ActivityDefinitionParticipantToJson(this);
 }
 
-class ActivityDefinition_DynamicValue {
+class ActivityDefinitionDynamicValue {
   String description;
   String path;
   String language;
   String expression;
 
-  ActivityDefinition_DynamicValue({
+  ActivityDefinitionDynamicValue({
     this.description,
     this.path,
     this.language,
     this.expression,
   });
 
-  factory ActivityDefinition_DynamicValue.fromJson(Map<String, dynamic> json) =>
-      _$ActivityDefinition_DynamicValueFromJson(json);
+  factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
+      _$ActivityDefinitionDynamicValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$ActivityDefinition_DynamicValueToJson(this);
+      _$ActivityDefinitionDynamicValueToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/quantity.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/coding.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/period.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'questionnaire.g.dart';
 
@@ -182,7 +210,7 @@ class Questionnaire {
   String copyright;
   List<Coding> code;
   List<String> subjectType;
-  List<Questionnaire_Item> item;
+  List<QuestionnaireItem> item;
 
   Questionnaire({
     this.id,
@@ -215,20 +243,20 @@ class Questionnaire {
   Map<String, dynamic> toJson() => _$QuestionnaireToJson(this);
 }
 
-class Questionnaire_Item {
+class QuestionnaireItem {
   String linkId;
   String definition;
   List<Coding> code;
   String prefix;
   String text;
   String type;
-  List<Questionnaire_EnableWhen> enableWhen;
+  List<QuestionnaireEnableWhen> enableWhen;
   bool required;
   bool repeats;
   bool readOnly;
   double maxLength;
   Reference options;
-  List<Questionnaire_Option> option;
+  List<QuestionnaireOption> option;
   bool initialBoolean;
   double initialDecimal;
   int initialInteger;
@@ -241,9 +269,9 @@ class Questionnaire_Item {
   Coding initialCoding;
   Quantity initialQuantity;
   Reference initialReference;
-  List<Questionnaire_Item> item;
+  List<QuestionnaireItem> item;
 
-  Questionnaire_Item({
+  QuestionnaireItem({
     this.linkId,
     this.definition,
     this.code,
@@ -272,12 +300,12 @@ class Questionnaire_Item {
     this.item,
   });
 
-  factory Questionnaire_Item.fromJson(Map<String, dynamic> json) =>
-      _$Questionnaire_ItemFromJson(json);
-  Map<String, dynamic> toJson() => _$Questionnaire_ItemToJson(this);
+  factory QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireItemFromJson(json);
+  Map<String, dynamic> toJson() => _$QuestionnaireItemToJson(this);
 }
 
-class Questionnaire_EnableWhen {
+class QuestionnaireEnableWhen {
   String question;
   bool hasAnswer;
   bool answerBoolean;
@@ -293,7 +321,7 @@ class Questionnaire_EnableWhen {
   Quantity answerQuantity;
   Reference answerReference;
 
-  Questionnaire_EnableWhen({
+  QuestionnaireEnableWhen({
     this.question,
     this.hasAnswer,
     this.answerBoolean,
@@ -310,19 +338,19 @@ class Questionnaire_EnableWhen {
     this.answerReference,
   });
 
-  factory Questionnaire_EnableWhen.fromJson(Map<String, dynamic> json) =>
-      _$Questionnaire_EnableWhenFromJson(json);
-  Map<String, dynamic> toJson() => _$Questionnaire_EnableWhenToJson(this);
+  factory QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireEnableWhenFromJson(json);
+  Map<String, dynamic> toJson() => _$QuestionnaireEnableWhenToJson(this);
 }
 
-class Questionnaire_Option {
+class QuestionnaireOption {
   int valueInteger;
   DateTime valueDate;
   String valueTime;
   String valueString;
   Coding valueCoding;
 
-  Questionnaire_Option({
+  QuestionnaireOption({
     this.valueInteger,
     this.valueDate,
     this.valueTime,
@@ -330,23 +358,34 @@ class Questionnaire_Option {
     this.valueCoding,
   });
 
-  factory Questionnaire_Option.fromJson(Map<String, dynamic> json) =>
-      _$Questionnaire_OptionFromJson(json);
-  Map<String, dynamic> toJson() => _$Questionnaire_OptionToJson(this);
+  factory QuestionnaireOption.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireOptionFromJson(json);
+  Map<String, dynamic> toJson() => _$QuestionnaireOptionToJson(this);
 }
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/reference.dart';
+
 import '../Element/dataRequirement.dart';
+
 import '../Element/triggerDefinition.dart';
+
 import '../Element/relatedArtifact.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/contributor.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/period.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'serviceDefinition.g.dart';
 
@@ -413,24 +452,41 @@ class ServiceDefinition {
       _$ServiceDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$ServiceDefinitionToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/coding.dart';
+
 import '../Element/timing.dart';
+
 import '../Element/dataRequirement.dart';
+
 import '../Element/triggerDefinition.dart';
+
 import '../Quantity/duration.dart';
+
 import '../Element/range.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/relatedArtifact.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/contributor.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'planDefinition.g.dart';
 
@@ -461,8 +517,8 @@ class PlanDefinition {
   String copyright;
   List<RelatedArtifact> relatedArtifact;
   List<Reference> library;
-  List<PlanDefinition_Goal> goal;
-  List<PlanDefinition_Action> action;
+  List<PlanDefinitionGoal> goal;
+  List<PlanDefinitionAction> action;
 
   PlanDefinition({
     this.id,
@@ -500,16 +556,16 @@ class PlanDefinition {
   Map<String, dynamic> toJson() => _$PlanDefinitionToJson(this);
 }
 
-class PlanDefinition_Goal {
+class PlanDefinitionGoal {
   CodeableConcept category;
   CodeableConcept description;
   CodeableConcept priority;
   CodeableConcept start;
   List<CodeableConcept> addresses;
   List<RelatedArtifact> documentation;
-  List<PlanDefinition_Target> target;
+  List<PlanDefinitionTarget> target;
 
-  PlanDefinition_Goal({
+  PlanDefinitionGoal({
     this.category,
     @required this.description,
     this.priority,
@@ -519,19 +575,19 @@ class PlanDefinition_Goal {
     this.target,
   });
 
-  factory PlanDefinition_Goal.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinition_GoalFromJson(json);
-  Map<String, dynamic> toJson() => _$PlanDefinition_GoalToJson(this);
+  factory PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionGoalFromJson(json);
+  Map<String, dynamic> toJson() => _$PlanDefinitionGoalToJson(this);
 }
 
-class PlanDefinition_Target {
+class PlanDefinitionTarget {
   CodeableConcept measure;
   Quantity detailQuantity;
   Range detailRange;
   CodeableConcept detailCodeableConcept;
   Duration due;
 
-  PlanDefinition_Target({
+  PlanDefinitionTarget({
     this.measure,
     this.detailQuantity,
     this.detailRange,
@@ -539,12 +595,12 @@ class PlanDefinition_Target {
     this.due,
   });
 
-  factory PlanDefinition_Target.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinition_TargetFromJson(json);
-  Map<String, dynamic> toJson() => _$PlanDefinition_TargetToJson(this);
+  factory PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionTargetFromJson(json);
+  Map<String, dynamic> toJson() => _$PlanDefinitionTargetToJson(this);
 }
 
-class PlanDefinition_Action {
+class PlanDefinitionAction {
   String label;
   String title;
   String description;
@@ -554,16 +610,16 @@ class PlanDefinition_Action {
   List<RelatedArtifact> documentation;
   List<String> goalId;
   List<TriggerDefinition> triggerDefinition;
-  List<PlanDefinition_Condition> condition;
+  List<PlanDefinitionCondition> condition;
   List<DataRequirement> input;
   List<DataRequirement> output;
-  List<PlanDefinition_RelatedAction> relatedAction;
+  List<PlanDefinitionRelatedAction> relatedAction;
   DateTime timingDateTime;
   Period timingPeriod;
   Duration timingDuration;
   Range timingRange;
   Timing timingTiming;
-  List<PlanDefinition_Participant> participant;
+  List<PlanDefinitionParticipant> participant;
   Coding type;
   String groupingBehavior;
   String selectionBehavior;
@@ -572,10 +628,10 @@ class PlanDefinition_Action {
   String cardinalityBehavior;
   Reference definition;
   Reference transform;
-  List<PlanDefinition_DynamicValue> dynamicValue;
-  List<PlanDefinition_Action> action;
+  List<PlanDefinitionDynamicValue> dynamicValue;
+  List<PlanDefinitionAction> action;
 
-  PlanDefinition_Action({
+  PlanDefinitionAction({
     this.label,
     this.title,
     this.description,
@@ -607,75 +663,75 @@ class PlanDefinition_Action {
     this.action,
   });
 
-  factory PlanDefinition_Action.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinition_ActionFromJson(json);
-  Map<String, dynamic> toJson() => _$PlanDefinition_ActionToJson(this);
+  factory PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionActionFromJson(json);
+  Map<String, dynamic> toJson() => _$PlanDefinitionActionToJson(this);
 }
 
-class PlanDefinition_Condition {
+class PlanDefinitionCondition {
   String kind;
   String description;
   String language;
   String expression;
 
-  PlanDefinition_Condition({
+  PlanDefinitionCondition({
     this.kind,
     this.description,
     this.language,
     this.expression,
   });
 
-  factory PlanDefinition_Condition.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinition_ConditionFromJson(json);
-  Map<String, dynamic> toJson() => _$PlanDefinition_ConditionToJson(this);
+  factory PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionConditionFromJson(json);
+  Map<String, dynamic> toJson() => _$PlanDefinitionConditionToJson(this);
 }
 
-class PlanDefinition_RelatedAction {
+class PlanDefinitionRelatedAction {
   String actionId;
   String relationship;
   Duration offsetDuration;
   Range offsetRange;
 
-  PlanDefinition_RelatedAction({
+  PlanDefinitionRelatedAction({
     this.actionId,
     this.relationship,
     this.offsetDuration,
     this.offsetRange,
   });
 
-  factory PlanDefinition_RelatedAction.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinition_RelatedActionFromJson(json);
-  Map<String, dynamic> toJson() => _$PlanDefinition_RelatedActionToJson(this);
+  factory PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionRelatedActionFromJson(json);
+  Map<String, dynamic> toJson() => _$PlanDefinitionRelatedActionToJson(this);
 }
 
-class PlanDefinition_Participant {
+class PlanDefinitionParticipant {
   String type;
   CodeableConcept role;
 
-  PlanDefinition_Participant({
+  PlanDefinitionParticipant({
     this.type,
     this.role,
   });
 
-  factory PlanDefinition_Participant.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinition_ParticipantFromJson(json);
-  Map<String, dynamic> toJson() => _$PlanDefinition_ParticipantToJson(this);
+  factory PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionParticipantFromJson(json);
+  Map<String, dynamic> toJson() => _$PlanDefinitionParticipantToJson(this);
 }
 
-class PlanDefinition_DynamicValue {
+class PlanDefinitionDynamicValue {
   String description;
   String path;
   String language;
   String expression;
 
-  PlanDefinition_DynamicValue({
+  PlanDefinitionDynamicValue({
     this.description,
     this.path,
     this.language,
     this.expression,
   });
 
-  factory PlanDefinition_DynamicValue.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinition_DynamicValueFromJson(json);
-  Map<String, dynamic> toJson() => _$PlanDefinition_DynamicValueToJson(this);
+  factory PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionDynamicValueFromJson(json);
+  Map<String, dynamic> toJson() => _$PlanDefinitionDynamicValueToJson(this);
 }

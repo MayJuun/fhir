@@ -1,20 +1,32 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'payment.freezed.dart';
+
 part 'payment.g.dart';
 
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Quantity/money.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/period.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'paymentReconciliation.g.dart';
 
@@ -31,10 +43,10 @@ class PaymentReconciliation {
   String disposition;
   Reference requestProvider;
   Reference requestOrganization;
-  List<PaymentReconciliation_Detail> detail;
+  List<PaymentReconciliationDetail> detail;
   CodeableConcept form;
   Money total;
-  List<PaymentReconciliation_ProcessNote> processNote;
+  List<PaymentReconciliationProcessNote> processNote;
 
   PaymentReconciliation({
     this.id,
@@ -60,7 +72,7 @@ class PaymentReconciliation {
   Map<String, dynamic> toJson() => _$PaymentReconciliationToJson(this);
 }
 
-class PaymentReconciliation_Detail {
+class PaymentReconciliationDetail {
   CodeableConcept type;
   Reference request;
   Reference response;
@@ -69,7 +81,7 @@ class PaymentReconciliation_Detail {
   String date;
   Money amount;
 
-  PaymentReconciliation_Detail({
+  PaymentReconciliationDetail({
     @required this.type,
     this.request,
     this.response,
@@ -79,31 +91,35 @@ class PaymentReconciliation_Detail {
     this.amount,
   });
 
-  factory PaymentReconciliation_Detail.fromJson(Map<String, dynamic> json) =>
-      _$PaymentReconciliation_DetailFromJson(json);
-  Map<String, dynamic> toJson() => _$PaymentReconciliation_DetailToJson(this);
+  factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
+      _$PaymentReconciliationDetailFromJson(json);
+  Map<String, dynamic> toJson() => _$PaymentReconciliationDetailToJson(this);
 }
 
-class PaymentReconciliation_ProcessNote {
+class PaymentReconciliationProcessNote {
   CodeableConcept type;
   String text;
 
-  PaymentReconciliation_ProcessNote({
+  PaymentReconciliationProcessNote({
     this.type,
     this.text,
   });
 
-  factory PaymentReconciliation_ProcessNote.fromJson(
+  factory PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>
-      _$PaymentReconciliation_ProcessNoteFromJson(json);
+      _$PaymentReconciliationProcessNoteFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$PaymentReconciliation_ProcessNoteToJson(this);
+      _$PaymentReconciliationProcessNoteToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'paymentNotice.g.dart';
 

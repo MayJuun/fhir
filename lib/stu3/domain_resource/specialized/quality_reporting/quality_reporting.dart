@@ -1,18 +1,29 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
-part 'quality_reporting.freezed.dart';
-part 'quality_reporting.g.dart';
 
-import 'package:json_annotation/json_annotation.dart';
+part 'qualityreporting.freezed.dart';
+
+part 'qualityreporting.g.dart';
+
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'measureReport.g.dart';
 
@@ -27,7 +38,7 @@ class MeasureReport {
   String date;
   Reference reportingOrganization;
   Period period;
-  List<MeasureReport_Group> group;
+  List<MeasureReportGroup> group;
   Reference evaluatedResources;
 
   MeasureReport({
@@ -50,101 +61,111 @@ class MeasureReport {
   Map<String, dynamic> toJson() => _$MeasureReportToJson(this);
 }
 
-class MeasureReport_Group {
+class MeasureReportGroup {
   Identifier identifier;
-  List<MeasureReport_Population> population;
+  List<MeasureReportPopulation> population;
   double measureScore;
-  List<MeasureReport_Stratifier> stratifier;
+  List<MeasureReportStratifier> stratifier;
 
-  MeasureReport_Group({
+  MeasureReportGroup({
     @required this.identifier,
     this.population,
     this.measureScore,
     this.stratifier,
   });
 
-  factory MeasureReport_Group.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReport_GroupFromJson(json);
-  Map<String, dynamic> toJson() => _$MeasureReport_GroupToJson(this);
+  factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportGroupFromJson(json);
+  Map<String, dynamic> toJson() => _$MeasureReportGroupToJson(this);
 }
 
-class MeasureReport_Population {
+class MeasureReportPopulation {
   Identifier identifier;
   CodeableConcept code;
   double count;
   Reference patients;
 
-  MeasureReport_Population({
+  MeasureReportPopulation({
     this.identifier,
     this.code,
     this.count,
     this.patients,
   });
 
-  factory MeasureReport_Population.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReport_PopulationFromJson(json);
-  Map<String, dynamic> toJson() => _$MeasureReport_PopulationToJson(this);
+  factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportPopulationFromJson(json);
+  Map<String, dynamic> toJson() => _$MeasureReportPopulationToJson(this);
 }
 
-class MeasureReport_Stratifier {
+class MeasureReportStratifier {
   Identifier identifier;
-  List<MeasureReport_Stratum> stratum;
+  List<MeasureReportStratum> stratum;
 
-  MeasureReport_Stratifier({
+  MeasureReportStratifier({
     this.identifier,
     this.stratum,
   });
 
-  factory MeasureReport_Stratifier.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReport_StratifierFromJson(json);
-  Map<String, dynamic> toJson() => _$MeasureReport_StratifierToJson(this);
+  factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportStratifierFromJson(json);
+  Map<String, dynamic> toJson() => _$MeasureReportStratifierToJson(this);
 }
 
-class MeasureReport_Stratum {
+class MeasureReportStratum {
   String value;
-  List<MeasureReport_Population1> population;
+  List<MeasureReportPopulation1> population;
   double measureScore;
 
-  MeasureReport_Stratum({
+  MeasureReportStratum({
     this.value,
     this.population,
     this.measureScore,
   });
 
-  factory MeasureReport_Stratum.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReport_StratumFromJson(json);
-  Map<String, dynamic> toJson() => _$MeasureReport_StratumToJson(this);
+  factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportStratumFromJson(json);
+  Map<String, dynamic> toJson() => _$MeasureReportStratumToJson(this);
 }
 
-class MeasureReport_Population1 {
+class MeasureReportPopulation1 {
   Identifier identifier;
   CodeableConcept code;
   double count;
   Reference patients;
 
-  MeasureReport_Population1({
+  MeasureReportPopulation1({
     this.identifier,
     this.code,
     this.count,
     this.patients,
   });
 
-  factory MeasureReport_Population1.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReport_Population1FromJson(json);
-  Map<String, dynamic> toJson() => _$MeasureReport_Population1ToJson(this);
+  factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportPopulation1FromJson(json);
+  Map<String, dynamic> toJson() => _$MeasureReportPopulation1ToJson(this);
 }
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/relatedArtifact.dart';
+
 import '../Element/contactDetail.dart';
+
 import '../Element/contributor.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/usageContext.dart';
+
 import '../Element/period.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'measure.g.dart';
 
@@ -186,8 +207,8 @@ class Measure {
   List<String> definition;
   String guidance;
   String set;
-  List<Measure_Group> group;
-  List<Measure_SupplementalData> supplementalData;
+  List<MeasureGroup> group;
+  List<MeasureSupplementalData> supplementalData;
 
   Measure({
     this.id,
@@ -236,14 +257,14 @@ class Measure {
   Map<String, dynamic> toJson() => _$MeasureToJson(this);
 }
 
-class Measure_Group {
+class MeasureGroup {
   Identifier identifier;
   String name;
   String description;
-  List<Measure_Population> population;
-  List<Measure_Stratifier> stratifier;
+  List<MeasurePopulation> population;
+  List<MeasureStratifier> stratifier;
 
-  Measure_Group({
+  MeasureGroup({
     @required this.identifier,
     this.name,
     this.description,
@@ -251,19 +272,19 @@ class Measure_Group {
     this.stratifier,
   });
 
-  factory Measure_Group.fromJson(Map<String, dynamic> json) =>
-      _$Measure_GroupFromJson(json);
-  Map<String, dynamic> toJson() => _$Measure_GroupToJson(this);
+  factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
+      _$MeasureGroupFromJson(json);
+  Map<String, dynamic> toJson() => _$MeasureGroupToJson(this);
 }
 
-class Measure_Population {
+class MeasurePopulation {
   Identifier identifier;
   CodeableConcept code;
   String name;
   String description;
   String criteria;
 
-  Measure_Population({
+  MeasurePopulation({
     this.identifier,
     this.code,
     this.name,
@@ -271,41 +292,41 @@ class Measure_Population {
     this.criteria,
   });
 
-  factory Measure_Population.fromJson(Map<String, dynamic> json) =>
-      _$Measure_PopulationFromJson(json);
-  Map<String, dynamic> toJson() => _$Measure_PopulationToJson(this);
+  factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
+      _$MeasurePopulationFromJson(json);
+  Map<String, dynamic> toJson() => _$MeasurePopulationToJson(this);
 }
 
-class Measure_Stratifier {
+class MeasureStratifier {
   Identifier identifier;
   String criteria;
   String path;
 
-  Measure_Stratifier({
+  MeasureStratifier({
     this.identifier,
     this.criteria,
     this.path,
   });
 
-  factory Measure_Stratifier.fromJson(Map<String, dynamic> json) =>
-      _$Measure_StratifierFromJson(json);
-  Map<String, dynamic> toJson() => _$Measure_StratifierToJson(this);
+  factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
+      _$MeasureStratifierFromJson(json);
+  Map<String, dynamic> toJson() => _$MeasureStratifierToJson(this);
 }
 
-class Measure_SupplementalData {
+class MeasureSupplementalData {
   Identifier identifier;
   List<CodeableConcept> usage;
   String criteria;
   String path;
 
-  Measure_SupplementalData({
+  MeasureSupplementalData({
     this.identifier,
     this.usage,
     this.criteria,
     this.path,
   });
 
-  factory Measure_SupplementalData.fromJson(Map<String, dynamic> json) =>
-      _$Measure_SupplementalDataFromJson(json);
-  Map<String, dynamic> toJson() => _$Measure_SupplementalDataToJson(this);
+  factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
+      _$MeasureSupplementalDataFromJson(json);
+  Map<String, dynamic> toJson() => _$MeasureSupplementalDataToJson(this);
 }

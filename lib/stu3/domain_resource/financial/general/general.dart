@@ -1,23 +1,39 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'general.freezed.dart';
+
 part 'general.g.dart';
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Quantity/money.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/signature.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/coding.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/period.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'contract.g.dart';
 
@@ -39,15 +55,15 @@ class Contract {
   CodeableConcept decisionType;
   CodeableConcept contentDerivative;
   List<Coding> securityLabel;
-  List<Contract_Agent> agent;
-  List<Contract_Signer> signer;
-  List<Contract_ValuedItem> valuedItem;
-  List<Contract_Term> term;
+  List<ContractAgent> agent;
+  List<ContractSigner> signer;
+  List<ContractValuedItem> valuedItem;
+  List<ContractTerm> term;
   Attachment bindingAttachment;
   Reference bindingReference;
-  List<Contract_Friendly> friendly;
-  List<Contract_Legal> legal;
-  List<Contract_Rule> rule;
+  List<ContractFriendly> friendly;
+  List<ContractLegal> legal;
+  List<ContractRule> rule;
 
   Contract({
     this.id,
@@ -83,37 +99,37 @@ class Contract {
   Map<String, dynamic> toJson() => _$ContractToJson(this);
 }
 
-class Contract_Agent {
+class ContractAgent {
   Reference actor;
   List<CodeableConcept> role;
 
-  Contract_Agent({
+  ContractAgent({
     @required this.actor,
     this.role,
   });
 
-  factory Contract_Agent.fromJson(Map<String, dynamic> json) =>
-      _$Contract_AgentFromJson(json);
-  Map<String, dynamic> toJson() => _$Contract_AgentToJson(this);
+  factory ContractAgent.fromJson(Map<String, dynamic> json) =>
+      _$ContractAgentFromJson(json);
+  Map<String, dynamic> toJson() => _$ContractAgentToJson(this);
 }
 
-class Contract_Signer {
+class ContractSigner {
   Coding type;
   Reference party;
   List<Signature> signature;
 
-  Contract_Signer({
+  ContractSigner({
     @required this.type,
     @required this.party,
     @required this.signature,
   });
 
-  factory Contract_Signer.fromJson(Map<String, dynamic> json) =>
-      _$Contract_SignerFromJson(json);
-  Map<String, dynamic> toJson() => _$Contract_SignerToJson(this);
+  factory ContractSigner.fromJson(Map<String, dynamic> json) =>
+      _$ContractSignerFromJson(json);
+  Map<String, dynamic> toJson() => _$ContractSignerToJson(this);
 }
 
-class Contract_ValuedItem {
+class ContractValuedItem {
   CodeableConcept entityCodeableConcept;
   Reference entityReference;
   Identifier identifier;
@@ -124,7 +140,7 @@ class Contract_ValuedItem {
   double points;
   Money net;
 
-  Contract_ValuedItem({
+  ContractValuedItem({
     this.entityCodeableConcept,
     this.entityReference,
     this.identifier,
@@ -136,12 +152,12 @@ class Contract_ValuedItem {
     this.net,
   });
 
-  factory Contract_ValuedItem.fromJson(Map<String, dynamic> json) =>
-      _$Contract_ValuedItemFromJson(json);
-  Map<String, dynamic> toJson() => _$Contract_ValuedItemToJson(this);
+  factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
+      _$ContractValuedItemFromJson(json);
+  Map<String, dynamic> toJson() => _$ContractValuedItemToJson(this);
 }
 
-class Contract_Term {
+class ContractTerm {
   Identifier identifier;
   String issued;
   Period applies;
@@ -151,12 +167,12 @@ class Contract_Term {
   List<CodeableConcept> action;
   List<CodeableConcept> actionReason;
   List<Coding> securityLabel;
-  List<Contract_Agent1> agent;
+  List<ContractAgent1> agent;
   String text;
-  List<Contract_ValuedItem1> valuedItem;
-  List<Contract_Term> group;
+  List<ContractValuedItem1> valuedItem;
+  List<ContractTerm> group;
 
-  Contract_Term({
+  ContractTerm({
     this.identifier,
     this.issued,
     this.applies,
@@ -172,26 +188,26 @@ class Contract_Term {
     this.group,
   });
 
-  factory Contract_Term.fromJson(Map<String, dynamic> json) =>
-      _$Contract_TermFromJson(json);
-  Map<String, dynamic> toJson() => _$Contract_TermToJson(this);
+  factory ContractTerm.fromJson(Map<String, dynamic> json) =>
+      _$ContractTermFromJson(json);
+  Map<String, dynamic> toJson() => _$ContractTermToJson(this);
 }
 
-class Contract_Agent1 {
+class ContractAgent1 {
   Reference actor;
   List<CodeableConcept> role;
 
-  Contract_Agent1({
+  ContractAgent1({
     @required this.actor,
     this.role,
   });
 
-  factory Contract_Agent1.fromJson(Map<String, dynamic> json) =>
-      _$Contract_Agent1FromJson(json);
-  Map<String, dynamic> toJson() => _$Contract_Agent1ToJson(this);
+  factory ContractAgent1.fromJson(Map<String, dynamic> json) =>
+      _$ContractAgent1FromJson(json);
+  Map<String, dynamic> toJson() => _$ContractAgent1ToJson(this);
 }
 
-class Contract_ValuedItem1 {
+class ContractValuedItem1 {
   CodeableConcept entityCodeableConcept;
   Reference entityReference;
   Identifier identifier;
@@ -202,7 +218,7 @@ class Contract_ValuedItem1 {
   double points;
   Money net;
 
-  Contract_ValuedItem1({
+  ContractValuedItem1({
     this.entityCodeableConcept,
     this.entityReference,
     this.identifier,
@@ -214,60 +230,67 @@ class Contract_ValuedItem1 {
     this.net,
   });
 
-  factory Contract_ValuedItem1.fromJson(Map<String, dynamic> json) =>
-      _$Contract_ValuedItem1FromJson(json);
-  Map<String, dynamic> toJson() => _$Contract_ValuedItem1ToJson(this);
+  factory ContractValuedItem1.fromJson(Map<String, dynamic> json) =>
+      _$ContractValuedItem1FromJson(json);
+  Map<String, dynamic> toJson() => _$ContractValuedItem1ToJson(this);
 }
 
-class Contract_Friendly {
+class ContractFriendly {
   Attachment contentAttachment;
   Reference contentReference;
 
-  Contract_Friendly({
+  ContractFriendly({
     this.contentAttachment,
     this.contentReference,
   });
 
-  factory Contract_Friendly.fromJson(Map<String, dynamic> json) =>
-      _$Contract_FriendlyFromJson(json);
-  Map<String, dynamic> toJson() => _$Contract_FriendlyToJson(this);
+  factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
+      _$ContractFriendlyFromJson(json);
+  Map<String, dynamic> toJson() => _$ContractFriendlyToJson(this);
 }
 
-class Contract_Legal {
+class ContractLegal {
   Attachment contentAttachment;
   Reference contentReference;
 
-  Contract_Legal({
+  ContractLegal({
     this.contentAttachment,
     this.contentReference,
   });
 
-  factory Contract_Legal.fromJson(Map<String, dynamic> json) =>
-      _$Contract_LegalFromJson(json);
-  Map<String, dynamic> toJson() => _$Contract_LegalToJson(this);
+  factory ContractLegal.fromJson(Map<String, dynamic> json) =>
+      _$ContractLegalFromJson(json);
+  Map<String, dynamic> toJson() => _$ContractLegalToJson(this);
 }
 
-class Contract_Rule {
+class ContractRule {
   Attachment contentAttachment;
   Reference contentReference;
 
-  Contract_Rule({
+  ContractRule({
     this.contentAttachment,
     this.contentReference,
   });
 
-  factory Contract_Rule.fromJson(Map<String, dynamic> json) =>
-      _$Contract_RuleFromJson(json);
-  Map<String, dynamic> toJson() => _$Contract_RuleToJson(this);
+  factory ContractRule.fromJson(Map<String, dynamic> json) =>
+      _$ContractRuleFromJson(json);
+  Map<String, dynamic> toJson() => _$ContractRuleToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Quantity/money.dart';
+
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'account.g.dart';
 
@@ -282,10 +305,10 @@ class Account {
   Period period;
   Period active;
   Money balance;
-  List<Account_Coverage> coverage;
+  List<AccountCoverage> coverage;
   Reference owner;
   String description;
-  List<Account_Guarantor> guarantor;
+  List<AccountGuarantor> guarantor;
 
   Account({
     this.id,
@@ -309,46 +332,56 @@ class Account {
   Map<String, dynamic> toJson() => _$AccountToJson(this);
 }
 
-class Account_Coverage {
+class AccountCoverage {
   Reference coverage;
   double priority;
 
-  Account_Coverage({
+  AccountCoverage({
     @required this.coverage,
     this.priority,
   });
 
-  factory Account_Coverage.fromJson(Map<String, dynamic> json) =>
-      _$Account_CoverageFromJson(json);
-  Map<String, dynamic> toJson() => _$Account_CoverageToJson(this);
+  factory AccountCoverage.fromJson(Map<String, dynamic> json) =>
+      _$AccountCoverageFromJson(json);
+  Map<String, dynamic> toJson() => _$AccountCoverageToJson(this);
 }
 
-class Account_Guarantor {
+class AccountGuarantor {
   Reference party;
   bool onHold;
   Period period;
 
-  Account_Guarantor({
+  AccountGuarantor({
     @required this.party,
     this.onHold,
     this.period,
   });
 
-  factory Account_Guarantor.fromJson(Map<String, dynamic> json) =>
-      _$Account_GuarantorFromJson(json);
-  Map<String, dynamic> toJson() => _$Account_GuarantorToJson(this);
+  factory AccountGuarantor.fromJson(Map<String, dynamic> json) =>
+      _$AccountGuarantorFromJson(json);
+  Map<String, dynamic> toJson() => _$AccountGuarantorToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/annotation.dart';
+
 import '../Quantity/money.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/timing.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'chargeItem.g.dart';
 
@@ -365,7 +398,7 @@ class ChargeItem {
   DateTime occurrenceDateTime;
   Period occurrencePeriod;
   Timing occurrenceTiming;
-  List<ChargeItem_Participant> participant;
+  List<ChargeItemParticipant> participant;
   Reference performingOrganization;
   Reference requestingOrganization;
   Quantity quantity;
@@ -416,32 +449,43 @@ class ChargeItem {
   Map<String, dynamic> toJson() => _$ChargeItemToJson(this);
 }
 
-class ChargeItem_Participant {
+class ChargeItemParticipant {
   CodeableConcept role;
   Reference actor;
 
-  ChargeItem_Participant({
+  ChargeItemParticipant({
     this.role,
     @required this.actor,
   });
 
-  factory ChargeItem_Participant.fromJson(Map<String, dynamic> json) =>
-      _$ChargeItem_ParticipantFromJson(json);
-  Map<String, dynamic> toJson() => _$ChargeItem_ParticipantToJson(this);
+  factory ChargeItemParticipant.fromJson(Map<String, dynamic> json) =>
+      _$ChargeItemParticipantFromJson(json);
+  Map<String, dynamic> toJson() => _$ChargeItemParticipantToJson(this);
 }
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/address.dart';
+
 import '../Element/coding.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/quantity.dart';
+
 import '../Quantity/money.dart';
+
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'explanationOfBenefit.g.dart';
 
@@ -465,28 +509,28 @@ class ExplanationOfBenefit {
   Reference claimResponse;
   CodeableConcept outcome;
   String disposition;
-  List<ExplanationOfBenefit_Related> related;
+  List<ExplanationOfBenefitRelated> related;
   Reference prescription;
   Reference originalPrescription;
-  ExplanationOfBenefit_Payee payee;
-  List<ExplanationOfBenefit_Information> information;
-  List<ExplanationOfBenefit_CareTeam> careTeam;
-  List<ExplanationOfBenefit_Diagnosis> diagnosis;
-  List<ExplanationOfBenefit_Procedure> procedure;
+  ExplanationOfBenefitPayee payee;
+  List<ExplanationOfBenefitInformation> information;
+  List<ExplanationOfBenefitCareTeam> careTeam;
+  List<ExplanationOfBenefitDiagnosis> diagnosis;
+  List<ExplanationOfBenefitProcedure> procedure;
   double precedence;
-  ExplanationOfBenefit_Insurance insurance;
-  ExplanationOfBenefit_Accident accident;
+  ExplanationOfBenefitInsurance insurance;
+  ExplanationOfBenefitAccident accident;
   Period employmentImpacted;
   Period hospitalization;
-  List<ExplanationOfBenefit_Item> item;
-  List<ExplanationOfBenefit_AddItem> addItem;
+  List<ExplanationOfBenefitItem> item;
+  List<ExplanationOfBenefitAddItem> addItem;
   Money totalCost;
   Money unallocDeductable;
   Money totalBenefit;
-  ExplanationOfBenefit_Payment payment;
+  ExplanationOfBenefitPayment payment;
   CodeableConcept form;
-  List<ExplanationOfBenefit_ProcessNote> processNote;
-  List<ExplanationOfBenefit_BenefitBalance> benefitBalance;
+  List<ExplanationOfBenefitProcessNote> processNote;
+  List<ExplanationOfBenefitBenefitBalance> benefitBalance;
 
   ExplanationOfBenefit({
     this.id,
@@ -537,39 +581,39 @@ class ExplanationOfBenefit {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitToJson(this);
 }
 
-class ExplanationOfBenefit_Related {
+class ExplanationOfBenefitRelated {
   Reference claim;
   CodeableConcept relationship;
   Identifier reference;
 
-  ExplanationOfBenefit_Related({
+  ExplanationOfBenefitRelated({
     this.claim,
     this.relationship,
     this.reference,
   });
 
-  factory ExplanationOfBenefit_Related.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_RelatedFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_RelatedToJson(this);
+  factory ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitRelatedFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitRelatedToJson(this);
 }
 
-class ExplanationOfBenefit_Payee {
+class ExplanationOfBenefitPayee {
   CodeableConcept type;
   String resourceType;
   Reference party;
 
-  ExplanationOfBenefit_Payee({
+  ExplanationOfBenefitPayee({
     this.type,
-    this.resourceType = 'ExplanationOfBenefit_Payee',
+    this.resourceType = 'ExplanationOfBenefitPayee',
     this.party,
   });
 
-  factory ExplanationOfBenefit_Payee.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_PayeeFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_PayeeToJson(this);
+  factory ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitPayeeFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitPayeeToJson(this);
 }
 
-class ExplanationOfBenefit_Information {
+class ExplanationOfBenefitInformation {
   double sequence;
   CodeableConcept category;
   CodeableConcept code;
@@ -581,7 +625,7 @@ class ExplanationOfBenefit_Information {
   Reference valueReference;
   Coding reason;
 
-  ExplanationOfBenefit_Information({
+  ExplanationOfBenefitInformation({
     this.sequence,
     @required this.category,
     this.code,
@@ -594,21 +638,21 @@ class ExplanationOfBenefit_Information {
     this.reason,
   });
 
-  factory ExplanationOfBenefit_Information.fromJson(
+  factory ExplanationOfBenefitInformation.fromJson(
           Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_InformationFromJson(json);
+      _$ExplanationOfBenefitInformationFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$ExplanationOfBenefit_InformationToJson(this);
+      _$ExplanationOfBenefitInformationToJson(this);
 }
 
-class ExplanationOfBenefit_CareTeam {
+class ExplanationOfBenefitCareTeam {
   double sequence;
   Reference provider;
   bool responsible;
   CodeableConcept role;
   CodeableConcept qualification;
 
-  ExplanationOfBenefit_CareTeam({
+  ExplanationOfBenefitCareTeam({
     this.sequence,
     @required this.provider,
     this.responsible,
@@ -616,19 +660,19 @@ class ExplanationOfBenefit_CareTeam {
     this.qualification,
   });
 
-  factory ExplanationOfBenefit_CareTeam.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_CareTeamFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_CareTeamToJson(this);
+  factory ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitCareTeamFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitCareTeamToJson(this);
 }
 
-class ExplanationOfBenefit_Diagnosis {
+class ExplanationOfBenefitDiagnosis {
   double sequence;
   CodeableConcept diagnosisCodeableConcept;
   Reference diagnosisReference;
   List<CodeableConcept> type;
   CodeableConcept packageCode;
 
-  ExplanationOfBenefit_Diagnosis({
+  ExplanationOfBenefitDiagnosis({
     this.sequence,
     this.diagnosisCodeableConcept,
     this.diagnosisReference,
@@ -636,62 +680,62 @@ class ExplanationOfBenefit_Diagnosis {
     this.packageCode,
   });
 
-  factory ExplanationOfBenefit_Diagnosis.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_DiagnosisFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_DiagnosisToJson(this);
+  factory ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitDiagnosisFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitDiagnosisToJson(this);
 }
 
-class ExplanationOfBenefit_Procedure {
+class ExplanationOfBenefitProcedure {
   double sequence;
   String date;
   CodeableConcept procedureCodeableConcept;
   Reference procedureReference;
 
-  ExplanationOfBenefit_Procedure({
+  ExplanationOfBenefitProcedure({
     this.sequence,
     this.date,
     this.procedureCodeableConcept,
     this.procedureReference,
   });
 
-  factory ExplanationOfBenefit_Procedure.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_ProcedureFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_ProcedureToJson(this);
+  factory ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitProcedureFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitProcedureToJson(this);
 }
 
-class ExplanationOfBenefit_Insurance {
+class ExplanationOfBenefitInsurance {
   Reference coverage;
   List<String> preAuthRef;
 
-  ExplanationOfBenefit_Insurance({
+  ExplanationOfBenefitInsurance({
     this.coverage,
     this.preAuthRef,
   });
 
-  factory ExplanationOfBenefit_Insurance.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_InsuranceFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_InsuranceToJson(this);
+  factory ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitInsuranceFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitInsuranceToJson(this);
 }
 
-class ExplanationOfBenefit_Accident {
+class ExplanationOfBenefitAccident {
   String date;
   CodeableConcept type;
   Address locationAddress;
   Reference locationReference;
 
-  ExplanationOfBenefit_Accident({
+  ExplanationOfBenefitAccident({
     this.date,
     this.type,
     this.locationAddress,
     this.locationReference,
   });
 
-  factory ExplanationOfBenefit_Accident.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_AccidentFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_AccidentToJson(this);
+  factory ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitAccidentFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitAccidentToJson(this);
 }
 
-class ExplanationOfBenefit_Item {
+class ExplanationOfBenefitItem {
   double sequence;
   List<String> careTeamLinkId;
   List<String> diagnosisLinkId;
@@ -716,10 +760,10 @@ class ExplanationOfBenefit_Item {
   List<CodeableConcept> subSite;
   List<Reference> encounter;
   List<String> noteNumber;
-  List<ExplanationOfBenefit_Adjudication> adjudication;
-  List<ExplanationOfBenefit_Detail> detail;
+  List<ExplanationOfBenefitAdjudication> adjudication;
+  List<ExplanationOfBenefitDetail> detail;
 
-  ExplanationOfBenefit_Item({
+  ExplanationOfBenefitItem({
     this.sequence,
     this.careTeamLinkId,
     this.diagnosisLinkId,
@@ -748,32 +792,32 @@ class ExplanationOfBenefit_Item {
     this.detail,
   });
 
-  factory ExplanationOfBenefit_Item.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_ItemFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_ItemToJson(this);
+  factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitItemFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitItemToJson(this);
 }
 
-class ExplanationOfBenefit_Adjudication {
+class ExplanationOfBenefitAdjudication {
   CodeableConcept category;
   CodeableConcept reason;
   Money amount;
   double value;
 
-  ExplanationOfBenefit_Adjudication({
+  ExplanationOfBenefitAdjudication({
     @required this.category,
     this.reason,
     this.amount,
     this.value,
   });
 
-  factory ExplanationOfBenefit_Adjudication.fromJson(
+  factory ExplanationOfBenefitAdjudication.fromJson(
           Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_AdjudicationFromJson(json);
+      _$ExplanationOfBenefitAdjudicationFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$ExplanationOfBenefit_AdjudicationToJson(this);
+      _$ExplanationOfBenefitAdjudicationToJson(this);
 }
 
-class ExplanationOfBenefit_Detail {
+class ExplanationOfBenefitDetail {
   double sequence;
   CodeableConcept type;
   CodeableConcept revenue;
@@ -787,10 +831,10 @@ class ExplanationOfBenefit_Detail {
   Money net;
   List<Reference> udi;
   List<String> noteNumber;
-  List<ExplanationOfBenefit_Adjudication> adjudication;
-  List<ExplanationOfBenefit_SubDetail> subDetail;
+  List<ExplanationOfBenefitAdjudication> adjudication;
+  List<ExplanationOfBenefitSubDetail> subDetail;
 
-  ExplanationOfBenefit_Detail({
+  ExplanationOfBenefitDetail({
     this.sequence,
     @required this.type,
     this.revenue,
@@ -808,12 +852,12 @@ class ExplanationOfBenefit_Detail {
     this.subDetail,
   });
 
-  factory ExplanationOfBenefit_Detail.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_DetailFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_DetailToJson(this);
+  factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitDetailFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitDetailToJson(this);
 }
 
-class ExplanationOfBenefit_SubDetail {
+class ExplanationOfBenefitSubDetail {
   double sequence;
   CodeableConcept type;
   CodeableConcept revenue;
@@ -827,9 +871,9 @@ class ExplanationOfBenefit_SubDetail {
   Money net;
   List<Reference> udi;
   List<String> noteNumber;
-  List<ExplanationOfBenefit_Adjudication> adjudication;
+  List<ExplanationOfBenefitAdjudication> adjudication;
 
-  ExplanationOfBenefit_SubDetail({
+  ExplanationOfBenefitSubDetail({
     this.sequence,
     @required this.type,
     this.revenue,
@@ -846,12 +890,12 @@ class ExplanationOfBenefit_SubDetail {
     this.adjudication,
   });
 
-  factory ExplanationOfBenefit_SubDetail.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_SubDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_SubDetailToJson(this);
+  factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitSubDetailFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitSubDetailToJson(this);
 }
 
-class ExplanationOfBenefit_AddItem {
+class ExplanationOfBenefitAddItem {
   List<String> sequenceLinkId;
   CodeableConcept revenue;
   CodeableConcept category;
@@ -859,10 +903,10 @@ class ExplanationOfBenefit_AddItem {
   List<CodeableConcept> modifier;
   Money fee;
   List<String> noteNumber;
-  List<ExplanationOfBenefit_Adjudication> adjudication;
-  List<ExplanationOfBenefit_Detail1> detail;
+  List<ExplanationOfBenefitAdjudication> adjudication;
+  List<ExplanationOfBenefitDetail1> detail;
 
-  ExplanationOfBenefit_AddItem({
+  ExplanationOfBenefitAddItem({
     this.sequenceLinkId,
     this.revenue,
     this.category,
@@ -874,21 +918,21 @@ class ExplanationOfBenefit_AddItem {
     this.detail,
   });
 
-  factory ExplanationOfBenefit_AddItem.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_AddItemFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_AddItemToJson(this);
+  factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitAddItemFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitAddItemToJson(this);
 }
 
-class ExplanationOfBenefit_Detail1 {
+class ExplanationOfBenefitDetail1 {
   CodeableConcept revenue;
   CodeableConcept category;
   CodeableConcept service;
   List<CodeableConcept> modifier;
   Money fee;
   List<String> noteNumber;
-  List<ExplanationOfBenefit_Adjudication> adjudication;
+  List<ExplanationOfBenefitAdjudication> adjudication;
 
-  ExplanationOfBenefit_Detail1({
+  ExplanationOfBenefitDetail1({
     this.revenue,
     this.category,
     this.service,
@@ -898,12 +942,12 @@ class ExplanationOfBenefit_Detail1 {
     this.adjudication,
   });
 
-  factory ExplanationOfBenefit_Detail1.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_Detail1FromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_Detail1ToJson(this);
+  factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitDetail1FromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitDetail1ToJson(this);
 }
 
-class ExplanationOfBenefit_Payment {
+class ExplanationOfBenefitPayment {
   CodeableConcept type;
   Money adjustment;
   CodeableConcept adjustmentReason;
@@ -911,7 +955,7 @@ class ExplanationOfBenefit_Payment {
   Money amount;
   Identifier identifier;
 
-  ExplanationOfBenefit_Payment({
+  ExplanationOfBenefitPayment({
     this.type,
     this.adjustment,
     this.adjustmentReason,
@@ -920,32 +964,32 @@ class ExplanationOfBenefit_Payment {
     this.identifier,
   });
 
-  factory ExplanationOfBenefit_Payment.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_PaymentFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_PaymentToJson(this);
+  factory ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitPaymentFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitPaymentToJson(this);
 }
 
-class ExplanationOfBenefit_ProcessNote {
+class ExplanationOfBenefitProcessNote {
   double number;
   CodeableConcept type;
   String text;
   CodeableConcept language;
 
-  ExplanationOfBenefit_ProcessNote({
+  ExplanationOfBenefitProcessNote({
     this.number,
     this.type,
     this.text,
     this.language,
   });
 
-  factory ExplanationOfBenefit_ProcessNote.fromJson(
+  factory ExplanationOfBenefitProcessNote.fromJson(
           Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_ProcessNoteFromJson(json);
+      _$ExplanationOfBenefitProcessNoteFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$ExplanationOfBenefit_ProcessNoteToJson(this);
+      _$ExplanationOfBenefitProcessNoteToJson(this);
 }
 
-class ExplanationOfBenefit_BenefitBalance {
+class ExplanationOfBenefitBenefitBalance {
   CodeableConcept category;
   CodeableConcept subCategory;
   bool excluded;
@@ -954,9 +998,9 @@ class ExplanationOfBenefit_BenefitBalance {
   CodeableConcept network;
   CodeableConcept unit;
   CodeableConcept term;
-  List<ExplanationOfBenefit_Financial> financial;
+  List<ExplanationOfBenefitFinancial> financial;
 
-  ExplanationOfBenefit_BenefitBalance({
+  ExplanationOfBenefitBenefitBalance({
     @required this.category,
     this.subCategory,
     this.excluded,
@@ -968,14 +1012,14 @@ class ExplanationOfBenefit_BenefitBalance {
     this.financial,
   });
 
-  factory ExplanationOfBenefit_BenefitBalance.fromJson(
+  factory ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_BenefitBalanceFromJson(json);
+      _$ExplanationOfBenefitBenefitBalanceFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$ExplanationOfBenefit_BenefitBalanceToJson(this);
+      _$ExplanationOfBenefitBenefitBalanceToJson(this);
 }
 
-class ExplanationOfBenefit_Financial {
+class ExplanationOfBenefitFinancial {
   CodeableConcept type;
   int allowedUnsignedInt;
   String allowedString;
@@ -983,7 +1027,7 @@ class ExplanationOfBenefit_Financial {
   int usedUnsignedInt;
   Money usedMoney;
 
-  ExplanationOfBenefit_Financial({
+  ExplanationOfBenefitFinancial({
     @required this.type,
     this.allowedUnsignedInt,
     this.allowedString,
@@ -992,7 +1036,7 @@ class ExplanationOfBenefit_Financial {
     this.usedMoney,
   });
 
-  factory ExplanationOfBenefit_Financial.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefit_FinancialFromJson(json);
-  Map<String, dynamic> toJson() => _$ExplanationOfBenefit_FinancialToJson(this);
+  factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitFinancialFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitFinancialToJson(this);
 }

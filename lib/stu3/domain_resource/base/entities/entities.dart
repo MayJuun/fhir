@@ -1,9 +1,14 @@
+
 import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'entities.freezed.dart';
+
 part 'entities.g.dart';
 
 class Substance {
@@ -14,8 +19,8 @@ class Substance {
   List<CodeableConcept> category;
   CodeableConcept code;
   String description;
-  List<Substance_Instance> instance;
-  List<Substance_Ingredient> ingredient;
+  List<SubstanceInstance> instance;
+  List<SubstanceIngredient> ingredient;
 
   Substance({
     this.id,
@@ -34,36 +39,36 @@ class Substance {
   Map<String, dynamic> toJson() => _$SubstanceToJson(this);
 }
 
-class Substance_Instance {
+class SubstanceInstance {
   Identifier identifier;
   String expiry;
   Quantity quantity;
 
-  Substance_Instance({
+  SubstanceInstance({
     this.identifier,
     this.expiry,
     this.quantity,
   });
 
-  factory Substance_Instance.fromJson(Map<String, dynamic> json) =>
-      _$Substance_InstanceFromJson(json);
-  Map<String, dynamic> toJson() => _$Substance_InstanceToJson(this);
+  factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceInstanceFromJson(json);
+  Map<String, dynamic> toJson() => _$SubstanceInstanceToJson(this);
 }
 
-class Substance_Ingredient {
+class SubstanceIngredient {
   Ratio quantity;
   CodeableConcept substanceCodeableConcept;
   Reference substanceReference;
 
-  Substance_Ingredient({
+  SubstanceIngredient({
     this.quantity,
     this.substanceCodeableConcept,
     this.substanceReference,
   });
 
-  factory Substance_Ingredient.fromJson(Map<String, dynamic> json) =>
-      _$Substance_IngredientFromJson(json);
-  Map<String, dynamic> toJson() => _$Substance_IngredientToJson(this);
+  factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceIngredientFromJson(json);
+  Map<String, dynamic> toJson() => _$SubstanceIngredientToJson(this);
 }
 class Endpoint {
   String id;
@@ -111,7 +116,7 @@ class DeviceComponent {
   List<CodeableConcept> operationalStatus;
   CodeableConcept parameterGroup;
   String measurementPrinciple;
-  List<DeviceComponent_ProductionSpecification> productionSpecification;
+  List<DeviceComponentProductionSpecification> productionSpecification;
   CodeableConcept languageCode;
 
   DeviceComponent({
@@ -134,22 +139,22 @@ class DeviceComponent {
   Map<String, dynamic> toJson() => _$DeviceComponentToJson(this);
 }
 
-class DeviceComponent_ProductionSpecification {
+class DeviceComponentProductionSpecification {
   CodeableConcept specType;
   Identifier componentId;
   String productionSpec;
 
-  DeviceComponent_ProductionSpecification({
+  DeviceComponentProductionSpecification({
     this.specType,
     this.componentId,
     this.productionSpec,
   });
 
-  factory DeviceComponent_ProductionSpecification.fromJson(
+  factory DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
-      _$DeviceComponent_ProductionSpecificationFromJson(json);
+      _$DeviceComponentProductionSpecificationFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$DeviceComponent_ProductionSpecificationToJson(this);
+      _$DeviceComponentProductionSpecificationToJson(this);
 }
 class DeviceMetric {
   String id;
@@ -163,7 +168,7 @@ class DeviceMetric {
   String color;
   String category;
   Timing measurementPeriod;
-  List<DeviceMetric_Calibration> calibration;
+  List<DeviceMetricCalibration> calibration;
 
   DeviceMetric({
     this.id,
@@ -185,20 +190,20 @@ class DeviceMetric {
   Map<String, dynamic> toJson() => _$DeviceMetricToJson(this);
 }
 
-class DeviceMetric_Calibration {
+class DeviceMetricCalibration {
   String type;
   String state;
   String time;
 
-  DeviceMetric_Calibration({
+  DeviceMetricCalibration({
     this.type,
     this.state,
     this.time,
   });
 
-  factory DeviceMetric_Calibration.fromJson(Map<String, dynamic> json) =>
-      _$DeviceMetric_CalibrationFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceMetric_CalibrationToJson(this);
+  factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
+      _$DeviceMetricCalibrationFromJson(json);
+  Map<String, dynamic> toJson() => _$DeviceMetricCalibrationToJson(this);
 }
 class Location {
   String id;
@@ -214,7 +219,7 @@ class Location {
   List<ContactPoint> telecom;
   Address address;
   CodeableConcept physicalType;
-  Location_Position position;
+  LocationPosition position;
   Reference managingOrganization;
   Reference partOf;
   List<Reference> endpoint;
@@ -244,26 +249,26 @@ class Location {
   Map<String, dynamic> toJson() => _$LocationToJson(this);
 }
 
-class Location_Position {
+class LocationPosition {
   double longitude;
   double latitude;
   double altitude;
 
-  Location_Position({
+  LocationPosition({
     this.longitude,
     this.latitude,
     this.altitude,
   });
 
-  factory Location_Position.fromJson(Map<String, dynamic> json) =>
-      _$Location_PositionFromJson(json);
-  Map<String, dynamic> toJson() => _$Location_PositionToJson(this);
+  factory LocationPosition.fromJson(Map<String, dynamic> json) =>
+      _$LocationPositionFromJson(json);
+  Map<String, dynamic> toJson() => _$LocationPositionToJson(this);
 }
 class Device {
   String id;
   String resourceType;
   List<Identifier> identifier;
-  Device_Udi udi;
+  DeviceUdi udi;
   String status;
   CodeableConcept type;
   String lotNumber;
@@ -306,7 +311,7 @@ class Device {
   Map<String, dynamic> toJson() => _$DeviceToJson(this);
 }
 
-class Device_Udi {
+class DeviceUdi {
   String deviceIdentifier;
   String name;
   String jurisdiction;
@@ -315,7 +320,7 @@ class Device_Udi {
   String issuer;
   String entryType;
 
-  Device_Udi({
+  DeviceUdi({
     this.deviceIdentifier,
     this.name,
     this.jurisdiction,
@@ -325,9 +330,9 @@ class Device_Udi {
     this.entryType,
   });
 
-  factory Device_Udi.fromJson(Map<String, dynamic> json) =>
-      _$Device_UdiFromJson(json);
-  Map<String, dynamic> toJson() => _$Device_UdiToJson(this);
+  factory DeviceUdi.fromJson(Map<String, dynamic> json) =>
+      _$DeviceUdiFromJson(json);
+  Map<String, dynamic> toJson() => _$DeviceUdiToJson(this);
 }
 class HealthcareService {
   String id;
@@ -352,8 +357,8 @@ class HealthcareService {
   List<CodeableConcept> characteristic;
   List<CodeableConcept> referralMethod;
   bool appointmentRequired;
-  List<HealthcareService_AvailableTime> availableTime;
-  List<HealthcareService_NotAvailable> notAvailable;
+  List<HealthcareServiceAvailableTime> availableTime;
+  List<HealthcareServiceNotAvailable> notAvailable;
   String availabilityExceptions;
   List<Reference> endpoint;
 
@@ -391,37 +396,37 @@ class HealthcareService {
   Map<String, dynamic> toJson() => _$HealthcareServiceToJson(this);
 }
 
-class HealthcareService_AvailableTime {
+class HealthcareServiceAvailableTime {
   List<String> daysOfWeek;
   bool allDay;
   String availableStartTime;
   String availableEndTime;
 
-  HealthcareService_AvailableTime({
+  HealthcareServiceAvailableTime({
     this.daysOfWeek,
     this.allDay,
     this.availableStartTime,
     this.availableEndTime,
   });
 
-  factory HealthcareService_AvailableTime.fromJson(Map<String, dynamic> json) =>
-      _$HealthcareService_AvailableTimeFromJson(json);
+  factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
+      _$HealthcareServiceAvailableTimeFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$HealthcareService_AvailableTimeToJson(this);
+      _$HealthcareServiceAvailableTimeToJson(this);
 }
 
-class HealthcareService_NotAvailable {
+class HealthcareServiceNotAvailable {
   String description;
   Period during;
 
-  HealthcareService_NotAvailable({
+  HealthcareServiceNotAvailable({
     this.description,
     this.during,
   });
 
-  factory HealthcareService_NotAvailable.fromJson(Map<String, dynamic> json) =>
-      _$HealthcareService_NotAvailableFromJson(json);
-  Map<String, dynamic> toJson() => _$HealthcareService_NotAvailableToJson(this);
+  factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
+      _$HealthcareServiceNotAvailableFromJson(json);
+  Map<String, dynamic> toJson() => _$HealthcareServiceNotAvailableToJson(this);
 }
 class Organization {
   String id;
@@ -434,7 +439,7 @@ class Organization {
   List<ContactPoint> telecom;
   List<Address> address;
   Reference partOf;
-  List<Organization_Contact> contact;
+  List<OrganizationContact> contact;
   List<Reference> endpoint;
 
   Organization({
@@ -457,20 +462,20 @@ class Organization {
   Map<String, dynamic> toJson() => _$OrganizationToJson(this);
 }
 
-class Organization_Contact {
+class OrganizationContact {
   CodeableConcept purpose;
   HumanName name;
   List<ContactPoint> telecom;
   Address address;
 
-  Organization_Contact({
+  OrganizationContact({
     this.purpose,
     this.name,
     this.telecom,
     this.address,
   });
 
-  factory Organization_Contact.fromJson(Map<String, dynamic> json) =>
-      _$Organization_ContactFromJson(json);
-  Map<String, dynamic> toJson() => _$Organization_ContactToJson(this);
+  factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
+      _$OrganizationContactFromJson(json);
+  Map<String, dynamic> toJson() => _$OrganizationContactToJson(this);
 }

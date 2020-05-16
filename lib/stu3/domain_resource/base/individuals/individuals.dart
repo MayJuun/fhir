@@ -1,10 +1,17 @@
-  import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+  
+import 'package:freezed_annotation/freezed_annotation.dart';
+// 
+import 'package:flutter/foundation.dart';
+
 
 import '../../../../fhir_stu3.dart';
 
+
 part 'individuals.freezed.dart';
-part 'individuals.g.dart';import 'package:json_annotation/json_annotation.dart';
+
+part 'individuals.g.dart';
+
+
 
 class PractitionerRole {
   String id;
@@ -19,8 +26,8 @@ class PractitionerRole {
   List<Reference> location;
   List<Reference> healthcareService;
   List<ContactPoint> telecom;
-  List<PractitionerRole_AvailableTime> availableTime;
-  List<PractitionerRole_NotAvailable> notAvailable;
+  List<PractitionerRoleAvailableTime> availableTime;
+  List<PractitionerRoleNotAvailable> notAvailable;
   String availabilityExceptions;
   List<Reference> endpoint;
 
@@ -48,46 +55,54 @@ class PractitionerRole {
   Map<String, dynamic> toJson() => _$PractitionerRoleToJson(this);
 }
 
-class PractitionerRole_AvailableTime {
+class PractitionerRoleAvailableTime {
   List<String> daysOfWeek;
   bool allDay;
   String availableStartTime;
   String availableEndTime;
 
-  PractitionerRole_AvailableTime({
+  PractitionerRoleAvailableTime({
     this.daysOfWeek,
     this.allDay,
     this.availableStartTime,
     this.availableEndTime,
   });
 
-  factory PractitionerRole_AvailableTime.fromJson(Map<String, dynamic> json) =>
-      _$PractitionerRole_AvailableTimeFromJson(json);
-  Map<String, dynamic> toJson() => _$PractitionerRole_AvailableTimeToJson(this);
+  factory PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =>
+      _$PractitionerRoleAvailableTimeFromJson(json);
+  Map<String, dynamic> toJson() => _$PractitionerRoleAvailableTimeToJson(this);
 }
 
-class PractitionerRole_NotAvailable {
+class PractitionerRoleNotAvailable {
   String description;
   Period during;
 
-  PractitionerRole_NotAvailable({
+  PractitionerRoleNotAvailable({
     this.description,
     this.during,
   });
 
-  factory PractitionerRole_NotAvailable.fromJson(Map<String, dynamic> json) =>
-      _$PractitionerRole_NotAvailableFromJson(json);
-  Map<String, dynamic> toJson() => _$PractitionerRole_NotAvailableToJson(this);
+  factory PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
+      _$PractitionerRoleNotAvailableFromJson(json);
+  Map<String, dynamic> toJson() => _$PractitionerRoleNotAvailableToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/period.dart';
+
 import '../Element/range.dart';
+
 import '../Element/quantity.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'group.g.dart';
 
@@ -101,8 +116,8 @@ class Group {
   CodeableConcept code;
   String name;
   double quantity;
-  List<Group_Characteristic> characteristic;
-  List<Group_Member> member;
+  List<GroupCharacteristic> characteristic;
+  List<GroupMember> member;
 
   Group({
     this.id,
@@ -122,7 +137,7 @@ class Group {
   Map<String, dynamic> toJson() => _$GroupToJson(this);
 }
 
-class Group_Characteristic {
+class GroupCharacteristic {
   CodeableConcept code;
   CodeableConcept valueCodeableConcept;
   bool valueBoolean;
@@ -131,7 +146,7 @@ class Group_Characteristic {
   bool exclude;
   Period period;
 
-  Group_Characteristic({
+  GroupCharacteristic({
     @required this.code,
     this.valueCodeableConcept,
     this.valueBoolean,
@@ -141,36 +156,44 @@ class Group_Characteristic {
     this.period,
   });
 
-  factory Group_Characteristic.fromJson(Map<String, dynamic> json) =>
-      _$Group_CharacteristicFromJson(json);
-  Map<String, dynamic> toJson() => _$Group_CharacteristicToJson(this);
+  factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
+      _$GroupCharacteristicFromJson(json);
+  Map<String, dynamic> toJson() => _$GroupCharacteristicToJson(this);
 }
 
-class Group_Member {
+class GroupMember {
   Reference entity;
   Period period;
   bool inactive;
 
-  Group_Member({
+  GroupMember({
     @required this.entity,
     this.period,
     this.inactive,
   });
 
-  factory Group_Member.fromJson(Map<String, dynamic> json) =>
-      _$Group_MemberFromJson(json);
-  Map<String, dynamic> toJson() => _$Group_MemberToJson(this);
+  factory GroupMember.fromJson(Map<String, dynamic> json) =>
+      _$GroupMemberFromJson(json);
+  Map<String, dynamic> toJson() => _$GroupMemberToJson(this);
 }
 
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/address.dart';
+
 import '../Element/contactPoint.dart';
+
 import '../Element/humanName.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'person.g.dart';
 
@@ -186,7 +209,7 @@ class Person {
   Attachment photo;
   Reference managingOrganization;
   bool active;
-  List<Person_Link> link;
+  List<PersonLink> link;
 
   Person({
     this.id,
@@ -207,30 +230,40 @@ class Person {
   Map<String, dynamic> toJson() => _$PersonToJson(this);
 }
 
-class Person_Link {
+class PersonLink {
   Reference target;
   String assurance;
 
-  Person_Link({
+  PersonLink({
     @required this.target,
     this.assurance,
   });
 
-  factory Person_Link.fromJson(Map<String, dynamic> json) =>
-      _$Person_LinkFromJson(json);
-  Map<String, dynamic> toJson() => _$Person_LinkToJson(this);
+  factory PersonLink.fromJson(Map<String, dynamic> json) =>
+      _$PersonLinkFromJson(json);
+  Map<String, dynamic> toJson() => _$PersonLinkToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/period.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/address.dart';
+
 import '../Element/contactPoint.dart';
+
 import '../Element/humanName.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'relatedPerson.g.dart';
 
@@ -269,17 +302,27 @@ class RelatedPerson {
       _$RelatedPersonFromJson(json);
   Map<String, dynamic> toJson() => _$RelatedPersonToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/period.dart';
+
 import '../Element/reference.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/address.dart';
+
 import '../Element/contactPoint.dart';
+
 import '../Element/humanName.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'patient.g.dart';
 
@@ -299,12 +342,12 @@ class Patient {
   bool multipleBirthBoolean;
   int multipleBirthInteger;
   List<Attachment> photo;
-  List<Patient_Contact> contact;
-  Patient_Animal animal;
-  List<Patient_Communication> communication;
+  List<PatientContact> contact;
+  PatientAnimal animal;
+  List<PatientCommunication> communication;
   List<Reference> generalPractitioner;
   Reference managingOrganization;
-  List<Patient_Link> link;
+  List<PatientLink> link;
 
   Patient({
     this.id,
@@ -335,7 +378,7 @@ class Patient {
   Map<String, dynamic> toJson() => _$PatientToJson(this);
 }
 
-class Patient_Contact {
+class PatientContact {
   List<CodeableConcept> relationship;
   HumanName name;
   List<ContactPoint> telecom;
@@ -344,7 +387,7 @@ class Patient_Contact {
   Reference organization;
   Period period;
 
-  Patient_Contact({
+  PatientContact({
     this.relationship,
     this.name,
     this.telecom,
@@ -354,65 +397,75 @@ class Patient_Contact {
     this.period,
   });
 
-  factory Patient_Contact.fromJson(Map<String, dynamic> json) =>
-      _$Patient_ContactFromJson(json);
-  Map<String, dynamic> toJson() => _$Patient_ContactToJson(this);
+  factory PatientContact.fromJson(Map<String, dynamic> json) =>
+      _$PatientContactFromJson(json);
+  Map<String, dynamic> toJson() => _$PatientContactToJson(this);
 }
 
-class Patient_Animal {
+class PatientAnimal {
   CodeableConcept species;
   CodeableConcept breed;
   CodeableConcept genderStatus;
 
-  Patient_Animal({
+  PatientAnimal({
     @required this.species,
     this.breed,
     this.genderStatus,
   });
 
-  factory Patient_Animal.fromJson(Map<String, dynamic> json) =>
-      _$Patient_AnimalFromJson(json);
-  Map<String, dynamic> toJson() => _$Patient_AnimalToJson(this);
+  factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
+      _$PatientAnimalFromJson(json);
+  Map<String, dynamic> toJson() => _$PatientAnimalToJson(this);
 }
 
-class Patient_Communication {
+class PatientCommunication {
   CodeableConcept language;
   bool preferred;
 
-  Patient_Communication({
+  PatientCommunication({
     @required this.language,
     this.preferred,
   });
 
-  factory Patient_Communication.fromJson(Map<String, dynamic> json) =>
-      _$Patient_CommunicationFromJson(json);
-  Map<String, dynamic> toJson() => _$Patient_CommunicationToJson(this);
+  factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
+      _$PatientCommunicationFromJson(json);
+  Map<String, dynamic> toJson() => _$PatientCommunicationToJson(this);
 }
 
-class Patient_Link {
+class PatientLink {
   Reference other;
   String type;
 
-  Patient_Link({
+  PatientLink({
     @required this.other,
     this.type,
   });
 
-  factory Patient_Link.fromJson(Map<String, dynamic> json) =>
-      _$Patient_LinkFromJson(json);
-  Map<String, dynamic> toJson() => _$Patient_LinkToJson(this);
+  factory PatientLink.fromJson(Map<String, dynamic> json) =>
+      _$PatientLinkFromJson(json);
+  Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
 }
-import 'package:json_annotation/json_annotation.dart';
+
+
 import 'package:meta/meta.dart';
 
+
 import '../Element/reference.dart';
+
 import '../Element/period.dart';
+
 import '../Element/codeableConcept.dart';
+
 import '../Element/attachment.dart';
+
 import '../Element/address.dart';
+
 import '../Element/contactPoint.dart';
+
 import '../Element/humanName.dart';
+
 import '../Element/identifier.dart';
+
 
 part 'practitioner.g.dart';
 
@@ -427,7 +480,7 @@ class Practitioner {
   String gender;
   DateTime birthDate;
   List<Attachment> photo;
-  List<Practitioner_Qualification> qualification;
+  List<PractitionerQualification> qualification;
   List<CodeableConcept> communication;
 
   Practitioner({
@@ -450,20 +503,20 @@ class Practitioner {
   Map<String, dynamic> toJson() => _$PractitionerToJson(this);
 }
 
-class Practitioner_Qualification {
+class PractitionerQualification {
   List<Identifier> identifier;
   CodeableConcept code;
   Period period;
   Reference issuer;
 
-  Practitioner_Qualification({
+  PractitionerQualification({
     this.identifier,
     @required this.code,
     this.period,
     this.issuer,
   });
 
-  factory Practitioner_Qualification.fromJson(Map<String, dynamic> json) =>
-      _$Practitioner_QualificationFromJson(json);
-  Map<String, dynamic> toJson() => _$Practitioner_QualificationToJson(this);
+  factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
+      _$PractitionerQualificationFromJson(json);
+  Map<String, dynamic> toJson() => _$PractitionerQualificationToJson(this);
 }
