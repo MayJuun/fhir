@@ -8,11 +8,11 @@ void main() async {
     (FileSystemEntity entity) async {
       if (entity.path.toString().contains('.dart')) {
         var oldText = await File(entity.path.toString()).readAsString();
-        for (var match in reg.allMatches(oldText)) {
-          var name = match.group(0).split(' ')[1];
+        // for (var match in reg.allMatches(oldText)) {
+        //   var name = match.group(0).split(' ')[1];
           // var regexp = RegExp('class $name\\s\\{');
-          oldText = oldText.replaceFirst('}) = ', '}) = _');
-        }
+          oldText = oldText.replaceAll('}) = ', '}) = _');
+        // }
         await File(entity.path.toString()).writeAsString(oldText);
       }
     },
