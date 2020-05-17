@@ -766,8 +766,10 @@ _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
     updateCreate: json['updateCreate'] as bool,
     conditionalCreate: json['conditionalCreate'] as bool,
     conditionalRead: _$enumDecodeNullable(
-        _$CapabilityStatementResourceConditionalReadEnumMap,
-        json['conditionalRead']),
+      _$CapabilityStatementResourceConditionalReadEnumMap,
+      json['conditionalRead'],
+      unknownValue: CapabilityStatementResourceConditionalRead.unknown,
+    ),
     conditionalUpdate: json['conditionalUpdate'] as bool,
     conditionalDelete: _$enumDecodeNullable(
         _$CapabilityStatementResourceConditionalDeleteEnumMap,

@@ -9,17 +9,16 @@ void main() async {
 
   var response = await get('$server/Patient', headers: headers);
   var newBundle = Bundle.fromJson(json.decode(response.body));
-  // for (var resource in resourceTypes) {
-  //   var response = await get('$server/$resource', headers: headers);
-  //   var newBundle = Bundle.fromJson(json.decode(response.body));
-  //   print(newBundle);
-  //   // print(newBundle.toJson().toString());
-  //   // if (newBundle.toJson().toString().contains('Invalid')) {
-  //   //   var temp = newBundle.toJson().toString().split('Invalid');
-  //   //   for (var i = 1; i < temp.length; i++) {
-  //   //     print(temp[i].substring(0, 50));
-  //   //   }
-  // }
+  for (var resource in resourceTypes) {
+    var response = await get('$server/$resource', headers: headers);
+    var newBundle = Bundle.fromJson(json.decode(response.body));
+    if (newBundle.toJson().toString().contains('Invalid')) {
+      var temp = newBundle.toJson().toString().split('Invalid');
+      for (var i = 1; i < temp.length; i++) {
+        print(temp[i].substring(0, 50));
+      }
+    }
+  }
 }
 
 var resourceTypes = [

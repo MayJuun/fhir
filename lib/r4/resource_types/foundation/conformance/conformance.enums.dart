@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-enum CapabilityStatementResourceConditionalRead {
+enum ResourceConditionalRead {
   @JsonValue('not-supported')
   not_supported,
   @JsonValue('modified-since')
@@ -13,13 +13,51 @@ enum CapabilityStatementResourceConditionalRead {
   unknown,
 }
 
-enum CapabilityStatementResourceConditionalDelete {
+enum ResourceConditionalDelete {
   @JsonValue('not-supported')
   not_supported,
   @JsonValue('single')
   single,
   @JsonValue('multiple')
   multiple,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ResourceReferencePolicy {
+  @JsonValue('literal')
+  literal,
+  @JsonValue('logical')
+  logical,
+  @JsonValue('resolves')
+  resolves,
+  @JsonValue('enforced')
+  enforced,
+  @JsonValue('local')
+  local,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum SearchParamType {
+  @JsonValue('number')
+  number,
+  @JsonValue('date')
+  date,
+  @JsonValue('string')
+  string,
+  @JsonValue('token')
+  token,
+  @JsonValue('reference')
+  reference,
+  @JsonValue('composite')
+  composite,
+  @JsonValue('quantity')
+  quantity,
+  @JsonValue('uri')
+  uri,
+  @JsonValue('special')
+  special,
   @JsonValue('unknown')
   unknown,
 }
@@ -130,7 +168,7 @@ enum CapabilityStatementFhirVersion {
   unknown,
 }
 
-enum CapabilityStatementRestMode {
+enum RestMode {
   @JsonValue('client')
   client,
   @JsonValue('server')
@@ -139,7 +177,7 @@ enum CapabilityStatementRestMode {
   unknown,
 }
 
-enum CapabilityStatementResourceVersioning {
+enum ResourceVersioning {
   @JsonValue('no-version')
   no_version,
   @JsonValue('versioned')
@@ -150,14 +188,14 @@ enum CapabilityStatementResourceVersioning {
   unknown,
 }
 
-enum CapabilityStatementInteractionCode {
-  @JsonValue('not-supported')
-  not_supported,
-  @JsonValue('modified-since')
-  modified_since,
-  @JsonValue('not-match')
+enum InteractionCode {
+  @JsonValue('transaction')
+  transaction,
+  @JsonValue('batch')
+  batch,
+  @JsonValue('search-system')
   not_match,
-  @JsonValue('full-support')
+  @JsonValue('history-system')
   full_support,
   @JsonValue('unknown')
   unknown,
@@ -174,7 +212,7 @@ enum CapabilityStatementSearchParamType {
   unknown,
 }
 
-enum CapabilityStatementInteraction1Code {
+enum InteractionCode {
   @JsonValue('read')
   read,
   @JsonValue('vread')
@@ -220,15 +258,11 @@ enum CapabilityStatementSupportedMessageMode {
   unknown,
 }
 
-enum CapabilityStatementDocumentMode {
-  @JsonValue('transaction')
-  transaction,
-  @JsonValue('batch')
-  batch,
-  @JsonValue('search-system')
-  search_system,
-  @JsonValue('history-system')
-  history_system,
+enum DocumentMode {
+  @JsonValue('producer')
+  producer,
+  @JsonValue('consumer')
+  conumer,
   @JsonValue('unknown')
   unknown,
 }

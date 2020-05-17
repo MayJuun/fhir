@@ -157,13 +157,13 @@ abstract class CapabilityStatementRest with _$CapabilityStatementRest {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    CapabilityStatementRestMode mode,
+    RestMode mode,
     Markdown documentation,
-    CapabilityStatementSecurity security,
-    List<CapabilityStatementResource> resource,
-    List<CapabilityStatementInteraction1> interaction,
-    List<CapabilityStatementSearchParam> searchParam,
-    List<CapabilityStatementOperation> operation,
+    RestSecurity security,
+    List<RestResource> resource,
+    List<RestInteraction> interaction,
+    List<ResourceSearchParam> searchParam,
+    List<ResourceOperation> operation,
     List<Canonical> compartment,
   }) = _CapabilityStatementRest;
   factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
@@ -171,22 +171,22 @@ abstract class CapabilityStatementRest with _$CapabilityStatementRest {
 }
 
 @freezed
-abstract class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
-  const factory CapabilityStatementSecurity({
+abstract class RestSecurity with _$RestSecurity {
+  const factory RestSecurity({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool cors,
     List<CodeableConcept> service,
     Markdown description,
-  }) = _CapabilityStatementSecurity;
-  factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatementSecurityFromJson(json);
+  }) = _RestSecurity;
+  factory RestSecurity.fromJson(Map<String, dynamic> json) =>
+      _$RestSecurityFromJson(json);
 }
 
 @freezed
-abstract class CapabilityStatementResource with _$CapabilityStatementResource {
-  const factory CapabilityStatementResource({
+abstract class RestResource with _$RestResource {
+  const factory RestResource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -194,81 +194,36 @@ abstract class CapabilityStatementResource with _$CapabilityStatementResource {
     Canonical profile,
     List<Canonical> supportedProfile,
     Markdown documentation,
-    List<CapabilityStatementInteraction> interaction,
-    CapabilityStatementResourceVersioning versioning,
+    List<ResourceInteraction> interaction,
+    ResourceVersioning versioning,
     bool readHistory,
     bool updateCreate,
     bool conditionalCreate,
-    CapabilityStatementResourceConditionalRead conditionalRead,
+    ResourceConditionalRead conditionalRead,
     bool conditionalUpdate,
-    CapabilityStatementResourceConditionalDelete conditionalDelete,
-    List<String> referencePolicy,
+    ResourceConditionalDelete conditionalDelete,
+    List<ResourceReferencePolicy> referencePolicy,
     List<String> searchInclude,
     List<String> searchRevInclude,
-    List<CapabilityStatementSearchParam> searchParam,
-    List<CapabilityStatementOperation> operation,
-  }) = _CapabilityStatementResource;
-  factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatementResourceFromJson(json);
+    List<ResourceSearchParam> searchParam,
+    List<ResourceOperation> operation,
+  }) = _RestResource;
+  factory RestResource.fromJson(Map<String, dynamic> json) =>
+      _$RestResourceFromJson(json);
 }
 
 @freezed
-abstract class CapabilityStatementInteraction
-    with _$CapabilityStatementInteraction {
-  const factory CapabilityStatementInteraction({
+abstract class ResourceInteraction
+    with _$ResourceInteraction {
+  const factory ResourceInteraction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    CapabilityStatementInteractionCode code,
+    InteractionCode code,
     Markdown documentation,
-  }) = _CapabilityStatementInteraction;
-  factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatementInteractionFromJson(json);
-}
-
-@freezed
-abstract class CapabilityStatementSearchParam
-    with _$CapabilityStatementSearchParam {
-  const factory CapabilityStatementSearchParam({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    List<FhirExtension> modifierExtension,
-    String name,
-    Canonical definition,
-    String type,
-    Markdown documentation,
-  }) = _CapabilityStatementSearchParam;
-  factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatementSearchParamFromJson(json);
-}
-
-@freezed
-abstract class CapabilityStatementOperation
-    with _$CapabilityStatementOperation {
-  const factory CapabilityStatementOperation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    List<FhirExtension> modifierExtension,
-    String name,
-    Canonical definition,
-    Markdown documentation,
-  }) = _CapabilityStatementOperation;
-  factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatementOperationFromJson(json);
-}
-
-@freezed
-abstract class CapabilityStatementInteraction1
-    with _$CapabilityStatementInteraction1 {
-  const factory CapabilityStatementInteraction1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    List<FhirExtension> modifierExtension,
-    String code,
-    Markdown documentation,
-  }) = _CapabilityStatementInteraction1;
-  factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatementInteraction1FromJson(json);
+  }) = _ResourceInteraction;
+  factory ResourceInteraction.fromJson(Map<String, dynamic> json) =>
+      _$ResourceInteractionFromJson(json);
 }
 
 @freezed
@@ -278,7 +233,7 @@ abstract class CapabilityStatementMessaging
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    List<CapabilityStatementEndpoint> endpoint,
+    List<MessagingEndpoint> endpoint,
     int reliableCache,
     Markdown documentation,
     List<CapabilityStatementSupportedMessage> supportedMessage,
@@ -288,16 +243,75 @@ abstract class CapabilityStatementMessaging
 }
 
 @freezed
-abstract class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
-  const factory CapabilityStatementEndpoint({
+abstract class CapabilityStatementDocument with _$CapabilityStatementDocument {
+  const factory CapabilityStatementDocument({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+    List<FhirExtension> modifierExtension,
+    DocumentMode mode,
+    Markdown documentation,
+    Canonical profile,
+  }) = _CapabilityStatementDocument;
+  factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementDocumentFromJson(json);
+}
+
+@freezed
+abstract class ResourceSearchParam
+    with _$ResourceSearchParam {
+  const factory ResourceSearchParam({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+    List<FhirExtension> modifierExtension,
+    String name,
+    Canonical definition,
+    SearchParamType type,
+    Markdown documentation,
+  }) = _ResourceSearchParam;
+  factory ResourceSearchParam.fromJson(Map<String, dynamic> json) =>
+      _$ResourceSearchParamFromJson(json);
+}
+
+@freezed
+abstract class ResourceOperation
+    with _$ResourceOperation {
+  const factory ResourceOperation({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+    List<FhirExtension> modifierExtension,
+    String name,
+    Canonical definition,
+    Markdown documentation,
+  }) = _ResourceOperation;
+  factory ResourceOperation.fromJson(Map<String, dynamic> json) =>
+      _$ResourceOperationFromJson(json);
+}
+
+@freezed
+abstract class RestInteraction
+    with _$RestInteraction {
+  const factory RestInteraction({
+    String id,
+    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+    List<FhirExtension> modifierExtension,
+    String code,
+    Markdown documentation,
+  }) = _RestInteraction;
+  factory RestInteraction.fromJson(Map<String, dynamic> json) =>
+      _$RestInteractionFromJson(json);
+}
+
+@freezed
+abstract class MessagingEndpoint with _$MessagingEndpoint {
+  const factory MessagingEndpoint({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Coding protocol,
     FhirUrl address,
-  }) = _CapabilityStatementEndpoint;
-  factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatementEndpointFromJson(json);
+  }) = _MessagingEndpoint;
+  factory MessagingEndpoint.fromJson(Map<String, dynamic> json) =>
+      _$MessagingEndpointFromJson(json);
 }
 
 @freezed
@@ -307,26 +321,12 @@ abstract class CapabilityStatementSupportedMessage
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    CapabilityStatementSupportedMessageMode mode,
+    SupportedMessageMode mode,
     Canonical definition,
   }) = _CapabilityStatementSupportedMessage;
   factory CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatementSupportedMessageFromJson(json);
-}
-
-@freezed
-abstract class CapabilityStatementDocument with _$CapabilityStatementDocument {
-  const factory CapabilityStatementDocument({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    List<FhirExtension> modifierExtension,
-    CapabilityStatementDocumentMode mode,
-    Markdown documentation,
-    Canonical profile,
-  }) = _CapabilityStatementDocument;
-  factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatementDocumentFromJson(json);
 }
 
 @freezed

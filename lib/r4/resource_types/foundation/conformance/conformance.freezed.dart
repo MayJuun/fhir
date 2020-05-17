@@ -3398,7 +3398,7 @@ class _$CapabilityStatementResourceTearOff {
       bool readHistory,
       bool updateCreate,
       bool conditionalCreate,
-      CapabilityStatementResourceConditionalRead conditionalRead,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) CapabilityStatementResourceConditionalRead conditionalRead,
       bool conditionalUpdate,
       CapabilityStatementResourceConditionalDelete conditionalDelete,
       List<String> referencePolicy,
@@ -3448,7 +3448,7 @@ mixin _$CapabilityStatementResource {
   bool get readHistory;
   bool get updateCreate;
   bool get conditionalCreate;
-  CapabilityStatementResourceConditionalRead get conditionalRead;
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) CapabilityStatementResourceConditionalRead get conditionalRead;
   bool get conditionalUpdate;
   CapabilityStatementResourceConditionalDelete get conditionalDelete;
   List<String> get referencePolicy;
@@ -3480,7 +3480,7 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
       bool readHistory,
       bool updateCreate,
       bool conditionalCreate,
-      CapabilityStatementResourceConditionalRead conditionalRead,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) CapabilityStatementResourceConditionalRead conditionalRead,
       bool conditionalUpdate,
       CapabilityStatementResourceConditionalDelete conditionalDelete,
       List<String> referencePolicy,
@@ -3598,7 +3598,7 @@ abstract class _$CapabilityStatementResourceCopyWith<$Res>
       bool readHistory,
       bool updateCreate,
       bool conditionalCreate,
-      CapabilityStatementResourceConditionalRead conditionalRead,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) CapabilityStatementResourceConditionalRead conditionalRead,
       bool conditionalUpdate,
       CapabilityStatementResourceConditionalDelete conditionalDelete,
       List<String> referencePolicy,
@@ -3715,7 +3715,7 @@ class _$_CapabilityStatementResource implements _CapabilityStatementResource {
       this.readHistory,
       this.updateCreate,
       this.conditionalCreate,
-      this.conditionalRead,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) this.conditionalRead,
       this.conditionalUpdate,
       this.conditionalDelete,
       this.referencePolicy,
@@ -3753,6 +3753,7 @@ class _$_CapabilityStatementResource implements _CapabilityStatementResource {
   @override
   final bool conditionalCreate;
   @override
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
   final CapabilityStatementResourceConditionalRead conditionalRead;
   @override
   final bool conditionalUpdate;
@@ -3888,7 +3889,7 @@ abstract class _CapabilityStatementResource
           bool readHistory,
           bool updateCreate,
           bool conditionalCreate,
-          CapabilityStatementResourceConditionalRead conditionalRead,
+          @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) CapabilityStatementResourceConditionalRead conditionalRead,
           bool conditionalUpdate,
           CapabilityStatementResourceConditionalDelete conditionalDelete,
           List<String> referencePolicy,
@@ -3927,6 +3928,7 @@ abstract class _CapabilityStatementResource
   @override
   bool get conditionalCreate;
   @override
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
   CapabilityStatementResourceConditionalRead get conditionalRead;
   @override
   bool get conditionalUpdate;
