@@ -1152,8 +1152,7 @@ _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
     fullUrl: json['fullUrl'] == null
         ? null
         : FhirUri.fromJson(json['fullUrl'] as String),
-    resource:
-        json['resource'] == null ? null : ResourceFromJson(json['resource']),
+    resource: json['resource'],
     search: json['search'] == null
         ? null
         : BundleSearch.fromJson(json['search'] as Map<String, dynamic>),
@@ -1311,7 +1310,7 @@ _$_BundleResponse _$_$_BundleResponseFromJson(Map<String, dynamic> json) {
     lastModified: json['lastModified'] == null
         ? null
         : Instant.fromJson(json['lastModified'] as String),
-    outcome: json['outcome'] == null ? null : ResourceFromJson(json['outcome']),
+    outcome: json['outcome'],
   );
 }
 

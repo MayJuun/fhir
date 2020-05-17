@@ -1,4 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 // spec: https://itnext.io/comparing-freezed-to-built-value-3ff978c8647
 
@@ -18,19 +18,7 @@ enum ElementDefinitionRepresentation {
   unknown,
 }
 
-// todo: unknown / type safety
-enum ElementDefinitionTypeAggregation {
-  @JsonValue('contained')
-  contained,
-  @JsonValue('referenced')
-  referenced,
-  @JsonValue('bundled')
-  bundled,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ElementDefinitionSlicingRules {
+enum SlicingRules {
   @JsonValue('closed')
   closed,
   @JsonValue('open')
@@ -41,7 +29,7 @@ enum ElementDefinitionSlicingRules {
   unknown,
 }
 
-enum ElementDefinitionDiscriminatorType {
+enum DiscriminatorType {
   @JsonValue('value')
   value,
   @JsonValue('exists')
@@ -56,7 +44,19 @@ enum ElementDefinitionDiscriminatorType {
   unknown,
 }
 
-enum ElementDefinitionTypeVersioning {
+// todo: unknown / type safety
+enum TypeAggregation {
+  @JsonValue('contained')
+  contained,
+  @JsonValue('referenced')
+  referenced,
+  @JsonValue('bundled')
+  bundled,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum TypeVersioning {
   @JsonValue('either')
   either,
   @JsonValue('independent')
@@ -67,7 +67,7 @@ enum ElementDefinitionTypeVersioning {
   unknown,
 }
 
-enum ElementDefinitionConstraintSeverity {
+enum ConstraintSeverity {
   @JsonValue('error')
   error,
   @JsonValue('warning')
@@ -76,7 +76,7 @@ enum ElementDefinitionConstraintSeverity {
   unknown,
 }
 
-enum ElementDefinitionBindingStrength {
+enum BindingStrength {
   @JsonValue('required')
   isRequired,
   @JsonValue('extensible')

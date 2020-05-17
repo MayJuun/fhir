@@ -26,10 +26,10 @@ class _$ClaimTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ClaimStatus.unknown) ClaimStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      ClaimUse use,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
       Reference patient,
       Period billablePeriod,
       FhirDateTime created,
@@ -108,9 +108,11 @@ mixin _$Claim {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: ClaimStatus.unknown)
+  ClaimStatus get status;
   CodeableConcept get type;
   CodeableConcept get subType;
+  @JsonKey(unknownEnumValue: ClaimUse.unknown)
   ClaimUse get use;
   Reference get patient;
   Period get billablePeriod;
@@ -153,10 +155,10 @@ abstract class $ClaimCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ClaimStatus.unknown) ClaimStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      ClaimUse use,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
       Reference patient,
       Period billablePeriod,
       FhirDateTime created,
@@ -268,7 +270,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as ClaimStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
       use: use == freezed ? _value.use : use as ClaimUse,
@@ -514,10 +516,10 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ClaimStatus.unknown) ClaimStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      ClaimUse use,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
       Reference patient,
       Period billablePeriod,
       FhirDateTime created,
@@ -648,7 +650,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as ClaimStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
       use: use == freezed ? _value.use : use as ClaimUse,
@@ -712,10 +714,10 @@ class _$_Claim implements _Claim {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: ClaimStatus.unknown) this.status,
       this.type,
       this.subType,
-      this.use,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown) this.use,
       this.patient,
       this.billablePeriod,
       this.created,
@@ -764,12 +766,14 @@ class _$_Claim implements _Claim {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: ClaimStatus.unknown)
+  final ClaimStatus status;
   @override
   final CodeableConcept type;
   @override
   final CodeableConcept subType;
   @override
+  @JsonKey(unknownEnumValue: ClaimUse.unknown)
   final ClaimUse use;
   @override
   final Reference patient;
@@ -968,10 +972,10 @@ abstract class _Claim implements Claim {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ClaimStatus.unknown) ClaimStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      ClaimUse use,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
       Reference patient,
       Period billablePeriod,
       FhirDateTime created,
@@ -1019,12 +1023,14 @@ abstract class _Claim implements Claim {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: ClaimStatus.unknown)
+  ClaimStatus get status;
   @override
   CodeableConcept get type;
   @override
   CodeableConcept get subType;
   @override
+  @JsonKey(unknownEnumValue: ClaimUse.unknown)
   ClaimUse get use;
   @override
   Reference get patient;
@@ -5632,7 +5638,7 @@ class _$InvoiceTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      InvoiceStatus status,
+      @JsonKey(unknownEnumValue: InvoiceStatus.unknown) InvoiceStatus status,
       String cancelledReason,
       CodeableConcept type,
       Reference subject,
@@ -5692,6 +5698,7 @@ mixin _$Invoice {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
   InvoiceStatus get status;
   String get cancelledReason;
   CodeableConcept get type;
@@ -5726,7 +5733,7 @@ abstract class $InvoiceCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      InvoiceStatus status,
+      @JsonKey(unknownEnumValue: InvoiceStatus.unknown) InvoiceStatus status,
       String cancelledReason,
       CodeableConcept type,
       Reference subject,
@@ -5946,7 +5953,7 @@ abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      InvoiceStatus status,
+      @JsonKey(unknownEnumValue: InvoiceStatus.unknown) InvoiceStatus status,
       String cancelledReason,
       CodeableConcept type,
       Reference subject,
@@ -6084,7 +6091,7 @@ class _$_Invoice implements _Invoice {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: InvoiceStatus.unknown) this.status,
       this.cancelledReason,
       this.type,
       this.subject,
@@ -6125,6 +6132,7 @@ class _$_Invoice implements _Invoice {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
   final InvoiceStatus status;
   @override
   final String cancelledReason;
@@ -6284,7 +6292,7 @@ abstract class _Invoice implements Invoice {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      InvoiceStatus status,
+      @JsonKey(unknownEnumValue: InvoiceStatus.unknown) InvoiceStatus status,
       String cancelledReason,
       CodeableConcept type,
       Reference subject,
@@ -6324,6 +6332,7 @@ abstract class _Invoice implements Invoice {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
   InvoiceStatus get status;
   @override
   String get cancelledReason;
@@ -7203,13 +7212,16 @@ class _$ClaimResponseTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ClaimResponseStatus.unknown)
+          ClaimResponseStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      Code use,
+      @JsonKey(unknownEnumValue: ClaimResponseUse.unknown)
+          ClaimResponseUse use,
       Reference patient,
       FhirDateTime created,
       Reference insurer,
@@ -7288,10 +7300,12 @@ mixin _$ClaimResponse {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: ClaimResponseStatus.unknown)
+  ClaimResponseStatus get status;
   CodeableConcept get type;
   CodeableConcept get subType;
-  Code get use;
+  @JsonKey(unknownEnumValue: ClaimResponseUse.unknown)
+  ClaimResponseUse get use;
   Reference get patient;
   FhirDateTime get created;
   Reference get insurer;
@@ -7331,13 +7345,16 @@ abstract class $ClaimResponseCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ClaimResponseStatus.unknown)
+          ClaimResponseStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      Code use,
+      @JsonKey(unknownEnumValue: ClaimResponseUse.unknown)
+          ClaimResponseUse use,
       Reference patient,
       FhirDateTime created,
       Reference insurer,
@@ -7446,10 +7463,10 @@ class _$ClaimResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as ClaimResponseStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
-      use: use == freezed ? _value.use : use as Code,
+      use: use == freezed ? _value.use : use as ClaimResponseUse,
       patient: patient == freezed ? _value.patient : patient as Reference,
       created: created == freezed ? _value.created : created as FhirDateTime,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
@@ -7653,13 +7670,16 @@ abstract class _$ClaimResponseCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ClaimResponseStatus.unknown)
+          ClaimResponseStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      Code use,
+      @JsonKey(unknownEnumValue: ClaimResponseUse.unknown)
+          ClaimResponseUse use,
       Reference patient,
       FhirDateTime created,
       Reference insurer,
@@ -7784,10 +7804,10 @@ class __$ClaimResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as ClaimResponseStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
-      use: use == freezed ? _value.use : use as Code,
+      use: use == freezed ? _value.use : use as ClaimResponseUse,
       patient: patient == freezed ? _value.patient : patient as Reference,
       created: created == freezed ? _value.created : created as FhirDateTime,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
@@ -7850,10 +7870,10 @@ class _$_ClaimResponse implements _ClaimResponse {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: ClaimResponseStatus.unknown) this.status,
       this.type,
       this.subType,
-      this.use,
+      @JsonKey(unknownEnumValue: ClaimResponseUse.unknown) this.use,
       this.patient,
       this.created,
       this.insurer,
@@ -7902,13 +7922,15 @@ class _$_ClaimResponse implements _ClaimResponse {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: ClaimResponseStatus.unknown)
+  final ClaimResponseStatus status;
   @override
   final CodeableConcept type;
   @override
   final CodeableConcept subType;
   @override
-  final Code use;
+  @JsonKey(unknownEnumValue: ClaimResponseUse.unknown)
+  final ClaimResponseUse use;
   @override
   final Reference patient;
   @override
@@ -8103,13 +8125,16 @@ abstract class _ClaimResponse implements ClaimResponse {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ClaimResponseStatus.unknown)
+          ClaimResponseStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      Code use,
+      @JsonKey(unknownEnumValue: ClaimResponseUse.unknown)
+          ClaimResponseUse use,
       Reference patient,
       FhirDateTime created,
       Reference insurer,
@@ -8158,13 +8183,15 @@ abstract class _ClaimResponse implements ClaimResponse {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: ClaimResponseStatus.unknown)
+  ClaimResponseStatus get status;
   @override
   CodeableConcept get type;
   @override
   CodeableConcept get subType;
   @override
-  Code get use;
+  @JsonKey(unknownEnumValue: ClaimResponseUse.unknown)
+  ClaimResponseUse get use;
   @override
   Reference get patient;
   @override

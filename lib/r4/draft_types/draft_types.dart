@@ -6,9 +6,6 @@ import '../../fhir_r4.dart';
 part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
 
-// Note, by switching from public constructors (... = MarketingStatus) to private (... = _MarketingStatus)
-// We will have to call DraftTypes.marketingStatus to get to the appropriate class
-
 @freezed
 abstract class MarketingStatus with _$MarketingStatus {
   factory MarketingStatus({

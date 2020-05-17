@@ -85,9 +85,11 @@ abstract class AllergyIntolerance with _$AllergyIntolerance {
     List<Identifier> identifier,
     CodeableConcept clinicalStatus,
     CodeableConcept verificationStatus,
-    AllergyIntoleranceType type,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+        AllergyIntoleranceType type,
     List<AllergyIntoleranceCategory> category,
-    AllergyIntoleranceCriticality criticality,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+        AllergyIntoleranceCriticality criticality,
     CodeableConcept code,
     Reference patient,
     Reference encounter,
@@ -116,7 +118,8 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     CodeableConcept substance,
     List<CodeableConcept> manifestation,
     FhirDateTime onset,
-    AllergyIntoleranceReactionSeverity severity,
+    @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
+        ReactionSeverity severity,
     CodeableConcept exposureRoute,
     List<Annotation> note,
   }) = _AllergyIntoleranceReaction;
@@ -136,7 +139,8 @@ abstract class AdverseEvent with _$AdverseEvent {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
-    AdverseEventActuality actuality,
+    @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+        AdverseEventActuality actuality,
     List<CodeableConcept> category,
     CodeableConcept event,
     Reference subject,
@@ -202,7 +206,8 @@ abstract class FamilyMemberHistory with _$FamilyMemberHistory {
     List<Identifier> identifier,
     List<Canonical> instantiatesCanonical,
     List<FhirUri> instantiatesUri,
-    FamilyMemberHistoryStatus status,
+    @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+        FamilyMemberHistoryStatus status,
     CodeableConcept dataAbsentReason,
     Reference patient,
     FhirDateTime date,
@@ -261,7 +266,8 @@ abstract class DetectedIssue with _$DetectedIssue {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
+    @JsonKey(unknownEnumValue: DetectedIssueStatus.unknown)
+        DetectedIssueStatus status,
     CodeableConcept code,
     DetectedIssueSeverity severity,
     Reference patient,
@@ -388,7 +394,7 @@ abstract class Procedure with _$Procedure {
     List<FhirUri> instantiatesUri,
     List<Reference> basedOn,
     List<Reference> partOf,
-    Code status,
+    @JsonKey(unknownEnumValue: ProcedureStatus.unknown) ProcedureStatus status,
     CodeableConcept statusReason,
     CodeableConcept category,
     CodeableConcept code,

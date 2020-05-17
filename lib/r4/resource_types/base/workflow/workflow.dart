@@ -49,7 +49,7 @@ abstract class Slot with _$Slot {
     List<CodeableConcept> specialty,
     CodeableConcept appointmentType,
     Reference schedule,
-    SlotStatus status,
+    @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus status,
     Instant start,
     Instant end,
     bool overbooked,
@@ -76,11 +76,11 @@ abstract class Task with _$Task {
     List<Reference> basedOn,
     Identifier groupIdentifier,
     List<Reference> partOf,
-    TaskStatus status,
+    @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus status,
     CodeableConcept statusReason,
     CodeableConcept businessStatus,
-    TaskIntent intent,
-    Code priority,
+    @JsonKey(unknownEnumValue: TaskIntent.unknown) TaskIntent intent,
+    @JsonKey(unknownEnumValue: TaskPriority.unknown) TaskPriority priority,
     CodeableConcept code,
     String description,
     Reference focus,
@@ -256,7 +256,8 @@ abstract class Appointment with _$Appointment {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    AppointmentStatus status,
+    @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+        AppointmentStatus status,
     CodeableConcept cancelationReason,
     List<CodeableConcept> serviceCategory,
     List<CodeableConcept> serviceType,
@@ -286,12 +287,18 @@ abstract class Appointment with _$Appointment {
 abstract class AppointmentParticipant with _$AppointmentParticipant {
   const factory AppointmentParticipant({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+    @JsonKey(name: 'extension')
+        List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> type,
     Reference actor,
-    @JsonKey(name: 'required') AppointmentParticipantRequired require,
-    AppointmentParticipantStatus status,
+    @JsonKey(
+      name: 'required',
+      unknownEnumValue: AppointmentParticipantRequired.unknown,
+    )
+        AppointmentParticipantRequired require,
+    @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+        AppointmentParticipantStatus status,
     Period period,
   }) = _AppointmentParticipant;
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
@@ -338,7 +345,8 @@ abstract class VerificationResult with _$VerificationResult {
     List<Reference> target,
     List<String> targetLocation,
     CodeableConcept need,
-    Code status,
+    @JsonKey(unknownEnumValue: VerificationResultStatus.unknown)
+        VerificationResultStatus status,
     FhirDateTime statusDate,
     CodeableConcept validationType,
     List<CodeableConcept> validationProcess,

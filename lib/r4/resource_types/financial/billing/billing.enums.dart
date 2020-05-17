@@ -1,4 +1,17 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+enum ClaimStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('cancelled')
+  cancelled,
+  @JsonValue('draft')
+  draft,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum ClaimUse {
   @JsonValue('claim')
@@ -50,6 +63,30 @@ enum ClaimResponseProcessNoteType {
   print,
   @JsonValue('printoper')
   printoper,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ClaimResponseStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('cancelled')
+  cancelled,
+  @JsonValue('draft')
+  draft,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ClaimResponseUse {
+  @JsonValue('claim')
+  claim,
+  @JsonValue('preauthorization')
+  preauthorization,
+  @JsonValue('predetermination')
+  predetermination,
   @JsonValue('unknown')
   unknown,
 }

@@ -6467,10 +6467,10 @@ class _$ElementDefinitionSlicingTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<ElementDefinitionDiscriminator> discriminator,
+      List<SlicingDiscriminator> discriminator,
       String description,
       bool ordered,
-      ElementDefinitionSlicingRules rules}) {
+      @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules}) {
     return _ElementDefinitionSlicing(
       id: id,
       fhirExtension: fhirExtension,
@@ -6491,10 +6491,11 @@ mixin _$ElementDefinitionSlicing {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  List<ElementDefinitionDiscriminator> get discriminator;
+  List<SlicingDiscriminator> get discriminator;
   String get description;
   bool get ordered;
-  ElementDefinitionSlicingRules get rules;
+  @JsonKey(unknownEnumValue: SlicingRules.unknown)
+  SlicingRules get rules;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionSlicingCopyWith<ElementDefinitionSlicing> get copyWith;
@@ -6508,10 +6509,10 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<ElementDefinitionDiscriminator> discriminator,
+      List<SlicingDiscriminator> discriminator,
       String description,
       bool ordered,
-      ElementDefinitionSlicingRules rules});
+      @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules});
 }
 
 class _$ElementDefinitionSlicingCopyWithImpl<$Res>
@@ -6542,13 +6543,11 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       discriminator: discriminator == freezed
           ? _value.discriminator
-          : discriminator as List<ElementDefinitionDiscriminator>,
+          : discriminator as List<SlicingDiscriminator>,
       description:
           description == freezed ? _value.description : description as String,
       ordered: ordered == freezed ? _value.ordered : ordered as bool,
-      rules: rules == freezed
-          ? _value.rules
-          : rules as ElementDefinitionSlicingRules,
+      rules: rules == freezed ? _value.rules : rules as SlicingRules,
     ));
   }
 }
@@ -6563,10 +6562,10 @@ abstract class _$ElementDefinitionSlicingCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<ElementDefinitionDiscriminator> discriminator,
+      List<SlicingDiscriminator> discriminator,
       String description,
       bool ordered,
-      ElementDefinitionSlicingRules rules});
+      @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules});
 }
 
 class __$ElementDefinitionSlicingCopyWithImpl<$Res>
@@ -6600,13 +6599,11 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       discriminator: discriminator == freezed
           ? _value.discriminator
-          : discriminator as List<ElementDefinitionDiscriminator>,
+          : discriminator as List<SlicingDiscriminator>,
       description:
           description == freezed ? _value.description : description as String,
       ordered: ordered == freezed ? _value.ordered : ordered as bool,
-      rules: rules == freezed
-          ? _value.rules
-          : rules as ElementDefinitionSlicingRules,
+      rules: rules == freezed ? _value.rules : rules as SlicingRules,
     ));
   }
 }
@@ -6620,7 +6617,7 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
       this.discriminator,
       this.description,
       this.ordered,
-      this.rules});
+      @JsonKey(unknownEnumValue: SlicingRules.unknown) this.rules});
 
   factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionSlicingFromJson(json);
@@ -6633,13 +6630,14 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final List<ElementDefinitionDiscriminator> discriminator;
+  final List<SlicingDiscriminator> discriminator;
   @override
   final String description;
   @override
   final bool ordered;
   @override
-  final ElementDefinitionSlicingRules rules;
+  @JsonKey(unknownEnumValue: SlicingRules.unknown)
+  final SlicingRules rules;
 
   @override
   String toString() {
@@ -6696,12 +6694,14 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
 abstract class _ElementDefinitionSlicing implements ElementDefinitionSlicing {
   const factory _ElementDefinitionSlicing(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<ElementDefinitionDiscriminator> discriminator,
+      List<SlicingDiscriminator> discriminator,
       String description,
       bool ordered,
-      ElementDefinitionSlicingRules rules}) = _$_ElementDefinitionSlicing;
+      @JsonKey(unknownEnumValue: SlicingRules.unknown)
+          SlicingRules rules}) = _$_ElementDefinitionSlicing;
 
   factory _ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionSlicing.fromJson;
@@ -6714,32 +6714,32 @@ abstract class _ElementDefinitionSlicing implements ElementDefinitionSlicing {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  List<ElementDefinitionDiscriminator> get discriminator;
+  List<SlicingDiscriminator> get discriminator;
   @override
   String get description;
   @override
   bool get ordered;
   @override
-  ElementDefinitionSlicingRules get rules;
+  @JsonKey(unknownEnumValue: SlicingRules.unknown)
+  SlicingRules get rules;
   @override
   _$ElementDefinitionSlicingCopyWith<_ElementDefinitionSlicing> get copyWith;
 }
 
-ElementDefinitionDiscriminator _$ElementDefinitionDiscriminatorFromJson(
-    Map<String, dynamic> json) {
-  return _ElementDefinitionDiscriminator.fromJson(json);
+SlicingDiscriminator _$SlicingDiscriminatorFromJson(Map<String, dynamic> json) {
+  return _SlicingDiscriminator.fromJson(json);
 }
 
-class _$ElementDefinitionDiscriminatorTearOff {
-  const _$ElementDefinitionDiscriminatorTearOff();
+class _$SlicingDiscriminatorTearOff {
+  const _$SlicingDiscriminatorTearOff();
 
-  _ElementDefinitionDiscriminator call(
+  _SlicingDiscriminator call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      ElementDefinitionDiscriminatorType type,
+      DiscriminatorType type,
       String path}) {
-    return _ElementDefinitionDiscriminator(
+    return _SlicingDiscriminator(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
@@ -6750,42 +6750,39 @@ class _$ElementDefinitionDiscriminatorTearOff {
 }
 
 // ignore: unused_element
-const $ElementDefinitionDiscriminator =
-    _$ElementDefinitionDiscriminatorTearOff();
+const $SlicingDiscriminator = _$SlicingDiscriminatorTearOff();
 
-mixin _$ElementDefinitionDiscriminator {
+mixin _$SlicingDiscriminator {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  ElementDefinitionDiscriminatorType get type;
+  DiscriminatorType get type;
   String get path;
 
   Map<String, dynamic> toJson();
-  $ElementDefinitionDiscriminatorCopyWith<ElementDefinitionDiscriminator>
-      get copyWith;
+  $SlicingDiscriminatorCopyWith<SlicingDiscriminator> get copyWith;
 }
 
-abstract class $ElementDefinitionDiscriminatorCopyWith<$Res> {
-  factory $ElementDefinitionDiscriminatorCopyWith(
-          ElementDefinitionDiscriminator value,
-          $Res Function(ElementDefinitionDiscriminator) then) =
-      _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>;
+abstract class $SlicingDiscriminatorCopyWith<$Res> {
+  factory $SlicingDiscriminatorCopyWith(SlicingDiscriminator value,
+          $Res Function(SlicingDiscriminator) then) =
+      _$SlicingDiscriminatorCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      ElementDefinitionDiscriminatorType type,
+      DiscriminatorType type,
       String path});
 }
 
-class _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
-    implements $ElementDefinitionDiscriminatorCopyWith<$Res> {
-  _$ElementDefinitionDiscriminatorCopyWithImpl(this._value, this._then);
+class _$SlicingDiscriminatorCopyWithImpl<$Res>
+    implements $SlicingDiscriminatorCopyWith<$Res> {
+  _$SlicingDiscriminatorCopyWithImpl(this._value, this._then);
 
-  final ElementDefinitionDiscriminator _value;
+  final SlicingDiscriminator _value;
   // ignore: unused_field
-  final $Res Function(ElementDefinitionDiscriminator) _then;
+  final $Res Function(SlicingDiscriminator) _then;
 
   @override
   $Res call({
@@ -6803,40 +6800,35 @@ class _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed
-          ? _value.type
-          : type as ElementDefinitionDiscriminatorType,
+      type: type == freezed ? _value.type : type as DiscriminatorType,
       path: path == freezed ? _value.path : path as String,
     ));
   }
 }
 
-abstract class _$ElementDefinitionDiscriminatorCopyWith<$Res>
-    implements $ElementDefinitionDiscriminatorCopyWith<$Res> {
-  factory _$ElementDefinitionDiscriminatorCopyWith(
-          _ElementDefinitionDiscriminator value,
-          $Res Function(_ElementDefinitionDiscriminator) then) =
-      __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>;
+abstract class _$SlicingDiscriminatorCopyWith<$Res>
+    implements $SlicingDiscriminatorCopyWith<$Res> {
+  factory _$SlicingDiscriminatorCopyWith(_SlicingDiscriminator value,
+          $Res Function(_SlicingDiscriminator) then) =
+      __$SlicingDiscriminatorCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      ElementDefinitionDiscriminatorType type,
+      DiscriminatorType type,
       String path});
 }
 
-class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
-    extends _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
-    implements _$ElementDefinitionDiscriminatorCopyWith<$Res> {
-  __$ElementDefinitionDiscriminatorCopyWithImpl(
-      _ElementDefinitionDiscriminator _value,
-      $Res Function(_ElementDefinitionDiscriminator) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionDiscriminator));
+class __$SlicingDiscriminatorCopyWithImpl<$Res>
+    extends _$SlicingDiscriminatorCopyWithImpl<$Res>
+    implements _$SlicingDiscriminatorCopyWith<$Res> {
+  __$SlicingDiscriminatorCopyWithImpl(
+      _SlicingDiscriminator _value, $Res Function(_SlicingDiscriminator) _then)
+      : super(_value, (v) => _then(v as _SlicingDiscriminator));
 
   @override
-  _ElementDefinitionDiscriminator get _value =>
-      super._value as _ElementDefinitionDiscriminator;
+  _SlicingDiscriminator get _value => super._value as _SlicingDiscriminator;
 
   @override
   $Res call({
@@ -6846,7 +6838,7 @@ class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
     Object type = freezed,
     Object path = freezed,
   }) {
-    return _then(_ElementDefinitionDiscriminator(
+    return _then(_SlicingDiscriminator(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -6854,27 +6846,23 @@ class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed
-          ? _value.type
-          : type as ElementDefinitionDiscriminatorType,
+      type: type == freezed ? _value.type : type as DiscriminatorType,
       path: path == freezed ? _value.path : path as String,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ElementDefinitionDiscriminator
-    implements _ElementDefinitionDiscriminator {
-  const _$_ElementDefinitionDiscriminator(
+class _$_SlicingDiscriminator implements _SlicingDiscriminator {
+  const _$_SlicingDiscriminator(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.type,
       this.path});
 
-  factory _$_ElementDefinitionDiscriminator.fromJson(
-          Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionDiscriminatorFromJson(json);
+  factory _$_SlicingDiscriminator.fromJson(Map<String, dynamic> json) =>
+      _$_$_SlicingDiscriminatorFromJson(json);
 
   @override
   final String id;
@@ -6884,19 +6872,19 @@ class _$_ElementDefinitionDiscriminator
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final ElementDefinitionDiscriminatorType type;
+  final DiscriminatorType type;
   @override
   final String path;
 
   @override
   String toString() {
-    return 'ElementDefinitionDiscriminator(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, type: $type, path: $path)';
+    return 'SlicingDiscriminator(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, type: $type, path: $path)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ElementDefinitionDiscriminator &&
+        (other is _SlicingDiscriminator &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -6921,27 +6909,26 @@ class _$_ElementDefinitionDiscriminator
       const DeepCollectionEquality().hash(path);
 
   @override
-  _$ElementDefinitionDiscriminatorCopyWith<_ElementDefinitionDiscriminator>
-      get copyWith => __$ElementDefinitionDiscriminatorCopyWithImpl<
-          _ElementDefinitionDiscriminator>(this, _$identity);
+  _$SlicingDiscriminatorCopyWith<_SlicingDiscriminator> get copyWith =>
+      __$SlicingDiscriminatorCopyWithImpl<_SlicingDiscriminator>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionDiscriminatorToJson(this);
+    return _$_$_SlicingDiscriminatorToJson(this);
   }
 }
 
-abstract class _ElementDefinitionDiscriminator
-    implements ElementDefinitionDiscriminator {
-  const factory _ElementDefinitionDiscriminator(
+abstract class _SlicingDiscriminator implements SlicingDiscriminator {
+  const factory _SlicingDiscriminator(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      ElementDefinitionDiscriminatorType type,
-      String path}) = _$_ElementDefinitionDiscriminator;
+      DiscriminatorType type,
+      String path}) = _$_SlicingDiscriminator;
 
-  factory _ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =
-      _$_ElementDefinitionDiscriminator.fromJson;
+  factory _SlicingDiscriminator.fromJson(Map<String, dynamic> json) =
+      _$_SlicingDiscriminator.fromJson;
 
   @override
   String get id;
@@ -6951,12 +6938,11 @@ abstract class _ElementDefinitionDiscriminator
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  ElementDefinitionDiscriminatorType get type;
+  DiscriminatorType get type;
   @override
   String get path;
   @override
-  _$ElementDefinitionDiscriminatorCopyWith<_ElementDefinitionDiscriminator>
-      get copyWith;
+  _$SlicingDiscriminatorCopyWith<_SlicingDiscriminator> get copyWith;
 }
 
 ElementDefinitionBase _$ElementDefinitionBaseFromJson(
@@ -7207,13 +7193,15 @@ class _$ElementDefinitionTypeTearOff {
 
   _ElementDefinitionType call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri code,
       List<Canonical> profile,
       List<Canonical> targetProfile,
-      List<ElementDefinitionTypeAggregation> aggregation,
-      ElementDefinitionTypeVersioning versioning}) {
+      List<TypeAggregation> aggregation,
+      @JsonKey(unknownEnumValue: TypeVersioning.unknown)
+          TypeVersioning versioning}) {
     return _ElementDefinitionType(
       id: id,
       fhirExtension: fhirExtension,
@@ -7238,8 +7226,9 @@ mixin _$ElementDefinitionType {
   FhirUri get code;
   List<Canonical> get profile;
   List<Canonical> get targetProfile;
-  List<ElementDefinitionTypeAggregation> get aggregation;
-  ElementDefinitionTypeVersioning get versioning;
+  List<TypeAggregation> get aggregation;
+  @JsonKey(unknownEnumValue: TypeVersioning.unknown)
+  TypeVersioning get versioning;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionTypeCopyWith<ElementDefinitionType> get copyWith;
@@ -7251,13 +7240,15 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       _$ElementDefinitionTypeCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri code,
       List<Canonical> profile,
       List<Canonical> targetProfile,
-      List<ElementDefinitionTypeAggregation> aggregation,
-      ElementDefinitionTypeVersioning versioning});
+      List<TypeAggregation> aggregation,
+      @JsonKey(unknownEnumValue: TypeVersioning.unknown)
+          TypeVersioning versioning});
 }
 
 class _$ElementDefinitionTypeCopyWithImpl<$Res>
@@ -7294,10 +7285,10 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
           : targetProfile as List<Canonical>,
       aggregation: aggregation == freezed
           ? _value.aggregation
-          : aggregation as List<ElementDefinitionTypeAggregation>,
+          : aggregation as List<TypeAggregation>,
       versioning: versioning == freezed
           ? _value.versioning
-          : versioning as ElementDefinitionTypeVersioning,
+          : versioning as TypeVersioning,
     ));
   }
 }
@@ -7310,13 +7301,15 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri code,
       List<Canonical> profile,
       List<Canonical> targetProfile,
-      List<ElementDefinitionTypeAggregation> aggregation,
-      ElementDefinitionTypeVersioning versioning});
+      List<TypeAggregation> aggregation,
+      @JsonKey(unknownEnumValue: TypeVersioning.unknown)
+          TypeVersioning versioning});
 }
 
 class __$ElementDefinitionTypeCopyWithImpl<$Res>
@@ -7355,10 +7348,10 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
           : targetProfile as List<Canonical>,
       aggregation: aggregation == freezed
           ? _value.aggregation
-          : aggregation as List<ElementDefinitionTypeAggregation>,
+          : aggregation as List<TypeAggregation>,
       versioning: versioning == freezed
           ? _value.versioning
-          : versioning as ElementDefinitionTypeVersioning,
+          : versioning as TypeVersioning,
     ));
   }
 }
@@ -7373,7 +7366,7 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
       this.profile,
       this.targetProfile,
       this.aggregation,
-      this.versioning});
+      @JsonKey(unknownEnumValue: TypeVersioning.unknown) this.versioning});
 
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionTypeFromJson(json);
@@ -7392,9 +7385,10 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
   @override
   final List<Canonical> targetProfile;
   @override
-  final List<ElementDefinitionTypeAggregation> aggregation;
+  final List<TypeAggregation> aggregation;
   @override
-  final ElementDefinitionTypeVersioning versioning;
+  @JsonKey(unknownEnumValue: TypeVersioning.unknown)
+  final TypeVersioning versioning;
 
   @override
   String toString() {
@@ -7455,13 +7449,15 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
 abstract class _ElementDefinitionType implements ElementDefinitionType {
   const factory _ElementDefinitionType(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri code,
       List<Canonical> profile,
       List<Canonical> targetProfile,
-      List<ElementDefinitionTypeAggregation> aggregation,
-      ElementDefinitionTypeVersioning versioning}) = _$_ElementDefinitionType;
+      List<TypeAggregation> aggregation,
+      @JsonKey(unknownEnumValue: TypeVersioning.unknown)
+          TypeVersioning versioning}) = _$_ElementDefinitionType;
 
   factory _ElementDefinitionType.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionType.fromJson;
@@ -7480,9 +7476,10 @@ abstract class _ElementDefinitionType implements ElementDefinitionType {
   @override
   List<Canonical> get targetProfile;
   @override
-  List<ElementDefinitionTypeAggregation> get aggregation;
+  List<TypeAggregation> get aggregation;
   @override
-  ElementDefinitionTypeVersioning get versioning;
+  @JsonKey(unknownEnumValue: TypeVersioning.unknown)
+  TypeVersioning get versioning;
   @override
   _$ElementDefinitionTypeCopyWith<_ElementDefinitionType> get copyWith;
 }
@@ -9132,11 +9129,13 @@ class _$ElementDefinitionConstraintTearOff {
 
   _ElementDefinitionConstraint call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Id key,
       String requirements,
-      ElementDefinitionConstraintSeverity severity,
+      @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
+          ConstraintSeverity severity,
       String human,
       String expression,
       String xpath,
@@ -9166,7 +9165,8 @@ mixin _$ElementDefinitionConstraint {
   List<FhirExtension> get modifierExtension;
   Id get key;
   String get requirements;
-  ElementDefinitionConstraintSeverity get severity;
+  @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
+  ConstraintSeverity get severity;
   String get human;
   String get expression;
   String get xpath;
@@ -9184,11 +9184,13 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
       _$ElementDefinitionConstraintCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Id key,
       String requirements,
-      ElementDefinitionConstraintSeverity severity,
+      @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
+          ConstraintSeverity severity,
       String human,
       String expression,
       String xpath,
@@ -9230,7 +9232,7 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
           : requirements as String,
       severity: severity == freezed
           ? _value.severity
-          : severity as ElementDefinitionConstraintSeverity,
+          : severity as ConstraintSeverity,
       human: human == freezed ? _value.human : human as String,
       expression:
           expression == freezed ? _value.expression : expression as String,
@@ -9249,11 +9251,13 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Id key,
       String requirements,
-      ElementDefinitionConstraintSeverity severity,
+      @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
+          ConstraintSeverity severity,
       String human,
       String expression,
       String xpath,
@@ -9299,7 +9303,7 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
           : requirements as String,
       severity: severity == freezed
           ? _value.severity
-          : severity as ElementDefinitionConstraintSeverity,
+          : severity as ConstraintSeverity,
       human: human == freezed ? _value.human : human as String,
       expression:
           expression == freezed ? _value.expression : expression as String,
@@ -9317,7 +9321,7 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
       this.modifierExtension,
       this.key,
       this.requirements,
-      this.severity,
+      @JsonKey(unknownEnumValue: ConstraintSeverity.unknown) this.severity,
       this.human,
       this.expression,
       this.xpath,
@@ -9338,7 +9342,8 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
   @override
   final String requirements;
   @override
-  final ElementDefinitionConstraintSeverity severity;
+  @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
+  final ConstraintSeverity severity;
   @override
   final String human;
   @override
@@ -9413,11 +9418,13 @@ abstract class _ElementDefinitionConstraint
     implements ElementDefinitionConstraint {
   const factory _ElementDefinitionConstraint(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Id key,
       String requirements,
-      ElementDefinitionConstraintSeverity severity,
+      @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
+          ConstraintSeverity severity,
       String human,
       String expression,
       String xpath,
@@ -9438,7 +9445,8 @@ abstract class _ElementDefinitionConstraint
   @override
   String get requirements;
   @override
-  ElementDefinitionConstraintSeverity get severity;
+  @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
+  ConstraintSeverity get severity;
   @override
   String get human;
   @override
@@ -9462,9 +9470,11 @@ class _$ElementDefinitionBindingTearOff {
 
   _ElementDefinitionBinding call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      ElementDefinitionBindingStrength strength,
+      @JsonKey(unknownEnumValue: BindingStrength.unknown)
+          BindingStrength strength,
       String description,
       Canonical valueSet}) {
     return _ElementDefinitionBinding(
@@ -9486,7 +9496,8 @@ mixin _$ElementDefinitionBinding {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  ElementDefinitionBindingStrength get strength;
+  @JsonKey(unknownEnumValue: BindingStrength.unknown)
+  BindingStrength get strength;
   String get description;
   Canonical get valueSet;
 
@@ -9500,9 +9511,11 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       _$ElementDefinitionBindingCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      ElementDefinitionBindingStrength strength,
+      @JsonKey(unknownEnumValue: BindingStrength.unknown)
+          BindingStrength strength,
       String description,
       Canonical valueSet});
 }
@@ -9532,9 +9545,8 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      strength: strength == freezed
-          ? _value.strength
-          : strength as ElementDefinitionBindingStrength,
+      strength:
+          strength == freezed ? _value.strength : strength as BindingStrength,
       description:
           description == freezed ? _value.description : description as String,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
@@ -9550,9 +9562,11 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      ElementDefinitionBindingStrength strength,
+      @JsonKey(unknownEnumValue: BindingStrength.unknown)
+          BindingStrength strength,
       String description,
       Canonical valueSet});
 }
@@ -9585,9 +9599,8 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      strength: strength == freezed
-          ? _value.strength
-          : strength as ElementDefinitionBindingStrength,
+      strength:
+          strength == freezed ? _value.strength : strength as BindingStrength,
       description:
           description == freezed ? _value.description : description as String,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
@@ -9601,7 +9614,7 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.strength,
+      @JsonKey(unknownEnumValue: BindingStrength.unknown) this.strength,
       this.description,
       this.valueSet});
 
@@ -9616,7 +9629,8 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final ElementDefinitionBindingStrength strength;
+  @JsonKey(unknownEnumValue: BindingStrength.unknown)
+  final BindingStrength strength;
   @override
   final String description;
   @override
@@ -9674,9 +9688,11 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
 abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
   const factory _ElementDefinitionBinding(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      ElementDefinitionBindingStrength strength,
+      @JsonKey(unknownEnumValue: BindingStrength.unknown)
+          BindingStrength strength,
       String description,
       Canonical valueSet}) = _$_ElementDefinitionBinding;
 
@@ -9691,7 +9707,8 @@ abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  ElementDefinitionBindingStrength get strength;
+  @JsonKey(unknownEnumValue: BindingStrength.unknown)
+  BindingStrength get strength;
   @override
   String get description;
   @override
@@ -11853,8 +11870,10 @@ class _$NarrativeTearOff {
 
   _Narrative call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      NarrativeStatus status,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
+          NarrativeStatus status,
       String div}) {
     return _Narrative(
       id: id,
@@ -11872,6 +11891,7 @@ mixin _$Narrative {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
+  @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
   NarrativeStatus get status;
   String get div;
 
@@ -11884,8 +11904,10 @@ abstract class $NarrativeCopyWith<$Res> {
       _$NarrativeCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      NarrativeStatus status,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
+          NarrativeStatus status,
       String div});
 }
 
@@ -11921,8 +11943,10 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      NarrativeStatus status,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
+          NarrativeStatus status,
       String div});
 }
 
@@ -11957,7 +11981,7 @@ class _$_Narrative implements _Narrative {
   const _$_Narrative(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
-      this.status,
+      @JsonKey(unknownEnumValue: NarrativeStatus.unknown) this.status,
       this.div});
 
   factory _$_Narrative.fromJson(Map<String, dynamic> json) =>
@@ -11969,6 +11993,7 @@ class _$_Narrative implements _Narrative {
   @JsonKey(name: 'extension')
   final List<FhirExtension> fhirExtension;
   @override
+  @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
   final NarrativeStatus status;
   @override
   final String div;
@@ -12014,8 +12039,10 @@ class _$_Narrative implements _Narrative {
 abstract class _Narrative implements Narrative {
   const factory _Narrative(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      NarrativeStatus status,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
+          NarrativeStatus status,
       String div}) = _$_Narrative;
 
   factory _Narrative.fromJson(Map<String, dynamic> json) =
@@ -12027,6 +12054,7 @@ abstract class _Narrative implements Narrative {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   @override
+  @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
   NarrativeStatus get status;
   @override
   String get div;

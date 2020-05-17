@@ -47,7 +47,8 @@ _$_Contributor _$_$_ContributorFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(_$ContributorTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$ContributorTypeEnumMap, json['type'],
+        unknownValue: ContributorType.unknown),
     name: json['name'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -296,8 +297,8 @@ _$_DataRequirementSort _$_$_DataRequirementSortFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     path: json['path'] as String,
-    direction: _$enumDecodeNullable(
-        _$DataRequirementSortDirectionEnumMap, json['direction']),
+    direction: _$enumDecodeNullable(_$SortDirectionEnumMap, json['direction'],
+        unknownValue: SortDirection.unknown),
   );
 }
 
@@ -317,15 +318,14 @@ Map<String, dynamic> _$_$_DataRequirementSortToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('path', instance.path);
-  writeNotNull(
-      'direction', _$DataRequirementSortDirectionEnumMap[instance.direction]);
+  writeNotNull('direction', _$SortDirectionEnumMap[instance.direction]);
   return val;
 }
 
-const _$DataRequirementSortDirectionEnumMap = {
-  DataRequirementSortDirection.ascending: 'ascending',
-  DataRequirementSortDirection.descending: 'descending',
-  DataRequirementSortDirection.unknown: 'unknown',
+const _$SortDirectionEnumMap = {
+  SortDirection.ascending: 'ascending',
+  SortDirection.descending: 'descending',
+  SortDirection.unknown: 'unknown',
 };
 
 _$_Expression _$_$_ExpressionFromJson(Map<String, dynamic> json) {
@@ -338,8 +338,9 @@ _$_Expression _$_$_ExpressionFromJson(Map<String, dynamic> json) {
         ?.toList(),
     description: json['description'] as String,
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
-    language:
-        _$enumDecodeNullable(_$ExpressionLanguageEnumMap, json['language']),
+    language: _$enumDecodeNullable(
+        _$ExpressionLanguageEnumMap, json['language'],
+        unknownValue: ExpressionLanguage.unknown),
     expression: json['expression'] as String,
     reference: json['reference'] == null
         ? null
@@ -426,7 +427,8 @@ _$_RelatedArtifact _$_$_RelatedArtifactFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type'],
+        unknownValue: RelatedArtifactType.unknown),
     label: json['label'] as String,
     display: json['display'] as String,
     citation: json['citation'] == null
@@ -484,7 +486,8 @@ _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type'],
+        unknownValue: TriggerDefinitionType.unknown),
     name: json['name'] as String,
     timingTiming: json['timingTiming'] == null
         ? null

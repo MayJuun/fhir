@@ -20,7 +20,8 @@ abstract class DeviceUseStatement with _$DeviceUseStatement {
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
-    DeviceUseStatementStatus status,
+    @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
+        DeviceUseStatementStatus status,
     Reference subject,
     List<Reference> derivedFrom,
     Timing timingTiming,
@@ -53,7 +54,8 @@ abstract class SupplyDelivery with _$SupplyDelivery {
     List<Identifier> identifier,
     List<Reference> basedOn,
     List<Reference> partOf,
-    SupplyDeliveryStatus status,
+    @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+        SupplyDeliveryStatus status,
     Reference patient,
     CodeableConcept type,
     SupplyDeliverySuppliedItem suppliedItem,
@@ -95,9 +97,11 @@ abstract class SupplyRequest with _$SupplyRequest {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    SupplyRequestStatus status,
+    @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
+        SupplyRequestStatus status,
     CodeableConcept category,
-    Code priority,
+    @JsonKey(unknownEnumValue: SupplyRequestPriority.unknown)
+        SupplyRequestPriority priority,
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
     Quantity quantity,
@@ -150,7 +154,8 @@ abstract class GuidanceResponse with _$GuidanceResponse {
     FhirUri moduleUri,
     Canonical moduleCanonical,
     CodeableConcept moduleCodeableConcept,
-    GuidanceResponseStatus status,
+    @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
+        GuidanceResponseStatus status,
     Reference subject,
     Reference encounter,
     FhirDateTime occurrenceDateTime,
@@ -185,9 +190,12 @@ abstract class DeviceRequest with _$DeviceRequest {
     List<Reference> basedOn,
     List<Reference> priorRequest,
     Identifier groupIdentifier,
-    Code status,
-    Code intent,
-    Code priority,
+    @JsonKey(unknownEnumValue: DeviceRequestStatus.unknown)
+        DeviceRequestStatus status,
+    @JsonKey(unknownEnumValue: DeviceRequestIntent.unknown)
+        DeviceRequestIntent intent,
+    @JsonKey(unknownEnumValue: DeviceRequestPriority.unknown)
+        DeviceRequestPriority priority,
     Reference codeReference,
     CodeableConcept codeCodeableConcept,
     List<DeviceRequestParameter> parameter,
@@ -243,10 +251,12 @@ abstract class CommunicationRequest with _$CommunicationRequest {
     List<Reference> basedOn,
     List<Reference> replaces,
     Identifier groupIdentifier,
-    Code status,
+    @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
+        CommunicationRequestStatus status,
     CodeableConcept statusReason,
     List<CodeableConcept> category,
-    Code priority,
+    @JsonKey(unknownEnumValue: CommunicationRequestPriority.unknown)
+        CommunicationRequestPriority priority,
     bool doNotPerform,
     List<CodeableConcept> medium,
     Reference subject,
@@ -299,10 +309,12 @@ abstract class Communication with _$Communication {
     List<Reference> basedOn,
     List<Reference> partOf,
     List<Reference> inResponseTo,
-    Code status,
+    @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
+        CommunicationStatus status,
     CodeableConcept statusReason,
     List<CodeableConcept> category,
-    Code priority,
+    @JsonKey(unknownEnumValue: CommunicationPriority.unknown)
+        CommunicationPriority priority,
     List<CodeableConcept> medium,
     Reference subject,
     CodeableConcept topic,

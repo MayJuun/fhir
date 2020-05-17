@@ -1,4 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum GroupType {
   @JsonValue('person')
@@ -17,28 +17,6 @@ enum GroupType {
   unknown,
 }
 
-enum PatientGender {
-  @JsonValue('male')
-  male,
-  @JsonValue('female')
-  female,
-  @JsonValue('other')
-  other,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum PatientContactGender {
-  @JsonValue('male')
-  male,
-  @JsonValue('female')
-  female,
-  @JsonValue('other')
-  other,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum PatientLinkType {
   @JsonValue('replaced-by')
   replaced_by,
@@ -48,6 +26,25 @@ enum PatientLinkType {
   refer,
   @JsonValue('seealso')
   seealso,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum AvailableTimeDaysOfWeek {
+  @JsonValue('mon')
+  mon,
+  @JsonValue('tue')
+  tue,
+  @JsonValue('wed')
+  wed,
+  @JsonValue('thu')
+  thu,
+  @JsonValue('fri')
+  fri,
+  @JsonValue('sat')
+  sat,
+  @JsonValue('sun')
+  sun,
   @JsonValue('unknown')
   unknown,
 }
@@ -72,28 +69,6 @@ enum PersonLinkAssurance {
   level3,
   @JsonValue('level4')
   level4,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum PractitionerGender {
-  @JsonValue('male')
-  male,
-  @JsonValue('female')
-  female,
-  @JsonValue('other')
-  other,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum RelatedPersonGender {
-  @JsonValue('male')
-  male,
-  @JsonValue('female')
-  female,
-  @JsonValue('other')
-  other,
   @JsonValue('unknown')
   unknown,
 }

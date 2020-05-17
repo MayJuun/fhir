@@ -1,4 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum SlotStatus {
   @JsonValue('busy')
@@ -65,6 +65,19 @@ enum TaskIntent {
   unknown,
 }
 
+enum TaskPriority {
+  @JsonValue('routine')
+  routine,
+  @JsonValue('urgent')
+  urgent,
+  @JsonValue('asap')
+  asap,
+  @JsonValue('stat')
+  stat,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum AppointmentStatus {
   @JsonValue('proposed')
   proposed,
@@ -110,6 +123,23 @@ enum AppointmentParticipantStatus {
   tentative,
   @JsonValue('needs-action')
   needs_action,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum VerificationResultStatus {
+  @JsonValue('attested')
+  attested,
+  @JsonValue('validated')
+  validated,
+  @JsonValue('in-process')
+  in_process,
+  @JsonValue('req-revalid')
+  req_revalid,
+  @JsonValue('val-fail')
+  val_fail,
+  @JsonValue('reval-fail')
+  reval_fail,
   @JsonValue('unknown')
   unknown,
 }

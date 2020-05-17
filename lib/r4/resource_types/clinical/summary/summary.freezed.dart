@@ -1383,9 +1383,11 @@ class _$AllergyIntoleranceTearOff {
       List<Identifier> identifier,
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
-      AllergyIntoleranceType type,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+          AllergyIntoleranceType type,
       List<AllergyIntoleranceCategory> category,
-      AllergyIntoleranceCriticality criticality,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
       Reference patient,
       Reference encounter,
@@ -1448,8 +1450,10 @@ mixin _$AllergyIntolerance {
   List<Identifier> get identifier;
   CodeableConcept get clinicalStatus;
   CodeableConcept get verificationStatus;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
   AllergyIntoleranceType get type;
   List<AllergyIntoleranceCategory> get category;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   AllergyIntoleranceCriticality get criticality;
   CodeableConcept get code;
   Reference get patient;
@@ -1486,9 +1490,11 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       List<Identifier> identifier,
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
-      AllergyIntoleranceType type,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+          AllergyIntoleranceType type,
       List<AllergyIntoleranceCategory> category,
-      AllergyIntoleranceCriticality criticality,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
       Reference patient,
       Reference encounter,
@@ -1757,9 +1763,11 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
       List<Identifier> identifier,
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
-      AllergyIntoleranceType type,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+          AllergyIntoleranceType type,
       List<AllergyIntoleranceCategory> category,
-      AllergyIntoleranceCriticality criticality,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
       Reference patient,
       Reference encounter,
@@ -1918,9 +1926,11 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
       this.identifier,
       this.clinicalStatus,
       this.verificationStatus,
-      this.type,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+          this.type,
       this.category,
-      this.criticality,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          this.criticality,
       this.code,
       this.patient,
       this.encounter,
@@ -1962,10 +1972,12 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   @override
   final CodeableConcept verificationStatus;
   @override
+  @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
   final AllergyIntoleranceType type;
   @override
   final List<AllergyIntoleranceCategory> category;
   @override
+  @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   final AllergyIntoleranceCriticality criticality;
   @override
   final CodeableConcept code;
@@ -2133,9 +2145,11 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
       List<Identifier> identifier,
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
-      AllergyIntoleranceType type,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+          AllergyIntoleranceType type,
       List<AllergyIntoleranceCategory> category,
-      AllergyIntoleranceCriticality criticality,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
       Reference patient,
       Reference encounter,
@@ -2177,10 +2191,12 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
   @override
   CodeableConcept get verificationStatus;
   @override
+  @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
   AllergyIntoleranceType get type;
   @override
   List<AllergyIntoleranceCategory> get category;
   @override
+  @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   AllergyIntoleranceCriticality get criticality;
   @override
   CodeableConcept get code;
@@ -2224,12 +2240,14 @@ class _$AllergyIntoleranceReactionTearOff {
 
   _AllergyIntoleranceReaction call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept substance,
       List<CodeableConcept> manifestation,
       FhirDateTime onset,
-      AllergyIntoleranceReactionSeverity severity,
+      @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
+          ReactionSeverity severity,
       CodeableConcept exposureRoute,
       List<Annotation> note}) {
     return _AllergyIntoleranceReaction(
@@ -2257,7 +2275,8 @@ mixin _$AllergyIntoleranceReaction {
   CodeableConcept get substance;
   List<CodeableConcept> get manifestation;
   FhirDateTime get onset;
-  AllergyIntoleranceReactionSeverity get severity;
+  @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
+  ReactionSeverity get severity;
   CodeableConcept get exposureRoute;
   List<Annotation> get note;
 
@@ -2271,12 +2290,14 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
       _$AllergyIntoleranceReactionCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept substance,
       List<CodeableConcept> manifestation,
       FhirDateTime onset,
-      AllergyIntoleranceReactionSeverity severity,
+      @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
+          ReactionSeverity severity,
       CodeableConcept exposureRoute,
       List<Annotation> note});
 
@@ -2319,9 +2340,8 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
           ? _value.manifestation
           : manifestation as List<CodeableConcept>,
       onset: onset == freezed ? _value.onset : onset as FhirDateTime,
-      severity: severity == freezed
-          ? _value.severity
-          : severity as AllergyIntoleranceReactionSeverity,
+      severity:
+          severity == freezed ? _value.severity : severity as ReactionSeverity,
       exposureRoute: exposureRoute == freezed
           ? _value.exposureRoute
           : exposureRoute as CodeableConcept,
@@ -2359,12 +2379,14 @@ abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept substance,
       List<CodeableConcept> manifestation,
       FhirDateTime onset,
-      AllergyIntoleranceReactionSeverity severity,
+      @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
+          ReactionSeverity severity,
       CodeableConcept exposureRoute,
       List<Annotation> note});
 
@@ -2412,9 +2434,8 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
           ? _value.manifestation
           : manifestation as List<CodeableConcept>,
       onset: onset == freezed ? _value.onset : onset as FhirDateTime,
-      severity: severity == freezed
-          ? _value.severity
-          : severity as AllergyIntoleranceReactionSeverity,
+      severity:
+          severity == freezed ? _value.severity : severity as ReactionSeverity,
       exposureRoute: exposureRoute == freezed
           ? _value.exposureRoute
           : exposureRoute as CodeableConcept,
@@ -2432,7 +2453,7 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
       this.substance,
       this.manifestation,
       this.onset,
-      this.severity,
+      @JsonKey(unknownEnumValue: ReactionSeverity.unknown) this.severity,
       this.exposureRoute,
       this.note});
 
@@ -2453,7 +2474,8 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
   @override
   final FhirDateTime onset;
   @override
-  final AllergyIntoleranceReactionSeverity severity;
+  @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
+  final ReactionSeverity severity;
   @override
   final CodeableConcept exposureRoute;
   @override
@@ -2522,12 +2544,14 @@ abstract class _AllergyIntoleranceReaction
     implements AllergyIntoleranceReaction {
   const factory _AllergyIntoleranceReaction(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept substance,
       List<CodeableConcept> manifestation,
       FhirDateTime onset,
-      AllergyIntoleranceReactionSeverity severity,
+      @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
+          ReactionSeverity severity,
       CodeableConcept exposureRoute,
       List<Annotation> note}) = _$_AllergyIntoleranceReaction;
 
@@ -2548,7 +2572,8 @@ abstract class _AllergyIntoleranceReaction
   @override
   FhirDateTime get onset;
   @override
-  AllergyIntoleranceReactionSeverity get severity;
+  @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
+  ReactionSeverity get severity;
   @override
   CodeableConcept get exposureRoute;
   @override
@@ -2572,10 +2597,12 @@ class _$AdverseEventTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
-      AdverseEventActuality actuality,
+      @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+          AdverseEventActuality actuality,
       List<CodeableConcept> category,
       CodeableConcept event,
       Reference subject,
@@ -2641,6 +2668,7 @@ mixin _$AdverseEvent {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   Identifier get identifier;
+  @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
   AdverseEventActuality get actuality;
   List<CodeableConcept> get category;
   CodeableConcept get event;
@@ -2676,10 +2704,12 @@ abstract class $AdverseEventCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
-      AdverseEventActuality actuality,
+      @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+          AdverseEventActuality actuality,
       List<CodeableConcept> category,
       CodeableConcept event,
       Reference subject,
@@ -2935,10 +2965,12 @@ abstract class _$AdverseEventCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
-      AdverseEventActuality actuality,
+      @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+          AdverseEventActuality actuality,
       List<CodeableConcept> category,
       CodeableConcept event,
       Reference subject,
@@ -3096,7 +3128,7 @@ class _$_AdverseEvent implements _AdverseEvent {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.actuality,
+      @JsonKey(unknownEnumValue: AdverseEventActuality.unknown) this.actuality,
       this.category,
       this.event,
       this.subject,
@@ -3139,6 +3171,7 @@ class _$_AdverseEvent implements _AdverseEvent {
   @override
   final Identifier identifier;
   @override
+  @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
   final AdverseEventActuality actuality;
   @override
   final List<CodeableConcept> category;
@@ -3309,10 +3342,12 @@ abstract class _AdverseEvent implements AdverseEvent {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
-      AdverseEventActuality actuality,
+      @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+          AdverseEventActuality actuality,
       List<CodeableConcept> category,
       CodeableConcept event,
       Reference subject,
@@ -3355,6 +3390,7 @@ abstract class _AdverseEvent implements AdverseEvent {
   @override
   Identifier get identifier;
   @override
+  @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
   AdverseEventActuality get actuality;
   @override
   List<CodeableConcept> get category;
@@ -3943,12 +3979,14 @@ class _$FamilyMemberHistoryTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      FamilyMemberHistoryStatus status,
+      @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+          FamilyMemberHistoryStatus status,
       CodeableConcept dataAbsentReason,
       Reference patient,
       FhirDateTime date,
@@ -4024,6 +4062,7 @@ mixin _$FamilyMemberHistory {
   List<Identifier> get identifier;
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
+  @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
   FamilyMemberHistoryStatus get status;
   CodeableConcept get dataAbsentReason;
   Reference get patient;
@@ -4062,12 +4101,14 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      FamilyMemberHistoryStatus status,
+      @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+          FamilyMemberHistoryStatus status,
       CodeableConcept dataAbsentReason,
       Reference patient,
       FhirDateTime date,
@@ -4344,12 +4385,14 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      FamilyMemberHistoryStatus status,
+      @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+          FamilyMemberHistoryStatus status,
       CodeableConcept dataAbsentReason,
       Reference patient,
       FhirDateTime date,
@@ -4530,7 +4573,7 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
       this.identifier,
       this.instantiatesCanonical,
       this.instantiatesUri,
-      this.status,
+      @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown) this.status,
       this.dataAbsentReason,
       this.patient,
       this.date,
@@ -4581,6 +4624,7 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
   @override
   final List<FhirUri> instantiatesUri;
   @override
+  @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
   final FamilyMemberHistoryStatus status;
   @override
   final CodeableConcept dataAbsentReason;
@@ -4767,12 +4811,14 @@ abstract class _FamilyMemberHistory implements FamilyMemberHistory {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
-      FamilyMemberHistoryStatus status,
+      @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+          FamilyMemberHistoryStatus status,
       CodeableConcept dataAbsentReason,
       Reference patient,
       FhirDateTime date,
@@ -4823,6 +4869,7 @@ abstract class _FamilyMemberHistory implements FamilyMemberHistory {
   @override
   List<FhirUri> get instantiatesUri;
   @override
+  @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
   FamilyMemberHistoryStatus get status;
   @override
   CodeableConcept get dataAbsentReason;
@@ -5301,10 +5348,12 @@ class _$DetectedIssueTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: DetectedIssueStatus.unknown)
+          DetectedIssueStatus status,
       CodeableConcept code,
       DetectedIssueSeverity severity,
       Reference patient,
@@ -5356,7 +5405,8 @@ mixin _$DetectedIssue {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: DetectedIssueStatus.unknown)
+  DetectedIssueStatus get status;
   CodeableConcept get code;
   DetectedIssueSeverity get severity;
   Reference get patient;
@@ -5384,10 +5434,12 @@ abstract class $DetectedIssueCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: DetectedIssueStatus.unknown)
+          DetectedIssueStatus status,
       CodeableConcept code,
       DetectedIssueSeverity severity,
       Reference patient,
@@ -5461,7 +5513,7 @@ class _$DetectedIssueCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as DetectedIssueStatus,
       code: code == freezed ? _value.code : code as CodeableConcept,
       severity: severity == freezed
           ? _value.severity
@@ -5560,10 +5612,12 @@ abstract class _$DetectedIssueCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: DetectedIssueStatus.unknown)
+          DetectedIssueStatus status,
       CodeableConcept code,
       DetectedIssueSeverity severity,
       Reference patient,
@@ -5645,7 +5699,7 @@ class __$DetectedIssueCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as DetectedIssueStatus,
       code: code == freezed ? _value.code : code as CodeableConcept,
       severity: severity == freezed
           ? _value.severity
@@ -5683,7 +5737,7 @@ class _$_DetectedIssue implements _DetectedIssue {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: DetectedIssueStatus.unknown) this.status,
       this.code,
       this.severity,
       this.patient,
@@ -5720,7 +5774,8 @@ class _$_DetectedIssue implements _DetectedIssue {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: DetectedIssueStatus.unknown)
+  final DetectedIssueStatus status;
   @override
   final CodeableConcept code;
   @override
@@ -5853,10 +5908,12 @@ abstract class _DetectedIssue implements DetectedIssue {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: DetectedIssueStatus.unknown)
+          DetectedIssueStatus status,
       CodeableConcept code,
       DetectedIssueSeverity severity,
       Reference patient,
@@ -5893,7 +5950,8 @@ abstract class _DetectedIssue implements DetectedIssue {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: DetectedIssueStatus.unknown)
+  DetectedIssueStatus get status;
   @override
   CodeableConcept get code;
   @override
@@ -7875,14 +7933,16 @@ class _$ProcedureTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: ProcedureStatus.unknown)
+          ProcedureStatus status,
       CodeableConcept statusReason,
       CodeableConcept category,
       CodeableConcept code,
@@ -7974,7 +8034,8 @@ mixin _$Procedure {
   List<FhirUri> get instantiatesUri;
   List<Reference> get basedOn;
   List<Reference> get partOf;
-  Code get status;
+  @JsonKey(unknownEnumValue: ProcedureStatus.unknown)
+  ProcedureStatus get status;
   CodeableConcept get statusReason;
   CodeableConcept get category;
   CodeableConcept get code;
@@ -8017,14 +8078,16 @@ abstract class $ProcedureCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: ProcedureStatus.unknown)
+          ProcedureStatus status,
       CodeableConcept statusReason,
       CodeableConcept category,
       CodeableConcept code,
@@ -8149,7 +8212,7 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
           : instantiatesUri as List<FhirUri>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as ProcedureStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
@@ -8366,14 +8429,16 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: ProcedureStatus.unknown)
+          ProcedureStatus status,
       CodeableConcept statusReason,
       CodeableConcept category,
       CodeableConcept code,
@@ -8513,7 +8578,7 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as ProcedureStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
@@ -8594,7 +8659,7 @@ class _$_Procedure implements _Procedure {
       this.instantiatesUri,
       this.basedOn,
       this.partOf,
-      this.status,
+      @JsonKey(unknownEnumValue: ProcedureStatus.unknown) this.status,
       this.statusReason,
       this.category,
       this.code,
@@ -8655,7 +8720,8 @@ class _$_Procedure implements _Procedure {
   @override
   final List<Reference> partOf;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: ProcedureStatus.unknown)
+  final ProcedureStatus status;
   @override
   final CodeableConcept statusReason;
   @override
@@ -8868,14 +8934,16 @@ abstract class _Procedure implements Procedure {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: ProcedureStatus.unknown)
+          ProcedureStatus status,
       CodeableConcept statusReason,
       CodeableConcept category,
       CodeableConcept code,
@@ -8936,7 +9004,8 @@ abstract class _Procedure implements Procedure {
   @override
   List<Reference> get partOf;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: ProcedureStatus.unknown)
+  ProcedureStatus get status;
   @override
   CodeableConcept get statusReason;
   @override

@@ -55,6 +55,7 @@ abstract class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String path,
+    //ToDo: not sure how to do unknown in list of Enums
     List<ElementDefinitionRepresentation> representation,
     String sliceName,
     bool sliceIsConstraining,
@@ -262,27 +263,26 @@ abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    List<ElementDefinitionDiscriminator> discriminator,
+    List<SlicingDiscriminator> discriminator,
     String description,
     bool ordered,
-    ElementDefinitionSlicingRules rules,
+    @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules,
   }) = _ElementDefinitionSlicing;
   factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionSlicingFromJson(json);
 }
 
 @freezed
-abstract class ElementDefinitionDiscriminator
-    with _$ElementDefinitionDiscriminator {
-  const factory ElementDefinitionDiscriminator({
+abstract class SlicingDiscriminator with _$SlicingDiscriminator {
+  const factory SlicingDiscriminator({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    ElementDefinitionDiscriminatorType type,
+    DiscriminatorType type,
     String path,
-  }) = _ElementDefinitionDiscriminator;
-  factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionDiscriminatorFromJson(json);
+  }) = _SlicingDiscriminator;
+  factory SlicingDiscriminator.fromJson(Map<String, dynamic> json) =>
+      _$SlicingDiscriminatorFromJson(json);
 }
 
 @freezed
@@ -308,8 +308,9 @@ abstract class ElementDefinitionType with _$ElementDefinitionType {
     FhirUri code,
     List<Canonical> profile,
     List<Canonical> targetProfile,
-    List<ElementDefinitionTypeAggregation> aggregation,
-    ElementDefinitionTypeVersioning versioning,
+    List<TypeAggregation> aggregation,
+    @JsonKey(unknownEnumValue: TypeVersioning.unknown)
+        TypeVersioning versioning,
   }) = _ElementDefinitionType;
   factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionTypeFromJson(json);
@@ -385,7 +386,8 @@ abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     List<FhirExtension> modifierExtension,
     Id key,
     String requirements,
-    ElementDefinitionConstraintSeverity severity,
+    @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
+        ConstraintSeverity severity,
     String human,
     String expression,
     String xpath,
@@ -401,7 +403,8 @@ abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    ElementDefinitionBindingStrength strength,
+    @JsonKey(unknownEnumValue: BindingStrength.unknown)
+        BindingStrength strength,
     String description,
     Canonical valueSet,
   }) = _ElementDefinitionBinding;
@@ -505,7 +508,7 @@ abstract class Narrative with _$Narrative {
   const factory Narrative({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    NarrativeStatus status,
+    @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus status,
     String div,
   }) = _Narrative;
   factory Narrative.fromJson(Map<String, dynamic> json) =>

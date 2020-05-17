@@ -1825,7 +1825,7 @@ class _$SpecimenTearOff {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Identifier accessionIdentifier,
-      SpecimenStatus status,
+      @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
       CodeableConcept type,
       Reference subject,
       FhirDateTime receivedTime,
@@ -1879,6 +1879,7 @@ mixin _$Specimen {
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Identifier get accessionIdentifier;
+  @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
   SpecimenStatus get status;
   CodeableConcept get type;
   Reference get subject;
@@ -1910,7 +1911,7 @@ abstract class $SpecimenCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Identifier accessionIdentifier,
-      SpecimenStatus status,
+      @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
       CodeableConcept type,
       Reference subject,
       FhirDateTime receivedTime,
@@ -2088,7 +2089,7 @@ abstract class _$SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Identifier accessionIdentifier,
-      SpecimenStatus status,
+      @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
       CodeableConcept type,
       Reference subject,
       FhirDateTime receivedTime,
@@ -2211,7 +2212,7 @@ class _$_Specimen implements _Specimen {
       this.modifierExtension,
       this.identifier,
       this.accessionIdentifier,
-      this.status,
+      @JsonKey(unknownEnumValue: SpecimenStatus.unknown) this.status,
       this.type,
       this.subject,
       this.receivedTime,
@@ -2250,6 +2251,7 @@ class _$_Specimen implements _Specimen {
   @override
   final Identifier accessionIdentifier;
   @override
+  @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
   final SpecimenStatus status;
   @override
   final CodeableConcept type;
@@ -2391,7 +2393,7 @@ abstract class _Specimen implements Specimen {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Identifier accessionIdentifier,
-      SpecimenStatus status,
+      @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
       CodeableConcept type,
       Reference subject,
       FhirDateTime receivedTime,
@@ -2429,6 +2431,7 @@ abstract class _Specimen implements Specimen {
   @override
   Identifier get accessionIdentifier;
   @override
+  @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
   SpecimenStatus get status;
   @override
   CodeableConcept get type;
@@ -3670,10 +3673,12 @@ class _$MolecularSequenceTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      MolecularSequenceType type,
+      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
+          MolecularSequenceType type,
       int coordinateSystem,
       Reference patient,
       Reference specimen,
@@ -3733,6 +3738,7 @@ mixin _$MolecularSequence {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
   MolecularSequenceType get type;
   int get coordinateSystem;
   Reference get patient;
@@ -3765,10 +3771,12 @@ abstract class $MolecularSequenceCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      MolecularSequenceType type,
+      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
+          MolecularSequenceType type,
       int coordinateSystem,
       Reference patient,
       Reference specimen,
@@ -3981,10 +3989,12 @@ abstract class _$MolecularSequenceCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      MolecularSequenceType type,
+      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
+          MolecularSequenceType type,
       int coordinateSystem,
       Reference patient,
       Reference specimen,
@@ -4125,7 +4135,7 @@ class _$_MolecularSequence implements _MolecularSequence {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.type,
+      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown) this.type,
       this.coordinateSystem,
       this.patient,
       this.specimen,
@@ -4166,6 +4176,7 @@ class _$_MolecularSequence implements _MolecularSequence {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
   final MolecularSequenceType type;
   @override
   final int coordinateSystem;
@@ -4323,10 +4334,12 @@ abstract class _MolecularSequence implements MolecularSequence {
           Code language,
           Narrative text,
           List<dynamic> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> fhirExtension,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
-          MolecularSequenceType type,
+          @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
+              MolecularSequenceType type,
           int coordinateSystem,
           Reference patient,
           Reference specimen,
@@ -4368,6 +4381,7 @@ abstract class _MolecularSequence implements MolecularSequence {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
   MolecularSequenceType get type;
   @override
   int get coordinateSystem;
@@ -4411,15 +4425,18 @@ class _$MolecularSequenceReferenceSeqTearOff {
 
   _MolecularSequenceReferenceSeq call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept chromosome,
       String genomeBuild,
-      MolecularSequenceReferenceSeqOrientation orientation,
+      @JsonKey(unknownEnumValue: ReferenceSeqOrientation.unknown)
+          ReferenceSeqOrientation orientation,
       CodeableConcept referenceSeqId,
       Reference referenceSeqPointer,
       String referenceSeqString,
-      MolecularSequenceReferenceSeqStrand strand,
+      @JsonKey(unknownEnumValue: ReferenceSeqStrand.unknown)
+          ReferenceSeqStrand strand,
       int windowStart,
       int windowEnd}) {
     return _MolecularSequenceReferenceSeq(
@@ -4449,11 +4466,13 @@ mixin _$MolecularSequenceReferenceSeq {
   List<FhirExtension> get modifierExtension;
   CodeableConcept get chromosome;
   String get genomeBuild;
-  MolecularSequenceReferenceSeqOrientation get orientation;
+  @JsonKey(unknownEnumValue: ReferenceSeqOrientation.unknown)
+  ReferenceSeqOrientation get orientation;
   CodeableConcept get referenceSeqId;
   Reference get referenceSeqPointer;
   String get referenceSeqString;
-  MolecularSequenceReferenceSeqStrand get strand;
+  @JsonKey(unknownEnumValue: ReferenceSeqStrand.unknown)
+  ReferenceSeqStrand get strand;
   int get windowStart;
   int get windowEnd;
 
@@ -4469,15 +4488,18 @@ abstract class $MolecularSequenceReferenceSeqCopyWith<$Res> {
       _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept chromosome,
       String genomeBuild,
-      MolecularSequenceReferenceSeqOrientation orientation,
+      @JsonKey(unknownEnumValue: ReferenceSeqOrientation.unknown)
+          ReferenceSeqOrientation orientation,
       CodeableConcept referenceSeqId,
       Reference referenceSeqPointer,
       String referenceSeqString,
-      MolecularSequenceReferenceSeqStrand strand,
+      @JsonKey(unknownEnumValue: ReferenceSeqStrand.unknown)
+          ReferenceSeqStrand strand,
       int windowStart,
       int windowEnd});
 
@@ -4524,7 +4546,7 @@ class _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
           genomeBuild == freezed ? _value.genomeBuild : genomeBuild as String,
       orientation: orientation == freezed
           ? _value.orientation
-          : orientation as MolecularSequenceReferenceSeqOrientation,
+          : orientation as ReferenceSeqOrientation,
       referenceSeqId: referenceSeqId == freezed
           ? _value.referenceSeqId
           : referenceSeqId as CodeableConcept,
@@ -4534,9 +4556,7 @@ class _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
       referenceSeqString: referenceSeqString == freezed
           ? _value.referenceSeqString
           : referenceSeqString as String,
-      strand: strand == freezed
-          ? _value.strand
-          : strand as MolecularSequenceReferenceSeqStrand,
+      strand: strand == freezed ? _value.strand : strand as ReferenceSeqStrand,
       windowStart:
           windowStart == freezed ? _value.windowStart : windowStart as int,
       windowEnd: windowEnd == freezed ? _value.windowEnd : windowEnd as int,
@@ -4583,15 +4603,18 @@ abstract class _$MolecularSequenceReferenceSeqCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept chromosome,
       String genomeBuild,
-      MolecularSequenceReferenceSeqOrientation orientation,
+      @JsonKey(unknownEnumValue: ReferenceSeqOrientation.unknown)
+          ReferenceSeqOrientation orientation,
       CodeableConcept referenceSeqId,
       Reference referenceSeqPointer,
       String referenceSeqString,
-      MolecularSequenceReferenceSeqStrand strand,
+      @JsonKey(unknownEnumValue: ReferenceSeqStrand.unknown)
+          ReferenceSeqStrand strand,
       int windowStart,
       int windowEnd});
 
@@ -4645,7 +4668,7 @@ class __$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
           genomeBuild == freezed ? _value.genomeBuild : genomeBuild as String,
       orientation: orientation == freezed
           ? _value.orientation
-          : orientation as MolecularSequenceReferenceSeqOrientation,
+          : orientation as ReferenceSeqOrientation,
       referenceSeqId: referenceSeqId == freezed
           ? _value.referenceSeqId
           : referenceSeqId as CodeableConcept,
@@ -4655,9 +4678,7 @@ class __$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
       referenceSeqString: referenceSeqString == freezed
           ? _value.referenceSeqString
           : referenceSeqString as String,
-      strand: strand == freezed
-          ? _value.strand
-          : strand as MolecularSequenceReferenceSeqStrand,
+      strand: strand == freezed ? _value.strand : strand as ReferenceSeqStrand,
       windowStart:
           windowStart == freezed ? _value.windowStart : windowStart as int,
       windowEnd: windowEnd == freezed ? _value.windowEnd : windowEnd as int,
@@ -4670,15 +4691,18 @@ class _$_MolecularSequenceReferenceSeq
     implements _MolecularSequenceReferenceSeq {
   const _$_MolecularSequenceReferenceSeq(
       {this.id,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.chromosome,
       this.genomeBuild,
-      this.orientation,
+      @JsonKey(unknownEnumValue: ReferenceSeqOrientation.unknown)
+          this.orientation,
       this.referenceSeqId,
       this.referenceSeqPointer,
       this.referenceSeqString,
-      this.strand,
+      @JsonKey(unknownEnumValue: ReferenceSeqStrand.unknown)
+          this.strand,
       this.windowStart,
       this.windowEnd});
 
@@ -4698,7 +4722,8 @@ class _$_MolecularSequenceReferenceSeq
   @override
   final String genomeBuild;
   @override
-  final MolecularSequenceReferenceSeqOrientation orientation;
+  @JsonKey(unknownEnumValue: ReferenceSeqOrientation.unknown)
+  final ReferenceSeqOrientation orientation;
   @override
   final CodeableConcept referenceSeqId;
   @override
@@ -4706,7 +4731,8 @@ class _$_MolecularSequenceReferenceSeq
   @override
   final String referenceSeqString;
   @override
-  final MolecularSequenceReferenceSeqStrand strand;
+  @JsonKey(unknownEnumValue: ReferenceSeqStrand.unknown)
+  final ReferenceSeqStrand strand;
   @override
   final int windowStart;
   @override
@@ -4788,15 +4814,18 @@ abstract class _MolecularSequenceReferenceSeq
     implements MolecularSequenceReferenceSeq {
   const factory _MolecularSequenceReferenceSeq(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept chromosome,
       String genomeBuild,
-      MolecularSequenceReferenceSeqOrientation orientation,
+      @JsonKey(unknownEnumValue: ReferenceSeqOrientation.unknown)
+          ReferenceSeqOrientation orientation,
       CodeableConcept referenceSeqId,
       Reference referenceSeqPointer,
       String referenceSeqString,
-      MolecularSequenceReferenceSeqStrand strand,
+      @JsonKey(unknownEnumValue: ReferenceSeqStrand.unknown)
+          ReferenceSeqStrand strand,
       int windowStart,
       int windowEnd}) = _$_MolecularSequenceReferenceSeq;
 
@@ -4815,7 +4844,8 @@ abstract class _MolecularSequenceReferenceSeq
   @override
   String get genomeBuild;
   @override
-  MolecularSequenceReferenceSeqOrientation get orientation;
+  @JsonKey(unknownEnumValue: ReferenceSeqOrientation.unknown)
+  ReferenceSeqOrientation get orientation;
   @override
   CodeableConcept get referenceSeqId;
   @override
@@ -4823,7 +4853,8 @@ abstract class _MolecularSequenceReferenceSeq
   @override
   String get referenceSeqString;
   @override
-  MolecularSequenceReferenceSeqStrand get strand;
+  @JsonKey(unknownEnumValue: ReferenceSeqStrand.unknown)
+  ReferenceSeqStrand get strand;
   @override
   int get windowStart;
   @override
@@ -5168,7 +5199,7 @@ class _$MolecularSequenceQualityTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      MolecularSequenceQualityType type,
+      @JsonKey(unknownEnumValue: QualityType.unknown) QualityType type,
       CodeableConcept standardSequence,
       int start,
       int end,
@@ -5214,7 +5245,8 @@ mixin _$MolecularSequenceQuality {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  MolecularSequenceQualityType get type;
+  @JsonKey(unknownEnumValue: QualityType.unknown)
+  QualityType get type;
   CodeableConcept get standardSequence;
   int get start;
   int get end;
@@ -5242,7 +5274,7 @@ abstract class $MolecularSequenceQualityCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      MolecularSequenceQualityType type,
+      @JsonKey(unknownEnumValue: QualityType.unknown) QualityType type,
       CodeableConcept standardSequence,
       int start,
       int end,
@@ -5301,8 +5333,7 @@ class _$MolecularSequenceQualityCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type:
-          type == freezed ? _value.type : type as MolecularSequenceQualityType,
+      type: type == freezed ? _value.type : type as QualityType,
       standardSequence: standardSequence == freezed
           ? _value.standardSequence
           : standardSequence as CodeableConcept,
@@ -5373,7 +5404,7 @@ abstract class _$MolecularSequenceQualityCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      MolecularSequenceQualityType type,
+      @JsonKey(unknownEnumValue: QualityType.unknown) QualityType type,
       CodeableConcept standardSequence,
       int start,
       int end,
@@ -5439,8 +5470,7 @@ class __$MolecularSequenceQualityCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type:
-          type == freezed ? _value.type : type as MolecularSequenceQualityType,
+      type: type == freezed ? _value.type : type as QualityType,
       standardSequence: standardSequence == freezed
           ? _value.standardSequence
           : standardSequence as CodeableConcept,
@@ -5467,7 +5497,7 @@ class _$_MolecularSequenceQuality implements _MolecularSequenceQuality {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.type,
+      @JsonKey(unknownEnumValue: QualityType.unknown) this.type,
       this.standardSequence,
       this.start,
       this.end,
@@ -5494,7 +5524,8 @@ class _$_MolecularSequenceQuality implements _MolecularSequenceQuality {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final MolecularSequenceQualityType type;
+  @JsonKey(unknownEnumValue: QualityType.unknown)
+  final QualityType type;
   @override
   final CodeableConcept standardSequence;
   @override
@@ -5617,7 +5648,7 @@ abstract class _MolecularSequenceQuality implements MolecularSequenceQuality {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      MolecularSequenceQualityType type,
+      @JsonKey(unknownEnumValue: QualityType.unknown) QualityType type,
       CodeableConcept standardSequence,
       int start,
       int end,
@@ -5644,7 +5675,8 @@ abstract class _MolecularSequenceQuality implements MolecularSequenceQuality {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  MolecularSequenceQualityType get type;
+  @JsonKey(unknownEnumValue: QualityType.unknown)
+  QualityType get type;
   @override
   CodeableConcept get standardSequence;
   @override
@@ -6009,7 +6041,7 @@ class _$MolecularSequenceRepositoryTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      MolecularSequenceRepositoryType type,
+      @JsonKey(unknownEnumValue: RepositoryType.unknown) RepositoryType type,
       FhirUri url,
       String name,
       String datasetId,
@@ -6037,7 +6069,8 @@ mixin _$MolecularSequenceRepository {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  MolecularSequenceRepositoryType get type;
+  @JsonKey(unknownEnumValue: RepositoryType.unknown)
+  RepositoryType get type;
   FhirUri get url;
   String get name;
   String get datasetId;
@@ -6058,7 +6091,7 @@ abstract class $MolecularSequenceRepositoryCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      MolecularSequenceRepositoryType type,
+      @JsonKey(unknownEnumValue: RepositoryType.unknown) RepositoryType type,
       FhirUri url,
       String name,
       String datasetId,
@@ -6094,9 +6127,7 @@ class _$MolecularSequenceRepositoryCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed
-          ? _value.type
-          : type as MolecularSequenceRepositoryType,
+      type: type == freezed ? _value.type : type as RepositoryType,
       url: url == freezed ? _value.url : url as FhirUri,
       name: name == freezed ? _value.name : name as String,
       datasetId: datasetId == freezed ? _value.datasetId : datasetId as String,
@@ -6119,7 +6150,7 @@ abstract class _$MolecularSequenceRepositoryCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      MolecularSequenceRepositoryType type,
+      @JsonKey(unknownEnumValue: RepositoryType.unknown) RepositoryType type,
       FhirUri url,
       String name,
       String datasetId,
@@ -6159,9 +6190,7 @@ class __$MolecularSequenceRepositoryCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed
-          ? _value.type
-          : type as MolecularSequenceRepositoryType,
+      type: type == freezed ? _value.type : type as RepositoryType,
       url: url == freezed ? _value.url : url as FhirUri,
       name: name == freezed ? _value.name : name as String,
       datasetId: datasetId == freezed ? _value.datasetId : datasetId as String,
@@ -6179,7 +6208,7 @@ class _$_MolecularSequenceRepository implements _MolecularSequenceRepository {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.type,
+      @JsonKey(unknownEnumValue: RepositoryType.unknown) this.type,
       this.url,
       this.name,
       this.datasetId,
@@ -6197,7 +6226,8 @@ class _$_MolecularSequenceRepository implements _MolecularSequenceRepository {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final MolecularSequenceRepositoryType type;
+  @JsonKey(unknownEnumValue: RepositoryType.unknown)
+  final RepositoryType type;
   @override
   final FhirUri url;
   @override
@@ -6273,7 +6303,7 @@ abstract class _MolecularSequenceRepository
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      MolecularSequenceRepositoryType type,
+      @JsonKey(unknownEnumValue: RepositoryType.unknown) RepositoryType type,
       FhirUri url,
       String name,
       String datasetId,
@@ -6291,7 +6321,8 @@ abstract class _MolecularSequenceRepository
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  MolecularSequenceRepositoryType get type;
+  @JsonKey(unknownEnumValue: RepositoryType.unknown)
+  RepositoryType get type;
   @override
   FhirUri get url;
   @override
@@ -7094,12 +7125,14 @@ class _$ObservationTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      ObservationStatus status,
+      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
+          ObservationStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -7201,6 +7234,7 @@ mixin _$Observation {
   List<Identifier> get identifier;
   List<Reference> get basedOn;
   List<Reference> get partOf;
+  @JsonKey(unknownEnumValue: ObservationStatus.unknown)
   ObservationStatus get status;
   List<CodeableConcept> get category;
   CodeableConcept get code;
@@ -7252,12 +7286,14 @@ abstract class $ObservationCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      ObservationStatus status,
+      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
+          ObservationStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -7664,12 +7700,14 @@ abstract class _$ObservationCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      ObservationStatus status,
+      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
+          ObservationStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -7917,7 +7955,7 @@ class _$_Observation implements _Observation {
       this.identifier,
       this.basedOn,
       this.partOf,
-      this.status,
+      @JsonKey(unknownEnumValue: ObservationStatus.unknown) this.status,
       this.category,
       this.code,
       this.subject,
@@ -7981,6 +8019,7 @@ class _$_Observation implements _Observation {
   @override
   final List<Reference> partOf;
   @override
+  @JsonKey(unknownEnumValue: ObservationStatus.unknown)
   final ObservationStatus status;
   @override
   final List<CodeableConcept> category;
@@ -8218,12 +8257,14 @@ abstract class _Observation implements Observation {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      ObservationStatus status,
+      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
+          ObservationStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -8287,6 +8328,7 @@ abstract class _Observation implements Observation {
   @override
   List<Reference> get partOf;
   @override
+  @JsonKey(unknownEnumValue: ObservationStatus.unknown)
   ObservationStatus get status;
   @override
   List<CodeableConcept> get category;
@@ -9877,13 +9919,15 @@ class _$QuestionnaireResponseTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
       Canonical questionnaire,
-      QuestionnaireResponseStatus status,
+      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
+          QuestionnaireResponseStatus status,
       Reference subject,
       Reference encounter,
       FhirDateTime authored,
@@ -9933,6 +9977,7 @@ mixin _$QuestionnaireResponse {
   List<Reference> get basedOn;
   List<Reference> get partOf;
   Canonical get questionnaire;
+  @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
   QuestionnaireResponseStatus get status;
   Reference get subject;
   Reference get encounter;
@@ -9957,13 +10002,15 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
       Canonical questionnaire,
-      QuestionnaireResponseStatus status,
+      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
+          QuestionnaireResponseStatus status,
       Reference subject,
       Reference encounter,
       FhirDateTime authored,
@@ -10138,13 +10185,15 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
       Canonical questionnaire,
-      QuestionnaireResponseStatus status,
+      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
+          QuestionnaireResponseStatus status,
       Reference subject,
       Reference encounter,
       FhirDateTime authored,
@@ -10254,13 +10303,15 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.basedOn,
       this.partOf,
       this.questionnaire,
-      this.status,
+      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
+          this.status,
       this.subject,
       this.encounter,
       this.authored,
@@ -10299,6 +10350,7 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
   @override
   final Canonical questionnaire;
   @override
+  @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
   final QuestionnaireResponseStatus status;
   @override
   final Reference subject;
@@ -10420,13 +10472,15 @@ abstract class _QuestionnaireResponse implements QuestionnaireResponse {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
       Canonical questionnaire,
-      QuestionnaireResponseStatus status,
+      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
+          QuestionnaireResponseStatus status,
       Reference subject,
       Reference encounter,
       FhirDateTime authored,
@@ -10465,6 +10519,7 @@ abstract class _QuestionnaireResponse implements QuestionnaireResponse {
   @override
   Canonical get questionnaire;
   @override
+  @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
   QuestionnaireResponseStatus get status;
   @override
   Reference get subject;
@@ -11307,11 +11362,13 @@ class _$DiagnosticReportTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
-      DiagnosticReportStatus status,
+      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
+          DiagnosticReportStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -11377,6 +11434,7 @@ mixin _$DiagnosticReport {
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   List<Reference> get basedOn;
+  @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
   DiagnosticReportStatus get status;
   List<CodeableConcept> get category;
   CodeableConcept get code;
@@ -11411,11 +11469,13 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
-      DiagnosticReportStatus status,
+      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
+          DiagnosticReportStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -11620,11 +11680,13 @@ abstract class _$DiagnosticReportCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
-      DiagnosticReportStatus status,
+      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
+          DiagnosticReportStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -11777,7 +11839,7 @@ class _$_DiagnosticReport implements _DiagnosticReport {
       this.modifierExtension,
       this.identifier,
       this.basedOn,
-      this.status,
+      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown) this.status,
       this.category,
       this.code,
       this.subject,
@@ -11822,6 +11884,7 @@ class _$_DiagnosticReport implements _DiagnosticReport {
   @override
   final List<Reference> basedOn;
   @override
+  @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
   final DiagnosticReportStatus status;
   @override
   final List<CodeableConcept> category;
@@ -11989,11 +12052,13 @@ abstract class _DiagnosticReport implements DiagnosticReport {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
-      DiagnosticReportStatus status,
+      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
+          DiagnosticReportStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -12038,6 +12103,7 @@ abstract class _DiagnosticReport implements DiagnosticReport {
   @override
   List<Reference> get basedOn;
   @override
+  @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
   DiagnosticReportStatus get status;
   @override
   List<CodeableConcept> get category;
@@ -12331,7 +12397,7 @@ class _$MediaTearOff {
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MediaStatus.unknown) MediaStatus status,
       CodeableConcept type,
       CodeableConcept modality,
       CodeableConcept view,
@@ -12405,7 +12471,8 @@ mixin _$Media {
   List<Identifier> get identifier;
   List<Reference> get basedOn;
   List<Reference> get partOf;
-  Code get status;
+  @JsonKey(unknownEnumValue: MediaStatus.unknown)
+  MediaStatus get status;
   CodeableConcept get type;
   CodeableConcept get modality;
   CodeableConcept get view;
@@ -12446,7 +12513,7 @@ abstract class $MediaCopyWith<$Res> {
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MediaStatus.unknown) MediaStatus status,
       CodeableConcept type,
       CodeableConcept modality,
       CodeableConcept view,
@@ -12547,7 +12614,7 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
           : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as MediaStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       modality:
           modality == freezed ? _value.modality : modality as CodeableConcept,
@@ -12718,7 +12785,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MediaStatus.unknown) MediaStatus status,
       CodeableConcept type,
       CodeableConcept modality,
       CodeableConcept view,
@@ -12832,7 +12899,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as MediaStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       modality:
           modality == freezed ? _value.modality : modality as CodeableConcept,
@@ -12881,7 +12948,7 @@ class _$_Media implements _Media {
       this.identifier,
       this.basedOn,
       this.partOf,
-      this.status,
+      @JsonKey(unknownEnumValue: MediaStatus.unknown) this.status,
       this.type,
       this.modality,
       this.view,
@@ -12931,7 +12998,8 @@ class _$_Media implements _Media {
   @override
   final List<Reference> partOf;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: MediaStatus.unknown)
+  final MediaStatus status;
   @override
   final CodeableConcept type;
   @override
@@ -13117,7 +13185,7 @@ abstract class _Media implements Media {
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MediaStatus.unknown) MediaStatus status,
       CodeableConcept type,
       CodeableConcept modality,
       CodeableConcept view,
@@ -13166,7 +13234,8 @@ abstract class _Media implements Media {
   @override
   List<Reference> get partOf;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: MediaStatus.unknown)
+  MediaStatus get status;
   @override
   CodeableConcept get type;
   @override

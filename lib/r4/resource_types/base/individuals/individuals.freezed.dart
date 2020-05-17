@@ -27,7 +27,7 @@ class _$GroupTearOff {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       bool active,
-      GroupType type,
+      @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
       bool actual,
       CodeableConcept code,
       String name,
@@ -75,6 +75,7 @@ mixin _$Group {
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   bool get active;
+  @JsonKey(unknownEnumValue: GroupType.unknown)
   GroupType get type;
   bool get actual;
   CodeableConcept get code;
@@ -103,7 +104,7 @@ abstract class $GroupCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       bool active,
-      GroupType type,
+      @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
       bool actual,
       CodeableConcept code,
       String name,
@@ -242,7 +243,7 @@ abstract class _$GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       bool active,
-      GroupType type,
+      @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
       bool actual,
       CodeableConcept code,
       String name,
@@ -344,7 +345,7 @@ class _$_Group implements _Group {
       this.modifierExtension,
       this.identifier,
       this.active,
-      this.type,
+      @JsonKey(unknownEnumValue: GroupType.unknown) this.type,
       this.actual,
       this.code,
       this.name,
@@ -380,6 +381,7 @@ class _$_Group implements _Group {
   @override
   final bool active;
   @override
+  @JsonKey(unknownEnumValue: GroupType.unknown)
   final GroupType type;
   @override
   final bool actual;
@@ -501,7 +503,7 @@ abstract class _Group implements Group {
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       bool active,
-      GroupType type,
+      @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
       bool actual,
       CodeableConcept code,
       String name,
@@ -536,6 +538,7 @@ abstract class _Group implements Group {
   @override
   bool get active;
   @override
+  @JsonKey(unknownEnumValue: GroupType.unknown)
   GroupType get type;
   @override
   bool get actual;
@@ -1268,7 +1271,7 @@ class _$PatientTearOff {
       bool active,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      PatientGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       bool deceasedBoolean,
       FhirDateTime deceasedDateTime,
@@ -1332,7 +1335,8 @@ mixin _$Patient {
   bool get active;
   List<HumanName> get name;
   List<ContactPoint> get telecom;
-  PatientGender get gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender get gender;
   Date get birthDate;
   bool get deceasedBoolean;
   FhirDateTime get deceasedDateTime;
@@ -1368,7 +1372,7 @@ abstract class $PatientCopyWith<$Res> {
       bool active,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      PatientGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       bool deceasedBoolean,
       FhirDateTime deceasedDateTime,
@@ -1452,7 +1456,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       name: name == freezed ? _value.name : name as List<HumanName>,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
-      gender: gender == freezed ? _value.gender : gender as PatientGender,
+      gender: gender == freezed ? _value.gender : gender as PersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
       deceasedBoolean: deceasedBoolean == freezed
           ? _value.deceasedBoolean
@@ -1545,7 +1549,7 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       bool active,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      PatientGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       bool deceasedBoolean,
       FhirDateTime deceasedDateTime,
@@ -1634,7 +1638,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as List<HumanName>,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
-      gender: gender == freezed ? _value.gender : gender as PatientGender,
+      gender: gender == freezed ? _value.gender : gender as PersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
       deceasedBoolean: deceasedBoolean == freezed
           ? _value.deceasedBoolean
@@ -1685,7 +1689,7 @@ class _$_Patient implements _Patient {
       this.active,
       this.name,
       this.telecom,
-      this.gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) this.gender,
       this.birthDate,
       this.deceasedBoolean,
       this.deceasedDateTime,
@@ -1731,7 +1735,8 @@ class _$_Patient implements _Patient {
   @override
   final List<ContactPoint> telecom;
   @override
-  final PatientGender gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  final PersonGender gender;
   @override
   final Date birthDate;
   @override
@@ -1895,7 +1900,7 @@ abstract class _Patient implements Patient {
       bool active,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      PatientGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       bool deceasedBoolean,
       FhirDateTime deceasedDateTime,
@@ -1940,7 +1945,8 @@ abstract class _Patient implements Patient {
   @override
   List<ContactPoint> get telecom;
   @override
-  PatientGender get gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender get gender;
   @override
   Date get birthDate;
   @override
@@ -1986,7 +1992,7 @@ class _$PatientContactTearOff {
       HumanName name,
       List<ContactPoint> telecom,
       Address address,
-      PatientContactGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Reference organization,
       Period period}) {
     return _PatientContact(
@@ -2016,7 +2022,8 @@ mixin _$PatientContact {
   HumanName get name;
   List<ContactPoint> get telecom;
   Address get address;
-  PatientContactGender get gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender get gender;
   Reference get organization;
   Period get period;
 
@@ -2036,7 +2043,7 @@ abstract class $PatientContactCopyWith<$Res> {
       HumanName name,
       List<ContactPoint> telecom,
       Address address,
-      PatientContactGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Reference organization,
       Period period});
 
@@ -2082,8 +2089,7 @@ class _$PatientContactCopyWithImpl<$Res>
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as Address,
-      gender:
-          gender == freezed ? _value.gender : gender as PatientContactGender,
+      gender: gender == freezed ? _value.gender : gender as PersonGender,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -2146,7 +2152,7 @@ abstract class _$PatientContactCopyWith<$Res>
       HumanName name,
       List<ContactPoint> telecom,
       Address address,
-      PatientContactGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Reference organization,
       Period period});
 
@@ -2198,8 +2204,7 @@ class __$PatientContactCopyWithImpl<$Res>
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as Address,
-      gender:
-          gender == freezed ? _value.gender : gender as PatientContactGender,
+      gender: gender == freezed ? _value.gender : gender as PersonGender,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -2218,7 +2223,7 @@ class _$_PatientContact implements _PatientContact {
       this.name,
       this.telecom,
       this.address,
-      this.gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) this.gender,
       this.organization,
       this.period});
 
@@ -2241,7 +2246,8 @@ class _$_PatientContact implements _PatientContact {
   @override
   final Address address;
   @override
-  final PatientContactGender gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  final PersonGender gender;
   @override
   final Reference organization;
   @override
@@ -2317,7 +2323,7 @@ abstract class _PatientContact implements PatientContact {
       HumanName name,
       List<ContactPoint> telecom,
       Address address,
-      PatientContactGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Reference organization,
       Period period}) = _$_PatientContact;
 
@@ -2340,7 +2346,8 @@ abstract class _PatientContact implements PatientContact {
   @override
   Address get address;
   @override
-  PatientContactGender get gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender get gender;
   @override
   Reference get organization;
   @override
@@ -2596,10 +2603,12 @@ class _$PatientLinkTearOff {
 
   _PatientLink call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference other,
-      PatientLinkType type}) {
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown)
+          PatientLinkType type}) {
     return _PatientLink(
       id: id,
       fhirExtension: fhirExtension,
@@ -2619,6 +2628,7 @@ mixin _$PatientLink {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   Reference get other;
+  @JsonKey(unknownEnumValue: PatientLinkType.unknown)
   PatientLinkType get type;
 
   Map<String, dynamic> toJson();
@@ -2631,10 +2641,12 @@ abstract class $PatientLinkCopyWith<$Res> {
       _$PatientLinkCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference other,
-      PatientLinkType type});
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown)
+          PatientLinkType type});
 
   $ReferenceCopyWith<$Res> get other;
 }
@@ -2686,10 +2698,12 @@ abstract class _$PatientLinkCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference other,
-      PatientLinkType type});
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown)
+          PatientLinkType type});
 
   @override
   $ReferenceCopyWith<$Res> get other;
@@ -2733,7 +2747,7 @@ class _$_PatientLink implements _PatientLink {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.other,
-      this.type});
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) this.type});
 
   factory _$_PatientLink.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientLinkFromJson(json);
@@ -2748,6 +2762,7 @@ class _$_PatientLink implements _PatientLink {
   @override
   final Reference other;
   @override
+  @JsonKey(unknownEnumValue: PatientLinkType.unknown)
   final PatientLinkType type;
 
   @override
@@ -2796,10 +2811,12 @@ class _$_PatientLink implements _PatientLink {
 abstract class _PatientLink implements PatientLink {
   const factory _PatientLink(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference other,
-      PatientLinkType type}) = _$_PatientLink;
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown)
+          PatientLinkType type}) = _$_PatientLink;
 
   factory _PatientLink.fromJson(Map<String, dynamic> json) =
       _$_PatientLink.fromJson;
@@ -2814,6 +2831,7 @@ abstract class _PatientLink implements PatientLink {
   @override
   Reference get other;
   @override
+  @JsonKey(unknownEnumValue: PatientLinkType.unknown)
   PatientLinkType get type;
   @override
   _$PatientLinkCopyWith<_PatientLink> get copyWith;
@@ -3503,7 +3521,7 @@ class _$PractitionerRoleAvailableTimeTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<Code> daysOfWeek,
+      List<AvailableTimeDaysOfWeek> daysOfWeek,
       bool allDay,
       Time availableStartTime,
       Time availableEndTime}) {
@@ -3527,7 +3545,7 @@ mixin _$PractitionerRoleAvailableTime {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  List<Code> get daysOfWeek;
+  List<AvailableTimeDaysOfWeek> get daysOfWeek;
   bool get allDay;
   Time get availableStartTime;
   Time get availableEndTime;
@@ -3546,7 +3564,7 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<Code> daysOfWeek,
+      List<AvailableTimeDaysOfWeek> daysOfWeek,
       bool allDay,
       Time availableStartTime,
       Time availableEndTime});
@@ -3578,8 +3596,9 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      daysOfWeek:
-          daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
+      daysOfWeek: daysOfWeek == freezed
+          ? _value.daysOfWeek
+          : daysOfWeek as List<AvailableTimeDaysOfWeek>,
       allDay: allDay == freezed ? _value.allDay : allDay as bool,
       availableStartTime: availableStartTime == freezed
           ? _value.availableStartTime
@@ -3602,7 +3621,7 @@ abstract class _$PractitionerRoleAvailableTimeCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<Code> daysOfWeek,
+      List<AvailableTimeDaysOfWeek> daysOfWeek,
       bool allDay,
       Time availableStartTime,
       Time availableEndTime});
@@ -3638,8 +3657,9 @@ class __$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      daysOfWeek:
-          daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
+      daysOfWeek: daysOfWeek == freezed
+          ? _value.daysOfWeek
+          : daysOfWeek as List<AvailableTimeDaysOfWeek>,
       allDay: allDay == freezed ? _value.allDay : allDay as bool,
       availableStartTime: availableStartTime == freezed
           ? _value.availableStartTime
@@ -3675,7 +3695,7 @@ class _$_PractitionerRoleAvailableTime
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final List<Code> daysOfWeek;
+  final List<AvailableTimeDaysOfWeek> daysOfWeek;
   @override
   final bool allDay;
   @override
@@ -3741,7 +3761,7 @@ abstract class _PractitionerRoleAvailableTime
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<Code> daysOfWeek,
+      List<AvailableTimeDaysOfWeek> daysOfWeek,
       bool allDay,
       Time availableStartTime,
       Time availableEndTime}) = _$_PractitionerRoleAvailableTime;
@@ -3757,7 +3777,7 @@ abstract class _PractitionerRoleAvailableTime
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  List<Code> get daysOfWeek;
+  List<AvailableTimeDaysOfWeek> get daysOfWeek;
   @override
   bool get allDay;
   @override
@@ -4034,7 +4054,7 @@ class _$PersonTearOff {
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      PersonGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Address> address,
       Attachment photo,
@@ -4082,6 +4102,7 @@ mixin _$Person {
   List<Identifier> get identifier;
   List<HumanName> get name;
   List<ContactPoint> get telecom;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
   PersonGender get gender;
   Date get birthDate;
   List<Address> get address;
@@ -4110,7 +4131,7 @@ abstract class $PersonCopyWith<$Res> {
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      PersonGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Address> address,
       Attachment photo,
@@ -4248,7 +4269,7 @@ abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      PersonGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Address> address,
       Attachment photo,
@@ -4349,7 +4370,7 @@ class _$_Person implements _Person {
       this.identifier,
       this.name,
       this.telecom,
-      this.gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) this.gender,
       this.birthDate,
       this.address,
       this.photo,
@@ -4388,6 +4409,7 @@ class _$_Person implements _Person {
   @override
   final List<ContactPoint> telecom;
   @override
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
   final PersonGender gender;
   @override
   final Date birthDate;
@@ -4509,7 +4531,7 @@ abstract class _Person implements Person {
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      PersonGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Address> address,
       Attachment photo,
@@ -4545,6 +4567,7 @@ abstract class _Person implements Person {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
   PersonGender get gender;
   @override
   Date get birthDate;
@@ -4571,10 +4594,12 @@ class _$PersonLinkTearOff {
 
   _PersonLink call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference target,
-      PersonLinkAssurance assurance}) {
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+          PersonLinkAssurance assurance}) {
     return _PersonLink(
       id: id,
       fhirExtension: fhirExtension,
@@ -4594,6 +4619,7 @@ mixin _$PersonLink {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   Reference get target;
+  @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
   PersonLinkAssurance get assurance;
 
   Map<String, dynamic> toJson();
@@ -4606,10 +4632,12 @@ abstract class $PersonLinkCopyWith<$Res> {
       _$PersonLinkCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference target,
-      PersonLinkAssurance assurance});
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+          PersonLinkAssurance assurance});
 
   $ReferenceCopyWith<$Res> get target;
 }
@@ -4662,10 +4690,12 @@ abstract class _$PersonLinkCopyWith<$Res> implements $PersonLinkCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference target,
-      PersonLinkAssurance assurance});
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+          PersonLinkAssurance assurance});
 
   @override
   $ReferenceCopyWith<$Res> get target;
@@ -4711,7 +4741,7 @@ class _$_PersonLink implements _PersonLink {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.target,
-      this.assurance});
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown) this.assurance});
 
   factory _$_PersonLink.fromJson(Map<String, dynamic> json) =>
       _$_$_PersonLinkFromJson(json);
@@ -4726,6 +4756,7 @@ class _$_PersonLink implements _PersonLink {
   @override
   final Reference target;
   @override
+  @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
   final PersonLinkAssurance assurance;
 
   @override
@@ -4774,10 +4805,12 @@ class _$_PersonLink implements _PersonLink {
 abstract class _PersonLink implements PersonLink {
   const factory _PersonLink(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference target,
-      PersonLinkAssurance assurance}) = _$_PersonLink;
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+          PersonLinkAssurance assurance}) = _$_PersonLink;
 
   factory _PersonLink.fromJson(Map<String, dynamic> json) =
       _$_PersonLink.fromJson;
@@ -4792,6 +4825,7 @@ abstract class _PersonLink implements PersonLink {
   @override
   Reference get target;
   @override
+  @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
   PersonLinkAssurance get assurance;
   @override
   _$PersonLinkCopyWith<_PersonLink> get copyWith;
@@ -4819,7 +4853,7 @@ class _$PractitionerTearOff {
       List<HumanName> name,
       List<ContactPoint> telecom,
       List<Address> address,
-      PractitionerGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
@@ -4867,7 +4901,8 @@ mixin _$Practitioner {
   List<HumanName> get name;
   List<ContactPoint> get telecom;
   List<Address> get address;
-  PractitionerGender get gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender get gender;
   Date get birthDate;
   List<Attachment> get photo;
   List<PractitionerQualification> get qualification;
@@ -4896,7 +4931,7 @@ abstract class $PractitionerCopyWith<$Res> {
       List<HumanName> name,
       List<ContactPoint> telecom,
       List<Address> address,
-      PractitionerGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
@@ -4962,7 +4997,7 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as List<Address>,
-      gender: gender == freezed ? _value.gender : gender as PractitionerGender,
+      gender: gender == freezed ? _value.gender : gender as PersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
       photo: photo == freezed ? _value.photo : photo as List<Attachment>,
       qualification: qualification == freezed
@@ -5016,7 +5051,7 @@ abstract class _$PractitionerCopyWith<$Res>
       List<HumanName> name,
       List<ContactPoint> telecom,
       List<Address> address,
-      PractitionerGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
@@ -5086,7 +5121,7 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as List<Address>,
-      gender: gender == freezed ? _value.gender : gender as PractitionerGender,
+      gender: gender == freezed ? _value.gender : gender as PersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
       photo: photo == freezed ? _value.photo : photo as List<Attachment>,
       qualification: qualification == freezed
@@ -5116,7 +5151,7 @@ class _$_Practitioner implements _Practitioner {
       this.name,
       this.telecom,
       this.address,
-      this.gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) this.gender,
       this.birthDate,
       this.photo,
       this.qualification,
@@ -5155,7 +5190,8 @@ class _$_Practitioner implements _Practitioner {
   @override
   final List<Address> address;
   @override
-  final PractitionerGender gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  final PersonGender gender;
   @override
   final Date birthDate;
   @override
@@ -5275,7 +5311,7 @@ abstract class _Practitioner implements Practitioner {
       List<HumanName> name,
       List<ContactPoint> telecom,
       List<Address> address,
-      PractitionerGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
@@ -5314,7 +5350,8 @@ abstract class _Practitioner implements Practitioner {
   @override
   List<Address> get address;
   @override
-  PractitionerGender get gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender get gender;
   @override
   Date get birthDate;
   @override
@@ -5654,7 +5691,7 @@ class _$RelatedPersonTearOff {
       List<CodeableConcept> relationship,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      RelatedPersonGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Address> address,
       List<Attachment> photo,
@@ -5706,7 +5743,8 @@ mixin _$RelatedPerson {
   List<CodeableConcept> get relationship;
   List<HumanName> get name;
   List<ContactPoint> get telecom;
-  RelatedPersonGender get gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender get gender;
   Date get birthDate;
   List<Address> get address;
   List<Attachment> get photo;
@@ -5737,7 +5775,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
       List<CodeableConcept> relationship,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      RelatedPersonGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Address> address,
       List<Attachment> photo,
@@ -5812,7 +5850,7 @@ class _$RelatedPersonCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as List<HumanName>,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
-      gender: gender == freezed ? _value.gender : gender as RelatedPersonGender,
+      gender: gender == freezed ? _value.gender : gender as PersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
       address: address == freezed ? _value.address : address as List<Address>,
       photo: photo == freezed ? _value.photo : photo as List<Attachment>,
@@ -5886,7 +5924,7 @@ abstract class _$RelatedPersonCopyWith<$Res>
       List<CodeableConcept> relationship,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      RelatedPersonGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Address> address,
       List<Attachment> photo,
@@ -5967,7 +6005,7 @@ class __$RelatedPersonCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as List<HumanName>,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
-      gender: gender == freezed ? _value.gender : gender as RelatedPersonGender,
+      gender: gender == freezed ? _value.gender : gender as PersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
       address: address == freezed ? _value.address : address as List<Address>,
       photo: photo == freezed ? _value.photo : photo as List<Attachment>,
@@ -5997,7 +6035,7 @@ class _$_RelatedPerson implements _RelatedPerson {
       this.relationship,
       this.name,
       this.telecom,
-      this.gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) this.gender,
       this.birthDate,
       this.address,
       this.photo,
@@ -6039,7 +6077,8 @@ class _$_RelatedPerson implements _RelatedPerson {
   @override
   final List<ContactPoint> telecom;
   @override
-  final RelatedPersonGender gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  final PersonGender gender;
   @override
   final Date birthDate;
   @override
@@ -6169,7 +6208,7 @@ abstract class _RelatedPerson implements RelatedPerson {
       List<CodeableConcept> relationship,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      RelatedPersonGender gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
       List<Address> address,
       List<Attachment> photo,
@@ -6211,7 +6250,8 @@ abstract class _RelatedPerson implements RelatedPerson {
   @override
   List<ContactPoint> get telecom;
   @override
-  RelatedPersonGender get gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender get gender;
   @override
   Date get birthDate;
   @override

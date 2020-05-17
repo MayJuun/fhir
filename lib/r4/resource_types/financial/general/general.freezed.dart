@@ -23,7 +23,8 @@ class _$ChargeItemDefinitionTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri url,
       List<Identifier> identifier,
@@ -32,7 +33,8 @@ class _$ChargeItemDefinitionTearOff {
       List<FhirUri> derivedFromUri,
       List<Canonical> partOf,
       List<Canonical> replaces,
-      ChargeItemDefinitionStatus status,
+      @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+          ChargeItemDefinitionStatus status,
       bool experimental,
       FhirDateTime date,
       String publisher,
@@ -106,6 +108,7 @@ mixin _$ChargeItemDefinition {
   List<FhirUri> get derivedFromUri;
   List<Canonical> get partOf;
   List<Canonical> get replaces;
+  @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
   ChargeItemDefinitionStatus get status;
   bool get experimental;
   FhirDateTime get date;
@@ -139,7 +142,8 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri url,
       List<Identifier> identifier,
@@ -148,7 +152,8 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       List<FhirUri> derivedFromUri,
       List<Canonical> partOf,
       List<Canonical> replaces,
-      ChargeItemDefinitionStatus status,
+      @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+          ChargeItemDefinitionStatus status,
       bool experimental,
       FhirDateTime date,
       String publisher,
@@ -339,7 +344,8 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri url,
       List<Identifier> identifier,
@@ -348,7 +354,8 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
       List<FhirUri> derivedFromUri,
       List<Canonical> partOf,
       List<Canonical> replaces,
-      ChargeItemDefinitionStatus status,
+      @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+          ChargeItemDefinitionStatus status,
       bool experimental,
       FhirDateTime date,
       String publisher,
@@ -501,7 +508,8 @@ class _$_ChargeItemDefinition implements _ChargeItemDefinition {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.url,
       this.identifier,
@@ -510,7 +518,8 @@ class _$_ChargeItemDefinition implements _ChargeItemDefinition {
       this.derivedFromUri,
       this.partOf,
       this.replaces,
-      this.status,
+      @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+          this.status,
       this.experimental,
       this.date,
       this.publisher,
@@ -564,6 +573,7 @@ class _$_ChargeItemDefinition implements _ChargeItemDefinition {
   @override
   final List<Canonical> replaces;
   @override
+  @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
   final ChargeItemDefinitionStatus status;
   @override
   final bool experimental;
@@ -738,7 +748,8 @@ abstract class _ChargeItemDefinition implements ChargeItemDefinition {
           Code language,
           Narrative text,
           List<dynamic> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> fhirExtension,
           List<FhirExtension> modifierExtension,
           FhirUri url,
           List<Identifier> identifier,
@@ -747,7 +758,8 @@ abstract class _ChargeItemDefinition implements ChargeItemDefinition {
           List<FhirUri> derivedFromUri,
           List<Canonical> partOf,
           List<Canonical> replaces,
-          ChargeItemDefinitionStatus status,
+          @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+              ChargeItemDefinitionStatus status,
           bool experimental,
           FhirDateTime date,
           String publisher,
@@ -802,6 +814,7 @@ abstract class _ChargeItemDefinition implements ChargeItemDefinition {
   @override
   List<Canonical> get replaces;
   @override
+  @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
   ChargeItemDefinitionStatus get status;
   @override
   bool get experimental;
@@ -1328,9 +1341,11 @@ class _$ChargeItemDefinitionPriceComponentTearOff {
   const _$ChargeItemDefinitionPriceComponentTearOff();
 
   _ChargeItemDefinitionPriceComponent call(
-      {@JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      {@JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      Code type,
+      @JsonKey(unknownEnumValue: PriceComponentType.unknown)
+          PriceComponentType type,
       CodeableConcept code,
       double factor,
       Money amount}) {
@@ -1353,7 +1368,8 @@ mixin _$ChargeItemDefinitionPriceComponent {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  Code get type;
+  @JsonKey(unknownEnumValue: PriceComponentType.unknown)
+  PriceComponentType get type;
   CodeableConcept get code;
   double get factor;
   Money get amount;
@@ -1369,9 +1385,11 @@ abstract class $ChargeItemDefinitionPriceComponentCopyWith<$Res> {
           $Res Function(ChargeItemDefinitionPriceComponent) then) =
       _$ChargeItemDefinitionPriceComponentCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      {@JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      Code type,
+      @JsonKey(unknownEnumValue: PriceComponentType.unknown)
+          PriceComponentType type,
       CodeableConcept code,
       double factor,
       Money amount});
@@ -1404,7 +1422,7 @@ class _$ChargeItemDefinitionPriceComponentCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as Code,
+      type: type == freezed ? _value.type : type as PriceComponentType,
       code: code == freezed ? _value.code : code as CodeableConcept,
       factor: factor == freezed ? _value.factor : factor as double,
       amount: amount == freezed ? _value.amount : amount as Money,
@@ -1440,9 +1458,11 @@ abstract class _$ChargeItemDefinitionPriceComponentCopyWith<$Res>
       __$ChargeItemDefinitionPriceComponentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      {@JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      Code type,
+      @JsonKey(unknownEnumValue: PriceComponentType.unknown)
+          PriceComponentType type,
       CodeableConcept code,
       double factor,
       Money amount});
@@ -1481,7 +1501,7 @@ class __$ChargeItemDefinitionPriceComponentCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as Code,
+      type: type == freezed ? _value.type : type as PriceComponentType,
       code: code == freezed ? _value.code : code as CodeableConcept,
       factor: factor == freezed ? _value.factor : factor as double,
       amount: amount == freezed ? _value.amount : amount as Money,
@@ -1495,7 +1515,7 @@ class _$_ChargeItemDefinitionPriceComponent
   const _$_ChargeItemDefinitionPriceComponent(
       {@JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.type,
+      @JsonKey(unknownEnumValue: PriceComponentType.unknown) this.type,
       this.code,
       this.factor,
       this.amount});
@@ -1510,7 +1530,8 @@ class _$_ChargeItemDefinitionPriceComponent
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final Code type;
+  @JsonKey(unknownEnumValue: PriceComponentType.unknown)
+  final PriceComponentType type;
   @override
   final CodeableConcept code;
   @override
@@ -1568,9 +1589,11 @@ class _$_ChargeItemDefinitionPriceComponent
 abstract class _ChargeItemDefinitionPriceComponent
     implements ChargeItemDefinitionPriceComponent {
   const factory _ChargeItemDefinitionPriceComponent(
-      {@JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      {@JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      Code type,
+      @JsonKey(unknownEnumValue: PriceComponentType.unknown)
+          PriceComponentType type,
       CodeableConcept code,
       double factor,
       Money amount}) = _$_ChargeItemDefinitionPriceComponent;
@@ -1585,7 +1608,8 @@ abstract class _ChargeItemDefinitionPriceComponent
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  Code get type;
+  @JsonKey(unknownEnumValue: PriceComponentType.unknown)
+  PriceComponentType get type;
   @override
   CodeableConcept get code;
   @override
@@ -1614,7 +1638,7 @@ class _$AccountTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      AccountStatus status,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
       CodeableConcept type,
       String name,
       List<Reference> subject,
@@ -1660,6 +1684,7 @@ mixin _$Account {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: AccountStatus.unknown)
   AccountStatus get status;
   CodeableConcept get type;
   String get name;
@@ -1687,7 +1712,7 @@ abstract class $AccountCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      AccountStatus status,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
       CodeableConcept type,
       String name,
       List<Reference> subject,
@@ -1837,7 +1862,7 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      AccountStatus status,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
       CodeableConcept type,
       String name,
       List<Reference> subject,
@@ -1941,7 +1966,7 @@ class _$_Account implements _Account {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown) this.status,
       this.type,
       this.name,
       this.subject,
@@ -1974,6 +1999,7 @@ class _$_Account implements _Account {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: AccountStatus.unknown)
   final AccountStatus status;
   @override
   final CodeableConcept type;
@@ -2094,7 +2120,7 @@ abstract class _Account implements Account {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      AccountStatus status,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
       CodeableConcept type,
       String name,
       List<Reference> subject,
@@ -2126,6 +2152,7 @@ abstract class _Account implements Account {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: AccountStatus.unknown)
   AccountStatus get status;
   @override
   CodeableConcept get type;
@@ -2661,12 +2688,14 @@ class _$ChargeItemTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<FhirUri> definitionUri,
       List<Canonical> definitionCanonical,
-      ChargeItemStatus status,
+      @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+          ChargeItemStatus status,
       List<Reference> partOf,
       CodeableConcept code,
       Reference subject,
@@ -2748,6 +2777,7 @@ mixin _$ChargeItem {
   List<Identifier> get identifier;
   List<FhirUri> get definitionUri;
   List<Canonical> get definitionCanonical;
+  @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
   ChargeItemStatus get status;
   List<Reference> get partOf;
   CodeableConcept get code;
@@ -2789,12 +2819,14 @@ abstract class $ChargeItemCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<FhirUri> definitionUri,
       List<Canonical> definitionCanonical,
-      ChargeItemStatus status,
+      @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+          ChargeItemStatus status,
       List<Reference> partOf,
       CodeableConcept code,
       Reference subject,
@@ -3108,12 +3140,14 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<FhirUri> definitionUri,
       List<Canonical> definitionCanonical,
-      ChargeItemStatus status,
+      @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+          ChargeItemStatus status,
       List<Reference> partOf,
       CodeableConcept code,
       Reference subject,
@@ -3313,7 +3347,7 @@ class _$_ChargeItem implements _ChargeItem {
       this.identifier,
       this.definitionUri,
       this.definitionCanonical,
-      this.status,
+      @JsonKey(unknownEnumValue: ChargeItemStatus.unknown) this.status,
       this.partOf,
       this.code,
       this.subject,
@@ -3367,6 +3401,7 @@ class _$_ChargeItem implements _ChargeItem {
   @override
   final List<Canonical> definitionCanonical;
   @override
+  @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
   final ChargeItemStatus status;
   @override
   final List<Reference> partOf;
@@ -3563,12 +3598,14 @@ abstract class _ChargeItem implements ChargeItem {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<FhirUri> definitionUri,
       List<Canonical> definitionCanonical,
-      ChargeItemStatus status,
+      @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+          ChargeItemStatus status,
       List<Reference> partOf,
       CodeableConcept code,
       Reference subject,
@@ -3622,6 +3659,7 @@ abstract class _ChargeItem implements ChargeItem {
   @override
   List<Canonical> get definitionCanonical;
   @override
+  @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
   ChargeItemStatus get status;
   @override
   List<Reference> get partOf;
@@ -3940,7 +3978,8 @@ class _$InsurancePlanTearOff {
       List<dynamic> contained,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      InsurancePlanStatus status,
+      @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+          InsurancePlanStatus status,
       List<CodeableConcept> type,
       String name,
       List<String> alias,
@@ -3993,6 +4032,7 @@ mixin _$InsurancePlan {
   List<dynamic> get contained;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
   InsurancePlanStatus get status;
   List<CodeableConcept> get type;
   String get name;
@@ -4025,7 +4065,8 @@ abstract class $InsurancePlanCopyWith<$Res> {
       List<dynamic> contained,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      InsurancePlanStatus status,
+      @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+          InsurancePlanStatus status,
       List<CodeableConcept> type,
       String name,
       List<String> alias,
@@ -4190,7 +4231,8 @@ abstract class _$InsurancePlanCopyWith<$Res>
       List<dynamic> contained,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      InsurancePlanStatus status,
+      @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+          InsurancePlanStatus status,
       List<CodeableConcept> type,
       String name,
       List<String> alias,
@@ -4308,7 +4350,7 @@ class _$_InsurancePlan implements _InsurancePlan {
       this.contained,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown) this.status,
       this.type,
       this.name,
       this.alias,
@@ -4344,6 +4386,7 @@ class _$_InsurancePlan implements _InsurancePlan {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
   final InsurancePlanStatus status;
   @override
   final List<CodeableConcept> type;
@@ -4485,7 +4528,8 @@ abstract class _InsurancePlan implements InsurancePlan {
       List<dynamic> contained,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      InsurancePlanStatus status,
+      @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+          InsurancePlanStatus status,
       List<CodeableConcept> type,
       String name,
       List<String> alias,
@@ -4521,6 +4565,7 @@ abstract class _InsurancePlan implements InsurancePlan {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
   InsurancePlanStatus get status;
   @override
   List<CodeableConcept> get type;
@@ -6939,13 +6984,16 @@ class _$ExplanationOfBenefitTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      ExplanationOfBenefitStatus status,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+          ExplanationOfBenefitStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      Code use,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitUse.unknown)
+          ExplanationOfBenefitUse use,
       Reference patient,
       Period billablePeriod,
       FhirDateTime created,
@@ -6962,7 +7010,8 @@ class _$ExplanationOfBenefitTearOff {
       Reference facility,
       Reference claim,
       Reference claimResponse,
-      Code outcome,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
+          ExplanationOfBenefitOutcome outcome,
       String disposition,
       List<String> preAuthRef,
       List<Period> preAuthRefPeriod,
@@ -7050,10 +7099,12 @@ mixin _$ExplanationOfBenefit {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
   ExplanationOfBenefitStatus get status;
   CodeableConcept get type;
   CodeableConcept get subType;
-  Code get use;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitUse.unknown)
+  ExplanationOfBenefitUse get use;
   Reference get patient;
   Period get billablePeriod;
   FhirDateTime get created;
@@ -7070,7 +7121,8 @@ mixin _$ExplanationOfBenefit {
   Reference get facility;
   Reference get claim;
   Reference get claimResponse;
-  Code get outcome;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
+  ExplanationOfBenefitOutcome get outcome;
   String get disposition;
   List<String> get preAuthRef;
   List<Period> get preAuthRefPeriod;
@@ -7106,13 +7158,16 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      ExplanationOfBenefitStatus status,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+          ExplanationOfBenefitStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      Code use,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitUse.unknown)
+          ExplanationOfBenefitUse use,
       Reference patient,
       Period billablePeriod,
       FhirDateTime created,
@@ -7129,7 +7184,8 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       Reference facility,
       Reference claim,
       Reference claimResponse,
-      Code outcome,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
+          ExplanationOfBenefitOutcome outcome,
       String disposition,
       List<String> preAuthRef,
       List<Period> preAuthRefPeriod,
@@ -7260,7 +7316,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
           : status as ExplanationOfBenefitStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
-      use: use == freezed ? _value.use : use as Code,
+      use: use == freezed ? _value.use : use as ExplanationOfBenefitUse,
       patient: patient == freezed ? _value.patient : patient as Reference,
       billablePeriod: billablePeriod == freezed
           ? _value.billablePeriod
@@ -7291,7 +7347,9 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference,
-      outcome: outcome == freezed ? _value.outcome : outcome as Code,
+      outcome: outcome == freezed
+          ? _value.outcome
+          : outcome as ExplanationOfBenefitOutcome,
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
       preAuthRef: preAuthRef == freezed
@@ -7580,13 +7638,16 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      ExplanationOfBenefitStatus status,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+          ExplanationOfBenefitStatus status,
       CodeableConcept type,
       CodeableConcept subType,
-      Code use,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitUse.unknown)
+          ExplanationOfBenefitUse use,
       Reference patient,
       Period billablePeriod,
       FhirDateTime created,
@@ -7603,7 +7664,8 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       Reference facility,
       Reference claim,
       Reference claimResponse,
-      Code outcome,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
+          ExplanationOfBenefitOutcome outcome,
       String disposition,
       List<String> preAuthRef,
       List<Period> preAuthRefPeriod,
@@ -7758,7 +7820,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
           : status as ExplanationOfBenefitStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
-      use: use == freezed ? _value.use : use as Code,
+      use: use == freezed ? _value.use : use as ExplanationOfBenefitUse,
       patient: patient == freezed ? _value.patient : patient as Reference,
       billablePeriod: billablePeriod == freezed
           ? _value.billablePeriod
@@ -7789,7 +7851,9 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference,
-      outcome: outcome == freezed ? _value.outcome : outcome as Code,
+      outcome: outcome == freezed
+          ? _value.outcome
+          : outcome as ExplanationOfBenefitOutcome,
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
       preAuthRef: preAuthRef == freezed
@@ -7852,13 +7916,16 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+          this.status,
       this.type,
       this.subType,
-      this.use,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitUse.unknown)
+          this.use,
       this.patient,
       this.billablePeriod,
       this.created,
@@ -7875,7 +7942,8 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
       this.facility,
       this.claim,
       this.claimResponse,
-      this.outcome,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
+          this.outcome,
       this.disposition,
       this.preAuthRef,
       this.preAuthRefPeriod,
@@ -7920,13 +7988,15 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
   final ExplanationOfBenefitStatus status;
   @override
   final CodeableConcept type;
   @override
   final CodeableConcept subType;
   @override
-  final Code use;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitUse.unknown)
+  final ExplanationOfBenefitUse use;
   @override
   final Reference patient;
   @override
@@ -7960,7 +8030,8 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
   @override
   final Reference claimResponse;
   @override
-  final Code outcome;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
+  final ExplanationOfBenefitOutcome outcome;
   @override
   final String disposition;
   @override
@@ -8173,13 +8244,16 @@ abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
           Code language,
           Narrative text,
           List<dynamic> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> fhirExtension,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
-          ExplanationOfBenefitStatus status,
+          @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+              ExplanationOfBenefitStatus status,
           CodeableConcept type,
           CodeableConcept subType,
-          Code use,
+          @JsonKey(unknownEnumValue: ExplanationOfBenefitUse.unknown)
+              ExplanationOfBenefitUse use,
           Reference patient,
           Period billablePeriod,
           FhirDateTime created,
@@ -8196,7 +8270,8 @@ abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
           Reference facility,
           Reference claim,
           Reference claimResponse,
-          Code outcome,
+          @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
+              ExplanationOfBenefitOutcome outcome,
           String disposition,
           List<String> preAuthRef,
           List<Period> preAuthRefPeriod,
@@ -8242,13 +8317,15 @@ abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
   ExplanationOfBenefitStatus get status;
   @override
   CodeableConcept get type;
   @override
   CodeableConcept get subType;
   @override
-  Code get use;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitUse.unknown)
+  ExplanationOfBenefitUse get use;
   @override
   Reference get patient;
   @override
@@ -8282,7 +8359,8 @@ abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
   @override
   Reference get claimResponse;
   @override
-  Code get outcome;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
+  ExplanationOfBenefitOutcome get outcome;
   @override
   String get disposition;
   @override
@@ -16566,7 +16644,7 @@ class _$ContractTearOff {
       List<Identifier> identifier,
       FhirUri url,
       String version,
-      Code status,
+      @JsonKey(unknownEnumValue: ContractStatus.unknown) ContractStatus status,
       CodeableConcept legalState,
       Reference instantiatesCanonical,
       FhirUri instantiatesUri,
@@ -16664,7 +16742,8 @@ mixin _$Contract {
   List<Identifier> get identifier;
   FhirUri get url;
   String get version;
-  Code get status;
+  @JsonKey(unknownEnumValue: ContractStatus.unknown)
+  ContractStatus get status;
   CodeableConcept get legalState;
   Reference get instantiatesCanonical;
   FhirUri get instantiatesUri;
@@ -16717,7 +16796,7 @@ abstract class $ContractCopyWith<$Res> {
       List<Identifier> identifier,
       FhirUri url,
       String version,
-      Code status,
+      @JsonKey(unknownEnumValue: ContractStatus.unknown) ContractStatus status,
       CodeableConcept legalState,
       Reference instantiatesCanonical,
       FhirUri instantiatesUri,
@@ -16845,7 +16924,7 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
           : identifier as List<Identifier>,
       url: url == freezed ? _value.url : url as FhirUri,
       version: version == freezed ? _value.version : version as String,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as ContractStatus,
       legalState: legalState == freezed
           ? _value.legalState
           : legalState as CodeableConcept,
@@ -17080,7 +17159,7 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       List<Identifier> identifier,
       FhirUri url,
       String version,
-      Code status,
+      @JsonKey(unknownEnumValue: ContractStatus.unknown) ContractStatus status,
       CodeableConcept legalState,
       Reference instantiatesCanonical,
       FhirUri instantiatesUri,
@@ -17224,7 +17303,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       url: url == freezed ? _value.url : url as FhirUri,
       version: version == freezed ? _value.version : version as String,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as ContractStatus,
       legalState: legalState == freezed
           ? _value.legalState
           : legalState as CodeableConcept,
@@ -17306,7 +17385,7 @@ class _$_Contract implements _Contract {
       this.identifier,
       this.url,
       this.version,
-      this.status,
+      @JsonKey(unknownEnumValue: ContractStatus.unknown) this.status,
       this.legalState,
       this.instantiatesCanonical,
       this.instantiatesUri,
@@ -17368,7 +17447,8 @@ class _$_Contract implements _Contract {
   @override
   final String version;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: ContractStatus.unknown)
+  final ContractStatus status;
   @override
   final CodeableConcept legalState;
   @override
@@ -17602,7 +17682,7 @@ abstract class _Contract implements Contract {
       List<Identifier> identifier,
       FhirUri url,
       String version,
-      Code status,
+      @JsonKey(unknownEnumValue: ContractStatus.unknown) ContractStatus status,
       CodeableConcept legalState,
       Reference instantiatesCanonical,
       FhirUri instantiatesUri,
@@ -17663,7 +17743,8 @@ abstract class _Contract implements Contract {
   @override
   String get version;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: ContractStatus.unknown)
+  ContractStatus get status;
   @override
   CodeableConcept get legalState;
   @override
@@ -17740,13 +17821,15 @@ class _$ContractContentDefinitionTearOff {
 
   _ContractContentDefinition call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
       CodeableConcept subType,
       Reference publisher,
       FhirDateTime publicationDate,
-      Code publicationStatus,
+      @JsonKey(unknownEnumValue: ContentDefinitionPublicationStatus.unknown)
+          ContentDefinitionPublicationStatus publicationStatus,
       Markdown copyright}) {
     return _ContractContentDefinition(
       id: id,
@@ -17774,7 +17857,8 @@ mixin _$ContractContentDefinition {
   CodeableConcept get subType;
   Reference get publisher;
   FhirDateTime get publicationDate;
-  Code get publicationStatus;
+  @JsonKey(unknownEnumValue: ContentDefinitionPublicationStatus.unknown)
+  ContentDefinitionPublicationStatus get publicationStatus;
   Markdown get copyright;
 
   Map<String, dynamic> toJson();
@@ -17787,13 +17871,15 @@ abstract class $ContractContentDefinitionCopyWith<$Res> {
       _$ContractContentDefinitionCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
       CodeableConcept subType,
       Reference publisher,
       FhirDateTime publicationDate,
-      Code publicationStatus,
+      @JsonKey(unknownEnumValue: ContentDefinitionPublicationStatus.unknown)
+          ContentDefinitionPublicationStatus publicationStatus,
       Markdown copyright});
 
   $CodeableConceptCopyWith<$Res> get type;
@@ -17838,7 +17924,7 @@ class _$ContractContentDefinitionCopyWithImpl<$Res>
           : publicationDate as FhirDateTime,
       publicationStatus: publicationStatus == freezed
           ? _value.publicationStatus
-          : publicationStatus as Code,
+          : publicationStatus as ContentDefinitionPublicationStatus,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
     ));
@@ -17883,13 +17969,15 @@ abstract class _$ContractContentDefinitionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
       CodeableConcept subType,
       Reference publisher,
       FhirDateTime publicationDate,
-      Code publicationStatus,
+      @JsonKey(unknownEnumValue: ContentDefinitionPublicationStatus.unknown)
+          ContentDefinitionPublicationStatus publicationStatus,
       Markdown copyright});
 
   @override
@@ -17940,7 +18028,7 @@ class __$ContractContentDefinitionCopyWithImpl<$Res>
           : publicationDate as FhirDateTime,
       publicationStatus: publicationStatus == freezed
           ? _value.publicationStatus
-          : publicationStatus as Code,
+          : publicationStatus as ContentDefinitionPublicationStatus,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
     ));
@@ -17951,13 +18039,15 @@ class __$ContractContentDefinitionCopyWithImpl<$Res>
 class _$_ContractContentDefinition implements _ContractContentDefinition {
   const _$_ContractContentDefinition(
       {this.id,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.type,
       this.subType,
       this.publisher,
       this.publicationDate,
-      this.publicationStatus,
+      @JsonKey(unknownEnumValue: ContentDefinitionPublicationStatus.unknown)
+          this.publicationStatus,
       this.copyright});
 
   factory _$_ContractContentDefinition.fromJson(Map<String, dynamic> json) =>
@@ -17979,7 +18069,8 @@ class _$_ContractContentDefinition implements _ContractContentDefinition {
   @override
   final FhirDateTime publicationDate;
   @override
-  final Code publicationStatus;
+  @JsonKey(unknownEnumValue: ContentDefinitionPublicationStatus.unknown)
+  final ContentDefinitionPublicationStatus publicationStatus;
   @override
   final Markdown copyright;
 
@@ -18047,13 +18138,15 @@ class _$_ContractContentDefinition implements _ContractContentDefinition {
 abstract class _ContractContentDefinition implements ContractContentDefinition {
   const factory _ContractContentDefinition(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept type,
       CodeableConcept subType,
       Reference publisher,
       FhirDateTime publicationDate,
-      Code publicationStatus,
+      @JsonKey(unknownEnumValue: ContentDefinitionPublicationStatus.unknown)
+          ContentDefinitionPublicationStatus publicationStatus,
       Markdown copyright}) = _$_ContractContentDefinition;
 
   factory _ContractContentDefinition.fromJson(Map<String, dynamic> json) =
@@ -18075,7 +18168,8 @@ abstract class _ContractContentDefinition implements ContractContentDefinition {
   @override
   FhirDateTime get publicationDate;
   @override
-  Code get publicationStatus;
+  @JsonKey(unknownEnumValue: ContentDefinitionPublicationStatus.unknown)
+  ContentDefinitionPublicationStatus get publicationStatus;
   @override
   Markdown get copyright;
   @override

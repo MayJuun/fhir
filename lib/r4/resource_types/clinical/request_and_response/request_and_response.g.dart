@@ -42,8 +42,9 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        _$enumDecodeNullable(_$DeviceUseStatementStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(
+        _$DeviceUseStatementStatusEnumMap, json['status'],
+        unknownValue: DeviceUseStatementStatus.unknown),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -212,7 +213,8 @@ _$_SupplyDelivery _$_$_SupplyDeliveryFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$SupplyDeliveryStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$SupplyDeliveryStatusEnumMap, json['status'],
+        unknownValue: SupplyDeliveryStatus.unknown),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -370,13 +372,14 @@ _$_SupplyRequest _$_$_SupplyRequestFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$SupplyRequestStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$SupplyRequestStatusEnumMap, json['status'],
+        unknownValue: SupplyRequestStatus.unknown),
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    priority: _$enumDecodeNullable(
+        _$SupplyRequestPriorityEnumMap, json['priority'],
+        unknownValue: SupplyRequestPriority.unknown),
     itemCodeableConcept: json['itemCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -453,7 +456,7 @@ Map<String, dynamic> _$_$_SupplyRequestToJson(_$_SupplyRequest instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', _$SupplyRequestStatusEnumMap[instance.status]);
   writeNotNull('category', instance.category?.toJson());
-  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('priority', _$SupplyRequestPriorityEnumMap[instance.priority]);
   writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());
   writeNotNull('itemReference', instance.itemReference?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
@@ -483,6 +486,14 @@ const _$SupplyRequestStatusEnumMap = {
   SupplyRequestStatus.completed: 'completed',
   SupplyRequestStatus.entered_in_error: 'entered-in-error',
   SupplyRequestStatus.unknown: 'unknown',
+};
+
+const _$SupplyRequestPriorityEnumMap = {
+  SupplyRequestPriority.routine: 'routine',
+  SupplyRequestPriority.urgent: 'urgent',
+  SupplyRequestPriority.asap: 'asap',
+  SupplyRequestPriority.stat: 'stat',
+  SupplyRequestPriority.unknown: 'unknown',
 };
 
 _$_SupplyRequestParameter _$_$_SupplyRequestParameterFromJson(
@@ -584,8 +595,9 @@ _$_GuidanceResponse _$_$_GuidanceResponseFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['moduleCodeableConcept'] as Map<String, dynamic>),
-    status:
-        _$enumDecodeNullable(_$GuidanceResponseStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(
+        _$GuidanceResponseStatusEnumMap, json['status'],
+        unknownValue: GuidanceResponseStatus.unknown),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -733,13 +745,13 @@ _$_DeviceRequest _$_$_DeviceRequestFromJson(Map<String, dynamic> json) {
     groupIdentifier: json['groupIdentifier'] == null
         ? null
         : Identifier.fromJson(json['groupIdentifier'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
-    intent:
-        json['intent'] == null ? null : Code.fromJson(json['intent'] as String),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    status: _$enumDecodeNullable(_$DeviceRequestStatusEnumMap, json['status'],
+        unknownValue: DeviceRequestStatus.unknown),
+    intent: _$enumDecodeNullable(_$DeviceRequestIntentEnumMap, json['intent'],
+        unknownValue: DeviceRequestIntent.unknown),
+    priority: _$enumDecodeNullable(
+        _$DeviceRequestPriorityEnumMap, json['priority'],
+        unknownValue: DeviceRequestPriority.unknown),
     codeReference: json['codeReference'] == null
         ? null
         : Reference.fromJson(json['codeReference'] as Map<String, dynamic>),
@@ -838,9 +850,9 @@ Map<String, dynamic> _$_$_DeviceRequestToJson(_$_DeviceRequest instance) {
   writeNotNull(
       'priorRequest', instance.priorRequest?.map((e) => e?.toJson())?.toList());
   writeNotNull('groupIdentifier', instance.groupIdentifier?.toJson());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('intent', instance.intent?.toJson());
-  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('status', _$DeviceRequestStatusEnumMap[instance.status]);
+  writeNotNull('intent', _$DeviceRequestIntentEnumMap[instance.intent]);
+  writeNotNull('priority', _$DeviceRequestPriorityEnumMap[instance.priority]);
   writeNotNull('codeReference', instance.codeReference?.toJson());
   writeNotNull('codeCodeableConcept', instance.codeCodeableConcept?.toJson());
   writeNotNull(
@@ -867,6 +879,37 @@ Map<String, dynamic> _$_$_DeviceRequestToJson(_$_DeviceRequest instance) {
       instance.relevantHistory?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$DeviceRequestStatusEnumMap = {
+  DeviceRequestStatus.draft: 'draft',
+  DeviceRequestStatus.active: 'active',
+  DeviceRequestStatus.on_hold: 'on-hold',
+  DeviceRequestStatus.revoked: 'revoked',
+  DeviceRequestStatus.completed: 'completed',
+  DeviceRequestStatus.entered_in_error: 'entered-in-error',
+  DeviceRequestStatus.unknown: 'unknown',
+};
+
+const _$DeviceRequestIntentEnumMap = {
+  DeviceRequestIntent.proposal: 'proposal',
+  DeviceRequestIntent.plan: 'plan',
+  DeviceRequestIntent.directive: 'directive',
+  DeviceRequestIntent.order: 'order',
+  DeviceRequestIntent.original_order: 'original-order',
+  DeviceRequestIntent.reflex_order: 'reflex-order',
+  DeviceRequestIntent.filler_order: 'filler-order',
+  DeviceRequestIntent.instance_order: 'instance-order',
+  DeviceRequestIntent.option: 'option',
+  DeviceRequestIntent.unknown: 'unknown',
+};
+
+const _$DeviceRequestPriorityEnumMap = {
+  DeviceRequestPriority.routine: 'routine',
+  DeviceRequestPriority.urgent: 'urgent',
+  DeviceRequestPriority.asap: 'asap',
+  DeviceRequestPriority.stat: 'stat',
+  DeviceRequestPriority.unknown: 'unknown',
+};
 
 _$_DeviceRequestParameter _$_$_DeviceRequestParameterFromJson(
     Map<String, dynamic> json) {
@@ -965,8 +1008,9 @@ _$_CommunicationRequest _$_$_CommunicationRequestFromJson(
     groupIdentifier: json['groupIdentifier'] == null
         ? null
         : Identifier.fromJson(json['groupIdentifier'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(
+        _$CommunicationRequestStatusEnumMap, json['status'],
+        unknownValue: CommunicationRequestStatus.unknown),
     statusReason: json['statusReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -976,9 +1020,9 @@ _$_CommunicationRequest _$_$_CommunicationRequestFromJson(
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    priority: _$enumDecodeNullable(
+        _$CommunicationRequestPriorityEnumMap, json['priority'],
+        unknownValue: CommunicationRequestPriority.unknown),
     doNotPerform: json['doNotPerform'] as bool,
     medium: (json['medium'] as List)
         ?.map((e) => e == null
@@ -1062,11 +1106,12 @@ Map<String, dynamic> _$_$_CommunicationRequestToJson(
   writeNotNull(
       'replaces', instance.replaces?.map((e) => e?.toJson())?.toList());
   writeNotNull('groupIdentifier', instance.groupIdentifier?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$CommunicationRequestStatusEnumMap[instance.status]);
   writeNotNull('statusReason', instance.statusReason?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
-  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull(
+      'priority', _$CommunicationRequestPriorityEnumMap[instance.priority]);
   writeNotNull('doNotPerform', instance.doNotPerform);
   writeNotNull('medium', instance.medium?.map((e) => e?.toJson())?.toList());
   writeNotNull('subject', instance.subject?.toJson());
@@ -1087,6 +1132,24 @@ Map<String, dynamic> _$_$_CommunicationRequestToJson(
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$CommunicationRequestStatusEnumMap = {
+  CommunicationRequestStatus.draft: 'draft',
+  CommunicationRequestStatus.active: 'active',
+  CommunicationRequestStatus.on_hold: 'on-hold',
+  CommunicationRequestStatus.revoked: 'revoked',
+  CommunicationRequestStatus.completed: 'completed',
+  CommunicationRequestStatus.entered_in_error: 'entered-in-error',
+  CommunicationRequestStatus.unknown: 'unknown',
+};
+
+const _$CommunicationRequestPriorityEnumMap = {
+  CommunicationRequestPriority.routine: 'routine',
+  CommunicationRequestPriority.urgent: 'urgent',
+  CommunicationRequestPriority.asap: 'asap',
+  CommunicationRequestPriority.stat: 'stat',
+  CommunicationRequestPriority.unknown: 'unknown',
+};
 
 _$_CommunicationRequestPayload _$_$_CommunicationRequestPayloadFromJson(
     Map<String, dynamic> json) {
@@ -1183,8 +1246,8 @@ _$_Communication _$_$_CommunicationFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(_$CommunicationStatusEnumMap, json['status'],
+        unknownValue: CommunicationStatus.unknown),
     statusReason: json['statusReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -1194,9 +1257,9 @@ _$_Communication _$_$_CommunicationFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    priority: _$enumDecodeNullable(
+        _$CommunicationPriorityEnumMap, json['priority'],
+        unknownValue: CommunicationPriority.unknown),
     medium: (json['medium'] as List)
         ?.map((e) => e == null
             ? null
@@ -1279,11 +1342,11 @@ Map<String, dynamic> _$_$_CommunicationToJson(_$_Communication instance) {
   writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'inResponseTo', instance.inResponseTo?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$CommunicationStatusEnumMap[instance.status]);
   writeNotNull('statusReason', instance.statusReason?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
-  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('priority', _$CommunicationPriorityEnumMap[instance.priority]);
   writeNotNull('medium', instance.medium?.map((e) => e?.toJson())?.toList());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('topic', instance.topic?.toJson());
@@ -1302,6 +1365,25 @@ Map<String, dynamic> _$_$_CommunicationToJson(_$_Communication instance) {
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$CommunicationStatusEnumMap = {
+  CommunicationStatus.preparation: 'preparation',
+  CommunicationStatus.in_progress: 'in-progress',
+  CommunicationStatus.not_done: 'not-done',
+  CommunicationStatus.on_hold: 'on-hold',
+  CommunicationStatus.stopped: 'stopped',
+  CommunicationStatus.completed: 'completed',
+  CommunicationStatus.entered_in_error: 'entered-in-error',
+  CommunicationStatus.unknown: 'unknown',
+};
+
+const _$CommunicationPriorityEnumMap = {
+  CommunicationPriority.routine: 'routine',
+  CommunicationPriority.urgent: 'urgent',
+  CommunicationPriority.asap: 'asap',
+  CommunicationPriority.stat: 'stat',
+  CommunicationPriority.unknown: 'unknown',
+};
 
 _$_CommunicationPayload _$_$_CommunicationPayloadFromJson(
     Map<String, dynamic> json) {

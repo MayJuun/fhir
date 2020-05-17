@@ -1,4 +1,17 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+enum PaymentNoticeStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('cancelled')
+  cancelled,
+  @JsonValue('draft')
+  draft,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum PaymentReconciliationOutcome {
   @JsonValue('queued')
@@ -20,6 +33,19 @@ enum PaymentReconciliationProcessNoteType {
   print,
   @JsonValue('printoper')
   printoper,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum PaymentReconciliationStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('cancelled')
+  cancelled,
+  @JsonValue('draft')
+  draft,
+  @JsonValue('entered-in-error')
+  entered_in_error,
   @JsonValue('unknown')
   unknown,
 }

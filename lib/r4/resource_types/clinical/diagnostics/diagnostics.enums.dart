@@ -1,4 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum ImagingStudyStatus {
   @JsonValue('registered')
@@ -37,7 +37,7 @@ enum MolecularSequenceType {
   unknown,
 }
 
-enum MolecularSequenceReferenceSeqOrientation {
+enum ReferenceSeqOrientation {
   @JsonValue('sense')
   sense,
   @JsonValue('antisense')
@@ -46,7 +46,7 @@ enum MolecularSequenceReferenceSeqOrientation {
   unknown,
 }
 
-enum MolecularSequenceReferenceSeqStrand {
+enum ReferenceSeqStrand {
   @JsonValue('watson')
   watson,
   @JsonValue('crick')
@@ -55,7 +55,7 @@ enum MolecularSequenceReferenceSeqStrand {
   unknown,
 }
 
-enum MolecularSequenceQualityType {
+enum QualityType {
   @JsonValue('indel')
   indel,
   @JsonValue('snp')
@@ -64,7 +64,7 @@ enum MolecularSequenceQualityType {
   unknown,
 }
 
-enum MolecularSequenceRepositoryType {
+enum RepositoryType {
   @JsonValue('directlink')
   directlink,
   @JsonValue('openapi')
@@ -130,6 +130,25 @@ enum DiagnosticReportStatus {
   appended,
   @JsonValue('cancelled')
   cancelled,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum MediaStatus {
+  @JsonValue('preparation')
+  preparation,
+  @JsonValue('in-progress')
+  in_progress,
+  @JsonValue('not-done')
+  not_done,
+  @JsonValue('on-hold')
+  on_hold,
+  @JsonValue('stopped')
+  stopped,
+  @JsonValue('completed')
+  completed,
   @JsonValue('entered-in-error')
   entered_in_error,
   @JsonValue('unknown')

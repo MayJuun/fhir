@@ -1,4 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum LibraryStatus {
   @JsonValue('draft')
@@ -34,25 +34,6 @@ enum ListMode {
 }
 
 enum EpisodeOfCareStatus {
-  @JsonValue('planned')
-  planned,
-  @JsonValue('waitlist')
-  waitlist,
-  @JsonValue('active')
-  active,
-  @JsonValue('onhold')
-  onhold,
-  @JsonValue('finished')
-  finished,
-  @JsonValue('cancelled')
-  cancelled,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum EpisodeOfCareStatusHistoryStatus {
   @JsonValue('planned')
   planned,
   @JsonValue('waitlist')
@@ -126,8 +107,11 @@ enum EncounterLocationStatus {
   unknown,
 }
 
-enum FlagStatus{
-          @JsonValue('active') active,
-          @JsonValue('inactive') inactive,
-          @JsonValue('entered-in-error') entered_in_error,
+enum FlagStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('inactive')
+  inactive,
+  @JsonValue('entered-in-error')
+  entered_in_error,
 }

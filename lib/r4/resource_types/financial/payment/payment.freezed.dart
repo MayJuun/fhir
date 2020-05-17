@@ -23,10 +23,12 @@ class _$PaymentNoticeTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: PaymentNoticeStatus.unknown)
+          PaymentNoticeStatus status,
       Reference request,
       Reference response,
       FhirDateTime created,
@@ -78,7 +80,8 @@ mixin _$PaymentNotice {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: PaymentNoticeStatus.unknown)
+  PaymentNoticeStatus get status;
   Reference get request;
   Reference get response;
   FhirDateTime get created;
@@ -106,10 +109,12 @@ abstract class $PaymentNoticeCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: PaymentNoticeStatus.unknown)
+          PaymentNoticeStatus status,
       Reference request,
       Reference response,
       FhirDateTime created,
@@ -187,7 +192,7 @@ class _$PaymentNoticeCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as PaymentNoticeStatus,
       request: request == freezed ? _value.request : request as Reference,
       response: response == freezed ? _value.response : response as Reference,
       created: created == freezed ? _value.created : created as FhirDateTime,
@@ -320,10 +325,12 @@ abstract class _$PaymentNoticeCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: PaymentNoticeStatus.unknown)
+          PaymentNoticeStatus status,
       Reference request,
       Reference response,
       FhirDateTime created,
@@ -413,7 +420,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as PaymentNoticeStatus,
       request: request == freezed ? _value.request : request as Reference,
       response: response == freezed ? _value.response : response as Reference,
       created: created == freezed ? _value.created : created as FhirDateTime,
@@ -445,7 +452,7 @@ class _$_PaymentNotice implements _PaymentNotice {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: PaymentNoticeStatus.unknown) this.status,
       this.request,
       this.response,
       this.created,
@@ -482,7 +489,8 @@ class _$_PaymentNotice implements _PaymentNotice {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: PaymentNoticeStatus.unknown)
+  final PaymentNoticeStatus status;
   @override
   final Reference request;
   @override
@@ -616,10 +624,12 @@ abstract class _PaymentNotice implements PaymentNotice {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: PaymentNoticeStatus.unknown)
+          PaymentNoticeStatus status,
       Reference request,
       Reference response,
       FhirDateTime created,
@@ -656,7 +666,8 @@ abstract class _PaymentNotice implements PaymentNotice {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: PaymentNoticeStatus.unknown)
+  PaymentNoticeStatus get status;
   @override
   Reference get request;
   @override
@@ -697,16 +708,19 @@ class _$PaymentReconciliationTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: PaymentReconciliationStatus.unknown)
+          PaymentReconciliationStatus status,
       Period period,
       FhirDateTime created,
       Reference paymentIssuer,
       Reference request,
       Reference requestor,
-      PaymentReconciliationOutcome outcome,
+      @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
+          PaymentReconciliationOutcome outcome,
       String disposition,
       Date paymentDate,
       Money paymentAmount,
@@ -758,12 +772,14 @@ mixin _$PaymentReconciliation {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: PaymentReconciliationStatus.unknown)
+  PaymentReconciliationStatus get status;
   Period get period;
   FhirDateTime get created;
   Reference get paymentIssuer;
   Reference get request;
   Reference get requestor;
+  @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
   PaymentReconciliationOutcome get outcome;
   String get disposition;
   Date get paymentDate;
@@ -789,16 +805,19 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: PaymentReconciliationStatus.unknown)
+          PaymentReconciliationStatus status,
       Period period,
       FhirDateTime created,
       Reference paymentIssuer,
       Reference request,
       Reference requestor,
-      PaymentReconciliationOutcome outcome,
+      @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
+          PaymentReconciliationOutcome outcome,
       String disposition,
       Date paymentDate,
       Money paymentAmount,
@@ -875,7 +894,9 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as PaymentReconciliationStatus,
       period: period == freezed ? _value.period : period as Period,
       created: created == freezed ? _value.created : created as FhirDateTime,
       paymentIssuer: paymentIssuer == freezed
@@ -1013,16 +1034,19 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: PaymentReconciliationStatus.unknown)
+          PaymentReconciliationStatus status,
       Period period,
       FhirDateTime created,
       Reference paymentIssuer,
       Reference request,
       Reference requestor,
-      PaymentReconciliationOutcome outcome,
+      @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
+          PaymentReconciliationOutcome outcome,
       String disposition,
       Date paymentDate,
       Money paymentAmount,
@@ -1110,7 +1134,9 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as PaymentReconciliationStatus,
       period: period == freezed ? _value.period : period as Period,
       created: created == freezed ? _value.created : created as FhirDateTime,
       paymentIssuer: paymentIssuer == freezed
@@ -1154,16 +1180,19 @@ class _$_PaymentReconciliation implements _PaymentReconciliation {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: PaymentReconciliationStatus.unknown)
+          this.status,
       this.period,
       this.created,
       this.paymentIssuer,
       this.request,
       this.requestor,
-      this.outcome,
+      @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
+          this.outcome,
       this.disposition,
       this.paymentDate,
       this.paymentAmount,
@@ -1197,7 +1226,8 @@ class _$_PaymentReconciliation implements _PaymentReconciliation {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: PaymentReconciliationStatus.unknown)
+  final PaymentReconciliationStatus status;
   @override
   final Period period;
   @override
@@ -1209,6 +1239,7 @@ class _$_PaymentReconciliation implements _PaymentReconciliation {
   @override
   final Reference requestor;
   @override
+  @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
   final PaymentReconciliationOutcome outcome;
   @override
   final String disposition;
@@ -1350,16 +1381,19 @@ abstract class _PaymentReconciliation implements PaymentReconciliation {
           Code language,
           Narrative text,
           List<dynamic> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> fhirExtension,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
-          Code status,
+          @JsonKey(unknownEnumValue: PaymentReconciliationStatus.unknown)
+              PaymentReconciliationStatus status,
           Period period,
           FhirDateTime created,
           Reference paymentIssuer,
           Reference request,
           Reference requestor,
-          PaymentReconciliationOutcome outcome,
+          @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
+              PaymentReconciliationOutcome outcome,
           String disposition,
           Date paymentDate,
           Money paymentAmount,
@@ -1394,7 +1428,8 @@ abstract class _PaymentReconciliation implements PaymentReconciliation {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: PaymentReconciliationStatus.unknown)
+  PaymentReconciliationStatus get status;
   @override
   Period get period;
   @override
@@ -1406,6 +1441,7 @@ abstract class _PaymentReconciliation implements PaymentReconciliation {
   @override
   Reference get requestor;
   @override
+  @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
   PaymentReconciliationOutcome get outcome;
   @override
   String get disposition;
@@ -1943,9 +1979,11 @@ class _$PaymentReconciliationProcessNoteTearOff {
 
   _PaymentReconciliationProcessNote call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      PaymentReconciliationProcessNoteType type,
+      @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
+          PaymentReconciliationProcessNoteType type,
       String text}) {
     return _PaymentReconciliationProcessNote(
       id: id,
@@ -1966,6 +2004,7 @@ mixin _$PaymentReconciliationProcessNote {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
+  @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
   PaymentReconciliationProcessNoteType get type;
   String get text;
 
@@ -1981,9 +2020,11 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res> {
       _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      PaymentReconciliationProcessNoteType type,
+      @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
+          PaymentReconciliationProcessNoteType type,
       String text});
 }
 
@@ -2028,9 +2069,11 @@ abstract class _$PaymentReconciliationProcessNoteCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      PaymentReconciliationProcessNoteType type,
+      @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
+          PaymentReconciliationProcessNoteType type,
       String text});
 }
 
@@ -2075,9 +2118,11 @@ class _$_PaymentReconciliationProcessNote
     implements _PaymentReconciliationProcessNote {
   const _$_PaymentReconciliationProcessNote(
       {this.id,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
-      this.type,
+      @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
+          this.type,
       this.text});
 
   factory _$_PaymentReconciliationProcessNote.fromJson(
@@ -2092,6 +2137,7 @@ class _$_PaymentReconciliationProcessNote
   @override
   final List<FhirExtension> modifierExtension;
   @override
+  @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
   final PaymentReconciliationProcessNoteType type;
   @override
   final String text;
@@ -2143,9 +2189,11 @@ abstract class _PaymentReconciliationProcessNote
     implements PaymentReconciliationProcessNote {
   const factory _PaymentReconciliationProcessNote(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      PaymentReconciliationProcessNoteType type,
+      @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
+          PaymentReconciliationProcessNoteType type,
       String text}) = _$_PaymentReconciliationProcessNote;
 
   factory _PaymentReconciliationProcessNote.fromJson(
@@ -2159,6 +2207,7 @@ abstract class _PaymentReconciliationProcessNote
   @override
   List<FhirExtension> get modifierExtension;
   @override
+  @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
   PaymentReconciliationProcessNoteType get type;
   @override
   String get text;

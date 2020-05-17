@@ -71,7 +71,8 @@ abstract class BiologicallyDerivedProduct with _$BiologicallyDerivedProduct {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    BiologicallyDerivedProductCategory productCategory,
+    @JsonKey(unknownValue: BiologicallyDerivedProductCategory.unknown)
+        BiologicallyDerivedProductCategory productCategory,
     CodeableConcept productCode,
     BiologicallyDerivedProductStatus status,
     List<Reference> request,
@@ -146,7 +147,8 @@ abstract class BiologicallyDerivedProductStorage
     List<FhirExtension> modifierExtension,
     String description,
     double temperature,
-    BiologicallyDerivedProductStorageScale scale,
+    @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
+        BiologicallyDerivedProductStorageScale scale,
     Period duration,
   }) = _BiologicallyDerivedProductStorage;
   factory BiologicallyDerivedProductStorage.fromJson(
@@ -169,7 +171,7 @@ abstract class Device with _$Device {
     List<Identifier> identifier,
     Reference definition,
     List<DeviceUdiCarrier> udiCarrier,
-    DeviceStatus status,
+    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
     List<CodeableConcept> statusReason,
     String distinctIdentifier,
     String manufacturer,
@@ -220,7 +222,7 @@ abstract class DeviceDeviceName with _$DeviceDeviceName {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
-    DeviceDeviceNameType type,
+    @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type,
   }) = _DeviceDeviceName;
   factory DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
       _$DeviceDeviceNameFromJson(json);
@@ -284,9 +286,12 @@ abstract class DeviceMetric with _$DeviceMetric {
     CodeableConcept unit,
     Reference source,
     Reference parent,
-    DeviceMetricOperationalStatus operationalStatus,
-    DeviceMetricColor color,
-    DeviceMetricCategory category,
+    @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
+        DeviceMetricOperationalStatus operationalStatus,
+    @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
+        DeviceMetricColor color,
+    @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
+        DeviceMetricCategory category,
     Timing measurementPeriod,
     List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
@@ -300,8 +305,8 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    DeviceMetricCalibrationType type,
-    DeviceMetricCalibrationState state,
+    @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType type,
+    @JsonKey(unknownEnumValue: CalibrationState.unknown) CalibrationState state,
     Instant time,
   }) = _DeviceMetricCalibration;
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>

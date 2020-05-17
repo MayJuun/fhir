@@ -25,7 +25,8 @@ abstract class ChargeItemDefinition with _$ChargeItemDefinition {
     List<FhirUri> derivedFromUri,
     List<Canonical> partOf,
     List<Canonical> replaces,
-    ChargeItemDefinitionStatus status,
+    @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+        ChargeItemDefinitionStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -82,7 +83,8 @@ abstract class ChargeItemDefinitionPriceComponent
   const factory ChargeItemDefinitionPriceComponent({
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    Code type,
+    @JsonKey(unknownEnumValue: PriceComponentType.unknown)
+        PriceComponentType type,
     CodeableConcept code,
     double factor,
     Money amount,
@@ -104,7 +106,7 @@ abstract class Account with _$Account {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    AccountStatus status,
+    @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
     CodeableConcept type,
     String name,
     List<Reference> subject,
@@ -160,7 +162,8 @@ abstract class ChargeItem with _$ChargeItem {
     List<Identifier> identifier,
     List<FhirUri> definitionUri,
     List<Canonical> definitionCanonical,
-    ChargeItemStatus status,
+    @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+        ChargeItemStatus status,
     List<Reference> partOf,
     CodeableConcept code,
     Reference subject,
@@ -214,7 +217,8 @@ abstract class InsurancePlan with _$InsurancePlan {
     List<dynamic> contained,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    InsurancePlanStatus status,
+    @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+        InsurancePlanStatus status,
     List<CodeableConcept> type,
     String name,
     List<String> alias,
@@ -370,10 +374,12 @@ abstract class ExplanationOfBenefit with _$ExplanationOfBenefit {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    ExplanationOfBenefitStatus status,
+    @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+        ExplanationOfBenefitStatus status,
     CodeableConcept type,
     CodeableConcept subType,
-    Code use,
+    @JsonKey(unknownEnumValue: ExplanationOfBenefitUse.unknown)
+        ExplanationOfBenefitUse use,
     Reference patient,
     Period billablePeriod,
     FhirDateTime created,
@@ -390,7 +396,8 @@ abstract class ExplanationOfBenefit with _$ExplanationOfBenefit {
     Reference facility,
     Reference claim,
     Reference claimResponse,
-    Code outcome,
+    @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
+        ExplanationOfBenefitOutcome outcome,
     String disposition,
     List<String> preAuthRef,
     List<Period> preAuthRefPeriod,
@@ -822,7 +829,7 @@ abstract class Contract with _$Contract {
     List<Identifier> identifier,
     FhirUri url,
     String version,
-    Code status,
+    @JsonKey(unknownEnumValue: ContractStatus.unknown) ContractStatus status,
     CodeableConcept legalState,
     Reference instantiatesCanonical,
     FhirUri instantiatesUri,
@@ -869,7 +876,8 @@ abstract class ContractContentDefinition with _$ContractContentDefinition {
     CodeableConcept subType,
     Reference publisher,
     FhirDateTime publicationDate,
-    Code publicationStatus,
+    @JsonKey(unknownEnumValue: ContentDefinitionPublicationStatus.unknown)
+        ContentDefinitionPublicationStatus publicationStatus,
     Markdown copyright,
   }) = _ContractContentDefinition;
   factory ContractContentDefinition.fromJson(Map<String, dynamic> json) =>

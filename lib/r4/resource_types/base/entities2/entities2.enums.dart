@@ -1,4 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum SubstanceStatus {
   @JsonValue('active')
@@ -72,7 +72,7 @@ enum DeviceUdiCarrierEntryType {
   unknown,
 }
 
-enum DeviceDeviceNameType {
+enum DeviceNameType {
   @JsonValue('udi-label-name')
   udi_label_name,
   @JsonValue('user-friendly-name')
@@ -136,7 +136,7 @@ enum DeviceMetricCategory {
   unknown,
 }
 
-enum DeviceMetricCalibrationType {
+enum CalibrationType {
   @JsonValue('unspecified')
   unspecified,
   @JsonValue('offset')
@@ -149,7 +149,7 @@ enum DeviceMetricCalibrationType {
   unknown,
 }
 
-enum DeviceMetricCalibrationState {
+enum CalibrationState {
   @JsonValue('not-calibrated')
   not_calibrated,
   @JsonValue('calibration-required')

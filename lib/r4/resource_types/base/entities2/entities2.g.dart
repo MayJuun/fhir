@@ -523,7 +523,8 @@ _$_BiologicallyDerivedProductStorage
     description: json['description'] as String,
     temperature: (json['temperature'] as num)?.toDouble(),
     scale: _$enumDecodeNullable(
-        _$BiologicallyDerivedProductStorageScaleEnumMap, json['scale']),
+        _$BiologicallyDerivedProductStorageScaleEnumMap, json['scale'],
+        unknownValue: BiologicallyDerivedProductStorageScale.unknown),
     duration: json['duration'] == null
         ? null
         : Period.fromJson(json['duration'] as Map<String, dynamic>),
@@ -599,7 +600,8 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
             ? null
             : DeviceUdiCarrier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
+        unknownValue: DeviceStatus.unknown),
     statusReason: (json['statusReason'] as List)
         ?.map((e) => e == null
             ? null
@@ -807,7 +809,8 @@ _$_DeviceDeviceName _$_$_DeviceDeviceNameFromJson(Map<String, dynamic> json) {
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     name: json['name'] as String,
-    type: _$enumDecodeNullable(_$DeviceDeviceNameTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$DeviceNameTypeEnumMap, json['type'],
+        unknownValue: DeviceNameType.unknown),
   );
 }
 
@@ -826,18 +829,18 @@ Map<String, dynamic> _$_$_DeviceDeviceNameToJson(_$_DeviceDeviceName instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name);
-  writeNotNull('type', _$DeviceDeviceNameTypeEnumMap[instance.type]);
+  writeNotNull('type', _$DeviceNameTypeEnumMap[instance.type]);
   return val;
 }
 
-const _$DeviceDeviceNameTypeEnumMap = {
-  DeviceDeviceNameType.udi_label_name: 'udi-label-name',
-  DeviceDeviceNameType.user_friendly_name: 'user-friendly-name',
-  DeviceDeviceNameType.patient_reported_name: 'patient-reported-name',
-  DeviceDeviceNameType.manufacturer_name: 'manufacturer-name',
-  DeviceDeviceNameType.model_name: 'model-name',
-  DeviceDeviceNameType.other: 'other',
-  DeviceDeviceNameType.unknown: 'unknown',
+const _$DeviceNameTypeEnumMap = {
+  DeviceNameType.udi_label_name: 'udi-label-name',
+  DeviceNameType.user_friendly_name: 'user-friendly-name',
+  DeviceNameType.patient_reported_name: 'patient-reported-name',
+  DeviceNameType.manufacturer_name: 'manufacturer-name',
+  DeviceNameType.model_name: 'model-name',
+  DeviceNameType.other: 'other',
+  DeviceNameType.unknown: 'unknown',
 };
 
 _$_DeviceSpecialization _$_$_DeviceSpecializationFromJson(
@@ -1018,10 +1021,13 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['parent'] as Map<String, dynamic>),
     operationalStatus: _$enumDecodeNullable(
-        _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus']),
-    color: _$enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color']),
-    category:
-        _$enumDecodeNullable(_$DeviceMetricCategoryEnumMap, json['category']),
+        _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus'],
+        unknownValue: DeviceMetricOperationalStatus.unknown),
+    color: _$enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color'],
+        unknownValue: DeviceMetricColor.unknown),
+    category: _$enumDecodeNullable(
+        _$DeviceMetricCategoryEnumMap, json['category'],
+        unknownValue: DeviceMetricCategory.unknown),
     measurementPeriod: json['measurementPeriod'] == null
         ? null
         : Timing.fromJson(json['measurementPeriod'] as Map<String, dynamic>),
@@ -1111,10 +1117,10 @@ _$_DeviceMetricCalibration _$_$_DeviceMetricCalibrationFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(
-        _$DeviceMetricCalibrationTypeEnumMap, json['type']),
-    state: _$enumDecodeNullable(
-        _$DeviceMetricCalibrationStateEnumMap, json['state']),
+    type: _$enumDecodeNullable(_$CalibrationTypeEnumMap, json['type'],
+        unknownValue: CalibrationType.unknown),
+    state: _$enumDecodeNullable(_$CalibrationStateEnumMap, json['state'],
+        unknownValue: CalibrationState.unknown),
     time:
         json['time'] == null ? null : Instant.fromJson(json['time'] as String),
   );
@@ -1135,24 +1141,24 @@ Map<String, dynamic> _$_$_DeviceMetricCalibrationToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', _$DeviceMetricCalibrationTypeEnumMap[instance.type]);
-  writeNotNull('state', _$DeviceMetricCalibrationStateEnumMap[instance.state]);
+  writeNotNull('type', _$CalibrationTypeEnumMap[instance.type]);
+  writeNotNull('state', _$CalibrationStateEnumMap[instance.state]);
   writeNotNull('time', instance.time?.toJson());
   return val;
 }
 
-const _$DeviceMetricCalibrationTypeEnumMap = {
-  DeviceMetricCalibrationType.unspecified: 'unspecified',
-  DeviceMetricCalibrationType.offset: 'offset',
-  DeviceMetricCalibrationType.gain: 'gain',
-  DeviceMetricCalibrationType.two_point: 'two-point',
-  DeviceMetricCalibrationType.unknown: 'unknown',
+const _$CalibrationTypeEnumMap = {
+  CalibrationType.unspecified: 'unspecified',
+  CalibrationType.offset: 'offset',
+  CalibrationType.gain: 'gain',
+  CalibrationType.two_point: 'two-point',
+  CalibrationType.unknown: 'unknown',
 };
 
-const _$DeviceMetricCalibrationStateEnumMap = {
-  DeviceMetricCalibrationState.not_calibrated: 'not-calibrated',
-  DeviceMetricCalibrationState.calibration_required: 'calibration-required',
-  DeviceMetricCalibrationState.calibrated: 'calibrated',
-  DeviceMetricCalibrationState.unspecified: 'unspecified',
-  DeviceMetricCalibrationState.unknown: 'unknown',
+const _$CalibrationStateEnumMap = {
+  CalibrationState.not_calibrated: 'not-calibrated',
+  CalibrationState.calibration_required: 'calibration-required',
+  CalibrationState.calibrated: 'calibrated',
+  CalibrationState.unspecified: 'unspecified',
+  CalibrationState.unknown: 'unknown',
 };

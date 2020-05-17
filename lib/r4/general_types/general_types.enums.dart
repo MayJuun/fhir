@@ -1,20 +1,5 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-// Shared Types
-enum Comparator {
-  @JsonValue('<')
-  lessThan,
-  @JsonValue('<=')
-  lessThanEqual,
-  @JsonValue('>=')
-  greaterThanEqual,
-  @JsonValue('>')
-  greaterThan,
-  @JsonValue('unknown')
-  unknown,
-}
-
-// spec: https://itnext.io/comparing-freezed-to-built-value-3ff978c8647
 enum AddressUse {
   @JsonValue('home')
   home,
@@ -37,6 +22,19 @@ enum AddressType {
   physical,
   @JsonValue('both')
   both,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum Comparator {
+  @JsonValue('<')
+  lessThan,
+  @JsonValue('<=')
+  lessThanEqual,
+  @JsonValue('>=')
+  greaterThanEqual,
+  @JsonValue('>')
+  greaterThan,
   @JsonValue('unknown')
   unknown,
 }

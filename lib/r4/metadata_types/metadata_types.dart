@@ -24,7 +24,7 @@ abstract class Contributor with _$Contributor {
   const factory Contributor({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    ContributorType type,
+    @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
     String name,
     List<ContactDetail> contact,
   }) = _Contributor;
@@ -89,7 +89,7 @@ abstract class DataRequirementSort with _$DataRequirementSort {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String path,
-    DataRequirementSortDirection direction,
+    @JsonKey(unknownEnumValue: SortDirection.unknown) SortDirection direction,
   }) = _DataRequirementSort;
   factory DataRequirementSort.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementSortFromJson(json);
@@ -102,7 +102,8 @@ abstract class Expression with _$Expression {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     String description,
     Id name,
-    ExpressionLanguage language,
+    @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
+        ExpressionLanguage language,
     String expression,
     FhirUri reference,
   }) = _Expression;
@@ -132,7 +133,8 @@ abstract class RelatedArtifact with _$RelatedArtifact {
   const factory RelatedArtifact({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    RelatedArtifactType type,
+    @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
+        RelatedArtifactType type,
     String label,
     String display,
     Markdown citation,
@@ -140,6 +142,7 @@ abstract class RelatedArtifact with _$RelatedArtifact {
     Attachment document,
     Canonical resource,
   }) = _RelatedArtifact;
+
   factory RelatedArtifact.fromJson(Map<String, dynamic> json) =>
       _$RelatedArtifactFromJson(json);
 }
@@ -149,7 +152,8 @@ abstract class TriggerDefinition with _$TriggerDefinition {
   const factory TriggerDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-    TriggerDefinitionType type,
+    @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
+        TriggerDefinitionType type,
     String name,
     Timing timingTiming,
     Reference timingReference,

@@ -244,14 +244,7 @@ _$_HealthcareServiceAvailableTime _$_$_HealthcareServiceAvailableTimeFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    daysOfWeek: (json['daysOfWeek'] as List)?.map((e) => e as String)?.toList(),
-    allDay: json['allDay'] as bool,
-    availableStartTime: json['availableStartTime'] == null
-        ? null
-        : Time.fromJson(json['availableStartTime'] as String),
-    availableEndTime: json['availableEndTime'] == null
-        ? null
-        : Time.fromJson(json['availableEndTime'] as String),
+    AvailableTimeDaysOfWeek: json['AvailableTimeDaysOfWeek'] as List,
   );
 }
 
@@ -270,10 +263,7 @@ Map<String, dynamic> _$_$_HealthcareServiceAvailableTimeToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('daysOfWeek', instance.daysOfWeek);
-  writeNotNull('allDay', instance.allDay);
-  writeNotNull('availableStartTime', instance.availableStartTime?.toJson());
-  writeNotNull('availableEndTime', instance.availableEndTime?.toJson());
+  writeNotNull('AvailableTimeDaysOfWeek', instance.AvailableTimeDaysOfWeek);
   return val;
 }
 
@@ -538,7 +528,7 @@ _$_LocationHoursOfOperation _$_$_LocationHoursOfOperationFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     daysOfWeek: (json['daysOfWeek'] as List)
-        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.map((e) => _$enumDecodeNullable(_$AvailableTimeDaysOfWeekEnumMap, e))
         ?.toList(),
     allDay: json['allDay'] as bool,
     openingTime: json['openingTime'] == null
@@ -566,12 +556,26 @@ Map<String, dynamic> _$_$_LocationHoursOfOperationToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
-      'daysOfWeek', instance.daysOfWeek?.map((e) => e?.toJson())?.toList());
+      'daysOfWeek',
+      instance.daysOfWeek
+          ?.map((e) => _$AvailableTimeDaysOfWeekEnumMap[e])
+          ?.toList());
   writeNotNull('allDay', instance.allDay);
   writeNotNull('openingTime', instance.openingTime?.toJson());
   writeNotNull('closingTime', instance.closingTime?.toJson());
   return val;
 }
+
+const _$AvailableTimeDaysOfWeekEnumMap = {
+  AvailableTimeDaysOfWeek.mon: 'mon',
+  AvailableTimeDaysOfWeek.tue: 'tue',
+  AvailableTimeDaysOfWeek.wed: 'wed',
+  AvailableTimeDaysOfWeek.thu: 'thu',
+  AvailableTimeDaysOfWeek.fri: 'fri',
+  AvailableTimeDaysOfWeek.sat: 'sat',
+  AvailableTimeDaysOfWeek.sun: 'sun',
+  AvailableTimeDaysOfWeek.unknown: 'unknown',
+};
 
 _$_OrganizationAffiliation _$_$_OrganizationAffiliationFromJson(
     Map<String, dynamic> json) {

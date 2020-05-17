@@ -42,7 +42,8 @@ _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     title: json['title'] as String,
     subtitle: json['subtitle'] as String,
-    status: _$enumDecodeNullable(_$LibraryStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$LibraryStatusEnumMap, json['status'],
+        unknownValue: LibraryStatus.unknown),
     experimental: json['experimental'] as bool,
     type: json['type'] == null
         ? null
@@ -272,8 +273,10 @@ _$_Lists _$_$_ListsFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$ListStatusEnumMap, json['status']),
-    mode: _$enumDecodeNullable(_$ListModeEnumMap, json['mode']),
+    status: _$enumDecodeNullable(_$ListStatusEnumMap, json['status'],
+        unknownValue: ListStatus.unknown),
+    mode: _$enumDecodeNullable(_$ListModeEnumMap, json['mode'],
+        unknownValue: ListMode.unknown),
     title: json['title'] as String,
     code: json['code'] == null
         ? null
@@ -436,7 +439,8 @@ _$_EpisodeOfCare _$_$_EpisodeOfCareFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$EpisodeOfCareStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$EpisodeOfCareStatusEnumMap, json['status'],
+        unknownValue: EpisodeOfCareStatus.unknown),
     statusHistory: (json['statusHistory'] as List)
         ?.map((e) => e == null
             ? null
@@ -544,8 +548,8 @@ _$_EpisodeOfCareStatusHistory _$_$_EpisodeOfCareStatusHistoryFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(
-        _$EpisodeOfCareStatusHistoryStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$EpisodeOfCareStatusEnumMap, json['status'],
+        unknownValue: EpisodeOfCareStatus.unknown),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -567,22 +571,10 @@ Map<String, dynamic> _$_$_EpisodeOfCareStatusHistoryToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'status', _$EpisodeOfCareStatusHistoryStatusEnumMap[instance.status]);
+  writeNotNull('status', _$EpisodeOfCareStatusEnumMap[instance.status]);
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
-
-const _$EpisodeOfCareStatusHistoryStatusEnumMap = {
-  EpisodeOfCareStatusHistoryStatus.planned: 'planned',
-  EpisodeOfCareStatusHistoryStatus.waitlist: 'waitlist',
-  EpisodeOfCareStatusHistoryStatus.active: 'active',
-  EpisodeOfCareStatusHistoryStatus.onhold: 'onhold',
-  EpisodeOfCareStatusHistoryStatus.finished: 'finished',
-  EpisodeOfCareStatusHistoryStatus.cancelled: 'cancelled',
-  EpisodeOfCareStatusHistoryStatus.entered_in_error: 'entered-in-error',
-  EpisodeOfCareStatusHistoryStatus.unknown: 'unknown',
-};
 
 _$_EpisodeOfCareDiagnosis _$_$_EpisodeOfCareDiagnosisFromJson(
     Map<String, dynamic> json) {
@@ -660,7 +652,8 @@ _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$EncounterStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$EncounterStatusEnumMap, json['status'],
+        unknownValue: EncounterStatus.unknown),
     statusHistory: (json['statusHistory'] as List)
         ?.map((e) => e == null
             ? null
@@ -829,8 +822,8 @@ _$_EncounterStatusHistory _$_$_EncounterStatusHistoryFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(
-        _$EncounterStatusHistoryStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$EncounterStatusEnumMap, json['status'],
+        unknownValue: EncounterStatus.unknown),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -852,23 +845,10 @@ Map<String, dynamic> _$_$_EncounterStatusHistoryToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'status', _$EncounterStatusHistoryStatusEnumMap[instance.status]);
+  writeNotNull('status', _$EncounterStatusEnumMap[instance.status]);
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
-
-const _$EncounterStatusHistoryStatusEnumMap = {
-  EncounterStatusHistoryStatus.planned: 'planned',
-  EncounterStatusHistoryStatus.arrived: 'arrived',
-  EncounterStatusHistoryStatus.triaged: 'triaged',
-  EncounterStatusHistoryStatus.in_progress: 'in-progress',
-  EncounterStatusHistoryStatus.onleave: 'onleave',
-  EncounterStatusHistoryStatus.finished: 'finished',
-  EncounterStatusHistoryStatus.cancelled: 'cancelled',
-  EncounterStatusHistoryStatus.entered_in_error: 'entered-in-error',
-  EncounterStatusHistoryStatus.unknown: 'unknown',
-};
 
 _$_EncounterClassHistory _$_$_EncounterClassHistoryFromJson(
     Map<String, dynamic> json) {
@@ -1106,8 +1086,9 @@ _$_EncounterLocation _$_$_EncounterLocationFromJson(Map<String, dynamic> json) {
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
-    status:
-        _$enumDecodeNullable(_$EncounterLocationStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(
+        _$EncounterLocationStatusEnumMap, json['status'],
+        unknownValue: EncounterLocationStatus.unknown),
     physicalType: json['physicalType'] == null
         ? null
         : CodeableConcept.fromJson(

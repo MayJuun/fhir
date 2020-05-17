@@ -538,7 +538,7 @@ class _$SlotTearOff {
       List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
       Reference schedule,
-      SlotStatus status,
+      @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus status,
       Instant start,
       Instant end,
       bool overbooked,
@@ -588,6 +588,7 @@ mixin _$Slot {
   List<CodeableConcept> get specialty;
   CodeableConcept get appointmentType;
   Reference get schedule;
+  @JsonKey(unknownEnumValue: SlotStatus.unknown)
   SlotStatus get status;
   Instant get start;
   Instant get end;
@@ -617,7 +618,7 @@ abstract class $SlotCopyWith<$Res> {
       List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
       Reference schedule,
-      SlotStatus status,
+      @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus status,
       Instant start,
       Instant end,
       bool overbooked,
@@ -764,7 +765,7 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
       Reference schedule,
-      SlotStatus status,
+      @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus status,
       Instant start,
       Instant end,
       bool overbooked,
@@ -874,7 +875,7 @@ class _$_Slot implements _Slot {
       this.specialty,
       this.appointmentType,
       this.schedule,
-      this.status,
+      @JsonKey(unknownEnumValue: SlotStatus.unknown) this.status,
       this.start,
       this.end,
       this.overbooked,
@@ -915,6 +916,7 @@ class _$_Slot implements _Slot {
   @override
   final Reference schedule;
   @override
+  @JsonKey(unknownEnumValue: SlotStatus.unknown)
   final SlotStatus status;
   @override
   final Instant start;
@@ -1040,7 +1042,7 @@ abstract class _Slot implements Slot {
       List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
       Reference schedule,
-      SlotStatus status,
+      @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus status,
       Instant start,
       Instant end,
       bool overbooked,
@@ -1080,6 +1082,7 @@ abstract class _Slot implements Slot {
   @override
   Reference get schedule;
   @override
+  @JsonKey(unknownEnumValue: SlotStatus.unknown)
   SlotStatus get status;
   @override
   Instant get start;
@@ -1116,11 +1119,11 @@ class _$TaskTearOff {
       List<Reference> basedOn,
       Identifier groupIdentifier,
       List<Reference> partOf,
-      TaskStatus status,
+      @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus status,
       CodeableConcept statusReason,
       CodeableConcept businessStatus,
-      TaskIntent intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: TaskIntent.unknown) TaskIntent intent,
+      @JsonKey(unknownEnumValue: TaskPriority.unknown) TaskPriority priority,
       CodeableConcept code,
       String description,
       Reference focus,
@@ -1206,11 +1209,14 @@ mixin _$Task {
   List<Reference> get basedOn;
   Identifier get groupIdentifier;
   List<Reference> get partOf;
+  @JsonKey(unknownEnumValue: TaskStatus.unknown)
   TaskStatus get status;
   CodeableConcept get statusReason;
   CodeableConcept get businessStatus;
+  @JsonKey(unknownEnumValue: TaskIntent.unknown)
   TaskIntent get intent;
-  Code get priority;
+  @JsonKey(unknownEnumValue: TaskPriority.unknown)
+  TaskPriority get priority;
   CodeableConcept get code;
   String get description;
   Reference get focus;
@@ -1256,11 +1262,11 @@ abstract class $TaskCopyWith<$Res> {
       List<Reference> basedOn,
       Identifier groupIdentifier,
       List<Reference> partOf,
-      TaskStatus status,
+      @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus status,
       CodeableConcept statusReason,
       CodeableConcept businessStatus,
-      TaskIntent intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: TaskIntent.unknown) TaskIntent intent,
+      @JsonKey(unknownEnumValue: TaskPriority.unknown) TaskPriority priority,
       CodeableConcept code,
       String description,
       Reference focus,
@@ -1391,7 +1397,8 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
           ? _value.businessStatus
           : businessStatus as CodeableConcept,
       intent: intent == freezed ? _value.intent : intent as TaskIntent,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      priority:
+          priority == freezed ? _value.priority : priority as TaskPriority,
       code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String,
@@ -1617,11 +1624,11 @@ abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       List<Reference> basedOn,
       Identifier groupIdentifier,
       List<Reference> partOf,
-      TaskStatus status,
+      @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus status,
       CodeableConcept statusReason,
       CodeableConcept businessStatus,
-      TaskIntent intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: TaskIntent.unknown) TaskIntent intent,
+      @JsonKey(unknownEnumValue: TaskPriority.unknown) TaskPriority priority,
       CodeableConcept code,
       String description,
       Reference focus,
@@ -1769,7 +1776,8 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
           ? _value.businessStatus
           : businessStatus as CodeableConcept,
       intent: intent == freezed ? _value.intent : intent as TaskIntent,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      priority:
+          priority == freezed ? _value.priority : priority as TaskPriority,
       code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String,
@@ -1833,11 +1841,11 @@ class _$_Task implements _Task {
       this.basedOn,
       this.groupIdentifier,
       this.partOf,
-      this.status,
+      @JsonKey(unknownEnumValue: TaskStatus.unknown) this.status,
       this.statusReason,
       this.businessStatus,
-      this.intent,
-      this.priority,
+      @JsonKey(unknownEnumValue: TaskIntent.unknown) this.intent,
+      @JsonKey(unknownEnumValue: TaskPriority.unknown) this.priority,
       this.code,
       this.description,
       this.focus,
@@ -1894,15 +1902,18 @@ class _$_Task implements _Task {
   @override
   final List<Reference> partOf;
   @override
+  @JsonKey(unknownEnumValue: TaskStatus.unknown)
   final TaskStatus status;
   @override
   final CodeableConcept statusReason;
   @override
   final CodeableConcept businessStatus;
   @override
+  @JsonKey(unknownEnumValue: TaskIntent.unknown)
   final TaskIntent intent;
   @override
-  final Code priority;
+  @JsonKey(unknownEnumValue: TaskPriority.unknown)
+  final TaskPriority priority;
   @override
   final CodeableConcept code;
   @override
@@ -2110,11 +2121,11 @@ abstract class _Task implements Task {
       List<Reference> basedOn,
       Identifier groupIdentifier,
       List<Reference> partOf,
-      TaskStatus status,
+      @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus status,
       CodeableConcept statusReason,
       CodeableConcept businessStatus,
-      TaskIntent intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: TaskIntent.unknown) TaskIntent intent,
+      @JsonKey(unknownEnumValue: TaskPriority.unknown) TaskPriority priority,
       CodeableConcept code,
       String description,
       Reference focus,
@@ -2170,15 +2181,18 @@ abstract class _Task implements Task {
   @override
   List<Reference> get partOf;
   @override
+  @JsonKey(unknownEnumValue: TaskStatus.unknown)
   TaskStatus get status;
   @override
   CodeableConcept get statusReason;
   @override
   CodeableConcept get businessStatus;
   @override
+  @JsonKey(unknownEnumValue: TaskIntent.unknown)
   TaskIntent get intent;
   @override
-  Code get priority;
+  @JsonKey(unknownEnumValue: TaskPriority.unknown)
+  TaskPriority get priority;
   @override
   CodeableConcept get code;
   @override
@@ -5780,10 +5794,12 @@ class _$AppointmentTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      AppointmentStatus status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          AppointmentStatus status,
       CodeableConcept cancelationReason,
       List<CodeableConcept> serviceCategory,
       List<CodeableConcept> serviceType,
@@ -5855,6 +5871,7 @@ mixin _$Appointment {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
   AppointmentStatus get status;
   CodeableConcept get cancelationReason;
   List<CodeableConcept> get serviceCategory;
@@ -5893,10 +5910,12 @@ abstract class $AppointmentCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      AppointmentStatus status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          AppointmentStatus status,
       CodeableConcept cancelationReason,
       List<CodeableConcept> serviceCategory,
       List<CodeableConcept> serviceType,
@@ -6091,10 +6110,12 @@ abstract class _$AppointmentCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      AppointmentStatus status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          AppointmentStatus status,
       CodeableConcept cancelationReason,
       List<CodeableConcept> serviceCategory,
       List<CodeableConcept> serviceType,
@@ -6254,7 +6275,7 @@ class _$_Appointment implements _Appointment {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown) this.status,
       this.cancelationReason,
       this.serviceCategory,
       this.serviceType,
@@ -6301,6 +6322,7 @@ class _$_Appointment implements _Appointment {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
   final AppointmentStatus status;
   @override
   final CodeableConcept cancelationReason;
@@ -6481,10 +6503,12 @@ abstract class _Appointment implements Appointment {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      AppointmentStatus status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          AppointmentStatus status,
       CodeableConcept cancelationReason,
       List<CodeableConcept> serviceCategory,
       List<CodeableConcept> serviceType,
@@ -6531,6 +6555,7 @@ abstract class _Appointment implements Appointment {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
   AppointmentStatus get status;
   @override
   CodeableConcept get cancelationReason;
@@ -6586,12 +6611,15 @@ class _$AppointmentParticipantTearOff {
 
   _AppointmentParticipant call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<CodeableConcept> type,
       Reference actor,
-      @JsonKey(name: 'required') AppointmentParticipantRequired require,
-      AppointmentParticipantStatus status,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired require,
+      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+          AppointmentParticipantStatus status,
       Period period}) {
     return _AppointmentParticipant(
       id: id,
@@ -6616,8 +6644,11 @@ mixin _$AppointmentParticipant {
   List<FhirExtension> get modifierExtension;
   List<CodeableConcept> get type;
   Reference get actor;
-  @JsonKey(name: 'required')
+  @JsonKey(
+      name: 'required',
+      unknownEnumValue: AppointmentParticipantRequired.unknown)
   AppointmentParticipantRequired get require;
+  @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
   AppointmentParticipantStatus get status;
   Period get period;
 
@@ -6631,12 +6662,15 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       _$AppointmentParticipantCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<CodeableConcept> type,
       Reference actor,
-      @JsonKey(name: 'required') AppointmentParticipantRequired require,
-      AppointmentParticipantStatus status,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired require,
+      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+          AppointmentParticipantStatus status,
       Period period});
 
   $ReferenceCopyWith<$Res> get actor;
@@ -6711,12 +6745,15 @@ abstract class _$AppointmentParticipantCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<CodeableConcept> type,
       Reference actor,
-      @JsonKey(name: 'required') AppointmentParticipantRequired require,
-      AppointmentParticipantStatus status,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired require,
+      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+          AppointmentParticipantStatus status,
       Period period});
 
   @override
@@ -6771,12 +6808,15 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
 class _$_AppointmentParticipant implements _AppointmentParticipant {
   const _$_AppointmentParticipant(
       {this.id,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.type,
       this.actor,
-      @JsonKey(name: 'required') this.require,
-      this.status,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          this.require,
+      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+          this.status,
       this.period});
 
   factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
@@ -6794,9 +6834,12 @@ class _$_AppointmentParticipant implements _AppointmentParticipant {
   @override
   final Reference actor;
   @override
-  @JsonKey(name: 'required')
+  @JsonKey(
+      name: 'required',
+      unknownEnumValue: AppointmentParticipantRequired.unknown)
   final AppointmentParticipantRequired require;
   @override
+  @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
   final AppointmentParticipantStatus status;
   @override
   final Period period;
@@ -6857,12 +6900,15 @@ class _$_AppointmentParticipant implements _AppointmentParticipant {
 abstract class _AppointmentParticipant implements AppointmentParticipant {
   const factory _AppointmentParticipant(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<CodeableConcept> type,
       Reference actor,
-      @JsonKey(name: 'required') AppointmentParticipantRequired require,
-      AppointmentParticipantStatus status,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired require,
+      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+          AppointmentParticipantStatus status,
       Period period}) = _$_AppointmentParticipant;
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
@@ -6880,9 +6926,12 @@ abstract class _AppointmentParticipant implements AppointmentParticipant {
   @override
   Reference get actor;
   @override
-  @JsonKey(name: 'required')
+  @JsonKey(
+      name: 'required',
+      unknownEnumValue: AppointmentParticipantRequired.unknown)
   AppointmentParticipantRequired get require;
   @override
+  @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
   AppointmentParticipantStatus get status;
   @override
   Period get period;
@@ -7428,12 +7477,14 @@ class _$VerificationResultTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
       CodeableConcept need,
-      Code status,
+      @JsonKey(unknownEnumValue: VerificationResultStatus.unknown)
+          VerificationResultStatus status,
       FhirDateTime statusDate,
       CodeableConcept validationType,
       List<CodeableConcept> validationProcess,
@@ -7489,7 +7540,8 @@ mixin _$VerificationResult {
   List<Reference> get target;
   List<String> get targetLocation;
   CodeableConcept get need;
-  Code get status;
+  @JsonKey(unknownEnumValue: VerificationResultStatus.unknown)
+  VerificationResultStatus get status;
   FhirDateTime get statusDate;
   CodeableConcept get validationType;
   List<CodeableConcept> get validationProcess;
@@ -7517,12 +7569,14 @@ abstract class $VerificationResultCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
       CodeableConcept need,
-      Code status,
+      @JsonKey(unknownEnumValue: VerificationResultStatus.unknown)
+          VerificationResultStatus status,
       FhirDateTime statusDate,
       CodeableConcept validationType,
       List<CodeableConcept> validationProcess,
@@ -7601,7 +7655,9 @@ class _$VerificationResultCopyWithImpl<$Res>
           ? _value.targetLocation
           : targetLocation as List<String>,
       need: need == freezed ? _value.need : need as CodeableConcept,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as VerificationResultStatus,
       statusDate: statusDate == freezed
           ? _value.statusDate
           : statusDate as FhirDateTime,
@@ -7719,12 +7775,14 @@ abstract class _$VerificationResultCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
       CodeableConcept need,
-      Code status,
+      @JsonKey(unknownEnumValue: VerificationResultStatus.unknown)
+          VerificationResultStatus status,
       FhirDateTime statusDate,
       CodeableConcept validationType,
       List<CodeableConcept> validationProcess,
@@ -7812,7 +7870,9 @@ class __$VerificationResultCopyWithImpl<$Res>
           ? _value.targetLocation
           : targetLocation as List<String>,
       need: need == freezed ? _value.need : need as CodeableConcept,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as VerificationResultStatus,
       statusDate: statusDate == freezed
           ? _value.statusDate
           : statusDate as FhirDateTime,
@@ -7860,7 +7920,7 @@ class _$_VerificationResult implements _VerificationResult {
       this.target,
       this.targetLocation,
       this.need,
-      this.status,
+      @JsonKey(unknownEnumValue: VerificationResultStatus.unknown) this.status,
       this.statusDate,
       this.validationType,
       this.validationProcess,
@@ -7901,7 +7961,8 @@ class _$_VerificationResult implements _VerificationResult {
   @override
   final CodeableConcept need;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: VerificationResultStatus.unknown)
+  final VerificationResultStatus status;
   @override
   final FhirDateTime statusDate;
   @override
@@ -8043,12 +8104,14 @@ abstract class _VerificationResult implements VerificationResult {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       List<String> targetLocation,
       CodeableConcept need,
-      Code status,
+      @JsonKey(unknownEnumValue: VerificationResultStatus.unknown)
+          VerificationResultStatus status,
       FhirDateTime statusDate,
       CodeableConcept validationType,
       List<CodeableConcept> validationProcess,
@@ -8089,7 +8152,8 @@ abstract class _VerificationResult implements VerificationResult {
   @override
   CodeableConcept get need;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: VerificationResultStatus.unknown)
+  VerificationResultStatus get status;
   @override
   FhirDateTime get statusDate;
   @override

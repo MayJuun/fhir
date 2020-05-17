@@ -1,4 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum ResourceConditionalRead {
   @JsonValue('not-supported')
@@ -188,7 +188,7 @@ enum ResourceVersioning {
   unknown,
 }
 
-enum InteractionCode {
+enum RestInteractionCode {
   @JsonValue('transaction')
   transaction,
   @JsonValue('batch')
@@ -212,7 +212,7 @@ enum CapabilityStatementSearchParamType {
   unknown,
 }
 
-enum InteractionCode {
+enum ResourceInteractionCode {
   @JsonValue('read')
   read,
   @JsonValue('vread')
@@ -235,25 +235,11 @@ enum InteractionCode {
   unknown,
 }
 
-enum CapabilityStatementSupportedMessageMode {
-  @JsonValue('number')
-  number,
-  @JsonValue('date')
-  date,
-  @JsonValue('string')
-  string,
-  @JsonValue('token')
-  token,
-  @JsonValue('reference')
-  reference,
-  @JsonValue('composite')
-  composite,
-  @JsonValue('quantity')
-  quantity,
-  @JsonValue('uri')
-  uri,
-  @JsonValue('special')
-  special,
+enum SupportedMessageMode {
+  @JsonValue('sender')
+  sender,
+  @JsonValue('receiver')
+  receiver,
   @JsonValue('unknown')
   unknown,
 }

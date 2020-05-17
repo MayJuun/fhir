@@ -1906,7 +1906,7 @@ class _$CountTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) {
@@ -1930,6 +1930,7 @@ mixin _$Count {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   double get value;
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   String get unit;
   FhirUri get system;
@@ -1946,7 +1947,7 @@ abstract class $CountCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -1992,7 +1993,7 @@ abstract class _$CountCopyWith<$Res> implements $CountCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -2037,7 +2038,7 @@ class _$_Count implements _Count {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.value,
-      this.comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
       this.unit,
       this.system,
       this.code});
@@ -2053,6 +2054,7 @@ class _$_Count implements _Count {
   @override
   final double value;
   @override
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   final Comparator comparator;
   @override
   final String unit;
@@ -2114,7 +2116,7 @@ abstract class _Count implements Count {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) = _$_Count;
@@ -2129,6 +2131,7 @@ abstract class _Count implements Count {
   @override
   double get value;
   @override
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   @override
   String get unit;
@@ -2151,7 +2154,7 @@ class _$DistanceTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) {
@@ -2175,6 +2178,7 @@ mixin _$Distance {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   double get value;
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   String get unit;
   FhirUri get system;
@@ -2191,7 +2195,7 @@ abstract class $DistanceCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -2237,7 +2241,7 @@ abstract class _$DistanceCopyWith<$Res> implements $DistanceCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -2282,7 +2286,7 @@ class _$_Distance implements _Distance {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.value,
-      this.comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
       this.unit,
       this.system,
       this.code});
@@ -2298,6 +2302,7 @@ class _$_Distance implements _Distance {
   @override
   final double value;
   @override
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   final Comparator comparator;
   @override
   final String unit;
@@ -2359,7 +2364,7 @@ abstract class _Distance implements Distance {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) = _$_Distance;
@@ -2374,6 +2379,7 @@ abstract class _Distance implements Distance {
   @override
   double get value;
   @override
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   @override
   String get unit;
@@ -2396,7 +2402,7 @@ class _$DurationTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) {
@@ -2420,6 +2426,7 @@ mixin _$Duration {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   double get value;
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   String get unit;
   FhirUri get system;
@@ -2436,7 +2443,7 @@ abstract class $DurationCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -2482,7 +2489,7 @@ abstract class _$DurationCopyWith<$Res> implements $DurationCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -2527,7 +2534,7 @@ class _$_Duration implements _Duration {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.value,
-      this.comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
       this.unit,
       this.system,
       this.code});
@@ -2543,6 +2550,7 @@ class _$_Duration implements _Duration {
   @override
   final double value;
   @override
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   final Comparator comparator;
   @override
   final String unit;
@@ -2604,7 +2612,7 @@ abstract class _Duration implements Duration {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) = _$_Duration;
@@ -2619,6 +2627,7 @@ abstract class _Duration implements Duration {
   @override
   double get value;
   @override
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   @override
   String get unit;
@@ -3625,7 +3634,7 @@ class _$QuantityTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) {
@@ -3649,6 +3658,7 @@ mixin _$Quantity {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   double get value;
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   String get unit;
   FhirUri get system;
@@ -3665,7 +3675,7 @@ abstract class $QuantityCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -3711,7 +3721,7 @@ abstract class _$QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code});
@@ -3756,7 +3766,7 @@ class _$_Quantity implements _Quantity {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.value,
-      this.comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
       this.unit,
       this.system,
       this.code});
@@ -3772,6 +3782,7 @@ class _$_Quantity implements _Quantity {
   @override
   final double value;
   @override
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   final Comparator comparator;
   @override
   final String unit;
@@ -3833,7 +3844,7 @@ abstract class _Quantity implements Quantity {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       double value,
-      Comparator comparator,
+      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
       String unit,
       FhirUri system,
       Code code}) = _$_Quantity;
@@ -3848,6 +3859,7 @@ abstract class _Quantity implements Quantity {
   @override
   double get value;
   @override
+  @JsonKey(unknownEnumValue: Comparator.unknown)
   Comparator get comparator;
   @override
   String get unit;
@@ -5205,7 +5217,8 @@ class _$TimingRepeatTearOff {
       int frequencyMax,
       double period,
       double periodMax,
-      TimingRepeatUnit periodUnit,
+      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
+          TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
       @JsonKey(name: 'when')
@@ -5257,6 +5270,7 @@ mixin _$TimingRepeat {
   int get frequencyMax;
   double get period;
   double get periodMax;
+  @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
   TimingRepeatUnit get periodUnit;
   List<Code> get dayOfWeek;
   List<Time> get timeOfDay;
@@ -5290,7 +5304,8 @@ abstract class $TimingRepeatCopyWith<$Res> {
       int frequencyMax,
       double period,
       double periodMax,
-      TimingRepeatUnit periodUnit,
+      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
+          TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
       @JsonKey(name: 'when')
@@ -5430,7 +5445,8 @@ abstract class _$TimingRepeatCopyWith<$Res>
       int frequencyMax,
       double period,
       double periodMax,
-      TimingRepeatUnit periodUnit,
+      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
+          TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
       @JsonKey(name: 'when')
@@ -5539,7 +5555,7 @@ class _$_TimingRepeat implements _TimingRepeat {
       this.frequencyMax,
       this.period,
       this.periodMax,
-      this.periodUnit,
+      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown) this.periodUnit,
       this.dayOfWeek,
       this.timeOfDay,
       @JsonKey(name: 'when') this.timingRepeatWhenList,
@@ -5581,6 +5597,7 @@ class _$_TimingRepeat implements _TimingRepeat {
   @override
   final double periodMax;
   @override
+  @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
   final TimingRepeatUnit periodUnit;
   @override
   final List<Code> dayOfWeek;
@@ -5712,7 +5729,8 @@ abstract class _TimingRepeat implements TimingRepeat {
       int frequencyMax,
       double period,
       double periodMax,
-      TimingRepeatUnit periodUnit,
+      @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
+          TimingRepeatUnit periodUnit,
       List<Code> dayOfWeek,
       List<Time> timeOfDay,
       @JsonKey(name: 'when')
@@ -5755,6 +5773,7 @@ abstract class _TimingRepeat implements TimingRepeat {
   @override
   double get periodMax;
   @override
+  @JsonKey(unknownEnumValue: TimingRepeatUnit.unknown)
   TimingRepeatUnit get periodUnit;
   @override
   List<Code> get dayOfWeek;

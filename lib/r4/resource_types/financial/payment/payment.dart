@@ -19,7 +19,8 @@ abstract class PaymentNotice with _$PaymentNotice {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
+    @JsonKey(unknownEnumValue: PaymentNoticeStatus.unknown)
+        PaymentNoticeStatus status,
     Reference request,
     Reference response,
     FhirDateTime created,
@@ -48,13 +49,15 @@ abstract class PaymentReconciliation with _$PaymentReconciliation {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
+    @JsonKey(unknownEnumValue: PaymentReconciliationStatus.unknown)
+        PaymentReconciliationStatus status,
     Period period,
     FhirDateTime created,
     Reference paymentIssuer,
     Reference request,
     Reference requestor,
-    PaymentReconciliationOutcome outcome,
+    @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
+        PaymentReconciliationOutcome outcome,
     String disposition,
     Date paymentDate,
     Money paymentAmount,
@@ -95,7 +98,8 @@ abstract class PaymentReconciliationProcessNote
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    PaymentReconciliationProcessNoteType type,
+    @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
+        PaymentReconciliationProcessNoteType type,
     String text,
   }) = _PaymentReconciliationProcessNote;
   factory PaymentReconciliationProcessNote.fromJson(

@@ -24,10 +24,12 @@ class _$ImmunizationEvaluationTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ImmunizationEvaluationStatus.unknown)
+          ImmunizationEvaluationStatus status,
       Reference patient,
       FhirDateTime date,
       Reference authority,
@@ -85,7 +87,8 @@ mixin _$ImmunizationEvaluation {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: ImmunizationEvaluationStatus.unknown)
+  ImmunizationEvaluationStatus get status;
   Reference get patient;
   FhirDateTime get date;
   Reference get authority;
@@ -116,10 +119,12 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ImmunizationEvaluationStatus.unknown)
+          ImmunizationEvaluationStatus status,
       Reference patient,
       FhirDateTime date,
       Reference authority,
@@ -200,7 +205,9 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as ImmunizationEvaluationStatus,
       patient: patient == freezed ? _value.patient : patient as Reference,
       date: date == freezed ? _value.date : date as FhirDateTime,
       authority:
@@ -320,10 +327,12 @@ abstract class _$ImmunizationEvaluationCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ImmunizationEvaluationStatus.unknown)
+          ImmunizationEvaluationStatus status,
       Reference patient,
       FhirDateTime date,
       Reference authority,
@@ -413,7 +422,9 @@ class __$ImmunizationEvaluationCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as ImmunizationEvaluationStatus,
       patient: patient == freezed ? _value.patient : patient as Reference,
       date: date == freezed ? _value.date : date as FhirDateTime,
       authority:
@@ -459,10 +470,12 @@ class _$_ImmunizationEvaluation implements _ImmunizationEvaluation {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: ImmunizationEvaluationStatus.unknown)
+          this.status,
       this.patient,
       this.date,
       this.authority,
@@ -502,7 +515,8 @@ class _$_ImmunizationEvaluation implements _ImmunizationEvaluation {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: ImmunizationEvaluationStatus.unknown)
+  final ImmunizationEvaluationStatus status;
   @override
   final Reference patient;
   @override
@@ -655,10 +669,12 @@ abstract class _ImmunizationEvaluation implements ImmunizationEvaluation {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ImmunizationEvaluationStatus.unknown)
+          ImmunizationEvaluationStatus status,
       Reference patient,
       FhirDateTime date,
       Reference authority,
@@ -698,7 +714,8 @@ abstract class _ImmunizationEvaluation implements ImmunizationEvaluation {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: ImmunizationEvaluationStatus.unknown)
+  ImmunizationEvaluationStatus get status;
   @override
   Reference get patient;
   @override
@@ -743,11 +760,13 @@ class _$MedicationDispenseTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
+          MedicationDispenseStatus status,
       CodeableConcept statusReasonCodeableConcept,
       Reference statusReasonReference,
       CodeableConcept category,
@@ -821,7 +840,8 @@ mixin _$MedicationDispense {
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   List<Reference> get partOf;
-  Code get status;
+  @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
+  MedicationDispenseStatus get status;
   CodeableConcept get statusReasonCodeableConcept;
   Reference get statusReasonReference;
   CodeableConcept get category;
@@ -859,11 +879,13 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
+          MedicationDispenseStatus status,
       CodeableConcept statusReasonCodeableConcept,
       Reference statusReasonReference,
       CodeableConcept category,
@@ -968,7 +990,9 @@ class _$MedicationDispenseCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as MedicationDispenseStatus,
       statusReasonCodeableConcept: statusReasonCodeableConcept == freezed
           ? _value.statusReasonCodeableConcept
           : statusReasonCodeableConcept as CodeableConcept,
@@ -1188,11 +1212,13 @@ abstract class _$MedicationDispenseCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
+          MedicationDispenseStatus status,
       CodeableConcept statusReasonCodeableConcept,
       Reference statusReasonReference,
       CodeableConcept category,
@@ -1314,7 +1340,9 @@ class __$MedicationDispenseCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as MedicationDispenseStatus,
       statusReasonCodeableConcept: statusReasonCodeableConcept == freezed
           ? _value.statusReasonCodeableConcept
           : statusReasonCodeableConcept as CodeableConcept,
@@ -1381,7 +1409,7 @@ class _$_MedicationDispense implements _MedicationDispense {
       this.modifierExtension,
       this.identifier,
       this.partOf,
-      this.status,
+      @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown) this.status,
       this.statusReasonCodeableConcept,
       this.statusReasonReference,
       this.category,
@@ -1429,7 +1457,8 @@ class _$_MedicationDispense implements _MedicationDispense {
   @override
   final List<Reference> partOf;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
+  final MedicationDispenseStatus status;
   @override
   final CodeableConcept statusReasonCodeableConcept;
   @override
@@ -1607,11 +1636,13 @@ abstract class _MedicationDispense implements MedicationDispense {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
+          MedicationDispenseStatus status,
       CodeableConcept statusReasonCodeableConcept,
       Reference statusReasonReference,
       CodeableConcept category,
@@ -1659,7 +1690,8 @@ abstract class _MedicationDispense implements MedicationDispense {
   @override
   List<Reference> get partOf;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
+  MedicationDispenseStatus get status;
   @override
   CodeableConcept get statusReasonCodeableConcept;
   @override
@@ -2243,11 +2275,13 @@ class _$MedicationTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept code,
-      Code status,
+      @JsonKey(unknownEnumvalue: MedicationStatus.unknown)
+          MedicationStatus status,
       Reference manufacturer,
       CodeableConcept form,
       Ratio amount,
@@ -2291,7 +2325,8 @@ mixin _$Medication {
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   CodeableConcept get code;
-  Code get status;
+  @JsonKey(unknownEnumvalue: MedicationStatus.unknown)
+  MedicationStatus get status;
   Reference get manufacturer;
   CodeableConcept get form;
   Ratio get amount;
@@ -2314,11 +2349,13 @@ abstract class $MedicationCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept code,
-      Code status,
+      @JsonKey(unknownEnumvalue: MedicationStatus.unknown)
+          MedicationStatus status,
       Reference manufacturer,
       CodeableConcept form,
       Ratio amount,
@@ -2384,7 +2421,7 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
           ? _value.identifier
           : identifier as List<Identifier>,
       code: code == freezed ? _value.code : code as CodeableConcept,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as MedicationStatus,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
           : manufacturer as Reference,
@@ -2481,11 +2518,13 @@ abstract class _$MedicationCopyWith<$Res> implements $MedicationCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept code,
-      Code status,
+      @JsonKey(unknownEnumvalue: MedicationStatus.unknown)
+          MedicationStatus status,
       Reference manufacturer,
       CodeableConcept form,
       Ratio amount,
@@ -2560,7 +2599,7 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       code: code == freezed ? _value.code : code as CodeableConcept,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as MedicationStatus,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
           : manufacturer as Reference,
@@ -2588,7 +2627,7 @@ class _$_Medication implements _Medication {
       this.modifierExtension,
       this.identifier,
       this.code,
-      this.status,
+      @JsonKey(unknownEnumvalue: MedicationStatus.unknown) this.status,
       this.manufacturer,
       this.form,
       this.amount,
@@ -2622,7 +2661,8 @@ class _$_Medication implements _Medication {
   @override
   final CodeableConcept code;
   @override
-  final Code status;
+  @JsonKey(unknownEnumvalue: MedicationStatus.unknown)
+  final MedicationStatus status;
   @override
   final Reference manufacturer;
   @override
@@ -2728,11 +2768,13 @@ abstract class _Medication implements Medication {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept code,
-      Code status,
+      @JsonKey(unknownEnumvalue: MedicationStatus.unknown)
+          MedicationStatus status,
       Reference manufacturer,
       CodeableConcept form,
       Ratio amount,
@@ -2766,7 +2808,8 @@ abstract class _Medication implements Medication {
   @override
   CodeableConcept get code;
   @override
-  Code get status;
+  @JsonKey(unknownEnumvalue: MedicationStatus.unknown)
+  MedicationStatus get status;
   @override
   Reference get manufacturer;
   @override
@@ -3305,11 +3348,13 @@ class _$MedicationStatementTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
+          MedicationStatementStatus status,
       List<CodeableConcept> statusReason,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
@@ -3373,7 +3418,8 @@ mixin _$MedicationStatement {
   List<Identifier> get identifier;
   List<Reference> get basedOn;
   List<Reference> get partOf;
-  Code get status;
+  @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
+  MedicationStatementStatus get status;
   List<CodeableConcept> get statusReason;
   CodeableConcept get category;
   CodeableConcept get medicationCodeableConcept;
@@ -3406,11 +3452,13 @@ abstract class $MedicationStatementCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
+          MedicationStatementStatus status,
       List<CodeableConcept> statusReason,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
@@ -3497,7 +3545,9 @@ class _$MedicationStatementCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as MedicationStatementStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as List<CodeableConcept>,
@@ -3643,11 +3693,13 @@ abstract class _$MedicationStatementCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
+          MedicationStatementStatus status,
       List<CodeableConcept> statusReason,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
@@ -3745,7 +3797,9 @@ class __$MedicationStatementCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as MedicationStatementStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as List<CodeableConcept>,
@@ -3800,7 +3854,7 @@ class _$_MedicationStatement implements _MedicationStatement {
       this.identifier,
       this.basedOn,
       this.partOf,
-      this.status,
+      @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown) this.status,
       this.statusReason,
       this.category,
       this.medicationCodeableConcept,
@@ -3844,7 +3898,8 @@ class _$_MedicationStatement implements _MedicationStatement {
   @override
   final List<Reference> partOf;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
+  final MedicationStatementStatus status;
   @override
   final List<CodeableConcept> statusReason;
   @override
@@ -4005,11 +4060,13 @@ abstract class _MedicationStatement implements MedicationStatement {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
+          MedicationStatementStatus status,
       List<CodeableConcept> statusReason,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
@@ -4053,7 +4110,8 @@ abstract class _MedicationStatement implements MedicationStatement {
   @override
   List<Reference> get partOf;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
+  MedicationStatementStatus get status;
   @override
   List<CodeableConcept> get statusReason;
   @override
@@ -4102,14 +4160,18 @@ class _$MedicationRequestTearOff {
       FhirUri implicitRules,
       Code language,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+          MedicationRequestStatus status,
       CodeableConcept statusReason,
-      Code intent,
+      @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown)
+          MedicationRequestIntent intent,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: MedicationRequestPriority.unknown)
+          MedicationRequestPriority priority,
       bool doNotPerform,
       bool reportedBoolean,
       Reference reportedReference,
@@ -4197,11 +4259,14 @@ mixin _$MedicationRequest {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+  MedicationRequestStatus get status;
   CodeableConcept get statusReason;
-  Code get intent;
+  @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown)
+  MedicationRequestIntent get intent;
   List<CodeableConcept> get category;
-  Code get priority;
+  @JsonKey(unknownEnumValue: MedicationRequestPriority.unknown)
+  MedicationRequestPriority get priority;
   bool get doNotPerform;
   bool get reportedBoolean;
   Reference get reportedReference;
@@ -4245,14 +4310,18 @@ abstract class $MedicationRequestCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+          MedicationRequestStatus status,
       CodeableConcept statusReason,
-      Code intent,
+      @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown)
+          MedicationRequestIntent intent,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: MedicationRequestPriority.unknown)
+          MedicationRequestPriority priority,
       bool doNotPerform,
       bool reportedBoolean,
       Reference reportedReference,
@@ -4371,15 +4440,19 @@ class _$MedicationRequestCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status:
+          status == freezed ? _value.status : status as MedicationRequestStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
-      intent: intent == freezed ? _value.intent : intent as Code,
+      intent:
+          intent == freezed ? _value.intent : intent as MedicationRequestIntent,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as MedicationRequestPriority,
       doNotPerform:
           doNotPerform == freezed ? _value.doNotPerform : doNotPerform as bool,
       reportedBoolean: reportedBoolean == freezed
@@ -4620,14 +4693,18 @@ abstract class _$MedicationRequestCopyWith<$Res>
       FhirUri implicitRules,
       Code language,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+          MedicationRequestStatus status,
       CodeableConcept statusReason,
-      Code intent,
+      @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown)
+          MedicationRequestIntent intent,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: MedicationRequestPriority.unknown)
+          MedicationRequestPriority priority,
       bool doNotPerform,
       bool reportedBoolean,
       Reference reportedReference,
@@ -4763,15 +4840,19 @@ class __$MedicationRequestCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status:
+          status == freezed ? _value.status : status as MedicationRequestStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
-      intent: intent == freezed ? _value.intent : intent as Code,
+      intent:
+          intent == freezed ? _value.intent : intent as MedicationRequestIntent,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as MedicationRequestPriority,
       doNotPerform:
           doNotPerform == freezed ? _value.doNotPerform : doNotPerform as bool,
       reportedBoolean: reportedBoolean == freezed
@@ -4855,14 +4936,18 @@ class _$_MedicationRequest implements _MedicationRequest {
       this.implicitRules,
       this.language,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+          this.status,
       this.statusReason,
-      this.intent,
+      @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown)
+          this.intent,
       this.category,
-      this.priority,
+      @JsonKey(unknownEnumValue: MedicationRequestPriority.unknown)
+          this.priority,
       this.doNotPerform,
       this.reportedBoolean,
       this.reportedReference,
@@ -4914,15 +4999,18 @@ class _$_MedicationRequest implements _MedicationRequest {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+  final MedicationRequestStatus status;
   @override
   final CodeableConcept statusReason;
   @override
-  final Code intent;
+  @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown)
+  final MedicationRequestIntent intent;
   @override
   final List<CodeableConcept> category;
   @override
-  final Code priority;
+  @JsonKey(unknownEnumValue: MedicationRequestPriority.unknown)
+  final MedicationRequestPriority priority;
   @override
   final bool doNotPerform;
   @override
@@ -5134,14 +5222,18 @@ abstract class _MedicationRequest implements MedicationRequest {
       FhirUri implicitRules,
       Code language,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+          MedicationRequestStatus status,
       CodeableConcept statusReason,
-      Code intent,
+      @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown)
+          MedicationRequestIntent intent,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: MedicationRequestPriority.unknown)
+          MedicationRequestPriority priority,
       bool doNotPerform,
       bool reportedBoolean,
       Reference reportedReference,
@@ -5193,15 +5285,18 @@ abstract class _MedicationRequest implements MedicationRequest {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+  MedicationRequestStatus get status;
   @override
   CodeableConcept get statusReason;
   @override
-  Code get intent;
+  @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown)
+  MedicationRequestIntent get intent;
   @override
   List<CodeableConcept> get category;
   @override
-  Code get priority;
+  @JsonKey(unknownEnumValue: MedicationRequestPriority.unknown)
+  MedicationRequestPriority get priority;
   @override
   bool get doNotPerform;
   @override
@@ -6195,10 +6290,12 @@ class _$ImmunizationTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
+          ImmunizationStatus status,
       CodeableConcept statusReason,
       CodeableConcept vaccineCode,
       Reference patient,
@@ -6280,7 +6377,8 @@ mixin _$Immunization {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
+  ImmunizationStatus get status;
   CodeableConcept get statusReason;
   CodeableConcept get vaccineCode;
   Reference get patient;
@@ -6323,10 +6421,12 @@ abstract class $ImmunizationCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
+          ImmunizationStatus status,
       CodeableConcept statusReason,
       CodeableConcept vaccineCode,
       Reference patient,
@@ -6433,7 +6533,7 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as ImmunizationStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
@@ -6635,10 +6735,12 @@ abstract class _$ImmunizationCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
+          ImmunizationStatus status,
       CodeableConcept statusReason,
       CodeableConcept vaccineCode,
       Reference patient,
@@ -6759,7 +6861,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as ImmunizationStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
@@ -6840,7 +6942,7 @@ class _$_Immunization implements _Immunization {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: ImmunizationStatus.unknown) this.status,
       this.statusReason,
       this.vaccineCode,
       this.patient,
@@ -6893,7 +6995,8 @@ class _$_Immunization implements _Immunization {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
+  final ImmunizationStatus status;
   @override
   final CodeableConcept statusReason;
   @override
@@ -7095,10 +7198,12 @@ abstract class _Immunization implements Immunization {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
+          ImmunizationStatus status,
       CodeableConcept statusReason,
       CodeableConcept vaccineCode,
       Reference patient,
@@ -7149,7 +7254,8 @@ abstract class _Immunization implements Immunization {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
+  ImmunizationStatus get status;
   @override
   CodeableConcept get statusReason;
   @override
@@ -8358,11 +8464,13 @@ class _$MedicationAdministrationTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationAdministrationStatus.unknown)
+          MedicationAdministrationStatus status,
       List<CodeableConcept> statusReason,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
@@ -8430,7 +8538,8 @@ mixin _$MedicationAdministration {
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   List<Reference> get partOf;
-  Code get status;
+  @JsonKey(unknownEnumValue: MedicationAdministrationStatus.unknown)
+  MedicationAdministrationStatus get status;
   List<CodeableConcept> get statusReason;
   CodeableConcept get category;
   CodeableConcept get medicationCodeableConcept;
@@ -8465,11 +8574,13 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationAdministrationStatus.unknown)
+          MedicationAdministrationStatus status,
       List<CodeableConcept> statusReason,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
@@ -8563,7 +8674,9 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as MedicationAdministrationStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as List<CodeableConcept>,
@@ -8724,11 +8837,13 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationAdministrationStatus.unknown)
+          MedicationAdministrationStatus status,
       List<CodeableConcept> statusReason,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
@@ -8835,7 +8950,9 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as MedicationAdministrationStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as List<CodeableConcept>,
@@ -8890,11 +9007,13 @@ class _$_MedicationAdministration implements _MedicationAdministration {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.partOf,
-      this.status,
+      @JsonKey(unknownEnumValue: MedicationAdministrationStatus.unknown)
+          this.status,
       this.statusReason,
       this.category,
       this.medicationCodeableConcept,
@@ -8940,7 +9059,8 @@ class _$_MedicationAdministration implements _MedicationAdministration {
   @override
   final List<Reference> partOf;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: MedicationAdministrationStatus.unknown)
+  final MedicationAdministrationStatus status;
   @override
   final List<CodeableConcept> statusReason;
   @override
@@ -9109,11 +9229,13 @@ abstract class _MedicationAdministration implements MedicationAdministration {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> partOf,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationAdministrationStatus.unknown)
+          MedicationAdministrationStatus status,
       List<CodeableConcept> statusReason,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
@@ -9159,7 +9281,8 @@ abstract class _MedicationAdministration implements MedicationAdministration {
   @override
   List<Reference> get partOf;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: MedicationAdministrationStatus.unknown)
+  MedicationAdministrationStatus get status;
   @override
   List<CodeableConcept> get statusReason;
   @override
@@ -11098,10 +11221,12 @@ class _$MedicationKnowledgeTearOff {
       FhirUri implicitRules,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationKnowledgeStatus.unknown)
+          MedicationKnowledgeStatus status,
       Reference manufacturer,
       CodeableConcept doseForm,
       Quantity amount,
@@ -11173,7 +11298,8 @@ mixin _$MedicationKnowledge {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   CodeableConcept get code;
-  Code get status;
+  @JsonKey(unknownEnumValue: MedicationKnowledgeStatus.unknown)
+  MedicationKnowledgeStatus get status;
   Reference get manufacturer;
   CodeableConcept get doseForm;
   Quantity get amount;
@@ -11212,10 +11338,12 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
       FhirUri implicitRules,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationKnowledgeStatus.unknown)
+          MedicationKnowledgeStatus status,
       Reference manufacturer,
       CodeableConcept doseForm,
       Quantity amount,
@@ -11308,7 +11436,9 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as CodeableConcept,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as MedicationKnowledgeStatus,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
           : manufacturer as Reference,
@@ -11454,10 +11584,12 @@ abstract class _$MedicationKnowledgeCopyWith<$Res>
       FhirUri implicitRules,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationKnowledgeStatus.unknown)
+          MedicationKnowledgeStatus status,
       Reference manufacturer,
       CodeableConcept doseForm,
       Quantity amount,
@@ -11559,7 +11691,9 @@ class __$MedicationKnowledgeCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as CodeableConcept,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as MedicationKnowledgeStatus,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
           : manufacturer as Reference,
@@ -11633,7 +11767,7 @@ class _$_MedicationKnowledge implements _MedicationKnowledge {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.code,
-      this.status,
+      @JsonKey(unknownEnumValue: MedicationKnowledgeStatus.unknown) this.status,
       this.manufacturer,
       this.doseForm,
       this.amount,
@@ -11678,7 +11812,8 @@ class _$_MedicationKnowledge implements _MedicationKnowledge {
   @override
   final CodeableConcept code;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: MedicationKnowledgeStatus.unknown)
+  final MedicationKnowledgeStatus status;
   @override
   final Reference manufacturer;
   @override
@@ -11855,10 +11990,12 @@ abstract class _MedicationKnowledge implements MedicationKnowledge {
       FhirUri implicitRules,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
-      Code status,
+      @JsonKey(unknownEnumValue: MedicationKnowledgeStatus.unknown)
+          MedicationKnowledgeStatus status,
       Reference manufacturer,
       CodeableConcept doseForm,
       Quantity amount,
@@ -11905,7 +12042,8 @@ abstract class _MedicationKnowledge implements MedicationKnowledge {
   @override
   CodeableConcept get code;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: MedicationKnowledgeStatus.unknown)
+  MedicationKnowledgeStatus get status;
   @override
   Reference get manufacturer;
   @override

@@ -38,8 +38,9 @@ _$_VisionPrescription _$_$_VisionPrescriptionFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(
+        _$VisionPrescriptionStatusEnumMap, json['status'],
+        unknownValue: VisionPrescriptionStatus.unknown),
     created: json['created'] == null
         ? null
         : FhirDateTime.fromJson(json['created'] as String),
@@ -87,7 +88,7 @@ Map<String, dynamic> _$_$_VisionPrescriptionToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$VisionPrescriptionStatusEnumMap[instance.status]);
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
@@ -95,83 +96,6 @@ Map<String, dynamic> _$_$_VisionPrescriptionToJson(
   writeNotNull('prescriber', instance.prescriber?.toJson());
   writeNotNull('lensSpecification',
       instance.lensSpecification?.map((e) => e?.toJson())?.toList());
-  return val;
-}
-
-_$_VisionPrescriptionLensSpecification
-    _$_$_VisionPrescriptionLensSpecificationFromJson(
-        Map<String, dynamic> json) {
-  return _$_VisionPrescriptionLensSpecification(
-    id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    product: json['product'] == null
-        ? null
-        : CodeableConcept.fromJson(json['product'] as Map<String, dynamic>),
-    eye: _$enumDecodeNullable(
-        _$VisionPrescriptionLensSpecificationEyeEnumMap, json['eye']),
-    sphere: (json['sphere'] as num)?.toDouble(),
-    cylinder: (json['cylinder'] as num)?.toDouble(),
-    axis: json['axis'] as int,
-    prism: (json['prism'] as List)
-        ?.map((e) => e == null
-            ? null
-            : VisionPrescriptionPrism.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    add: (json['add'] as num)?.toDouble(),
-    power: (json['power'] as num)?.toDouble(),
-    backCurve: (json['backCurve'] as num)?.toDouble(),
-    diameter: (json['diameter'] as num)?.toDouble(),
-    duration: json['duration'] == null
-        ? null
-        : Quantity.fromJson(json['duration'] as Map<String, dynamic>),
-    color: json['color'] as String,
-    brand: json['brand'] as String,
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-  );
-}
-
-Map<String, dynamic> _$_$_VisionPrescriptionLensSpecificationToJson(
-    _$_VisionPrescriptionLensSpecification instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('product', instance.product?.toJson());
-  writeNotNull(
-      'eye', _$VisionPrescriptionLensSpecificationEyeEnumMap[instance.eye]);
-  writeNotNull('sphere', instance.sphere);
-  writeNotNull('cylinder', instance.cylinder);
-  writeNotNull('axis', instance.axis);
-  writeNotNull('prism', instance.prism?.map((e) => e?.toJson())?.toList());
-  writeNotNull('add', instance.add);
-  writeNotNull('power', instance.power);
-  writeNotNull('backCurve', instance.backCurve);
-  writeNotNull('diameter', instance.diameter);
-  writeNotNull('duration', instance.duration?.toJson());
-  writeNotNull('color', instance.color);
-  writeNotNull('brand', instance.brand);
-  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -207,15 +131,99 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
-const _$VisionPrescriptionLensSpecificationEyeEnumMap = {
-  VisionPrescriptionLensSpecificationEye.right: 'right',
-  VisionPrescriptionLensSpecificationEye.left: 'left',
-  VisionPrescriptionLensSpecificationEye.unknown: 'unknown',
+const _$VisionPrescriptionStatusEnumMap = {
+  VisionPrescriptionStatus.active: 'active',
+  VisionPrescriptionStatus.cancelled: 'cancelled',
+  VisionPrescriptionStatus.draft: 'draft',
+  VisionPrescriptionStatus.entered_in_error: 'entered-in-error',
+  VisionPrescriptionStatus.unknown: 'unknown',
 };
 
-_$_VisionPrescriptionPrism _$_$_VisionPrescriptionPrismFromJson(
+_$_VisionPrescriptionLensSpecification
+    _$_$_VisionPrescriptionLensSpecificationFromJson(
+        Map<String, dynamic> json) {
+  return _$_VisionPrescriptionLensSpecification(
+    id: json['id'] as String,
+    fhirExtension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    product: json['product'] == null
+        ? null
+        : CodeableConcept.fromJson(json['product'] as Map<String, dynamic>),
+    eye: _$enumDecodeNullable(_$LensSpecificationEyeEnumMap, json['eye'],
+        unknownValue: LensSpecificationEye.unknown),
+    sphere: (json['sphere'] as num)?.toDouble(),
+    cylinder: (json['cylinder'] as num)?.toDouble(),
+    axis: json['axis'] as int,
+    prism: (json['prism'] as List)
+        ?.map((e) => e == null
+            ? null
+            : LensSpecificationPrism.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    add: (json['add'] as num)?.toDouble(),
+    power: (json['power'] as num)?.toDouble(),
+    backCurve: (json['backCurve'] as num)?.toDouble(),
+    diameter: (json['diameter'] as num)?.toDouble(),
+    duration: json['duration'] == null
+        ? null
+        : Quantity.fromJson(json['duration'] as Map<String, dynamic>),
+    color: json['color'] as String,
+    brand: json['brand'] as String,
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$_$_VisionPrescriptionLensSpecificationToJson(
+    _$_VisionPrescriptionLensSpecification instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('product', instance.product?.toJson());
+  writeNotNull('eye', _$LensSpecificationEyeEnumMap[instance.eye]);
+  writeNotNull('sphere', instance.sphere);
+  writeNotNull('cylinder', instance.cylinder);
+  writeNotNull('axis', instance.axis);
+  writeNotNull('prism', instance.prism?.map((e) => e?.toJson())?.toList());
+  writeNotNull('add', instance.add);
+  writeNotNull('power', instance.power);
+  writeNotNull('backCurve', instance.backCurve);
+  writeNotNull('diameter', instance.diameter);
+  writeNotNull('duration', instance.duration?.toJson());
+  writeNotNull('color', instance.color);
+  writeNotNull('brand', instance.brand);
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  return val;
+}
+
+const _$LensSpecificationEyeEnumMap = {
+  LensSpecificationEye.right: 'right',
+  LensSpecificationEye.left: 'left',
+  LensSpecificationEye.unknown: 'unknown',
+};
+
+_$_LensSpecificationPrism _$_$_LensSpecificationPrismFromJson(
     Map<String, dynamic> json) {
-  return _$_VisionPrescriptionPrism(
+  return _$_LensSpecificationPrism(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -228,13 +236,12 @@ _$_VisionPrescriptionPrism _$_$_VisionPrescriptionPrismFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     amount: (json['amount'] as num)?.toDouble(),
-    base: _$enumDecodeNullable(
-        _$VisionPrescriptionPrismBaseEnumMap, json['base']),
+    base: _$enumDecodeNullable(_$PrismBaseEnumMap, json['base']),
   );
 }
 
-Map<String, dynamic> _$_$_VisionPrescriptionPrismToJson(
-    _$_VisionPrescriptionPrism instance) {
+Map<String, dynamic> _$_$_LensSpecificationPrismToJson(
+    _$_LensSpecificationPrism instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -249,16 +256,16 @@ Map<String, dynamic> _$_$_VisionPrescriptionPrismToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('amount', instance.amount);
-  writeNotNull('base', _$VisionPrescriptionPrismBaseEnumMap[instance.base]);
+  writeNotNull('base', _$PrismBaseEnumMap[instance.base]);
   return val;
 }
 
-const _$VisionPrescriptionPrismBaseEnumMap = {
-  VisionPrescriptionPrismBase.up: 'up',
-  VisionPrescriptionPrismBase.down: 'down',
-  VisionPrescriptionPrismBase.in_: 'in',
-  VisionPrescriptionPrismBase.out: 'out',
-  VisionPrescriptionPrismBase.unknown: 'unknown',
+const _$PrismBaseEnumMap = {
+  PrismBase.up: 'up',
+  PrismBase.down: 'down',
+  PrismBase.in_: 'in',
+  PrismBase.out: 'out',
+  PrismBase.unknown: 'unknown',
 };
 
 _$_RiskAssessment _$_$_RiskAssessmentFromJson(Map<String, dynamic> json) {
@@ -298,8 +305,8 @@ _$_RiskAssessment _$_$_RiskAssessmentFromJson(Map<String, dynamic> json) {
     parent: json['parent'] == null
         ? null
         : Reference.fromJson(json['parent'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(_$RiskAssessmentStatusEnumMap, json['status'],
+        unknownValue: RiskAssessmentStatus.unknown),
     method: json['method'] == null
         ? null
         : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
@@ -374,7 +381,7 @@ Map<String, dynamic> _$_$_RiskAssessmentToJson(_$_RiskAssessment instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('basedOn', instance.basedOn?.toJson());
   writeNotNull('parent', instance.parent?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$RiskAssessmentStatusEnumMap[instance.status]);
   writeNotNull('method', instance.method?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
@@ -394,6 +401,14 @@ Map<String, dynamic> _$_$_RiskAssessmentToJson(_$_RiskAssessment instance) {
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$RiskAssessmentStatusEnumMap = {
+  RiskAssessmentStatus.registered: 'registered',
+  RiskAssessmentStatus.preliminary: 'preliminary',
+  RiskAssessmentStatus.final_: 'final',
+  RiskAssessmentStatus.amended: 'amended',
+  RiskAssessmentStatus.unknown: 'unknown',
+};
 
 _$_RiskAssessmentPrediction _$_$_RiskAssessmentPredictionFromJson(
     Map<String, dynamic> json) {
@@ -501,10 +516,10 @@ _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
     requisition: json['requisition'] == null
         ? null
         : Identifier.fromJson(json['requisition'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
-    intent:
-        json['intent'] == null ? null : Code.fromJson(json['intent'] as String),
+    status: _$enumDecodeNullable(_$OrderStatusEnumMap, json['status'],
+        unknownValue: OrderStatus.unknown),
+    intent: _$enumDecodeNullable(_$OrderIntentEnumMap, json['intent'],
+        unknownValue: OrderIntent.unknown),
     category: (json['category'] as List)
         ?.map((e) => e == null
             ? null
@@ -642,8 +657,8 @@ Map<String, dynamic> _$_$_ServiceRequestToJson(_$_ServiceRequest instance) {
   writeNotNull(
       'replaces', instance.replaces?.map((e) => e?.toJson())?.toList());
   writeNotNull('requisition', instance.requisition?.toJson());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('intent', instance.intent?.toJson());
+  writeNotNull('status', _$OrderStatusEnumMap[instance.status]);
+  writeNotNull('intent', _$OrderIntentEnumMap[instance.intent]);
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
   writeNotNull('priority', instance.priority?.toJson());
@@ -690,6 +705,29 @@ Map<String, dynamic> _$_$_ServiceRequestToJson(_$_ServiceRequest instance) {
   return val;
 }
 
+const _$OrderStatusEnumMap = {
+  OrderStatus.draft: 'draft',
+  OrderStatus.active: 'active',
+  OrderStatus.on_hold: 'on-hold',
+  OrderStatus.revoked: 'revoked',
+  OrderStatus.completed: 'completed',
+  OrderStatus.entered_in_error: 'entered-in-error',
+  OrderStatus.unknown: 'unknown',
+};
+
+const _$OrderIntentEnumMap = {
+  OrderIntent.proposal: 'proposal',
+  OrderIntent.plan: 'plan',
+  OrderIntent.directive: 'directive',
+  OrderIntent.order: 'order',
+  OrderIntent.original_order: 'original-order',
+  OrderIntent.reflex_order: 'reflex-order',
+  OrderIntent.filler_order: 'filler-order',
+  OrderIntent.instance_order: 'instance-order',
+  OrderIntent.option: 'option',
+  OrderIntent.unknown: 'unknown',
+};
+
 _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
   return _$_Goal(
     resourceType: json['resourceType'] as String,
@@ -719,7 +757,8 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     lifecycleStatus: _$enumDecodeNullable(
-        _$GoalLifecycleStatusEnumMap, json['lifecycleStatus']),
+        _$GoalLifecycleStatusEnumMap, json['lifecycleStatus'],
+        unknownValue: GoalLifecycleStatus.unknown),
     achievementStatus: json['achievementStatus'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -943,10 +982,10 @@ _$_NutritionOrder _$_$_NutritionOrderFromJson(Map<String, dynamic> json) {
     instantiates: (json['instantiates'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
-    intent:
-        json['intent'] == null ? null : Code.fromJson(json['intent'] as String),
+    status: _$enumDecodeNullable(_$OrderStatusEnumMap, json['status'],
+        unknownValue: OrderStatus.unknown),
+    intent: _$enumDecodeNullable(_$OrderIntentEnumMap, json['intent'],
+        unknownValue: OrderIntent.unknown),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -1018,8 +1057,8 @@ Map<String, dynamic> _$_$_NutritionOrderToJson(_$_NutritionOrder instance) {
       instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'instantiates', instance.instantiates?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('intent', instance.intent?.toJson());
+  writeNotNull('status', _$OrderStatusEnumMap[instance.status]);
+  writeNotNull('intent', _$OrderIntentEnumMap[instance.intent]);
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('dateTime', instance.dateTime?.toJson());
   writeNotNull('orderer', instance.orderer?.toJson());
@@ -1405,10 +1444,10 @@ _$_CarePlan _$_$_CarePlanFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
-    intent:
-        json['intent'] == null ? null : Code.fromJson(json['intent'] as String),
+    status: _$enumDecodeNullable(_$CarePlanStatusEnumMap, json['status'],
+        unknownValue: CarePlanStatus.unknown),
+    intent: _$enumDecodeNullable(_$CarePlanIntentEnumMap, json['intent'],
+        unknownValue: CarePlanIntent.unknown),
     category: (json['category'] as List)
         ?.map((e) => e == null
             ? null
@@ -1487,8 +1526,8 @@ Map<String, dynamic> _$_$_CarePlanToJson(_$_CarePlan instance) {
   writeNotNull(
       'replaces', instance.replaces?.map((e) => e?.toJson())?.toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('intent', instance.intent?.toJson());
+  writeNotNull('status', _$CarePlanStatusEnumMap[instance.status]);
+  writeNotNull('intent', _$CarePlanIntentEnumMap[instance.intent]);
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
   writeNotNull('title', instance.title);
@@ -1510,6 +1549,24 @@ Map<String, dynamic> _$_$_CarePlanToJson(_$_CarePlan instance) {
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$CarePlanStatusEnumMap = {
+  CarePlanStatus.draft: 'draft',
+  CarePlanStatus.active: 'active',
+  CarePlanStatus.on_hold: 'on-hold',
+  CarePlanStatus.revoked: 'revoked',
+  CarePlanStatus.completed: 'completed',
+  CarePlanStatus.entered_in_error: 'entered-in-error',
+  CarePlanStatus.unknown: 'unknown',
+};
+
+const _$CarePlanIntentEnumMap = {
+  CarePlanIntent.proposal: 'proposal',
+  CarePlanIntent.plan: 'plan',
+  CarePlanIntent.order: 'order',
+  CarePlanIntent.option: 'option',
+  CarePlanIntent.unknown: 'unknown',
+};
 
 _$_CarePlanActivity _$_$_CarePlanActivityFromJson(Map<String, dynamic> json) {
   return _$_CarePlanActivity(
@@ -1538,7 +1595,7 @@ _$_CarePlanActivity _$_$_CarePlanActivityFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['reference'] as Map<String, dynamic>),
     detail: json['detail'] == null
         ? null
-        : CarePlanDetail.fromJson(json['detail'] as Map<String, dynamic>),
+        : ActivityDetail.fromJson(json['detail'] as Map<String, dynamic>),
   );
 }
 
@@ -1565,8 +1622,8 @@ Map<String, dynamic> _$_$_CarePlanActivityToJson(_$_CarePlanActivity instance) {
   return val;
 }
 
-_$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
-  return _$_CarePlanDetail(
+_$_ActivityDetail _$_$_ActivityDetailFromJson(Map<String, dynamic> json) {
+  return _$_ActivityDetail(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -1596,7 +1653,8 @@ _$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$CarePlanDetailStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$DetailStatusEnumMap, json['status'],
+        unknownValue: DetailStatus.unknown),
     statusReason: json['statusReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -1633,7 +1691,7 @@ _$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
+Map<String, dynamic> _$_$_ActivityDetailToJson(_$_ActivityDetail instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1656,7 +1714,7 @@ Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
   writeNotNull('reasonReference',
       instance.reasonReference?.map((e) => e?.toJson())?.toList());
   writeNotNull('goal', instance.goal?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', _$CarePlanDetailStatusEnumMap[instance.status]);
+  writeNotNull('status', _$DetailStatusEnumMap[instance.status]);
   writeNotNull('statusReason', instance.statusReason?.toJson());
   writeNotNull('doNotPerform', instance.doNotPerform);
   writeNotNull('scheduledTiming', instance.scheduledTiming?.toJson());
@@ -1674,16 +1732,16 @@ Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
   return val;
 }
 
-const _$CarePlanDetailStatusEnumMap = {
-  CarePlanDetailStatus.not_started: 'not-started',
-  CarePlanDetailStatus.scheduled: 'scheduled',
-  CarePlanDetailStatus.in_progress: 'in-progress',
-  CarePlanDetailStatus.on_hold: 'on-hold',
-  CarePlanDetailStatus.completed: 'completed',
-  CarePlanDetailStatus.cancelled: 'cancelled',
-  CarePlanDetailStatus.stopped: 'stopped',
-  CarePlanDetailStatus.entered_in_error: 'entered-in-error',
-  CarePlanDetailStatus.unknown: 'unknown',
+const _$DetailStatusEnumMap = {
+  DetailStatus.not_started: 'not-started',
+  DetailStatus.scheduled: 'scheduled',
+  DetailStatus.in_progress: 'in-progress',
+  DetailStatus.on_hold: 'on-hold',
+  DetailStatus.completed: 'completed',
+  DetailStatus.cancelled: 'cancelled',
+  DetailStatus.stopped: 'stopped',
+  DetailStatus.entered_in_error: 'entered-in-error',
+  DetailStatus.unknown: 'unknown',
 };
 
 _$_CareTeam _$_$_CareTeamFromJson(Map<String, dynamic> json) {
@@ -1717,7 +1775,8 @@ _$_CareTeam _$_$_CareTeamFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$CareTeamStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$CareTeamStatusEnumMap, json['status'],
+        unknownValue: CareTeamStatus.unknown),
     category: (json['category'] as List)
         ?.map((e) => e == null
             ? null
@@ -1914,13 +1973,13 @@ _$_RequestGroup _$_$_RequestGroupFromJson(Map<String, dynamic> json) {
     groupIdentifier: json['groupIdentifier'] == null
         ? null
         : Identifier.fromJson(json['groupIdentifier'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
-    intent:
-        json['intent'] == null ? null : Code.fromJson(json['intent'] as String),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    status: _$enumDecodeNullable(_$RequestGroupStatusEnumMap, json['status'],
+        unknownValue: RequestGroupStatus.unknown),
+    intent: _$enumDecodeNullable(_$RequestGroupIntentEnumMap, json['intent'],
+        unknownValue: RequestGroupIntent.unknown),
+    priority: _$enumDecodeNullable(
+        _$RequestGroupPriorityEnumMap, json['priority'],
+        unknownValue: RequestGroupPriority.unknown),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1987,9 +2046,9 @@ Map<String, dynamic> _$_$_RequestGroupToJson(_$_RequestGroup instance) {
   writeNotNull(
       'replaces', instance.replaces?.map((e) => e?.toJson())?.toList());
   writeNotNull('groupIdentifier', instance.groupIdentifier?.toJson());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('intent', instance.intent?.toJson());
-  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('status', _$RequestGroupStatusEnumMap[instance.status]);
+  writeNotNull('intent', _$RequestGroupIntentEnumMap[instance.intent]);
+  writeNotNull('priority', _$RequestGroupPriorityEnumMap[instance.priority]);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
@@ -2003,6 +2062,37 @@ Map<String, dynamic> _$_$_RequestGroupToJson(_$_RequestGroup instance) {
   writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$RequestGroupStatusEnumMap = {
+  RequestGroupStatus.draft: 'draft',
+  RequestGroupStatus.active: 'active',
+  RequestGroupStatus.on_hold: 'on-hold',
+  RequestGroupStatus.revoked: 'revoked',
+  RequestGroupStatus.completed: 'completed',
+  RequestGroupStatus.entered_in_error: 'entered-in-error',
+  RequestGroupStatus.unknown: 'unknown',
+};
+
+const _$RequestGroupIntentEnumMap = {
+  RequestGroupIntent.proposal: 'proposal',
+  RequestGroupIntent.plan: 'plan',
+  RequestGroupIntent.directive: 'directive',
+  RequestGroupIntent.order: 'order',
+  RequestGroupIntent.original_order: 'original-order',
+  RequestGroupIntent.reflex_order: 'reflex-order',
+  RequestGroupIntent.filler_order: 'filler-order',
+  RequestGroupIntent.instance_order: 'instance-order',
+  RequestGroupIntent.option: 'option',
+  RequestGroupIntent.unknown: 'unknown',
+};
+
+const _$RequestGroupPriorityEnumMap = {
+  RequestGroupPriority.routine: 'routine',
+  RequestGroupPriority.urgent: 'urgent',
+  RequestGroupPriority.asap: 'asap',
+  RequestGroupPriority.stat: 'stat',
+  RequestGroupPriority.unknown: 'unknown',
+};
 
 _$_RequestGroupAction _$_$_RequestGroupActionFromJson(
     Map<String, dynamic> json) {
@@ -2070,21 +2160,16 @@ _$_RequestGroupAction _$_$_RequestGroupActionFromJson(
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    groupingBehavior: json['groupingBehavior'] == null
-        ? null
-        : Code.fromJson(json['groupingBehavior'] as String),
-    selectionBehavior: json['selectionBehavior'] == null
-        ? null
-        : Code.fromJson(json['selectionBehavior'] as String),
-    requiredBehavior: json['requiredBehavior'] == null
-        ? null
-        : Code.fromJson(json['requiredBehavior'] as String),
-    precheckBehavior: json['precheckBehavior'] == null
-        ? null
-        : Code.fromJson(json['precheckBehavior'] as String),
-    cardinalityBehavior: json['cardinalityBehavior'] == null
-        ? null
-        : Code.fromJson(json['cardinalityBehavior'] as String),
+    groupingBehavior: _$enumDecodeNullable(
+        _$ActionGroupingBehaviorEnumMap, json['groupingBehavior']),
+    selectionBehavior: _$enumDecodeNullable(
+        _$ActionSelectionBehaviorEnumMap, json['selectionBehavior']),
+    requiredBehavior: _$enumDecodeNullable(
+        _$ActionRequiredBehaviorEnumMap, json['requiredBehavior']),
+    precheckBehavior: _$enumDecodeNullable(
+        _$ActionPrecheckBehaviorEnumMap, json['precheckBehavior']),
+    cardinalityBehavior: _$enumDecodeNullable(
+        _$ActionCardinalityBehaviorEnumMap, json['cardinalityBehavior']),
     resource: json['resource'] == null
         ? null
         : Reference.fromJson(json['resource'] as Map<String, dynamic>),
@@ -2132,15 +2217,56 @@ Map<String, dynamic> _$_$_RequestGroupActionToJson(
   writeNotNull(
       'participant', instance.participant?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('groupingBehavior', instance.groupingBehavior?.toJson());
-  writeNotNull('selectionBehavior', instance.selectionBehavior?.toJson());
-  writeNotNull('requiredBehavior', instance.requiredBehavior?.toJson());
-  writeNotNull('precheckBehavior', instance.precheckBehavior?.toJson());
-  writeNotNull('cardinalityBehavior', instance.cardinalityBehavior?.toJson());
+  writeNotNull('groupingBehavior',
+      _$ActionGroupingBehaviorEnumMap[instance.groupingBehavior]);
+  writeNotNull('selectionBehavior',
+      _$ActionSelectionBehaviorEnumMap[instance.selectionBehavior]);
+  writeNotNull('requiredBehavior',
+      _$ActionRequiredBehaviorEnumMap[instance.requiredBehavior]);
+  writeNotNull('precheckBehavior',
+      _$ActionPrecheckBehaviorEnumMap[instance.precheckBehavior]);
+  writeNotNull('cardinalityBehavior',
+      _$ActionCardinalityBehaviorEnumMap[instance.cardinalityBehavior]);
   writeNotNull('resource', instance.resource?.toJson());
   writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$ActionGroupingBehaviorEnumMap = {
+  ActionGroupingBehavior.visual_group: 'visual-group',
+  ActionGroupingBehavior.logical_group: 'logical-group',
+  ActionGroupingBehavior.sentence_group: 'sentence-group',
+  ActionGroupingBehavior.unknown: 'unknown',
+};
+
+const _$ActionSelectionBehaviorEnumMap = {
+  ActionSelectionBehavior.any: 'any',
+  ActionSelectionBehavior.all: 'all',
+  ActionSelectionBehavior.all_or_none: 'all-or-none',
+  ActionSelectionBehavior.exactly_one: 'exactly-one',
+  ActionSelectionBehavior.at_most_one: 'at-most-one',
+  ActionSelectionBehavior.one_or_more: 'one-or-more',
+  ActionSelectionBehavior.unknown: 'unknown',
+};
+
+const _$ActionRequiredBehaviorEnumMap = {
+  ActionRequiredBehavior.must: 'must',
+  ActionRequiredBehavior.could: 'could',
+  ActionRequiredBehavior.must_unless_documented: 'must-unless-documented',
+  ActionRequiredBehavior.unknown: 'unknown',
+};
+
+const _$ActionPrecheckBehaviorEnumMap = {
+  ActionPrecheckBehavior.yes: 'yes',
+  ActionPrecheckBehavior.no: 'no',
+  ActionPrecheckBehavior.unknown: 'unknown',
+};
+
+const _$ActionCardinalityBehaviorEnumMap = {
+  ActionCardinalityBehavior.single: 'single',
+  ActionCardinalityBehavior.multiple: 'multiple',
+  ActionCardinalityBehavior.unknown: 'unknown',
+};
 
 _$_RequestGroupCondition _$_$_RequestGroupConditionFromJson(
     Map<String, dynamic> json) {

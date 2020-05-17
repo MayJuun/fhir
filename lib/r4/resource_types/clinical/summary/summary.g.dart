@@ -282,13 +282,15 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['verificationStatus'] as Map<String, dynamic>),
-    type: _$enumDecodeNullable(_$AllergyIntoleranceTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$AllergyIntoleranceTypeEnumMap, json['type'],
+        unknownValue: AllergyIntoleranceType.unknown),
     category: (json['category'] as List)
         ?.map(
             (e) => _$enumDecodeNullable(_$AllergyIntoleranceCategoryEnumMap, e))
         ?.toList(),
     criticality: _$enumDecodeNullable(
-        _$AllergyIntoleranceCriticalityEnumMap, json['criticality']),
+        _$AllergyIntoleranceCriticalityEnumMap, json['criticality'],
+        unknownValue: AllergyIntoleranceCriticality.unknown),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -464,8 +466,8 @@ _$_AllergyIntoleranceReaction _$_$_AllergyIntoleranceReactionFromJson(
     onset: json['onset'] == null
         ? null
         : FhirDateTime.fromJson(json['onset'] as String),
-    severity: _$enumDecodeNullable(
-        _$AllergyIntoleranceReactionSeverityEnumMap, json['severity']),
+    severity: _$enumDecodeNullable(_$ReactionSeverityEnumMap, json['severity'],
+        unknownValue: ReactionSeverity.unknown),
     exposureRoute: json['exposureRoute'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -496,18 +498,17 @@ Map<String, dynamic> _$_$_AllergyIntoleranceReactionToJson(
   writeNotNull('manifestation',
       instance.manifestation?.map((e) => e?.toJson())?.toList());
   writeNotNull('onset', instance.onset?.toJson());
-  writeNotNull('severity',
-      _$AllergyIntoleranceReactionSeverityEnumMap[instance.severity]);
+  writeNotNull('severity', _$ReactionSeverityEnumMap[instance.severity]);
   writeNotNull('exposureRoute', instance.exposureRoute?.toJson());
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
-const _$AllergyIntoleranceReactionSeverityEnumMap = {
-  AllergyIntoleranceReactionSeverity.mild: 'mild',
-  AllergyIntoleranceReactionSeverity.moderate: 'moderate',
-  AllergyIntoleranceReactionSeverity.severe: 'severe',
-  AllergyIntoleranceReactionSeverity.unknown: 'unknown',
+const _$ReactionSeverityEnumMap = {
+  ReactionSeverity.mild: 'mild',
+  ReactionSeverity.moderate: 'moderate',
+  ReactionSeverity.severe: 'severe',
+  ReactionSeverity.unknown: 'unknown',
 };
 
 _$_AdverseEvent _$_$_AdverseEventFromJson(Map<String, dynamic> json) {
@@ -537,8 +538,9 @@ _$_AdverseEvent _$_$_AdverseEventFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    actuality:
-        _$enumDecodeNullable(_$AdverseEventActualityEnumMap, json['actuality']),
+    actuality: _$enumDecodeNullable(
+        _$AdverseEventActualityEnumMap, json['actuality'],
+        unknownValue: AdverseEventActuality.unknown),
     category: (json['category'] as List)
         ?.map((e) => e == null
             ? null
@@ -1005,8 +1007,8 @@ _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(_$DetectedIssueStatusEnumMap, json['status'],
+        unknownValue: DetectedIssueStatus.unknown),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1064,7 +1066,7 @@ Map<String, dynamic> _$_$_DetectedIssueToJson(_$_DetectedIssue instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$DetectedIssueStatusEnumMap[instance.status]);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('severity', _$DetectedIssueSeverityEnumMap[instance.severity]);
   writeNotNull('patient', instance.patient?.toJson());
@@ -1080,6 +1082,14 @@ Map<String, dynamic> _$_$_DetectedIssueToJson(_$_DetectedIssue instance) {
       'mitigation', instance.mitigation?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$DetectedIssueStatusEnumMap = {
+  DetectedIssueStatus.registered: 'registered',
+  DetectedIssueStatus.preliminary: 'preliminary',
+  DetectedIssueStatus.final_: 'final',
+  DetectedIssueStatus.amended: 'amended',
+  DetectedIssueStatus.unknown: 'unknown',
+};
 
 const _$DetectedIssueSeverityEnumMap = {
   DetectedIssueSeverity.high: 'high',
@@ -1472,8 +1482,8 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(_$ProcedureStatusEnumMap, json['status'],
+        unknownValue: ProcedureStatus.unknown),
     statusReason: json['statusReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -1601,7 +1611,7 @@ Map<String, dynamic> _$_$_ProcedureToJson(_$_Procedure instance) {
       instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ProcedureStatusEnumMap[instance.status]);
   writeNotNull('statusReason', instance.statusReason?.toJson());
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('code', instance.code?.toJson());
@@ -1640,6 +1650,17 @@ Map<String, dynamic> _$_$_ProcedureToJson(_$_Procedure instance) {
       'usedCode', instance.usedCode?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$ProcedureStatusEnumMap = {
+  ProcedureStatus.preparation: 'preparation',
+  ProcedureStatus.in_progress: 'in-progress',
+  ProcedureStatus.not_done: 'not-done',
+  ProcedureStatus.on_hold: 'on-hold',
+  ProcedureStatus.stopped: 'stopped',
+  ProcedureStatus.completed: 'completed',
+  ProcedureStatus.entered_in_error: 'entered-in-error',
+  ProcedureStatus.unknown: 'unknown',
+};
 
 _$_ProcedurePerformer _$_$_ProcedurePerformerFromJson(
     Map<String, dynamic> json) {

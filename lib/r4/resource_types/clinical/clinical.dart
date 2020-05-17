@@ -3,6 +3,7 @@ export './care_provision/care_provision.enums.dart';
 export './diagnostics/diagnostics.dart';
 export './diagnostics/diagnostics.enums.dart';
 export './medications/medications.dart';
+export './medications/medications.enums.dart';
 export './request_and_response/request_and_response.dart';
 export './request_and_response/request_and_response.enums.dart';
 export './summary/summary.dart';

@@ -1354,13 +1354,15 @@ class _$CapabilityStatementTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri url,
       String version,
       String name,
       String title,
-      CapabilityStatementStatus status,
+      @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+          CapabilityStatementStatus status,
       bool experimental,
       FhirDateTime date,
       String publisher,
@@ -1370,7 +1372,8 @@ class _$CapabilityStatementTearOff {
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
       Markdown copyright,
-      CapabilityStatementKind kind,
+      @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+          CapabilityStatementKind kind,
       List<Canonical> instantiates,
       List<Canonical> imports,
       CapabilityStatementSoftware software,
@@ -1440,6 +1443,7 @@ mixin _$CapabilityStatement {
   String get version;
   String get name;
   String get title;
+  @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
   CapabilityStatementStatus get status;
   bool get experimental;
   FhirDateTime get date;
@@ -1450,6 +1454,7 @@ mixin _$CapabilityStatement {
   List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
   Markdown get copyright;
+  @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
   CapabilityStatementKind get kind;
   List<Canonical> get instantiates;
   List<Canonical> get imports;
@@ -1479,13 +1484,15 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri url,
       String version,
       String name,
       String title,
-      CapabilityStatementStatus status,
+      @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+          CapabilityStatementStatus status,
       bool experimental,
       FhirDateTime date,
       String publisher,
@@ -1495,7 +1502,8 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
       Markdown copyright,
-      CapabilityStatementKind kind,
+      @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+          CapabilityStatementKind kind,
       List<Canonical> instantiates,
       List<Canonical> imports,
       CapabilityStatementSoftware software,
@@ -1691,13 +1699,15 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri url,
       String version,
       String name,
       String title,
-      CapabilityStatementStatus status,
+      @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+          CapabilityStatementStatus status,
       bool experimental,
       FhirDateTime date,
       String publisher,
@@ -1707,7 +1717,8 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
       Markdown copyright,
-      CapabilityStatementKind kind,
+      @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+          CapabilityStatementKind kind,
       List<Canonical> instantiates,
       List<Canonical> imports,
       CapabilityStatementSoftware software,
@@ -1870,7 +1881,7 @@ class _$_CapabilityStatement implements _CapabilityStatement {
       this.version,
       this.name,
       this.title,
-      this.status,
+      @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown) this.status,
       this.experimental,
       this.date,
       this.publisher,
@@ -1880,7 +1891,7 @@ class _$_CapabilityStatement implements _CapabilityStatement {
       this.jurisdiction,
       this.purpose,
       this.copyright,
-      this.kind,
+      @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown) this.kind,
       this.instantiates,
       this.imports,
       this.software,
@@ -1924,6 +1935,7 @@ class _$_CapabilityStatement implements _CapabilityStatement {
   @override
   final String title;
   @override
+  @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
   final CapabilityStatementStatus status;
   @override
   final bool experimental;
@@ -1944,6 +1956,7 @@ class _$_CapabilityStatement implements _CapabilityStatement {
   @override
   final Markdown copyright;
   @override
+  @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
   final CapabilityStatementKind kind;
   @override
   final List<Canonical> instantiates;
@@ -2116,13 +2129,15 @@ abstract class _CapabilityStatement implements CapabilityStatement {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       FhirUri url,
       String version,
       String name,
       String title,
-      CapabilityStatementStatus status,
+      @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+          CapabilityStatementStatus status,
       bool experimental,
       FhirDateTime date,
       String publisher,
@@ -2132,7 +2147,8 @@ abstract class _CapabilityStatement implements CapabilityStatement {
       List<CodeableConcept> jurisdiction,
       Markdown purpose,
       Markdown copyright,
-      CapabilityStatementKind kind,
+      @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+          CapabilityStatementKind kind,
       List<Canonical> instantiates,
       List<Canonical> imports,
       CapabilityStatementSoftware software,
@@ -2176,6 +2192,7 @@ abstract class _CapabilityStatement implements CapabilityStatement {
   @override
   String get title;
   @override
+  @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
   CapabilityStatementStatus get status;
   @override
   bool get experimental;
@@ -2196,6 +2213,7 @@ abstract class _CapabilityStatement implements CapabilityStatement {
   @override
   Markdown get copyright;
   @override
+  @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
   CapabilityStatementKind get kind;
   @override
   List<Canonical> get instantiates;
@@ -2757,13 +2775,13 @@ class _$CapabilityStatementRestTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementRestMode mode,
+      @JsonKey(unknownEnumValue: RestMode.unknown) RestMode mode,
       Markdown documentation,
-      CapabilityStatementSecurity security,
-      List<CapabilityStatementResource> resource,
-      List<CapabilityStatementInteraction1> interaction,
-      List<CapabilityStatementSearchParam> searchParam,
-      List<CapabilityStatementOperation> operation,
+      RestSecurity security,
+      List<RestResource> resource,
+      List<RestInteraction> interaction,
+      List<dynamic> searchParam,
+      List<dynamic> operation,
       List<Canonical> compartment}) {
     return _CapabilityStatementRest(
       id: id,
@@ -2789,13 +2807,14 @@ mixin _$CapabilityStatementRest {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  CapabilityStatementRestMode get mode;
+  @JsonKey(unknownEnumValue: RestMode.unknown)
+  RestMode get mode;
   Markdown get documentation;
-  CapabilityStatementSecurity get security;
-  List<CapabilityStatementResource> get resource;
-  List<CapabilityStatementInteraction1> get interaction;
-  List<CapabilityStatementSearchParam> get searchParam;
-  List<CapabilityStatementOperation> get operation;
+  RestSecurity get security;
+  List<RestResource> get resource;
+  List<RestInteraction> get interaction;
+  List<dynamic> get searchParam;
+  List<dynamic> get operation;
   List<Canonical> get compartment;
 
   Map<String, dynamic> toJson();
@@ -2810,16 +2829,16 @@ abstract class $CapabilityStatementRestCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementRestMode mode,
+      @JsonKey(unknownEnumValue: RestMode.unknown) RestMode mode,
       Markdown documentation,
-      CapabilityStatementSecurity security,
-      List<CapabilityStatementResource> resource,
-      List<CapabilityStatementInteraction1> interaction,
-      List<CapabilityStatementSearchParam> searchParam,
-      List<CapabilityStatementOperation> operation,
+      RestSecurity security,
+      List<RestResource> resource,
+      List<RestInteraction> interaction,
+      List<dynamic> searchParam,
+      List<dynamic> operation,
       List<Canonical> compartment});
 
-  $CapabilityStatementSecurityCopyWith<$Res> get security;
+  $RestSecurityCopyWith<$Res> get security;
 }
 
 class _$CapabilityStatementRestCopyWithImpl<$Res>
@@ -2852,25 +2871,23 @@ class _$CapabilityStatementRestCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      mode: mode == freezed ? _value.mode : mode as CapabilityStatementRestMode,
+      mode: mode == freezed ? _value.mode : mode as RestMode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
-      security: security == freezed
-          ? _value.security
-          : security as CapabilityStatementSecurity,
+      security:
+          security == freezed ? _value.security : security as RestSecurity,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<CapabilityStatementResource>,
+          : resource as List<RestResource>,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction1>,
+          : interaction as List<RestInteraction>,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>,
-      operation: operation == freezed
-          ? _value.operation
-          : operation as List<CapabilityStatementOperation>,
+          : searchParam as List<dynamic>,
+      operation:
+          operation == freezed ? _value.operation : operation as List<dynamic>,
       compartment: compartment == freezed
           ? _value.compartment
           : compartment as List<Canonical>,
@@ -2878,11 +2895,11 @@ class _$CapabilityStatementRestCopyWithImpl<$Res>
   }
 
   @override
-  $CapabilityStatementSecurityCopyWith<$Res> get security {
+  $RestSecurityCopyWith<$Res> get security {
     if (_value.security == null) {
       return null;
     }
-    return $CapabilityStatementSecurityCopyWith<$Res>(_value.security, (value) {
+    return $RestSecurityCopyWith<$Res>(_value.security, (value) {
       return _then(_value.copyWith(security: value));
     });
   }
@@ -2898,17 +2915,17 @@ abstract class _$CapabilityStatementRestCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementRestMode mode,
+      @JsonKey(unknownEnumValue: RestMode.unknown) RestMode mode,
       Markdown documentation,
-      CapabilityStatementSecurity security,
-      List<CapabilityStatementResource> resource,
-      List<CapabilityStatementInteraction1> interaction,
-      List<CapabilityStatementSearchParam> searchParam,
-      List<CapabilityStatementOperation> operation,
+      RestSecurity security,
+      List<RestResource> resource,
+      List<RestInteraction> interaction,
+      List<dynamic> searchParam,
+      List<dynamic> operation,
       List<Canonical> compartment});
 
   @override
-  $CapabilityStatementSecurityCopyWith<$Res> get security;
+  $RestSecurityCopyWith<$Res> get security;
 }
 
 class __$CapabilityStatementRestCopyWithImpl<$Res>
@@ -2944,25 +2961,23 @@ class __$CapabilityStatementRestCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      mode: mode == freezed ? _value.mode : mode as CapabilityStatementRestMode,
+      mode: mode == freezed ? _value.mode : mode as RestMode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
-      security: security == freezed
-          ? _value.security
-          : security as CapabilityStatementSecurity,
+      security:
+          security == freezed ? _value.security : security as RestSecurity,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<CapabilityStatementResource>,
+          : resource as List<RestResource>,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction1>,
+          : interaction as List<RestInteraction>,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>,
-      operation: operation == freezed
-          ? _value.operation
-          : operation as List<CapabilityStatementOperation>,
+          : searchParam as List<dynamic>,
+      operation:
+          operation == freezed ? _value.operation : operation as List<dynamic>,
       compartment: compartment == freezed
           ? _value.compartment
           : compartment as List<Canonical>,
@@ -2976,7 +2991,7 @@ class _$_CapabilityStatementRest implements _CapabilityStatementRest {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.mode,
+      @JsonKey(unknownEnumValue: RestMode.unknown) this.mode,
       this.documentation,
       this.security,
       this.resource,
@@ -2996,19 +3011,20 @@ class _$_CapabilityStatementRest implements _CapabilityStatementRest {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CapabilityStatementRestMode mode;
+  @JsonKey(unknownEnumValue: RestMode.unknown)
+  final RestMode mode;
   @override
   final Markdown documentation;
   @override
-  final CapabilityStatementSecurity security;
+  final RestSecurity security;
   @override
-  final List<CapabilityStatementResource> resource;
+  final List<RestResource> resource;
   @override
-  final List<CapabilityStatementInteraction1> interaction;
+  final List<RestInteraction> interaction;
   @override
-  final List<CapabilityStatementSearchParam> searchParam;
+  final List<dynamic> searchParam;
   @override
-  final List<CapabilityStatementOperation> operation;
+  final List<dynamic> operation;
   @override
   final List<Canonical> compartment;
 
@@ -3085,13 +3101,13 @@ abstract class _CapabilityStatementRest implements CapabilityStatementRest {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementRestMode mode,
+      @JsonKey(unknownEnumValue: RestMode.unknown) RestMode mode,
       Markdown documentation,
-      CapabilityStatementSecurity security,
-      List<CapabilityStatementResource> resource,
-      List<CapabilityStatementInteraction1> interaction,
-      List<CapabilityStatementSearchParam> searchParam,
-      List<CapabilityStatementOperation> operation,
+      RestSecurity security,
+      List<RestResource> resource,
+      List<RestInteraction> interaction,
+      List<dynamic> searchParam,
+      List<dynamic> operation,
       List<Canonical> compartment}) = _$_CapabilityStatementRest;
 
   factory _CapabilityStatementRest.fromJson(Map<String, dynamic> json) =
@@ -3105,41 +3121,41 @@ abstract class _CapabilityStatementRest implements CapabilityStatementRest {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CapabilityStatementRestMode get mode;
+  @JsonKey(unknownEnumValue: RestMode.unknown)
+  RestMode get mode;
   @override
   Markdown get documentation;
   @override
-  CapabilityStatementSecurity get security;
+  RestSecurity get security;
   @override
-  List<CapabilityStatementResource> get resource;
+  List<RestResource> get resource;
   @override
-  List<CapabilityStatementInteraction1> get interaction;
+  List<RestInteraction> get interaction;
   @override
-  List<CapabilityStatementSearchParam> get searchParam;
+  List<dynamic> get searchParam;
   @override
-  List<CapabilityStatementOperation> get operation;
+  List<dynamic> get operation;
   @override
   List<Canonical> get compartment;
   @override
   _$CapabilityStatementRestCopyWith<_CapabilityStatementRest> get copyWith;
 }
 
-CapabilityStatementSecurity _$CapabilityStatementSecurityFromJson(
-    Map<String, dynamic> json) {
-  return _CapabilityStatementSecurity.fromJson(json);
+RestSecurity _$RestSecurityFromJson(Map<String, dynamic> json) {
+  return _RestSecurity.fromJson(json);
 }
 
-class _$CapabilityStatementSecurityTearOff {
-  const _$CapabilityStatementSecurityTearOff();
+class _$RestSecurityTearOff {
+  const _$RestSecurityTearOff();
 
-  _CapabilityStatementSecurity call(
+  _RestSecurity call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       bool cors,
       List<CodeableConcept> service,
       Markdown description}) {
-    return _CapabilityStatementSecurity(
+    return _RestSecurity(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
@@ -3151,9 +3167,9 @@ class _$CapabilityStatementSecurityTearOff {
 }
 
 // ignore: unused_element
-const $CapabilityStatementSecurity = _$CapabilityStatementSecurityTearOff();
+const $RestSecurity = _$RestSecurityTearOff();
 
-mixin _$CapabilityStatementSecurity {
+mixin _$RestSecurity {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
@@ -3163,15 +3179,13 @@ mixin _$CapabilityStatementSecurity {
   Markdown get description;
 
   Map<String, dynamic> toJson();
-  $CapabilityStatementSecurityCopyWith<CapabilityStatementSecurity>
-      get copyWith;
+  $RestSecurityCopyWith<RestSecurity> get copyWith;
 }
 
-abstract class $CapabilityStatementSecurityCopyWith<$Res> {
-  factory $CapabilityStatementSecurityCopyWith(
-          CapabilityStatementSecurity value,
-          $Res Function(CapabilityStatementSecurity) then) =
-      _$CapabilityStatementSecurityCopyWithImpl<$Res>;
+abstract class $RestSecurityCopyWith<$Res> {
+  factory $RestSecurityCopyWith(
+          RestSecurity value, $Res Function(RestSecurity) then) =
+      _$RestSecurityCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
@@ -3181,13 +3195,12 @@ abstract class $CapabilityStatementSecurityCopyWith<$Res> {
       Markdown description});
 }
 
-class _$CapabilityStatementSecurityCopyWithImpl<$Res>
-    implements $CapabilityStatementSecurityCopyWith<$Res> {
-  _$CapabilityStatementSecurityCopyWithImpl(this._value, this._then);
+class _$RestSecurityCopyWithImpl<$Res> implements $RestSecurityCopyWith<$Res> {
+  _$RestSecurityCopyWithImpl(this._value, this._then);
 
-  final CapabilityStatementSecurity _value;
+  final RestSecurity _value;
   // ignore: unused_field
-  final $Res Function(CapabilityStatementSecurity) _then;
+  final $Res Function(RestSecurity) _then;
 
   @override
   $Res call({
@@ -3216,12 +3229,11 @@ class _$CapabilityStatementSecurityCopyWithImpl<$Res>
   }
 }
 
-abstract class _$CapabilityStatementSecurityCopyWith<$Res>
-    implements $CapabilityStatementSecurityCopyWith<$Res> {
-  factory _$CapabilityStatementSecurityCopyWith(
-          _CapabilityStatementSecurity value,
-          $Res Function(_CapabilityStatementSecurity) then) =
-      __$CapabilityStatementSecurityCopyWithImpl<$Res>;
+abstract class _$RestSecurityCopyWith<$Res>
+    implements $RestSecurityCopyWith<$Res> {
+  factory _$RestSecurityCopyWith(
+          _RestSecurity value, $Res Function(_RestSecurity) then) =
+      __$RestSecurityCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -3232,17 +3244,14 @@ abstract class _$CapabilityStatementSecurityCopyWith<$Res>
       Markdown description});
 }
 
-class __$CapabilityStatementSecurityCopyWithImpl<$Res>
-    extends _$CapabilityStatementSecurityCopyWithImpl<$Res>
-    implements _$CapabilityStatementSecurityCopyWith<$Res> {
-  __$CapabilityStatementSecurityCopyWithImpl(
-      _CapabilityStatementSecurity _value,
-      $Res Function(_CapabilityStatementSecurity) _then)
-      : super(_value, (v) => _then(v as _CapabilityStatementSecurity));
+class __$RestSecurityCopyWithImpl<$Res> extends _$RestSecurityCopyWithImpl<$Res>
+    implements _$RestSecurityCopyWith<$Res> {
+  __$RestSecurityCopyWithImpl(
+      _RestSecurity _value, $Res Function(_RestSecurity) _then)
+      : super(_value, (v) => _then(v as _RestSecurity));
 
   @override
-  _CapabilityStatementSecurity get _value =>
-      super._value as _CapabilityStatementSecurity;
+  _RestSecurity get _value => super._value as _RestSecurity;
 
   @override
   $Res call({
@@ -3253,7 +3262,7 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
     Object service = freezed,
     Object description = freezed,
   }) {
-    return _then(_CapabilityStatementSecurity(
+    return _then(_RestSecurity(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -3272,8 +3281,8 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CapabilityStatementSecurity implements _CapabilityStatementSecurity {
-  const _$_CapabilityStatementSecurity(
+class _$_RestSecurity implements _RestSecurity {
+  const _$_RestSecurity(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
@@ -3281,8 +3290,8 @@ class _$_CapabilityStatementSecurity implements _CapabilityStatementSecurity {
       this.service,
       this.description});
 
-  factory _$_CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementSecurityFromJson(json);
+  factory _$_RestSecurity.fromJson(Map<String, dynamic> json) =>
+      _$_$_RestSecurityFromJson(json);
 
   @override
   final String id;
@@ -3300,13 +3309,13 @@ class _$_CapabilityStatementSecurity implements _CapabilityStatementSecurity {
 
   @override
   String toString() {
-    return 'CapabilityStatementSecurity(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, cors: $cors, service: $service, description: $description)';
+    return 'RestSecurity(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, cors: $cors, service: $service, description: $description)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CapabilityStatementSecurity &&
+        (other is _RestSecurity &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -3336,28 +3345,26 @@ class _$_CapabilityStatementSecurity implements _CapabilityStatementSecurity {
       const DeepCollectionEquality().hash(description);
 
   @override
-  _$CapabilityStatementSecurityCopyWith<_CapabilityStatementSecurity>
-      get copyWith => __$CapabilityStatementSecurityCopyWithImpl<
-          _CapabilityStatementSecurity>(this, _$identity);
+  _$RestSecurityCopyWith<_RestSecurity> get copyWith =>
+      __$RestSecurityCopyWithImpl<_RestSecurity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementSecurityToJson(this);
+    return _$_$_RestSecurityToJson(this);
   }
 }
 
-abstract class _CapabilityStatementSecurity
-    implements CapabilityStatementSecurity {
-  const factory _CapabilityStatementSecurity(
+abstract class _RestSecurity implements RestSecurity {
+  const factory _RestSecurity(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       bool cors,
       List<CodeableConcept> service,
-      Markdown description}) = _$_CapabilityStatementSecurity;
+      Markdown description}) = _$_RestSecurity;
 
-  factory _CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =
-      _$_CapabilityStatementSecurity.fromJson;
+  factory _RestSecurity.fromJson(Map<String, dynamic> json) =
+      _$_RestSecurity.fromJson;
 
   @override
   String get id;
@@ -3373,40 +3380,42 @@ abstract class _CapabilityStatementSecurity
   @override
   Markdown get description;
   @override
-  _$CapabilityStatementSecurityCopyWith<_CapabilityStatementSecurity>
-      get copyWith;
+  _$RestSecurityCopyWith<_RestSecurity> get copyWith;
 }
 
-CapabilityStatementResource _$CapabilityStatementResourceFromJson(
-    Map<String, dynamic> json) {
-  return _CapabilityStatementResource.fromJson(json);
+RestResource _$RestResourceFromJson(Map<String, dynamic> json) {
+  return _RestResource.fromJson(json);
 }
 
-class _$CapabilityStatementResourceTearOff {
-  const _$CapabilityStatementResourceTearOff();
+class _$RestResourceTearOff {
+  const _$RestResourceTearOff();
 
-  _CapabilityStatementResource call(
+  _RestResource call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Code type,
       Canonical profile,
       List<Canonical> supportedProfile,
       Markdown documentation,
-      List<CapabilityStatementInteraction> interaction,
-      CapabilityStatementResourceVersioning versioning,
+      List<ResourceInteraction> interaction,
+      @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
+          ResourceVersioning versioning,
       bool readHistory,
       bool updateCreate,
       bool conditionalCreate,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) CapabilityStatementResourceConditionalRead conditionalRead,
+      @JsonKey(unknownEnumValue: ResourceConditionalRead.unknown)
+          ResourceConditionalRead conditionalRead,
       bool conditionalUpdate,
-      CapabilityStatementResourceConditionalDelete conditionalDelete,
-      List<String> referencePolicy,
+      @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
+          ResourceConditionalDelete conditionalDelete,
+      List<ResourceReferencePolicy> referencePolicy,
       List<String> searchInclude,
       List<String> searchRevInclude,
-      List<CapabilityStatementSearchParam> searchParam,
-      List<CapabilityStatementOperation> operation}) {
-    return _CapabilityStatementResource(
+      List<RestSearchParam> searchParam,
+      List<RestOperation> operation}) {
+    return _RestResource(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
@@ -3432,9 +3441,9 @@ class _$CapabilityStatementResourceTearOff {
 }
 
 // ignore: unused_element
-const $CapabilityStatementResource = _$CapabilityStatementResourceTearOff();
+const $RestResource = _$RestResourceTearOff();
 
-mixin _$CapabilityStatementResource {
+mixin _$RestResource {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
@@ -3443,60 +3452,64 @@ mixin _$CapabilityStatementResource {
   Canonical get profile;
   List<Canonical> get supportedProfile;
   Markdown get documentation;
-  List<CapabilityStatementInteraction> get interaction;
-  CapabilityStatementResourceVersioning get versioning;
+  List<ResourceInteraction> get interaction;
+  @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
+  ResourceVersioning get versioning;
   bool get readHistory;
   bool get updateCreate;
   bool get conditionalCreate;
-  @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) CapabilityStatementResourceConditionalRead get conditionalRead;
+  @JsonKey(unknownEnumValue: ResourceConditionalRead.unknown)
+  ResourceConditionalRead get conditionalRead;
   bool get conditionalUpdate;
-  CapabilityStatementResourceConditionalDelete get conditionalDelete;
-  List<String> get referencePolicy;
+  @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
+  ResourceConditionalDelete get conditionalDelete;
+  List<ResourceReferencePolicy> get referencePolicy;
   List<String> get searchInclude;
   List<String> get searchRevInclude;
-  List<CapabilityStatementSearchParam> get searchParam;
-  List<CapabilityStatementOperation> get operation;
+  List<RestSearchParam> get searchParam;
+  List<RestOperation> get operation;
 
   Map<String, dynamic> toJson();
-  $CapabilityStatementResourceCopyWith<CapabilityStatementResource>
-      get copyWith;
+  $RestResourceCopyWith<RestResource> get copyWith;
 }
 
-abstract class $CapabilityStatementResourceCopyWith<$Res> {
-  factory $CapabilityStatementResourceCopyWith(
-          CapabilityStatementResource value,
-          $Res Function(CapabilityStatementResource) then) =
-      _$CapabilityStatementResourceCopyWithImpl<$Res>;
+abstract class $RestResourceCopyWith<$Res> {
+  factory $RestResourceCopyWith(
+          RestResource value, $Res Function(RestResource) then) =
+      _$RestResourceCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Code type,
       Canonical profile,
       List<Canonical> supportedProfile,
       Markdown documentation,
-      List<CapabilityStatementInteraction> interaction,
-      CapabilityStatementResourceVersioning versioning,
+      List<ResourceInteraction> interaction,
+      @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
+          ResourceVersioning versioning,
       bool readHistory,
       bool updateCreate,
       bool conditionalCreate,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) CapabilityStatementResourceConditionalRead conditionalRead,
+      @JsonKey(unknownEnumValue: ResourceConditionalRead.unknown)
+          ResourceConditionalRead conditionalRead,
       bool conditionalUpdate,
-      CapabilityStatementResourceConditionalDelete conditionalDelete,
-      List<String> referencePolicy,
+      @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
+          ResourceConditionalDelete conditionalDelete,
+      List<ResourceReferencePolicy> referencePolicy,
       List<String> searchInclude,
       List<String> searchRevInclude,
-      List<CapabilityStatementSearchParam> searchParam,
-      List<CapabilityStatementOperation> operation});
+      List<RestSearchParam> searchParam,
+      List<RestOperation> operation});
 }
 
-class _$CapabilityStatementResourceCopyWithImpl<$Res>
-    implements $CapabilityStatementResourceCopyWith<$Res> {
-  _$CapabilityStatementResourceCopyWithImpl(this._value, this._then);
+class _$RestResourceCopyWithImpl<$Res> implements $RestResourceCopyWith<$Res> {
+  _$RestResourceCopyWithImpl(this._value, this._then);
 
-  final CapabilityStatementResource _value;
+  final RestResource _value;
   // ignore: unused_field
-  final $Res Function(CapabilityStatementResource) _then;
+  final $Res Function(RestResource) _then;
 
   @override
   $Res call({
@@ -3539,10 +3552,10 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
           : documentation as Markdown,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction>,
+          : interaction as List<ResourceInteraction>,
       versioning: versioning == freezed
           ? _value.versioning
-          : versioning as CapabilityStatementResourceVersioning,
+          : versioning as ResourceVersioning,
       readHistory:
           readHistory == freezed ? _value.readHistory : readHistory as bool,
       updateCreate:
@@ -3552,16 +3565,16 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
           : conditionalCreate as bool,
       conditionalRead: conditionalRead == freezed
           ? _value.conditionalRead
-          : conditionalRead as CapabilityStatementResourceConditionalRead,
+          : conditionalRead as ResourceConditionalRead,
       conditionalUpdate: conditionalUpdate == freezed
           ? _value.conditionalUpdate
           : conditionalUpdate as bool,
       conditionalDelete: conditionalDelete == freezed
           ? _value.conditionalDelete
-          : conditionalDelete as CapabilityStatementResourceConditionalDelete,
+          : conditionalDelete as ResourceConditionalDelete,
       referencePolicy: referencePolicy == freezed
           ? _value.referencePolicy
-          : referencePolicy as List<String>,
+          : referencePolicy as List<ResourceReferencePolicy>,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
           : searchInclude as List<String>,
@@ -3570,55 +3583,55 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
           : searchRevInclude as List<String>,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>,
+          : searchParam as List<RestSearchParam>,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation>,
+          : operation as List<RestOperation>,
     ));
   }
 }
 
-abstract class _$CapabilityStatementResourceCopyWith<$Res>
-    implements $CapabilityStatementResourceCopyWith<$Res> {
-  factory _$CapabilityStatementResourceCopyWith(
-          _CapabilityStatementResource value,
-          $Res Function(_CapabilityStatementResource) then) =
-      __$CapabilityStatementResourceCopyWithImpl<$Res>;
+abstract class _$RestResourceCopyWith<$Res>
+    implements $RestResourceCopyWith<$Res> {
+  factory _$RestResourceCopyWith(
+          _RestResource value, $Res Function(_RestResource) then) =
+      __$RestResourceCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Code type,
       Canonical profile,
       List<Canonical> supportedProfile,
       Markdown documentation,
-      List<CapabilityStatementInteraction> interaction,
-      CapabilityStatementResourceVersioning versioning,
+      List<ResourceInteraction> interaction,
+      @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
+          ResourceVersioning versioning,
       bool readHistory,
       bool updateCreate,
       bool conditionalCreate,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) CapabilityStatementResourceConditionalRead conditionalRead,
+      @JsonKey(unknownEnumValue: ResourceConditionalRead.unknown)
+          ResourceConditionalRead conditionalRead,
       bool conditionalUpdate,
-      CapabilityStatementResourceConditionalDelete conditionalDelete,
-      List<String> referencePolicy,
+      @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
+          ResourceConditionalDelete conditionalDelete,
+      List<ResourceReferencePolicy> referencePolicy,
       List<String> searchInclude,
       List<String> searchRevInclude,
-      List<CapabilityStatementSearchParam> searchParam,
-      List<CapabilityStatementOperation> operation});
+      List<RestSearchParam> searchParam,
+      List<RestOperation> operation});
 }
 
-class __$CapabilityStatementResourceCopyWithImpl<$Res>
-    extends _$CapabilityStatementResourceCopyWithImpl<$Res>
-    implements _$CapabilityStatementResourceCopyWith<$Res> {
-  __$CapabilityStatementResourceCopyWithImpl(
-      _CapabilityStatementResource _value,
-      $Res Function(_CapabilityStatementResource) _then)
-      : super(_value, (v) => _then(v as _CapabilityStatementResource));
+class __$RestResourceCopyWithImpl<$Res> extends _$RestResourceCopyWithImpl<$Res>
+    implements _$RestResourceCopyWith<$Res> {
+  __$RestResourceCopyWithImpl(
+      _RestResource _value, $Res Function(_RestResource) _then)
+      : super(_value, (v) => _then(v as _RestResource));
 
   @override
-  _CapabilityStatementResource get _value =>
-      super._value as _CapabilityStatementResource;
+  _RestResource get _value => super._value as _RestResource;
 
   @override
   $Res call({
@@ -3643,7 +3656,7 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
     Object searchParam = freezed,
     Object operation = freezed,
   }) {
-    return _then(_CapabilityStatementResource(
+    return _then(_RestResource(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -3661,10 +3674,10 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
           : documentation as Markdown,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction>,
+          : interaction as List<ResourceInteraction>,
       versioning: versioning == freezed
           ? _value.versioning
-          : versioning as CapabilityStatementResourceVersioning,
+          : versioning as ResourceVersioning,
       readHistory:
           readHistory == freezed ? _value.readHistory : readHistory as bool,
       updateCreate:
@@ -3674,16 +3687,16 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
           : conditionalCreate as bool,
       conditionalRead: conditionalRead == freezed
           ? _value.conditionalRead
-          : conditionalRead as CapabilityStatementResourceConditionalRead,
+          : conditionalRead as ResourceConditionalRead,
       conditionalUpdate: conditionalUpdate == freezed
           ? _value.conditionalUpdate
           : conditionalUpdate as bool,
       conditionalDelete: conditionalDelete == freezed
           ? _value.conditionalDelete
-          : conditionalDelete as CapabilityStatementResourceConditionalDelete,
+          : conditionalDelete as ResourceConditionalDelete,
       referencePolicy: referencePolicy == freezed
           ? _value.referencePolicy
-          : referencePolicy as List<String>,
+          : referencePolicy as List<ResourceReferencePolicy>,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
           : searchInclude as List<String>,
@@ -3692,40 +3705,44 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
           : searchRevInclude as List<String>,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>,
+          : searchParam as List<RestSearchParam>,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation>,
+          : operation as List<RestOperation>,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_CapabilityStatementResource implements _CapabilityStatementResource {
-  const _$_CapabilityStatementResource(
+class _$_RestResource implements _RestResource {
+  const _$_RestResource(
       {this.id,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.type,
       this.profile,
       this.supportedProfile,
       this.documentation,
       this.interaction,
-      this.versioning,
+      @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
+          this.versioning,
       this.readHistory,
       this.updateCreate,
       this.conditionalCreate,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) this.conditionalRead,
+      @JsonKey(unknownEnumValue: ResourceConditionalRead.unknown)
+          this.conditionalRead,
       this.conditionalUpdate,
-      this.conditionalDelete,
+      @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
+          this.conditionalDelete,
       this.referencePolicy,
       this.searchInclude,
       this.searchRevInclude,
       this.searchParam,
       this.operation});
 
-  factory _$_CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementResourceFromJson(json);
+  factory _$_RestResource.fromJson(Map<String, dynamic> json) =>
+      _$_$_RestResourceFromJson(json);
 
   @override
   final String id;
@@ -3743,9 +3760,10 @@ class _$_CapabilityStatementResource implements _CapabilityStatementResource {
   @override
   final Markdown documentation;
   @override
-  final List<CapabilityStatementInteraction> interaction;
+  final List<ResourceInteraction> interaction;
   @override
-  final CapabilityStatementResourceVersioning versioning;
+  @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
+  final ResourceVersioning versioning;
   @override
   final bool readHistory;
   @override
@@ -3753,32 +3771,33 @@ class _$_CapabilityStatementResource implements _CapabilityStatementResource {
   @override
   final bool conditionalCreate;
   @override
-  @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-  final CapabilityStatementResourceConditionalRead conditionalRead;
+  @JsonKey(unknownEnumValue: ResourceConditionalRead.unknown)
+  final ResourceConditionalRead conditionalRead;
   @override
   final bool conditionalUpdate;
   @override
-  final CapabilityStatementResourceConditionalDelete conditionalDelete;
+  @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
+  final ResourceConditionalDelete conditionalDelete;
   @override
-  final List<String> referencePolicy;
+  final List<ResourceReferencePolicy> referencePolicy;
   @override
   final List<String> searchInclude;
   @override
   final List<String> searchRevInclude;
   @override
-  final List<CapabilityStatementSearchParam> searchParam;
+  final List<RestSearchParam> searchParam;
   @override
-  final List<CapabilityStatementOperation> operation;
+  final List<RestOperation> operation;
 
   @override
   String toString() {
-    return 'CapabilityStatementResource(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, type: $type, profile: $profile, supportedProfile: $supportedProfile, documentation: $documentation, interaction: $interaction, versioning: $versioning, readHistory: $readHistory, updateCreate: $updateCreate, conditionalCreate: $conditionalCreate, conditionalRead: $conditionalRead, conditionalUpdate: $conditionalUpdate, conditionalDelete: $conditionalDelete, referencePolicy: $referencePolicy, searchInclude: $searchInclude, searchRevInclude: $searchRevInclude, searchParam: $searchParam, operation: $operation)';
+    return 'RestResource(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, type: $type, profile: $profile, supportedProfile: $supportedProfile, documentation: $documentation, interaction: $interaction, versioning: $versioning, readHistory: $readHistory, updateCreate: $updateCreate, conditionalCreate: $conditionalCreate, conditionalRead: $conditionalRead, conditionalUpdate: $conditionalUpdate, conditionalDelete: $conditionalDelete, referencePolicy: $referencePolicy, searchInclude: $searchInclude, searchRevInclude: $searchRevInclude, searchParam: $searchParam, operation: $operation)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CapabilityStatementResource &&
+        (other is _RestResource &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -3864,43 +3883,44 @@ class _$_CapabilityStatementResource implements _CapabilityStatementResource {
       const DeepCollectionEquality().hash(operation);
 
   @override
-  _$CapabilityStatementResourceCopyWith<_CapabilityStatementResource>
-      get copyWith => __$CapabilityStatementResourceCopyWithImpl<
-          _CapabilityStatementResource>(this, _$identity);
+  _$RestResourceCopyWith<_RestResource> get copyWith =>
+      __$RestResourceCopyWithImpl<_RestResource>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementResourceToJson(this);
+    return _$_$_RestResourceToJson(this);
   }
 }
 
-abstract class _CapabilityStatementResource
-    implements CapabilityStatementResource {
-  const factory _CapabilityStatementResource(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-          List<FhirExtension> modifierExtension,
-          Code type,
-          Canonical profile,
-          List<Canonical> supportedProfile,
-          Markdown documentation,
-          List<CapabilityStatementInteraction> interaction,
-          CapabilityStatementResourceVersioning versioning,
-          bool readHistory,
-          bool updateCreate,
-          bool conditionalCreate,
-          @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown) CapabilityStatementResourceConditionalRead conditionalRead,
-          bool conditionalUpdate,
-          CapabilityStatementResourceConditionalDelete conditionalDelete,
-          List<String> referencePolicy,
-          List<String> searchInclude,
-          List<String> searchRevInclude,
-          List<CapabilityStatementSearchParam> searchParam,
-          List<CapabilityStatementOperation> operation}) =
-      _$_CapabilityStatementResource;
+abstract class _RestResource implements RestResource {
+  const factory _RestResource(
+      {String id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
+      List<FhirExtension> modifierExtension,
+      Code type,
+      Canonical profile,
+      List<Canonical> supportedProfile,
+      Markdown documentation,
+      List<ResourceInteraction> interaction,
+      @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
+          ResourceVersioning versioning,
+      bool readHistory,
+      bool updateCreate,
+      bool conditionalCreate,
+      @JsonKey(unknownEnumValue: ResourceConditionalRead.unknown)
+          ResourceConditionalRead conditionalRead,
+      bool conditionalUpdate,
+      @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
+          ResourceConditionalDelete conditionalDelete,
+      List<ResourceReferencePolicy> referencePolicy,
+      List<String> searchInclude,
+      List<String> searchRevInclude,
+      List<RestSearchParam> searchParam,
+      List<RestOperation> operation}) = _$_RestResource;
 
-  factory _CapabilityStatementResource.fromJson(Map<String, dynamic> json) =
-      _$_CapabilityStatementResource.fromJson;
+  factory _RestResource.fromJson(Map<String, dynamic> json) =
+      _$_RestResource.fromJson;
 
   @override
   String get id;
@@ -3918,9 +3938,10 @@ abstract class _CapabilityStatementResource
   @override
   Markdown get documentation;
   @override
-  List<CapabilityStatementInteraction> get interaction;
+  List<ResourceInteraction> get interaction;
   @override
-  CapabilityStatementResourceVersioning get versioning;
+  @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
+  ResourceVersioning get versioning;
   @override
   bool get readHistory;
   @override
@@ -3928,42 +3949,43 @@ abstract class _CapabilityStatementResource
   @override
   bool get conditionalCreate;
   @override
-  @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-  CapabilityStatementResourceConditionalRead get conditionalRead;
+  @JsonKey(unknownEnumValue: ResourceConditionalRead.unknown)
+  ResourceConditionalRead get conditionalRead;
   @override
   bool get conditionalUpdate;
   @override
-  CapabilityStatementResourceConditionalDelete get conditionalDelete;
+  @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
+  ResourceConditionalDelete get conditionalDelete;
   @override
-  List<String> get referencePolicy;
+  List<ResourceReferencePolicy> get referencePolicy;
   @override
   List<String> get searchInclude;
   @override
   List<String> get searchRevInclude;
   @override
-  List<CapabilityStatementSearchParam> get searchParam;
+  List<RestSearchParam> get searchParam;
   @override
-  List<CapabilityStatementOperation> get operation;
+  List<RestOperation> get operation;
   @override
-  _$CapabilityStatementResourceCopyWith<_CapabilityStatementResource>
-      get copyWith;
+  _$RestResourceCopyWith<_RestResource> get copyWith;
 }
 
-CapabilityStatementInteraction _$CapabilityStatementInteractionFromJson(
-    Map<String, dynamic> json) {
-  return _CapabilityStatementInteraction.fromJson(json);
+ResourceInteraction _$ResourceInteractionFromJson(Map<String, dynamic> json) {
+  return _ResourceInteraction.fromJson(json);
 }
 
-class _$CapabilityStatementInteractionTearOff {
-  const _$CapabilityStatementInteractionTearOff();
+class _$ResourceInteractionTearOff {
+  const _$ResourceInteractionTearOff();
 
-  _CapabilityStatementInteraction call(
+  _ResourceInteraction call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementInteractionCode code,
+      @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
+          ResourceInteractionCode code,
       Markdown documentation}) {
-    return _CapabilityStatementInteraction(
+    return _ResourceInteraction(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
@@ -3974,42 +3996,42 @@ class _$CapabilityStatementInteractionTearOff {
 }
 
 // ignore: unused_element
-const $CapabilityStatementInteraction =
-    _$CapabilityStatementInteractionTearOff();
+const $ResourceInteraction = _$ResourceInteractionTearOff();
 
-mixin _$CapabilityStatementInteraction {
+mixin _$ResourceInteraction {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  CapabilityStatementInteractionCode get code;
+  @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
+  ResourceInteractionCode get code;
   Markdown get documentation;
 
   Map<String, dynamic> toJson();
-  $CapabilityStatementInteractionCopyWith<CapabilityStatementInteraction>
-      get copyWith;
+  $ResourceInteractionCopyWith<ResourceInteraction> get copyWith;
 }
 
-abstract class $CapabilityStatementInteractionCopyWith<$Res> {
-  factory $CapabilityStatementInteractionCopyWith(
-          CapabilityStatementInteraction value,
-          $Res Function(CapabilityStatementInteraction) then) =
-      _$CapabilityStatementInteractionCopyWithImpl<$Res>;
+abstract class $ResourceInteractionCopyWith<$Res> {
+  factory $ResourceInteractionCopyWith(
+          ResourceInteraction value, $Res Function(ResourceInteraction) then) =
+      _$ResourceInteractionCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementInteractionCode code,
+      @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
+          ResourceInteractionCode code,
       Markdown documentation});
 }
 
-class _$CapabilityStatementInteractionCopyWithImpl<$Res>
-    implements $CapabilityStatementInteractionCopyWith<$Res> {
-  _$CapabilityStatementInteractionCopyWithImpl(this._value, this._then);
+class _$ResourceInteractionCopyWithImpl<$Res>
+    implements $ResourceInteractionCopyWith<$Res> {
+  _$ResourceInteractionCopyWithImpl(this._value, this._then);
 
-  final CapabilityStatementInteraction _value;
+  final ResourceInteraction _value;
   // ignore: unused_field
-  final $Res Function(CapabilityStatementInteraction) _then;
+  final $Res Function(ResourceInteraction) _then;
 
   @override
   $Res call({
@@ -4027,9 +4049,7 @@ class _$CapabilityStatementInteractionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      code: code == freezed
-          ? _value.code
-          : code as CapabilityStatementInteractionCode,
+      code: code == freezed ? _value.code : code as ResourceInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
@@ -4037,32 +4057,31 @@ class _$CapabilityStatementInteractionCopyWithImpl<$Res>
   }
 }
 
-abstract class _$CapabilityStatementInteractionCopyWith<$Res>
-    implements $CapabilityStatementInteractionCopyWith<$Res> {
-  factory _$CapabilityStatementInteractionCopyWith(
-          _CapabilityStatementInteraction value,
-          $Res Function(_CapabilityStatementInteraction) then) =
-      __$CapabilityStatementInteractionCopyWithImpl<$Res>;
+abstract class _$ResourceInteractionCopyWith<$Res>
+    implements $ResourceInteractionCopyWith<$Res> {
+  factory _$ResourceInteractionCopyWith(_ResourceInteraction value,
+          $Res Function(_ResourceInteraction) then) =
+      __$ResourceInteractionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementInteractionCode code,
+      @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
+          ResourceInteractionCode code,
       Markdown documentation});
 }
 
-class __$CapabilityStatementInteractionCopyWithImpl<$Res>
-    extends _$CapabilityStatementInteractionCopyWithImpl<$Res>
-    implements _$CapabilityStatementInteractionCopyWith<$Res> {
-  __$CapabilityStatementInteractionCopyWithImpl(
-      _CapabilityStatementInteraction _value,
-      $Res Function(_CapabilityStatementInteraction) _then)
-      : super(_value, (v) => _then(v as _CapabilityStatementInteraction));
+class __$ResourceInteractionCopyWithImpl<$Res>
+    extends _$ResourceInteractionCopyWithImpl<$Res>
+    implements _$ResourceInteractionCopyWith<$Res> {
+  __$ResourceInteractionCopyWithImpl(
+      _ResourceInteraction _value, $Res Function(_ResourceInteraction) _then)
+      : super(_value, (v) => _then(v as _ResourceInteraction));
 
   @override
-  _CapabilityStatementInteraction get _value =>
-      super._value as _CapabilityStatementInteraction;
+  _ResourceInteraction get _value => super._value as _ResourceInteraction;
 
   @override
   $Res call({
@@ -4072,7 +4091,7 @@ class __$CapabilityStatementInteractionCopyWithImpl<$Res>
     Object code = freezed,
     Object documentation = freezed,
   }) {
-    return _then(_CapabilityStatementInteraction(
+    return _then(_ResourceInteraction(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -4080,9 +4099,7 @@ class __$CapabilityStatementInteractionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      code: code == freezed
-          ? _value.code
-          : code as CapabilityStatementInteractionCode,
+      code: code == freezed ? _value.code : code as ResourceInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
@@ -4091,18 +4108,16 @@ class __$CapabilityStatementInteractionCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CapabilityStatementInteraction
-    implements _CapabilityStatementInteraction {
-  const _$_CapabilityStatementInteraction(
+class _$_ResourceInteraction implements _ResourceInteraction {
+  const _$_ResourceInteraction(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.code,
+      @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown) this.code,
       this.documentation});
 
-  factory _$_CapabilityStatementInteraction.fromJson(
-          Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementInteractionFromJson(json);
+  factory _$_ResourceInteraction.fromJson(Map<String, dynamic> json) =>
+      _$_$_ResourceInteractionFromJson(json);
 
   @override
   final String id;
@@ -4112,19 +4127,20 @@ class _$_CapabilityStatementInteraction
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CapabilityStatementInteractionCode code;
+  @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
+  final ResourceInteractionCode code;
   @override
   final Markdown documentation;
 
   @override
   String toString() {
-    return 'CapabilityStatementInteraction(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, documentation: $documentation)';
+    return 'ResourceInteraction(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, documentation: $documentation)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CapabilityStatementInteraction &&
+        (other is _ResourceInteraction &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -4150,27 +4166,28 @@ class _$_CapabilityStatementInteraction
       const DeepCollectionEquality().hash(documentation);
 
   @override
-  _$CapabilityStatementInteractionCopyWith<_CapabilityStatementInteraction>
-      get copyWith => __$CapabilityStatementInteractionCopyWithImpl<
-          _CapabilityStatementInteraction>(this, _$identity);
+  _$ResourceInteractionCopyWith<_ResourceInteraction> get copyWith =>
+      __$ResourceInteractionCopyWithImpl<_ResourceInteraction>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementInteractionToJson(this);
+    return _$_$_ResourceInteractionToJson(this);
   }
 }
 
-abstract class _CapabilityStatementInteraction
-    implements CapabilityStatementInteraction {
-  const factory _CapabilityStatementInteraction(
+abstract class _ResourceInteraction implements ResourceInteraction {
+  const factory _ResourceInteraction(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementInteractionCode code,
-      Markdown documentation}) = _$_CapabilityStatementInteraction;
+      @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
+          ResourceInteractionCode code,
+      Markdown documentation}) = _$_ResourceInteraction;
 
-  factory _CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =
-      _$_CapabilityStatementInteraction.fromJson;
+  factory _ResourceInteraction.fromJson(Map<String, dynamic> json) =
+      _$_ResourceInteraction.fromJson;
 
   @override
   String get id;
@@ -4180,31 +4197,30 @@ abstract class _CapabilityStatementInteraction
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CapabilityStatementInteractionCode get code;
+  @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
+  ResourceInteractionCode get code;
   @override
   Markdown get documentation;
   @override
-  _$CapabilityStatementInteractionCopyWith<_CapabilityStatementInteraction>
-      get copyWith;
+  _$ResourceInteractionCopyWith<_ResourceInteraction> get copyWith;
 }
 
-CapabilityStatementSearchParam _$CapabilityStatementSearchParamFromJson(
-    Map<String, dynamic> json) {
-  return _CapabilityStatementSearchParam.fromJson(json);
+RestSearchParam _$RestSearchParamFromJson(Map<String, dynamic> json) {
+  return _RestSearchParam.fromJson(json);
 }
 
-class _$CapabilityStatementSearchParamTearOff {
-  const _$CapabilityStatementSearchParamTearOff();
+class _$RestSearchParamTearOff {
+  const _$RestSearchParamTearOff();
 
-  _CapabilityStatementSearchParam call(
+  _RestSearchParam call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String name,
       Canonical definition,
-      String type,
+      @JsonKey(unknownEnumValue: SearchParamType.unknown) SearchParamType type,
       Markdown documentation}) {
-    return _CapabilityStatementSearchParam(
+    return _RestSearchParam(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
@@ -4217,46 +4233,44 @@ class _$CapabilityStatementSearchParamTearOff {
 }
 
 // ignore: unused_element
-const $CapabilityStatementSearchParam =
-    _$CapabilityStatementSearchParamTearOff();
+const $RestSearchParam = _$RestSearchParamTearOff();
 
-mixin _$CapabilityStatementSearchParam {
+mixin _$RestSearchParam {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   String get name;
   Canonical get definition;
-  String get type;
+  @JsonKey(unknownEnumValue: SearchParamType.unknown)
+  SearchParamType get type;
   Markdown get documentation;
 
   Map<String, dynamic> toJson();
-  $CapabilityStatementSearchParamCopyWith<CapabilityStatementSearchParam>
-      get copyWith;
+  $RestSearchParamCopyWith<RestSearchParam> get copyWith;
 }
 
-abstract class $CapabilityStatementSearchParamCopyWith<$Res> {
-  factory $CapabilityStatementSearchParamCopyWith(
-          CapabilityStatementSearchParam value,
-          $Res Function(CapabilityStatementSearchParam) then) =
-      _$CapabilityStatementSearchParamCopyWithImpl<$Res>;
+abstract class $RestSearchParamCopyWith<$Res> {
+  factory $RestSearchParamCopyWith(
+          RestSearchParam value, $Res Function(RestSearchParam) then) =
+      _$RestSearchParamCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String name,
       Canonical definition,
-      String type,
+      @JsonKey(unknownEnumValue: SearchParamType.unknown) SearchParamType type,
       Markdown documentation});
 }
 
-class _$CapabilityStatementSearchParamCopyWithImpl<$Res>
-    implements $CapabilityStatementSearchParamCopyWith<$Res> {
-  _$CapabilityStatementSearchParamCopyWithImpl(this._value, this._then);
+class _$RestSearchParamCopyWithImpl<$Res>
+    implements $RestSearchParamCopyWith<$Res> {
+  _$RestSearchParamCopyWithImpl(this._value, this._then);
 
-  final CapabilityStatementSearchParam _value;
+  final RestSearchParam _value;
   // ignore: unused_field
-  final $Res Function(CapabilityStatementSearchParam) _then;
+  final $Res Function(RestSearchParam) _then;
 
   @override
   $Res call({
@@ -4279,7 +4293,7 @@ class _$CapabilityStatementSearchParamCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       definition:
           definition == freezed ? _value.definition : definition as Canonical,
-      type: type == freezed ? _value.type : type as String,
+      type: type == freezed ? _value.type : type as SearchParamType,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
@@ -4287,12 +4301,11 @@ class _$CapabilityStatementSearchParamCopyWithImpl<$Res>
   }
 }
 
-abstract class _$CapabilityStatementSearchParamCopyWith<$Res>
-    implements $CapabilityStatementSearchParamCopyWith<$Res> {
-  factory _$CapabilityStatementSearchParamCopyWith(
-          _CapabilityStatementSearchParam value,
-          $Res Function(_CapabilityStatementSearchParam) then) =
-      __$CapabilityStatementSearchParamCopyWithImpl<$Res>;
+abstract class _$RestSearchParamCopyWith<$Res>
+    implements $RestSearchParamCopyWith<$Res> {
+  factory _$RestSearchParamCopyWith(
+          _RestSearchParam value, $Res Function(_RestSearchParam) then) =
+      __$RestSearchParamCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -4300,21 +4313,19 @@ abstract class _$CapabilityStatementSearchParamCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       String name,
       Canonical definition,
-      String type,
+      @JsonKey(unknownEnumValue: SearchParamType.unknown) SearchParamType type,
       Markdown documentation});
 }
 
-class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
-    extends _$CapabilityStatementSearchParamCopyWithImpl<$Res>
-    implements _$CapabilityStatementSearchParamCopyWith<$Res> {
-  __$CapabilityStatementSearchParamCopyWithImpl(
-      _CapabilityStatementSearchParam _value,
-      $Res Function(_CapabilityStatementSearchParam) _then)
-      : super(_value, (v) => _then(v as _CapabilityStatementSearchParam));
+class __$RestSearchParamCopyWithImpl<$Res>
+    extends _$RestSearchParamCopyWithImpl<$Res>
+    implements _$RestSearchParamCopyWith<$Res> {
+  __$RestSearchParamCopyWithImpl(
+      _RestSearchParam _value, $Res Function(_RestSearchParam) _then)
+      : super(_value, (v) => _then(v as _RestSearchParam));
 
   @override
-  _CapabilityStatementSearchParam get _value =>
-      super._value as _CapabilityStatementSearchParam;
+  _RestSearchParam get _value => super._value as _RestSearchParam;
 
   @override
   $Res call({
@@ -4326,7 +4337,7 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
     Object type = freezed,
     Object documentation = freezed,
   }) {
-    return _then(_CapabilityStatementSearchParam(
+    return _then(_RestSearchParam(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -4337,7 +4348,7 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       definition:
           definition == freezed ? _value.definition : definition as Canonical,
-      type: type == freezed ? _value.type : type as String,
+      type: type == freezed ? _value.type : type as SearchParamType,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
@@ -4346,20 +4357,18 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CapabilityStatementSearchParam
-    implements _CapabilityStatementSearchParam {
-  const _$_CapabilityStatementSearchParam(
+class _$_RestSearchParam implements _RestSearchParam {
+  const _$_RestSearchParam(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.name,
       this.definition,
-      this.type,
+      @JsonKey(unknownEnumValue: SearchParamType.unknown) this.type,
       this.documentation});
 
-  factory _$_CapabilityStatementSearchParam.fromJson(
-          Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementSearchParamFromJson(json);
+  factory _$_RestSearchParam.fromJson(Map<String, dynamic> json) =>
+      _$_$_RestSearchParamFromJson(json);
 
   @override
   final String id;
@@ -4373,19 +4382,20 @@ class _$_CapabilityStatementSearchParam
   @override
   final Canonical definition;
   @override
-  final String type;
+  @JsonKey(unknownEnumValue: SearchParamType.unknown)
+  final SearchParamType type;
   @override
   final Markdown documentation;
 
   @override
   String toString() {
-    return 'CapabilityStatementSearchParam(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, name: $name, definition: $definition, type: $type, documentation: $documentation)';
+    return 'RestSearchParam(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, name: $name, definition: $definition, type: $type, documentation: $documentation)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CapabilityStatementSearchParam &&
+        (other is _RestSearchParam &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -4418,29 +4428,27 @@ class _$_CapabilityStatementSearchParam
       const DeepCollectionEquality().hash(documentation);
 
   @override
-  _$CapabilityStatementSearchParamCopyWith<_CapabilityStatementSearchParam>
-      get copyWith => __$CapabilityStatementSearchParamCopyWithImpl<
-          _CapabilityStatementSearchParam>(this, _$identity);
+  _$RestSearchParamCopyWith<_RestSearchParam> get copyWith =>
+      __$RestSearchParamCopyWithImpl<_RestSearchParam>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementSearchParamToJson(this);
+    return _$_$_RestSearchParamToJson(this);
   }
 }
 
-abstract class _CapabilityStatementSearchParam
-    implements CapabilityStatementSearchParam {
-  const factory _CapabilityStatementSearchParam(
+abstract class _RestSearchParam implements RestSearchParam {
+  const factory _RestSearchParam(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String name,
       Canonical definition,
-      String type,
-      Markdown documentation}) = _$_CapabilityStatementSearchParam;
+      @JsonKey(unknownEnumValue: SearchParamType.unknown) SearchParamType type,
+      Markdown documentation}) = _$_RestSearchParam;
 
-  factory _CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =
-      _$_CapabilityStatementSearchParam.fromJson;
+  factory _RestSearchParam.fromJson(Map<String, dynamic> json) =
+      _$_RestSearchParam.fromJson;
 
   @override
   String get id;
@@ -4454,30 +4462,29 @@ abstract class _CapabilityStatementSearchParam
   @override
   Canonical get definition;
   @override
-  String get type;
+  @JsonKey(unknownEnumValue: SearchParamType.unknown)
+  SearchParamType get type;
   @override
   Markdown get documentation;
   @override
-  _$CapabilityStatementSearchParamCopyWith<_CapabilityStatementSearchParam>
-      get copyWith;
+  _$RestSearchParamCopyWith<_RestSearchParam> get copyWith;
 }
 
-CapabilityStatementOperation _$CapabilityStatementOperationFromJson(
-    Map<String, dynamic> json) {
-  return _CapabilityStatementOperation.fromJson(json);
+RestOperation _$RestOperationFromJson(Map<String, dynamic> json) {
+  return _RestOperation.fromJson(json);
 }
 
-class _$CapabilityStatementOperationTearOff {
-  const _$CapabilityStatementOperationTearOff();
+class _$RestOperationTearOff {
+  const _$RestOperationTearOff();
 
-  _CapabilityStatementOperation call(
+  _RestOperation call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String name,
       Canonical definition,
       Markdown documentation}) {
-    return _CapabilityStatementOperation(
+    return _RestOperation(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
@@ -4489,9 +4496,9 @@ class _$CapabilityStatementOperationTearOff {
 }
 
 // ignore: unused_element
-const $CapabilityStatementOperation = _$CapabilityStatementOperationTearOff();
+const $RestOperation = _$RestOperationTearOff();
 
-mixin _$CapabilityStatementOperation {
+mixin _$RestOperation {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
@@ -4501,15 +4508,13 @@ mixin _$CapabilityStatementOperation {
   Markdown get documentation;
 
   Map<String, dynamic> toJson();
-  $CapabilityStatementOperationCopyWith<CapabilityStatementOperation>
-      get copyWith;
+  $RestOperationCopyWith<RestOperation> get copyWith;
 }
 
-abstract class $CapabilityStatementOperationCopyWith<$Res> {
-  factory $CapabilityStatementOperationCopyWith(
-          CapabilityStatementOperation value,
-          $Res Function(CapabilityStatementOperation) then) =
-      _$CapabilityStatementOperationCopyWithImpl<$Res>;
+abstract class $RestOperationCopyWith<$Res> {
+  factory $RestOperationCopyWith(
+          RestOperation value, $Res Function(RestOperation) then) =
+      _$RestOperationCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
@@ -4519,13 +4524,13 @@ abstract class $CapabilityStatementOperationCopyWith<$Res> {
       Markdown documentation});
 }
 
-class _$CapabilityStatementOperationCopyWithImpl<$Res>
-    implements $CapabilityStatementOperationCopyWith<$Res> {
-  _$CapabilityStatementOperationCopyWithImpl(this._value, this._then);
+class _$RestOperationCopyWithImpl<$Res>
+    implements $RestOperationCopyWith<$Res> {
+  _$RestOperationCopyWithImpl(this._value, this._then);
 
-  final CapabilityStatementOperation _value;
+  final RestOperation _value;
   // ignore: unused_field
-  final $Res Function(CapabilityStatementOperation) _then;
+  final $Res Function(RestOperation) _then;
 
   @override
   $Res call({
@@ -4554,12 +4559,11 @@ class _$CapabilityStatementOperationCopyWithImpl<$Res>
   }
 }
 
-abstract class _$CapabilityStatementOperationCopyWith<$Res>
-    implements $CapabilityStatementOperationCopyWith<$Res> {
-  factory _$CapabilityStatementOperationCopyWith(
-          _CapabilityStatementOperation value,
-          $Res Function(_CapabilityStatementOperation) then) =
-      __$CapabilityStatementOperationCopyWithImpl<$Res>;
+abstract class _$RestOperationCopyWith<$Res>
+    implements $RestOperationCopyWith<$Res> {
+  factory _$RestOperationCopyWith(
+          _RestOperation value, $Res Function(_RestOperation) then) =
+      __$RestOperationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -4570,17 +4574,15 @@ abstract class _$CapabilityStatementOperationCopyWith<$Res>
       Markdown documentation});
 }
 
-class __$CapabilityStatementOperationCopyWithImpl<$Res>
-    extends _$CapabilityStatementOperationCopyWithImpl<$Res>
-    implements _$CapabilityStatementOperationCopyWith<$Res> {
-  __$CapabilityStatementOperationCopyWithImpl(
-      _CapabilityStatementOperation _value,
-      $Res Function(_CapabilityStatementOperation) _then)
-      : super(_value, (v) => _then(v as _CapabilityStatementOperation));
+class __$RestOperationCopyWithImpl<$Res>
+    extends _$RestOperationCopyWithImpl<$Res>
+    implements _$RestOperationCopyWith<$Res> {
+  __$RestOperationCopyWithImpl(
+      _RestOperation _value, $Res Function(_RestOperation) _then)
+      : super(_value, (v) => _then(v as _RestOperation));
 
   @override
-  _CapabilityStatementOperation get _value =>
-      super._value as _CapabilityStatementOperation;
+  _RestOperation get _value => super._value as _RestOperation;
 
   @override
   $Res call({
@@ -4591,7 +4593,7 @@ class __$CapabilityStatementOperationCopyWithImpl<$Res>
     Object definition = freezed,
     Object documentation = freezed,
   }) {
-    return _then(_CapabilityStatementOperation(
+    return _then(_RestOperation(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -4610,8 +4612,8 @@ class __$CapabilityStatementOperationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CapabilityStatementOperation implements _CapabilityStatementOperation {
-  const _$_CapabilityStatementOperation(
+class _$_RestOperation implements _RestOperation {
+  const _$_RestOperation(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
@@ -4619,8 +4621,8 @@ class _$_CapabilityStatementOperation implements _CapabilityStatementOperation {
       this.definition,
       this.documentation});
 
-  factory _$_CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementOperationFromJson(json);
+  factory _$_RestOperation.fromJson(Map<String, dynamic> json) =>
+      _$_$_RestOperationFromJson(json);
 
   @override
   final String id;
@@ -4638,13 +4640,13 @@ class _$_CapabilityStatementOperation implements _CapabilityStatementOperation {
 
   @override
   String toString() {
-    return 'CapabilityStatementOperation(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, name: $name, definition: $definition, documentation: $documentation)';
+    return 'RestOperation(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, name: $name, definition: $definition, documentation: $documentation)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CapabilityStatementOperation &&
+        (other is _RestOperation &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -4674,28 +4676,26 @@ class _$_CapabilityStatementOperation implements _CapabilityStatementOperation {
       const DeepCollectionEquality().hash(documentation);
 
   @override
-  _$CapabilityStatementOperationCopyWith<_CapabilityStatementOperation>
-      get copyWith => __$CapabilityStatementOperationCopyWithImpl<
-          _CapabilityStatementOperation>(this, _$identity);
+  _$RestOperationCopyWith<_RestOperation> get copyWith =>
+      __$RestOperationCopyWithImpl<_RestOperation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementOperationToJson(this);
+    return _$_$_RestOperationToJson(this);
   }
 }
 
-abstract class _CapabilityStatementOperation
-    implements CapabilityStatementOperation {
-  const factory _CapabilityStatementOperation(
+abstract class _RestOperation implements RestOperation {
+  const factory _RestOperation(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String name,
       Canonical definition,
-      Markdown documentation}) = _$_CapabilityStatementOperation;
+      Markdown documentation}) = _$_RestOperation;
 
-  factory _CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =
-      _$_CapabilityStatementOperation.fromJson;
+  factory _RestOperation.fromJson(Map<String, dynamic> json) =
+      _$_RestOperation.fromJson;
 
   @override
   String get id;
@@ -4711,25 +4711,23 @@ abstract class _CapabilityStatementOperation
   @override
   Markdown get documentation;
   @override
-  _$CapabilityStatementOperationCopyWith<_CapabilityStatementOperation>
-      get copyWith;
+  _$RestOperationCopyWith<_RestOperation> get copyWith;
 }
 
-CapabilityStatementInteraction1 _$CapabilityStatementInteraction1FromJson(
-    Map<String, dynamic> json) {
-  return _CapabilityStatementInteraction1.fromJson(json);
+RestInteraction _$RestInteractionFromJson(Map<String, dynamic> json) {
+  return _RestInteraction.fromJson(json);
 }
 
-class _$CapabilityStatementInteraction1TearOff {
-  const _$CapabilityStatementInteraction1TearOff();
+class _$RestInteractionTearOff {
+  const _$RestInteractionTearOff();
 
-  _CapabilityStatementInteraction1 call(
+  _RestInteraction call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      String code,
+      RestInteractionCode code,
       Markdown documentation}) {
-    return _CapabilityStatementInteraction1(
+    return _RestInteraction(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
@@ -4740,42 +4738,39 @@ class _$CapabilityStatementInteraction1TearOff {
 }
 
 // ignore: unused_element
-const $CapabilityStatementInteraction1 =
-    _$CapabilityStatementInteraction1TearOff();
+const $RestInteraction = _$RestInteractionTearOff();
 
-mixin _$CapabilityStatementInteraction1 {
+mixin _$RestInteraction {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  String get code;
+  RestInteractionCode get code;
   Markdown get documentation;
 
   Map<String, dynamic> toJson();
-  $CapabilityStatementInteraction1CopyWith<CapabilityStatementInteraction1>
-      get copyWith;
+  $RestInteractionCopyWith<RestInteraction> get copyWith;
 }
 
-abstract class $CapabilityStatementInteraction1CopyWith<$Res> {
-  factory $CapabilityStatementInteraction1CopyWith(
-          CapabilityStatementInteraction1 value,
-          $Res Function(CapabilityStatementInteraction1) then) =
-      _$CapabilityStatementInteraction1CopyWithImpl<$Res>;
+abstract class $RestInteractionCopyWith<$Res> {
+  factory $RestInteractionCopyWith(
+          RestInteraction value, $Res Function(RestInteraction) then) =
+      _$RestInteractionCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      String code,
+      RestInteractionCode code,
       Markdown documentation});
 }
 
-class _$CapabilityStatementInteraction1CopyWithImpl<$Res>
-    implements $CapabilityStatementInteraction1CopyWith<$Res> {
-  _$CapabilityStatementInteraction1CopyWithImpl(this._value, this._then);
+class _$RestInteractionCopyWithImpl<$Res>
+    implements $RestInteractionCopyWith<$Res> {
+  _$RestInteractionCopyWithImpl(this._value, this._then);
 
-  final CapabilityStatementInteraction1 _value;
+  final RestInteraction _value;
   // ignore: unused_field
-  final $Res Function(CapabilityStatementInteraction1) _then;
+  final $Res Function(RestInteraction) _then;
 
   @override
   $Res call({
@@ -4793,7 +4788,7 @@ class _$CapabilityStatementInteraction1CopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      code: code == freezed ? _value.code : code as String,
+      code: code == freezed ? _value.code : code as RestInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
@@ -4801,32 +4796,29 @@ class _$CapabilityStatementInteraction1CopyWithImpl<$Res>
   }
 }
 
-abstract class _$CapabilityStatementInteraction1CopyWith<$Res>
-    implements $CapabilityStatementInteraction1CopyWith<$Res> {
-  factory _$CapabilityStatementInteraction1CopyWith(
-          _CapabilityStatementInteraction1 value,
-          $Res Function(_CapabilityStatementInteraction1) then) =
-      __$CapabilityStatementInteraction1CopyWithImpl<$Res>;
+abstract class _$RestInteractionCopyWith<$Res>
+    implements $RestInteractionCopyWith<$Res> {
+  factory _$RestInteractionCopyWith(
+          _RestInteraction value, $Res Function(_RestInteraction) then) =
+      __$RestInteractionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      String code,
+      RestInteractionCode code,
       Markdown documentation});
 }
 
-class __$CapabilityStatementInteraction1CopyWithImpl<$Res>
-    extends _$CapabilityStatementInteraction1CopyWithImpl<$Res>
-    implements _$CapabilityStatementInteraction1CopyWith<$Res> {
-  __$CapabilityStatementInteraction1CopyWithImpl(
-      _CapabilityStatementInteraction1 _value,
-      $Res Function(_CapabilityStatementInteraction1) _then)
-      : super(_value, (v) => _then(v as _CapabilityStatementInteraction1));
+class __$RestInteractionCopyWithImpl<$Res>
+    extends _$RestInteractionCopyWithImpl<$Res>
+    implements _$RestInteractionCopyWith<$Res> {
+  __$RestInteractionCopyWithImpl(
+      _RestInteraction _value, $Res Function(_RestInteraction) _then)
+      : super(_value, (v) => _then(v as _RestInteraction));
 
   @override
-  _CapabilityStatementInteraction1 get _value =>
-      super._value as _CapabilityStatementInteraction1;
+  _RestInteraction get _value => super._value as _RestInteraction;
 
   @override
   $Res call({
@@ -4836,7 +4828,7 @@ class __$CapabilityStatementInteraction1CopyWithImpl<$Res>
     Object code = freezed,
     Object documentation = freezed,
   }) {
-    return _then(_CapabilityStatementInteraction1(
+    return _then(_RestInteraction(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -4844,7 +4836,7 @@ class __$CapabilityStatementInteraction1CopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      code: code == freezed ? _value.code : code as String,
+      code: code == freezed ? _value.code : code as RestInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
@@ -4853,18 +4845,16 @@ class __$CapabilityStatementInteraction1CopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CapabilityStatementInteraction1
-    implements _CapabilityStatementInteraction1 {
-  const _$_CapabilityStatementInteraction1(
+class _$_RestInteraction implements _RestInteraction {
+  const _$_RestInteraction(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.code,
       this.documentation});
 
-  factory _$_CapabilityStatementInteraction1.fromJson(
-          Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementInteraction1FromJson(json);
+  factory _$_RestInteraction.fromJson(Map<String, dynamic> json) =>
+      _$_$_RestInteractionFromJson(json);
 
   @override
   final String id;
@@ -4874,19 +4864,19 @@ class _$_CapabilityStatementInteraction1
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final String code;
+  final RestInteractionCode code;
   @override
   final Markdown documentation;
 
   @override
   String toString() {
-    return 'CapabilityStatementInteraction1(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, documentation: $documentation)';
+    return 'RestInteraction(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, code: $code, documentation: $documentation)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CapabilityStatementInteraction1 &&
+        (other is _RestInteraction &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -4912,27 +4902,25 @@ class _$_CapabilityStatementInteraction1
       const DeepCollectionEquality().hash(documentation);
 
   @override
-  _$CapabilityStatementInteraction1CopyWith<_CapabilityStatementInteraction1>
-      get copyWith => __$CapabilityStatementInteraction1CopyWithImpl<
-          _CapabilityStatementInteraction1>(this, _$identity);
+  _$RestInteractionCopyWith<_RestInteraction> get copyWith =>
+      __$RestInteractionCopyWithImpl<_RestInteraction>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementInteraction1ToJson(this);
+    return _$_$_RestInteractionToJson(this);
   }
 }
 
-abstract class _CapabilityStatementInteraction1
-    implements CapabilityStatementInteraction1 {
-  const factory _CapabilityStatementInteraction1(
+abstract class _RestInteraction implements RestInteraction {
+  const factory _RestInteraction(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      String code,
-      Markdown documentation}) = _$_CapabilityStatementInteraction1;
+      RestInteractionCode code,
+      Markdown documentation}) = _$_RestInteraction;
 
-  factory _CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =
-      _$_CapabilityStatementInteraction1.fromJson;
+  factory _RestInteraction.fromJson(Map<String, dynamic> json) =
+      _$_RestInteraction.fromJson;
 
   @override
   String get id;
@@ -4942,12 +4930,11 @@ abstract class _CapabilityStatementInteraction1
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  String get code;
+  RestInteractionCode get code;
   @override
   Markdown get documentation;
   @override
-  _$CapabilityStatementInteraction1CopyWith<_CapabilityStatementInteraction1>
-      get copyWith;
+  _$RestInteractionCopyWith<_RestInteraction> get copyWith;
 }
 
 CapabilityStatementMessaging _$CapabilityStatementMessagingFromJson(
@@ -4962,10 +4949,10 @@ class _$CapabilityStatementMessagingTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<CapabilityStatementEndpoint> endpoint,
+      List<MessagingEndpoint> endpoint,
       int reliableCache,
       Markdown documentation,
-      List<CapabilityStatementSupportedMessage> supportedMessage}) {
+      List<MessagingSupportedMessage> supportedMessage}) {
     return _CapabilityStatementMessaging(
       id: id,
       fhirExtension: fhirExtension,
@@ -4986,10 +4973,10 @@ mixin _$CapabilityStatementMessaging {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  List<CapabilityStatementEndpoint> get endpoint;
+  List<MessagingEndpoint> get endpoint;
   int get reliableCache;
   Markdown get documentation;
-  List<CapabilityStatementSupportedMessage> get supportedMessage;
+  List<MessagingSupportedMessage> get supportedMessage;
 
   Map<String, dynamic> toJson();
   $CapabilityStatementMessagingCopyWith<CapabilityStatementMessaging>
@@ -5005,10 +4992,10 @@ abstract class $CapabilityStatementMessagingCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<CapabilityStatementEndpoint> endpoint,
+      List<MessagingEndpoint> endpoint,
       int reliableCache,
       Markdown documentation,
-      List<CapabilityStatementSupportedMessage> supportedMessage});
+      List<MessagingSupportedMessage> supportedMessage});
 }
 
 class _$CapabilityStatementMessagingCopyWithImpl<$Res>
@@ -5039,7 +5026,7 @@ class _$CapabilityStatementMessagingCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as List<CapabilityStatementEndpoint>,
+          : endpoint as List<MessagingEndpoint>,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
           : reliableCache as int,
@@ -5048,7 +5035,7 @@ class _$CapabilityStatementMessagingCopyWithImpl<$Res>
           : documentation as Markdown,
       supportedMessage: supportedMessage == freezed
           ? _value.supportedMessage
-          : supportedMessage as List<CapabilityStatementSupportedMessage>,
+          : supportedMessage as List<MessagingSupportedMessage>,
     ));
   }
 }
@@ -5064,10 +5051,10 @@ abstract class _$CapabilityStatementMessagingCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<CapabilityStatementEndpoint> endpoint,
+      List<MessagingEndpoint> endpoint,
       int reliableCache,
       Markdown documentation,
-      List<CapabilityStatementSupportedMessage> supportedMessage});
+      List<MessagingSupportedMessage> supportedMessage});
 }
 
 class __$CapabilityStatementMessagingCopyWithImpl<$Res>
@@ -5102,7 +5089,7 @@ class __$CapabilityStatementMessagingCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as List<CapabilityStatementEndpoint>,
+          : endpoint as List<MessagingEndpoint>,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
           : reliableCache as int,
@@ -5111,7 +5098,7 @@ class __$CapabilityStatementMessagingCopyWithImpl<$Res>
           : documentation as Markdown,
       supportedMessage: supportedMessage == freezed
           ? _value.supportedMessage
-          : supportedMessage as List<CapabilityStatementSupportedMessage>,
+          : supportedMessage as List<MessagingSupportedMessage>,
     ));
   }
 }
@@ -5138,13 +5125,13 @@ class _$_CapabilityStatementMessaging implements _CapabilityStatementMessaging {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final List<CapabilityStatementEndpoint> endpoint;
+  final List<MessagingEndpoint> endpoint;
   @override
   final int reliableCache;
   @override
   final Markdown documentation;
   @override
-  final List<CapabilityStatementSupportedMessage> supportedMessage;
+  final List<MessagingSupportedMessage> supportedMessage;
 
   @override
   String toString() {
@@ -5205,10 +5192,10 @@ abstract class _CapabilityStatementMessaging
           {String id,
           @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
           List<FhirExtension> modifierExtension,
-          List<CapabilityStatementEndpoint> endpoint,
+          List<MessagingEndpoint> endpoint,
           int reliableCache,
           Markdown documentation,
-          List<CapabilityStatementSupportedMessage> supportedMessage}) =
+          List<MessagingSupportedMessage> supportedMessage}) =
       _$_CapabilityStatementMessaging;
 
   factory _CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =
@@ -5222,33 +5209,32 @@ abstract class _CapabilityStatementMessaging
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  List<CapabilityStatementEndpoint> get endpoint;
+  List<MessagingEndpoint> get endpoint;
   @override
   int get reliableCache;
   @override
   Markdown get documentation;
   @override
-  List<CapabilityStatementSupportedMessage> get supportedMessage;
+  List<MessagingSupportedMessage> get supportedMessage;
   @override
   _$CapabilityStatementMessagingCopyWith<_CapabilityStatementMessaging>
       get copyWith;
 }
 
-CapabilityStatementEndpoint _$CapabilityStatementEndpointFromJson(
-    Map<String, dynamic> json) {
-  return _CapabilityStatementEndpoint.fromJson(json);
+MessagingEndpoint _$MessagingEndpointFromJson(Map<String, dynamic> json) {
+  return _MessagingEndpoint.fromJson(json);
 }
 
-class _$CapabilityStatementEndpointTearOff {
-  const _$CapabilityStatementEndpointTearOff();
+class _$MessagingEndpointTearOff {
+  const _$MessagingEndpointTearOff();
 
-  _CapabilityStatementEndpoint call(
+  _MessagingEndpoint call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Coding protocol,
       FhirUrl address}) {
-    return _CapabilityStatementEndpoint(
+    return _MessagingEndpoint(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
@@ -5259,9 +5245,9 @@ class _$CapabilityStatementEndpointTearOff {
 }
 
 // ignore: unused_element
-const $CapabilityStatementEndpoint = _$CapabilityStatementEndpointTearOff();
+const $MessagingEndpoint = _$MessagingEndpointTearOff();
 
-mixin _$CapabilityStatementEndpoint {
+mixin _$MessagingEndpoint {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
@@ -5270,15 +5256,13 @@ mixin _$CapabilityStatementEndpoint {
   FhirUrl get address;
 
   Map<String, dynamic> toJson();
-  $CapabilityStatementEndpointCopyWith<CapabilityStatementEndpoint>
-      get copyWith;
+  $MessagingEndpointCopyWith<MessagingEndpoint> get copyWith;
 }
 
-abstract class $CapabilityStatementEndpointCopyWith<$Res> {
-  factory $CapabilityStatementEndpointCopyWith(
-          CapabilityStatementEndpoint value,
-          $Res Function(CapabilityStatementEndpoint) then) =
-      _$CapabilityStatementEndpointCopyWithImpl<$Res>;
+abstract class $MessagingEndpointCopyWith<$Res> {
+  factory $MessagingEndpointCopyWith(
+          MessagingEndpoint value, $Res Function(MessagingEndpoint) then) =
+      _$MessagingEndpointCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
@@ -5289,13 +5273,13 @@ abstract class $CapabilityStatementEndpointCopyWith<$Res> {
   $CodingCopyWith<$Res> get protocol;
 }
 
-class _$CapabilityStatementEndpointCopyWithImpl<$Res>
-    implements $CapabilityStatementEndpointCopyWith<$Res> {
-  _$CapabilityStatementEndpointCopyWithImpl(this._value, this._then);
+class _$MessagingEndpointCopyWithImpl<$Res>
+    implements $MessagingEndpointCopyWith<$Res> {
+  _$MessagingEndpointCopyWithImpl(this._value, this._then);
 
-  final CapabilityStatementEndpoint _value;
+  final MessagingEndpoint _value;
   // ignore: unused_field
-  final $Res Function(CapabilityStatementEndpoint) _then;
+  final $Res Function(MessagingEndpoint) _then;
 
   @override
   $Res call({
@@ -5329,12 +5313,11 @@ class _$CapabilityStatementEndpointCopyWithImpl<$Res>
   }
 }
 
-abstract class _$CapabilityStatementEndpointCopyWith<$Res>
-    implements $CapabilityStatementEndpointCopyWith<$Res> {
-  factory _$CapabilityStatementEndpointCopyWith(
-          _CapabilityStatementEndpoint value,
-          $Res Function(_CapabilityStatementEndpoint) then) =
-      __$CapabilityStatementEndpointCopyWithImpl<$Res>;
+abstract class _$MessagingEndpointCopyWith<$Res>
+    implements $MessagingEndpointCopyWith<$Res> {
+  factory _$MessagingEndpointCopyWith(
+          _MessagingEndpoint value, $Res Function(_MessagingEndpoint) then) =
+      __$MessagingEndpointCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -5347,17 +5330,15 @@ abstract class _$CapabilityStatementEndpointCopyWith<$Res>
   $CodingCopyWith<$Res> get protocol;
 }
 
-class __$CapabilityStatementEndpointCopyWithImpl<$Res>
-    extends _$CapabilityStatementEndpointCopyWithImpl<$Res>
-    implements _$CapabilityStatementEndpointCopyWith<$Res> {
-  __$CapabilityStatementEndpointCopyWithImpl(
-      _CapabilityStatementEndpoint _value,
-      $Res Function(_CapabilityStatementEndpoint) _then)
-      : super(_value, (v) => _then(v as _CapabilityStatementEndpoint));
+class __$MessagingEndpointCopyWithImpl<$Res>
+    extends _$MessagingEndpointCopyWithImpl<$Res>
+    implements _$MessagingEndpointCopyWith<$Res> {
+  __$MessagingEndpointCopyWithImpl(
+      _MessagingEndpoint _value, $Res Function(_MessagingEndpoint) _then)
+      : super(_value, (v) => _then(v as _MessagingEndpoint));
 
   @override
-  _CapabilityStatementEndpoint get _value =>
-      super._value as _CapabilityStatementEndpoint;
+  _MessagingEndpoint get _value => super._value as _MessagingEndpoint;
 
   @override
   $Res call({
@@ -5367,7 +5348,7 @@ class __$CapabilityStatementEndpointCopyWithImpl<$Res>
     Object protocol = freezed,
     Object address = freezed,
   }) {
-    return _then(_CapabilityStatementEndpoint(
+    return _then(_MessagingEndpoint(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -5382,16 +5363,16 @@ class __$CapabilityStatementEndpointCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CapabilityStatementEndpoint implements _CapabilityStatementEndpoint {
-  const _$_CapabilityStatementEndpoint(
+class _$_MessagingEndpoint implements _MessagingEndpoint {
+  const _$_MessagingEndpoint(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.protocol,
       this.address});
 
-  factory _$_CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementEndpointFromJson(json);
+  factory _$_MessagingEndpoint.fromJson(Map<String, dynamic> json) =>
+      _$_$_MessagingEndpointFromJson(json);
 
   @override
   final String id;
@@ -5407,13 +5388,13 @@ class _$_CapabilityStatementEndpoint implements _CapabilityStatementEndpoint {
 
   @override
   String toString() {
-    return 'CapabilityStatementEndpoint(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, protocol: $protocol, address: $address)';
+    return 'MessagingEndpoint(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, protocol: $protocol, address: $address)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CapabilityStatementEndpoint &&
+        (other is _MessagingEndpoint &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -5439,27 +5420,25 @@ class _$_CapabilityStatementEndpoint implements _CapabilityStatementEndpoint {
       const DeepCollectionEquality().hash(address);
 
   @override
-  _$CapabilityStatementEndpointCopyWith<_CapabilityStatementEndpoint>
-      get copyWith => __$CapabilityStatementEndpointCopyWithImpl<
-          _CapabilityStatementEndpoint>(this, _$identity);
+  _$MessagingEndpointCopyWith<_MessagingEndpoint> get copyWith =>
+      __$MessagingEndpointCopyWithImpl<_MessagingEndpoint>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementEndpointToJson(this);
+    return _$_$_MessagingEndpointToJson(this);
   }
 }
 
-abstract class _CapabilityStatementEndpoint
-    implements CapabilityStatementEndpoint {
-  const factory _CapabilityStatementEndpoint(
+abstract class _MessagingEndpoint implements MessagingEndpoint {
+  const factory _MessagingEndpoint(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Coding protocol,
-      FhirUrl address}) = _$_CapabilityStatementEndpoint;
+      FhirUrl address}) = _$_MessagingEndpoint;
 
-  factory _CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =
-      _$_CapabilityStatementEndpoint.fromJson;
+  factory _MessagingEndpoint.fromJson(Map<String, dynamic> json) =
+      _$_MessagingEndpoint.fromJson;
 
   @override
   String get id;
@@ -5473,25 +5452,26 @@ abstract class _CapabilityStatementEndpoint
   @override
   FhirUrl get address;
   @override
-  _$CapabilityStatementEndpointCopyWith<_CapabilityStatementEndpoint>
-      get copyWith;
+  _$MessagingEndpointCopyWith<_MessagingEndpoint> get copyWith;
 }
 
-CapabilityStatementSupportedMessage
-    _$CapabilityStatementSupportedMessageFromJson(Map<String, dynamic> json) {
-  return _CapabilityStatementSupportedMessage.fromJson(json);
+MessagingSupportedMessage _$MessagingSupportedMessageFromJson(
+    Map<String, dynamic> json) {
+  return _MessagingSupportedMessage.fromJson(json);
 }
 
-class _$CapabilityStatementSupportedMessageTearOff {
-  const _$CapabilityStatementSupportedMessageTearOff();
+class _$MessagingSupportedMessageTearOff {
+  const _$MessagingSupportedMessageTearOff();
 
-  _CapabilityStatementSupportedMessage call(
+  _MessagingSupportedMessage call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementSupportedMessageMode mode,
+      @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
+          SupportedMessageMode mode,
       Canonical definition}) {
-    return _CapabilityStatementSupportedMessage(
+    return _MessagingSupportedMessage(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
@@ -5502,42 +5482,42 @@ class _$CapabilityStatementSupportedMessageTearOff {
 }
 
 // ignore: unused_element
-const $CapabilityStatementSupportedMessage =
-    _$CapabilityStatementSupportedMessageTearOff();
+const $MessagingSupportedMessage = _$MessagingSupportedMessageTearOff();
 
-mixin _$CapabilityStatementSupportedMessage {
+mixin _$MessagingSupportedMessage {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  CapabilityStatementSupportedMessageMode get mode;
+  @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
+  SupportedMessageMode get mode;
   Canonical get definition;
 
   Map<String, dynamic> toJson();
-  $CapabilityStatementSupportedMessageCopyWith<
-      CapabilityStatementSupportedMessage> get copyWith;
+  $MessagingSupportedMessageCopyWith<MessagingSupportedMessage> get copyWith;
 }
 
-abstract class $CapabilityStatementSupportedMessageCopyWith<$Res> {
-  factory $CapabilityStatementSupportedMessageCopyWith(
-          CapabilityStatementSupportedMessage value,
-          $Res Function(CapabilityStatementSupportedMessage) then) =
-      _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>;
+abstract class $MessagingSupportedMessageCopyWith<$Res> {
+  factory $MessagingSupportedMessageCopyWith(MessagingSupportedMessage value,
+          $Res Function(MessagingSupportedMessage) then) =
+      _$MessagingSupportedMessageCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementSupportedMessageMode mode,
+      @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
+          SupportedMessageMode mode,
       Canonical definition});
 }
 
-class _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
-    implements $CapabilityStatementSupportedMessageCopyWith<$Res> {
-  _$CapabilityStatementSupportedMessageCopyWithImpl(this._value, this._then);
+class _$MessagingSupportedMessageCopyWithImpl<$Res>
+    implements $MessagingSupportedMessageCopyWith<$Res> {
+  _$MessagingSupportedMessageCopyWithImpl(this._value, this._then);
 
-  final CapabilityStatementSupportedMessage _value;
+  final MessagingSupportedMessage _value;
   // ignore: unused_field
-  final $Res Function(CapabilityStatementSupportedMessage) _then;
+  final $Res Function(MessagingSupportedMessage) _then;
 
   @override
   $Res call({
@@ -5555,41 +5535,39 @@ class _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      mode: mode == freezed
-          ? _value.mode
-          : mode as CapabilityStatementSupportedMessageMode,
+      mode: mode == freezed ? _value.mode : mode as SupportedMessageMode,
       definition:
           definition == freezed ? _value.definition : definition as Canonical,
     ));
   }
 }
 
-abstract class _$CapabilityStatementSupportedMessageCopyWith<$Res>
-    implements $CapabilityStatementSupportedMessageCopyWith<$Res> {
-  factory _$CapabilityStatementSupportedMessageCopyWith(
-          _CapabilityStatementSupportedMessage value,
-          $Res Function(_CapabilityStatementSupportedMessage) then) =
-      __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>;
+abstract class _$MessagingSupportedMessageCopyWith<$Res>
+    implements $MessagingSupportedMessageCopyWith<$Res> {
+  factory _$MessagingSupportedMessageCopyWith(_MessagingSupportedMessage value,
+          $Res Function(_MessagingSupportedMessage) then) =
+      __$MessagingSupportedMessageCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementSupportedMessageMode mode,
+      @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
+          SupportedMessageMode mode,
       Canonical definition});
 }
 
-class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
-    extends _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
-    implements _$CapabilityStatementSupportedMessageCopyWith<$Res> {
-  __$CapabilityStatementSupportedMessageCopyWithImpl(
-      _CapabilityStatementSupportedMessage _value,
-      $Res Function(_CapabilityStatementSupportedMessage) _then)
-      : super(_value, (v) => _then(v as _CapabilityStatementSupportedMessage));
+class __$MessagingSupportedMessageCopyWithImpl<$Res>
+    extends _$MessagingSupportedMessageCopyWithImpl<$Res>
+    implements _$MessagingSupportedMessageCopyWith<$Res> {
+  __$MessagingSupportedMessageCopyWithImpl(_MessagingSupportedMessage _value,
+      $Res Function(_MessagingSupportedMessage) _then)
+      : super(_value, (v) => _then(v as _MessagingSupportedMessage));
 
   @override
-  _CapabilityStatementSupportedMessage get _value =>
-      super._value as _CapabilityStatementSupportedMessage;
+  _MessagingSupportedMessage get _value =>
+      super._value as _MessagingSupportedMessage;
 
   @override
   $Res call({
@@ -5599,7 +5577,7 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
     Object mode = freezed,
     Object definition = freezed,
   }) {
-    return _then(_CapabilityStatementSupportedMessage(
+    return _then(_MessagingSupportedMessage(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -5607,9 +5585,7 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      mode: mode == freezed
-          ? _value.mode
-          : mode as CapabilityStatementSupportedMessageMode,
+      mode: mode == freezed ? _value.mode : mode as SupportedMessageMode,
       definition:
           definition == freezed ? _value.definition : definition as Canonical,
     ));
@@ -5617,18 +5593,16 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CapabilityStatementSupportedMessage
-    implements _CapabilityStatementSupportedMessage {
-  const _$_CapabilityStatementSupportedMessage(
+class _$_MessagingSupportedMessage implements _MessagingSupportedMessage {
+  const _$_MessagingSupportedMessage(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.mode,
+      @JsonKey(unknownEnumValue: SupportedMessageMode.unknown) this.mode,
       this.definition});
 
-  factory _$_CapabilityStatementSupportedMessage.fromJson(
-          Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementSupportedMessageFromJson(json);
+  factory _$_MessagingSupportedMessage.fromJson(Map<String, dynamic> json) =>
+      _$_$_MessagingSupportedMessageFromJson(json);
 
   @override
   final String id;
@@ -5638,19 +5612,20 @@ class _$_CapabilityStatementSupportedMessage
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CapabilityStatementSupportedMessageMode mode;
+  @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
+  final SupportedMessageMode mode;
   @override
   final Canonical definition;
 
   @override
   String toString() {
-    return 'CapabilityStatementSupportedMessage(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, mode: $mode, definition: $definition)';
+    return 'MessagingSupportedMessage(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, mode: $mode, definition: $definition)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CapabilityStatementSupportedMessage &&
+        (other is _MessagingSupportedMessage &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -5676,29 +5651,29 @@ class _$_CapabilityStatementSupportedMessage
       const DeepCollectionEquality().hash(definition);
 
   @override
-  _$CapabilityStatementSupportedMessageCopyWith<
-          _CapabilityStatementSupportedMessage>
-      get copyWith => __$CapabilityStatementSupportedMessageCopyWithImpl<
-          _CapabilityStatementSupportedMessage>(this, _$identity);
+  _$MessagingSupportedMessageCopyWith<_MessagingSupportedMessage>
+      get copyWith =>
+          __$MessagingSupportedMessageCopyWithImpl<_MessagingSupportedMessage>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementSupportedMessageToJson(this);
+    return _$_$_MessagingSupportedMessageToJson(this);
   }
 }
 
-abstract class _CapabilityStatementSupportedMessage
-    implements CapabilityStatementSupportedMessage {
-  const factory _CapabilityStatementSupportedMessage(
+abstract class _MessagingSupportedMessage implements MessagingSupportedMessage {
+  const factory _MessagingSupportedMessage(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementSupportedMessageMode mode,
-      Canonical definition}) = _$_CapabilityStatementSupportedMessage;
+      @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
+          SupportedMessageMode mode,
+      Canonical definition}) = _$_MessagingSupportedMessage;
 
-  factory _CapabilityStatementSupportedMessage.fromJson(
-          Map<String, dynamic> json) =
-      _$_CapabilityStatementSupportedMessage.fromJson;
+  factory _MessagingSupportedMessage.fromJson(Map<String, dynamic> json) =
+      _$_MessagingSupportedMessage.fromJson;
 
   @override
   String get id;
@@ -5708,12 +5683,12 @@ abstract class _CapabilityStatementSupportedMessage
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CapabilityStatementSupportedMessageMode get mode;
+  @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
+  SupportedMessageMode get mode;
   @override
   Canonical get definition;
   @override
-  _$CapabilityStatementSupportedMessageCopyWith<
-      _CapabilityStatementSupportedMessage> get copyWith;
+  _$MessagingSupportedMessageCopyWith<_MessagingSupportedMessage> get copyWith;
 }
 
 CapabilityStatementDocument _$CapabilityStatementDocumentFromJson(
@@ -5728,7 +5703,7 @@ class _$CapabilityStatementDocumentTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementDocumentMode mode,
+      @JsonKey(unknownEnumValue: DocumentMode.unknown) DocumentMode mode,
       Markdown documentation,
       Canonical profile}) {
     return _CapabilityStatementDocument(
@@ -5750,7 +5725,8 @@ mixin _$CapabilityStatementDocument {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  CapabilityStatementDocumentMode get mode;
+  @JsonKey(unknownEnumValue: DocumentMode.unknown)
+  DocumentMode get mode;
   Markdown get documentation;
   Canonical get profile;
 
@@ -5768,7 +5744,7 @@ abstract class $CapabilityStatementDocumentCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementDocumentMode mode,
+      @JsonKey(unknownEnumValue: DocumentMode.unknown) DocumentMode mode,
       Markdown documentation,
       Canonical profile});
 }
@@ -5798,9 +5774,7 @@ class _$CapabilityStatementDocumentCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      mode: mode == freezed
-          ? _value.mode
-          : mode as CapabilityStatementDocumentMode,
+      mode: mode == freezed ? _value.mode : mode as DocumentMode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
@@ -5820,7 +5794,7 @@ abstract class _$CapabilityStatementDocumentCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementDocumentMode mode,
+      @JsonKey(unknownEnumValue: DocumentMode.unknown) DocumentMode mode,
       Markdown documentation,
       Canonical profile});
 }
@@ -5854,9 +5828,7 @@ class __$CapabilityStatementDocumentCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      mode: mode == freezed
-          ? _value.mode
-          : mode as CapabilityStatementDocumentMode,
+      mode: mode == freezed ? _value.mode : mode as DocumentMode,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown,
@@ -5871,7 +5843,7 @@ class _$_CapabilityStatementDocument implements _CapabilityStatementDocument {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.mode,
+      @JsonKey(unknownEnumValue: DocumentMode.unknown) this.mode,
       this.documentation,
       this.profile});
 
@@ -5886,7 +5858,8 @@ class _$_CapabilityStatementDocument implements _CapabilityStatementDocument {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final CapabilityStatementDocumentMode mode;
+  @JsonKey(unknownEnumValue: DocumentMode.unknown)
+  final DocumentMode mode;
   @override
   final Markdown documentation;
   @override
@@ -5945,7 +5918,7 @@ abstract class _CapabilityStatementDocument
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      CapabilityStatementDocumentMode mode,
+      @JsonKey(unknownEnumValue: DocumentMode.unknown) DocumentMode mode,
       Markdown documentation,
       Canonical profile}) = _$_CapabilityStatementDocument;
 
@@ -5960,7 +5933,8 @@ abstract class _CapabilityStatementDocument
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  CapabilityStatementDocumentMode get mode;
+  @JsonKey(unknownEnumValue: DocumentMode.unknown)
+  DocumentMode get mode;
   @override
   Markdown get documentation;
   @override

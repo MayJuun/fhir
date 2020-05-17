@@ -31,7 +31,7 @@ class _$LibraryTearOff {
       String name,
       String title,
       String subtitle,
-      LibraryStatus status,
+      @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
       bool experimental,
       CodeableConcept type,
       CodeableConcept subjectCodeableConcept,
@@ -123,6 +123,7 @@ mixin _$Library {
   String get name;
   String get title;
   String get subtitle;
+  @JsonKey(unknownEnumValue: LibraryStatus.unknown)
   LibraryStatus get status;
   bool get experimental;
   CodeableConcept get type;
@@ -173,7 +174,7 @@ abstract class $LibraryCopyWith<$Res> {
       String name,
       String title,
       String subtitle,
-      LibraryStatus status,
+      @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
       bool experimental,
       CodeableConcept type,
       CodeableConcept subjectCodeableConcept,
@@ -425,7 +426,7 @@ abstract class _$LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       String name,
       String title,
       String subtitle,
-      LibraryStatus status,
+      @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
       bool experimental,
       CodeableConcept type,
       CodeableConcept subjectCodeableConcept,
@@ -621,7 +622,7 @@ class _$_Library implements _Library {
       this.name,
       this.title,
       this.subtitle,
-      this.status,
+      @JsonKey(unknownEnumValue: LibraryStatus.unknown) this.status,
       this.experimental,
       this.type,
       this.subjectCodeableConcept,
@@ -683,6 +684,7 @@ class _$_Library implements _Library {
   @override
   final String subtitle;
   @override
+  @JsonKey(unknownEnumValue: LibraryStatus.unknown)
   final LibraryStatus status;
   @override
   final bool experimental;
@@ -901,7 +903,7 @@ abstract class _Library implements Library {
       String name,
       String title,
       String subtitle,
-      LibraryStatus status,
+      @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
       bool experimental,
       CodeableConcept type,
       CodeableConcept subjectCodeableConcept,
@@ -962,6 +964,7 @@ abstract class _Library implements Library {
   @override
   String get subtitle;
   @override
+  @JsonKey(unknownEnumValue: LibraryStatus.unknown)
   LibraryStatus get status;
   @override
   bool get experimental;
@@ -1035,8 +1038,8 @@ class _$ListsTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      ListStatus status,
-      ListMode mode,
+      @JsonKey(unknownEnumValue: ListStatus.unknown) ListStatus status,
+      @JsonKey(unknownEnumValue: ListMode.unknown) ListMode mode,
       String title,
       CodeableConcept code,
       Reference subject,
@@ -1089,7 +1092,9 @@ mixin _$Lists {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: ListStatus.unknown)
   ListStatus get status;
+  @JsonKey(unknownEnumValue: ListMode.unknown)
   ListMode get mode;
   String get title;
   CodeableConcept get code;
@@ -1120,8 +1125,8 @@ abstract class $ListsCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      ListStatus status,
-      ListMode mode,
+      @JsonKey(unknownEnumValue: ListStatus.unknown) ListStatus status,
+      @JsonKey(unknownEnumValue: ListMode.unknown) ListMode mode,
       String title,
       CodeableConcept code,
       Reference subject,
@@ -1313,8 +1318,8 @@ abstract class _$ListsCopyWith<$Res> implements $ListsCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      ListStatus status,
-      ListMode mode,
+      @JsonKey(unknownEnumValue: ListStatus.unknown) ListStatus status,
+      @JsonKey(unknownEnumValue: ListMode.unknown) ListMode mode,
       String title,
       CodeableConcept code,
       Reference subject,
@@ -1433,8 +1438,8 @@ class _$_Lists implements _Lists {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
-      this.mode,
+      @JsonKey(unknownEnumValue: ListStatus.unknown) this.status,
+      @JsonKey(unknownEnumValue: ListMode.unknown) this.mode,
       this.title,
       this.code,
       this.subject,
@@ -1471,8 +1476,10 @@ class _$_Lists implements _Lists {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: ListStatus.unknown)
   final ListStatus status;
   @override
+  @JsonKey(unknownEnumValue: ListMode.unknown)
   final ListMode mode;
   @override
   final String title;
@@ -1609,8 +1616,8 @@ abstract class _Lists implements Lists {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      ListStatus status,
-      ListMode mode,
+      @JsonKey(unknownEnumValue: ListStatus.unknown) ListStatus status,
+      @JsonKey(unknownEnumValue: ListMode.unknown) ListMode mode,
       String title,
       CodeableConcept code,
       Reference subject,
@@ -1646,8 +1653,10 @@ abstract class _Lists implements Lists {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: ListStatus.unknown)
   ListStatus get status;
   @override
+  @JsonKey(unknownEnumValue: ListMode.unknown)
   ListMode get mode;
   @override
   String get title;
@@ -1966,10 +1975,12 @@ class _$EpisodeOfCareTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      EpisodeOfCareStatus status,
+      @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       List<EpisodeOfCareStatusHistory> statusHistory,
       List<CodeableConcept> type,
       List<EpisodeOfCareDiagnosis> diagnosis,
@@ -2021,6 +2032,7 @@ mixin _$EpisodeOfCare {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
   EpisodeOfCareStatus get status;
   List<EpisodeOfCareStatusHistory> get statusHistory;
   List<CodeableConcept> get type;
@@ -2049,10 +2061,12 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      EpisodeOfCareStatus status,
+      @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       List<EpisodeOfCareStatusHistory> statusHistory,
       List<CodeableConcept> type,
       List<EpisodeOfCareDiagnosis> diagnosis,
@@ -2225,10 +2239,12 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      EpisodeOfCareStatus status,
+      @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       List<EpisodeOfCareStatusHistory> statusHistory,
       List<CodeableConcept> type,
       List<EpisodeOfCareDiagnosis> diagnosis,
@@ -2348,7 +2364,7 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown) this.status,
       this.statusHistory,
       this.type,
       this.diagnosis,
@@ -2385,6 +2401,7 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
   final EpisodeOfCareStatus status;
   @override
   final List<EpisodeOfCareStatusHistory> statusHistory;
@@ -2517,10 +2534,12 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      EpisodeOfCareStatus status,
+      @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       List<EpisodeOfCareStatusHistory> statusHistory,
       List<CodeableConcept> type,
       List<EpisodeOfCareDiagnosis> diagnosis,
@@ -2557,6 +2576,7 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
   EpisodeOfCareStatus get status;
   @override
   List<EpisodeOfCareStatusHistory> get statusHistory;
@@ -2592,9 +2612,11 @@ class _$EpisodeOfCareStatusHistoryTearOff {
 
   _EpisodeOfCareStatusHistory call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      EpisodeOfCareStatusHistoryStatus status,
+      @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       Period period}) {
     return _EpisodeOfCareStatusHistory(
       id: id,
@@ -2614,7 +2636,8 @@ mixin _$EpisodeOfCareStatusHistory {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  EpisodeOfCareStatusHistoryStatus get status;
+  @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+  EpisodeOfCareStatus get status;
   Period get period;
 
   Map<String, dynamic> toJson();
@@ -2627,9 +2650,11 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
       _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      EpisodeOfCareStatusHistoryStatus status,
+      @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       Period period});
 
   $PeriodCopyWith<$Res> get period;
@@ -2659,9 +2684,7 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      status: status == freezed
-          ? _value.status
-          : status as EpisodeOfCareStatusHistoryStatus,
+      status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -2686,9 +2709,11 @@ abstract class _$EpisodeOfCareStatusHistoryCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      EpisodeOfCareStatusHistoryStatus status,
+      @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       Period period});
 
   @override
@@ -2722,9 +2747,7 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      status: status == freezed
-          ? _value.status
-          : status as EpisodeOfCareStatusHistoryStatus,
+      status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -2736,7 +2759,7 @@ class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.status,
+      @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown) this.status,
       this.period});
 
   factory _$_EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -2750,7 +2773,8 @@ class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final EpisodeOfCareStatusHistoryStatus status;
+  @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+  final EpisodeOfCareStatus status;
   @override
   final Period period;
 
@@ -2801,9 +2825,11 @@ abstract class _EpisodeOfCareStatusHistory
     implements EpisodeOfCareStatusHistory {
   const factory _EpisodeOfCareStatusHistory(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      EpisodeOfCareStatusHistoryStatus status,
+      @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       Period period}) = _$_EpisodeOfCareStatusHistory;
 
   factory _EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =
@@ -2817,7 +2843,8 @@ abstract class _EpisodeOfCareStatusHistory
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  EpisodeOfCareStatusHistoryStatus get status;
+  @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+  EpisodeOfCareStatus get status;
   @override
   Period get period;
   @override
@@ -3109,12 +3136,15 @@ class _$EncounterTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      EncounterStatus status,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       List<EncounterStatusHistory> statusHistory,
-      @JsonKey(name: 'class') Coding clas,
+      @JsonKey(name: 'class')
+          Coding clas,
       List<EncounterClassHistory> classHistory,
       List<CodeableConcept> type,
       CodeableConcept serviceType,
@@ -3186,6 +3216,7 @@ mixin _$Encounter {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: EncounterStatus.unknown)
   EncounterStatus get status;
   List<EncounterStatusHistory> get statusHistory;
   @JsonKey(name: 'class')
@@ -3225,12 +3256,15 @@ abstract class $EncounterCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      EncounterStatus status,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       List<EncounterStatusHistory> statusHistory,
-      @JsonKey(name: 'class') Coding clas,
+      @JsonKey(name: 'class')
+          Coding clas,
       List<EncounterClassHistory> classHistory,
       List<CodeableConcept> type,
       CodeableConcept serviceType,
@@ -3503,12 +3537,15 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      EncounterStatus status,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       List<EncounterStatusHistory> statusHistory,
-      @JsonKey(name: 'class') Coding clas,
+      @JsonKey(name: 'class')
+          Coding clas,
       List<EncounterClassHistory> classHistory,
       List<CodeableConcept> type,
       CodeableConcept serviceType,
@@ -3682,7 +3719,7 @@ class _$_Encounter implements _Encounter {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown) this.status,
       this.statusHistory,
       @JsonKey(name: 'class') this.clas,
       this.classHistory,
@@ -3730,6 +3767,7 @@ class _$_Encounter implements _Encounter {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: EncounterStatus.unknown)
   final EncounterStatus status;
   @override
   final List<EncounterStatusHistory> statusHistory;
@@ -3916,12 +3954,15 @@ abstract class _Encounter implements Encounter {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      EncounterStatus status,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       List<EncounterStatusHistory> statusHistory,
-      @JsonKey(name: 'class') Coding clas,
+      @JsonKey(name: 'class')
+          Coding clas,
       List<EncounterClassHistory> classHistory,
       List<CodeableConcept> type,
       CodeableConcept serviceType,
@@ -3967,6 +4008,7 @@ abstract class _Encounter implements Encounter {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: EncounterStatus.unknown)
   EncounterStatus get status;
   @override
   List<EncounterStatusHistory> get statusHistory;
@@ -4025,9 +4067,11 @@ class _$EncounterStatusHistoryTearOff {
 
   _EncounterStatusHistory call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      EncounterStatusHistoryStatus status,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       Period period}) {
     return _EncounterStatusHistory(
       id: id,
@@ -4047,7 +4091,8 @@ mixin _$EncounterStatusHistory {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  EncounterStatusHistoryStatus get status;
+  @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+  EncounterStatus get status;
   Period get period;
 
   Map<String, dynamic> toJson();
@@ -4060,9 +4105,11 @@ abstract class $EncounterStatusHistoryCopyWith<$Res> {
       _$EncounterStatusHistoryCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      EncounterStatusHistoryStatus status,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       Period period});
 
   $PeriodCopyWith<$Res> get period;
@@ -4092,9 +4139,7 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      status: status == freezed
-          ? _value.status
-          : status as EncounterStatusHistoryStatus,
+      status: status == freezed ? _value.status : status as EncounterStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -4118,9 +4163,11 @@ abstract class _$EncounterStatusHistoryCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      EncounterStatusHistoryStatus status,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       Period period});
 
   @override
@@ -4153,9 +4200,7 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      status: status == freezed
-          ? _value.status
-          : status as EncounterStatusHistoryStatus,
+      status: status == freezed ? _value.status : status as EncounterStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -4167,7 +4212,7 @@ class _$_EncounterStatusHistory implements _EncounterStatusHistory {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.status,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown) this.status,
       this.period});
 
   factory _$_EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -4181,7 +4226,8 @@ class _$_EncounterStatusHistory implements _EncounterStatusHistory {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final EncounterStatusHistoryStatus status;
+  @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+  final EncounterStatus status;
   @override
   final Period period;
 
@@ -4231,9 +4277,11 @@ class _$_EncounterStatusHistory implements _EncounterStatusHistory {
 abstract class _EncounterStatusHistory implements EncounterStatusHistory {
   const factory _EncounterStatusHistory(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      EncounterStatusHistoryStatus status,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       Period period}) = _$_EncounterStatusHistory;
 
   factory _EncounterStatusHistory.fromJson(Map<String, dynamic> json) =
@@ -4247,7 +4295,8 @@ abstract class _EncounterStatusHistory implements EncounterStatusHistory {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  EncounterStatusHistoryStatus get status;
+  @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+  EncounterStatus get status;
   @override
   Period get period;
   @override
@@ -5516,10 +5565,12 @@ class _$EncounterLocationTearOff {
 
   _EncounterLocation call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference location,
-      EncounterLocationStatus status,
+      @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+          EncounterLocationStatus status,
       CodeableConcept physicalType,
       Period period}) {
     return _EncounterLocation(
@@ -5543,6 +5594,7 @@ mixin _$EncounterLocation {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   Reference get location;
+  @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
   EncounterLocationStatus get status;
   CodeableConcept get physicalType;
   Period get period;
@@ -5557,10 +5609,12 @@ abstract class $EncounterLocationCopyWith<$Res> {
       _$EncounterLocationCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference location,
-      EncounterLocationStatus status,
+      @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+          EncounterLocationStatus status,
       CodeableConcept physicalType,
       Period period});
 
@@ -5644,10 +5698,12 @@ abstract class _$EncounterLocationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference location,
-      EncounterLocationStatus status,
+      @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+          EncounterLocationStatus status,
       CodeableConcept physicalType,
       Period period});
 
@@ -5705,7 +5761,7 @@ class _$_EncounterLocation implements _EncounterLocation {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.location,
-      this.status,
+      @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown) this.status,
       this.physicalType,
       this.period});
 
@@ -5722,6 +5778,7 @@ class _$_EncounterLocation implements _EncounterLocation {
   @override
   final Reference location;
   @override
+  @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
   final EncounterLocationStatus status;
   @override
   final CodeableConcept physicalType;
@@ -5781,10 +5838,12 @@ class _$_EncounterLocation implements _EncounterLocation {
 abstract class _EncounterLocation implements EncounterLocation {
   const factory _EncounterLocation(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Reference location,
-      EncounterLocationStatus status,
+      @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+          EncounterLocationStatus status,
       CodeableConcept physicalType,
       Period period}) = _$_EncounterLocation;
 
@@ -5801,6 +5860,7 @@ abstract class _EncounterLocation implements EncounterLocation {
   @override
   Reference get location;
   @override
+  @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
   EncounterLocationStatus get status;
   @override
   CodeableConcept get physicalType;
@@ -5828,7 +5888,7 @@ class _$FlagTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      FlagStatus status,
+      @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -5872,6 +5932,7 @@ mixin _$Flag {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: FlagStatus.unknown)
   FlagStatus get status;
   List<CodeableConcept> get category;
   CodeableConcept get code;
@@ -5898,7 +5959,7 @@ abstract class $FlagCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      FlagStatus status,
+      @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -6063,7 +6124,7 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      FlagStatus status,
+      @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -6164,7 +6225,7 @@ class _$_Flag implements _Flag {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: FlagStatus.unknown) this.status,
       this.category,
       this.code,
       this.subject,
@@ -6197,6 +6258,7 @@ class _$_Flag implements _Flag {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: FlagStatus.unknown)
   final FlagStatus status;
   @override
   final List<CodeableConcept> category;
@@ -6309,7 +6371,7 @@ abstract class _Flag implements Flag {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      FlagStatus status,
+      @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
       List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
@@ -6341,6 +6403,7 @@ abstract class _Flag implements Flag {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: FlagStatus.unknown)
   FlagStatus get status;
   @override
   List<CodeableConcept> get category;

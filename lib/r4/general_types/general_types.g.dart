@@ -382,7 +382,8 @@ _$_Count _$_$_CountFromJson(Map<String, dynamic> json) {
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     value: (json['value'] as num)?.toDouble(),
-    comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator']),
+    comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator'],
+        unknownValue: Comparator.unknown),
     unit: json['unit'] as String,
     system: json['system'] == null
         ? null
@@ -420,7 +421,8 @@ _$_Distance _$_$_DistanceFromJson(Map<String, dynamic> json) {
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     value: (json['value'] as num)?.toDouble(),
-    comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator']),
+    comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator'],
+        unknownValue: Comparator.unknown),
     unit: json['unit'] as String,
     system: json['system'] == null
         ? null
@@ -458,7 +460,8 @@ _$_Duration _$_$_DurationFromJson(Map<String, dynamic> json) {
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     value: (json['value'] as num)?.toDouble(),
-    comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator']),
+    comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator'],
+        unknownValue: Comparator.unknown),
     unit: json['unit'] as String,
     system: json['system'] == null
         ? null
@@ -672,7 +675,8 @@ _$_Quantity _$_$_QuantityFromJson(Map<String, dynamic> json) {
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     value: (json['value'] as num)?.toDouble(),
-    comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator']),
+    comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator'],
+        unknownValue: Comparator.unknown),
     unit: json['unit'] as String,
     system: json['system'] == null
         ? null
@@ -944,8 +948,9 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
     frequencyMax: json['frequencyMax'] as int,
     period: (json['period'] as num)?.toDouble(),
     periodMax: (json['periodMax'] as num)?.toDouble(),
-    periodUnit:
-        _$enumDecodeNullable(_$TimingRepeatUnitEnumMap, json['periodUnit']),
+    periodUnit: _$enumDecodeNullable(
+        _$TimingRepeatUnitEnumMap, json['periodUnit'],
+        unknownValue: TimingRepeatUnit.unknown),
     dayOfWeek: (json['dayOfWeek'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),

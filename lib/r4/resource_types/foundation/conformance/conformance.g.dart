@@ -338,7 +338,8 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
     name: json['name'] as String,
     title: json['title'] as String,
     status: _$enumDecodeNullable(
-        _$CapabilityStatementStatusEnumMap, json['status']),
+        _$CapabilityStatementStatusEnumMap, json['status'],
+        unknownValue: CapabilityStatementStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -367,7 +368,8 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
     copyright: json['copyright'] == null
         ? null
         : Markdown.fromJson(json['copyright'] as String),
-    kind: _$enumDecodeNullable(_$CapabilityStatementKindEnumMap, json['kind']),
+    kind: _$enumDecodeNullable(_$CapabilityStatementKindEnumMap, json['kind'],
+        unknownValue: CapabilityStatementKind.unknown),
     instantiates: (json['instantiates'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
@@ -609,37 +611,25 @@ _$_CapabilityStatementRest _$_$_CapabilityStatementRestFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    mode: _$enumDecodeNullable(
-        _$CapabilityStatementRestModeEnumMap, json['mode']),
+    mode: _$enumDecodeNullable(_$RestModeEnumMap, json['mode'],
+        unknownValue: RestMode.unknown),
     documentation: json['documentation'] == null
         ? null
         : Markdown.fromJson(json['documentation'] as String),
     security: json['security'] == null
         ? null
-        : CapabilityStatementSecurity.fromJson(
-            json['security'] as Map<String, dynamic>),
+        : RestSecurity.fromJson(json['security'] as Map<String, dynamic>),
     resource: (json['resource'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementResource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : RestResource.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     interaction: (json['interaction'] as List)
         ?.map((e) => e == null
             ? null
-            : CapabilityStatementInteraction1.fromJson(
-                e as Map<String, dynamic>))
+            : RestInteraction.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    searchParam: (json['searchParam'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementSearchParam.fromJson(
-                e as Map<String, dynamic>))
-        ?.toList(),
-    operation: (json['operation'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementOperation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    searchParam: json['searchParam'] as List,
+    operation: json['operation'] as List,
     compartment: (json['compartment'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
@@ -661,31 +651,28 @@ Map<String, dynamic> _$_$_CapabilityStatementRestToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('mode', _$CapabilityStatementRestModeEnumMap[instance.mode]);
+  writeNotNull('mode', _$RestModeEnumMap[instance.mode]);
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull('security', instance.security?.toJson());
   writeNotNull(
       'resource', instance.resource?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'interaction', instance.interaction?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'searchParam', instance.searchParam?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'operation', instance.operation?.map((e) => e?.toJson())?.toList());
+  writeNotNull('searchParam', instance.searchParam);
+  writeNotNull('operation', instance.operation);
   writeNotNull(
       'compartment', instance.compartment?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
-const _$CapabilityStatementRestModeEnumMap = {
-  CapabilityStatementRestMode.client: 'client',
-  CapabilityStatementRestMode.server: 'server',
-  CapabilityStatementRestMode.unknown: 'unknown',
+const _$RestModeEnumMap = {
+  RestMode.client: 'client',
+  RestMode.server: 'server',
+  RestMode.unknown: 'unknown',
 };
 
-_$_CapabilityStatementSecurity _$_$_CapabilityStatementSecurityFromJson(
-    Map<String, dynamic> json) {
-  return _$_CapabilityStatementSecurity(
+_$_RestSecurity _$_$_RestSecurityFromJson(Map<String, dynamic> json) {
+  return _$_RestSecurity(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -709,8 +696,7 @@ _$_CapabilityStatementSecurity _$_$_CapabilityStatementSecurityFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_CapabilityStatementSecurityToJson(
-    _$_CapabilityStatementSecurity instance) {
+Map<String, dynamic> _$_$_RestSecurityToJson(_$_RestSecurity instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -730,9 +716,8 @@ Map<String, dynamic> _$_$_CapabilityStatementSecurityToJson(
   return val;
 }
 
-_$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
-    Map<String, dynamic> json) {
-  return _$_CapabilityStatementResource(
+_$_RestResource _$_$_RestResourceFromJson(Map<String, dynamic> json) {
+  return _$_RestResource(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -757,25 +742,24 @@ _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
     interaction: (json['interaction'] as List)
         ?.map((e) => e == null
             ? null
-            : CapabilityStatementInteraction.fromJson(
-                e as Map<String, dynamic>))
+            : ResourceInteraction.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     versioning: _$enumDecodeNullable(
-        _$CapabilityStatementResourceVersioningEnumMap, json['versioning']),
+        _$ResourceVersioningEnumMap, json['versioning'],
+        unknownValue: ResourceVersioning.unknown),
     readHistory: json['readHistory'] as bool,
     updateCreate: json['updateCreate'] as bool,
     conditionalCreate: json['conditionalCreate'] as bool,
     conditionalRead: _$enumDecodeNullable(
-      _$CapabilityStatementResourceConditionalReadEnumMap,
-      json['conditionalRead'],
-      unknownValue: CapabilityStatementResourceConditionalRead.unknown,
-    ),
+        _$ResourceConditionalReadEnumMap, json['conditionalRead'],
+        unknownValue: ResourceConditionalRead.unknown),
     conditionalUpdate: json['conditionalUpdate'] as bool,
     conditionalDelete: _$enumDecodeNullable(
-        _$CapabilityStatementResourceConditionalDeleteEnumMap,
-        json['conditionalDelete']),
-    referencePolicy:
-        (json['referencePolicy'] as List)?.map((e) => e as String)?.toList(),
+        _$ResourceConditionalDeleteEnumMap, json['conditionalDelete'],
+        unknownValue: ResourceConditionalDelete.unknown),
+    referencePolicy: (json['referencePolicy'] as List)
+        ?.map((e) => _$enumDecodeNullable(_$ResourceReferencePolicyEnumMap, e))
+        ?.toList(),
     searchInclude:
         (json['searchInclude'] as List)?.map((e) => e as String)?.toList(),
     searchRevInclude:
@@ -783,19 +767,17 @@ _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
     searchParam: (json['searchParam'] as List)
         ?.map((e) => e == null
             ? null
-            : CapabilityStatementSearchParam.fromJson(
-                e as Map<String, dynamic>))
+            : RestSearchParam.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     operation: (json['operation'] as List)
         ?.map((e) => e == null
             ? null
-            : CapabilityStatementOperation.fromJson(e as Map<String, dynamic>))
+            : RestOperation.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
 
-Map<String, dynamic> _$_$_CapabilityStatementResourceToJson(
-    _$_CapabilityStatementResource instance) {
+Map<String, dynamic> _$_$_RestResourceToJson(_$_RestResource instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -816,21 +798,20 @@ Map<String, dynamic> _$_$_CapabilityStatementResourceToJson(
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull(
       'interaction', instance.interaction?.map((e) => e?.toJson())?.toList());
-  writeNotNull('versioning',
-      _$CapabilityStatementResourceVersioningEnumMap[instance.versioning]);
+  writeNotNull('versioning', _$ResourceVersioningEnumMap[instance.versioning]);
   writeNotNull('readHistory', instance.readHistory);
   writeNotNull('updateCreate', instance.updateCreate);
   writeNotNull('conditionalCreate', instance.conditionalCreate);
-  writeNotNull(
-      'conditionalRead',
-      _$CapabilityStatementResourceConditionalReadEnumMap[
-          instance.conditionalRead]);
+  writeNotNull('conditionalRead',
+      _$ResourceConditionalReadEnumMap[instance.conditionalRead]);
   writeNotNull('conditionalUpdate', instance.conditionalUpdate);
+  writeNotNull('conditionalDelete',
+      _$ResourceConditionalDeleteEnumMap[instance.conditionalDelete]);
   writeNotNull(
-      'conditionalDelete',
-      _$CapabilityStatementResourceConditionalDeleteEnumMap[
-          instance.conditionalDelete]);
-  writeNotNull('referencePolicy', instance.referencePolicy);
+      'referencePolicy',
+      instance.referencePolicy
+          ?.map((e) => _$ResourceReferencePolicyEnumMap[e])
+          ?.toList());
   writeNotNull('searchInclude', instance.searchInclude);
   writeNotNull('searchRevInclude', instance.searchRevInclude);
   writeNotNull(
@@ -840,31 +821,40 @@ Map<String, dynamic> _$_$_CapabilityStatementResourceToJson(
   return val;
 }
 
-const _$CapabilityStatementResourceVersioningEnumMap = {
-  CapabilityStatementResourceVersioning.no_version: 'no-version',
-  CapabilityStatementResourceVersioning.versioned: 'versioned',
-  CapabilityStatementResourceVersioning.versioned_update: 'versioned-update',
-  CapabilityStatementResourceVersioning.unknown: 'unknown',
+const _$ResourceVersioningEnumMap = {
+  ResourceVersioning.no_version: 'no-version',
+  ResourceVersioning.versioned: 'versioned',
+  ResourceVersioning.versioned_update: 'versioned-update',
+  ResourceVersioning.unknown: 'unknown',
 };
 
-const _$CapabilityStatementResourceConditionalReadEnumMap = {
-  CapabilityStatementResourceConditionalRead.not_supported: 'not-supported',
-  CapabilityStatementResourceConditionalRead.modified_since: 'modified-since',
-  CapabilityStatementResourceConditionalRead.not_match: 'not-match',
-  CapabilityStatementResourceConditionalRead.full_support: 'full-support',
-  CapabilityStatementResourceConditionalRead.unknown: 'unknown',
+const _$ResourceConditionalReadEnumMap = {
+  ResourceConditionalRead.not_supported: 'not-supported',
+  ResourceConditionalRead.modified_since: 'modified-since',
+  ResourceConditionalRead.not_match: 'not-match',
+  ResourceConditionalRead.full_support: 'full-support',
+  ResourceConditionalRead.unknown: 'unknown',
 };
 
-const _$CapabilityStatementResourceConditionalDeleteEnumMap = {
-  CapabilityStatementResourceConditionalDelete.not_supported: 'not-supported',
-  CapabilityStatementResourceConditionalDelete.single: 'single',
-  CapabilityStatementResourceConditionalDelete.multiple: 'multiple',
-  CapabilityStatementResourceConditionalDelete.unknown: 'unknown',
+const _$ResourceConditionalDeleteEnumMap = {
+  ResourceConditionalDelete.not_supported: 'not-supported',
+  ResourceConditionalDelete.single: 'single',
+  ResourceConditionalDelete.multiple: 'multiple',
+  ResourceConditionalDelete.unknown: 'unknown',
 };
 
-_$_CapabilityStatementInteraction _$_$_CapabilityStatementInteractionFromJson(
+const _$ResourceReferencePolicyEnumMap = {
+  ResourceReferencePolicy.literal: 'literal',
+  ResourceReferencePolicy.logical: 'logical',
+  ResourceReferencePolicy.resolves: 'resolves',
+  ResourceReferencePolicy.enforced: 'enforced',
+  ResourceReferencePolicy.local: 'local',
+  ResourceReferencePolicy.unknown: 'unknown',
+};
+
+_$_ResourceInteraction _$_$_ResourceInteractionFromJson(
     Map<String, dynamic> json) {
-  return _$_CapabilityStatementInteraction(
+  return _$_ResourceInteraction(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -876,16 +866,16 @@ _$_CapabilityStatementInteraction _$_$_CapabilityStatementInteractionFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    code: _$enumDecodeNullable(
-        _$CapabilityStatementInteractionCodeEnumMap, json['code']),
+    code: _$enumDecodeNullable(_$ResourceInteractionCodeEnumMap, json['code'],
+        unknownValue: ResourceInteractionCode.unknown),
     documentation: json['documentation'] == null
         ? null
         : Markdown.fromJson(json['documentation'] as String),
   );
 }
 
-Map<String, dynamic> _$_$_CapabilityStatementInteractionToJson(
-    _$_CapabilityStatementInteraction instance) {
+Map<String, dynamic> _$_$_ResourceInteractionToJson(
+    _$_ResourceInteraction instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -899,70 +889,26 @@ Map<String, dynamic> _$_$_CapabilityStatementInteractionToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'code', _$CapabilityStatementInteractionCodeEnumMap[instance.code]);
+  writeNotNull('code', _$ResourceInteractionCodeEnumMap[instance.code]);
   writeNotNull('documentation', instance.documentation?.toJson());
   return val;
 }
 
-const _$CapabilityStatementInteractionCodeEnumMap = {
-  CapabilityStatementInteractionCode.not_supported: 'not-supported',
-  CapabilityStatementInteractionCode.modified_since: 'modified-since',
-  CapabilityStatementInteractionCode.not_match: 'not-match',
-  CapabilityStatementInteractionCode.full_support: 'full-support',
-  CapabilityStatementInteractionCode.unknown: 'unknown',
+const _$ResourceInteractionCodeEnumMap = {
+  ResourceInteractionCode.read: 'read',
+  ResourceInteractionCode.vread: 'vread',
+  ResourceInteractionCode.update: 'update',
+  ResourceInteractionCode.patch: 'patch',
+  ResourceInteractionCode.delete: 'delete',
+  ResourceInteractionCode.history_instance: 'history-instance',
+  ResourceInteractionCode.history_type: 'history-type',
+  ResourceInteractionCode.create: 'create',
+  ResourceInteractionCode.search_type: 'search-type',
+  ResourceInteractionCode.unknown: 'unknown',
 };
 
-_$_CapabilityStatementSearchParam _$_$_CapabilityStatementSearchParamFromJson(
-    Map<String, dynamic> json) {
-  return _$_CapabilityStatementSearchParam(
-    id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    name: json['name'] as String,
-    definition: json['definition'] == null
-        ? null
-        : Canonical.fromJson(json['definition'] as String),
-    type: json['type'] as String,
-    documentation: json['documentation'] == null
-        ? null
-        : Markdown.fromJson(json['documentation'] as String),
-  );
-}
-
-Map<String, dynamic> _$_$_CapabilityStatementSearchParamToJson(
-    _$_CapabilityStatementSearchParam instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('name', instance.name);
-  writeNotNull('definition', instance.definition?.toJson());
-  writeNotNull('type', instance.type);
-  writeNotNull('documentation', instance.documentation?.toJson());
-  return val;
-}
-
-_$_CapabilityStatementOperation _$_$_CapabilityStatementOperationFromJson(
-    Map<String, dynamic> json) {
-  return _$_CapabilityStatementOperation(
+_$_RestSearchParam _$_$_RestSearchParamFromJson(Map<String, dynamic> json) {
+  return _$_RestSearchParam(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -978,14 +924,72 @@ _$_CapabilityStatementOperation _$_$_CapabilityStatementOperationFromJson(
     definition: json['definition'] == null
         ? null
         : Canonical.fromJson(json['definition'] as String),
+    type: _$enumDecodeNullable(_$SearchParamTypeEnumMap, json['type'],
+        unknownValue: SearchParamType.unknown),
     documentation: json['documentation'] == null
         ? null
         : Markdown.fromJson(json['documentation'] as String),
   );
 }
 
-Map<String, dynamic> _$_$_CapabilityStatementOperationToJson(
-    _$_CapabilityStatementOperation instance) {
+Map<String, dynamic> _$_$_RestSearchParamToJson(_$_RestSearchParam instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('name', instance.name);
+  writeNotNull('definition', instance.definition?.toJson());
+  writeNotNull('type', _$SearchParamTypeEnumMap[instance.type]);
+  writeNotNull('documentation', instance.documentation?.toJson());
+  return val;
+}
+
+const _$SearchParamTypeEnumMap = {
+  SearchParamType.number: 'number',
+  SearchParamType.date: 'date',
+  SearchParamType.string: 'string',
+  SearchParamType.token: 'token',
+  SearchParamType.reference: 'reference',
+  SearchParamType.composite: 'composite',
+  SearchParamType.quantity: 'quantity',
+  SearchParamType.uri: 'uri',
+  SearchParamType.special: 'special',
+  SearchParamType.unknown: 'unknown',
+};
+
+_$_RestOperation _$_$_RestOperationFromJson(Map<String, dynamic> json) {
+  return _$_RestOperation(
+    id: json['id'] as String,
+    fhirExtension: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    name: json['name'] as String,
+    definition: json['definition'] == null
+        ? null
+        : Canonical.fromJson(json['definition'] as String),
+    documentation: json['documentation'] == null
+        ? null
+        : Markdown.fromJson(json['documentation'] as String),
+  );
+}
+
+Map<String, dynamic> _$_$_RestOperationToJson(_$_RestOperation instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1005,9 +1009,8 @@ Map<String, dynamic> _$_$_CapabilityStatementOperationToJson(
   return val;
 }
 
-_$_CapabilityStatementInteraction1 _$_$_CapabilityStatementInteraction1FromJson(
-    Map<String, dynamic> json) {
-  return _$_CapabilityStatementInteraction1(
+_$_RestInteraction _$_$_RestInteractionFromJson(Map<String, dynamic> json) {
+  return _$_RestInteraction(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -1019,15 +1022,14 @@ _$_CapabilityStatementInteraction1 _$_$_CapabilityStatementInteraction1FromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    code: json['code'] as String,
+    code: _$enumDecodeNullable(_$RestInteractionCodeEnumMap, json['code']),
     documentation: json['documentation'] == null
         ? null
         : Markdown.fromJson(json['documentation'] as String),
   );
 }
 
-Map<String, dynamic> _$_$_CapabilityStatementInteraction1ToJson(
-    _$_CapabilityStatementInteraction1 instance) {
+Map<String, dynamic> _$_$_RestInteractionToJson(_$_RestInteraction instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1041,10 +1043,18 @@ Map<String, dynamic> _$_$_CapabilityStatementInteraction1ToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('code', instance.code);
+  writeNotNull('code', _$RestInteractionCodeEnumMap[instance.code]);
   writeNotNull('documentation', instance.documentation?.toJson());
   return val;
 }
+
+const _$RestInteractionCodeEnumMap = {
+  RestInteractionCode.transaction: 'transaction',
+  RestInteractionCode.batch: 'batch',
+  RestInteractionCode.not_match: 'search-system',
+  RestInteractionCode.full_support: 'history-system',
+  RestInteractionCode.unknown: 'unknown',
+};
 
 _$_CapabilityStatementMessaging _$_$_CapabilityStatementMessagingFromJson(
     Map<String, dynamic> json) {
@@ -1063,7 +1073,7 @@ _$_CapabilityStatementMessaging _$_$_CapabilityStatementMessagingFromJson(
     endpoint: (json['endpoint'] as List)
         ?.map((e) => e == null
             ? null
-            : CapabilityStatementEndpoint.fromJson(e as Map<String, dynamic>))
+            : MessagingEndpoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     reliableCache: json['reliableCache'] as int,
     documentation: json['documentation'] == null
@@ -1072,8 +1082,7 @@ _$_CapabilityStatementMessaging _$_$_CapabilityStatementMessagingFromJson(
     supportedMessage: (json['supportedMessage'] as List)
         ?.map((e) => e == null
             ? null
-            : CapabilityStatementSupportedMessage.fromJson(
-                e as Map<String, dynamic>))
+            : MessagingSupportedMessage.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
@@ -1102,9 +1111,8 @@ Map<String, dynamic> _$_$_CapabilityStatementMessagingToJson(
   return val;
 }
 
-_$_CapabilityStatementEndpoint _$_$_CapabilityStatementEndpointFromJson(
-    Map<String, dynamic> json) {
-  return _$_CapabilityStatementEndpoint(
+_$_MessagingEndpoint _$_$_MessagingEndpointFromJson(Map<String, dynamic> json) {
+  return _$_MessagingEndpoint(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -1125,8 +1133,8 @@ _$_CapabilityStatementEndpoint _$_$_CapabilityStatementEndpointFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_CapabilityStatementEndpointToJson(
-    _$_CapabilityStatementEndpoint instance) {
+Map<String, dynamic> _$_$_MessagingEndpointToJson(
+    _$_MessagingEndpoint instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1145,10 +1153,9 @@ Map<String, dynamic> _$_$_CapabilityStatementEndpointToJson(
   return val;
 }
 
-_$_CapabilityStatementSupportedMessage
-    _$_$_CapabilityStatementSupportedMessageFromJson(
-        Map<String, dynamic> json) {
-  return _$_CapabilityStatementSupportedMessage(
+_$_MessagingSupportedMessage _$_$_MessagingSupportedMessageFromJson(
+    Map<String, dynamic> json) {
+  return _$_MessagingSupportedMessage(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -1160,16 +1167,16 @@ _$_CapabilityStatementSupportedMessage
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    mode: _$enumDecodeNullable(
-        _$CapabilityStatementSupportedMessageModeEnumMap, json['mode']),
+    mode: _$enumDecodeNullable(_$SupportedMessageModeEnumMap, json['mode'],
+        unknownValue: SupportedMessageMode.unknown),
     definition: json['definition'] == null
         ? null
         : Canonical.fromJson(json['definition'] as String),
   );
 }
 
-Map<String, dynamic> _$_$_CapabilityStatementSupportedMessageToJson(
-    _$_CapabilityStatementSupportedMessage instance) {
+Map<String, dynamic> _$_$_MessagingSupportedMessageToJson(
+    _$_MessagingSupportedMessage instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1183,23 +1190,15 @@ Map<String, dynamic> _$_$_CapabilityStatementSupportedMessageToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'mode', _$CapabilityStatementSupportedMessageModeEnumMap[instance.mode]);
+  writeNotNull('mode', _$SupportedMessageModeEnumMap[instance.mode]);
   writeNotNull('definition', instance.definition?.toJson());
   return val;
 }
 
-const _$CapabilityStatementSupportedMessageModeEnumMap = {
-  CapabilityStatementSupportedMessageMode.number: 'number',
-  CapabilityStatementSupportedMessageMode.date: 'date',
-  CapabilityStatementSupportedMessageMode.string: 'string',
-  CapabilityStatementSupportedMessageMode.token: 'token',
-  CapabilityStatementSupportedMessageMode.reference: 'reference',
-  CapabilityStatementSupportedMessageMode.composite: 'composite',
-  CapabilityStatementSupportedMessageMode.quantity: 'quantity',
-  CapabilityStatementSupportedMessageMode.uri: 'uri',
-  CapabilityStatementSupportedMessageMode.special: 'special',
-  CapabilityStatementSupportedMessageMode.unknown: 'unknown',
+const _$SupportedMessageModeEnumMap = {
+  SupportedMessageMode.sender: 'sender',
+  SupportedMessageMode.receiver: 'receiver',
+  SupportedMessageMode.unknown: 'unknown',
 };
 
 _$_CapabilityStatementDocument _$_$_CapabilityStatementDocumentFromJson(
@@ -1216,8 +1215,8 @@ _$_CapabilityStatementDocument _$_$_CapabilityStatementDocumentFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    mode: _$enumDecodeNullable(
-        _$CapabilityStatementDocumentModeEnumMap, json['mode']),
+    mode: _$enumDecodeNullable(_$DocumentModeEnumMap, json['mode'],
+        unknownValue: DocumentMode.unknown),
     documentation: json['documentation'] == null
         ? null
         : Markdown.fromJson(json['documentation'] as String),
@@ -1242,18 +1241,16 @@ Map<String, dynamic> _$_$_CapabilityStatementDocumentToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('mode', _$CapabilityStatementDocumentModeEnumMap[instance.mode]);
+  writeNotNull('mode', _$DocumentModeEnumMap[instance.mode]);
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
   return val;
 }
 
-const _$CapabilityStatementDocumentModeEnumMap = {
-  CapabilityStatementDocumentMode.transaction: 'transaction',
-  CapabilityStatementDocumentMode.batch: 'batch',
-  CapabilityStatementDocumentMode.search_system: 'search-system',
-  CapabilityStatementDocumentMode.history_system: 'history-system',
-  CapabilityStatementDocumentMode.unknown: 'unknown',
+const _$DocumentModeEnumMap = {
+  DocumentMode.producer: 'producer',
+  DocumentMode.conumer: 'consumer',
+  DocumentMode.unknown: 'unknown',
 };
 
 _$_CompartmentDefinition _$_$_CompartmentDefinitionFromJson(

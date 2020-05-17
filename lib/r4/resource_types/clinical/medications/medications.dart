@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
+import 'medications.enums.dart';
 
 part 'medications.freezed.dart';
 part 'medications.g.dart';
@@ -18,7 +19,8 @@ abstract class ImmunizationEvaluation with _$ImmunizationEvaluation {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
+    @JsonKey(unknownEnumValue: ImmunizationEvaluationStatus.unknown)
+        ImmunizationEvaluationStatus status,
     Reference patient,
     FhirDateTime date,
     Reference authority,
@@ -50,7 +52,8 @@ abstract class MedicationDispense with _$MedicationDispense {
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> partOf,
-    Code status,
+    @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
+        MedicationDispenseStatus status,
     CodeableConcept statusReasonCodeableConcept,
     Reference statusReasonReference,
     CodeableConcept category,
@@ -119,7 +122,8 @@ abstract class Medication with _$Medication {
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept code,
-    Code status,
+    @JsonKey(unknownEnumvalue: MedicationStatus.unknown)
+        MedicationStatus status,
     Reference manufacturer,
     CodeableConcept form,
     Ratio amount,
@@ -171,7 +175,8 @@ abstract class MedicationStatement with _$MedicationStatement {
     List<Identifier> identifier,
     List<Reference> basedOn,
     List<Reference> partOf,
-    Code status,
+    @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
+        MedicationStatementStatus status,
     List<CodeableConcept> statusReason,
     CodeableConcept category,
     CodeableConcept medicationCodeableConcept,
@@ -204,11 +209,14 @@ abstract class MedicationRequest with _$MedicationRequest {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
+    @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+        MedicationRequestStatus status,
     CodeableConcept statusReason,
-    Code intent,
+    @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown)
+        MedicationRequestIntent intent,
     List<CodeableConcept> category,
-    Code priority,
+    @JsonKey(unknownEnumValue: MedicationRequestPriority.unknown)
+        MedicationRequestPriority priority,
     bool doNotPerform,
     bool reportedBoolean,
     Reference reportedReference,
@@ -300,7 +308,8 @@ abstract class Immunization with _$Immunization {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
+    @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
+        ImmunizationStatus status,
     CodeableConcept statusReason,
     CodeableConcept vaccineCode,
     Reference patient,
@@ -406,7 +415,8 @@ abstract class MedicationAdministration with _$MedicationAdministration {
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> partOf,
-    Code status,
+    @JsonKey(unknownEnumValue: MedicationAdministrationStatus.unknown)
+        MedicationAdministrationStatus status,
     List<CodeableConcept> statusReason,
     CodeableConcept category,
     CodeableConcept medicationCodeableConcept,
@@ -536,7 +546,8 @@ abstract class MedicationKnowledge with _$MedicationKnowledge {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
-    Code status,
+    @JsonKey(unknownEnumValue: MedicationKnowledgeStatus.unknown)
+        MedicationKnowledgeStatus status,
     Reference manufacturer,
     CodeableConcept doseForm,
     Quantity amount,

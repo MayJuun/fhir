@@ -1,4 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum AllergyIntoleranceCategory {
   @JsonValue("food")
@@ -33,7 +33,7 @@ enum AllergyIntoleranceCriticality {
   unknown,
 }
 
-enum AllergyIntoleranceReactionSeverity {
+enum ReactionSeverity {
   @JsonValue('mild')
   mild,
   @JsonValue('moderate')
@@ -64,6 +64,20 @@ enum FamilyMemberHistoryStatus {
   health_unknown,
 }
 
+enum DetectedIssueStatus {
+  @JsonValue('registered')
+  registered,
+  @JsonValue('preliminary')
+  preliminary,
+  //ToDo: decide how to rename rseerved words
+  @JsonValue('final')
+  final_,
+  @JsonValue('amended')
+  amended,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum DetectedIssueSeverity {
   @JsonValue('high')
   high,
@@ -71,6 +85,25 @@ enum DetectedIssueSeverity {
   moderate,
   @JsonValue('low')
   low,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ProcedureStatus {
+  @JsonValue('preparation')
+  preparation,
+  @JsonValue('in-progress')
+  in_progress,
+  @JsonValue('not-done')
+  not_done,
+  @JsonValue('on-hold')
+  on_hold,
+  @JsonValue('stopped')
+  stopped,
+  @JsonValue('completed')
+  completed,
+  @JsonValue('entered-in-error')
+  entered_in_error,
   @JsonValue('unknown')
   unknown,
 }

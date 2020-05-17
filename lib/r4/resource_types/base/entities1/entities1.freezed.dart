@@ -1125,18 +1125,12 @@ class _$HealthcareServiceAvailableTimeTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<String> daysOfWeek,
-      bool allDay,
-      Time availableStartTime,
-      Time availableEndTime}) {
+      List<AvailableTimeDaysOfWeek> AvailableTimeDaysOfWeek}) {
     return _HealthcareServiceAvailableTime(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
-      daysOfWeek: daysOfWeek,
-      allDay: allDay,
-      availableStartTime: availableStartTime,
-      availableEndTime: availableEndTime,
+      AvailableTimeDaysOfWeek: AvailableTimeDaysOfWeek,
     );
   }
 }
@@ -1150,10 +1144,7 @@ mixin _$HealthcareServiceAvailableTime {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  List<String> get daysOfWeek;
-  bool get allDay;
-  Time get availableStartTime;
-  Time get availableEndTime;
+  List<AvailableTimeDaysOfWeek> get AvailableTimeDaysOfWeek;
 
   Map<String, dynamic> toJson();
   $HealthcareServiceAvailableTimeCopyWith<HealthcareServiceAvailableTime>
@@ -1169,10 +1160,7 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<String> daysOfWeek,
-      bool allDay,
-      Time availableStartTime,
-      Time availableEndTime});
+      List<AvailableTimeDaysOfWeek> AvailableTimeDaysOfWeek});
 }
 
 class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
@@ -1188,10 +1176,7 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
     Object id = freezed,
     Object fhirExtension = freezed,
     Object modifierExtension = freezed,
-    Object daysOfWeek = freezed,
-    Object allDay = freezed,
-    Object availableStartTime = freezed,
-    Object availableEndTime = freezed,
+    Object AvailableTimeDaysOfWeek = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1201,16 +1186,9 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      daysOfWeek: daysOfWeek == freezed
-          ? _value.daysOfWeek
-          : daysOfWeek as List<String>,
-      allDay: allDay == freezed ? _value.allDay : allDay as bool,
-      availableStartTime: availableStartTime == freezed
-          ? _value.availableStartTime
-          : availableStartTime as Time,
-      availableEndTime: availableEndTime == freezed
-          ? _value.availableEndTime
-          : availableEndTime as Time,
+      AvailableTimeDaysOfWeek: AvailableTimeDaysOfWeek == freezed
+          ? _value.AvailableTimeDaysOfWeek
+          : AvailableTimeDaysOfWeek as List<AvailableTimeDaysOfWeek>,
     ));
   }
 }
@@ -1226,10 +1204,7 @@ abstract class _$HealthcareServiceAvailableTimeCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<String> daysOfWeek,
-      bool allDay,
-      Time availableStartTime,
-      Time availableEndTime});
+      List<AvailableTimeDaysOfWeek> AvailableTimeDaysOfWeek});
 }
 
 class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
@@ -1249,10 +1224,7 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
     Object id = freezed,
     Object fhirExtension = freezed,
     Object modifierExtension = freezed,
-    Object daysOfWeek = freezed,
-    Object allDay = freezed,
-    Object availableStartTime = freezed,
-    Object availableEndTime = freezed,
+    Object AvailableTimeDaysOfWeek = freezed,
   }) {
     return _then(_HealthcareServiceAvailableTime(
       id: id == freezed ? _value.id : id as String,
@@ -1262,16 +1234,9 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      daysOfWeek: daysOfWeek == freezed
-          ? _value.daysOfWeek
-          : daysOfWeek as List<String>,
-      allDay: allDay == freezed ? _value.allDay : allDay as bool,
-      availableStartTime: availableStartTime == freezed
-          ? _value.availableStartTime
-          : availableStartTime as Time,
-      availableEndTime: availableEndTime == freezed
-          ? _value.availableEndTime
-          : availableEndTime as Time,
+      AvailableTimeDaysOfWeek: AvailableTimeDaysOfWeek == freezed
+          ? _value.AvailableTimeDaysOfWeek
+          : AvailableTimeDaysOfWeek as List<AvailableTimeDaysOfWeek>,
     ));
   }
 }
@@ -1283,10 +1248,7 @@ class _$_HealthcareServiceAvailableTime
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.daysOfWeek,
-      this.allDay,
-      this.availableStartTime,
-      this.availableEndTime});
+      this.AvailableTimeDaysOfWeek});
 
   factory _$_HealthcareServiceAvailableTime.fromJson(
           Map<String, dynamic> json) =>
@@ -1300,17 +1262,11 @@ class _$_HealthcareServiceAvailableTime
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final List<String> daysOfWeek;
-  @override
-  final bool allDay;
-  @override
-  final Time availableStartTime;
-  @override
-  final Time availableEndTime;
+  final List<AvailableTimeDaysOfWeek> AvailableTimeDaysOfWeek;
 
   @override
   String toString() {
-    return 'HealthcareServiceAvailableTime(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, availableStartTime: $availableStartTime, availableEndTime: $availableEndTime)';
+    return 'HealthcareServiceAvailableTime(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, AvailableTimeDaysOfWeek: $AvailableTimeDaysOfWeek)';
   }
 
   @override
@@ -1325,17 +1281,10 @@ class _$_HealthcareServiceAvailableTime
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.daysOfWeek, daysOfWeek) ||
-                const DeepCollectionEquality()
-                    .equals(other.daysOfWeek, daysOfWeek)) &&
-            (identical(other.allDay, allDay) ||
-                const DeepCollectionEquality().equals(other.allDay, allDay)) &&
-            (identical(other.availableStartTime, availableStartTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.availableStartTime, availableStartTime)) &&
-            (identical(other.availableEndTime, availableEndTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.availableEndTime, availableEndTime)));
+            (identical(
+                    other.AvailableTimeDaysOfWeek, AvailableTimeDaysOfWeek) ||
+                const DeepCollectionEquality().equals(
+                    other.AvailableTimeDaysOfWeek, AvailableTimeDaysOfWeek)));
   }
 
   @override
@@ -1344,10 +1293,7 @@ class _$_HealthcareServiceAvailableTime
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(fhirExtension) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(daysOfWeek) ^
-      const DeepCollectionEquality().hash(allDay) ^
-      const DeepCollectionEquality().hash(availableStartTime) ^
-      const DeepCollectionEquality().hash(availableEndTime);
+      const DeepCollectionEquality().hash(AvailableTimeDaysOfWeek);
 
   @override
   _$HealthcareServiceAvailableTimeCopyWith<_HealthcareServiceAvailableTime>
@@ -1363,13 +1309,11 @@ class _$_HealthcareServiceAvailableTime
 abstract class _HealthcareServiceAvailableTime
     implements HealthcareServiceAvailableTime {
   const factory _HealthcareServiceAvailableTime(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
-      List<FhirExtension> modifierExtension,
-      List<String> daysOfWeek,
-      bool allDay,
-      Time availableStartTime,
-      Time availableEndTime}) = _$_HealthcareServiceAvailableTime;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+          List<FhirExtension> modifierExtension,
+          List<AvailableTimeDaysOfWeek> AvailableTimeDaysOfWeek}) =
+      _$_HealthcareServiceAvailableTime;
 
   factory _HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceAvailableTime.fromJson;
@@ -1382,13 +1326,7 @@ abstract class _HealthcareServiceAvailableTime
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  List<String> get daysOfWeek;
-  @override
-  bool get allDay;
-  @override
-  Time get availableStartTime;
-  @override
-  Time get availableEndTime;
+  List<AvailableTimeDaysOfWeek> get AvailableTimeDaysOfWeek;
   @override
   _$HealthcareServiceAvailableTimeCopyWith<_HealthcareServiceAvailableTime>
       get copyWith;
@@ -2645,7 +2583,7 @@ class _$LocationHoursOfOperationTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<Code> daysOfWeek,
+      List<AvailableTimeDaysOfWeek> daysOfWeek,
       bool allDay,
       Time openingTime,
       Time closingTime}) {
@@ -2669,7 +2607,7 @@ mixin _$LocationHoursOfOperation {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  List<Code> get daysOfWeek;
+  List<AvailableTimeDaysOfWeek> get daysOfWeek;
   bool get allDay;
   Time get openingTime;
   Time get closingTime;
@@ -2686,7 +2624,7 @@ abstract class $LocationHoursOfOperationCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<Code> daysOfWeek,
+      List<AvailableTimeDaysOfWeek> daysOfWeek,
       bool allDay,
       Time openingTime,
       Time closingTime});
@@ -2718,8 +2656,9 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      daysOfWeek:
-          daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
+      daysOfWeek: daysOfWeek == freezed
+          ? _value.daysOfWeek
+          : daysOfWeek as List<AvailableTimeDaysOfWeek>,
       allDay: allDay == freezed ? _value.allDay : allDay as bool,
       openingTime:
           openingTime == freezed ? _value.openingTime : openingTime as Time,
@@ -2739,7 +2678,7 @@ abstract class _$LocationHoursOfOperationCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<Code> daysOfWeek,
+      List<AvailableTimeDaysOfWeek> daysOfWeek,
       bool allDay,
       Time openingTime,
       Time closingTime});
@@ -2774,8 +2713,9 @@ class __$LocationHoursOfOperationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      daysOfWeek:
-          daysOfWeek == freezed ? _value.daysOfWeek : daysOfWeek as List<Code>,
+      daysOfWeek: daysOfWeek == freezed
+          ? _value.daysOfWeek
+          : daysOfWeek as List<AvailableTimeDaysOfWeek>,
       allDay: allDay == freezed ? _value.allDay : allDay as bool,
       openingTime:
           openingTime == freezed ? _value.openingTime : openingTime as Time,
@@ -2807,7 +2747,7 @@ class _$_LocationHoursOfOperation implements _LocationHoursOfOperation {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final List<Code> daysOfWeek;
+  final List<AvailableTimeDaysOfWeek> daysOfWeek;
   @override
   final bool allDay;
   @override
@@ -2872,7 +2812,7 @@ abstract class _LocationHoursOfOperation implements LocationHoursOfOperation {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      List<Code> daysOfWeek,
+      List<AvailableTimeDaysOfWeek> daysOfWeek,
       bool allDay,
       Time openingTime,
       Time closingTime}) = _$_LocationHoursOfOperation;
@@ -2888,7 +2828,7 @@ abstract class _LocationHoursOfOperation implements LocationHoursOfOperation {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  List<Code> get daysOfWeek;
+  List<AvailableTimeDaysOfWeek> get daysOfWeek;
   @override
   bool get allDay;
   @override

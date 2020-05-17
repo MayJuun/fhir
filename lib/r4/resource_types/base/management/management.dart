@@ -24,7 +24,7 @@ abstract class Library with _$Library {
     String name,
     String title,
     String subtitle,
-    LibraryStatus status,
+    @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
     bool experimental,
     CodeableConcept type,
     CodeableConcept subjectCodeableConcept,
@@ -68,8 +68,8 @@ abstract class Lists with _$Lists {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    ListStatus status,
-    ListMode mode,
+    @JsonKey(unknownEnumValue: ListStatus.unknown) ListStatus status,
+    @JsonKey(unknownEnumValue: ListMode.unknown) ListMode mode,
     String title,
     CodeableConcept code,
     Reference subject,
@@ -112,7 +112,8 @@ abstract class EpisodeOfCare with _$EpisodeOfCare {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    EpisodeOfCareStatus status,
+    @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+        EpisodeOfCareStatus status,
     List<EpisodeOfCareStatusHistory> statusHistory,
     List<CodeableConcept> type,
     List<EpisodeOfCareDiagnosis> diagnosis,
@@ -134,7 +135,8 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    EpisodeOfCareStatusHistoryStatus status,
+    @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+        EpisodeOfCareStatus status,
     Period period,
   }) = _EpisodeOfCareStatusHistory;
   factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -168,7 +170,7 @@ abstract class Encounter with _$Encounter {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    EncounterStatus status,
+    @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus status,
     List<EncounterStatusHistory> statusHistory,
     @JsonKey(name: 'class') Coding clas,
     List<EncounterClassHistory> classHistory,
@@ -201,7 +203,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    EncounterStatusHistoryStatus status,
+    @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus status,
     Period period,
   }) = _EncounterStatusHistory;
   factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -276,7 +278,8 @@ abstract class EncounterLocation with _$EncounterLocation {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference location,
-    EncounterLocationStatus status,
+    @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+        EncounterLocationStatus status,
     CodeableConcept physicalType,
     Period period,
   }) = _EncounterLocation;
@@ -297,7 +300,7 @@ abstract class Flag with _$Flag {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    FlagStatus status,
+    @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
     List<CodeableConcept> category,
     CodeableConcept code,
     Reference subject,

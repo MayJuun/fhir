@@ -51,7 +51,8 @@ _$_ChargeItemDefinition _$_$_ChargeItemDefinitionFromJson(
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
     status: _$enumDecodeNullable(
-        _$ChargeItemDefinitionStatusEnumMap, json['status']),
+        _$ChargeItemDefinitionStatusEnumMap, json['status'],
+        unknownValue: ChargeItemDefinitionStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -305,7 +306,8 @@ _$_ChargeItemDefinitionPriceComponent
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+    type: _$enumDecodeNullable(_$PriceComponentTypeEnumMap, json['type'],
+        unknownValue: PriceComponentType.unknown),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -330,12 +332,22 @@ Map<String, dynamic> _$_$_ChargeItemDefinitionPriceComponentToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$PriceComponentTypeEnumMap[instance.type]);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('factor', instance.factor);
   writeNotNull('amount', instance.amount?.toJson());
   return val;
 }
+
+const _$PriceComponentTypeEnumMap = {
+  PriceComponentType.base: 'base',
+  PriceComponentType.surcharge: 'surcharge',
+  PriceComponentType.deduction: 'deduction',
+  PriceComponentType.discount: 'discount',
+  PriceComponentType.tax: 'tax',
+  PriceComponentType.informational: 'informational',
+  PriceComponentType.unknown: 'unknown',
+};
 
 _$_Account _$_$_AccountFromJson(Map<String, dynamic> json) {
   return _$_Account(
@@ -367,7 +379,8 @@ _$_Account _$_$_AccountFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$AccountStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$AccountStatusEnumMap, json['status'],
+        unknownValue: AccountStatus.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -558,7 +571,8 @@ _$_ChargeItem _$_$_ChargeItemFromJson(Map<String, dynamic> json) {
     definitionCanonical: (json['definitionCanonical'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    status: _$enumDecodeNullable(_$ChargeItemStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$ChargeItemStatusEnumMap, json['status'],
+        unknownValue: ChargeItemStatus.unknown),
     partOf: (json['partOf'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -779,7 +793,8 @@ _$_InsurancePlan _$_$_InsurancePlanFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$InsurancePlanStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$InsurancePlanStatusEnumMap, json['status'],
+        unknownValue: InsurancePlanStatus.unknown),
     type: (json['type'] as List)
         ?.map((e) => e == null
             ? null
@@ -1332,14 +1347,16 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     status: _$enumDecodeNullable(
-        _$ExplanationOfBenefitStatusEnumMap, json['status']),
+        _$ExplanationOfBenefitStatusEnumMap, json['status'],
+        unknownValue: ExplanationOfBenefitStatus.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     subType: json['subType'] == null
         ? null
         : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-    use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
+    use: _$enumDecodeNullable(_$ExplanationOfBenefitUseEnumMap, json['use'],
+        unknownValue: ExplanationOfBenefitUse.unknown),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -1394,9 +1411,7 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
     claimResponse: json['claimResponse'] == null
         ? null
         : Reference.fromJson(json['claimResponse'] as Map<String, dynamic>),
-    outcome: json['outcome'] == null
-        ? null
-        : Code.fromJson(json['outcome'] as String),
+    outcome: json['outcome'],
     disposition: json['disposition'] as String,
     preAuthRef: (json['preAuthRef'] as List)?.map((e) => e as String)?.toList(),
     preAuthRefPeriod: (json['preAuthRefPeriod'] as List)
@@ -1500,7 +1515,7 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
   writeNotNull('status', _$ExplanationOfBenefitStatusEnumMap[instance.status]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subType', instance.subType?.toJson());
-  writeNotNull('use', instance.use?.toJson());
+  writeNotNull('use', _$ExplanationOfBenefitUseEnumMap[instance.use]);
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('billablePeriod', instance.billablePeriod?.toJson());
   writeNotNull('created', instance.created?.toJson());
@@ -1518,7 +1533,7 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
   writeNotNull('facility', instance.facility?.toJson());
   writeNotNull('claim', instance.claim?.toJson());
   writeNotNull('claimResponse', instance.claimResponse?.toJson());
-  writeNotNull('outcome', instance.outcome?.toJson());
+  writeNotNull('outcome', instance.outcome);
   writeNotNull('disposition', instance.disposition);
   writeNotNull('preAuthRef', instance.preAuthRef);
   writeNotNull('preAuthRefPeriod',
@@ -1554,6 +1569,13 @@ const _$ExplanationOfBenefitStatusEnumMap = {
   ExplanationOfBenefitStatus.draft: 'draft',
   ExplanationOfBenefitStatus.entered_in_error: 'entered-in-error',
   ExplanationOfBenefitStatus.unknown: 'unknown',
+};
+
+const _$ExplanationOfBenefitUseEnumMap = {
+  ExplanationOfBenefitUse.claim: 'claim',
+  ExplanationOfBenefitUse.preauthorization: 'preauthorization',
+  ExplanationOfBenefitUse.predeterminzation: 'predetermination',
+  ExplanationOfBenefitUse.unknown: 'unknown',
 };
 
 _$_ExplanationOfBenefitRelated _$_$_ExplanationOfBenefitRelatedFromJson(
@@ -2946,8 +2968,8 @@ _$_Contract _$_$_ContractFromJson(Map<String, dynamic> json) {
         ?.toList(),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     version: json['version'] as String,
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(_$ContractStatusEnumMap, json['status'],
+        unknownValue: ContractStatus.unknown),
     legalState: json['legalState'] == null
         ? null
         : CodeableConcept.fromJson(json['legalState'] as Map<String, dynamic>),
@@ -3083,7 +3105,7 @@ Map<String, dynamic> _$_$_ContractToJson(_$_Contract instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ContractStatusEnumMap[instance.status]);
   writeNotNull('legalState', instance.legalState?.toJson());
   writeNotNull(
       'instantiatesCanonical', instance.instantiatesCanonical?.toJson());
@@ -3125,6 +3147,25 @@ Map<String, dynamic> _$_$_ContractToJson(_$_Contract instance) {
   return val;
 }
 
+const _$ContractStatusEnumMap = {
+  ContractStatus.amended: 'amended',
+  ContractStatus.appended: 'appended',
+  ContractStatus.cancelled: 'cancelled',
+  ContractStatus.disputed: 'disputed',
+  ContractStatus.entered_in_error: 'entered-in-error',
+  ContractStatus.executable: 'executable',
+  ContractStatus.executed: 'executed',
+  ContractStatus.negotiable: 'negotiable',
+  ContractStatus.offered: 'offered',
+  ContractStatus.policy: 'policy',
+  ContractStatus.rejected: 'rejected',
+  ContractStatus.renewed: 'renewed',
+  ContractStatus.revoked: 'revoked',
+  ContractStatus.resolved: 'resolved',
+  ContractStatus.terminated: 'terminated',
+  ContractStatus.unknown: 'unknown',
+};
+
 _$_ContractContentDefinition _$_$_ContractContentDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_ContractContentDefinition(
@@ -3151,9 +3192,9 @@ _$_ContractContentDefinition _$_$_ContractContentDefinitionFromJson(
     publicationDate: json['publicationDate'] == null
         ? null
         : FhirDateTime.fromJson(json['publicationDate'] as String),
-    publicationStatus: json['publicationStatus'] == null
-        ? null
-        : Code.fromJson(json['publicationStatus'] as String),
+    publicationStatus: _$enumDecodeNullable(
+        _$ContentDefinitionPublicationStatusEnumMap, json['publicationStatus'],
+        unknownValue: ContentDefinitionPublicationStatus.unknown),
     copyright: json['copyright'] == null
         ? null
         : Markdown.fromJson(json['copyright'] as String),
@@ -3179,10 +3220,30 @@ Map<String, dynamic> _$_$_ContractContentDefinitionToJson(
   writeNotNull('subType', instance.subType?.toJson());
   writeNotNull('publisher', instance.publisher?.toJson());
   writeNotNull('publicationDate', instance.publicationDate?.toJson());
-  writeNotNull('publicationStatus', instance.publicationStatus?.toJson());
+  writeNotNull('publicationStatus',
+      _$ContentDefinitionPublicationStatusEnumMap[instance.publicationStatus]);
   writeNotNull('copyright', instance.copyright?.toJson());
   return val;
 }
+
+const _$ContentDefinitionPublicationStatusEnumMap = {
+  ContentDefinitionPublicationStatus.amended: 'amended',
+  ContentDefinitionPublicationStatus.appended: 'appended',
+  ContentDefinitionPublicationStatus.cancelled: 'cancelled',
+  ContentDefinitionPublicationStatus.disputed: 'disputed',
+  ContentDefinitionPublicationStatus.entered_in_error: 'entered-in-error',
+  ContentDefinitionPublicationStatus.executable: 'executable',
+  ContentDefinitionPublicationStatus.executed: 'executed',
+  ContentDefinitionPublicationStatus.negotiable: 'negotiable',
+  ContentDefinitionPublicationStatus.offered: 'offered',
+  ContentDefinitionPublicationStatus.policy: 'policy',
+  ContentDefinitionPublicationStatus.rejected: 'rejected',
+  ContentDefinitionPublicationStatus.renewed: 'renewed',
+  ContentDefinitionPublicationStatus.revoked: 'revoked',
+  ContentDefinitionPublicationStatus.resolved: 'resolved',
+  ContentDefinitionPublicationStatus.terminated: 'terminated',
+  ContentDefinitionPublicationStatus.unknown: 'unknown',
+};
 
 _$_ContractTerm _$_$_ContractTermFromJson(Map<String, dynamic> json) {
   return _$_ContractTerm(

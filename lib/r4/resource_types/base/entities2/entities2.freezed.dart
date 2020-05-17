@@ -1073,10 +1073,12 @@ class _$BiologicallyDerivedProductTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      BiologicallyDerivedProductCategory productCategory,
+      @JsonKey(unknownValue: BiologicallyDerivedProductCategory.unknown)
+          BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
       List<Reference> request,
@@ -1126,6 +1128,7 @@ mixin _$BiologicallyDerivedProduct {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownValue: BiologicallyDerivedProductCategory.unknown)
   BiologicallyDerivedProductCategory get productCategory;
   CodeableConcept get productCode;
   BiologicallyDerivedProductStatus get status;
@@ -1153,10 +1156,12 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      BiologicallyDerivedProductCategory productCategory,
+      @JsonKey(unknownValue: BiologicallyDerivedProductCategory.unknown)
+          BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
       List<Reference> request,
@@ -1322,10 +1327,12 @@ abstract class _$BiologicallyDerivedProductCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      BiologicallyDerivedProductCategory productCategory,
+      @JsonKey(unknownValue: BiologicallyDerivedProductCategory.unknown)
+          BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
       List<Reference> request,
@@ -1442,10 +1449,12 @@ class _$_BiologicallyDerivedProduct implements _BiologicallyDerivedProduct {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.productCategory,
+      @JsonKey(unknownValue: BiologicallyDerivedProductCategory.unknown)
+          this.productCategory,
       this.productCode,
       this.status,
       this.request,
@@ -1481,6 +1490,7 @@ class _$_BiologicallyDerivedProduct implements _BiologicallyDerivedProduct {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownValue: BiologicallyDerivedProductCategory.unknown)
   final BiologicallyDerivedProductCategory productCategory;
   @override
   final CodeableConcept productCode;
@@ -1611,10 +1621,12 @@ abstract class _BiologicallyDerivedProduct
           Code language,
           Narrative text,
           List<dynamic> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> fhirExtension,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
-          BiologicallyDerivedProductCategory productCategory,
+          @JsonKey(unknownValue: BiologicallyDerivedProductCategory.unknown)
+              BiologicallyDerivedProductCategory productCategory,
           CodeableConcept productCode,
           BiologicallyDerivedProductStatus status,
           List<Reference> request,
@@ -1651,6 +1663,7 @@ abstract class _BiologicallyDerivedProduct
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownValue: BiologicallyDerivedProductCategory.unknown)
   BiologicallyDerivedProductCategory get productCategory;
   @override
   CodeableConcept get productCode;
@@ -2629,11 +2642,13 @@ class _$BiologicallyDerivedProductStorageTearOff {
 
   _BiologicallyDerivedProductStorage call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String description,
       double temperature,
-      BiologicallyDerivedProductStorageScale scale,
+      @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
+          BiologicallyDerivedProductStorageScale scale,
       Period duration}) {
     return _BiologicallyDerivedProductStorage(
       id: id,
@@ -2658,6 +2673,7 @@ mixin _$BiologicallyDerivedProductStorage {
   List<FhirExtension> get modifierExtension;
   String get description;
   double get temperature;
+  @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
   BiologicallyDerivedProductStorageScale get scale;
   Period get duration;
 
@@ -2673,11 +2689,13 @@ abstract class $BiologicallyDerivedProductStorageCopyWith<$Res> {
       _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String description,
       double temperature,
-      BiologicallyDerivedProductStorageScale scale,
+      @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
+          BiologicallyDerivedProductStorageScale scale,
       Period duration});
 
   $PeriodCopyWith<$Res> get duration;
@@ -2740,11 +2758,13 @@ abstract class _$BiologicallyDerivedProductStorageCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String description,
       double temperature,
-      BiologicallyDerivedProductStorageScale scale,
+      @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
+          BiologicallyDerivedProductStorageScale scale,
       Period duration});
 
   @override
@@ -2798,11 +2818,13 @@ class _$_BiologicallyDerivedProductStorage
     implements _BiologicallyDerivedProductStorage {
   const _$_BiologicallyDerivedProductStorage(
       {this.id,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.description,
       this.temperature,
-      this.scale,
+      @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
+          this.scale,
       this.duration});
 
   factory _$_BiologicallyDerivedProductStorage.fromJson(
@@ -2821,6 +2843,7 @@ class _$_BiologicallyDerivedProductStorage
   @override
   final double temperature;
   @override
+  @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
   final BiologicallyDerivedProductStorageScale scale;
   @override
   final Period duration;
@@ -2882,11 +2905,13 @@ abstract class _BiologicallyDerivedProductStorage
     implements BiologicallyDerivedProductStorage {
   const factory _BiologicallyDerivedProductStorage(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String description,
       double temperature,
-      BiologicallyDerivedProductStorageScale scale,
+      @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
+          BiologicallyDerivedProductStorageScale scale,
       Period duration}) = _$_BiologicallyDerivedProductStorage;
 
   factory _BiologicallyDerivedProductStorage.fromJson(
@@ -2905,6 +2930,7 @@ abstract class _BiologicallyDerivedProductStorage
   @override
   double get temperature;
   @override
+  @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
   BiologicallyDerivedProductStorageScale get scale;
   @override
   Period get duration;
@@ -2933,7 +2959,7 @@ class _$DeviceTearOff {
       List<Identifier> identifier,
       Reference definition,
       List<DeviceUdiCarrier> udiCarrier,
-      DeviceStatus status,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       List<CodeableConcept> statusReason,
       String distinctIdentifier,
       String manufacturer,
@@ -3013,6 +3039,7 @@ mixin _$Device {
   List<Identifier> get identifier;
   Reference get definition;
   List<DeviceUdiCarrier> get udiCarrier;
+  @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus get status;
   List<CodeableConcept> get statusReason;
   String get distinctIdentifier;
@@ -3057,7 +3084,7 @@ abstract class $DeviceCopyWith<$Res> {
       List<Identifier> identifier,
       Reference definition,
       List<DeviceUdiCarrier> udiCarrier,
-      DeviceStatus status,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       List<CodeableConcept> statusReason,
       String distinctIdentifier,
       String manufacturer,
@@ -3310,7 +3337,7 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       List<Identifier> identifier,
       Reference definition,
       List<DeviceUdiCarrier> udiCarrier,
-      DeviceStatus status,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       List<CodeableConcept> statusReason,
       String distinctIdentifier,
       String manufacturer,
@@ -3490,7 +3517,7 @@ class _$_Device implements _Device {
       this.identifier,
       this.definition,
       this.udiCarrier,
-      this.status,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown) this.status,
       this.statusReason,
       this.distinctIdentifier,
       this.manufacturer,
@@ -3543,6 +3570,7 @@ class _$_Device implements _Device {
   @override
   final List<DeviceUdiCarrier> udiCarrier;
   @override
+  @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   final DeviceStatus status;
   @override
   final List<CodeableConcept> statusReason;
@@ -3741,7 +3769,7 @@ abstract class _Device implements Device {
       List<Identifier> identifier,
       Reference definition,
       List<DeviceUdiCarrier> udiCarrier,
-      DeviceStatus status,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       List<CodeableConcept> statusReason,
       String distinctIdentifier,
       String manufacturer,
@@ -3793,6 +3821,7 @@ abstract class _Device implements Device {
   @override
   List<DeviceUdiCarrier> get udiCarrier;
   @override
+  @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus get status;
   @override
   List<CodeableConcept> get statusReason;
@@ -4167,7 +4196,7 @@ class _$DeviceDeviceNameTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String name,
-      DeviceDeviceNameType type}) {
+      @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type}) {
     return _DeviceDeviceName(
       id: id,
       fhirExtension: fhirExtension,
@@ -4187,7 +4216,8 @@ mixin _$DeviceDeviceName {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   String get name;
-  DeviceDeviceNameType get type;
+  @JsonKey(unknownEnumValue: DeviceNameType.unknown)
+  DeviceNameType get type;
 
   Map<String, dynamic> toJson();
   $DeviceDeviceNameCopyWith<DeviceDeviceName> get copyWith;
@@ -4202,7 +4232,7 @@ abstract class $DeviceDeviceNameCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String name,
-      DeviceDeviceNameType type});
+      @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type});
 }
 
 class _$DeviceDeviceNameCopyWithImpl<$Res>
@@ -4230,7 +4260,7 @@ class _$DeviceDeviceNameCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
-      type: type == freezed ? _value.type : type as DeviceDeviceNameType,
+      type: type == freezed ? _value.type : type as DeviceNameType,
     ));
   }
 }
@@ -4246,7 +4276,7 @@ abstract class _$DeviceDeviceNameCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String name,
-      DeviceDeviceNameType type});
+      @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type});
 }
 
 class __$DeviceDeviceNameCopyWithImpl<$Res>
@@ -4276,7 +4306,7 @@ class __$DeviceDeviceNameCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
-      type: type == freezed ? _value.type : type as DeviceDeviceNameType,
+      type: type == freezed ? _value.type : type as DeviceNameType,
     ));
   }
 }
@@ -4288,7 +4318,7 @@ class _$_DeviceDeviceName implements _DeviceDeviceName {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.name,
-      this.type});
+      @JsonKey(unknownEnumValue: DeviceNameType.unknown) this.type});
 
   factory _$_DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceDeviceNameFromJson(json);
@@ -4303,7 +4333,8 @@ class _$_DeviceDeviceName implements _DeviceDeviceName {
   @override
   final String name;
   @override
-  final DeviceDeviceNameType type;
+  @JsonKey(unknownEnumValue: DeviceNameType.unknown)
+  final DeviceNameType type;
 
   @override
   String toString() {
@@ -4350,10 +4381,12 @@ class _$_DeviceDeviceName implements _DeviceDeviceName {
 abstract class _DeviceDeviceName implements DeviceDeviceName {
   const factory _DeviceDeviceName(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       String name,
-      DeviceDeviceNameType type}) = _$_DeviceDeviceName;
+      @JsonKey(unknownEnumValue: DeviceNameType.unknown)
+          DeviceNameType type}) = _$_DeviceDeviceName;
 
   factory _DeviceDeviceName.fromJson(Map<String, dynamic> json) =
       _$_DeviceDeviceName.fromJson;
@@ -4368,7 +4401,8 @@ abstract class _DeviceDeviceName implements DeviceDeviceName {
   @override
   String get name;
   @override
-  DeviceDeviceNameType get type;
+  @JsonKey(unknownEnumValue: DeviceNameType.unknown)
+  DeviceNameType get type;
   @override
   _$DeviceDeviceNameCopyWith<_DeviceDeviceName> get copyWith;
 }
@@ -5155,16 +5189,20 @@ class _$DeviceMetricTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
       Reference parent,
-      DeviceMetricOperationalStatus operationalStatus,
-      DeviceMetricColor color,
-      DeviceMetricCategory category,
+      @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
+          DeviceMetricOperationalStatus operationalStatus,
+      @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
+          DeviceMetricColor color,
+      @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
+          DeviceMetricCategory category,
       Timing measurementPeriod,
       List<DeviceMetricCalibration> calibration}) {
     return _DeviceMetric(
@@ -5210,8 +5248,11 @@ mixin _$DeviceMetric {
   CodeableConcept get unit;
   Reference get source;
   Reference get parent;
+  @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
   DeviceMetricOperationalStatus get operationalStatus;
+  @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
   DeviceMetricColor get color;
+  @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
   DeviceMetricCategory get category;
   Timing get measurementPeriod;
   List<DeviceMetricCalibration> get calibration;
@@ -5232,16 +5273,20 @@ abstract class $DeviceMetricCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
       Reference parent,
-      DeviceMetricOperationalStatus operationalStatus,
-      DeviceMetricColor color,
-      DeviceMetricCategory category,
+      @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
+          DeviceMetricOperationalStatus operationalStatus,
+      @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
+          DeviceMetricColor color,
+      @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
+          DeviceMetricCategory category,
       Timing measurementPeriod,
       List<DeviceMetricCalibration> calibration});
 
@@ -5410,16 +5455,20 @@ abstract class _$DeviceMetricCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
       Reference parent,
-      DeviceMetricOperationalStatus operationalStatus,
-      DeviceMetricColor color,
-      DeviceMetricCategory category,
+      @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
+          DeviceMetricOperationalStatus operationalStatus,
+      @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
+          DeviceMetricColor color,
+      @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
+          DeviceMetricCategory category,
       Timing measurementPeriod,
       List<DeviceMetricCalibration> calibration});
 
@@ -5523,16 +5572,20 @@ class _$_DeviceMetric implements _DeviceMetric {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.type,
       this.unit,
       this.source,
       this.parent,
-      this.operationalStatus,
-      this.color,
-      this.category,
+      @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
+          this.operationalStatus,
+      @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
+          this.color,
+      @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
+          this.category,
       this.measurementPeriod,
       this.calibration});
 
@@ -5569,10 +5622,13 @@ class _$_DeviceMetric implements _DeviceMetric {
   @override
   final Reference parent;
   @override
+  @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
   final DeviceMetricOperationalStatus operationalStatus;
   @override
+  @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
   final DeviceMetricColor color;
   @override
+  @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
   final DeviceMetricCategory category;
   @override
   final Timing measurementPeriod;
@@ -5681,16 +5737,20 @@ abstract class _DeviceMetric implements DeviceMetric {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
       Reference parent,
-      DeviceMetricOperationalStatus operationalStatus,
-      DeviceMetricColor color,
-      DeviceMetricCategory category,
+      @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
+          DeviceMetricOperationalStatus operationalStatus,
+      @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
+          DeviceMetricColor color,
+      @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
+          DeviceMetricCategory category,
       Timing measurementPeriod,
       List<DeviceMetricCalibration> calibration}) = _$_DeviceMetric;
 
@@ -5727,10 +5787,13 @@ abstract class _DeviceMetric implements DeviceMetric {
   @override
   Reference get parent;
   @override
+  @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
   DeviceMetricOperationalStatus get operationalStatus;
   @override
+  @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
   DeviceMetricColor get color;
   @override
+  @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
   DeviceMetricCategory get category;
   @override
   Timing get measurementPeriod;
@@ -5750,10 +5813,13 @@ class _$DeviceMetricCalibrationTearOff {
 
   _DeviceMetricCalibration call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      DeviceMetricCalibrationType type,
-      DeviceMetricCalibrationState state,
+      @JsonKey(unknownEnumValue: CalibrationType.unknown)
+          CalibrationType type,
+      @JsonKey(unknownEnumValue: CalibrationState.unknown)
+          CalibrationState state,
       Instant time}) {
     return _DeviceMetricCalibration(
       id: id,
@@ -5774,8 +5840,10 @@ mixin _$DeviceMetricCalibration {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
-  DeviceMetricCalibrationType get type;
-  DeviceMetricCalibrationState get state;
+  @JsonKey(unknownEnumValue: CalibrationType.unknown)
+  CalibrationType get type;
+  @JsonKey(unknownEnumValue: CalibrationState.unknown)
+  CalibrationState get state;
   Instant get time;
 
   Map<String, dynamic> toJson();
@@ -5788,10 +5856,13 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
       _$DeviceMetricCalibrationCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      DeviceMetricCalibrationType type,
-      DeviceMetricCalibrationState state,
+      @JsonKey(unknownEnumValue: CalibrationType.unknown)
+          CalibrationType type,
+      @JsonKey(unknownEnumValue: CalibrationState.unknown)
+          CalibrationState state,
       Instant time});
 }
 
@@ -5820,10 +5891,8 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as DeviceMetricCalibrationType,
-      state: state == freezed
-          ? _value.state
-          : state as DeviceMetricCalibrationState,
+      type: type == freezed ? _value.type : type as CalibrationType,
+      state: state == freezed ? _value.state : state as CalibrationState,
       time: time == freezed ? _value.time : time as Instant,
     ));
   }
@@ -5837,10 +5906,13 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      DeviceMetricCalibrationType type,
-      DeviceMetricCalibrationState state,
+      @JsonKey(unknownEnumValue: CalibrationType.unknown)
+          CalibrationType type,
+      @JsonKey(unknownEnumValue: CalibrationState.unknown)
+          CalibrationState state,
       Instant time});
 }
 
@@ -5872,10 +5944,8 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as DeviceMetricCalibrationType,
-      state: state == freezed
-          ? _value.state
-          : state as DeviceMetricCalibrationState,
+      type: type == freezed ? _value.type : type as CalibrationType,
+      state: state == freezed ? _value.state : state as CalibrationState,
       time: time == freezed ? _value.time : time as Instant,
     ));
   }
@@ -5887,8 +5957,8 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
-      this.type,
-      this.state,
+      @JsonKey(unknownEnumValue: CalibrationType.unknown) this.type,
+      @JsonKey(unknownEnumValue: CalibrationState.unknown) this.state,
       this.time});
 
   factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
@@ -5902,9 +5972,11 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final DeviceMetricCalibrationType type;
+  @JsonKey(unknownEnumValue: CalibrationType.unknown)
+  final CalibrationType type;
   @override
-  final DeviceMetricCalibrationState state;
+  @JsonKey(unknownEnumValue: CalibrationState.unknown)
+  final CalibrationState state;
   @override
   final Instant time;
 
@@ -5957,10 +6029,13 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
 abstract class _DeviceMetricCalibration implements DeviceMetricCalibration {
   const factory _DeviceMetricCalibration(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
-      DeviceMetricCalibrationType type,
-      DeviceMetricCalibrationState state,
+      @JsonKey(unknownEnumValue: CalibrationType.unknown)
+          CalibrationType type,
+      @JsonKey(unknownEnumValue: CalibrationState.unknown)
+          CalibrationState state,
       Instant time}) = _$_DeviceMetricCalibration;
 
   factory _DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =
@@ -5974,9 +6049,11 @@ abstract class _DeviceMetricCalibration implements DeviceMetricCalibration {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  DeviceMetricCalibrationType get type;
+  @JsonKey(unknownEnumValue: CalibrationType.unknown)
+  CalibrationType get type;
   @override
-  DeviceMetricCalibrationState get state;
+  @JsonKey(unknownEnumValue: CalibrationState.unknown)
+  CalibrationState get state;
   @override
   Instant get time;
   @override

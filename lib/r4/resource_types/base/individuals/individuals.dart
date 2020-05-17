@@ -20,7 +20,7 @@ abstract class Group with _$Group {
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     bool active,
-    GroupType type,
+    @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
     bool actual,
     CodeableConcept code,
     String name,
@@ -39,6 +39,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
+    //ToDo: one of these 5
     CodeableConcept valueCodeableConcept,
     bool valueBoolean,
     Quantity valueQuantity,
@@ -81,12 +82,14 @@ abstract class Patient with _$Patient {
     bool active,
     List<HumanName> name,
     List<ContactPoint> telecom,
-    PatientGender gender,
+    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
     Date birthDate,
+    //ToDo: one of these 2
     bool deceasedBoolean,
     FhirDateTime deceasedDateTime,
     List<Address> address,
     CodeableConcept maritalStatus,
+    //ToDo: one of these 2
     bool multipleBirthBoolean,
     int multipleBirthInteger,
     List<Attachment> photo,
@@ -110,7 +113,7 @@ abstract class PatientContact with _$PatientContact {
     HumanName name,
     List<ContactPoint> telecom,
     Address address,
-    PatientContactGender gender,
+    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
     Reference organization,
     Period period,
   }) = _PatientContact;
@@ -138,7 +141,7 @@ abstract class PatientLink with _$PatientLink {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference other,
-    PatientLinkType type,
+    @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType type,
   }) = _PatientLink;
   factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
@@ -182,7 +185,7 @@ abstract class PractitionerRoleAvailableTime
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    List<Code> daysOfWeek,
+    List<AvailableTimeDaysOfWeek> daysOfWeek,
     bool allDay,
     Time availableStartTime,
     Time availableEndTime,
@@ -220,7 +223,7 @@ abstract class Person with _$Person {
     List<Identifier> identifier,
     List<HumanName> name,
     List<ContactPoint> telecom,
-    PersonGender gender,
+    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
     Date birthDate,
     List<Address> address,
     Attachment photo,
@@ -238,7 +241,8 @@ abstract class PersonLink with _$PersonLink {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference target,
-    PersonLinkAssurance assurance,
+    @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+        PersonLinkAssurance assurance,
   }) = _PersonLink;
   factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
@@ -261,7 +265,7 @@ abstract class Practitioner with _$Practitioner {
     List<HumanName> name,
     List<ContactPoint> telecom,
     List<Address> address,
-    PractitionerGender gender,
+    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
     Date birthDate,
     List<Attachment> photo,
     List<PractitionerQualification> qualification,
@@ -304,7 +308,7 @@ abstract class RelatedPerson with _$RelatedPerson {
     List<CodeableConcept> relationship,
     List<HumanName> name,
     List<ContactPoint> telecom,
-    RelatedPersonGender gender,
+    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
     Date birthDate,
     List<Address> address,
     List<Attachment> photo,

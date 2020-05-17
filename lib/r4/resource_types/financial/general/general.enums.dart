@@ -1,4 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum ChargeItemDefinitionStatus {
   @JsonValue('draft')
@@ -7,6 +7,23 @@ enum ChargeItemDefinitionStatus {
   active,
   @JsonValue('retired')
   retired,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum PriceComponentType {
+  @JsonValue('base')
+  base,
+  @JsonValue('surcharge')
+  surcharge,
+  @JsonValue('deduction')
+  deduction,
+  @JsonValue('discount')
+  discount,
+  @JsonValue('tax')
+  tax,
+  @JsonValue('informational')
+  informational,
   @JsonValue('unknown')
   unknown,
 }
@@ -65,6 +82,17 @@ enum ExplanationOfBenefitStatus {
   unknown,
 }
 
+enum ExplanationOfBenefitUse {
+  @JsonValue('claim')
+  claim,
+  @JsonValue('preauthorization')
+  preauthorization,
+  @JsonValue('predetermination')
+  predeterminzation,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum ExplanationOfBenefitProcessNoteType {
   @JsonValue('display')
   display,
@@ -72,6 +100,76 @@ enum ExplanationOfBenefitProcessNoteType {
   print,
   @JsonValue('printoper')
   printoper,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ContractStatus {
+  @JsonValue('amended')
+  amended,
+  @JsonValue('appended')
+  appended,
+  @JsonValue('cancelled')
+  cancelled,
+  @JsonValue('disputed')
+  disputed,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('executable')
+  executable,
+  @JsonValue('executed')
+  executed,
+  @JsonValue('negotiable')
+  negotiable,
+  @JsonValue('offered')
+  offered,
+  @JsonValue('policy')
+  policy,
+  @JsonValue('rejected')
+  rejected,
+  @JsonValue('renewed')
+  renewed,
+  @JsonValue('revoked')
+  revoked,
+  @JsonValue('resolved')
+  resolved,
+  @JsonValue('terminated')
+  terminated,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ContentDefinitionPublicationStatus {
+  @JsonValue('amended')
+  amended,
+  @JsonValue('appended')
+  appended,
+  @JsonValue('cancelled')
+  cancelled,
+  @JsonValue('disputed')
+  disputed,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('executable')
+  executable,
+  @JsonValue('executed')
+  executed,
+  @JsonValue('negotiable')
+  negotiable,
+  @JsonValue('offered')
+  offered,
+  @JsonValue('policy')
+  policy,
+  @JsonValue('rejected')
+  rejected,
+  @JsonValue('renewed')
+  renewed,
+  @JsonValue('revoked')
+  revoked,
+  @JsonValue('resolved')
+  resolved,
+  @JsonValue('terminated')
+  terminated,
   @JsonValue('unknown')
   unknown,
 }

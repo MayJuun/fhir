@@ -23,11 +23,13 @@ class _$DeviceUseStatementTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
-      DeviceUseStatementStatus status,
+      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
+          DeviceUseStatementStatus status,
       Reference subject,
       List<Reference> derivedFrom,
       Timing timingTiming,
@@ -85,6 +87,7 @@ mixin _$DeviceUseStatement {
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   List<Reference> get basedOn;
+  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
   DeviceUseStatementStatus get status;
   Reference get subject;
   List<Reference> get derivedFrom;
@@ -115,11 +118,13 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
-      DeviceUseStatementStatus status,
+      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
+          DeviceUseStatementStatus status,
       Reference subject,
       List<Reference> derivedFrom,
       Timing timingTiming,
@@ -329,11 +334,13 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
-      DeviceUseStatementStatus status,
+      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
+          DeviceUseStatementStatus status,
       Reference subject,
       List<Reference> derivedFrom,
       Timing timingTiming,
@@ -473,7 +480,7 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
       this.modifierExtension,
       this.identifier,
       this.basedOn,
-      this.status,
+      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown) this.status,
       this.subject,
       this.derivedFrom,
       this.timingTiming,
@@ -514,6 +521,7 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
   @override
   final List<Reference> basedOn;
   @override
+  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
   final DeviceUseStatementStatus status;
   @override
   final Reference subject;
@@ -663,11 +671,13 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
-      DeviceUseStatementStatus status,
+      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
+          DeviceUseStatementStatus status,
       Reference subject,
       List<Reference> derivedFrom,
       Timing timingTiming,
@@ -708,6 +718,7 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
   @override
   List<Reference> get basedOn;
   @override
+  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
   DeviceUseStatementStatus get status;
   @override
   Reference get subject;
@@ -752,12 +763,14 @@ class _$SupplyDeliveryTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      SupplyDeliveryStatus status,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+          SupplyDeliveryStatus status,
       Reference patient,
       CodeableConcept type,
       SupplyDeliverySuppliedItem suppliedItem,
@@ -811,6 +824,7 @@ mixin _$SupplyDelivery {
   List<Identifier> get identifier;
   List<Reference> get basedOn;
   List<Reference> get partOf;
+  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
   SupplyDeliveryStatus get status;
   Reference get patient;
   CodeableConcept get type;
@@ -838,12 +852,14 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      SupplyDeliveryStatus status,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+          SupplyDeliveryStatus status,
       Reference patient,
       CodeableConcept type,
       SupplyDeliverySuppliedItem suppliedItem,
@@ -1053,12 +1069,14 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      SupplyDeliveryStatus status,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+          SupplyDeliveryStatus status,
       Reference patient,
       CodeableConcept type,
       SupplyDeliverySuppliedItem suppliedItem,
@@ -1189,7 +1207,7 @@ class _$_SupplyDelivery implements _SupplyDelivery {
       this.identifier,
       this.basedOn,
       this.partOf,
-      this.status,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown) this.status,
       this.patient,
       this.type,
       this.suppliedItem,
@@ -1229,6 +1247,7 @@ class _$_SupplyDelivery implements _SupplyDelivery {
   @override
   final List<Reference> partOf;
   @override
+  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
   final SupplyDeliveryStatus status;
   @override
   final Reference patient;
@@ -1365,12 +1384,14 @@ abstract class _SupplyDelivery implements SupplyDelivery {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
-      SupplyDeliveryStatus status,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+          SupplyDeliveryStatus status,
       Reference patient,
       CodeableConcept type,
       SupplyDeliverySuppliedItem suppliedItem,
@@ -1410,6 +1431,7 @@ abstract class _SupplyDelivery implements SupplyDelivery {
   @override
   List<Reference> get partOf;
   @override
+  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
   SupplyDeliveryStatus get status;
   @override
   Reference get patient;
@@ -1742,12 +1764,15 @@ class _$SupplyRequestTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      SupplyRequestStatus status,
+      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
+          SupplyRequestStatus status,
       CodeableConcept category,
-      Code priority,
+      @JsonKey(unknownEnumValue: SupplyRequestPriority.unknown)
+          SupplyRequestPriority priority,
       CodeableConcept itemCodeableConcept,
       Reference itemReference,
       Quantity quantity,
@@ -1809,9 +1834,11 @@ mixin _$SupplyRequest {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
   SupplyRequestStatus get status;
   CodeableConcept get category;
-  Code get priority;
+  @JsonKey(unknownEnumValue: SupplyRequestPriority.unknown)
+  SupplyRequestPriority get priority;
   CodeableConcept get itemCodeableConcept;
   Reference get itemReference;
   Quantity get quantity;
@@ -1843,12 +1870,15 @@ abstract class $SupplyRequestCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      SupplyRequestStatus status,
+      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
+          SupplyRequestStatus status,
       CodeableConcept category,
-      Code priority,
+      @JsonKey(unknownEnumValue: SupplyRequestPriority.unknown)
+          SupplyRequestPriority priority,
       CodeableConcept itemCodeableConcept,
       Reference itemReference,
       Quantity quantity,
@@ -1940,7 +1970,9 @@ class _$SupplyRequestCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as SupplyRequestStatus,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as SupplyRequestPriority,
       itemCodeableConcept: itemCodeableConcept == freezed
           ? _value.itemCodeableConcept
           : itemCodeableConcept as CodeableConcept,
@@ -2106,12 +2138,15 @@ abstract class _$SupplyRequestCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      SupplyRequestStatus status,
+      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
+          SupplyRequestStatus status,
       CodeableConcept category,
-      Code priority,
+      @JsonKey(unknownEnumValue: SupplyRequestPriority.unknown)
+          SupplyRequestPriority priority,
       CodeableConcept itemCodeableConcept,
       Reference itemReference,
       Quantity quantity,
@@ -2216,7 +2251,9 @@ class __$SupplyRequestCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as SupplyRequestStatus,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as SupplyRequestPriority,
       itemCodeableConcept: itemCodeableConcept == freezed
           ? _value.itemCodeableConcept
           : itemCodeableConcept as CodeableConcept,
@@ -2271,9 +2308,9 @@ class _$_SupplyRequest implements _SupplyRequest {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown) this.status,
       this.category,
-      this.priority,
+      @JsonKey(unknownEnumValue: SupplyRequestPriority.unknown) this.priority,
       this.itemCodeableConcept,
       this.itemReference,
       this.quantity,
@@ -2314,11 +2351,13 @@ class _$_SupplyRequest implements _SupplyRequest {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
   final SupplyRequestStatus status;
   @override
   final CodeableConcept category;
   @override
-  final Code priority;
+  @JsonKey(unknownEnumValue: SupplyRequestPriority.unknown)
+  final SupplyRequestPriority priority;
   @override
   final CodeableConcept itemCodeableConcept;
   @override
@@ -2479,12 +2518,15 @@ abstract class _SupplyRequest implements SupplyRequest {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      SupplyRequestStatus status,
+      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
+          SupplyRequestStatus status,
       CodeableConcept category,
-      Code priority,
+      @JsonKey(unknownEnumValue: SupplyRequestPriority.unknown)
+          SupplyRequestPriority priority,
       CodeableConcept itemCodeableConcept,
       Reference itemReference,
       Quantity quantity,
@@ -2525,11 +2567,13 @@ abstract class _SupplyRequest implements SupplyRequest {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
   SupplyRequestStatus get status;
   @override
   CodeableConcept get category;
   @override
-  Code get priority;
+  @JsonKey(unknownEnumValue: SupplyRequestPriority.unknown)
+  SupplyRequestPriority get priority;
   @override
   CodeableConcept get itemCodeableConcept;
   @override
@@ -2921,14 +2965,16 @@ class _$GuidanceResponseTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier requestIdentifier,
       List<Identifier> identifier,
       FhirUri moduleUri,
       Canonical moduleCanonical,
       CodeableConcept moduleCodeableConcept,
-      GuidanceResponseStatus status,
+      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
+          GuidanceResponseStatus status,
       Reference subject,
       Reference encounter,
       FhirDateTime occurrenceDateTime,
@@ -2990,6 +3036,7 @@ mixin _$GuidanceResponse {
   FhirUri get moduleUri;
   Canonical get moduleCanonical;
   CodeableConcept get moduleCodeableConcept;
+  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
   GuidanceResponseStatus get status;
   Reference get subject;
   Reference get encounter;
@@ -3019,14 +3066,16 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier requestIdentifier,
       List<Identifier> identifier,
       FhirUri moduleUri,
       Canonical moduleCanonical,
       CodeableConcept moduleCodeableConcept,
-      GuidanceResponseStatus status,
+      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
+          GuidanceResponseStatus status,
       Reference subject,
       Reference encounter,
       FhirDateTime occurrenceDateTime,
@@ -3255,14 +3304,16 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier requestIdentifier,
       List<Identifier> identifier,
       FhirUri moduleUri,
       Canonical moduleCanonical,
       CodeableConcept moduleCodeableConcept,
-      GuidanceResponseStatus status,
+      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
+          GuidanceResponseStatus status,
       Reference subject,
       Reference encounter,
       FhirDateTime occurrenceDateTime,
@@ -3414,7 +3465,7 @@ class _$_GuidanceResponse implements _GuidanceResponse {
       this.moduleUri,
       this.moduleCanonical,
       this.moduleCodeableConcept,
-      this.status,
+      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown) this.status,
       this.subject,
       this.encounter,
       this.occurrenceDateTime,
@@ -3460,6 +3511,7 @@ class _$_GuidanceResponse implements _GuidanceResponse {
   @override
   final CodeableConcept moduleCodeableConcept;
   @override
+  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
   final GuidanceResponseStatus status;
   @override
   final Reference subject;
@@ -3613,14 +3665,16 @@ abstract class _GuidanceResponse implements GuidanceResponse {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       Identifier requestIdentifier,
       List<Identifier> identifier,
       FhirUri moduleUri,
       Canonical moduleCanonical,
       CodeableConcept moduleCodeableConcept,
-      GuidanceResponseStatus status,
+      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
+          GuidanceResponseStatus status,
       Reference subject,
       Reference encounter,
       FhirDateTime occurrenceDateTime,
@@ -3666,6 +3720,7 @@ abstract class _GuidanceResponse implements GuidanceResponse {
   @override
   CodeableConcept get moduleCodeableConcept;
   @override
+  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
   GuidanceResponseStatus get status;
   @override
   Reference get subject;
@@ -3708,7 +3763,8 @@ class _$DeviceRequestTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -3716,9 +3772,12 @@ class _$DeviceRequestTearOff {
       List<Reference> basedOn,
       List<Reference> priorRequest,
       Identifier groupIdentifier,
-      Code status,
-      Code intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: DeviceRequestStatus.unknown)
+          DeviceRequestStatus status,
+      @JsonKey(unknownEnumValue: DeviceRequestIntent.unknown)
+          DeviceRequestIntent intent,
+      @JsonKey(unknownEnumValue: DeviceRequestPriority.unknown)
+          DeviceRequestPriority priority,
       Reference codeReference,
       CodeableConcept codeCodeableConcept,
       List<DeviceRequestParameter> parameter,
@@ -3798,9 +3857,12 @@ mixin _$DeviceRequest {
   List<Reference> get basedOn;
   List<Reference> get priorRequest;
   Identifier get groupIdentifier;
-  Code get status;
-  Code get intent;
-  Code get priority;
+  @JsonKey(unknownEnumValue: DeviceRequestStatus.unknown)
+  DeviceRequestStatus get status;
+  @JsonKey(unknownEnumValue: DeviceRequestIntent.unknown)
+  DeviceRequestIntent get intent;
+  @JsonKey(unknownEnumValue: DeviceRequestPriority.unknown)
+  DeviceRequestPriority get priority;
   Reference get codeReference;
   CodeableConcept get codeCodeableConcept;
   List<DeviceRequestParameter> get parameter;
@@ -3836,7 +3898,8 @@ abstract class $DeviceRequestCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -3844,9 +3907,12 @@ abstract class $DeviceRequestCopyWith<$Res> {
       List<Reference> basedOn,
       List<Reference> priorRequest,
       Identifier groupIdentifier,
-      Code status,
-      Code intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: DeviceRequestStatus.unknown)
+          DeviceRequestStatus status,
+      @JsonKey(unknownEnumValue: DeviceRequestIntent.unknown)
+          DeviceRequestIntent intent,
+      @JsonKey(unknownEnumValue: DeviceRequestPriority.unknown)
+          DeviceRequestPriority priority,
       Reference codeReference,
       CodeableConcept codeCodeableConcept,
       List<DeviceRequestParameter> parameter,
@@ -3962,9 +4028,11 @@ class _$DeviceRequestCopyWithImpl<$Res>
       groupIdentifier: groupIdentifier == freezed
           ? _value.groupIdentifier
           : groupIdentifier as Identifier,
-      status: status == freezed ? _value.status : status as Code,
-      intent: intent == freezed ? _value.intent : intent as Code,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      status: status == freezed ? _value.status : status as DeviceRequestStatus,
+      intent: intent == freezed ? _value.intent : intent as DeviceRequestIntent,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as DeviceRequestPriority,
       codeReference: codeReference == freezed
           ? _value.codeReference
           : codeReference as Reference,
@@ -4150,7 +4218,8 @@ abstract class _$DeviceRequestCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -4158,9 +4227,12 @@ abstract class _$DeviceRequestCopyWith<$Res>
       List<Reference> basedOn,
       List<Reference> priorRequest,
       Identifier groupIdentifier,
-      Code status,
-      Code intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: DeviceRequestStatus.unknown)
+          DeviceRequestStatus status,
+      @JsonKey(unknownEnumValue: DeviceRequestIntent.unknown)
+          DeviceRequestIntent intent,
+      @JsonKey(unknownEnumValue: DeviceRequestPriority.unknown)
+          DeviceRequestPriority priority,
       Reference codeReference,
       CodeableConcept codeCodeableConcept,
       List<DeviceRequestParameter> parameter,
@@ -4290,9 +4362,11 @@ class __$DeviceRequestCopyWithImpl<$Res>
       groupIdentifier: groupIdentifier == freezed
           ? _value.groupIdentifier
           : groupIdentifier as Identifier,
-      status: status == freezed ? _value.status : status as Code,
-      intent: intent == freezed ? _value.intent : intent as Code,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      status: status == freezed ? _value.status : status as DeviceRequestStatus,
+      intent: intent == freezed ? _value.intent : intent as DeviceRequestIntent,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as DeviceRequestPriority,
       codeReference: codeReference == freezed
           ? _value.codeReference
           : codeReference as Reference,
@@ -4362,9 +4436,9 @@ class _$_DeviceRequest implements _DeviceRequest {
       this.basedOn,
       this.priorRequest,
       this.groupIdentifier,
-      this.status,
-      this.intent,
-      this.priority,
+      @JsonKey(unknownEnumValue: DeviceRequestStatus.unknown) this.status,
+      @JsonKey(unknownEnumValue: DeviceRequestIntent.unknown) this.intent,
+      @JsonKey(unknownEnumValue: DeviceRequestPriority.unknown) this.priority,
       this.codeReference,
       this.codeCodeableConcept,
       this.parameter,
@@ -4419,11 +4493,14 @@ class _$_DeviceRequest implements _DeviceRequest {
   @override
   final Identifier groupIdentifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: DeviceRequestStatus.unknown)
+  final DeviceRequestStatus status;
   @override
-  final Code intent;
+  @JsonKey(unknownEnumValue: DeviceRequestIntent.unknown)
+  final DeviceRequestIntent intent;
   @override
-  final Code priority;
+  @JsonKey(unknownEnumValue: DeviceRequestPriority.unknown)
+  final DeviceRequestPriority priority;
   @override
   final Reference codeReference;
   @override
@@ -4610,7 +4687,8 @@ abstract class _DeviceRequest implements DeviceRequest {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -4618,9 +4696,12 @@ abstract class _DeviceRequest implements DeviceRequest {
       List<Reference> basedOn,
       List<Reference> priorRequest,
       Identifier groupIdentifier,
-      Code status,
-      Code intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: DeviceRequestStatus.unknown)
+          DeviceRequestStatus status,
+      @JsonKey(unknownEnumValue: DeviceRequestIntent.unknown)
+          DeviceRequestIntent intent,
+      @JsonKey(unknownEnumValue: DeviceRequestPriority.unknown)
+          DeviceRequestPriority priority,
       Reference codeReference,
       CodeableConcept codeCodeableConcept,
       List<DeviceRequestParameter> parameter,
@@ -4675,11 +4756,14 @@ abstract class _DeviceRequest implements DeviceRequest {
   @override
   Identifier get groupIdentifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: DeviceRequestStatus.unknown)
+  DeviceRequestStatus get status;
   @override
-  Code get intent;
+  @JsonKey(unknownEnumValue: DeviceRequestIntent.unknown)
+  DeviceRequestIntent get intent;
   @override
-  Code get priority;
+  @JsonKey(unknownEnumValue: DeviceRequestPriority.unknown)
+  DeviceRequestPriority get priority;
   @override
   Reference get codeReference;
   @override
@@ -5079,16 +5163,19 @@ class _$CommunicationRequestTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
-      Code status,
+      @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
+          CommunicationRequestStatus status,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: CommunicationRequestPriority.unknown)
+          CommunicationRequestPriority priority,
       bool doNotPerform,
       List<CodeableConcept> medium,
       Reference subject,
@@ -5159,10 +5246,12 @@ mixin _$CommunicationRequest {
   List<Reference> get basedOn;
   List<Reference> get replaces;
   Identifier get groupIdentifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
+  CommunicationRequestStatus get status;
   CodeableConcept get statusReason;
   List<CodeableConcept> get category;
-  Code get priority;
+  @JsonKey(unknownEnumValue: CommunicationRequestPriority.unknown)
+  CommunicationRequestPriority get priority;
   bool get doNotPerform;
   List<CodeableConcept> get medium;
   Reference get subject;
@@ -5195,16 +5284,19 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
-      Code status,
+      @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
+          CommunicationRequestStatus status,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: CommunicationRequestPriority.unknown)
+          CommunicationRequestPriority priority,
       bool doNotPerform,
       List<CodeableConcept> medium,
       Reference subject,
@@ -5303,14 +5395,18 @@ class _$CommunicationRequestCopyWithImpl<$Res>
       groupIdentifier: groupIdentifier == freezed
           ? _value.groupIdentifier
           : groupIdentifier as Identifier,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as CommunicationRequestStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as CommunicationRequestPriority,
       doNotPerform:
           doNotPerform == freezed ? _value.doNotPerform : doNotPerform as bool,
       medium:
@@ -5452,16 +5548,19 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
-      Code status,
+      @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
+          CommunicationRequestStatus status,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: CommunicationRequestPriority.unknown)
+          CommunicationRequestPriority priority,
       bool doNotPerform,
       List<CodeableConcept> medium,
       Reference subject,
@@ -5571,14 +5670,18 @@ class __$CommunicationRequestCopyWithImpl<$Res>
       groupIdentifier: groupIdentifier == freezed
           ? _value.groupIdentifier
           : groupIdentifier as Identifier,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as CommunicationRequestStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as CommunicationRequestPriority,
       doNotPerform:
           doNotPerform == freezed ? _value.doNotPerform : doNotPerform as bool,
       medium:
@@ -5626,16 +5729,19 @@ class _$_CommunicationRequest implements _CommunicationRequest {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
       this.basedOn,
       this.replaces,
       this.groupIdentifier,
-      this.status,
+      @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
+          this.status,
       this.statusReason,
       this.category,
-      this.priority,
+      @JsonKey(unknownEnumValue: CommunicationRequestPriority.unknown)
+          this.priority,
       this.doNotPerform,
       this.medium,
       this.subject,
@@ -5683,13 +5789,15 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   @override
   final Identifier groupIdentifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
+  final CommunicationRequestStatus status;
   @override
   final CodeableConcept statusReason;
   @override
   final List<CodeableConcept> category;
   @override
-  final Code priority;
+  @JsonKey(unknownEnumValue: CommunicationRequestPriority.unknown)
+  final CommunicationRequestPriority priority;
   @override
   final bool doNotPerform;
   @override
@@ -5863,16 +5971,19 @@ abstract class _CommunicationRequest implements CommunicationRequest {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
-      Code status,
+      @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
+          CommunicationRequestStatus status,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: CommunicationRequestPriority.unknown)
+          CommunicationRequestPriority priority,
       bool doNotPerform,
       List<CodeableConcept> medium,
       Reference subject,
@@ -5920,13 +6031,15 @@ abstract class _CommunicationRequest implements CommunicationRequest {
   @override
   Identifier get groupIdentifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
+  CommunicationRequestStatus get status;
   @override
   CodeableConcept get statusReason;
   @override
   List<CodeableConcept> get category;
   @override
-  Code get priority;
+  @JsonKey(unknownEnumValue: CommunicationRequestPriority.unknown)
+  CommunicationRequestPriority get priority;
   @override
   bool get doNotPerform;
   @override
@@ -6264,7 +6377,8 @@ class _$CommunicationTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -6272,10 +6386,12 @@ class _$CommunicationTearOff {
       List<Reference> basedOn,
       List<Reference> partOf,
       List<Reference> inResponseTo,
-      Code status,
+      @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
+          CommunicationStatus status,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: CommunicationPriority.unknown)
+          CommunicationPriority priority,
       List<CodeableConcept> medium,
       Reference subject,
       CodeableConcept topic,
@@ -6346,10 +6462,12 @@ mixin _$Communication {
   List<Reference> get basedOn;
   List<Reference> get partOf;
   List<Reference> get inResponseTo;
-  Code get status;
+  @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
+  CommunicationStatus get status;
   CodeableConcept get statusReason;
   List<CodeableConcept> get category;
-  Code get priority;
+  @JsonKey(unknownEnumValue: CommunicationPriority.unknown)
+  CommunicationPriority get priority;
   List<CodeableConcept> get medium;
   Reference get subject;
   CodeableConcept get topic;
@@ -6380,7 +6498,8 @@ abstract class $CommunicationCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -6388,10 +6507,12 @@ abstract class $CommunicationCopyWith<$Res> {
       List<Reference> basedOn,
       List<Reference> partOf,
       List<Reference> inResponseTo,
-      Code status,
+      @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
+          CommunicationStatus status,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: CommunicationPriority.unknown)
+          CommunicationPriority priority,
       List<CodeableConcept> medium,
       Reference subject,
       CodeableConcept topic,
@@ -6491,14 +6612,16 @@ class _$CommunicationCopyWithImpl<$Res>
       inResponseTo: inResponseTo == freezed
           ? _value.inResponseTo
           : inResponseTo as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as CommunicationStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as CommunicationPriority,
       medium:
           medium == freezed ? _value.medium : medium as List<CodeableConcept>,
       subject: subject == freezed ? _value.subject : subject as Reference,
@@ -6611,7 +6734,8 @@ abstract class _$CommunicationCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -6619,10 +6743,12 @@ abstract class _$CommunicationCopyWith<$Res>
       List<Reference> basedOn,
       List<Reference> partOf,
       List<Reference> inResponseTo,
-      Code status,
+      @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
+          CommunicationStatus status,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: CommunicationPriority.unknown)
+          CommunicationPriority priority,
       List<CodeableConcept> medium,
       Reference subject,
       CodeableConcept topic,
@@ -6731,14 +6857,16 @@ class __$CommunicationCopyWithImpl<$Res>
       inResponseTo: inResponseTo == freezed
           ? _value.inResponseTo
           : inResponseTo as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed ? _value.status : status as CommunicationStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as CommunicationPriority,
       medium:
           medium == freezed ? _value.medium : medium as List<CodeableConcept>,
       subject: subject == freezed ? _value.subject : subject as Reference,
@@ -6785,10 +6913,10 @@ class _$_Communication implements _Communication {
       this.basedOn,
       this.partOf,
       this.inResponseTo,
-      this.status,
+      @JsonKey(unknownEnumValue: CommunicationStatus.unknown) this.status,
       this.statusReason,
       this.category,
-      this.priority,
+      @JsonKey(unknownEnumValue: CommunicationPriority.unknown) this.priority,
       this.medium,
       this.subject,
       this.topic,
@@ -6838,13 +6966,15 @@ class _$_Communication implements _Communication {
   @override
   final List<Reference> inResponseTo;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
+  final CommunicationStatus status;
   @override
   final CodeableConcept statusReason;
   @override
   final List<CodeableConcept> category;
   @override
-  final Code priority;
+  @JsonKey(unknownEnumValue: CommunicationPriority.unknown)
+  final CommunicationPriority priority;
   @override
   final List<CodeableConcept> medium;
   @override
@@ -7013,7 +7143,8 @@ abstract class _Communication implements Communication {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -7021,10 +7152,12 @@ abstract class _Communication implements Communication {
       List<Reference> basedOn,
       List<Reference> partOf,
       List<Reference> inResponseTo,
-      Code status,
+      @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
+          CommunicationStatus status,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
-      Code priority,
+      @JsonKey(unknownEnumValue: CommunicationPriority.unknown)
+          CommunicationPriority priority,
       List<CodeableConcept> medium,
       Reference subject,
       CodeableConcept topic,
@@ -7074,13 +7207,15 @@ abstract class _Communication implements Communication {
   @override
   List<Reference> get inResponseTo;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
+  CommunicationStatus get status;
   @override
   CodeableConcept get statusReason;
   @override
   List<CodeableConcept> get category;
   @override
-  Code get priority;
+  @JsonKey(unknownEnumValue: CommunicationPriority.unknown)
+  CommunicationPriority get priority;
   @override
   List<CodeableConcept> get medium;
   @override

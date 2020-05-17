@@ -37,15 +37,16 @@ _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(_$ClaimStatusEnumMap, json['status'],
+        unknownValue: ClaimStatus.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     subType: json['subType'] == null
         ? null
         : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-    use: _$enumDecodeNullable(_$ClaimUseEnumMap, json['use']),
+    use: _$enumDecodeNullable(_$ClaimUseEnumMap, json['use'],
+        unknownValue: ClaimUse.unknown),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -151,7 +152,7 @@ Map<String, dynamic> _$_$_ClaimToJson(_$_Claim instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ClaimStatusEnumMap[instance.status]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subType', instance.subType?.toJson());
   writeNotNull('use', _$ClaimUseEnumMap[instance.use]);
@@ -216,6 +217,14 @@ T _$enumDecodeNullable<T>(
   }
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
+
+const _$ClaimStatusEnumMap = {
+  ClaimStatus.active: 'active',
+  ClaimStatus.cancelled: 'cancelled',
+  ClaimStatus.draft: 'draft',
+  ClaimStatus.entered_in_error: 'entered-in-error',
+  ClaimStatus.unknown: 'unknown',
+};
 
 const _$ClaimUseEnumMap = {
   ClaimUse.claim: 'claim',
@@ -991,7 +1000,8 @@ _$_Invoice _$_$_InvoiceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$InvoiceStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$InvoiceStatusEnumMap, json['status'],
+        unknownValue: InvoiceStatus.unknown),
     cancelledReason: json['cancelledReason'] as String,
     type: json['type'] == null
         ? null
@@ -1279,15 +1289,16 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(_$ClaimResponseStatusEnumMap, json['status'],
+        unknownValue: ClaimResponseStatus.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     subType: json['subType'] == null
         ? null
         : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-    use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
+    use: _$enumDecodeNullable(_$ClaimResponseUseEnumMap, json['use'],
+        unknownValue: ClaimResponseUse.unknown),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -1392,10 +1403,10 @@ Map<String, dynamic> _$_$_ClaimResponseToJson(_$_ClaimResponse instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ClaimResponseStatusEnumMap[instance.status]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subType', instance.subType?.toJson());
-  writeNotNull('use', instance.use?.toJson());
+  writeNotNull('use', _$ClaimResponseUseEnumMap[instance.use]);
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('insurer', instance.insurer?.toJson());
@@ -1424,6 +1435,21 @@ Map<String, dynamic> _$_$_ClaimResponseToJson(_$_ClaimResponse instance) {
   writeNotNull('error', instance.error?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$ClaimResponseStatusEnumMap = {
+  ClaimResponseStatus.active: 'active',
+  ClaimResponseStatus.cancelled: 'cancelled',
+  ClaimResponseStatus.draft: 'draft',
+  ClaimResponseStatus.entered_in_error: 'entered-in-error',
+  ClaimResponseStatus.unknown: 'unknown',
+};
+
+const _$ClaimResponseUseEnumMap = {
+  ClaimResponseUse.claim: 'claim',
+  ClaimResponseUse.preauthorization: 'preauthorization',
+  ClaimResponseUse.predetermination: 'predetermination',
+  ClaimResponseUse.unknown: 'unknown',
+};
 
 _$_ClaimResponseItem _$_$_ClaimResponseItemFromJson(Map<String, dynamic> json) {
   return _$_ClaimResponseItem(

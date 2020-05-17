@@ -23,10 +23,12 @@ class _$EnrollmentRequestTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: EnrollmentRequestStatus.unknown)
+          EnrollmentRequestStatus status,
       FhirDateTime created,
       Reference insurer,
       Reference provider,
@@ -68,7 +70,8 @@ mixin _$EnrollmentRequest {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: EnrollmentRequestStatus.unknown)
+  EnrollmentRequestStatus get status;
   FhirDateTime get created;
   Reference get insurer;
   Reference get provider;
@@ -91,10 +94,12 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: EnrollmentRequestStatus.unknown)
+          EnrollmentRequestStatus status,
       FhirDateTime created,
       Reference insurer,
       Reference provider,
@@ -158,7 +163,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status:
+          status == freezed ? _value.status : status as EnrollmentRequestStatus,
       created: created == freezed ? _value.created : created as FhirDateTime,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
@@ -243,10 +249,12 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: EnrollmentRequestStatus.unknown)
+          EnrollmentRequestStatus status,
       FhirDateTime created,
       Reference insurer,
       Reference provider,
@@ -318,7 +326,8 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status:
+          status == freezed ? _value.status : status as EnrollmentRequestStatus,
       created: created == freezed ? _value.created : created as FhirDateTime,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
@@ -342,7 +351,7 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: EnrollmentRequestStatus.unknown) this.status,
       this.created,
       this.insurer,
       this.provider,
@@ -374,7 +383,8 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: EnrollmentRequestStatus.unknown)
+  final EnrollmentRequestStatus status;
   @override
   final FhirDateTime created;
   @override
@@ -480,10 +490,12 @@ abstract class _EnrollmentRequest implements EnrollmentRequest {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: EnrollmentRequestStatus.unknown)
+          EnrollmentRequestStatus status,
       FhirDateTime created,
       Reference insurer,
       Reference provider,
@@ -515,7 +527,8 @@ abstract class _EnrollmentRequest implements EnrollmentRequest {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: EnrollmentRequestStatus.unknown)
+  EnrollmentRequestStatus get status;
   @override
   FhirDateTime get created;
   @override
@@ -544,12 +557,15 @@ class _$EnrollmentResponseTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: EnrollmentResponseStatus.unknown)
+          EnrollmentResponseStatus status,
       Reference request,
-      EnrollmentResponseOutcome outcome,
+      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+          EnrollmentResponseOutcome outcome,
       String disposition,
       FhirDateTime created,
       Reference organization,
@@ -589,8 +605,10 @@ mixin _$EnrollmentResponse {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: EnrollmentResponseStatus.unknown)
+  EnrollmentResponseStatus get status;
   Reference get request;
+  @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
   EnrollmentResponseOutcome get outcome;
   String get disposition;
   FhirDateTime get created;
@@ -612,12 +630,15 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: EnrollmentResponseStatus.unknown)
+          EnrollmentResponseStatus status,
       Reference request,
-      EnrollmentResponseOutcome outcome,
+      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+          EnrollmentResponseOutcome outcome,
       String disposition,
       FhirDateTime created,
       Reference organization,
@@ -678,7 +699,9 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as EnrollmentResponseStatus,
       request: request == freezed ? _value.request : request as Reference,
       outcome: outcome == freezed
           ? _value.outcome
@@ -759,12 +782,15 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: EnrollmentResponseStatus.unknown)
+          EnrollmentResponseStatus status,
       Reference request,
-      EnrollmentResponseOutcome outcome,
+      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+          EnrollmentResponseOutcome outcome,
       String disposition,
       FhirDateTime created,
       Reference organization,
@@ -832,7 +858,9 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as EnrollmentResponseStatus,
       request: request == freezed ? _value.request : request as Reference,
       outcome: outcome == freezed
           ? _value.outcome
@@ -859,12 +887,15 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: EnrollmentResponseStatus.unknown)
+          this.status,
       this.request,
-      this.outcome,
+      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+          this.outcome,
       this.disposition,
       this.created,
       this.organization,
@@ -893,10 +924,12 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: EnrollmentResponseStatus.unknown)
+  final EnrollmentResponseStatus status;
   @override
   final Reference request;
   @override
+  @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
   final EnrollmentResponseOutcome outcome;
   @override
   final String disposition;
@@ -1001,12 +1034,15 @@ abstract class _EnrollmentResponse implements EnrollmentResponse {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: EnrollmentResponseStatus.unknown)
+          EnrollmentResponseStatus status,
       Reference request,
-      EnrollmentResponseOutcome outcome,
+      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+          EnrollmentResponseOutcome outcome,
       String disposition,
       FhirDateTime created,
       Reference organization,
@@ -1035,10 +1071,12 @@ abstract class _EnrollmentResponse implements EnrollmentResponse {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: EnrollmentResponseStatus.unknown)
+  EnrollmentResponseStatus get status;
   @override
   Reference get request;
   @override
+  @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
   EnrollmentResponseOutcome get outcome;
   @override
   String get disposition;
@@ -1068,17 +1106,20 @@ class _$CoverageEligibilityResponseTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<Identifier> identifier,
-      Code status,
-      List<String> purpose,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseStatus.unknown)
+          CoverageEligibilityResponseStatus status,
+      List<dynamic> purpose,
       Reference patient,
       Date servicedDate,
       Period servicedPeriod,
       FhirDateTime created,
       Reference requestor,
       Reference request,
-      CoverageEligibilityResponseOutcome outcome,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+          CoverageEligibilityResponseOutcome outcome,
       String disposition,
       Reference insurer,
       List<CoverageEligibilityResponseInsurance> insurance,
@@ -1128,14 +1169,16 @@ mixin _$CoverageEligibilityResponse {
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<Identifier> get identifier;
-  Code get status;
-  List<String> get purpose;
+  @JsonKey(unknownEnumValue: CoverageEligibilityResponseStatus.unknown)
+  CoverageEligibilityResponseStatus get status;
+  List<dynamic> get purpose;
   Reference get patient;
   Date get servicedDate;
   Period get servicedPeriod;
   FhirDateTime get created;
   Reference get requestor;
   Reference get request;
+  @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
   CoverageEligibilityResponseOutcome get outcome;
   String get disposition;
   Reference get insurer;
@@ -1162,17 +1205,20 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<Identifier> identifier,
-      Code status,
-      List<String> purpose,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseStatus.unknown)
+          CoverageEligibilityResponseStatus status,
+      List<dynamic> purpose,
       Reference patient,
       Date servicedDate,
       Period servicedPeriod,
       FhirDateTime created,
       Reference requestor,
       Reference request,
-      CoverageEligibilityResponseOutcome outcome,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+          CoverageEligibilityResponseOutcome outcome,
       String disposition,
       Reference insurer,
       List<CoverageEligibilityResponseInsurance> insurance,
@@ -1244,8 +1290,10 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
-      purpose: purpose == freezed ? _value.purpose : purpose as List<String>,
+      status: status == freezed
+          ? _value.status
+          : status as CoverageEligibilityResponseStatus,
+      purpose: purpose == freezed ? _value.purpose : purpose as List<dynamic>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
@@ -1370,17 +1418,20 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<Identifier> identifier,
-      Code status,
-      List<String> purpose,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseStatus.unknown)
+          CoverageEligibilityResponseStatus status,
+      List<dynamic> purpose,
       Reference patient,
       Date servicedDate,
       Period servicedPeriod,
       FhirDateTime created,
       Reference requestor,
       Reference request,
-      CoverageEligibilityResponseOutcome outcome,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+          CoverageEligibilityResponseOutcome outcome,
       String disposition,
       Reference insurer,
       List<CoverageEligibilityResponseInsurance> insurance,
@@ -1464,8 +1515,10 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
-      purpose: purpose == freezed ? _value.purpose : purpose as List<String>,
+      status: status == freezed
+          ? _value.status
+          : status as CoverageEligibilityResponseStatus,
+      purpose: purpose == freezed ? _value.purpose : purpose as List<dynamic>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
@@ -1505,9 +1558,11 @@ class _$_CoverageEligibilityResponse implements _CoverageEligibilityResponse {
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseStatus.unknown)
+          this.status,
       this.purpose,
       this.patient,
       this.servicedDate,
@@ -1515,7 +1570,8 @@ class _$_CoverageEligibilityResponse implements _CoverageEligibilityResponse {
       this.created,
       this.requestor,
       this.request,
-      this.outcome,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+          this.outcome,
       this.disposition,
       this.insurer,
       this.insurance,
@@ -1546,9 +1602,10 @@ class _$_CoverageEligibilityResponse implements _CoverageEligibilityResponse {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: CoverageEligibilityResponseStatus.unknown)
+  final CoverageEligibilityResponseStatus status;
   @override
-  final List<String> purpose;
+  final List<dynamic> purpose;
   @override
   final Reference patient;
   @override
@@ -1562,6 +1619,7 @@ class _$_CoverageEligibilityResponse implements _CoverageEligibilityResponse {
   @override
   final Reference request;
   @override
+  @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
   final CoverageEligibilityResponseOutcome outcome;
   @override
   final String disposition;
@@ -1702,17 +1760,20 @@ abstract class _CoverageEligibilityResponse
           Code language,
           Narrative text,
           List<dynamic> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> fhirExtension,
           List<Identifier> identifier,
-          Code status,
-          List<String> purpose,
+          @JsonKey(unknownEnumValue: CoverageEligibilityResponseStatus.unknown)
+              CoverageEligibilityResponseStatus status,
+          List<dynamic> purpose,
           Reference patient,
           Date servicedDate,
           Period servicedPeriod,
           FhirDateTime created,
           Reference requestor,
           Reference request,
-          CoverageEligibilityResponseOutcome outcome,
+          @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+              CoverageEligibilityResponseOutcome outcome,
           String disposition,
           Reference insurer,
           List<CoverageEligibilityResponseInsurance> insurance,
@@ -1744,9 +1805,10 @@ abstract class _CoverageEligibilityResponse
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: CoverageEligibilityResponseStatus.unknown)
+  CoverageEligibilityResponseStatus get status;
   @override
-  List<String> get purpose;
+  List<dynamic> get purpose;
   @override
   Reference get patient;
   @override
@@ -1760,6 +1822,7 @@ abstract class _CoverageEligibilityResponse
   @override
   Reference get request;
   @override
+  @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
   CoverageEligibilityResponseOutcome get outcome;
   @override
   String get disposition;

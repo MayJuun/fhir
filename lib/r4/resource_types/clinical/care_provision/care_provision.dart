@@ -19,7 +19,8 @@ abstract class VisionPrescription with _$VisionPrescription {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    Code status,
+    @JsonKey(unknownEnumValue: VisionPrescriptionStatus.unknown)
+        VisionPrescriptionStatus status,
     FhirDateTime created,
     Reference patient,
     Reference encounter,
@@ -39,11 +40,12 @@ abstract class VisionPrescriptionLensSpecification
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept product,
-    VisionPrescriptionLensSpecificationEye eye,
+    @JsonKey(unknownEnumValue: LensSpecificationEye.unknown)
+        LensSpecificationEye eye,
     double sphere,
     double cylinder,
     int axis,
-    List<VisionPrescriptionPrism> prism,
+    List<LensSpecificationPrism> prism,
     double add,
     double power,
     double backCurve,
@@ -59,16 +61,16 @@ abstract class VisionPrescriptionLensSpecification
 }
 
 @freezed
-abstract class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
-  const factory VisionPrescriptionPrism({
+abstract class LensSpecificationPrism with _$LensSpecificationPrism {
+  const factory LensSpecificationPrism({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     double amount,
-    VisionPrescriptionPrismBase base,
-  }) = _VisionPrescriptionPrism;
-  factory VisionPrescriptionPrism.fromJson(Map<String, dynamic> json) =>
-      _$VisionPrescriptionPrismFromJson(json);
+    PrismBase base,
+  }) = _LensSpecificationPrism;
+  factory LensSpecificationPrism.fromJson(Map<String, dynamic> json) =>
+      _$LensSpecificationPrismFromJson(json);
 }
 
 @freezed
@@ -86,7 +88,8 @@ abstract class RiskAssessment with _$RiskAssessment {
     List<Identifier> identifier,
     Reference basedOn,
     Reference parent,
-    Code status,
+    @JsonKey(unknownEnumValue: RiskAssessmentStatus.unknown)
+        RiskAssessmentStatus status,
     CodeableConcept method,
     CodeableConcept code,
     Reference subject,
@@ -142,8 +145,8 @@ abstract class ServiceRequest with _$ServiceRequest {
     List<Reference> basedOn,
     List<Reference> replaces,
     Identifier requisition,
-    Code status,
-    Code intent,
+    @JsonKey(unknownEnumValue: OrderStatus.unknown) OrderStatus status,
+    @JsonKey(unknownEnumValue: OrderIntent.unknown) OrderIntent intent,
     List<CodeableConcept> category,
     Code priority,
     bool doNotPerform,
@@ -191,7 +194,8 @@ abstract class Goal with _$Goal {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    GoalLifecycleStatus lifecycleStatus,
+    @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
+        GoalLifecycleStatus lifecycleStatus,
     CodeableConcept achievementStatus,
     List<CodeableConcept> category,
     CodeableConcept priority,
@@ -248,8 +252,8 @@ abstract class NutritionOrder with _$NutritionOrder {
     List<Canonical> instantiatesCanonical,
     List<FhirUri> instantiatesUri,
     List<FhirUri> instantiates,
-    Code status,
-    Code intent,
+    @JsonKey(unknownEnumValue: OrderStatus.unknown) OrderStatus status,
+    @JsonKey(unknownEnumValue: OrderIntent.unknown) OrderIntent intent,
     Reference patient,
     FhirDateTime dateTime,
     Reference orderer,
@@ -376,8 +380,8 @@ abstract class CarePlan with _$CarePlan {
     List<Reference> basedOn,
     List<Reference> replaces,
     List<Reference> partOf,
-    Code status,
-    Code intent,
+    @JsonKey(unknownEnumValue: CarePlanStatus.unknown) CarePlanStatus status,
+    @JsonKey(unknownEnumValue: CarePlanIntent.unknown) CarePlanIntent intent,
     List<CodeableConcept> category,
     String title,
     String description,
@@ -406,15 +410,15 @@ abstract class CarePlanActivity with _$CarePlanActivity {
     List<CodeableConcept> outcomeCodeableConcept,
     List<Annotation> progress,
     Reference reference,
-    CarePlanDetail detail,
+    ActivityDetail detail,
   }) = _CarePlanActivity;
   factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
       _$CarePlanActivityFromJson(json);
 }
 
 @freezed
-abstract class CarePlanDetail with _$CarePlanDetail {
-  const factory CarePlanDetail({
+abstract class ActivityDetail with _$ActivityDetail {
+  const factory ActivityDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code kind,
@@ -424,7 +428,7 @@ abstract class CarePlanDetail with _$CarePlanDetail {
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
     List<Reference> goal,
-    CarePlanDetailStatus status,
+    @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
     CodeableConcept statusReason,
     bool doNotPerform,
     Timing scheduledTiming,
@@ -437,9 +441,9 @@ abstract class CarePlanDetail with _$CarePlanDetail {
     Quantity dailyAmount,
     Quantity quantity,
     String description,
-  }) = _CarePlanDetail;
-  factory CarePlanDetail.fromJson(Map<String, dynamic> json) =>
-      _$CarePlanDetailFromJson(json);
+  }) = _ActivityDetail;
+  factory ActivityDetail.fromJson(Map<String, dynamic> json) =>
+      _$ActivityDetailFromJson(json);
 }
 
 @freezed
@@ -455,7 +459,7 @@ abstract class CareTeam with _$CareTeam {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    CareTeamStatus status,
+    @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
     List<CodeableConcept> category,
     String name,
     Reference subject,
@@ -505,9 +509,12 @@ abstract class RequestGroup with _$RequestGroup {
     List<Reference> basedOn,
     List<Reference> replaces,
     Identifier groupIdentifier,
-    Code status,
-    Code intent,
-    Code priority,
+    @JsonKey(unknownEnumValue: RequestGroupStatus.unknown)
+        RequestGroupStatus status,
+    @JsonKey(unknownEnumValue: RequestGroupIntent.unknown)
+        RequestGroupIntent intent,
+    @JsonKey(unknownEnumValue: RequestGroupPriority.unknown)
+        RequestGroupPriority priority,
     CodeableConcept code,
     Reference subject,
     Reference encounter,
@@ -545,11 +552,11 @@ abstract class RequestGroupAction with _$RequestGroupAction {
     Timing timingTiming,
     List<Reference> participant,
     CodeableConcept type,
-    Code groupingBehavior,
-    Code selectionBehavior,
-    Code requiredBehavior,
-    Code precheckBehavior,
-    Code cardinalityBehavior,
+    ActionGroupingBehavior groupingBehavior,
+    ActionSelectionBehavior selectionBehavior,
+    ActionRequiredBehavior requiredBehavior,
+    ActionPrecheckBehavior precheckBehavior,
+    ActionCardinalityBehavior cardinalityBehavior,
     Reference resource,
     List<RequestGroupAction> action,
   }) = _RequestGroupAction;

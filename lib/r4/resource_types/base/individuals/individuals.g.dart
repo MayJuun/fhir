@@ -38,7 +38,8 @@ _$_Group _$_$_GroupFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     active: json['active'] as bool,
-    type: _$enumDecodeNullable(_$GroupTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$GroupTypeEnumMap, json['type'],
+        unknownValue: GroupType.unknown),
     actual: json['actual'] as bool,
     code: json['code'] == null
         ? null
@@ -284,7 +285,8 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    gender: _$enumDecodeNullable(_$PatientGenderEnumMap, json['gender']),
+    gender: _$enumDecodeNullable(_$PersonGenderEnumMap, json['gender'],
+        unknownValue: PersonGender.unknown),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
@@ -356,7 +358,7 @@ Map<String, dynamic> _$_$_PatientToJson(_$_Patient instance) {
   writeNotNull('active', instance.active);
   writeNotNull('name', instance.name?.map((e) => e?.toJson())?.toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
-  writeNotNull('gender', _$PatientGenderEnumMap[instance.gender]);
+  writeNotNull('gender', _$PersonGenderEnumMap[instance.gender]);
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('deceasedBoolean', instance.deceasedBoolean);
   writeNotNull('deceasedDateTime', instance.deceasedDateTime?.toJson());
@@ -375,11 +377,11 @@ Map<String, dynamic> _$_$_PatientToJson(_$_Patient instance) {
   return val;
 }
 
-const _$PatientGenderEnumMap = {
-  PatientGender.male: 'male',
-  PatientGender.female: 'female',
-  PatientGender.other: 'other',
-  PatientGender.unknown: 'unknown',
+const _$PersonGenderEnumMap = {
+  PersonGender.male: 'male',
+  PersonGender.female: 'female',
+  PersonGender.other: 'other',
+  PersonGender.unknown: 'unknown',
 };
 
 _$_PatientContact _$_$_PatientContactFromJson(Map<String, dynamic> json) {
@@ -410,7 +412,8 @@ _$_PatientContact _$_$_PatientContactFromJson(Map<String, dynamic> json) {
     address: json['address'] == null
         ? null
         : Address.fromJson(json['address'] as Map<String, dynamic>),
-    gender: _$enumDecodeNullable(_$PatientContactGenderEnumMap, json['gender']),
+    gender: _$enumDecodeNullable(_$PersonGenderEnumMap, json['gender'],
+        unknownValue: PersonGender.unknown),
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
@@ -439,18 +442,11 @@ Map<String, dynamic> _$_$_PatientContactToJson(_$_PatientContact instance) {
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address?.toJson());
-  writeNotNull('gender', _$PatientContactGenderEnumMap[instance.gender]);
+  writeNotNull('gender', _$PersonGenderEnumMap[instance.gender]);
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
-
-const _$PatientContactGenderEnumMap = {
-  PatientContactGender.male: 'male',
-  PatientContactGender.female: 'female',
-  PatientContactGender.other: 'other',
-  PatientContactGender.unknown: 'unknown',
-};
 
 _$_PatientCommunication _$_$_PatientCommunicationFromJson(
     Map<String, dynamic> json) {
@@ -509,7 +505,8 @@ _$_PatientLink _$_$_PatientLinkFromJson(Map<String, dynamic> json) {
     other: json['other'] == null
         ? null
         : Reference.fromJson(json['other'] as Map<String, dynamic>),
-    type: _$enumDecodeNullable(_$PatientLinkTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$PatientLinkTypeEnumMap, json['type'],
+        unknownValue: PatientLinkType.unknown),
   );
 }
 
@@ -680,7 +677,7 @@ _$_PractitionerRoleAvailableTime _$_$_PractitionerRoleAvailableTimeFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     daysOfWeek: (json['daysOfWeek'] as List)
-        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.map((e) => _$enumDecodeNullable(_$AvailableTimeDaysOfWeekEnumMap, e))
         ?.toList(),
     allDay: json['allDay'] as bool,
     availableStartTime: json['availableStartTime'] == null
@@ -708,12 +705,26 @@ Map<String, dynamic> _$_$_PractitionerRoleAvailableTimeToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
-      'daysOfWeek', instance.daysOfWeek?.map((e) => e?.toJson())?.toList());
+      'daysOfWeek',
+      instance.daysOfWeek
+          ?.map((e) => _$AvailableTimeDaysOfWeekEnumMap[e])
+          ?.toList());
   writeNotNull('allDay', instance.allDay);
   writeNotNull('availableStartTime', instance.availableStartTime?.toJson());
   writeNotNull('availableEndTime', instance.availableEndTime?.toJson());
   return val;
 }
+
+const _$AvailableTimeDaysOfWeekEnumMap = {
+  AvailableTimeDaysOfWeek.mon: 'mon',
+  AvailableTimeDaysOfWeek.tue: 'tue',
+  AvailableTimeDaysOfWeek.wed: 'wed',
+  AvailableTimeDaysOfWeek.thu: 'thu',
+  AvailableTimeDaysOfWeek.fri: 'fri',
+  AvailableTimeDaysOfWeek.sat: 'sat',
+  AvailableTimeDaysOfWeek.sun: 'sun',
+  AvailableTimeDaysOfWeek.unknown: 'unknown',
+};
 
 _$_PractitionerRoleNotAvailable _$_$_PractitionerRoleNotAvailableFromJson(
     Map<String, dynamic> json) {
@@ -795,7 +806,8 @@ _$_Person _$_$_PersonFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    gender: _$enumDecodeNullable(_$PersonGenderEnumMap, json['gender']),
+    gender: _$enumDecodeNullable(_$PersonGenderEnumMap, json['gender'],
+        unknownValue: PersonGender.unknown),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
@@ -852,13 +864,6 @@ Map<String, dynamic> _$_$_PersonToJson(_$_Person instance) {
   return val;
 }
 
-const _$PersonGenderEnumMap = {
-  PersonGender.male: 'male',
-  PersonGender.female: 'female',
-  PersonGender.other: 'other',
-  PersonGender.unknown: 'unknown',
-};
-
 _$_PersonLink _$_$_PersonLinkFromJson(Map<String, dynamic> json) {
   return _$_PersonLink(
     id: json['id'] as String,
@@ -875,8 +880,9 @@ _$_PersonLink _$_$_PersonLinkFromJson(Map<String, dynamic> json) {
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
-    assurance:
-        _$enumDecodeNullable(_$PersonLinkAssuranceEnumMap, json['assurance']),
+    assurance: _$enumDecodeNullable(
+        _$PersonLinkAssuranceEnumMap, json['assurance'],
+        unknownValue: PersonLinkAssurance.unknown),
   );
 }
 
@@ -951,7 +957,8 @@ _$_Practitioner _$_$_PractitionerFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Address.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    gender: _$enumDecodeNullable(_$PractitionerGenderEnumMap, json['gender']),
+    gender: _$enumDecodeNullable(_$PersonGenderEnumMap, json['gender'],
+        unknownValue: PersonGender.unknown),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
@@ -998,7 +1005,7 @@ Map<String, dynamic> _$_$_PractitionerToJson(_$_Practitioner instance) {
   writeNotNull('name', instance.name?.map((e) => e?.toJson())?.toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address?.map((e) => e?.toJson())?.toList());
-  writeNotNull('gender', _$PractitionerGenderEnumMap[instance.gender]);
+  writeNotNull('gender', _$PersonGenderEnumMap[instance.gender]);
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('photo', instance.photo?.map((e) => e?.toJson())?.toList());
   writeNotNull('qualification',
@@ -1007,13 +1014,6 @@ Map<String, dynamic> _$_$_PractitionerToJson(_$_Practitioner instance) {
       instance.communication?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$PractitionerGenderEnumMap = {
-  PractitionerGender.male: 'male',
-  PractitionerGender.female: 'female',
-  PractitionerGender.other: 'other',
-  PractitionerGender.unknown: 'unknown',
-};
 
 _$_PractitionerQualification _$_$_PractitionerQualificationFromJson(
     Map<String, dynamic> json) {
@@ -1116,7 +1116,8 @@ _$_RelatedPerson _$_$_RelatedPersonFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    gender: _$enumDecodeNullable(_$RelatedPersonGenderEnumMap, json['gender']),
+    gender: _$enumDecodeNullable(_$PersonGenderEnumMap, json['gender'],
+        unknownValue: PersonGender.unknown),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
@@ -1167,7 +1168,7 @@ Map<String, dynamic> _$_$_RelatedPersonToJson(_$_RelatedPerson instance) {
       'relationship', instance.relationship?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name?.map((e) => e?.toJson())?.toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
-  writeNotNull('gender', _$RelatedPersonGenderEnumMap[instance.gender]);
+  writeNotNull('gender', _$PersonGenderEnumMap[instance.gender]);
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('address', instance.address?.map((e) => e?.toJson())?.toList());
   writeNotNull('photo', instance.photo?.map((e) => e?.toJson())?.toList());
@@ -1176,13 +1177,6 @@ Map<String, dynamic> _$_$_RelatedPersonToJson(_$_RelatedPerson instance) {
       instance.communication?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$RelatedPersonGenderEnumMap = {
-  RelatedPersonGender.male: 'male',
-  RelatedPersonGender.female: 'female',
-  RelatedPersonGender.other: 'other',
-  RelatedPersonGender.unknown: 'unknown',
-};
 
 _$_RelatedPersonCommunication _$_$_RelatedPersonCommunicationFromJson(
     Map<String, dynamic> json) {

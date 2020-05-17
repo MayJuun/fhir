@@ -23,10 +23,12 @@ class _$VisionPrescriptionTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: VisionPrescriptionStatus.unknown)
+          VisionPrescriptionStatus status,
       FhirDateTime created,
       Reference patient,
       Reference encounter,
@@ -70,7 +72,8 @@ mixin _$VisionPrescription {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
-  Code get status;
+  @JsonKey(unknownEnumValue: VisionPrescriptionStatus.unknown)
+  VisionPrescriptionStatus get status;
   FhirDateTime get created;
   Reference get patient;
   Reference get encounter;
@@ -94,10 +97,12 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: VisionPrescriptionStatus.unknown)
+          VisionPrescriptionStatus status,
       FhirDateTime created,
       Reference patient,
       Reference encounter,
@@ -162,7 +167,9 @@ class _$VisionPrescriptionCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as VisionPrescriptionStatus,
       created: created == freezed ? _value.created : created as FhirDateTime,
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
@@ -243,10 +250,12 @@ abstract class _$VisionPrescriptionCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      Code status,
+      @JsonKey(unknownEnumValue: VisionPrescriptionStatus.unknown)
+          VisionPrescriptionStatus status,
       FhirDateTime created,
       Reference patient,
       Reference encounter,
@@ -318,7 +327,9 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+      status: status == freezed
+          ? _value.status
+          : status as VisionPrescriptionStatus,
       created: created == freezed ? _value.created : created as FhirDateTime,
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
@@ -348,7 +359,7 @@ class _$_VisionPrescription implements _VisionPrescription {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: VisionPrescriptionStatus.unknown) this.status,
       this.created,
       this.patient,
       this.encounter,
@@ -381,7 +392,8 @@ class _$_VisionPrescription implements _VisionPrescription {
   @override
   final List<Identifier> identifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: VisionPrescriptionStatus.unknown)
+  final VisionPrescriptionStatus status;
   @override
   final FhirDateTime created;
   @override
@@ -493,10 +505,12 @@ abstract class _VisionPrescription implements VisionPrescription {
           Code language,
           Narrative text,
           List<dynamic> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> fhirExtension,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
-          Code status,
+          @JsonKey(unknownEnumValue: VisionPrescriptionStatus.unknown)
+              VisionPrescriptionStatus status,
           FhirDateTime created,
           Reference patient,
           Reference encounter,
@@ -530,7 +544,8 @@ abstract class _VisionPrescription implements VisionPrescription {
   @override
   List<Identifier> get identifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: VisionPrescriptionStatus.unknown)
+  VisionPrescriptionStatus get status;
   @override
   FhirDateTime get created;
   @override
@@ -557,14 +572,16 @@ class _$VisionPrescriptionLensSpecificationTearOff {
 
   _VisionPrescriptionLensSpecification call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept product,
-      VisionPrescriptionLensSpecificationEye eye,
+      @JsonKey(unknownEnumValue: LensSpecificationEye.unknown)
+          LensSpecificationEye eye,
       double sphere,
       double cylinder,
       int axis,
-      List<VisionPrescriptionPrism> prism,
+      List<LensSpecificationPrism> prism,
       double add,
       double power,
       double backCurve,
@@ -605,11 +622,12 @@ mixin _$VisionPrescriptionLensSpecification {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   CodeableConcept get product;
-  VisionPrescriptionLensSpecificationEye get eye;
+  @JsonKey(unknownEnumValue: LensSpecificationEye.unknown)
+  LensSpecificationEye get eye;
   double get sphere;
   double get cylinder;
   int get axis;
-  List<VisionPrescriptionPrism> get prism;
+  List<LensSpecificationPrism> get prism;
   double get add;
   double get power;
   double get backCurve;
@@ -631,14 +649,16 @@ abstract class $VisionPrescriptionLensSpecificationCopyWith<$Res> {
       _$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept product,
-      VisionPrescriptionLensSpecificationEye eye,
+      @JsonKey(unknownEnumValue: LensSpecificationEye.unknown)
+          LensSpecificationEye eye,
       double sphere,
       double cylinder,
       int axis,
-      List<VisionPrescriptionPrism> prism,
+      List<LensSpecificationPrism> prism,
       double add,
       double power,
       double backCurve,
@@ -689,15 +709,13 @@ class _$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       product: product == freezed ? _value.product : product as CodeableConcept,
-      eye: eye == freezed
-          ? _value.eye
-          : eye as VisionPrescriptionLensSpecificationEye,
+      eye: eye == freezed ? _value.eye : eye as LensSpecificationEye,
       sphere: sphere == freezed ? _value.sphere : sphere as double,
       cylinder: cylinder == freezed ? _value.cylinder : cylinder as double,
       axis: axis == freezed ? _value.axis : axis as int,
       prism: prism == freezed
           ? _value.prism
-          : prism as List<VisionPrescriptionPrism>,
+          : prism as List<LensSpecificationPrism>,
       add: add == freezed ? _value.add : add as double,
       power: power == freezed ? _value.power : power as double,
       backCurve: backCurve == freezed ? _value.backCurve : backCurve as double,
@@ -739,14 +757,16 @@ abstract class _$VisionPrescriptionLensSpecificationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept product,
-      VisionPrescriptionLensSpecificationEye eye,
+      @JsonKey(unknownEnumValue: LensSpecificationEye.unknown)
+          LensSpecificationEye eye,
       double sphere,
       double cylinder,
       int axis,
-      List<VisionPrescriptionPrism> prism,
+      List<LensSpecificationPrism> prism,
       double add,
       double power,
       double backCurve,
@@ -803,15 +823,13 @@ class __$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       product: product == freezed ? _value.product : product as CodeableConcept,
-      eye: eye == freezed
-          ? _value.eye
-          : eye as VisionPrescriptionLensSpecificationEye,
+      eye: eye == freezed ? _value.eye : eye as LensSpecificationEye,
       sphere: sphere == freezed ? _value.sphere : sphere as double,
       cylinder: cylinder == freezed ? _value.cylinder : cylinder as double,
       axis: axis == freezed ? _value.axis : axis as int,
       prism: prism == freezed
           ? _value.prism
-          : prism as List<VisionPrescriptionPrism>,
+          : prism as List<LensSpecificationPrism>,
       add: add == freezed ? _value.add : add as double,
       power: power == freezed ? _value.power : power as double,
       backCurve: backCurve == freezed ? _value.backCurve : backCurve as double,
@@ -832,7 +850,7 @@ class _$_VisionPrescriptionLensSpecification
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.product,
-      this.eye,
+      @JsonKey(unknownEnumValue: LensSpecificationEye.unknown) this.eye,
       this.sphere,
       this.cylinder,
       this.axis,
@@ -860,7 +878,8 @@ class _$_VisionPrescriptionLensSpecification
   @override
   final CodeableConcept product;
   @override
-  final VisionPrescriptionLensSpecificationEye eye;
+  @JsonKey(unknownEnumValue: LensSpecificationEye.unknown)
+  final LensSpecificationEye eye;
   @override
   final double sphere;
   @override
@@ -868,7 +887,7 @@ class _$_VisionPrescriptionLensSpecification
   @override
   final int axis;
   @override
-  final List<VisionPrescriptionPrism> prism;
+  final List<LensSpecificationPrism> prism;
   @override
   final double add;
   @override
@@ -975,14 +994,16 @@ abstract class _VisionPrescriptionLensSpecification
     implements VisionPrescriptionLensSpecification {
   const factory _VisionPrescriptionLensSpecification(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       CodeableConcept product,
-      VisionPrescriptionLensSpecificationEye eye,
+      @JsonKey(unknownEnumValue: LensSpecificationEye.unknown)
+          LensSpecificationEye eye,
       double sphere,
       double cylinder,
       int axis,
-      List<VisionPrescriptionPrism> prism,
+      List<LensSpecificationPrism> prism,
       double add,
       double power,
       double backCurve,
@@ -1006,7 +1027,8 @@ abstract class _VisionPrescriptionLensSpecification
   @override
   CodeableConcept get product;
   @override
-  VisionPrescriptionLensSpecificationEye get eye;
+  @JsonKey(unknownEnumValue: LensSpecificationEye.unknown)
+  LensSpecificationEye get eye;
   @override
   double get sphere;
   @override
@@ -1014,7 +1036,7 @@ abstract class _VisionPrescriptionLensSpecification
   @override
   int get axis;
   @override
-  List<VisionPrescriptionPrism> get prism;
+  List<LensSpecificationPrism> get prism;
   @override
   double get add;
   @override
@@ -1036,21 +1058,21 @@ abstract class _VisionPrescriptionLensSpecification
       _VisionPrescriptionLensSpecification> get copyWith;
 }
 
-VisionPrescriptionPrism _$VisionPrescriptionPrismFromJson(
+LensSpecificationPrism _$LensSpecificationPrismFromJson(
     Map<String, dynamic> json) {
-  return _VisionPrescriptionPrism.fromJson(json);
+  return _LensSpecificationPrism.fromJson(json);
 }
 
-class _$VisionPrescriptionPrismTearOff {
-  const _$VisionPrescriptionPrismTearOff();
+class _$LensSpecificationPrismTearOff {
+  const _$LensSpecificationPrismTearOff();
 
-  _VisionPrescriptionPrism call(
+  _LensSpecificationPrism call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       double amount,
-      VisionPrescriptionPrismBase base}) {
-    return _VisionPrescriptionPrism(
+      PrismBase base}) {
+    return _LensSpecificationPrism(
       id: id,
       fhirExtension: fhirExtension,
       modifierExtension: modifierExtension,
@@ -1061,39 +1083,39 @@ class _$VisionPrescriptionPrismTearOff {
 }
 
 // ignore: unused_element
-const $VisionPrescriptionPrism = _$VisionPrescriptionPrismTearOff();
+const $LensSpecificationPrism = _$LensSpecificationPrismTearOff();
 
-mixin _$VisionPrescriptionPrism {
+mixin _$LensSpecificationPrism {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   double get amount;
-  VisionPrescriptionPrismBase get base;
+  PrismBase get base;
 
   Map<String, dynamic> toJson();
-  $VisionPrescriptionPrismCopyWith<VisionPrescriptionPrism> get copyWith;
+  $LensSpecificationPrismCopyWith<LensSpecificationPrism> get copyWith;
 }
 
-abstract class $VisionPrescriptionPrismCopyWith<$Res> {
-  factory $VisionPrescriptionPrismCopyWith(VisionPrescriptionPrism value,
-          $Res Function(VisionPrescriptionPrism) then) =
-      _$VisionPrescriptionPrismCopyWithImpl<$Res>;
+abstract class $LensSpecificationPrismCopyWith<$Res> {
+  factory $LensSpecificationPrismCopyWith(LensSpecificationPrism value,
+          $Res Function(LensSpecificationPrism) then) =
+      _$LensSpecificationPrismCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       double amount,
-      VisionPrescriptionPrismBase base});
+      PrismBase base});
 }
 
-class _$VisionPrescriptionPrismCopyWithImpl<$Res>
-    implements $VisionPrescriptionPrismCopyWith<$Res> {
-  _$VisionPrescriptionPrismCopyWithImpl(this._value, this._then);
+class _$LensSpecificationPrismCopyWithImpl<$Res>
+    implements $LensSpecificationPrismCopyWith<$Res> {
+  _$LensSpecificationPrismCopyWithImpl(this._value, this._then);
 
-  final VisionPrescriptionPrism _value;
+  final LensSpecificationPrism _value;
   // ignore: unused_field
-  final $Res Function(VisionPrescriptionPrism) _then;
+  final $Res Function(LensSpecificationPrism) _then;
 
   @override
   $Res call({
@@ -1112,35 +1134,34 @@ class _$VisionPrescriptionPrismCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       amount: amount == freezed ? _value.amount : amount as double,
-      base: base == freezed ? _value.base : base as VisionPrescriptionPrismBase,
+      base: base == freezed ? _value.base : base as PrismBase,
     ));
   }
 }
 
-abstract class _$VisionPrescriptionPrismCopyWith<$Res>
-    implements $VisionPrescriptionPrismCopyWith<$Res> {
-  factory _$VisionPrescriptionPrismCopyWith(_VisionPrescriptionPrism value,
-          $Res Function(_VisionPrescriptionPrism) then) =
-      __$VisionPrescriptionPrismCopyWithImpl<$Res>;
+abstract class _$LensSpecificationPrismCopyWith<$Res>
+    implements $LensSpecificationPrismCopyWith<$Res> {
+  factory _$LensSpecificationPrismCopyWith(_LensSpecificationPrism value,
+          $Res Function(_LensSpecificationPrism) then) =
+      __$LensSpecificationPrismCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       double amount,
-      VisionPrescriptionPrismBase base});
+      PrismBase base});
 }
 
-class __$VisionPrescriptionPrismCopyWithImpl<$Res>
-    extends _$VisionPrescriptionPrismCopyWithImpl<$Res>
-    implements _$VisionPrescriptionPrismCopyWith<$Res> {
-  __$VisionPrescriptionPrismCopyWithImpl(_VisionPrescriptionPrism _value,
-      $Res Function(_VisionPrescriptionPrism) _then)
-      : super(_value, (v) => _then(v as _VisionPrescriptionPrism));
+class __$LensSpecificationPrismCopyWithImpl<$Res>
+    extends _$LensSpecificationPrismCopyWithImpl<$Res>
+    implements _$LensSpecificationPrismCopyWith<$Res> {
+  __$LensSpecificationPrismCopyWithImpl(_LensSpecificationPrism _value,
+      $Res Function(_LensSpecificationPrism) _then)
+      : super(_value, (v) => _then(v as _LensSpecificationPrism));
 
   @override
-  _VisionPrescriptionPrism get _value =>
-      super._value as _VisionPrescriptionPrism;
+  _LensSpecificationPrism get _value => super._value as _LensSpecificationPrism;
 
   @override
   $Res call({
@@ -1150,7 +1171,7 @@ class __$VisionPrescriptionPrismCopyWithImpl<$Res>
     Object amount = freezed,
     Object base = freezed,
   }) {
-    return _then(_VisionPrescriptionPrism(
+    return _then(_LensSpecificationPrism(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -1159,22 +1180,22 @@ class __$VisionPrescriptionPrismCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       amount: amount == freezed ? _value.amount : amount as double,
-      base: base == freezed ? _value.base : base as VisionPrescriptionPrismBase,
+      base: base == freezed ? _value.base : base as PrismBase,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_VisionPrescriptionPrism implements _VisionPrescriptionPrism {
-  const _$_VisionPrescriptionPrism(
+class _$_LensSpecificationPrism implements _LensSpecificationPrism {
+  const _$_LensSpecificationPrism(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.amount,
       this.base});
 
-  factory _$_VisionPrescriptionPrism.fromJson(Map<String, dynamic> json) =>
-      _$_$_VisionPrescriptionPrismFromJson(json);
+  factory _$_LensSpecificationPrism.fromJson(Map<String, dynamic> json) =>
+      _$_$_LensSpecificationPrismFromJson(json);
 
   @override
   final String id;
@@ -1186,17 +1207,17 @@ class _$_VisionPrescriptionPrism implements _VisionPrescriptionPrism {
   @override
   final double amount;
   @override
-  final VisionPrescriptionPrismBase base;
+  final PrismBase base;
 
   @override
   String toString() {
-    return 'VisionPrescriptionPrism(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, amount: $amount, base: $base)';
+    return 'LensSpecificationPrism(id: $id, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, amount: $amount, base: $base)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _VisionPrescriptionPrism &&
+        (other is _LensSpecificationPrism &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -1221,26 +1242,26 @@ class _$_VisionPrescriptionPrism implements _VisionPrescriptionPrism {
       const DeepCollectionEquality().hash(base);
 
   @override
-  _$VisionPrescriptionPrismCopyWith<_VisionPrescriptionPrism> get copyWith =>
-      __$VisionPrescriptionPrismCopyWithImpl<_VisionPrescriptionPrism>(
+  _$LensSpecificationPrismCopyWith<_LensSpecificationPrism> get copyWith =>
+      __$LensSpecificationPrismCopyWithImpl<_LensSpecificationPrism>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_VisionPrescriptionPrismToJson(this);
+    return _$_$_LensSpecificationPrismToJson(this);
   }
 }
 
-abstract class _VisionPrescriptionPrism implements VisionPrescriptionPrism {
-  const factory _VisionPrescriptionPrism(
+abstract class _LensSpecificationPrism implements LensSpecificationPrism {
+  const factory _LensSpecificationPrism(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       double amount,
-      VisionPrescriptionPrismBase base}) = _$_VisionPrescriptionPrism;
+      PrismBase base}) = _$_LensSpecificationPrism;
 
-  factory _VisionPrescriptionPrism.fromJson(Map<String, dynamic> json) =
-      _$_VisionPrescriptionPrism.fromJson;
+  factory _LensSpecificationPrism.fromJson(Map<String, dynamic> json) =
+      _$_LensSpecificationPrism.fromJson;
 
   @override
   String get id;
@@ -1252,9 +1273,9 @@ abstract class _VisionPrescriptionPrism implements VisionPrescriptionPrism {
   @override
   double get amount;
   @override
-  VisionPrescriptionPrismBase get base;
+  PrismBase get base;
   @override
-  _$VisionPrescriptionPrismCopyWith<_VisionPrescriptionPrism> get copyWith;
+  _$LensSpecificationPrismCopyWith<_LensSpecificationPrism> get copyWith;
 }
 
 RiskAssessment _$RiskAssessmentFromJson(Map<String, dynamic> json) {
@@ -1272,12 +1293,14 @@ class _$RiskAssessmentTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference basedOn,
       Reference parent,
-      Code status,
+      @JsonKey(unknownEnumValue: RiskAssessmentStatus.unknown)
+          RiskAssessmentStatus status,
       CodeableConcept method,
       CodeableConcept code,
       Reference subject,
@@ -1341,7 +1364,8 @@ mixin _$RiskAssessment {
   List<Identifier> get identifier;
   Reference get basedOn;
   Reference get parent;
-  Code get status;
+  @JsonKey(unknownEnumValue: RiskAssessmentStatus.unknown)
+  RiskAssessmentStatus get status;
   CodeableConcept get method;
   CodeableConcept get code;
   Reference get subject;
@@ -1373,12 +1397,14 @@ abstract class $RiskAssessmentCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference basedOn,
       Reference parent,
-      Code status,
+      @JsonKey(unknownEnumValue: RiskAssessmentStatus.unknown)
+          RiskAssessmentStatus status,
       CodeableConcept method,
       CodeableConcept code,
       Reference subject,
@@ -1469,7 +1495,8 @@ class _$RiskAssessmentCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as Reference,
       parent: parent == freezed ? _value.parent : parent as Reference,
-      status: status == freezed ? _value.status : status as Code,
+      status:
+          status == freezed ? _value.status : status as RiskAssessmentStatus,
       method: method == freezed ? _value.method : method as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
@@ -1626,12 +1653,14 @@ abstract class _$RiskAssessmentCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference basedOn,
       Reference parent,
-      Code status,
+      @JsonKey(unknownEnumValue: RiskAssessmentStatus.unknown)
+          RiskAssessmentStatus status,
       CodeableConcept method,
       CodeableConcept code,
       Reference subject,
@@ -1735,7 +1764,8 @@ class __$RiskAssessmentCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as Reference,
       parent: parent == freezed ? _value.parent : parent as Reference,
-      status: status == freezed ? _value.status : status as Code,
+      status:
+          status == freezed ? _value.status : status as RiskAssessmentStatus,
       method: method == freezed ? _value.method : method as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
@@ -1783,7 +1813,7 @@ class _$_RiskAssessment implements _RiskAssessment {
       this.identifier,
       this.basedOn,
       this.parent,
-      this.status,
+      @JsonKey(unknownEnumValue: RiskAssessmentStatus.unknown) this.status,
       this.method,
       this.code,
       this.subject,
@@ -1828,7 +1858,8 @@ class _$_RiskAssessment implements _RiskAssessment {
   @override
   final Reference parent;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: RiskAssessmentStatus.unknown)
+  final RiskAssessmentStatus status;
   @override
   final CodeableConcept method;
   @override
@@ -1989,12 +2020,14 @@ abstract class _RiskAssessment implements RiskAssessment {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference basedOn,
       Reference parent,
-      Code status,
+      @JsonKey(unknownEnumValue: RiskAssessmentStatus.unknown)
+          RiskAssessmentStatus status,
       CodeableConcept method,
       CodeableConcept code,
       Reference subject,
@@ -2039,7 +2072,8 @@ abstract class _RiskAssessment implements RiskAssessment {
   @override
   Reference get parent;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: RiskAssessmentStatus.unknown)
+  RiskAssessmentStatus get status;
   @override
   CodeableConcept get method;
   @override
@@ -2485,8 +2519,8 @@ class _$ServiceRequestTearOff {
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier requisition,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: OrderStatus.unknown) OrderStatus status,
+      @JsonKey(unknownEnumValue: OrderIntent.unknown) OrderIntent intent,
       List<CodeableConcept> category,
       Code priority,
       bool doNotPerform,
@@ -2589,8 +2623,10 @@ mixin _$ServiceRequest {
   List<Reference> get basedOn;
   List<Reference> get replaces;
   Identifier get requisition;
-  Code get status;
-  Code get intent;
+  @JsonKey(unknownEnumValue: OrderStatus.unknown)
+  OrderStatus get status;
+  @JsonKey(unknownEnumValue: OrderIntent.unknown)
+  OrderIntent get intent;
   List<CodeableConcept> get category;
   Code get priority;
   bool get doNotPerform;
@@ -2646,8 +2682,8 @@ abstract class $ServiceRequestCopyWith<$Res> {
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier requisition,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: OrderStatus.unknown) OrderStatus status,
+      @JsonKey(unknownEnumValue: OrderIntent.unknown) OrderIntent intent,
       List<CodeableConcept> category,
       Code priority,
       bool doNotPerform,
@@ -2787,8 +2823,8 @@ class _$ServiceRequestCopyWithImpl<$Res>
       requisition: requisition == freezed
           ? _value.requisition
           : requisition as Identifier,
-      status: status == freezed ? _value.status : status as Code,
-      intent: intent == freezed ? _value.intent : intent as Code,
+      status: status == freezed ? _value.status : status as OrderStatus,
+      intent: intent == freezed ? _value.intent : intent as OrderIntent,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
@@ -3034,8 +3070,8 @@ abstract class _$ServiceRequestCopyWith<$Res>
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier requisition,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: OrderStatus.unknown) OrderStatus status,
+      @JsonKey(unknownEnumValue: OrderIntent.unknown) OrderIntent intent,
       List<CodeableConcept> category,
       Code priority,
       bool doNotPerform,
@@ -3191,8 +3227,8 @@ class __$ServiceRequestCopyWithImpl<$Res>
       requisition: requisition == freezed
           ? _value.requisition
           : requisition as Identifier,
-      status: status == freezed ? _value.status : status as Code,
-      intent: intent == freezed ? _value.intent : intent as Code,
+      status: status == freezed ? _value.status : status as OrderStatus,
+      intent: intent == freezed ? _value.intent : intent as OrderIntent,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
@@ -3293,8 +3329,8 @@ class _$_ServiceRequest implements _ServiceRequest {
       this.basedOn,
       this.replaces,
       this.requisition,
-      this.status,
-      this.intent,
+      @JsonKey(unknownEnumValue: OrderStatus.unknown) this.status,
+      @JsonKey(unknownEnumValue: OrderIntent.unknown) this.intent,
       this.category,
       this.priority,
       this.doNotPerform,
@@ -3361,9 +3397,11 @@ class _$_ServiceRequest implements _ServiceRequest {
   @override
   final Identifier requisition;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: OrderStatus.unknown)
+  final OrderStatus status;
   @override
-  final Code intent;
+  @JsonKey(unknownEnumValue: OrderIntent.unknown)
+  final OrderIntent intent;
   @override
   final List<CodeableConcept> category;
   @override
@@ -3604,8 +3642,8 @@ abstract class _ServiceRequest implements ServiceRequest {
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier requisition,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: OrderStatus.unknown) OrderStatus status,
+      @JsonKey(unknownEnumValue: OrderIntent.unknown) OrderIntent intent,
       List<CodeableConcept> category,
       Code priority,
       bool doNotPerform,
@@ -3672,9 +3710,11 @@ abstract class _ServiceRequest implements ServiceRequest {
   @override
   Identifier get requisition;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: OrderStatus.unknown)
+  OrderStatus get status;
   @override
-  Code get intent;
+  @JsonKey(unknownEnumValue: OrderIntent.unknown)
+  OrderIntent get intent;
   @override
   List<CodeableConcept> get category;
   @override
@@ -3753,10 +3793,12 @@ class _$GoalTearOff {
       FhirUri implicitRules,
       Code language,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      GoalLifecycleStatus lifecycleStatus,
+      @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
+          GoalLifecycleStatus lifecycleStatus,
       CodeableConcept achievementStatus,
       List<CodeableConcept> category,
       CodeableConcept priority,
@@ -3816,6 +3858,7 @@ mixin _$Goal {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
   GoalLifecycleStatus get lifecycleStatus;
   CodeableConcept get achievementStatus;
   List<CodeableConcept> get category;
@@ -3847,10 +3890,12 @@ abstract class $GoalCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      GoalLifecycleStatus lifecycleStatus,
+      @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
+          GoalLifecycleStatus lifecycleStatus,
       CodeableConcept achievementStatus,
       List<CodeableConcept> category,
       CodeableConcept priority,
@@ -4055,10 +4100,12 @@ abstract class _$GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      GoalLifecycleStatus lifecycleStatus,
+      @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
+          GoalLifecycleStatus lifecycleStatus,
       CodeableConcept achievementStatus,
       List<CodeableConcept> category,
       CodeableConcept priority,
@@ -4199,10 +4246,12 @@ class _$_Goal implements _Goal {
       this.implicitRules,
       this.language,
       this.contained,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension')
+          this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.lifecycleStatus,
+      @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
+          this.lifecycleStatus,
       this.achievementStatus,
       this.category,
       this.priority,
@@ -4242,6 +4291,7 @@ class _$_Goal implements _Goal {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
   final GoalLifecycleStatus lifecycleStatus;
   @override
   final CodeableConcept achievementStatus;
@@ -4400,10 +4450,12 @@ abstract class _Goal implements Goal {
       FhirUri implicitRules,
       Code language,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      GoalLifecycleStatus lifecycleStatus,
+      @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
+          GoalLifecycleStatus lifecycleStatus,
       CodeableConcept achievementStatus,
       List<CodeableConcept> category,
       CodeableConcept priority,
@@ -4442,6 +4494,7 @@ abstract class _Goal implements Goal {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
   GoalLifecycleStatus get lifecycleStatus;
   @override
   CodeableConcept get achievementStatus;
@@ -4974,8 +5027,8 @@ class _$NutritionOrderTearOff {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<FhirUri> instantiates,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: OrderStatus.unknown) OrderStatus status,
+      @JsonKey(unknownEnumValue: OrderIntent.unknown) OrderIntent intent,
       Reference patient,
       FhirDateTime dateTime,
       Reference orderer,
@@ -5034,8 +5087,10 @@ mixin _$NutritionOrder {
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   List<FhirUri> get instantiates;
-  Code get status;
-  Code get intent;
+  @JsonKey(unknownEnumValue: OrderStatus.unknown)
+  OrderStatus get status;
+  @JsonKey(unknownEnumValue: OrderIntent.unknown)
+  OrderIntent get intent;
   Reference get patient;
   FhirDateTime get dateTime;
   Reference get orderer;
@@ -5069,8 +5124,8 @@ abstract class $NutritionOrderCopyWith<$Res> {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<FhirUri> instantiates,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: OrderStatus.unknown) OrderStatus status,
+      @JsonKey(unknownEnumValue: OrderIntent.unknown) OrderIntent intent,
       Reference patient,
       FhirDateTime dateTime,
       Reference orderer,
@@ -5157,8 +5212,8 @@ class _$NutritionOrderCopyWithImpl<$Res>
       instantiates: instantiates == freezed
           ? _value.instantiates
           : instantiates as List<FhirUri>,
-      status: status == freezed ? _value.status : status as Code,
-      intent: intent == freezed ? _value.intent : intent as Code,
+      status: status == freezed ? _value.status : status as OrderStatus,
+      intent: intent == freezed ? _value.intent : intent as OrderIntent,
       patient: patient == freezed ? _value.patient : patient as Reference,
       dateTime:
           dateTime == freezed ? _value.dateTime : dateTime as FhirDateTime,
@@ -5267,8 +5322,8 @@ abstract class _$NutritionOrderCopyWith<$Res>
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<FhirUri> instantiates,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: OrderStatus.unknown) OrderStatus status,
+      @JsonKey(unknownEnumValue: OrderIntent.unknown) OrderIntent intent,
       Reference patient,
       FhirDateTime dateTime,
       Reference orderer,
@@ -5363,8 +5418,8 @@ class __$NutritionOrderCopyWithImpl<$Res>
       instantiates: instantiates == freezed
           ? _value.instantiates
           : instantiates as List<FhirUri>,
-      status: status == freezed ? _value.status : status as Code,
-      intent: intent == freezed ? _value.intent : intent as Code,
+      status: status == freezed ? _value.status : status as OrderStatus,
+      intent: intent == freezed ? _value.intent : intent as OrderIntent,
       patient: patient == freezed ? _value.patient : patient as Reference,
       dateTime:
           dateTime == freezed ? _value.dateTime : dateTime as FhirDateTime,
@@ -5408,8 +5463,8 @@ class _$_NutritionOrder implements _NutritionOrder {
       this.instantiatesCanonical,
       this.instantiatesUri,
       this.instantiates,
-      this.status,
-      this.intent,
+      @JsonKey(unknownEnumValue: OrderStatus.unknown) this.status,
+      @JsonKey(unknownEnumValue: OrderIntent.unknown) this.intent,
       this.patient,
       this.dateTime,
       this.orderer,
@@ -5452,9 +5507,11 @@ class _$_NutritionOrder implements _NutritionOrder {
   @override
   final List<FhirUri> instantiates;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: OrderStatus.unknown)
+  final OrderStatus status;
   @override
-  final Code intent;
+  @JsonKey(unknownEnumValue: OrderIntent.unknown)
+  final OrderIntent intent;
   @override
   final Reference patient;
   @override
@@ -5608,8 +5665,8 @@ abstract class _NutritionOrder implements NutritionOrder {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<FhirUri> instantiates,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: OrderStatus.unknown) OrderStatus status,
+      @JsonKey(unknownEnumValue: OrderIntent.unknown) OrderIntent intent,
       Reference patient,
       FhirDateTime dateTime,
       Reference orderer,
@@ -5652,9 +5709,11 @@ abstract class _NutritionOrder implements NutritionOrder {
   @override
   List<FhirUri> get instantiates;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: OrderStatus.unknown)
+  OrderStatus get status;
   @override
-  Code get intent;
+  @JsonKey(unknownEnumValue: OrderIntent.unknown)
+  OrderIntent get intent;
   @override
   Reference get patient;
   @override
@@ -7577,8 +7636,8 @@ class _$CarePlanTearOff {
       List<Reference> basedOn,
       List<Reference> replaces,
       List<Reference> partOf,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: CarePlanStatus.unknown) CarePlanStatus status,
+      @JsonKey(unknownEnumValue: CarePlanIntent.unknown) CarePlanIntent intent,
       List<CodeableConcept> category,
       String title,
       String description,
@@ -7647,8 +7706,10 @@ mixin _$CarePlan {
   List<Reference> get basedOn;
   List<Reference> get replaces;
   List<Reference> get partOf;
-  Code get status;
-  Code get intent;
+  @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
+  CarePlanStatus get status;
+  @JsonKey(unknownEnumValue: CarePlanIntent.unknown)
+  CarePlanIntent get intent;
   List<CodeableConcept> get category;
   String get title;
   String get description;
@@ -7686,8 +7747,8 @@ abstract class $CarePlanCopyWith<$Res> {
       List<Reference> basedOn,
       List<Reference> replaces,
       List<Reference> partOf,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: CarePlanStatus.unknown) CarePlanStatus status,
+      @JsonKey(unknownEnumValue: CarePlanIntent.unknown) CarePlanIntent intent,
       List<CodeableConcept> category,
       String title,
       String description,
@@ -7780,8 +7841,8 @@ class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
-      intent: intent == freezed ? _value.intent : intent as Code,
+      status: status == freezed ? _value.status : status as CarePlanStatus,
+      intent: intent == freezed ? _value.intent : intent as CarePlanIntent,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
@@ -7890,8 +7951,8 @@ abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
       List<Reference> basedOn,
       List<Reference> replaces,
       List<Reference> partOf,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: CarePlanStatus.unknown) CarePlanStatus status,
+      @JsonKey(unknownEnumValue: CarePlanIntent.unknown) CarePlanIntent intent,
       List<CodeableConcept> category,
       String title,
       String description,
@@ -7991,8 +8052,8 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as Code,
-      intent: intent == freezed ? _value.intent : intent as Code,
+      status: status == freezed ? _value.status : status as CarePlanStatus,
+      intent: intent == freezed ? _value.intent : intent as CarePlanIntent,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
@@ -8039,8 +8100,8 @@ class _$_CarePlan implements _CarePlan {
       this.basedOn,
       this.replaces,
       this.partOf,
-      this.status,
-      this.intent,
+      @JsonKey(unknownEnumValue: CarePlanStatus.unknown) this.status,
+      @JsonKey(unknownEnumValue: CarePlanIntent.unknown) this.intent,
       this.category,
       this.title,
       this.description,
@@ -8089,9 +8150,11 @@ class _$_CarePlan implements _CarePlan {
   @override
   final List<Reference> partOf;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
+  final CarePlanStatus status;
   @override
-  final Code intent;
+  @JsonKey(unknownEnumValue: CarePlanIntent.unknown)
+  final CarePlanIntent intent;
   @override
   final List<CodeableConcept> category;
   @override
@@ -8265,8 +8328,8 @@ abstract class _CarePlan implements CarePlan {
       List<Reference> basedOn,
       List<Reference> replaces,
       List<Reference> partOf,
-      Code status,
-      Code intent,
+      @JsonKey(unknownEnumValue: CarePlanStatus.unknown) CarePlanStatus status,
+      @JsonKey(unknownEnumValue: CarePlanIntent.unknown) CarePlanIntent intent,
       List<CodeableConcept> category,
       String title,
       String description,
@@ -8314,9 +8377,11 @@ abstract class _CarePlan implements CarePlan {
   @override
   List<Reference> get partOf;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
+  CarePlanStatus get status;
   @override
-  Code get intent;
+  @JsonKey(unknownEnumValue: CarePlanIntent.unknown)
+  CarePlanIntent get intent;
   @override
   List<CodeableConcept> get category;
   @override
@@ -8363,7 +8428,7 @@ class _$CarePlanActivityTearOff {
       List<CodeableConcept> outcomeCodeableConcept,
       List<Annotation> progress,
       Reference reference,
-      CarePlanDetail detail}) {
+      ActivityDetail detail}) {
     return _CarePlanActivity(
       id: id,
       fhirExtension: fhirExtension,
@@ -8387,7 +8452,7 @@ mixin _$CarePlanActivity {
   List<CodeableConcept> get outcomeCodeableConcept;
   List<Annotation> get progress;
   Reference get reference;
-  CarePlanDetail get detail;
+  ActivityDetail get detail;
 
   Map<String, dynamic> toJson();
   $CarePlanActivityCopyWith<CarePlanActivity> get copyWith;
@@ -8404,10 +8469,10 @@ abstract class $CarePlanActivityCopyWith<$Res> {
       List<CodeableConcept> outcomeCodeableConcept,
       List<Annotation> progress,
       Reference reference,
-      CarePlanDetail detail});
+      ActivityDetail detail});
 
   $ReferenceCopyWith<$Res> get reference;
-  $CarePlanDetailCopyWith<$Res> get detail;
+  $ActivityDetailCopyWith<$Res> get detail;
 }
 
 class _$CarePlanActivityCopyWithImpl<$Res>
@@ -8443,7 +8508,7 @@ class _$CarePlanActivityCopyWithImpl<$Res>
           progress == freezed ? _value.progress : progress as List<Annotation>,
       reference:
           reference == freezed ? _value.reference : reference as Reference,
-      detail: detail == freezed ? _value.detail : detail as CarePlanDetail,
+      detail: detail == freezed ? _value.detail : detail as ActivityDetail,
     ));
   }
 
@@ -8458,11 +8523,11 @@ class _$CarePlanActivityCopyWithImpl<$Res>
   }
 
   @override
-  $CarePlanDetailCopyWith<$Res> get detail {
+  $ActivityDetailCopyWith<$Res> get detail {
     if (_value.detail == null) {
       return null;
     }
-    return $CarePlanDetailCopyWith<$Res>(_value.detail, (value) {
+    return $ActivityDetailCopyWith<$Res>(_value.detail, (value) {
       return _then(_value.copyWith(detail: value));
     });
   }
@@ -8481,12 +8546,12 @@ abstract class _$CarePlanActivityCopyWith<$Res>
       List<CodeableConcept> outcomeCodeableConcept,
       List<Annotation> progress,
       Reference reference,
-      CarePlanDetail detail});
+      ActivityDetail detail});
 
   @override
   $ReferenceCopyWith<$Res> get reference;
   @override
-  $CarePlanDetailCopyWith<$Res> get detail;
+  $ActivityDetailCopyWith<$Res> get detail;
 }
 
 class __$CarePlanActivityCopyWithImpl<$Res>
@@ -8524,7 +8589,7 @@ class __$CarePlanActivityCopyWithImpl<$Res>
           progress == freezed ? _value.progress : progress as List<Annotation>,
       reference:
           reference == freezed ? _value.reference : reference as Reference,
-      detail: detail == freezed ? _value.detail : detail as CarePlanDetail,
+      detail: detail == freezed ? _value.detail : detail as ActivityDetail,
     ));
   }
 }
@@ -8557,7 +8622,7 @@ class _$_CarePlanActivity implements _CarePlanActivity {
   @override
   final Reference reference;
   @override
-  final CarePlanDetail detail;
+  final ActivityDetail detail;
 
   @override
   String toString() {
@@ -8618,7 +8683,7 @@ abstract class _CarePlanActivity implements CarePlanActivity {
       List<CodeableConcept> outcomeCodeableConcept,
       List<Annotation> progress,
       Reference reference,
-      CarePlanDetail detail}) = _$_CarePlanActivity;
+      ActivityDetail detail}) = _$_CarePlanActivity;
 
   factory _CarePlanActivity.fromJson(Map<String, dynamic> json) =
       _$_CarePlanActivity.fromJson;
@@ -8637,19 +8702,19 @@ abstract class _CarePlanActivity implements CarePlanActivity {
   @override
   Reference get reference;
   @override
-  CarePlanDetail get detail;
+  ActivityDetail get detail;
   @override
   _$CarePlanActivityCopyWith<_CarePlanActivity> get copyWith;
 }
 
-CarePlanDetail _$CarePlanDetailFromJson(Map<String, dynamic> json) {
-  return _CarePlanDetail.fromJson(json);
+ActivityDetail _$ActivityDetailFromJson(Map<String, dynamic> json) {
+  return _ActivityDetail.fromJson(json);
 }
 
-class _$CarePlanDetailTearOff {
-  const _$CarePlanDetailTearOff();
+class _$ActivityDetailTearOff {
+  const _$ActivityDetailTearOff();
 
-  _CarePlanDetail call(
+  _ActivityDetail call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code kind,
@@ -8659,7 +8724,7 @@ class _$CarePlanDetailTearOff {
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      CarePlanDetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
       bool doNotPerform,
       Timing scheduledTiming,
@@ -8672,7 +8737,7 @@ class _$CarePlanDetailTearOff {
       Quantity dailyAmount,
       Quantity quantity,
       String description}) {
-    return _CarePlanDetail(
+    return _ActivityDetail(
       id: id,
       fhirExtension: fhirExtension,
       kind: kind,
@@ -8700,9 +8765,9 @@ class _$CarePlanDetailTearOff {
 }
 
 // ignore: unused_element
-const $CarePlanDetail = _$CarePlanDetailTearOff();
+const $ActivityDetail = _$ActivityDetailTearOff();
 
-mixin _$CarePlanDetail {
+mixin _$ActivityDetail {
   String get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get fhirExtension;
@@ -8713,7 +8778,8 @@ mixin _$CarePlanDetail {
   List<CodeableConcept> get reasonCode;
   List<Reference> get reasonReference;
   List<Reference> get goal;
-  CarePlanDetailStatus get status;
+  @JsonKey(unknownEnumValue: DetailStatus.unknown)
+  DetailStatus get status;
   CodeableConcept get statusReason;
   bool get doNotPerform;
   Timing get scheduledTiming;
@@ -8728,13 +8794,13 @@ mixin _$CarePlanDetail {
   String get description;
 
   Map<String, dynamic> toJson();
-  $CarePlanDetailCopyWith<CarePlanDetail> get copyWith;
+  $ActivityDetailCopyWith<ActivityDetail> get copyWith;
 }
 
-abstract class $CarePlanDetailCopyWith<$Res> {
-  factory $CarePlanDetailCopyWith(
-          CarePlanDetail value, $Res Function(CarePlanDetail) then) =
-      _$CarePlanDetailCopyWithImpl<$Res>;
+abstract class $ActivityDetailCopyWith<$Res> {
+  factory $ActivityDetailCopyWith(
+          ActivityDetail value, $Res Function(ActivityDetail) then) =
+      _$ActivityDetailCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
@@ -8745,7 +8811,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      CarePlanDetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
       bool doNotPerform,
       Timing scheduledTiming,
@@ -8770,13 +8836,13 @@ abstract class $CarePlanDetailCopyWith<$Res> {
   $QuantityCopyWith<$Res> get quantity;
 }
 
-class _$CarePlanDetailCopyWithImpl<$Res>
-    implements $CarePlanDetailCopyWith<$Res> {
-  _$CarePlanDetailCopyWithImpl(this._value, this._then);
+class _$ActivityDetailCopyWithImpl<$Res>
+    implements $ActivityDetailCopyWith<$Res> {
+  _$ActivityDetailCopyWithImpl(this._value, this._then);
 
-  final CarePlanDetail _value;
+  final ActivityDetail _value;
   // ignore: unused_field
-  final $Res Function(CarePlanDetail) _then;
+  final $Res Function(ActivityDetail) _then;
 
   @override
   $Res call({
@@ -8823,8 +8889,7 @@ class _$CarePlanDetailCopyWithImpl<$Res>
           ? _value.reasonReference
           : reasonReference as List<Reference>,
       goal: goal == freezed ? _value.goal : goal as List<Reference>,
-      status:
-          status == freezed ? _value.status : status as CarePlanDetailStatus,
+      status: status == freezed ? _value.status : status as DetailStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
@@ -8949,11 +9014,11 @@ class _$CarePlanDetailCopyWithImpl<$Res>
   }
 }
 
-abstract class _$CarePlanDetailCopyWith<$Res>
-    implements $CarePlanDetailCopyWith<$Res> {
-  factory _$CarePlanDetailCopyWith(
-          _CarePlanDetail value, $Res Function(_CarePlanDetail) then) =
-      __$CarePlanDetailCopyWithImpl<$Res>;
+abstract class _$ActivityDetailCopyWith<$Res>
+    implements $ActivityDetailCopyWith<$Res> {
+  factory _$ActivityDetailCopyWith(
+          _ActivityDetail value, $Res Function(_ActivityDetail) then) =
+      __$ActivityDetailCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -8965,7 +9030,7 @@ abstract class _$CarePlanDetailCopyWith<$Res>
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      CarePlanDetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
       bool doNotPerform,
       Timing scheduledTiming,
@@ -8999,15 +9064,15 @@ abstract class _$CarePlanDetailCopyWith<$Res>
   $QuantityCopyWith<$Res> get quantity;
 }
 
-class __$CarePlanDetailCopyWithImpl<$Res>
-    extends _$CarePlanDetailCopyWithImpl<$Res>
-    implements _$CarePlanDetailCopyWith<$Res> {
-  __$CarePlanDetailCopyWithImpl(
-      _CarePlanDetail _value, $Res Function(_CarePlanDetail) _then)
-      : super(_value, (v) => _then(v as _CarePlanDetail));
+class __$ActivityDetailCopyWithImpl<$Res>
+    extends _$ActivityDetailCopyWithImpl<$Res>
+    implements _$ActivityDetailCopyWith<$Res> {
+  __$ActivityDetailCopyWithImpl(
+      _ActivityDetail _value, $Res Function(_ActivityDetail) _then)
+      : super(_value, (v) => _then(v as _ActivityDetail));
 
   @override
-  _CarePlanDetail get _value => super._value as _CarePlanDetail;
+  _ActivityDetail get _value => super._value as _ActivityDetail;
 
   @override
   $Res call({
@@ -9034,7 +9099,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
     Object quantity = freezed,
     Object description = freezed,
   }) {
-    return _then(_CarePlanDetail(
+    return _then(_ActivityDetail(
       id: id == freezed ? _value.id : id as String,
       fhirExtension: fhirExtension == freezed
           ? _value.fhirExtension
@@ -9054,8 +9119,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
           ? _value.reasonReference
           : reasonReference as List<Reference>,
       goal: goal == freezed ? _value.goal : goal as List<Reference>,
-      status:
-          status == freezed ? _value.status : status as CarePlanDetailStatus,
+      status: status == freezed ? _value.status : status as DetailStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
@@ -9090,8 +9154,8 @@ class __$CarePlanDetailCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CarePlanDetail implements _CarePlanDetail {
-  const _$_CarePlanDetail(
+class _$_ActivityDetail implements _ActivityDetail {
+  const _$_ActivityDetail(
       {this.id,
       @JsonKey(name: 'extension') this.fhirExtension,
       this.kind,
@@ -9101,7 +9165,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
       this.reasonCode,
       this.reasonReference,
       this.goal,
-      this.status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown) this.status,
       this.statusReason,
       this.doNotPerform,
       this.scheduledTiming,
@@ -9115,8 +9179,8 @@ class _$_CarePlanDetail implements _CarePlanDetail {
       this.quantity,
       this.description});
 
-  factory _$_CarePlanDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_CarePlanDetailFromJson(json);
+  factory _$_ActivityDetail.fromJson(Map<String, dynamic> json) =>
+      _$_$_ActivityDetailFromJson(json);
 
   @override
   final String id;
@@ -9138,7 +9202,8 @@ class _$_CarePlanDetail implements _CarePlanDetail {
   @override
   final List<Reference> goal;
   @override
-  final CarePlanDetailStatus status;
+  @JsonKey(unknownEnumValue: DetailStatus.unknown)
+  final DetailStatus status;
   @override
   final CodeableConcept statusReason;
   @override
@@ -9166,13 +9231,13 @@ class _$_CarePlanDetail implements _CarePlanDetail {
 
   @override
   String toString() {
-    return 'CarePlanDetail(id: $id, fhirExtension: $fhirExtension, kind: $kind, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, code: $code, reasonCode: $reasonCode, reasonReference: $reasonReference, goal: $goal, status: $status, statusReason: $statusReason, doNotPerform: $doNotPerform, scheduledTiming: $scheduledTiming, scheduledPeriod: $scheduledPeriod, scheduledString: $scheduledString, location: $location, performer: $performer, productCodeableConcept: $productCodeableConcept, productReference: $productReference, dailyAmount: $dailyAmount, quantity: $quantity, description: $description)';
+    return 'ActivityDetail(id: $id, fhirExtension: $fhirExtension, kind: $kind, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, code: $code, reasonCode: $reasonCode, reasonReference: $reasonReference, goal: $goal, status: $status, statusReason: $statusReason, doNotPerform: $doNotPerform, scheduledTiming: $scheduledTiming, scheduledPeriod: $scheduledPeriod, scheduledString: $scheduledString, location: $location, performer: $performer, productCodeableConcept: $productCodeableConcept, productReference: $productReference, dailyAmount: $dailyAmount, quantity: $quantity, description: $description)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CarePlanDetail &&
+        (other is _ActivityDetail &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.fhirExtension, fhirExtension) ||
@@ -9263,17 +9328,17 @@ class _$_CarePlanDetail implements _CarePlanDetail {
       const DeepCollectionEquality().hash(description);
 
   @override
-  _$CarePlanDetailCopyWith<_CarePlanDetail> get copyWith =>
-      __$CarePlanDetailCopyWithImpl<_CarePlanDetail>(this, _$identity);
+  _$ActivityDetailCopyWith<_ActivityDetail> get copyWith =>
+      __$ActivityDetailCopyWithImpl<_ActivityDetail>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CarePlanDetailToJson(this);
+    return _$_$_ActivityDetailToJson(this);
   }
 }
 
-abstract class _CarePlanDetail implements CarePlanDetail {
-  const factory _CarePlanDetail(
+abstract class _ActivityDetail implements ActivityDetail {
+  const factory _ActivityDetail(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       Code kind,
@@ -9283,7 +9348,7 @@ abstract class _CarePlanDetail implements CarePlanDetail {
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      CarePlanDetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
       bool doNotPerform,
       Timing scheduledTiming,
@@ -9295,10 +9360,10 @@ abstract class _CarePlanDetail implements CarePlanDetail {
       Reference productReference,
       Quantity dailyAmount,
       Quantity quantity,
-      String description}) = _$_CarePlanDetail;
+      String description}) = _$_ActivityDetail;
 
-  factory _CarePlanDetail.fromJson(Map<String, dynamic> json) =
-      _$_CarePlanDetail.fromJson;
+  factory _ActivityDetail.fromJson(Map<String, dynamic> json) =
+      _$_ActivityDetail.fromJson;
 
   @override
   String get id;
@@ -9320,7 +9385,8 @@ abstract class _CarePlanDetail implements CarePlanDetail {
   @override
   List<Reference> get goal;
   @override
-  CarePlanDetailStatus get status;
+  @JsonKey(unknownEnumValue: DetailStatus.unknown)
+  DetailStatus get status;
   @override
   CodeableConcept get statusReason;
   @override
@@ -9346,7 +9412,7 @@ abstract class _CarePlanDetail implements CarePlanDetail {
   @override
   String get description;
   @override
-  _$CarePlanDetailCopyWith<_CarePlanDetail> get copyWith;
+  _$ActivityDetailCopyWith<_ActivityDetail> get copyWith;
 }
 
 CareTeam _$CareTeamFromJson(Map<String, dynamic> json) {
@@ -9367,7 +9433,7 @@ class _$CareTeamTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      CareTeamStatus status,
+      @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
       List<CodeableConcept> category,
       String name,
       Reference subject,
@@ -9421,6 +9487,7 @@ mixin _$CareTeam {
   List<FhirExtension> get fhirExtension;
   List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
+  @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
   CareTeamStatus get status;
   List<CodeableConcept> get category;
   String get name;
@@ -9452,7 +9519,7 @@ abstract class $CareTeamCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      CareTeamStatus status,
+      @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
       List<CodeableConcept> category,
       String name,
       Reference subject,
@@ -9619,7 +9686,7 @@ abstract class _$CareTeamCopyWith<$Res> implements $CareTeamCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      CareTeamStatus status,
+      @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
       List<CodeableConcept> category,
       String name,
       Reference subject,
@@ -9740,7 +9807,7 @@ class _$_CareTeam implements _CareTeam {
       @JsonKey(name: 'extension') this.fhirExtension,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: CareTeamStatus.unknown) this.status,
       this.category,
       this.name,
       this.subject,
@@ -9778,6 +9845,7 @@ class _$_CareTeam implements _CareTeam {
   @override
   final List<Identifier> identifier;
   @override
+  @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
   final CareTeamStatus status;
   @override
   final List<CodeableConcept> category;
@@ -9920,7 +9988,7 @@ abstract class _CareTeam implements CareTeam {
       @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      CareTeamStatus status,
+      @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
       List<CodeableConcept> category,
       String name,
       Reference subject,
@@ -9957,6 +10025,7 @@ abstract class _CareTeam implements CareTeam {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
   CareTeamStatus get status;
   @override
   List<CodeableConcept> get category;
@@ -10298,7 +10367,8 @@ class _$RequestGroupTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -10306,9 +10376,12 @@ class _$RequestGroupTearOff {
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
-      Code status,
-      Code intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: RequestGroupStatus.unknown)
+          RequestGroupStatus status,
+      @JsonKey(unknownEnumValue: RequestGroupIntent.unknown)
+          RequestGroupIntent intent,
+      @JsonKey(unknownEnumValue: RequestGroupPriority.unknown)
+          RequestGroupPriority priority,
       CodeableConcept code,
       Reference subject,
       Reference encounter,
@@ -10370,9 +10443,12 @@ mixin _$RequestGroup {
   List<Reference> get basedOn;
   List<Reference> get replaces;
   Identifier get groupIdentifier;
-  Code get status;
-  Code get intent;
-  Code get priority;
+  @JsonKey(unknownEnumValue: RequestGroupStatus.unknown)
+  RequestGroupStatus get status;
+  @JsonKey(unknownEnumValue: RequestGroupIntent.unknown)
+  RequestGroupIntent get intent;
+  @JsonKey(unknownEnumValue: RequestGroupPriority.unknown)
+  RequestGroupPriority get priority;
   CodeableConcept get code;
   Reference get subject;
   Reference get encounter;
@@ -10399,7 +10475,8 @@ abstract class $RequestGroupCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -10407,9 +10484,12 @@ abstract class $RequestGroupCopyWith<$Res> {
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
-      Code status,
-      Code intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: RequestGroupStatus.unknown)
+          RequestGroupStatus status,
+      @JsonKey(unknownEnumValue: RequestGroupIntent.unknown)
+          RequestGroupIntent intent,
+      @JsonKey(unknownEnumValue: RequestGroupPriority.unknown)
+          RequestGroupPriority priority,
       CodeableConcept code,
       Reference subject,
       Reference encounter,
@@ -10500,9 +10580,11 @@ class _$RequestGroupCopyWithImpl<$Res> implements $RequestGroupCopyWith<$Res> {
       groupIdentifier: groupIdentifier == freezed
           ? _value.groupIdentifier
           : groupIdentifier as Identifier,
-      status: status == freezed ? _value.status : status as Code,
-      intent: intent == freezed ? _value.intent : intent as Code,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      status: status == freezed ? _value.status : status as RequestGroupStatus,
+      intent: intent == freezed ? _value.intent : intent as RequestGroupIntent,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as RequestGroupPriority,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
@@ -10609,7 +10691,8 @@ abstract class _$RequestGroupCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -10617,9 +10700,12 @@ abstract class _$RequestGroupCopyWith<$Res>
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
-      Code status,
-      Code intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: RequestGroupStatus.unknown)
+          RequestGroupStatus status,
+      @JsonKey(unknownEnumValue: RequestGroupIntent.unknown)
+          RequestGroupIntent intent,
+      @JsonKey(unknownEnumValue: RequestGroupPriority.unknown)
+          RequestGroupPriority priority,
       CodeableConcept code,
       Reference subject,
       Reference encounter,
@@ -10719,9 +10805,11 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
       groupIdentifier: groupIdentifier == freezed
           ? _value.groupIdentifier
           : groupIdentifier as Identifier,
-      status: status == freezed ? _value.status : status as Code,
-      intent: intent == freezed ? _value.intent : intent as Code,
-      priority: priority == freezed ? _value.priority : priority as Code,
+      status: status == freezed ? _value.status : status as RequestGroupStatus,
+      intent: intent == freezed ? _value.intent : intent as RequestGroupIntent,
+      priority: priority == freezed
+          ? _value.priority
+          : priority as RequestGroupPriority,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
@@ -10762,9 +10850,9 @@ class _$_RequestGroup implements _RequestGroup {
       this.basedOn,
       this.replaces,
       this.groupIdentifier,
-      this.status,
-      this.intent,
-      this.priority,
+      @JsonKey(unknownEnumValue: RequestGroupStatus.unknown) this.status,
+      @JsonKey(unknownEnumValue: RequestGroupIntent.unknown) this.intent,
+      @JsonKey(unknownEnumValue: RequestGroupPriority.unknown) this.priority,
       this.code,
       this.subject,
       this.encounter,
@@ -10810,11 +10898,14 @@ class _$_RequestGroup implements _RequestGroup {
   @override
   final Identifier groupIdentifier;
   @override
-  final Code status;
+  @JsonKey(unknownEnumValue: RequestGroupStatus.unknown)
+  final RequestGroupStatus status;
   @override
-  final Code intent;
+  @JsonKey(unknownEnumValue: RequestGroupIntent.unknown)
+  final RequestGroupIntent intent;
   @override
-  final Code priority;
+  @JsonKey(unknownEnumValue: RequestGroupPriority.unknown)
+  final RequestGroupPriority priority;
   @override
   final CodeableConcept code;
   @override
@@ -10965,7 +11056,8 @@ abstract class _RequestGroup implements RequestGroup {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> fhirExtension,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
@@ -10973,9 +11065,12 @@ abstract class _RequestGroup implements RequestGroup {
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
-      Code status,
-      Code intent,
-      Code priority,
+      @JsonKey(unknownEnumValue: RequestGroupStatus.unknown)
+          RequestGroupStatus status,
+      @JsonKey(unknownEnumValue: RequestGroupIntent.unknown)
+          RequestGroupIntent intent,
+      @JsonKey(unknownEnumValue: RequestGroupPriority.unknown)
+          RequestGroupPriority priority,
       CodeableConcept code,
       Reference subject,
       Reference encounter,
@@ -11021,11 +11116,14 @@ abstract class _RequestGroup implements RequestGroup {
   @override
   Identifier get groupIdentifier;
   @override
-  Code get status;
+  @JsonKey(unknownEnumValue: RequestGroupStatus.unknown)
+  RequestGroupStatus get status;
   @override
-  Code get intent;
+  @JsonKey(unknownEnumValue: RequestGroupIntent.unknown)
+  RequestGroupIntent get intent;
   @override
-  Code get priority;
+  @JsonKey(unknownEnumValue: RequestGroupPriority.unknown)
+  RequestGroupPriority get priority;
   @override
   CodeableConcept get code;
   @override
@@ -11076,11 +11174,11 @@ class _$RequestGroupActionTearOff {
       Timing timingTiming,
       List<Reference> participant,
       CodeableConcept type,
-      Code groupingBehavior,
-      Code selectionBehavior,
-      Code requiredBehavior,
-      Code precheckBehavior,
-      Code cardinalityBehavior,
+      ActionGroupingBehavior groupingBehavior,
+      ActionSelectionBehavior selectionBehavior,
+      ActionRequiredBehavior requiredBehavior,
+      ActionPrecheckBehavior precheckBehavior,
+      ActionCardinalityBehavior cardinalityBehavior,
       Reference resource,
       List<RequestGroupAction> action}) {
     return _RequestGroupAction(
@@ -11140,11 +11238,11 @@ mixin _$RequestGroupAction {
   Timing get timingTiming;
   List<Reference> get participant;
   CodeableConcept get type;
-  Code get groupingBehavior;
-  Code get selectionBehavior;
-  Code get requiredBehavior;
-  Code get precheckBehavior;
-  Code get cardinalityBehavior;
+  ActionGroupingBehavior get groupingBehavior;
+  ActionSelectionBehavior get selectionBehavior;
+  ActionRequiredBehavior get requiredBehavior;
+  ActionPrecheckBehavior get precheckBehavior;
+  ActionCardinalityBehavior get cardinalityBehavior;
   Reference get resource;
   List<RequestGroupAction> get action;
 
@@ -11177,11 +11275,11 @@ abstract class $RequestGroupActionCopyWith<$Res> {
       Timing timingTiming,
       List<Reference> participant,
       CodeableConcept type,
-      Code groupingBehavior,
-      Code selectionBehavior,
-      Code requiredBehavior,
-      Code precheckBehavior,
-      Code cardinalityBehavior,
+      ActionGroupingBehavior groupingBehavior,
+      ActionSelectionBehavior selectionBehavior,
+      ActionRequiredBehavior requiredBehavior,
+      ActionPrecheckBehavior precheckBehavior,
+      ActionCardinalityBehavior cardinalityBehavior,
       Reference resource,
       List<RequestGroupAction> action});
 
@@ -11279,19 +11377,19 @@ class _$RequestGroupActionCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       groupingBehavior: groupingBehavior == freezed
           ? _value.groupingBehavior
-          : groupingBehavior as Code,
+          : groupingBehavior as ActionGroupingBehavior,
       selectionBehavior: selectionBehavior == freezed
           ? _value.selectionBehavior
-          : selectionBehavior as Code,
+          : selectionBehavior as ActionSelectionBehavior,
       requiredBehavior: requiredBehavior == freezed
           ? _value.requiredBehavior
-          : requiredBehavior as Code,
+          : requiredBehavior as ActionRequiredBehavior,
       precheckBehavior: precheckBehavior == freezed
           ? _value.precheckBehavior
-          : precheckBehavior as Code,
+          : precheckBehavior as ActionPrecheckBehavior,
       cardinalityBehavior: cardinalityBehavior == freezed
           ? _value.cardinalityBehavior
-          : cardinalityBehavior as Code,
+          : cardinalityBehavior as ActionCardinalityBehavior,
       resource: resource == freezed ? _value.resource : resource as Reference,
       action: action == freezed
           ? _value.action
@@ -11397,11 +11495,11 @@ abstract class _$RequestGroupActionCopyWith<$Res>
       Timing timingTiming,
       List<Reference> participant,
       CodeableConcept type,
-      Code groupingBehavior,
-      Code selectionBehavior,
-      Code requiredBehavior,
-      Code precheckBehavior,
-      Code cardinalityBehavior,
+      ActionGroupingBehavior groupingBehavior,
+      ActionSelectionBehavior selectionBehavior,
+      ActionRequiredBehavior requiredBehavior,
+      ActionPrecheckBehavior precheckBehavior,
+      ActionCardinalityBehavior cardinalityBehavior,
       Reference resource,
       List<RequestGroupAction> action});
 
@@ -11508,19 +11606,19 @@ class __$RequestGroupActionCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       groupingBehavior: groupingBehavior == freezed
           ? _value.groupingBehavior
-          : groupingBehavior as Code,
+          : groupingBehavior as ActionGroupingBehavior,
       selectionBehavior: selectionBehavior == freezed
           ? _value.selectionBehavior
-          : selectionBehavior as Code,
+          : selectionBehavior as ActionSelectionBehavior,
       requiredBehavior: requiredBehavior == freezed
           ? _value.requiredBehavior
-          : requiredBehavior as Code,
+          : requiredBehavior as ActionRequiredBehavior,
       precheckBehavior: precheckBehavior == freezed
           ? _value.precheckBehavior
-          : precheckBehavior as Code,
+          : precheckBehavior as ActionPrecheckBehavior,
       cardinalityBehavior: cardinalityBehavior == freezed
           ? _value.cardinalityBehavior
-          : cardinalityBehavior as Code,
+          : cardinalityBehavior as ActionCardinalityBehavior,
       resource: resource == freezed ? _value.resource : resource as Reference,
       action: action == freezed
           ? _value.action
@@ -11605,15 +11703,15 @@ class _$_RequestGroupAction implements _RequestGroupAction {
   @override
   final CodeableConcept type;
   @override
-  final Code groupingBehavior;
+  final ActionGroupingBehavior groupingBehavior;
   @override
-  final Code selectionBehavior;
+  final ActionSelectionBehavior selectionBehavior;
   @override
-  final Code requiredBehavior;
+  final ActionRequiredBehavior requiredBehavior;
   @override
-  final Code precheckBehavior;
+  final ActionPrecheckBehavior precheckBehavior;
   @override
-  final Code cardinalityBehavior;
+  final ActionCardinalityBehavior cardinalityBehavior;
   @override
   final Reference resource;
   @override
@@ -11763,11 +11861,11 @@ abstract class _RequestGroupAction implements RequestGroupAction {
       Timing timingTiming,
       List<Reference> participant,
       CodeableConcept type,
-      Code groupingBehavior,
-      Code selectionBehavior,
-      Code requiredBehavior,
-      Code precheckBehavior,
-      Code cardinalityBehavior,
+      ActionGroupingBehavior groupingBehavior,
+      ActionSelectionBehavior selectionBehavior,
+      ActionRequiredBehavior requiredBehavior,
+      ActionPrecheckBehavior precheckBehavior,
+      ActionCardinalityBehavior cardinalityBehavior,
       Reference resource,
       List<RequestGroupAction> action}) = _$_RequestGroupAction;
 
@@ -11816,15 +11914,15 @@ abstract class _RequestGroupAction implements RequestGroupAction {
   @override
   CodeableConcept get type;
   @override
-  Code get groupingBehavior;
+  ActionGroupingBehavior get groupingBehavior;
   @override
-  Code get selectionBehavior;
+  ActionSelectionBehavior get selectionBehavior;
   @override
-  Code get requiredBehavior;
+  ActionRequiredBehavior get requiredBehavior;
   @override
-  Code get precheckBehavior;
+  ActionPrecheckBehavior get precheckBehavior;
   @override
-  Code get cardinalityBehavior;
+  ActionCardinalityBehavior get cardinalityBehavior;
   @override
   Reference get resource;
   @override

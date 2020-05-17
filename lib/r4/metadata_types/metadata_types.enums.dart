@@ -1,4 +1,4 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 // spec: https://itnext.io/comparing-freezed-to-built-value-3ff978c8647
 
@@ -15,7 +15,7 @@ enum ContributorType {
   unknown,
 }
 
-enum DataRequirementSortDirection {
+enum SortDirection {
   @JsonValue('ascending')
   ascending,
   @JsonValue('descending')
