@@ -181,7 +181,9 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'],
+    status: _$enumDecodeNullable(
+        _$PaymentReconciliationStatusEnumMap, json['status'],
+        unknownValue: PaymentReconciliationStatus.unknown),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -251,7 +253,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', _$PaymentReconciliationStatusEnumMap[instance.status]);
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('paymentIssuer', instance.paymentIssuer?.toJson());
@@ -269,6 +271,14 @@ Map<String, dynamic> _$_$_PaymentReconciliationToJson(
       'processNote', instance.processNote?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$PaymentReconciliationStatusEnumMap = {
+  PaymentReconciliationStatus.active: 'active',
+  PaymentReconciliationStatus.cancelled: 'cancelled',
+  PaymentReconciliationStatus.draft: 'draft',
+  PaymentReconciliationStatus.entered_in_error: 'entered-in-error',
+  PaymentReconciliationStatus.unknown: 'unknown',
+};
 
 const _$PaymentReconciliationOutcomeEnumMap = {
   PaymentReconciliationOutcome.queued: 'queued',

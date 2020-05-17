@@ -37,8 +37,9 @@ _$_EnrollmentRequest _$_$_EnrollmentRequestFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(
+        _$EnrollmentRequestStatusEnumMap, json['status'],
+        unknownValue: EnrollmentRequestStatus.unknown),
     created: json['created'] == null
         ? null
         : FhirDateTime.fromJson(json['created'] as String),
@@ -80,7 +81,7 @@ Map<String, dynamic> _$_$_EnrollmentRequestToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EnrollmentRequestStatusEnumMap[instance.status]);
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
@@ -88,6 +89,46 @@ Map<String, dynamic> _$_$_EnrollmentRequestToJson(
   writeNotNull('coverage', instance.coverage?.toJson());
   return val;
 }
+
+T _$enumDecode<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError('A value must be provided. Supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+
+  final value = enumValues.entries
+      .singleWhere((e) => e.value == source, orElse: () => null)
+      ?.key;
+
+  if (value == null && unknownValue == null) {
+    throw ArgumentError('`$source` is not one of the supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+  return value ?? unknownValue;
+}
+
+T _$enumDecodeNullable<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$EnrollmentRequestStatusEnumMap = {
+  EnrollmentRequestStatus.active: 'active',
+  EnrollmentRequestStatus.cancelled: 'cancelled',
+  EnrollmentRequestStatus.draft: 'draft',
+  EnrollmentRequestStatus.entered_in_error: 'entered-in-error',
+  EnrollmentRequestStatus.unknown: 'unknown',
+};
 
 _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
     Map<String, dynamic> json) {
@@ -120,13 +161,15 @@ _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(
+        _$EnrollmentResponseStatusEnumMap, json['status'],
+        unknownValue: EnrollmentResponseStatus.unknown),
     request: json['request'] == null
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
     outcome: _$enumDecodeNullable(
-        _$EnrollmentResponseOutcomeEnumMap, json['outcome']),
+        _$EnrollmentResponseOutcomeEnumMap, json['outcome'],
+        unknownValue: EnrollmentResponseOutcome.unknown),
     disposition: json['disposition'] as String,
     created: json['created'] == null
         ? null
@@ -162,7 +205,7 @@ Map<String, dynamic> _$_$_EnrollmentResponseToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EnrollmentResponseStatusEnumMap[instance.status]);
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('outcome', _$EnrollmentResponseOutcomeEnumMap[instance.outcome]);
   writeNotNull('disposition', instance.disposition);
@@ -172,37 +215,13 @@ Map<String, dynamic> _$_$_EnrollmentResponseToJson(
   return val;
 }
 
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
+const _$EnrollmentResponseStatusEnumMap = {
+  EnrollmentResponseStatus.active: 'active',
+  EnrollmentResponseStatus.cancelled: 'cancelled',
+  EnrollmentResponseStatus.draft: 'draft',
+  EnrollmentResponseStatus.entered_in_error: 'entered-in-error',
+  EnrollmentResponseStatus.unknown: 'unknown',
+};
 
 const _$EnrollmentResponseOutcomeEnumMap = {
   EnrollmentResponseOutcome.queued: 'queued',
@@ -239,9 +258,8 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
-    purpose: (json['purpose'] as List)?.map((e) => e as String)?.toList(),
+    status: json['status'],
+    purpose: json['purpose'] as List,
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -261,7 +279,8 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
     outcome: _$enumDecodeNullable(
-        _$CoverageEligibilityResponseOutcomeEnumMap, json['outcome']),
+        _$CoverageEligibilityResponseOutcomeEnumMap, json['outcome'],
+        unknownValue: CoverageEligibilityResponseOutcome.unknown),
     disposition: json['disposition'] as String,
     insurer: json['insurer'] == null
         ? null
@@ -306,7 +325,7 @@ Map<String, dynamic> _$_$_CoverageEligibilityResponseToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', instance.status);
   writeNotNull('purpose', instance.purpose);
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
