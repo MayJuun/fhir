@@ -173,7 +173,7 @@ abstract class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
 }
 
 @freezed
-abstract class DataRequirementDateFilter with _$DataRequirementDataFilter {
+abstract class DataRequirementDateFilter with _$DataRequirementDateFilter {
   factory DataRequirementDateFilter({
     String path,
     DateTime valueDateTime,
@@ -228,6 +228,17 @@ abstract class Duration with _$Duration {
 
   factory Duration.fromJson(Map<String, dynamic> json) =>
       _$DurationFromJson(json);
+}
+
+@freezed
+abstract class Element with _$Element {
+  factory Element({
+    String id,
+    @JsonKey(name: 'extension') FhirExtension fhirExtension,
+  }) = _Element;
+
+  factory Element.fromJson(Map<String, dynamic> json) =>
+      _$ElementFromJson(json);
 }
 
 @freezed
@@ -470,7 +481,7 @@ abstract class ElementDefinitionDiscriminator
 
 @freezed
 abstract class ElementDefinitionBase with _$ElementDefinitionBase {
-  factory ElementDefinitionSlicing({
+  factory ElementDefinitionBase({
     String path,
     double min,
     String max,
@@ -495,7 +506,7 @@ abstract class ElementDefinitionType with _$ElementDefinitionType {
 }
 
 @freezed
-abstract class ElementDefinitionExample with _$ElementDefinitonExample {
+abstract class ElementDefinitionExample with _$ElementDefinitionExample {
   factory ElementDefinitionExample({
     String label,
     bool valueBoolean,
@@ -657,6 +668,7 @@ abstract class FhirExtension with _$FhirExtension {
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
   }) = _FhirExtension;
+
   factory FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$FhirExtensionFromJson(json);
 }

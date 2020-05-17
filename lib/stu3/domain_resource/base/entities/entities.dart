@@ -22,7 +22,6 @@ abstract class Substance with _$Substance {
 
   factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
-  Map<String, dynamic> toJson() => _$SubstanceToJson(this);
 }
 
 @freezed
@@ -35,7 +34,6 @@ abstract class SubstanceInstance with _$SubstanceInstance {
 
   factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceInstanceFromJson(json);
-  Map<String, dynamic> toJson() => _$SubstanceInstanceToJson(this);
 }
 
 @freezed
@@ -48,7 +46,6 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
 
   factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$SubstanceIngredientFromJson(json);
-  Map<String, dynamic> toJson() => _$SubstanceIngredientToJson(this);
 }
 
 @freezed
@@ -71,7 +68,6 @@ abstract class Endpoint with _$Endpoint {
 
   factory Endpoint.fromJson(Map<String, dynamic> json) =>
       _$EndpointFromJson(json);
-  Map<String, dynamic> toJson() => _$EndpointToJson(this);
 }
 
 @freezed
@@ -93,7 +89,6 @@ abstract class DeviceComponent with _$DeviceComponent {
 
   factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$DeviceComponentFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceComponentToJson(this);
 }
 
 @freezed
@@ -108,8 +103,6 @@ abstract class DeviceComponentProductionSpecification
   factory DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
       _$DeviceComponentProductionSpecificationFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$DeviceComponentProductionSpecificationToJson(this);
 }
 
 @freezed
@@ -131,7 +124,6 @@ abstract class DeviceMetric with _$DeviceMetric {
 
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceMetricToJson(this);
 }
 
 @freezed
@@ -144,7 +136,6 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
 
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceMetricCalibrationToJson(this);
 }
 
 @freezed
@@ -171,7 +162,6 @@ abstract class Location with _$Location {
 
   factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
-  Map<String, dynamic> toJson() => _$LocationToJson(this);
 }
 
 @freezed
@@ -184,7 +174,6 @@ abstract class LocationPosition with _$LocationPosition {
 
   factory LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$LocationPositionFromJson(json);
-  Map<String, dynamic> toJson() => _$LocationPositionToJson(this);
 }
 
 @freezed
@@ -212,7 +201,6 @@ abstract class Device with _$Device {
   }) = _Device;
 
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceToJson(this);
 }
 
 @freezed
@@ -229,7 +217,6 @@ abstract class DeviceUdi with _$DeviceUdi {
 
   factory DeviceUdi.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiFromJson(json);
-  Map<String, dynamic> toJson() => _$DeviceUdiToJson(this);
 }
 
 @freezed
@@ -265,7 +252,6 @@ abstract class HealthcareService with _$HealthcareService {
 
   factory HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceFromJson(json);
-  Map<String, dynamic> toJson() => _$HealthcareServiceToJson(this);
 }
 
 @freezed
@@ -280,7 +266,6 @@ abstract class HealthcareServiceAvailableTime
 
   factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceAvailableTimeFromJson(json);
-  Map<String, dynamic> toJson() => _$HealthcareServiceAvailableTimeToJson(this);
 }
 
 @freezed
@@ -293,7 +278,6 @@ abstract class HealthcareServiceNotAvailable
 
   factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceNotAvailableFromJson(json);
-  Map<String, dynamic> toJson() => _$HealthcareServiceNotAvailableToJson(this);
 }
 
 @freezed
@@ -315,7 +299,6 @@ abstract class Organization with _$Organization {
 
   factory Organization.fromJson(Map<String, dynamic> json) =>
       _$OrganizationFromJson(json);
-  Map<String, dynamic> toJson() => _$OrganizationToJson(this);
 }
 
 @freezed
@@ -329,5 +312,4 @@ abstract class OrganizationContact with _$OrganizationContact {
 
   factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
       _$OrganizationContactFromJson(json);
-  Map<String, dynamic> toJson() => _$OrganizationContactToJson(this);
 }
