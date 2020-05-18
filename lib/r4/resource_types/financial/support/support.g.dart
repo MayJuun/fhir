@@ -258,8 +258,13 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'],
-    purpose: json['purpose'] as List,
+    status: _$enumDecodeNullable(
+        _$CoverageEligibilityResponseStatusEnumMap, json['status'],
+        unknownValue: CoverageEligibilityResponseStatus.unknown),
+    purpose: (json['purpose'] as List)
+        ?.map((e) => _$enumDecodeNullable(
+            _$CoverageEligibilityResponsePurposeEnumMap, e))
+        ?.toList(),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -325,8 +330,13 @@ Map<String, dynamic> _$_$_CoverageEligibilityResponseToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
-  writeNotNull('purpose', instance.purpose);
+  writeNotNull(
+      'status', _$CoverageEligibilityResponseStatusEnumMap[instance.status]);
+  writeNotNull(
+      'purpose',
+      instance.purpose
+          ?.map((e) => _$CoverageEligibilityResponsePurposeEnumMap[e])
+          ?.toList());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
@@ -344,6 +354,22 @@ Map<String, dynamic> _$_$_CoverageEligibilityResponseToJson(
   writeNotNull('error', instance.error?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$CoverageEligibilityResponseStatusEnumMap = {
+  CoverageEligibilityResponseStatus.active: 'active',
+  CoverageEligibilityResponseStatus.cancelled: 'cancelled',
+  CoverageEligibilityResponseStatus.draft: 'draft',
+  CoverageEligibilityResponseStatus.entered_in_error: 'entered-in-error',
+  CoverageEligibilityResponseStatus.unknown: 'unknown',
+};
+
+const _$CoverageEligibilityResponsePurposeEnumMap = {
+  CoverageEligibilityResponsePurpose.auth_requirements: 'auth-requirements',
+  CoverageEligibilityResponsePurpose.benfits: 'benefits',
+  CoverageEligibilityResponsePurpose.discover: 'discovery',
+  CoverageEligibilityResponsePurpose.validation: 'validation',
+  CoverageEligibilityResponsePurpose.unknown: 'unknown',
+};
 
 const _$CoverageEligibilityResponseOutcomeEnumMap = {
   CoverageEligibilityResponseOutcome.queued: 'queued',
@@ -621,12 +647,16 @@ _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(
+        _$CoverageEligibilityRequestStatusEnumMap, json['status'],
+        unknownValue: CoverageEligibilityRequestStatus.unknown),
     priority: json['priority'] == null
         ? null
         : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>),
-    purpose: (json['purpose'] as List)?.map((e) => e as String)?.toList(),
+    purpose: (json['purpose'] as List)
+        ?.map((e) =>
+            _$enumDecodeNullable(_$CoverageEligibilityRequestPurposeEnumMap, e))
+        ?.toList(),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -695,9 +725,14 @@ Map<String, dynamic> _$_$_CoverageEligibilityRequestToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull(
+      'status', _$CoverageEligibilityRequestStatusEnumMap[instance.status]);
   writeNotNull('priority', instance.priority?.toJson());
-  writeNotNull('purpose', instance.purpose);
+  writeNotNull(
+      'purpose',
+      instance.purpose
+          ?.map((e) => _$CoverageEligibilityRequestPurposeEnumMap[e])
+          ?.toList());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
@@ -713,6 +748,22 @@ Map<String, dynamic> _$_$_CoverageEligibilityRequestToJson(
   writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$CoverageEligibilityRequestStatusEnumMap = {
+  CoverageEligibilityRequestStatus.active: 'active',
+  CoverageEligibilityRequestStatus.cancelled: 'cancelled',
+  CoverageEligibilityRequestStatus.draft: 'draft',
+  CoverageEligibilityRequestStatus.entered_in_error: 'entered-in-error',
+  CoverageEligibilityRequestStatus.unknown: 'unknown',
+};
+
+const _$CoverageEligibilityRequestPurposeEnumMap = {
+  CoverageEligibilityRequestPurpose.auth_requirements: 'auth-requirements',
+  CoverageEligibilityRequestPurpose.benfits: 'benefits',
+  CoverageEligibilityRequestPurpose.discover: 'discovery',
+  CoverageEligibilityRequestPurpose.validation: 'validation',
+  CoverageEligibilityRequestPurpose.unknown: 'unknown',
+};
 
 _$_CoverageEligibilityRequestSupportingInfo
     _$_$_CoverageEligibilityRequestSupportingInfoFromJson(
@@ -964,8 +1015,8 @@ _$_Coverage _$_$_CoverageFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: _$enumDecodeNullable(_$CoverageStatusEnumMap, json['status'],
+        unknownValue: CoverageStatus.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -1033,7 +1084,7 @@ Map<String, dynamic> _$_$_CoverageToJson(_$_Coverage instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$CoverageStatusEnumMap[instance.status]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('policyHolder', instance.policyHolder?.toJson());
   writeNotNull('subscriber', instance.subscriber?.toJson());
@@ -1053,6 +1104,14 @@ Map<String, dynamic> _$_$_CoverageToJson(_$_Coverage instance) {
       'contract', instance.contract?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$CoverageStatusEnumMap = {
+  CoverageStatus.active: 'active',
+  CoverageStatus.cancelled: 'cancelled',
+  CoverageStatus.draft: 'draft',
+  CoverageStatus.entered_in_error: 'entered-in-error',
+  CoverageStatus.unknown: 'unknown',
+};
 
 _$_CoverageClass _$_$_CoverageClassFromJson(Map<String, dynamic> json) {
   return _$_CoverageClass(

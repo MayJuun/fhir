@@ -244,7 +244,16 @@ _$_HealthcareServiceAvailableTime _$_$_HealthcareServiceAvailableTimeFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    AvailableTimeDaysOfWeek: json['AvailableTimeDaysOfWeek'] as List,
+    daysOfWeek: (json['daysOfWeek'] as List)
+        ?.map((e) => _$enumDecodeNullable(_$AvailableTimeDaysOfWeekEnumMap, e))
+        ?.toList(),
+    allDay: json['allDay'] as bool,
+    availableStartTime: json['availableStartTime'] == null
+        ? null
+        : Time.fromJson(json['availableStartTime'] as String),
+    availableEndTime: json['availableEndTime'] == null
+        ? null
+        : Time.fromJson(json['availableEndTime'] as String),
   );
 }
 
@@ -263,9 +272,59 @@ Map<String, dynamic> _$_$_HealthcareServiceAvailableTimeToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('AvailableTimeDaysOfWeek', instance.AvailableTimeDaysOfWeek);
+  writeNotNull(
+      'daysOfWeek',
+      instance.daysOfWeek
+          ?.map((e) => _$AvailableTimeDaysOfWeekEnumMap[e])
+          ?.toList());
+  writeNotNull('allDay', instance.allDay);
+  writeNotNull('availableStartTime', instance.availableStartTime?.toJson());
+  writeNotNull('availableEndTime', instance.availableEndTime?.toJson());
   return val;
 }
+
+T _$enumDecode<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError('A value must be provided. Supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+
+  final value = enumValues.entries
+      .singleWhere((e) => e.value == source, orElse: () => null)
+      ?.key;
+
+  if (value == null && unknownValue == null) {
+    throw ArgumentError('`$source` is not one of the supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+  return value ?? unknownValue;
+}
+
+T _$enumDecodeNullable<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$AvailableTimeDaysOfWeekEnumMap = {
+  AvailableTimeDaysOfWeek.mon: 'mon',
+  AvailableTimeDaysOfWeek.tue: 'tue',
+  AvailableTimeDaysOfWeek.wed: 'wed',
+  AvailableTimeDaysOfWeek.thu: 'thu',
+  AvailableTimeDaysOfWeek.fri: 'fri',
+  AvailableTimeDaysOfWeek.sat: 'sat',
+  AvailableTimeDaysOfWeek.sun: 'sun',
+  AvailableTimeDaysOfWeek.unknown: 'unknown',
+};
 
 _$_HealthcareServiceNotAvailable _$_$_HealthcareServiceNotAvailableFromJson(
     Map<String, dynamic> json) {
@@ -429,38 +488,6 @@ Map<String, dynamic> _$_$_LocationToJson(_$_Location instance) {
   return val;
 }
 
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$LocationStatusEnumMap = {
   LocationStatus.active: 'active',
   LocationStatus.suspended: 'suspended',
@@ -565,17 +592,6 @@ Map<String, dynamic> _$_$_LocationHoursOfOperationToJson(
   writeNotNull('closingTime', instance.closingTime?.toJson());
   return val;
 }
-
-const _$AvailableTimeDaysOfWeekEnumMap = {
-  AvailableTimeDaysOfWeek.mon: 'mon',
-  AvailableTimeDaysOfWeek.tue: 'tue',
-  AvailableTimeDaysOfWeek.wed: 'wed',
-  AvailableTimeDaysOfWeek.thu: 'thu',
-  AvailableTimeDaysOfWeek.fri: 'fri',
-  AvailableTimeDaysOfWeek.sat: 'sat',
-  AvailableTimeDaysOfWeek.sun: 'sun',
-  AvailableTimeDaysOfWeek.unknown: 'unknown',
-};
 
 _$_OrganizationAffiliation _$_$_OrganizationAffiliationFromJson(
     Map<String, dynamic> json) {

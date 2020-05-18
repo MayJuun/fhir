@@ -114,4 +114,6 @@ enum FlagStatus {
   inactive,
   @JsonValue('entered-in-error')
   entered_in_error,
+  @JsonValue('unknown')
+  unknown,
 }

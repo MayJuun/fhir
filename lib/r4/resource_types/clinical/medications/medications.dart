@@ -122,7 +122,7 @@ abstract class Medication with _$Medication {
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept code,
-    @JsonKey(unknownEnumvalue: MedicationStatus.unknown)
+    @JsonKey(unknownEnumValue: MedicationStatus.unknown)
         MedicationStatus status,
     Reference manufacturer,
     CodeableConcept form,

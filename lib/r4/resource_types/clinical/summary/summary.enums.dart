@@ -62,6 +62,8 @@ enum FamilyMemberHistoryStatus {
   entered_in_error,
   @JsonValue('health-unknown')
   health_unknown,
+  @JsonValue('unknown')
+  unknown,
 }
 
 enum DetectedIssueStatus {

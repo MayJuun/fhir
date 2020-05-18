@@ -262,7 +262,8 @@ _$_BiologicallyDerivedProduct _$_$_BiologicallyDerivedProductFromJson(
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     productCategory: _$enumDecodeNullable(
-        _$BiologicallyDerivedProductCategoryEnumMap, json['productCategory']),
+        _$BiologicallyDerivedProductCategoryEnumMap, json['productCategory'],
+        unknownValue: BiologicallyDerivedProductCategory.unknown),
     productCode: json['productCode'] == null
         ? null
         : CodeableConcept.fromJson(json['productCode'] as Map<String, dynamic>),

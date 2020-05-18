@@ -68,7 +68,7 @@ abstract class HealthcareServiceAvailableTime
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    List<AvailableTimeDaysOfWeek> AvailableTimeDaysOfWeek daysOfWeek,
+    List<AvailableTimeDaysOfWeek> daysOfWeek,
     bool allDay,
     Time availableStartTime,
     Time availableEndTime,

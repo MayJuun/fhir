@@ -71,7 +71,7 @@ abstract class BiologicallyDerivedProduct with _$BiologicallyDerivedProduct {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    @JsonKey(unknownValue: BiologicallyDerivedProductCategory.unknown)
+    @JsonKey(unknownEnumValue: BiologicallyDerivedProductCategory.unknown)
         BiologicallyDerivedProductCategory productCategory,
     CodeableConcept productCode,
     BiologicallyDerivedProductStatus status,

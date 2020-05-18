@@ -1160,7 +1160,8 @@ _$_Flag _$_$_FlagFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$FlagStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$FlagStatusEnumMap, json['status'],
+        unknownValue: FlagStatus.unknown),
     category: (json['category'] as List)
         ?.map((e) => e == null
             ? null
@@ -1221,4 +1222,5 @@ const _$FlagStatusEnumMap = {
   FlagStatus.active: 'active',
   FlagStatus.inactive: 'inactive',
   FlagStatus.entered_in_error: 'entered-in-error',
+  FlagStatus.unknown: 'unknown',
 };
