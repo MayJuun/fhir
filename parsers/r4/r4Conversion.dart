@@ -34,9 +34,9 @@ void main() async {
                 type = field['\$ref'].split('/definitions/')[1];
                 var newType = whatType(type);
                 if (field.keys.contains('items')) {
-                  text += '\nList<$newType> ';
+                  text += '\nList<$newType> $field';
                 } else {
-                  text += '\n$newType ';
+                  text += '\n$newType $field';
                 }
               }
             }
@@ -71,7 +71,6 @@ void main() async {
         file += text;
         await File(dir).writeAsString(file);
       }
-      print(text);
     }
   }
 }
