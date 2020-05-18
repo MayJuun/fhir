@@ -793,7 +793,8 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
     status: _$enumDecodeNullable(
-        _$FamilyMemberHistoryStatusEnumMap, json['status']),
+        _$FamilyMemberHistoryStatusEnumMap, json['status'],
+        unknownValue: FamilyMemberHistoryStatus.unknown),
     dataAbsentReason: json['dataAbsentReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -910,6 +911,7 @@ const _$FamilyMemberHistoryStatusEnumMap = {
   FamilyMemberHistoryStatus.completed: 'completed',
   FamilyMemberHistoryStatus.entered_in_error: 'entered-in-error',
   FamilyMemberHistoryStatus.health_unknown: 'health-unknown',
+  FamilyMemberHistoryStatus.unknown: 'unknown',
 };
 
 _$_FamilyMemberHistoryCondition _$_$_FamilyMemberHistoryConditionFromJson(

@@ -24,7 +24,8 @@ abstract class MessageDefinition with _$MessageDefinition {
     String name,
     String title,
     List<Canonical> replaces,
-    MessageDefinitionStatus status,
+    @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+        MessageDefinitionStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -38,9 +39,11 @@ abstract class MessageDefinition with _$MessageDefinition {
     List<Canonical> parent,
     Coding eventCoding,
     FhirUri eventUri,
-    MessageDefinitionCategory category,
+    @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
+        MessageDefinitionCategory category,
     List<MessageDefinitionFocus> focus,
-    MessageDefinitionResponseRequired responseRequired,
+    @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
+        MessageDefinitionResponseRequired responseRequired,
     List<MessageDefinitionAllowedResponse> allowedResponse,
     List<Canonical> graph,
   }) = _MessageDefinition;
@@ -346,7 +349,8 @@ abstract class CompartmentDefinition with _$CompartmentDefinition {
     FhirUri url,
     String version,
     String name,
-    CompartmentDefinitionStatus status,
+    @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
+        CompartmentDefinitionStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -354,7 +358,8 @@ abstract class CompartmentDefinition with _$CompartmentDefinition {
     Markdown description,
     List<UsageContext> useContext,
     Markdown purpose,
-    CompartmentDefinitionCode code,
+    @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
+        CompartmentDefinitionCode code,
     bool search,
     List<CompartmentDefinitionResource> resource,
   }) = _CompartmentDefinition;
@@ -393,8 +398,10 @@ abstract class OperationDefinition with _$OperationDefinition {
     String version,
     String name,
     String title,
-    OperationDefinitionStatus status,
-    OperationDefinitionKind kind,
+    @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+        OperationDefinitionStatus status,
+    @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+        OperationDefinitionKind kind,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -428,13 +435,15 @@ abstract class OperationDefinitionParameter
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code name,
-    OperationDefinitionParameterUse use,
+    @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
+        OperationDefinitionParameterUse use,
     int min,
     String max,
     String documentation,
     Code type,
     List<Canonical> targetProfile,
-    OperationDefinitionParameterSearchType searchType,
+    @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
+        OperationDefinitionParameterSearchType searchType,
     OperationDefinitionBinding binding,
     List<OperationDefinitionReferencedFrom> referencedFrom,
     List<OperationDefinitionParameter> part,

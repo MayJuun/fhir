@@ -460,7 +460,8 @@ _$_Medication _$_$_MedicationFromJson(Map<String, dynamic> json) {
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(_$MedicationStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$MedicationStatusEnumMap, json['status'],
+        unknownValue: MedicationStatus.unknown),
     manufacturer: json['manufacturer'] == null
         ? null
         : Reference.fromJson(json['manufacturer'] as Map<String, dynamic>),

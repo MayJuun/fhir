@@ -93,6 +93,19 @@ enum ExplanationOfBenefitUse {
   unknown,
 }
 
+enum ExplanationOfBenefitOutcome {
+  @JsonValue('queued')
+  queued,
+  @JsonValue('complete')
+  complete,
+  @JsonValue('error')
+  error,
+  @JsonValue('partial')
+  partial,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum ExplanationOfBenefitProcessNoteType {
   @JsonValue('display')
   display,
