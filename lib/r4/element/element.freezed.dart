@@ -17,7 +17,7 @@ class _$FhirExtensionTearOff {
 
   _FhirExtension call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirUri url,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -71,7 +71,7 @@ class _$FhirExtensionTearOff {
       Meta valueMeta}) {
     return _FhirExtension(
       id: id,
-      fhirExtension: fhirExtension,
+      extension_: extension_,
       url: url,
       valueBase64Binary: valueBase64Binary,
       valueBoolean: valueBoolean,
@@ -133,7 +133,7 @@ const $FhirExtension = _$FhirExtensionTearOff();
 mixin _$FhirExtension {
   String get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
+  List<FhirExtension> get extension_;
   FhirUri get url;
   Base64Binary get valueBase64Binary;
   bool get valueBoolean;
@@ -196,7 +196,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       _$FhirExtensionCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirUri url,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -248,6 +248,38 @@ abstract class $FhirExtensionCopyWith<$Res> {
       UsageContext valueUsageContext,
       Dosage valueDosage,
       Meta valueMeta});
+
+  $AddressCopyWith<$Res> get valueAddress;
+  $AgeCopyWith<$Res> get valueAge;
+  $AnnotationCopyWith<$Res> get valueAnnotation;
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $CodingCopyWith<$Res> get valueCoding;
+  $ContactPointCopyWith<$Res> get valueContactPoint;
+  $CountCopyWith<$Res> get valueCount;
+  $DistanceCopyWith<$Res> get valueDistance;
+  $DurationCopyWith<$Res> get valueDuration;
+  $HumanNameCopyWith<$Res> get valueHumanName;
+  $IdentifierCopyWith<$Res> get valueIdentifier;
+  $MoneyCopyWith<$Res> get valueMoney;
+  $PeriodCopyWith<$Res> get valuePeriod;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
+  $RatioCopyWith<$Res> get valueRatio;
+  $ReferenceCopyWith<$Res> get valueReference;
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  $SignatureCopyWith<$Res> get valueSignature;
+  $TimingCopyWith<$Res> get valueTiming;
+  $ContactDetailCopyWith<$Res> get valueContactDetail;
+  $ContributorCopyWith<$Res> get valueContributor;
+  $DataRequirementCopyWith<$Res> get valueDataRequirement;
+  $ExpressionCopyWith<$Res> get valueExpression;
+  $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition;
+  $RelatedArtifactCopyWith<$Res> get valueRelatedArtifact;
+  $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition;
+  $UsageContextCopyWith<$Res> get valueUsageContext;
+  $DosageCopyWith<$Res> get valueDosage;
+  $MetaCopyWith<$Res> get valueMeta;
 }
 
 class _$FhirExtensionCopyWithImpl<$Res>
@@ -261,7 +293,7 @@ class _$FhirExtensionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object fhirExtension = freezed,
+    Object extension_ = freezed,
     Object url = freezed,
     Object valueBase64Binary = freezed,
     Object valueBoolean = freezed,
@@ -316,9 +348,9 @@ class _$FhirExtensionCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
-      fhirExtension: fhirExtension == freezed
-          ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
@@ -441,6 +473,318 @@ class _$FhirExtensionCopyWithImpl<$Res>
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
     ));
   }
+
+  @override
+  $AddressCopyWith<$Res> get valueAddress {
+    if (_value.valueAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.valueAddress, (value) {
+      return _then(_value.copyWith(valueAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res> get valueAge {
+    if (_value.valueAge == null) {
+      return null;
+    }
+    return $AgeCopyWith<$Res>(_value.valueAge, (value) {
+      return _then(_value.copyWith(valueAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get valueAnnotation {
+    if (_value.valueAnnotation == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation, (value) {
+      return _then(_value.copyWith(valueAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get valueContactPoint {
+    if (_value.valueContactPoint == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint, (value) {
+      return _then(_value.copyWith(valueContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res> get valueCount {
+    if (_value.valueCount == null) {
+      return null;
+    }
+    return $CountCopyWith<$Res>(_value.valueCount, (value) {
+      return _then(_value.copyWith(valueCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res> get valueDistance {
+    if (_value.valueDistance == null) {
+      return null;
+    }
+    return $DistanceCopyWith<$Res>(_value.valueDistance, (value) {
+      return _then(_value.copyWith(valueDistance: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get valueHumanName {
+    if (_value.valueHumanName == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName, (value) {
+      return _then(_value.copyWith(valueHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get valueIdentifier {
+    if (_value.valueIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier, (value) {
+      return _then(_value.copyWith(valueIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get valueMoney {
+    if (_value.valueMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.valueMoney, (value) {
+      return _then(_value.copyWith(valueMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get valueReference {
+    if (_value.valueReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.valueReference, (value) {
+      return _then(_value.copyWith(valueReference: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get valueSignature {
+    if (_value.valueSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.valueSignature, (value) {
+      return _then(_value.copyWith(valueSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get valueTiming {
+    if (_value.valueTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.valueTiming, (value) {
+      return _then(_value.copyWith(valueTiming: value));
+    });
+  }
+
+  @override
+  $ContactDetailCopyWith<$Res> get valueContactDetail {
+    if (_value.valueContactDetail == null) {
+      return null;
+    }
+    return $ContactDetailCopyWith<$Res>(_value.valueContactDetail, (value) {
+      return _then(_value.copyWith(valueContactDetail: value));
+    });
+  }
+
+  @override
+  $ContributorCopyWith<$Res> get valueContributor {
+    if (_value.valueContributor == null) {
+      return null;
+    }
+    return $ContributorCopyWith<$Res>(_value.valueContributor, (value) {
+      return _then(_value.copyWith(valueContributor: value));
+    });
+  }
+
+  @override
+  $DataRequirementCopyWith<$Res> get valueDataRequirement {
+    if (_value.valueDataRequirement == null) {
+      return null;
+    }
+    return $DataRequirementCopyWith<$Res>(_value.valueDataRequirement, (value) {
+      return _then(_value.copyWith(valueDataRequirement: value));
+    });
+  }
+
+  @override
+  $ExpressionCopyWith<$Res> get valueExpression {
+    if (_value.valueExpression == null) {
+      return null;
+    }
+    return $ExpressionCopyWith<$Res>(_value.valueExpression, (value) {
+      return _then(_value.copyWith(valueExpression: value));
+    });
+  }
+
+  @override
+  $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition {
+    if (_value.valueParameterDefinition == null) {
+      return null;
+    }
+    return $ParameterDefinitionCopyWith<$Res>(_value.valueParameterDefinition,
+        (value) {
+      return _then(_value.copyWith(valueParameterDefinition: value));
+    });
+  }
+
+  @override
+  $RelatedArtifactCopyWith<$Res> get valueRelatedArtifact {
+    if (_value.valueRelatedArtifact == null) {
+      return null;
+    }
+    return $RelatedArtifactCopyWith<$Res>(_value.valueRelatedArtifact, (value) {
+      return _then(_value.copyWith(valueRelatedArtifact: value));
+    });
+  }
+
+  @override
+  $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition {
+    if (_value.valueTriggerDefinition == null) {
+      return null;
+    }
+    return $TriggerDefinitionCopyWith<$Res>(_value.valueTriggerDefinition,
+        (value) {
+      return _then(_value.copyWith(valueTriggerDefinition: value));
+    });
+  }
+
+  @override
+  $UsageContextCopyWith<$Res> get valueUsageContext {
+    if (_value.valueUsageContext == null) {
+      return null;
+    }
+    return $UsageContextCopyWith<$Res>(_value.valueUsageContext, (value) {
+      return _then(_value.copyWith(valueUsageContext: value));
+    });
+  }
+
+  @override
+  $DosageCopyWith<$Res> get valueDosage {
+    if (_value.valueDosage == null) {
+      return null;
+    }
+    return $DosageCopyWith<$Res>(_value.valueDosage, (value) {
+      return _then(_value.copyWith(valueDosage: value));
+    });
+  }
+
+  @override
+  $MetaCopyWith<$Res> get valueMeta {
+    if (_value.valueMeta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.valueMeta, (value) {
+      return _then(_value.copyWith(valueMeta: value));
+    });
+  }
 }
 
 abstract class _$FhirExtensionCopyWith<$Res>
@@ -451,7 +795,7 @@ abstract class _$FhirExtensionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirUri url,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -503,6 +847,69 @@ abstract class _$FhirExtensionCopyWith<$Res>
       UsageContext valueUsageContext,
       Dosage valueDosage,
       Meta valueMeta});
+
+  @override
+  $AddressCopyWith<$Res> get valueAddress;
+  @override
+  $AgeCopyWith<$Res> get valueAge;
+  @override
+  $AnnotationCopyWith<$Res> get valueAnnotation;
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  @override
+  $CodingCopyWith<$Res> get valueCoding;
+  @override
+  $ContactPointCopyWith<$Res> get valueContactPoint;
+  @override
+  $CountCopyWith<$Res> get valueCount;
+  @override
+  $DistanceCopyWith<$Res> get valueDistance;
+  @override
+  $DurationCopyWith<$Res> get valueDuration;
+  @override
+  $HumanNameCopyWith<$Res> get valueHumanName;
+  @override
+  $IdentifierCopyWith<$Res> get valueIdentifier;
+  @override
+  $MoneyCopyWith<$Res> get valueMoney;
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod;
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity;
+  @override
+  $RangeCopyWith<$Res> get valueRange;
+  @override
+  $RatioCopyWith<$Res> get valueRatio;
+  @override
+  $ReferenceCopyWith<$Res> get valueReference;
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  @override
+  $SignatureCopyWith<$Res> get valueSignature;
+  @override
+  $TimingCopyWith<$Res> get valueTiming;
+  @override
+  $ContactDetailCopyWith<$Res> get valueContactDetail;
+  @override
+  $ContributorCopyWith<$Res> get valueContributor;
+  @override
+  $DataRequirementCopyWith<$Res> get valueDataRequirement;
+  @override
+  $ExpressionCopyWith<$Res> get valueExpression;
+  @override
+  $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition;
+  @override
+  $RelatedArtifactCopyWith<$Res> get valueRelatedArtifact;
+  @override
+  $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition;
+  @override
+  $UsageContextCopyWith<$Res> get valueUsageContext;
+  @override
+  $DosageCopyWith<$Res> get valueDosage;
+  @override
+  $MetaCopyWith<$Res> get valueMeta;
 }
 
 class __$FhirExtensionCopyWithImpl<$Res>
@@ -518,7 +925,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object fhirExtension = freezed,
+    Object extension_ = freezed,
     Object url = freezed,
     Object valueBase64Binary = freezed,
     Object valueBoolean = freezed,
@@ -573,9 +980,9 @@ class __$FhirExtensionCopyWithImpl<$Res>
   }) {
     return _then(_FhirExtension(
       id: id == freezed ? _value.id : id as String,
-      fhirExtension: fhirExtension == freezed
-          ? _value.fhirExtension
-          : fhirExtension as List<FhirExtension>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
@@ -704,7 +1111,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
 class _$_FhirExtension implements _FhirExtension {
   const _$_FhirExtension(
       {this.id,
-      @JsonKey(name: 'extension') this.fhirExtension,
+      @JsonKey(name: 'extension') this.extension_,
       this.url,
       this.valueBase64Binary,
       this.valueBoolean,
@@ -764,7 +1171,7 @@ class _$_FhirExtension implements _FhirExtension {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> fhirExtension;
+  final List<FhirExtension> extension_;
   @override
   final FhirUri url;
   @override
@@ -870,7 +1277,7 @@ class _$_FhirExtension implements _FhirExtension {
 
   @override
   String toString() {
-    return 'FhirExtension(id: $id, fhirExtension: $fhirExtension, url: $url, valueBase64Binary: $valueBase64Binary, valueBoolean: $valueBoolean, valueCanonical: $valueCanonical, valueCode: $valueCode, valueDate: $valueDate, valueDateTime: $valueDateTime, valueDecimal: $valueDecimal, valueId: $valueId, valueInstant: $valueInstant, valueInteger: $valueInteger, valueMarkdown: $valueMarkdown, valueOid: $valueOid, valuePositiveInt: $valuePositiveInt, valueString: $valueString, valueTime: $valueTime, valueUnsignedInt: $valueUnsignedInt, valueUri: $valueUri, valueUrl: $valueUrl, valueUuid: $valueUuid, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'FhirExtension(id: $id, extension_: $extension_, url: $url, valueBase64Binary: $valueBase64Binary, valueBoolean: $valueBoolean, valueCanonical: $valueCanonical, valueCode: $valueCode, valueDate: $valueDate, valueDateTime: $valueDateTime, valueDecimal: $valueDecimal, valueId: $valueId, valueInstant: $valueInstant, valueInteger: $valueInteger, valueMarkdown: $valueMarkdown, valueOid: $valueOid, valuePositiveInt: $valuePositiveInt, valueString: $valueString, valueTime: $valueTime, valueUnsignedInt: $valueUnsignedInt, valueUri: $valueUri, valueUrl: $valueUrl, valueUuid: $valueUuid, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
   }
 
   @override
@@ -879,9 +1286,9 @@ class _$_FhirExtension implements _FhirExtension {
         (other is _FhirExtension &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.fhirExtension, fhirExtension) ||
+            (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
-                    .equals(other.fhirExtension, fhirExtension)) &&
+                    .equals(other.extension_, extension_)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.valueBase64Binary, valueBase64Binary) ||
@@ -979,7 +1386,7 @@ class _$_FhirExtension implements _FhirExtension {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(fhirExtension) ^
+      const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(valueBase64Binary) ^
       const DeepCollectionEquality().hash(valueBoolean) ^
@@ -1045,7 +1452,7 @@ class _$_FhirExtension implements _FhirExtension {
 abstract class _FhirExtension implements FhirExtension {
   const factory _FhirExtension(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirUri url,
       Base64Binary valueBase64Binary,
       bool valueBoolean,
@@ -1105,7 +1512,7 @@ abstract class _FhirExtension implements FhirExtension {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get fhirExtension;
+  List<FhirExtension> get extension_;
   @override
   FhirUri get url;
   @override

@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-// spec: https://itnext.io/comparing-freezed-to-built-value-3ff978c8647
-
 enum ContributorType {
   @JsonValue('author')
   author,
@@ -20,17 +18,6 @@ enum SortDirection {
   ascending,
   @JsonValue('descending')
   descending,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ExpressionLanguage {
-  @JsonValue('text/cql')
-  text_cql,
-  @JsonValue('text/fhirpath')
-  text_fhirpath,
-  @JsonValue('application/x-fhir-query')
-  application_x_fhir_query,
   @JsonValue('unknown')
   unknown,
 }
@@ -73,6 +60,17 @@ enum TriggerDefinitionType {
   data_accessed,
   @JsonValue('data-access-ended')
   data_access_ended,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ExpressionLanguage {
+  @JsonValue('text/cql')
+  text_cql,
+  @JsonValue('text/fhirpath')
+  text_fhirpath,
+  @JsonValue('application/x-fhir-query')
+  application_x_fhir_query,
   @JsonValue('unknown')
   unknown,
 }

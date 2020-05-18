@@ -9,13 +9,33 @@ part of 'draft_types.dart';
 _$_Population _$_$_PopulationFromJson(Map<String, dynamic> json) {
   return _$_Population(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
-    ageRange: json['ageRange'],
-    ageCodeableConcept: json['ageCodeableConcept'],
-    gender: json['gender'],
-    race: json['race'],
-    physiologicalCondition: json['physiologicalCondition'],
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    ageRange: json['ageRange'] == null
+        ? null
+        : Range.fromJson(json['ageRange'] as Map<String, dynamic>),
+    ageCodeableConcept: json['ageCodeableConcept'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['ageCodeableConcept'] as Map<String, dynamic>),
+    gender: json['gender'] == null
+        ? null
+        : CodeableConcept.fromJson(json['gender'] as Map<String, dynamic>),
+    race: json['race'] == null
+        ? null
+        : CodeableConcept.fromJson(json['race'] as Map<String, dynamic>),
+    physiologicalCondition: json['physiologicalCondition'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['physiologicalCondition'] as Map<String, dynamic>),
   );
 }
 
@@ -29,13 +49,16 @@ Map<String, dynamic> _$_$_PopulationToJson(_$_Population instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('extension', instance.extension);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('ageRange', instance.ageRange);
-  writeNotNull('ageCodeableConcept', instance.ageCodeableConcept);
-  writeNotNull('gender', instance.gender);
-  writeNotNull('race', instance.race);
-  writeNotNull('physiologicalCondition', instance.physiologicalCondition);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('ageRange', instance.ageRange?.toJson());
+  writeNotNull('ageCodeableConcept', instance.ageCodeableConcept?.toJson());
+  writeNotNull('gender', instance.gender?.toJson());
+  writeNotNull('race', instance.race?.toJson());
+  writeNotNull(
+      'physiologicalCondition', instance.physiologicalCondition?.toJson());
   return val;
 }
 
@@ -43,12 +66,30 @@ _$_ProductShelfLife _$_$_ProductShelfLifeFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'period']);
   return _$_ProductShelfLife(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'],
-    type: json['type'],
-    period: json['period'],
-    specialPrecautionsForStorage: json['specialPrecautionsForStorage'] as List,
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    type: json['type'] == null
+        ? null
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    period: json['period'] == null
+        ? null
+        : Quantity.fromJson(json['period'] as Map<String, dynamic>),
+    specialPrecautionsForStorage: (json['specialPrecautionsForStorage'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -62,13 +103,15 @@ Map<String, dynamic> _$_$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('extension', instance.extension);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('type', instance.type);
-  writeNotNull('period', instance.period);
   writeNotNull(
-      'specialPrecautionsForStorage', instance.specialPrecautionsForStorage);
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('specialPrecautionsForStorage',
+      instance.specialPrecautionsForStorage?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -76,19 +119,44 @@ _$_ProdCharacteristic _$_$_ProdCharacteristicFromJson(
     Map<String, dynamic> json) {
   return _$_ProdCharacteristic(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
-    height: json['height'],
-    width: json['width'],
-    depth: json['depth'],
-    weight: json['weight'],
-    nominalVolume: json['nominalVolume'],
-    externalDiameter: json['externalDiameter'],
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    height: json['height'] == null
+        ? null
+        : Quantity.fromJson(json['height'] as Map<String, dynamic>),
+    width: json['width'] == null
+        ? null
+        : Quantity.fromJson(json['width'] as Map<String, dynamic>),
+    depth: json['depth'] == null
+        ? null
+        : Quantity.fromJson(json['depth'] as Map<String, dynamic>),
+    weight: json['weight'] == null
+        ? null
+        : Quantity.fromJson(json['weight'] as Map<String, dynamic>),
+    nominalVolume: json['nominalVolume'] == null
+        ? null
+        : Quantity.fromJson(json['nominalVolume'] as Map<String, dynamic>),
+    externalDiameter: json['externalDiameter'] == null
+        ? null
+        : Quantity.fromJson(json['externalDiameter'] as Map<String, dynamic>),
     shape: json['shape'] as String,
     color: (json['color'] as List)?.map((e) => e as String)?.toList(),
     imprint: (json['imprint'] as List)?.map((e) => e as String)?.toList(),
-    image: json['image'] as List,
-    scoring: json['scoring'],
+    image: (json['image'] as List)
+        ?.map((e) =>
+            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    scoring: json['scoring'] == null
+        ? null
+        : CodeableConcept.fromJson(json['scoring'] as Map<String, dynamic>),
   );
 }
 
@@ -103,19 +171,21 @@ Map<String, dynamic> _$_$_ProdCharacteristicToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('extension', instance.extension);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('height', instance.height);
-  writeNotNull('width', instance.width);
-  writeNotNull('depth', instance.depth);
-  writeNotNull('weight', instance.weight);
-  writeNotNull('nominalVolume', instance.nominalVolume);
-  writeNotNull('externalDiameter', instance.externalDiameter);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('height', instance.height?.toJson());
+  writeNotNull('width', instance.width?.toJson());
+  writeNotNull('depth', instance.depth?.toJson());
+  writeNotNull('weight', instance.weight?.toJson());
+  writeNotNull('nominalVolume', instance.nominalVolume?.toJson());
+  writeNotNull('externalDiameter', instance.externalDiameter?.toJson());
   writeNotNull('shape', instance.shape);
   writeNotNull('color', instance.color);
   writeNotNull('imprint', instance.imprint);
-  writeNotNull('image', instance.image);
-  writeNotNull('scoring', instance.scoring);
+  writeNotNull('image', instance.image?.map((e) => e?.toJson())?.toList());
+  writeNotNull('scoring', instance.scoring?.toJson());
   return val;
 }
 
@@ -123,12 +193,29 @@ _$_MarketingStatus _$_$_MarketingStatusFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['country', 'status', 'dateRange']);
   return _$_MarketingStatus(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
-    country: json['country'],
-    jurisdiction: json['jurisdiction'],
-    status: json['status'],
-    dateRange: json['dateRange'],
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    country: json['country'] == null
+        ? null
+        : CodeableConcept.fromJson(json['country'] as Map<String, dynamic>),
+    jurisdiction: json['jurisdiction'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['jurisdiction'] as Map<String, dynamic>),
+    status: json['status'] == null
+        ? null
+        : CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
+    dateRange: json['dateRange'] == null
+        ? null
+        : Period.fromJson(json['dateRange'] as Map<String, dynamic>),
     restoreDate: json['restoreDate'] == null
         ? null
         : FhirDateTime.fromJson(json['restoreDate'] as String),
@@ -145,12 +232,14 @@ Map<String, dynamic> _$_$_MarketingStatusToJson(_$_MarketingStatus instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('extension', instance.extension);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('country', instance.country);
-  writeNotNull('jurisdiction', instance.jurisdiction);
-  writeNotNull('status', instance.status);
-  writeNotNull('dateRange', instance.dateRange);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('country', instance.country?.toJson());
+  writeNotNull('jurisdiction', instance.jurisdiction?.toJson());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('dateRange', instance.dateRange?.toJson());
   writeNotNull('restoreDate', instance.restoreDate?.toJson());
   return val;
 }
@@ -158,14 +247,31 @@ Map<String, dynamic> _$_$_MarketingStatusToJson(_$_MarketingStatus instance) {
 _$_SubstanceAmount _$_$_SubstanceAmountFromJson(Map<String, dynamic> json) {
   return _$_SubstanceAmount(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
-    amountQuantity: json['amountQuantity'],
-    amountRange: json['amountRange'],
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    amountQuantity: json['amountQuantity'] == null
+        ? null
+        : Quantity.fromJson(json['amountQuantity'] as Map<String, dynamic>),
+    amountRange: json['amountRange'] == null
+        ? null
+        : Range.fromJson(json['amountRange'] as Map<String, dynamic>),
     amountString: json['amountString'] as String,
-    amountType: json['amountType'],
+    amountType: json['amountType'] == null
+        ? null
+        : CodeableConcept.fromJson(json['amountType'] as Map<String, dynamic>),
     amountText: json['amountText'] as String,
-    referenceRange: json['referenceRange'],
+    referenceRange: json['referenceRange'] == null
+        ? null
+        : SubstanceAmountReferenceRange.fromJson(
+            json['referenceRange'] as Map<String, dynamic>),
   );
 }
 
@@ -179,14 +285,16 @@ Map<String, dynamic> _$_$_SubstanceAmountToJson(_$_SubstanceAmount instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('extension', instance.extension);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('amountQuantity', instance.amountQuantity);
-  writeNotNull('amountRange', instance.amountRange);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
+  writeNotNull('amountRange', instance.amountRange?.toJson());
   writeNotNull('amountString', instance.amountString);
-  writeNotNull('amountType', instance.amountType);
+  writeNotNull('amountType', instance.amountType?.toJson());
   writeNotNull('amountText', instance.amountText);
-  writeNotNull('referenceRange', instance.referenceRange);
+  writeNotNull('referenceRange', instance.referenceRange?.toJson());
   return val;
 }
 
@@ -194,10 +302,22 @@ _$_SubstanceAmountReferenceRange _$_$_SubstanceAmountReferenceRangeFromJson(
     Map<String, dynamic> json) {
   return _$_SubstanceAmountReferenceRange(
     id: json['id'] as String,
-    extension: json['extension'] as List,
-    modifierExtension: json['modifierExtension'] as List,
-    lowLimit: json['lowLimit'],
-    highLimit: json['highLimit'],
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    lowLimit: json['lowLimit'] == null
+        ? null
+        : Quantity.fromJson(json['lowLimit'] as Map<String, dynamic>),
+    highLimit: json['highLimit'] == null
+        ? null
+        : Quantity.fromJson(json['highLimit'] as Map<String, dynamic>),
   );
 }
 
@@ -212,9 +332,11 @@ Map<String, dynamic> _$_$_SubstanceAmountReferenceRangeToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('extension', instance.extension);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('lowLimit', instance.lowLimit);
-  writeNotNull('highLimit', instance.highLimit);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('lowLimit', instance.lowLimit?.toJson());
+  writeNotNull('highLimit', instance.highLimit?.toJson());
   return val;
 }

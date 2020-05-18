@@ -1,5 +1,52 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+enum IdentifierUse {
+  @JsonValue('usual')
+  usual,
+  @JsonValue('official')
+  official,
+  @JsonValue('temp')
+  temp,
+  @JsonValue('secondary')
+  secondary,
+  @JsonValue('old')
+  old,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum Comparator {
+  @JsonValue('<')
+  lessThan,
+  @JsonValue('<=')
+  lessThanEqual,
+  @JsonValue('>=')
+  greaterThanEqual,
+  @JsonValue('>')
+  greaterThan,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum HumanNameUse {
+  @JsonValue('usual')
+  usual,
+  @JsonValue('official')
+  official,
+  @JsonValue('temp')
+  temp,
+  @JsonValue('nickname')
+  nickname,
+  @JsonValue('anonymous')
+  anonymous,
+  @JsonValue('old')
+  old,
+  @JsonValue('maiden')
+  maiden,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum AddressUse {
   @JsonValue('home')
   home,
@@ -22,19 +69,6 @@ enum AddressType {
   physical,
   @JsonValue('both')
   both,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum Comparator {
-  @JsonValue('<')
-  lessThan,
-  @JsonValue('<=')
-  lessThanEqual,
-  @JsonValue('>=')
-  greaterThanEqual,
-  @JsonValue('>')
-  greaterThan,
   @JsonValue('unknown')
   unknown,
 }
@@ -73,41 +107,45 @@ enum ContactPointUse {
   unknown,
 }
 
-enum HumanNameUse {
-  @JsonValue('usual')
-  usual,
-  @JsonValue('official')
-  official,
-  @JsonValue('temp')
-  temp,
-  @JsonValue('nickname')
-  nickname,
-  @JsonValue('anonymous')
-  anonymous,
-  @JsonValue('old')
-  old,
-  @JsonValue('maiden')
-  maiden,
+enum RepeatDurationUnit {
+  @JsonValue('s')
+  s,
+  @JsonValue('min')
+  min,
+  @JsonValue('h')
+  h,
+  @JsonValue('d')
+  d,
+  @JsonValue('wk')
+  wk,
+  @JsonValue('mo')
+  mo,
+  @JsonValue('a')
+  a,
   @JsonValue('unknown')
   unknown,
 }
 
-enum IdentifierUse {
-  @JsonValue('usual')
-  usual,
-  @JsonValue('official')
-  official,
-  @JsonValue('temp')
-  temp,
-  @JsonValue('secondary')
-  secondary,
-  @JsonValue('old')
-  old,
+enum RepeatPeriodUnit {
+  @JsonValue('s')
+  s,
+  @JsonValue('min')
+  min,
+  @JsonValue('h')
+  h,
+  @JsonValue('d')
+  d,
+  @JsonValue('wk')
+  wk,
+  @JsonValue('mo')
+  mo,
+  @JsonValue('a')
+  a,
   @JsonValue('unknown')
   unknown,
 }
 
-enum TimingRepeatWhen {
+enum RepeatWhen {
   @JsonValue('MORN')
   morn,
   @JsonValue('MORN.early')
@@ -160,25 +198,6 @@ enum TimingRepeatWhen {
   pcd,
   @JsonValue('PCV')
   pcv,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum TimingRepeatUnit {
-  @JsonValue('s')
-  s,
-  @JsonValue('min')
-  min,
-  @JsonValue('h')
-  h,
-  @JsonValue('d')
-  d,
-  @JsonValue('wk')
-  wk,
-  @JsonValue('mo')
-  mo,
-  @JsonValue('a')
-  a,
   @JsonValue('unknown')
   unknown,
 }

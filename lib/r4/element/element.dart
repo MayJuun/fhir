@@ -10,18 +10,15 @@ part 'element.g.dart';
 abstract class Element {
   Element({
     String id,
-    FhirExtension fhirExtension,
+    @JsonKey(name: 'extension') FhirExtension extension_,
   });
-
-  factory Element.fromJson(Map<String, dynamic> json) =>
-      _$ElementFromJson(json);
 }
 
 @freezed
-abstract class FhirExtension with _$FhirExtension {
+abstract class FhirExtension extends Element with _$FhirExtension {
   const factory FhirExtension({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirUri url,
     Base64Binary valueBase64Binary,
     bool valueBoolean,

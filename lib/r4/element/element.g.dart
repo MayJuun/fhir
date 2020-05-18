@@ -15,7 +15,7 @@ Map<String, dynamic> _$ElementToJson(Element instance) => <String, dynamic>{};
 _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
   return _$_FhirExtension(
     id: json['id'] as String,
-    fhirExtension: (json['extension'] as List)
+    extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -65,39 +65,109 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
     valueUuid: json['valueUuid'] == null
         ? null
         : Uuid.fromJson(json['valueUuid'] as String),
-    valueAddress: json['valueAddress'],
-    valueAge: json['valueAge'],
-    valueAnnotation: json['valueAnnotation'],
-    valueAttachment: json['valueAttachment'],
-    valueCodeableConcept: json['valueCodeableConcept'],
-    valueCoding: json['valueCoding'],
-    valueContactPoint: json['valueContactPoint'],
-    valueCount: json['valueCount'],
-    valueDistance: json['valueDistance'],
+    valueAddress: json['valueAddress'] == null
+        ? null
+        : Address.fromJson(json['valueAddress'] as Map<String, dynamic>),
+    valueAge: json['valueAge'] == null
+        ? null
+        : Age.fromJson(json['valueAge'] as Map<String, dynamic>),
+    valueAnnotation: json['valueAnnotation'] == null
+        ? null
+        : Annotation.fromJson(json['valueAnnotation'] as Map<String, dynamic>),
+    valueAttachment: json['valueAttachment'] == null
+        ? null
+        : Attachment.fromJson(json['valueAttachment'] as Map<String, dynamic>),
+    valueCodeableConcept: json['valueCodeableConcept'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['valueCodeableConcept'] as Map<String, dynamic>),
+    valueCoding: json['valueCoding'] == null
+        ? null
+        : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
+    valueContactPoint: json['valueContactPoint'] == null
+        ? null
+        : ContactPoint.fromJson(
+            json['valueContactPoint'] as Map<String, dynamic>),
+    valueCount: json['valueCount'] == null
+        ? null
+        : Count.fromJson(json['valueCount'] as Map<String, dynamic>),
+    valueDistance: json['valueDistance'] == null
+        ? null
+        : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration(microseconds: json['valueDuration'] as int),
-    valueHumanName: json['valueHumanName'],
-    valueIdentifier: json['valueIdentifier'],
-    valueMoney: json['valueMoney'],
-    valuePeriod: json['valuePeriod'],
-    valueQuantity: json['valueQuantity'],
-    valueRange: json['valueRange'],
-    valueRatio: json['valueRatio'],
-    valueReference: json['valueReference'],
-    valueSampledData: json['valueSampledData'],
-    valueSignature: json['valueSignature'],
-    valueTiming: json['valueTiming'],
-    valueContactDetail: json['valueContactDetail'],
-    valueContributor: json['valueContributor'],
-    valueDataRequirement: json['valueDataRequirement'],
-    valueExpression: json['valueExpression'],
-    valueParameterDefinition: json['valueParameterDefinition'],
-    valueRelatedArtifact: json['valueRelatedArtifact'],
-    valueTriggerDefinition: json['valueTriggerDefinition'],
-    valueUsageContext: json['valueUsageContext'],
-    valueDosage: json['valueDosage'],
-    valueMeta: json['valueMeta'],
+        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
+    valueHumanName: json['valueHumanName'] == null
+        ? null
+        : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),
+    valueIdentifier: json['valueIdentifier'] == null
+        ? null
+        : Identifier.fromJson(json['valueIdentifier'] as Map<String, dynamic>),
+    valueMoney: json['valueMoney'] == null
+        ? null
+        : Money.fromJson(json['valueMoney'] as Map<String, dynamic>),
+    valuePeriod: json['valuePeriod'] == null
+        ? null
+        : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
+    valueQuantity: json['valueQuantity'] == null
+        ? null
+        : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+    valueRange: json['valueRange'] == null
+        ? null
+        : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
+    valueRatio: json['valueRatio'] == null
+        ? null
+        : Ratio.fromJson(json['valueRatio'] as Map<String, dynamic>),
+    valueReference: json['valueReference'] == null
+        ? null
+        : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
+    valueSampledData: json['valueSampledData'] == null
+        ? null
+        : SampledData.fromJson(
+            json['valueSampledData'] as Map<String, dynamic>),
+    valueSignature: json['valueSignature'] == null
+        ? null
+        : Signature.fromJson(json['valueSignature'] as Map<String, dynamic>),
+    valueTiming: json['valueTiming'] == null
+        ? null
+        : Timing.fromJson(json['valueTiming'] as Map<String, dynamic>),
+    valueContactDetail: json['valueContactDetail'] == null
+        ? null
+        : ContactDetail.fromJson(
+            json['valueContactDetail'] as Map<String, dynamic>),
+    valueContributor: json['valueContributor'] == null
+        ? null
+        : Contributor.fromJson(
+            json['valueContributor'] as Map<String, dynamic>),
+    valueDataRequirement: json['valueDataRequirement'] == null
+        ? null
+        : DataRequirement.fromJson(
+            json['valueDataRequirement'] as Map<String, dynamic>),
+    valueExpression: json['valueExpression'] == null
+        ? null
+        : Expression.fromJson(json['valueExpression'] as Map<String, dynamic>),
+    valueParameterDefinition: json['valueParameterDefinition'] == null
+        ? null
+        : ParameterDefinition.fromJson(
+            json['valueParameterDefinition'] as Map<String, dynamic>),
+    valueRelatedArtifact: json['valueRelatedArtifact'] == null
+        ? null
+        : RelatedArtifact.fromJson(
+            json['valueRelatedArtifact'] as Map<String, dynamic>),
+    valueTriggerDefinition: json['valueTriggerDefinition'] == null
+        ? null
+        : TriggerDefinition.fromJson(
+            json['valueTriggerDefinition'] as Map<String, dynamic>),
+    valueUsageContext: json['valueUsageContext'] == null
+        ? null
+        : UsageContext.fromJson(
+            json['valueUsageContext'] as Map<String, dynamic>),
+    valueDosage: json['valueDosage'] == null
+        ? null
+        : Dosage.fromJson(json['valueDosage'] as Map<String, dynamic>),
+    valueMeta: json['valueMeta'] == null
+        ? null
+        : Meta.fromJson(json['valueMeta'] as Map<String, dynamic>),
   );
 }
 
@@ -112,7 +182,7 @@ Map<String, dynamic> _$_$_FhirExtensionToJson(_$_FhirExtension instance) {
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean);
@@ -133,36 +203,38 @@ Map<String, dynamic> _$_$_FhirExtensionToJson(_$_FhirExtension instance) {
   writeNotNull('valueUri', instance.valueUri?.toJson());
   writeNotNull('valueUrl', instance.valueUrl?.toJson());
   writeNotNull('valueUuid', instance.valueUuid?.toJson());
-  writeNotNull('valueAddress', instance.valueAddress);
-  writeNotNull('valueAge', instance.valueAge);
-  writeNotNull('valueAnnotation', instance.valueAnnotation);
-  writeNotNull('valueAttachment', instance.valueAttachment);
-  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept);
-  writeNotNull('valueCoding', instance.valueCoding);
-  writeNotNull('valueContactPoint', instance.valueContactPoint);
-  writeNotNull('valueCount', instance.valueCount);
-  writeNotNull('valueDistance', instance.valueDistance);
-  writeNotNull('valueDuration', instance.valueDuration?.inMicroseconds);
-  writeNotNull('valueHumanName', instance.valueHumanName);
-  writeNotNull('valueIdentifier', instance.valueIdentifier);
-  writeNotNull('valueMoney', instance.valueMoney);
-  writeNotNull('valuePeriod', instance.valuePeriod);
-  writeNotNull('valueQuantity', instance.valueQuantity);
-  writeNotNull('valueRange', instance.valueRange);
-  writeNotNull('valueRatio', instance.valueRatio);
-  writeNotNull('valueReference', instance.valueReference);
-  writeNotNull('valueSampledData', instance.valueSampledData);
-  writeNotNull('valueSignature', instance.valueSignature);
-  writeNotNull('valueTiming', instance.valueTiming);
-  writeNotNull('valueContactDetail', instance.valueContactDetail);
-  writeNotNull('valueContributor', instance.valueContributor);
-  writeNotNull('valueDataRequirement', instance.valueDataRequirement);
-  writeNotNull('valueExpression', instance.valueExpression);
-  writeNotNull('valueParameterDefinition', instance.valueParameterDefinition);
-  writeNotNull('valueRelatedArtifact', instance.valueRelatedArtifact);
-  writeNotNull('valueTriggerDefinition', instance.valueTriggerDefinition);
-  writeNotNull('valueUsageContext', instance.valueUsageContext);
-  writeNotNull('valueDosage', instance.valueDosage);
-  writeNotNull('valueMeta', instance.valueMeta);
+  writeNotNull('valueAddress', instance.valueAddress?.toJson());
+  writeNotNull('valueAge', instance.valueAge?.toJson());
+  writeNotNull('valueAnnotation', instance.valueAnnotation?.toJson());
+  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull('valueCoding', instance.valueCoding?.toJson());
+  writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
+  writeNotNull('valueCount', instance.valueCount?.toJson());
+  writeNotNull('valueDistance', instance.valueDistance?.toJson());
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
+  writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
+  writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
+  writeNotNull('valueMoney', instance.valueMoney?.toJson());
+  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueRatio', instance.valueRatio?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
+  writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
+  writeNotNull('valueSignature', instance.valueSignature?.toJson());
+  writeNotNull('valueTiming', instance.valueTiming?.toJson());
+  writeNotNull('valueContactDetail', instance.valueContactDetail?.toJson());
+  writeNotNull('valueContributor', instance.valueContributor?.toJson());
+  writeNotNull('valueDataRequirement', instance.valueDataRequirement?.toJson());
+  writeNotNull('valueExpression', instance.valueExpression?.toJson());
+  writeNotNull(
+      'valueParameterDefinition', instance.valueParameterDefinition?.toJson());
+  writeNotNull('valueRelatedArtifact', instance.valueRelatedArtifact?.toJson());
+  writeNotNull(
+      'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
+  writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
+  writeNotNull('valueDosage', instance.valueDosage?.toJson());
+  writeNotNull('valueMeta', instance.valueMeta?.toJson());
   return val;
 }
