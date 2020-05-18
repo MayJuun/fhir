@@ -29,14 +29,14 @@ void main() async {
             var type;
             if (field != null) {
               if (field.keys.contains('const')) {
-                text += '@JsonKey(required: true) @required String $field,';
+                text += '@JsonKey(required: true) @required String $fields,';
               } else if (field.keys.contains('\$ref')) {
                 type = field['\$ref'].split('/definitions/')[1];
                 var newType = whatType(type).replaceAll('_', '');
                 if (field.keys.contains('items')) {
-                  text += '\nList<$newType> $fields';
+                  text += '\nList<$newType> $fields,';
                 } else {
-                  text += '\n$newType $fields';
+                  text += '\n$newType $fields,';
                 }
               }
             }
@@ -71,6 +71,7 @@ Future<void> writeFile(String dir, String text, String newObj) async {
       '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) => _\$${newObj}FromJson(json);'
       '\nMap<String, dynamic> toJson() => _\$${newObj}ToJson(this);}\n\n';
   await File(dir).writeAsString(file);
+  // print(file);
 }
 
 // String importLocation(String file) {
