@@ -25,9 +25,7 @@ _$_Address _$_$_AddressFromJson(Map<String, dynamic> json) {
     state: json['state'] as String,
     postalCode: json['postalCode'] as String,
     country: json['country'] as String,
-    period: json['period'] == null
-        ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    period: json['period'],
   );
 }
 
@@ -52,7 +50,7 @@ Map<String, dynamic> _$_$_AddressToJson(_$_Address instance) {
   writeNotNull('state', instance.state);
   writeNotNull('postalCode', instance.postalCode);
   writeNotNull('country', instance.country);
-  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('period', instance.period);
   return val;
 }
 
@@ -159,9 +157,7 @@ _$_Annotation _$_$_AnnotationFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    authorReference: json['authorReference'] == null
-        ? null
-        : Reference.fromJson(json['authorReference'] as Map<String, dynamic>),
+    authorReference: json['authorReference'],
     authorString: json['authorString'] as String,
     time: json['time'] == null
         ? null
@@ -183,7 +179,7 @@ Map<String, dynamic> _$_$_AnnotationToJson(_$_Annotation instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('authorReference', instance.authorReference?.toJson());
+  writeNotNull('authorReference', instance.authorReference);
   writeNotNull('authorString', instance.authorString);
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('text', instance.text?.toJson());
@@ -250,10 +246,7 @@ _$_CodeableConcept _$_$_CodeableConceptFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    coding: (json['coding'] as List)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    coding: json['coding'] as List,
     text: json['text'] as String,
   );
 }
@@ -270,7 +263,7 @@ Map<String, dynamic> _$_$_CodeableConceptToJson(_$_CodeableConcept instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('coding', instance.coding?.map((e) => e?.toJson())?.toList());
+  writeNotNull('coding', instance.coding);
   writeNotNull('text', instance.text);
   return val;
 }
@@ -327,9 +320,7 @@ _$_ContactPoint _$_$_ContactPointFromJson(Map<String, dynamic> json) {
     use: _$enumDecodeNullable(_$ContactPointUseEnumMap, json['use'],
         unknownValue: ContactPointUse.unknown),
     rank: json['rank'] as int,
-    period: json['period'] == null
-        ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    period: json['period'],
   );
 }
 
@@ -349,7 +340,7 @@ Map<String, dynamic> _$_$_ContactPointToJson(_$_ContactPoint instance) {
   writeNotNull('value', instance.value);
   writeNotNull('use', _$ContactPointUseEnumMap[instance.use]);
   writeNotNull('rank', instance.rank);
-  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('period', instance.period);
   return val;
 }
 
@@ -505,9 +496,7 @@ _$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
     given: (json['given'] as List)?.map((e) => e as String)?.toList(),
     prefix: (json['prefix'] as List)?.map((e) => e as String)?.toList(),
     suffix: (json['suffix'] as List)?.map((e) => e as String)?.toList(),
-    period: json['period'] == null
-        ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    period: json['period'],
   );
 }
 
@@ -529,7 +518,7 @@ Map<String, dynamic> _$_$_HumanNameToJson(_$_HumanName instance) {
   writeNotNull('given', instance.given);
   writeNotNull('prefix', instance.prefix);
   writeNotNull('suffix', instance.suffix);
-  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('period', instance.period);
   return val;
 }
 
@@ -554,19 +543,13 @@ _$_Identifier _$_$_IdentifierFromJson(Map<String, dynamic> json) {
         ?.toList(),
     use: _$enumDecodeNullable(_$IdentifierUseEnumMap, json['use'],
         unknownValue: IdentifierUse.unknown),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    type: json['type'],
     system: json['system'] == null
         ? null
         : FhirUri.fromJson(json['system'] as String),
     value: json['value'] as String,
-    period: json['period'] == null
-        ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>),
-    assigner: json['assigner'] == null
-        ? null
-        : Reference.fromJson(json['assigner'] as Map<String, dynamic>),
+    period: json['period'],
+    assigner: json['assigner'],
   );
 }
 
@@ -583,11 +566,11 @@ Map<String, dynamic> _$_$_IdentifierToJson(_$_Identifier instance) {
   writeNotNull(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('use', _$IdentifierUseEnumMap[instance.use]);
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', instance.type);
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('value', instance.value);
-  writeNotNull('period', instance.period?.toJson());
-  writeNotNull('assigner', instance.assigner?.toJson());
+  writeNotNull('period', instance.period);
+  writeNotNull('assigner', instance.assigner);
   return val;
 }
 
@@ -713,12 +696,8 @@ _$_Range _$_$_RangeFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    low: json['low'] == null
-        ? null
-        : Quantity.fromJson(json['low'] as Map<String, dynamic>),
-    high: json['high'] == null
-        ? null
-        : Quantity.fromJson(json['high'] as Map<String, dynamic>),
+    low: json['low'],
+    high: json['high'],
   );
 }
 
@@ -734,8 +713,8 @@ Map<String, dynamic> _$_$_RangeToJson(_$_Range instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('low', instance.low?.toJson());
-  writeNotNull('high', instance.high?.toJson());
+  writeNotNull('low', instance.low);
+  writeNotNull('high', instance.high);
   return val;
 }
 
@@ -747,12 +726,8 @@ _$_Ratio _$_$_RatioFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    numerator: json['numerator'] == null
-        ? null
-        : Quantity.fromJson(json['numerator'] as Map<String, dynamic>),
-    denominator: json['denominator'] == null
-        ? null
-        : Quantity.fromJson(json['denominator'] as Map<String, dynamic>),
+    numerator: json['numerator'],
+    denominator: json['denominator'],
   );
 }
 
@@ -768,8 +743,8 @@ Map<String, dynamic> _$_$_RatioToJson(_$_Ratio instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('numerator', instance.numerator?.toJson());
-  writeNotNull('denominator', instance.denominator?.toJson());
+  writeNotNull('numerator', instance.numerator);
+  writeNotNull('denominator', instance.denominator);
   return val;
 }
 
@@ -781,9 +756,7 @@ _$_SampledData _$_$_SampledDataFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    origin: json['origin'] == null
-        ? null
-        : Quantity.fromJson(json['origin'] as Map<String, dynamic>),
+    origin: json['origin'],
     period: (json['period'] as num)?.toDouble(),
     factor: (json['factor'] as num)?.toDouble(),
     lowerLimit: (json['lowerLimit'] as num)?.toDouble(),
@@ -805,7 +778,7 @@ Map<String, dynamic> _$_$_SampledDataToJson(_$_SampledData instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('origin', instance.origin?.toJson());
+  writeNotNull('origin', instance.origin);
   writeNotNull('period', instance.period);
   writeNotNull('factor', instance.factor);
   writeNotNull('lowerLimit', instance.lowerLimit);
@@ -823,18 +796,11 @@ _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: (json['type'] as List)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    type: json['type'] as List,
     whenInstant:
         json['when'] == null ? null : Instant.fromJson(json['when'] as String),
-    who: json['who'] == null
-        ? null
-        : Reference.fromJson(json['who'] as Map<String, dynamic>),
-    onBehalfOf: json['onBehalfOf'] == null
-        ? null
-        : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
+    who: json['who'],
+    onBehalfOf: json['onBehalfOf'],
     targetFormat: json['targetFormat'] == null
         ? null
         : Code.fromJson(json['targetFormat'] as String),
@@ -859,10 +825,10 @@ Map<String, dynamic> _$_$_SignatureToJson(_$_Signature instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', instance.type);
   writeNotNull('when', instance.whenInstant?.toJson());
-  writeNotNull('who', instance.who?.toJson());
-  writeNotNull('onBehalfOf', instance.onBehalfOf?.toJson());
+  writeNotNull('who', instance.who);
+  writeNotNull('onBehalfOf', instance.onBehalfOf);
   writeNotNull('targetFormat', instance.targetFormat?.toJson());
   writeNotNull('sigFormat', instance.sigFormat?.toJson());
   writeNotNull('data', instance.data?.toJson());
@@ -885,12 +851,8 @@ _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
     event: (json['event'] as List)
         ?.map((e) => e == null ? null : DateTime.parse(e as String))
         ?.toList(),
-    repeat: json['repeat'] == null
-        ? null
-        : TimingRepeat.fromJson(json['repeat'] as Map<String, dynamic>),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    repeat: json['repeat'],
+    code: json['code'],
   );
 }
 
@@ -910,8 +872,8 @@ Map<String, dynamic> _$_$_TimingToJson(_$_Timing instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'event', instance.event?.map((e) => e?.toIso8601String())?.toList());
-  writeNotNull('repeat', instance.repeat?.toJson());
-  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('repeat', instance.repeat);
+  writeNotNull('code', instance.code);
   return val;
 }
 
@@ -930,13 +892,9 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
         ?.toList(),
     boundsDuration: json['boundsDuration'] == null
         ? null
-        : Duration.fromJson(json['boundsDuration'] as Map<String, dynamic>),
-    boundsRange: json['boundsRange'] == null
-        ? null
-        : Range.fromJson(json['boundsRange'] as Map<String, dynamic>),
-    boundsPeriod: json['boundsPeriod'] == null
-        ? null
-        : Period.fromJson(json['boundsPeriod'] as Map<String, dynamic>),
+        : Duration(microseconds: json['boundsDuration'] as int),
+    boundsRange: json['boundsRange'],
+    boundsPeriod: json['boundsPeriod'],
     count: json['count'] as int,
     countMax: json['countMax'] as int,
     duration: (json['duration'] as num)?.toDouble(),
@@ -978,9 +936,9 @@ Map<String, dynamic> _$_$_TimingRepeatToJson(_$_TimingRepeat instance) {
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('boundsDuration', instance.boundsDuration?.toJson());
-  writeNotNull('boundsRange', instance.boundsRange?.toJson());
-  writeNotNull('boundsPeriod', instance.boundsPeriod?.toJson());
+  writeNotNull('boundsDuration', instance.boundsDuration?.inMicroseconds);
+  writeNotNull('boundsRange', instance.boundsRange);
+  writeNotNull('boundsPeriod', instance.boundsPeriod);
   writeNotNull('count', instance.count);
   writeNotNull('countMax', instance.countMax);
   writeNotNull('duration', instance.duration);

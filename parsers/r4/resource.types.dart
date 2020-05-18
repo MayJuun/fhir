@@ -1,0 +1,1 @@
+String ResourceGroup(String obj) {}
