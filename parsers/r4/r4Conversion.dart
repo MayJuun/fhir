@@ -29,10 +29,11 @@ void main() async {
             var type;
             if (field != null) {
               if (field.keys.contains('const')) {
+                text += '@JsonKey('
                 type = 'String';
               } else if (field.keys.contains('\$ref')) {
                 type = field['\$ref'].split('/definitions/')[1];
-                var newType = whatType(type);
+                var newType = whatType(type).replaceAll('_', '');
                 if (field.keys.contains('items')) {
                   text += '\nList<$newType> $field';
                 } else {

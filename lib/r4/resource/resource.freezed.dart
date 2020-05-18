@@ -16,7 +16,7 @@ class _$DomainResourceTearOff {
   const _$DomainResourceTearOff();
 
   _DomainResource call(
-      {Id id,
+      {@required Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -143,12 +143,13 @@ class __$DomainResourceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DomainResource implements _DomainResource {
   const _$_DomainResource(
-      {this.id,
+      {@required this.id,
       this.meta,
       this.implicitRules,
       this.language,
       this.text,
-      this.contained});
+      this.contained})
+      : assert(id != null);
 
   factory _$_DomainResource.fromJson(Map<String, dynamic> json) =>
       _$_$_DomainResourceFromJson(json);
@@ -214,7 +215,7 @@ class _$_DomainResource implements _DomainResource {
 
 abstract class _DomainResource implements DomainResource {
   const factory _DomainResource(
-      {Id id,
+      {@required Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,

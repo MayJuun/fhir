@@ -9,7 +9,7 @@ part 'resource.g.dart';
 @freezed
 abstract class DomainResource extends Resource with _$DomainResource {
   const factory DomainResource({
-    Id id,
+    @required Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
