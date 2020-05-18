@@ -43,6 +43,34 @@ void main() async {
           }
         }
       }
+      var file;
+      var dir;
+      if (GetDataType(obj.split('_')[0]) == 'draft') {
+        dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.dart';
+        file = await File(dir).readAsString();
+        file += text;
+        await File(dir).writeAsString(file);
+      } else if (GetDataType(obj.split('_')[0]) == 'general') {
+        dir = '/home/grey/dev/fhir/lib/r4/general_types/general_types.dart';
+        file = await File(dir).readAsString();
+        file += text;
+        await File(dir).writeAsString(file);
+      } else if (GetDataType(obj.split('_')[0]) == 'metadata') {
+        dir = '/home/grey/dev/fhir/lib/r4/metadata_types/metadata_types.dart';
+        file = await File(dir).readAsString();
+        file += text;
+        await File(dir).writeAsString(file);
+      } else if (GetDataType(obj.split('_')[0]) == 'special') {
+        dir = '/home/grey/dev/fhir/lib/r4/special_types/special_types.dart';
+        file = await File(dir).readAsString();
+        file += text;
+        await File(dir).writeAsString(file);
+      } else if (GetDataType(obj.split('_')[0]) == 'resource') {
+        dir = '/home/grey/dev/fhir/lib/r4/resource_types/resource_types.dart';
+        file = await File(dir).readAsString();
+        file += text;
+        await File(dir).writeAsString(file);
+      }
       print(text);
     }
   }
