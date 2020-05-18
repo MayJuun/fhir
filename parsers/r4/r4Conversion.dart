@@ -16,7 +16,7 @@ void main() async {
       text = '@freezed\nabstract class $obj '
           '${ResourceTypes().contains(obj.toLowerCase()) ? 'extends DomainResource' : 'extends Element'}'
           ' with _\$$newObj {'
-          '\nfactory $newObj ({';
+          '\nconst factory $newObj ({';
       var required = [];
 
       if (schema['definitions'][obj].keys.contains('required')) {
@@ -34,9 +34,9 @@ void main() async {
                 type = field['\$ref'].split('/definitions/')[1];
                 var newType = whatType(type).replaceAll('_', '');
                 if (field.keys.contains('items')) {
-                  text += '\nList<$newType> $field';
+                  text += '\nList<$newType> $fields';
                 } else {
-                  text += '\n$newType $field';
+                  text += '\n$newType $fields';
                 }
               }
             }
@@ -48,7 +48,7 @@ void main() async {
       if (GetDataType(obj.split('_')[0]) == 'draft') {
         dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.dart';
         file = await File(dir).readAsString();
-        file += text + '}) = _$newObj;';
+        file += text + '}) = _$newObj;}\n\n';
         await File(dir).writeAsString(file);
       } else if (GetDataType(obj.split('_')[0]) == 'general') {
         dir = '/home/grey/dev/fhir/lib/r4/general_types/general_types.dart';
