@@ -43,39 +43,34 @@ void main() async {
           }
         }
       }
-      var file;
       var dir;
       if (GetDataType(obj.split('_')[0]) == 'draft') {
         dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.dart';
-        file = await File(dir).readAsString();
-        file += text;
-        file +=
-            '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) => _\$${newObj}FromJson(json);'
-            '\nMap<String, dynamic> toJson() => _\$${newObj}ToJson(this);}\n\n';
-        await File(dir).writeAsString(file);
+        await writeFile(dir, text, newObj);
       } else if (GetDataType(obj.split('_')[0]) == 'general') {
         dir = '/home/grey/dev/fhir/lib/r4/general_types/general_types.dart';
-        file = await File(dir).readAsString();
-        file += text + '}) = _$newObj;}\n\n';
-        await File(dir).writeAsString(file);
+        await writeFile(dir, text, newObj);
       } else if (GetDataType(obj.split('_')[0]) == 'metadata') {
         dir = '/home/grey/dev/fhir/lib/r4/metadata_types/metadata_types.dart';
-        file = await File(dir).readAsString();
-        file += text + '}) = _$newObj;}\n\n';
-        await File(dir).writeAsString(file);
+        await writeFile(dir, text, newObj);
       } else if (GetDataType(obj.split('_')[0]) == 'special') {
         dir = '/home/grey/dev/fhir/lib/r4/special_types/special_types.dart';
-        file = await File(dir).readAsString();
-        file += text + '}) = _$newObj;}\n\n';
-        await File(dir).writeAsString(file);
+        await writeFile(dir, text, newObj);
       } else if (GetDataType(obj.split('_')[0]) == 'resource') {
         dir = '/home/grey/dev/fhir/lib/r4/resource_types/resource_types.dart';
-        file = await File(dir).readAsString();
-        file += text + '}) = _$newObj;}\n\n';
-        await File(dir).writeAsString(file);
+        await writeFile(dir, text, newObj);
       }
     }
   }
+}
+
+Future<void> writeFile(String dir, String text, String newObj) async {
+  var file = await File(dir).readAsString();
+  file += text;
+  file +=
+      '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) => _\$${newObj}FromJson(json);'
+      '\nMap<String, dynamic> toJson() => _\$${newObj}ToJson(this);}\n\n';
+  await File(dir).writeAsString(file);
 }
 
 // String importLocation(String file) {
