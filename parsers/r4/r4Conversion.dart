@@ -29,8 +29,7 @@ void main() async {
             var type;
             if (field != null) {
               if (field.keys.contains('const')) {
-                text += '@JsonKey('
-                type = 'String';
+                text += '@JsonKey(required: true) @required String $field,';
               } else if (field.keys.contains('\$ref')) {
                 type = field['\$ref'].split('/definitions/')[1];
                 var newType = whatType(type).replaceAll('_', '');
@@ -49,7 +48,7 @@ void main() async {
       if (GetDataType(obj.split('_')[0]) == 'draft') {
         dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.dart';
         file = await File(dir).readAsString();
-        file += text;
+        file += text + '}) = _$newObj;';
         await File(dir).writeAsString(file);
       } else if (GetDataType(obj.split('_')[0]) == 'general') {
         dir = '/home/grey/dev/fhir/lib/r4/general_types/general_types.dart';

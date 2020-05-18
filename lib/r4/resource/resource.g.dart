@@ -7,6 +7,7 @@ part of 'resource.dart';
 // **************************************************************************
 
 _$_DomainResource _$_$_DomainResourceFromJson(Map<String, dynamic> json) {
+  $checkKeys(json, requiredKeys: const ['id']);
   return _$_DomainResource(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'],

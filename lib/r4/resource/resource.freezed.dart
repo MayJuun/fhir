@@ -16,7 +16,7 @@ class _$DomainResourceTearOff {
   const _$DomainResourceTearOff();
 
   _DomainResource call(
-      {@required Id id,
+      {@required @JsonKey(required: true) Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -37,6 +37,7 @@ class _$DomainResourceTearOff {
 const $DomainResource = _$DomainResourceTearOff();
 
 mixin _$DomainResource {
+  @JsonKey(required: true)
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -53,7 +54,7 @@ abstract class $DomainResourceCopyWith<$Res> {
           DomainResource value, $Res Function(DomainResource) then) =
       _$DomainResourceCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(required: true) Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -99,7 +100,7 @@ abstract class _$DomainResourceCopyWith<$Res>
       __$DomainResourceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(required: true) Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -143,7 +144,7 @@ class __$DomainResourceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DomainResource implements _DomainResource {
   const _$_DomainResource(
-      {@required this.id,
+      {@required @JsonKey(required: true) this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -155,6 +156,7 @@ class _$_DomainResource implements _DomainResource {
       _$_$_DomainResourceFromJson(json);
 
   @override
+  @JsonKey(required: true)
   final Id id;
   @override
   final Meta meta;
@@ -215,7 +217,7 @@ class _$_DomainResource implements _DomainResource {
 
 abstract class _DomainResource implements DomainResource {
   const factory _DomainResource(
-      {@required Id id,
+      {@required @JsonKey(required: true) Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -226,6 +228,7 @@ abstract class _DomainResource implements DomainResource {
       _$_DomainResource.fromJson;
 
   @override
+  @JsonKey(required: true)
   Id get id;
   @override
   Meta get meta;
