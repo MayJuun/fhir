@@ -26,28 +26,28 @@ void main() async {
         for (final fields in schema['definitions'][obj]['properties'].keys) {
           var require = '';
           if (fields[0] != '_') {
-            if(required.contains(fields)){ 
+            if (required.contains(fields)) {
               require = '@JsonKey(required: true) @required';
             }
           }
-            var field = schema['definitions'][obj]['properties'][fields];
-            var type;
-            if (field != null) {
-              if (field.keys.contains('const')) {
-                text += '$require String $fields,';
-              } else if (field.keys.contains('\$ref')) {
-                type = field['\$ref'].split('/definitions/')[1];
-                var newType = whatType(type).replaceAll('_', '');
-                if (field.keys.contains('items')) {
-                  text += '\n$require List<$newType> $fields,';
-                } else {
-                  text += '\n$require $newType $fields,';
-                }
+          var field = schema['definitions'][obj]['properties'][fields];
+          var type;
+          if (field != null) {
+            if (field.keys.contains('const')) {
+              text += '$require String $fields,';
+            } else if (field.keys.contains('\$ref')) {
+              type = field['\$ref'].split('/definitions/')[1];
+              var newType = whatType(type).replaceAll('_', '');
+              if (field.keys.contains('items')) {
+                text += '\n$require List<$newType> $fields,';
+              } else {
+                text += '\n$require $newType $fields,';
               }
             }
           }
         }
       }
+
       var dir;
       if (GetDataType(obj.split('_')[0]) == 'draft') {
         dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.dart';
