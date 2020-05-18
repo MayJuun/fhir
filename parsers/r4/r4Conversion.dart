@@ -48,7 +48,10 @@ void main() async {
       if (GetDataType(obj.split('_')[0]) == 'draft') {
         dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.dart';
         file = await File(dir).readAsString();
-        file += text + '}) = _$newObj;}\n\n';
+        file += text;
+        file +=
+            '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) => _\$${newObj}FromJson(json);'
+            '\nMap<String, dynamic> toJson() => _\$${newObj}ToJson(this);}\n\n';
         await File(dir).writeAsString(file);
       } else if (GetDataType(obj.split('_')[0]) == 'general') {
         dir = '/home/grey/dev/fhir/lib/r4/general_types/general_types.dart';
