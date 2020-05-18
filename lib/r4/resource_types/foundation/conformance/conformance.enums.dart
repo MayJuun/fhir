@@ -388,7 +388,7 @@ enum StructureMapStructureMode {
   unknown,
 }
 
-enum StructureMapGroupTypeMode {
+enum GroupTypeMode {
   @JsonValue('none')
   none,
   @JsonValue('types')
@@ -399,7 +399,7 @@ enum StructureMapGroupTypeMode {
   unknown,
 }
 
-enum StructureMapInputMode {
+enum InputMode {
   @JsonValue('source')
   source,
   @JsonValue('target')
@@ -408,7 +408,7 @@ enum StructureMapInputMode {
   unknown,
 }
 
-enum StructureMapSourceListMode {
+enum SourceListMode {
   @JsonValue('first')
   first,
   @JsonValue('not_first')
@@ -423,7 +423,7 @@ enum StructureMapSourceListMode {
   unknown,
 }
 
-enum StructureMapTargetContextType {
+enum TargetContextType {
   @JsonValue('type')
   type,
   @JsonValue('variable')
@@ -432,7 +432,20 @@ enum StructureMapTargetContextType {
   unknown,
 }
 
-enum StructureMapTargetTransform {
+enum TargetListMode {
+  @JsonValue('first')
+  first,
+  @JsonValue('share')
+  share,
+  @JsonValue('last')
+  last,
+  @JsonValue('collate')
+  collate,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum TargetTransform {
   @JsonValue('create')
   create,
   @JsonValue('copy')
@@ -1179,7 +1192,7 @@ enum ImplementationGuideLicense {
   unknown,
 }
 
-enum ImplementationGuidePageGeneration {
+enum PageGeneration {
   @JsonValue('html')
   html,
   @JsonValue('markdown')
@@ -1192,7 +1205,7 @@ enum ImplementationGuidePageGeneration {
   unknown,
 }
 
-enum ImplementationGuideParameterCode {
+enum ParameterCode {
   @JsonValue('apply')
   apply,
   @JsonValue('path-resource')
@@ -1266,6 +1279,29 @@ enum SearchParameterXpathUsage {
   unknown,
 }
 
+enum SearchParameterComparator {
+  @JsonValue('eq')
+  eq,
+  @JsonValue('ne')
+  ne,
+  @JsonValue('gt')
+  gt,
+  @JsonValue('lt')
+  lt,
+  @JsonValue('ge')
+  ge,
+  @JsonValue('le')
+  le,
+  @JsonValue('sa')
+  sa,
+  @JsonValue('eb')
+  eb,
+  @JsonValue('ap')
+  ap,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum GraphDefinitionStatus {
   @JsonValue('draft')
   draft,
@@ -1277,7 +1313,7 @@ enum GraphDefinitionStatus {
   unknown,
 }
 
-enum GraphDefinitionCompartmentUse {
+enum CompartmentUse {
   @JsonValue('condition')
   condition,
   @JsonValue('requirement')
@@ -1286,7 +1322,22 @@ enum GraphDefinitionCompartmentUse {
   unknown,
 }
 
-enum GraphDefinitionCompartmentRule {
+enum CompartmentCode {
+  @JsonValue('Patient')
+  patient,
+  @JsonValue('Encounter')
+  encounter,
+  @JsonValue('RelatedPerson')
+  relatedPerson,
+  @JsonValue('Practitioner')
+  practitioner,
+  @JsonValue('Device')
+  device,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum CompartmentRule {
   @JsonValue('identical')
   identical,
   @JsonValue('matching')
@@ -1381,7 +1432,7 @@ enum StructureDefinitionDerivation {
   unknown,
 }
 
-enum StructureDefinitionContextType {
+enum ContextType {
   @JsonValue('fhirpath')
   fhirpath,
   @JsonValue('element')

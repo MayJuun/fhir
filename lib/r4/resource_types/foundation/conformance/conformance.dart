@@ -458,7 +458,8 @@ abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    OperationDefinitionBindingStrength strength,
+    @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
+        OperationDefinitionBindingStrength strength,
     Canonical valueSet,
   }) = _OperationDefinitionBinding;
   factory OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
@@ -509,7 +510,8 @@ abstract class ExampleScenario with _$ExampleScenario {
     List<Identifier> identifier,
     String version,
     String name,
-    ExampleScenarioStatus status,
+    @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
+        ExampleScenarioStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -670,7 +672,8 @@ abstract class StructureMap with _$StructureMap {
     String version,
     String name,
     String title,
-    StructureMapStatus status,
+    @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+        StructureMapStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -695,7 +698,8 @@ abstract class StructureMapStructure with _$StructureMapStructure {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Canonical url,
-    StructureMapStructureMode mode,
+    @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
+        StructureMapStructureMode mode,
     String alias,
     String documentation,
   }) = _StructureMapStructure;
@@ -711,50 +715,50 @@ abstract class StructureMapGroup with _$StructureMapGroup {
     List<FhirExtension> modifierExtension,
     Id name,
     @JsonKey(name: 'extends') Id extend,
-    StructureMapGroupTypeMode typeMode,
+    @JsonKey(unknownEnumValue: GroupTypeMode.unknown) GroupTypeMode typeMode,
     String documentation,
-    List<StructureMapInput> input,
-    List<StructureMapRule> rule,
+    List<GroupInput> input,
+    List<GroupRule> rule,
   }) = _StructureMapGroup;
   factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>
       _$StructureMapGroupFromJson(json);
 }
 
 @freezed
-abstract class StructureMapInput with _$StructureMapInput {
-  const factory StructureMapInput({
+abstract class GroupInput with _$GroupInput {
+  const factory GroupInput({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id name,
     String type,
-    StructureMapInputMode mode,
+    InputMode mode,
     String documentation,
-  }) = _StructureMapInput;
-  factory StructureMapInput.fromJson(Map<String, dynamic> json) =>
-      _$StructureMapInputFromJson(json);
+  }) = _GroupInput;
+  factory GroupInput.fromJson(Map<String, dynamic> json) =>
+      _$GroupInputFromJson(json);
 }
 
 @freezed
-abstract class StructureMapRule with _$StructureMapRule {
-  const factory StructureMapRule({
+abstract class GroupRule with _$GroupRule {
+  const factory GroupRule({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id name,
-    List<StructureMapSource> source,
-    List<StructureMapTarget> target,
-    List<StructureMapRule> rule,
-    List<StructureMapDependent> dependent,
+    List<RuleSource> source,
+    List<RuleTarget> target,
+    List<RuleRule> rule,
+    List<RuleDependent> dependent,
     String documentation,
-  }) = _StructureMapRule;
-  factory StructureMapRule.fromJson(Map<String, dynamic> json) =>
-      _$StructureMapRuleFromJson(json);
+  }) = _GroupRule;
+  factory GroupRule.fromJson(Map<String, dynamic> json) =>
+      _$GroupRuleFromJson(json);
 }
 
 @freezed
-abstract class StructureMapSource with _$StructureMapSource {
-  const factory StructureMapSource({
+abstract class RuleSource with _$RuleSource {
+  const factory RuleSource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -813,38 +817,40 @@ abstract class StructureMapSource with _$StructureMapSource {
     Dosage defaultValueDosage,
     Meta defaultValueMeta,
     String element,
-    StructureMapSourceListMode listMode,
+    @JsonKey(unknownEnumValue: SourceListMode.unknown) SourceListMode listMode,
     Id variable,
     String condition,
     String check,
     String logMessage,
-  }) = _StructureMapSource;
-  factory StructureMapSource.fromJson(Map<String, dynamic> json) =>
-      _$StructureMapSourceFromJson(json);
+  }) = _RuleSource;
+  factory RuleSource.fromJson(Map<String, dynamic> json) =>
+      _$RuleSourceFromJson(json);
 }
 
 @freezed
-abstract class StructureMapTarget with _$StructureMapTarget {
-  const factory StructureMapTarget({
+abstract class RuleTarget with _$RuleTarget {
+  const factory RuleTarget({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id context,
-    StructureMapTargetContextType contextType,
+    @JsonKey(unknownEnumValue: TargetContextType.unknown)
+        TargetContextType contextType,
     String element,
     Id variable,
-    List<String> listMode,
+    List<TargetListMode> listMode,
     Id listRuleId,
-    StructureMapTargetTransform transform,
-    List<StructureMapParameter> parameter,
-  }) = _StructureMapTarget;
-  factory StructureMapTarget.fromJson(Map<String, dynamic> json) =>
-      _$StructureMapTargetFromJson(json);
+    @JsonKey(unknownEnumValue: TargetTransform.unknown)
+        TargetTransform transform,
+    List<TargetParameter> parameter,
+  }) = _RuleTarget;
+  factory RuleTarget.fromJson(Map<String, dynamic> json) =>
+      _$RuleTargetFromJson(json);
 }
 
 @freezed
-abstract class StructureMapParameter with _$StructureMapParameter {
-  const factory StructureMapParameter({
+abstract class TargetParameter with _$TargetParameter {
+  const factory TargetParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -853,22 +859,22 @@ abstract class StructureMapParameter with _$StructureMapParameter {
     bool valueBoolean,
     int valueInteger,
     double valueDecimal,
-  }) = _StructureMapParameter;
-  factory StructureMapParameter.fromJson(Map<String, dynamic> json) =>
-      _$StructureMapParameterFromJson(json);
+  }) = _TargetParameter;
+  factory TargetParameter.fromJson(Map<String, dynamic> json) =>
+      _$TargetParameterFromJson(json);
 }
 
 @freezed
-abstract class StructureMapDependent with _$StructureMapDependent {
-  const factory StructureMapDependent({
+abstract class RuleDependent with _$RuleDependent {
+  const factory RuleDependent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id name,
     List<String> variable,
-  }) = _StructureMapDependent;
-  factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>
-      _$StructureMapDependentFromJson(json);
+  }) = _RuleDependent;
+  factory RuleDependent.fromJson(Map<String, dynamic> json) =>
+      _$RuleDependentFromJson(json);
 }
 
 @freezed
@@ -887,7 +893,8 @@ abstract class ImplementationGuide with _$ImplementationGuide {
     String version,
     String name,
     String title,
-    ImplementationGuideStatus status,
+    @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+        ImplementationGuideStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -943,32 +950,32 @@ abstract class ImplementationGuideDefinition
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    List<ImplementationGuideGrouping> grouping,
-    List<ImplementationGuideResource> resource,
-    ImplementationGuidePage page,
-    List<ImplementationGuideParameter> parameter,
-    List<ImplementationGuideTemplate> template,
+    List<DefinitionGrouping> grouping,
+    List<DefinitionResource> resource,
+    DefinitionPage page,
+    List<DefinitionParameter> parameter,
+    List<DefinitionTemplate> template,
   }) = _ImplementationGuideDefinition;
   factory ImplementationGuideDefinition.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDefinitionFromJson(json);
 }
 
 @freezed
-abstract class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
-  const factory ImplementationGuideGrouping({
+abstract class DefinitionGrouping with _$DefinitionGrouping {
+  const factory DefinitionGrouping({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String description,
-  }) = _ImplementationGuideGrouping;
-  factory ImplementationGuideGrouping.fromJson(Map<String, dynamic> json) =>
-      _$ImplementationGuideGroupingFromJson(json);
+  }) = _DefinitionGrouping;
+  factory DefinitionGrouping.fromJson(Map<String, dynamic> json) =>
+      _$DefinitionGroupingFromJson(json);
 }
 
 @freezed
-abstract class ImplementationGuideResource with _$ImplementationGuideResource {
-  const factory ImplementationGuideResource({
+abstract class DefinitionResource with _$DefinitionResource {
+  const factory DefinitionResource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -979,53 +986,53 @@ abstract class ImplementationGuideResource with _$ImplementationGuideResource {
     bool exampleBoolean,
     Canonical exampleCanonical,
     Id groupingId,
-  }) = _ImplementationGuideResource;
-  factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
-      _$ImplementationGuideResourceFromJson(json);
+  }) = _DefinitionResource;
+  factory DefinitionResource.fromJson(Map<String, dynamic> json) =>
+      _$DefinitionResourceFromJson(json);
 }
 
 @freezed
-abstract class ImplementationGuidePage with _$ImplementationGuidePage {
-  const factory ImplementationGuidePage({
+abstract class DefinitionPage with _$DefinitionPage {
+  const factory DefinitionPage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUrl nameUrl,
     Reference nameReference,
     String title,
-    ImplementationGuidePageGeneration generation,
-    List<ImplementationGuidePage> page,
-  }) = _ImplementationGuidePage;
-  factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
-      _$ImplementationGuidePageFromJson(json);
+    @JsonKey(unknownEnumValue: PageGeneration.unknown)
+        PageGeneration generation,
+    List<DefinitionPage> page,
+  }) = _DefinitionPage;
+  factory DefinitionPage.fromJson(Map<String, dynamic> json) =>
+      _$DefinitionPageFromJson(json);
 }
 
 @freezed
-abstract class ImplementationGuideParameter
-    with _$ImplementationGuideParameter {
-  const factory ImplementationGuideParameter({
+abstract class DefinitionParameter with _$DefinitionParameter {
+  const factory DefinitionParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    ImplementationGuideParameterCode code,
+    ParameterCode code,
     String value,
-  }) = _ImplementationGuideParameter;
-  factory ImplementationGuideParameter.fromJson(Map<String, dynamic> json) =>
-      _$ImplementationGuideParameterFromJson(json);
+  }) = _DefinitionParameter;
+  factory DefinitionParameter.fromJson(Map<String, dynamic> json) =>
+      _$DefinitionParameterFromJson(json);
 }
 
 @freezed
-abstract class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
-  const factory ImplementationGuideTemplate({
+abstract class DefinitionTemplate with _$DefinitionTemplate {
+  const factory DefinitionTemplate({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     String source,
     String scope,
-  }) = _ImplementationGuideTemplate;
-  factory ImplementationGuideTemplate.fromJson(Map<String, dynamic> json) =>
-      _$ImplementationGuideTemplateFromJson(json);
+  }) = _DefinitionTemplate;
+  factory DefinitionTemplate.fromJson(Map<String, dynamic> json) =>
+      _$DefinitionTemplateFromJson(json);
 }
 
 @freezed
@@ -1035,8 +1042,8 @@ abstract class ImplementationGuideManifest with _$ImplementationGuideManifest {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUrl rendering,
-    List<ImplementationGuideResource1> resource,
-    List<ImplementationGuidePage1> page,
+    List<ManifestResource> resource,
+    List<ManifestPage> page,
     List<String> image,
     List<String> other,
   }) = _ImplementationGuideManifest;
@@ -1045,9 +1052,8 @@ abstract class ImplementationGuideManifest with _$ImplementationGuideManifest {
 }
 
 @freezed
-abstract class ImplementationGuideResource1
-    with _$ImplementationGuideResource1 {
-  const factory ImplementationGuideResource1({
+abstract class ManifestResource with _$ManifestResource {
+  const factory ManifestResource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -1055,23 +1061,23 @@ abstract class ImplementationGuideResource1
     bool exampleBoolean,
     Canonical exampleCanonical,
     FhirUrl relativePath,
-  }) = _ImplementationGuideResource1;
-  factory ImplementationGuideResource1.fromJson(Map<String, dynamic> json) =>
-      _$ImplementationGuideResource1FromJson(json);
+  }) = _ManifestResource;
+  factory ManifestResource.fromJson(Map<String, dynamic> json) =>
+      _$ManifestResourceFromJson(json);
 }
 
 @freezed
-abstract class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
-  const factory ImplementationGuidePage1({
+abstract class ManifestPage with _$ManifestPage {
+  const factory ManifestPage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String title,
     List<String> anchor,
-  }) = _ImplementationGuidePage1;
-  factory ImplementationGuidePage1.fromJson(Map<String, dynamic> json) =>
-      _$ImplementationGuidePage1FromJson(json);
+  }) = _ManifestPage;
+  factory ManifestPage.fromJson(Map<String, dynamic> json) =>
+      _$ManifestPageFromJson(json);
 }
 
 @freezed
@@ -1090,7 +1096,8 @@ abstract class SearchParameter with _$SearchParameter {
     String version,
     String name,
     Canonical derivedFrom,
-    SearchParameterStatus status,
+    @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+        SearchParameterStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -1101,14 +1108,15 @@ abstract class SearchParameter with _$SearchParameter {
     Markdown purpose,
     Code code,
     List<Code> base,
-    SearchParameterType type,
+    @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+        SearchParameterType type,
     String expression,
     String xpath,
     SearchParameterXpathUsage xpathUsage,
     List<Code> target,
     bool multipleOr,
     bool multipleAnd,
-    List<String> comparator,
+    List<SearchParameterComparator> comparator,
     List<String> modifier,
     List<String> chain,
     List<SearchParameterComponent> component,
@@ -1145,7 +1153,8 @@ abstract class GraphDefinition with _$GraphDefinition {
     FhirUri url,
     String version,
     String name,
-    GraphDefinitionStatus status,
+    @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+        GraphDefinitionStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -1173,42 +1182,42 @@ abstract class GraphDefinitionLink with _$GraphDefinitionLink {
     int min,
     String max,
     String description,
-    List<GraphDefinitionTarget> target,
+    List<LinkTarget> target,
   }) = _GraphDefinitionLink;
   factory GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionLinkFromJson(json);
 }
 
 @freezed
-abstract class GraphDefinitionTarget with _$GraphDefinitionTarget {
-  const factory GraphDefinitionTarget({
+abstract class LinkTarget with _$LinkTarget {
+  const factory LinkTarget({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code type,
     String params,
     Canonical profile,
-    List<GraphDefinitionCompartment> compartment,
-    List<GraphDefinitionLink> link,
-  }) = _GraphDefinitionTarget;
-  factory GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
-      _$GraphDefinitionTargetFromJson(json);
+    List<TargetCompartment> compartment,
+    List<TargetLink> link,
+  }) = _LinkTarget;
+  factory LinkTarget.fromJson(Map<String, dynamic> json) =>
+      _$LinkTargetFromJson(json);
 }
 
 @freezed
-abstract class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
-  const factory GraphDefinitionCompartment({
+abstract class TargetCompartment with _$TargetCompartment {
+  const factory TargetCompartment({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    GraphDefinitionCompartmentUse use,
-    Code code,
-    GraphDefinitionCompartmentRule rule,
+    @JsonKey(unknownEnumValue: CompartmentUse.unknown) CompartmentUse use,
+    @JsonKey(unknownEnumValue: CompartmentCode.unknown) CompartmentCode code,
+    @JsonKey(unknownEnumValue: CompartmentRule.unknown) CompartmentRule rule,
     String expression,
     String description,
-  }) = _GraphDefinitionCompartment;
-  factory GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
-      _$GraphDefinitionCompartmentFromJson(json);
+  }) = _TargetCompartment;
+  factory TargetCompartment.fromJson(Map<String, dynamic> json) =>
+      _$TargetCompartmentFromJson(json);
 }
 
 @freezed
@@ -1228,7 +1237,8 @@ abstract class StructureDefinition with _$StructureDefinition {
     String version,
     String name,
     String title,
-    StructureDefinitionStatus status,
+    @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+        StructureDefinitionStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -1241,7 +1251,8 @@ abstract class StructureDefinition with _$StructureDefinition {
     List<Coding> keyword,
     StructureDefinitionFhirVersion fhirVersion,
     List<StructureDefinitionMapping> mapping,
-    StructureDefinitionKind kind,
+    @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
+        StructureDefinitionKind kind,
     bool abstract,
     List<StructureDefinitionContext> context,
     List<String> contextInvariant,
@@ -1276,7 +1287,7 @@ abstract class StructureDefinitionContext with _$StructureDefinitionContext {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    StructureDefinitionContextType type,
+    @JsonKey(unknownEnumValue: ContextType.unknown) ContextType type,
     String expression,
   }) = _StructureDefinitionContext;
   factory StructureDefinitionContext.fromJson(Map<String, dynamic> json) =>

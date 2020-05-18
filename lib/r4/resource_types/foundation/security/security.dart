@@ -130,7 +130,7 @@ abstract class Consent with _$Consent {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
-    ConsentStatus status,
+    @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus status,
     CodeableConcept scope,
     List<CodeableConcept> category,
     Reference patient,
@@ -181,16 +181,16 @@ abstract class ConsentProvision with _$ConsentProvision {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    ConsentProvisionType type,
+    @JsonKey(unknownEnumValue: ProvisionType.unknown) ProvisionType type,
     Period period,
-    List<ConsentActor> actor,
+    List<ProvisionActor> actor,
     List<CodeableConcept> action,
     List<Coding> securityLabel,
     List<Coding> purpose,
     @JsonKey(name: 'class') List<Coding> clas,
     List<CodeableConcept> code,
     Period dataPeriod,
-    List<ConsentData> data,
+    List<ProvisionData> data,
     List<ConsentProvision> provision,
   }) = _ConsentProvision;
   factory ConsentProvision.fromJson(Map<String, dynamic> json) =>
@@ -198,29 +198,29 @@ abstract class ConsentProvision with _$ConsentProvision {
 }
 
 @freezed
-abstract class ConsentActor with _$ConsentActor {
-  const factory ConsentActor({
+abstract class ProvisionActor with _$ProvisionActor {
+  const factory ProvisionActor({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept role,
     Reference reference,
-  }) = _ConsentActor;
-  factory ConsentActor.fromJson(Map<String, dynamic> json) =>
-      _$ConsentActorFromJson(json);
+  }) = _ProvisionActor;
+  factory ProvisionActor.fromJson(Map<String, dynamic> json) =>
+      _$ProvisionActorFromJson(json);
 }
 
 @freezed
-abstract class ConsentData with _$ConsentData {
-  const factory ConsentData({
+abstract class ProvisionData with _$ProvisionData {
+  const factory ProvisionData({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    ConsentDataMeaning meaning,
+    DataMeaning meaning,
     Reference reference,
-  }) = _ConsentData;
-  factory ConsentData.fromJson(Map<String, dynamic> json) =>
-      _$ConsentDataFromJson(json);
+  }) = _ProvisionData;
+  factory ProvisionData.fromJson(Map<String, dynamic> json) =>
+      _$ProvisionDataFromJson(json);
 }
 
 @freezed
@@ -272,7 +272,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    ProvenanceEntityRole role,
+    @JsonKey(unknownEnumValue: EntityRole.unknown) EntityRole role,
     Reference what,
     List<ProvenanceAgent> agent,
   }) = _ProvenanceEntity;

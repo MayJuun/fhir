@@ -53,7 +53,8 @@ _$_CatalogEntry _$_$_CatalogEntryFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$CatalogEntryStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$CatalogEntryStatusEnumMap, json['status'],
+        unknownValue: CatalogEntryStatus.unknown),
     validityPeriod: json['validityPeriod'] == null
         ? null
         : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
@@ -177,7 +178,7 @@ _$_CatalogEntryRelatedEntry _$_$_CatalogEntryRelatedEntryFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     relationtype: _$enumDecodeNullable(
-        _$CatalogEntryRelatedEntryRelationtypeEnumMap, json['relationtype']),
+        _$RelatedEntryRelationtypeEnumMap, json['relationtype']),
     item: json['item'] == null
         ? null
         : Reference.fromJson(json['item'] as Map<String, dynamic>),
@@ -199,16 +200,16 @@ Map<String, dynamic> _$_$_CatalogEntryRelatedEntryToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('relationtype',
-      _$CatalogEntryRelatedEntryRelationtypeEnumMap[instance.relationtype]);
+  writeNotNull(
+      'relationtype', _$RelatedEntryRelationtypeEnumMap[instance.relationtype]);
   writeNotNull('item', instance.item?.toJson());
   return val;
 }
 
-const _$CatalogEntryRelatedEntryRelationtypeEnumMap = {
-  CatalogEntryRelatedEntryRelationtype.triggers: 'triggers',
-  CatalogEntryRelatedEntryRelationtype.is_replaced_by: 'is-replaced-by',
-  CatalogEntryRelatedEntryRelationtype.unknown: 'unknown',
+const _$RelatedEntryRelationtypeEnumMap = {
+  RelatedEntryRelationtype.triggers: 'triggers',
+  RelatedEntryRelationtype.is_replaced_by: 'is-replaced-by',
+  RelatedEntryRelationtype.unknown: 'unknown',
 };
 
 _$_Composition _$_$_CompositionFromJson(Map<String, dynamic> json) {
@@ -241,7 +242,8 @@ _$_Composition _$_$_CompositionFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(_$CompositionStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$CompositionStatusEnumMap, json['status'],
+        unknownValue: CompositionStatus.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -356,7 +358,8 @@ _$_CompositionAttester _$_$_CompositionAttesterFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    mode: _$enumDecodeNullable(_$CompositionAttesterModeEnumMap, json['mode']),
+    mode: _$enumDecodeNullable(_$AttesterModeEnumMap, json['mode'],
+        unknownValue: AttesterMode.unknown),
     time: json['time'] == null
         ? null
         : FhirDateTime.fromJson(json['time'] as String),
@@ -381,18 +384,18 @@ Map<String, dynamic> _$_$_CompositionAttesterToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('mode', _$CompositionAttesterModeEnumMap[instance.mode]);
+  writeNotNull('mode', _$AttesterModeEnumMap[instance.mode]);
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('party', instance.party?.toJson());
   return val;
 }
 
-const _$CompositionAttesterModeEnumMap = {
-  CompositionAttesterMode.personal: 'personal',
-  CompositionAttesterMode.professional: 'professional',
-  CompositionAttesterMode.legal: 'legal',
-  CompositionAttesterMode.official: 'official',
-  CompositionAttesterMode.unknown: 'unknown',
+const _$AttesterModeEnumMap = {
+  AttesterMode.personal: 'personal',
+  AttesterMode.professional: 'professional',
+  AttesterMode.legal: 'legal',
+  AttesterMode.official: 'official',
+  AttesterMode.unknown: 'unknown',
 };
 
 _$_CompositionRelatesTo _$_$_CompositionRelatesToFromJson(
@@ -409,7 +412,8 @@ _$_CompositionRelatesTo _$_$_CompositionRelatesToFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: _$enumDecodeNullable(_$RelatesToCodeEnumMap, json['code'],
+        unknownValue: RelatesToCode.unknown),
     targetIdentifier: json['targetIdentifier'] == null
         ? null
         : Identifier.fromJson(json['targetIdentifier'] as Map<String, dynamic>),
@@ -434,11 +438,19 @@ Map<String, dynamic> _$_$_CompositionRelatesToToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('code', _$RelatesToCodeEnumMap[instance.code]);
   writeNotNull('targetIdentifier', instance.targetIdentifier?.toJson());
   writeNotNull('targetReference', instance.targetReference?.toJson());
   return val;
 }
+
+const _$RelatesToCodeEnumMap = {
+  RelatesToCode.replaces: 'replaces',
+  RelatesToCode.transforms: 'transforms',
+  RelatesToCode.signs: 'signs',
+  RelatesToCode.appends: 'appends',
+  RelatesToCode.unknown: 'uknown',
+};
 
 _$_CompositionEvent _$_$_CompositionEventFromJson(Map<String, dynamic> json) {
   return _$_CompositionEvent(
@@ -516,7 +528,8 @@ _$_CompositionSection _$_$_CompositionSectionFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    mode: json['mode'] == null ? null : Code.fromJson(json['mode'] as String),
+    mode: _$enumDecodeNullable(_$SectionModeEnumMap, json['mode'],
+        unknownValue: SectionMode.unknown),
     orderedBy: json['orderedBy'] == null
         ? null
         : CodeableConcept.fromJson(json['orderedBy'] as Map<String, dynamic>),
@@ -551,12 +564,19 @@ Map<String, dynamic> _$_$_CompositionSectionToJson(
   writeNotNull('author', instance.author?.map((e) => e?.toJson())?.toList());
   writeNotNull('focus', instance.focus?.toJson());
   writeNotNull('text', instance.text?.toJson());
-  writeNotNull('mode', instance.mode?.toJson());
+  writeNotNull('mode', _$SectionModeEnumMap[instance.mode]);
   writeNotNull('orderedBy', instance.orderedBy?.toJson());
   writeNotNull('emptyReason', instance.emptyReason?.toJson());
   writeNotNull('section', instance.section?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+const _$SectionModeEnumMap = {
+  SectionMode.working: 'working',
+  SectionMode.snapshot: 'snapshot',
+  SectionMode.changes: 'changes',
+  SectionMode.unknown: 'unknown',
+};
 
 _$_DocumentManifest _$_$_DocumentManifestFromJson(Map<String, dynamic> json) {
   return _$_DocumentManifest(
@@ -592,8 +612,9 @@ _$_DocumentManifest _$_$_DocumentManifestFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        _$enumDecodeNullable(_$DocumentManifestStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(
+        _$DocumentManifestStatusEnumMap, json['status'],
+        unknownValue: DocumentManifestStatus.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -746,11 +767,12 @@ _$_DocumentReference _$_$_DocumentReferenceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        _$enumDecodeNullable(_$DocumentReferenceStatusEnumMap, json['status']),
-    docStatus: json['docStatus'] == null
-        ? null
-        : Code.fromJson(json['docStatus'] as String),
+    status: _$enumDecodeNullable(
+        _$DocumentReferenceStatusEnumMap, json['status'],
+        unknownValue: DocumentReferenceStatus.unknown),
+    docStatus: _$enumDecodeNullable(
+        _$DocumentReferenceDocStatusEnumMap, json['docStatus'],
+        unknownValue: DocumentReferenceDocStatus.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -819,7 +841,8 @@ Map<String, dynamic> _$_$_DocumentReferenceToJson(
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', _$DocumentReferenceStatusEnumMap[instance.status]);
-  writeNotNull('docStatus', instance.docStatus?.toJson());
+  writeNotNull(
+      'docStatus', _$DocumentReferenceDocStatusEnumMap[instance.docStatus]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
@@ -844,6 +867,14 @@ const _$DocumentReferenceStatusEnumMap = {
   DocumentReferenceStatus.unknown: 'unknown',
 };
 
+const _$DocumentReferenceDocStatusEnumMap = {
+  DocumentReferenceDocStatus.preliminary: 'preliminary',
+  DocumentReferenceDocStatus.final_: 'final',
+  DocumentReferenceDocStatus.amended: 'amended',
+  DocumentReferenceDocStatus.entered_in_error: 'entered-in-error',
+  DocumentReferenceDocStatus.unknown: 'unknown',
+};
+
 _$_DocumentReferenceRelatesTo _$_$_DocumentReferenceRelatesToFromJson(
     Map<String, dynamic> json) {
   return _$_DocumentReferenceRelatesTo(
@@ -858,8 +889,7 @@ _$_DocumentReferenceRelatesTo _$_$_DocumentReferenceRelatesToFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    code: _$enumDecodeNullable(
-        _$DocumentReferenceRelatesToCodeEnumMap, json['code']),
+    code: _$enumDecodeNullable(_$RelatesToCodeEnumMap, json['code']),
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
@@ -881,18 +911,10 @@ Map<String, dynamic> _$_$_DocumentReferenceRelatesToToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('code', _$DocumentReferenceRelatesToCodeEnumMap[instance.code]);
+  writeNotNull('code', _$RelatesToCodeEnumMap[instance.code]);
   writeNotNull('target', instance.target?.toJson());
   return val;
 }
-
-const _$DocumentReferenceRelatesToCodeEnumMap = {
-  DocumentReferenceRelatesToCode.replaces: 'replaces',
-  DocumentReferenceRelatesToCode.transforms: 'transforms',
-  DocumentReferenceRelatesToCode.signs: 'signs',
-  DocumentReferenceRelatesToCode.appends: 'appends',
-  DocumentReferenceRelatesToCode.unknown: 'unknown',
-};
 
 _$_DocumentReferenceContent _$_$_DocumentReferenceContentFromJson(
     Map<String, dynamic> json) {

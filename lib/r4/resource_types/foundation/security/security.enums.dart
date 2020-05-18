@@ -61,7 +61,7 @@ enum ConsentStatus {
   unknown,
 }
 
-enum ConsentProvisionType {
+enum ProvisionType {
   @JsonValue('deny')
   deny,
   @JsonValue('permit')
@@ -70,7 +70,7 @@ enum ConsentProvisionType {
   unknown,
 }
 
-enum ConsentDataMeaning {
+enum DataMeaning {
   @JsonValue('instance')
   instance,
   @JsonValue('related')
@@ -83,7 +83,7 @@ enum ConsentDataMeaning {
   unknown,
 }
 
-enum ProvenanceEntityRole {
+enum EntityRole {
   @JsonValue('derivation')
   derivation,
   @JsonValue('revision')

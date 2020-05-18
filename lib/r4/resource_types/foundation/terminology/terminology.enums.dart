@@ -39,7 +39,28 @@ enum CodeSystemContent {
   unknown,
 }
 
-enum CodeSystemPropertyType {
+enum FilterOperator {
+  @JsonValue('is-a')
+  is_a,
+  @JsonValue('descendent-of')
+  descendent_of,
+  @JsonValue('is-not-a')
+  is_not_a,
+  @JsonValue('regex')
+  regex,
+  @JsonValue('in')
+  in_,
+  @JsonValue('not-in')
+  not_in,
+  @JsonValue('generalizes')
+  generalizes,
+  @JsonValue('exists')
+  exists,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum PropertyType {
   @JsonValue('code')
   code,
   @JsonValue('Coding')
@@ -69,7 +90,7 @@ enum ValueSetStatus {
   unknown,
 }
 
-enum ValueSetFilterOp {
+enum FilterOp {
   @JsonValue('=')
   equal,
   @JsonValue('is-a')
@@ -134,7 +155,7 @@ enum NamingSystemKind {
   unknown,
 }
 
-enum NamingSystemUniqueIdType {
+enum UniqueIdType {
   @JsonValue('oid')
   oid,
   @JsonValue('uuid')
@@ -158,7 +179,7 @@ enum ConceptMapStatus {
   unknown,
 }
 
-enum ConceptMapTargetEquivalence {
+enum TargetEquivalence {
   @JsonValue('relatedto')
   relatedto,
   @JsonValue('equivalent')
@@ -183,7 +204,7 @@ enum ConceptMapTargetEquivalence {
   unknown,
 }
 
-enum ConceptMapUnmappedMode {
+enum UnmappedMode {
   @JsonValue('provided')
   provided,
   @JsonValue('fixed')

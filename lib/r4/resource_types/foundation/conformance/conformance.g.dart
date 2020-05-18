@@ -44,8 +44,9 @@ _$_MessageDefinition _$_$_MessageDefinitionFromJson(Map<String, dynamic> json) {
     replaces: (json['replaces'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    status:
-        _$enumDecodeNullable(_$MessageDefinitionStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(
+        _$MessageDefinitionStatusEnumMap, json['status'],
+        unknownValue: MessageDefinitionStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -87,14 +88,16 @@ _$_MessageDefinition _$_$_MessageDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : FhirUri.fromJson(json['eventUri'] as String),
     category: _$enumDecodeNullable(
-        _$MessageDefinitionCategoryEnumMap, json['category']),
+        _$MessageDefinitionCategoryEnumMap, json['category'],
+        unknownValue: MessageDefinitionCategory.unknown),
     focus: (json['focus'] as List)
         ?.map((e) => e == null
             ? null
             : MessageDefinitionFocus.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     responseRequired: _$enumDecodeNullable(
-        _$MessageDefinitionResponseRequiredEnumMap, json['responseRequired']),
+        _$MessageDefinitionResponseRequiredEnumMap, json['responseRequired'],
+        unknownValue: MessageDefinitionResponseRequired.unknown),
     allowedResponse: (json['allowedResponse'] as List)
         ?.map((e) => e == null
             ? null
@@ -1285,7 +1288,8 @@ _$_CompartmentDefinition _$_$_CompartmentDefinitionFromJson(
     version: json['version'] as String,
     name: json['name'] as String,
     status: _$enumDecodeNullable(
-        _$CompartmentDefinitionStatusEnumMap, json['status']),
+        _$CompartmentDefinitionStatusEnumMap, json['status'],
+        unknownValue: CompartmentDefinitionStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -1306,8 +1310,8 @@ _$_CompartmentDefinition _$_$_CompartmentDefinitionFromJson(
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
-    code:
-        _$enumDecodeNullable(_$CompartmentDefinitionCodeEnumMap, json['code']),
+    code: _$enumDecodeNullable(_$CompartmentDefinitionCodeEnumMap, json['code'],
+        unknownValue: CompartmentDefinitionCode.unknown),
     search: json['search'] as bool,
     resource: (json['resource'] as List)
         ?.map((e) => e == null
@@ -1447,8 +1451,10 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
     name: json['name'] as String,
     title: json['title'] as String,
     status: _$enumDecodeNullable(
-        _$OperationDefinitionStatusEnumMap, json['status']),
-    kind: _$enumDecodeNullable(_$OperationDefinitionKindEnumMap, json['kind']),
+        _$OperationDefinitionStatusEnumMap, json['status'],
+        unknownValue: OperationDefinitionStatus.unknown),
+    kind: _$enumDecodeNullable(_$OperationDefinitionKindEnumMap, json['kind'],
+        unknownValue: OperationDefinitionKind.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -1591,7 +1597,8 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
         ?.toList(),
     name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
     use: _$enumDecodeNullable(
-        _$OperationDefinitionParameterUseEnumMap, json['use']),
+        _$OperationDefinitionParameterUseEnumMap, json['use'],
+        unknownValue: OperationDefinitionParameterUse.unknown),
     min: json['min'] as int,
     max: json['max'] as String,
     documentation: json['documentation'] as String,
@@ -1600,7 +1607,8 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
     searchType: _$enumDecodeNullable(
-        _$OperationDefinitionParameterSearchTypeEnumMap, json['searchType']),
+        _$OperationDefinitionParameterSearchTypeEnumMap, json['searchType'],
+        unknownValue: OperationDefinitionParameterSearchType.unknown),
     binding: json['binding'] == null
         ? null
         : OperationDefinitionBinding.fromJson(
@@ -1685,7 +1693,8 @@ _$_OperationDefinitionBinding _$_$_OperationDefinitionBindingFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     strength: _$enumDecodeNullable(
-        _$OperationDefinitionBindingStrengthEnumMap, json['strength']),
+        _$OperationDefinitionBindingStrengthEnumMap, json['strength'],
+        unknownValue: OperationDefinitionBindingStrength.unknown),
     valueSet: json['valueSet'] == null
         ? null
         : Canonical.fromJson(json['valueSet'] as String),
@@ -1834,8 +1843,8 @@ _$_ExampleScenario _$_$_ExampleScenarioFromJson(Map<String, dynamic> json) {
         ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
-    status:
-        _$enumDecodeNullable(_$ExampleScenarioStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$ExampleScenarioStatusEnumMap, json['status'],
+        unknownValue: ExampleScenarioStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -2381,7 +2390,8 @@ _$_StructureMap _$_$_StructureMapFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(_$StructureMapStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$StructureMapStatusEnumMap, json['status'],
+        unknownValue: StructureMapStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -2493,8 +2503,8 @@ _$_StructureMapStructure _$_$_StructureMapStructureFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     url: json['url'] == null ? null : Canonical.fromJson(json['url'] as String),
-    mode:
-        _$enumDecodeNullable(_$StructureMapStructureModeEnumMap, json['mode']),
+    mode: _$enumDecodeNullable(_$StructureMapStructureModeEnumMap, json['mode'],
+        unknownValue: StructureMapStructureMode.unknown),
     alias: json['alias'] as String,
     documentation: json['documentation'] as String,
   );
@@ -2546,18 +2556,16 @@ _$_StructureMapGroup _$_$_StructureMapGroupFromJson(Map<String, dynamic> json) {
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
     extend:
         json['extends'] == null ? null : Id.fromJson(json['extends'] as String),
-    typeMode: _$enumDecodeNullable(
-        _$StructureMapGroupTypeModeEnumMap, json['typeMode']),
+    typeMode: _$enumDecodeNullable(_$GroupTypeModeEnumMap, json['typeMode'],
+        unknownValue: GroupTypeMode.unknown),
     documentation: json['documentation'] as String,
     input: (json['input'] as List)
-        ?.map((e) => e == null
-            ? null
-            : StructureMapInput.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : GroupInput.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     rule: (json['rule'] as List)
-        ?.map((e) => e == null
-            ? null
-            : StructureMapRule.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : GroupRule.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
@@ -2579,23 +2587,22 @@ Map<String, dynamic> _$_$_StructureMapGroupToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('extends', instance.extend?.toJson());
-  writeNotNull(
-      'typeMode', _$StructureMapGroupTypeModeEnumMap[instance.typeMode]);
+  writeNotNull('typeMode', _$GroupTypeModeEnumMap[instance.typeMode]);
   writeNotNull('documentation', instance.documentation);
   writeNotNull('input', instance.input?.map((e) => e?.toJson())?.toList());
   writeNotNull('rule', instance.rule?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
-const _$StructureMapGroupTypeModeEnumMap = {
-  StructureMapGroupTypeMode.none: 'none',
-  StructureMapGroupTypeMode.types: 'types',
-  StructureMapGroupTypeMode.type_and_types: 'type-and-types',
-  StructureMapGroupTypeMode.unknown: 'unknown',
+const _$GroupTypeModeEnumMap = {
+  GroupTypeMode.none: 'none',
+  GroupTypeMode.types: 'types',
+  GroupTypeMode.type_and_types: 'type-and-types',
+  GroupTypeMode.unknown: 'unknown',
 };
 
-_$_StructureMapInput _$_$_StructureMapInputFromJson(Map<String, dynamic> json) {
-  return _$_StructureMapInput(
+_$_GroupInput _$_$_GroupInputFromJson(Map<String, dynamic> json) {
+  return _$_GroupInput(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -2609,13 +2616,12 @@ _$_StructureMapInput _$_$_StructureMapInputFromJson(Map<String, dynamic> json) {
         ?.toList(),
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
     type: json['type'] as String,
-    mode: _$enumDecodeNullable(_$StructureMapInputModeEnumMap, json['mode']),
+    mode: _$enumDecodeNullable(_$InputModeEnumMap, json['mode']),
     documentation: json['documentation'] as String,
   );
 }
 
-Map<String, dynamic> _$_$_StructureMapInputToJson(
-    _$_StructureMapInput instance) {
+Map<String, dynamic> _$_$_GroupInputToJson(_$_GroupInput instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2631,19 +2637,19 @@ Map<String, dynamic> _$_$_StructureMapInputToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('type', instance.type);
-  writeNotNull('mode', _$StructureMapInputModeEnumMap[instance.mode]);
+  writeNotNull('mode', _$InputModeEnumMap[instance.mode]);
   writeNotNull('documentation', instance.documentation);
   return val;
 }
 
-const _$StructureMapInputModeEnumMap = {
-  StructureMapInputMode.source: 'source',
-  StructureMapInputMode.target: 'target',
-  StructureMapInputMode.unknown: 'unknown',
+const _$InputModeEnumMap = {
+  InputMode.source: 'source',
+  InputMode.target: 'target',
+  InputMode.unknown: 'unknown',
 };
 
-_$_StructureMapRule _$_$_StructureMapRuleFromJson(Map<String, dynamic> json) {
-  return _$_StructureMapRule(
+_$_GroupRule _$_$_GroupRuleFromJson(Map<String, dynamic> json) {
+  return _$_GroupRule(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -2657,30 +2663,24 @@ _$_StructureMapRule _$_$_StructureMapRuleFromJson(Map<String, dynamic> json) {
         ?.toList(),
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
     source: (json['source'] as List)
-        ?.map((e) => e == null
-            ? null
-            : StructureMapSource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : RuleSource.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     target: (json['target'] as List)
-        ?.map((e) => e == null
-            ? null
-            : StructureMapTarget.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : RuleTarget.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    rule: (json['rule'] as List)
-        ?.map((e) => e == null
-            ? null
-            : StructureMapRule.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    rule: json['rule'] as List,
     dependent: (json['dependent'] as List)
         ?.map((e) => e == null
             ? null
-            : StructureMapDependent.fromJson(e as Map<String, dynamic>))
+            : RuleDependent.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     documentation: json['documentation'] as String,
   );
 }
 
-Map<String, dynamic> _$_$_StructureMapRuleToJson(_$_StructureMapRule instance) {
+Map<String, dynamic> _$_$_GroupRuleToJson(_$_GroupRule instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2697,16 +2697,15 @@ Map<String, dynamic> _$_$_StructureMapRuleToJson(_$_StructureMapRule instance) {
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('source', instance.source?.map((e) => e?.toJson())?.toList());
   writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
-  writeNotNull('rule', instance.rule?.map((e) => e?.toJson())?.toList());
+  writeNotNull('rule', instance.rule);
   writeNotNull(
       'dependent', instance.dependent?.map((e) => e?.toJson())?.toList());
   writeNotNull('documentation', instance.documentation);
   return val;
 }
 
-_$_StructureMapSource _$_$_StructureMapSourceFromJson(
-    Map<String, dynamic> json) {
-  return _$_StructureMapSource(
+_$_RuleSource _$_$_RuleSourceFromJson(Map<String, dynamic> json) {
+  return _$_RuleSource(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -2883,8 +2882,8 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
         ? null
         : Meta.fromJson(json['defaultValueMeta'] as Map<String, dynamic>),
     element: json['element'] as String,
-    listMode: _$enumDecodeNullable(
-        _$StructureMapSourceListModeEnumMap, json['listMode']),
+    listMode: _$enumDecodeNullable(_$SourceListModeEnumMap, json['listMode'],
+        unknownValue: SourceListMode.unknown),
     variable: json['variable'] == null
         ? null
         : Id.fromJson(json['variable'] as String),
@@ -2894,8 +2893,7 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_StructureMapSourceToJson(
-    _$_StructureMapSource instance) {
+Map<String, dynamic> _$_$_RuleSourceToJson(_$_RuleSource instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2983,8 +2981,7 @@ Map<String, dynamic> _$_$_StructureMapSourceToJson(
   writeNotNull('defaultValueDosage', instance.defaultValueDosage?.toJson());
   writeNotNull('defaultValueMeta', instance.defaultValueMeta?.toJson());
   writeNotNull('element', instance.element);
-  writeNotNull(
-      'listMode', _$StructureMapSourceListModeEnumMap[instance.listMode]);
+  writeNotNull('listMode', _$SourceListModeEnumMap[instance.listMode]);
   writeNotNull('variable', instance.variable?.toJson());
   writeNotNull('condition', instance.condition);
   writeNotNull('check', instance.check);
@@ -2992,18 +2989,17 @@ Map<String, dynamic> _$_$_StructureMapSourceToJson(
   return val;
 }
 
-const _$StructureMapSourceListModeEnumMap = {
-  StructureMapSourceListMode.first: 'first',
-  StructureMapSourceListMode.not_first: 'not_first',
-  StructureMapSourceListMode.last: 'last',
-  StructureMapSourceListMode.not_last: 'not_last',
-  StructureMapSourceListMode.only_one: 'only_one',
-  StructureMapSourceListMode.unknown: 'unknown',
+const _$SourceListModeEnumMap = {
+  SourceListMode.first: 'first',
+  SourceListMode.not_first: 'not_first',
+  SourceListMode.last: 'last',
+  SourceListMode.not_last: 'not_last',
+  SourceListMode.only_one: 'only_one',
+  SourceListMode.unknown: 'unknown',
 };
 
-_$_StructureMapTarget _$_$_StructureMapTargetFromJson(
-    Map<String, dynamic> json) {
-  return _$_StructureMapTarget(
+_$_RuleTarget _$_$_RuleTargetFromJson(Map<String, dynamic> json) {
+  return _$_RuleTarget(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -3018,27 +3014,29 @@ _$_StructureMapTarget _$_$_StructureMapTargetFromJson(
     context:
         json['context'] == null ? null : Id.fromJson(json['context'] as String),
     contextType: _$enumDecodeNullable(
-        _$StructureMapTargetContextTypeEnumMap, json['contextType']),
+        _$TargetContextTypeEnumMap, json['contextType'],
+        unknownValue: TargetContextType.unknown),
     element: json['element'] as String,
     variable: json['variable'] == null
         ? null
         : Id.fromJson(json['variable'] as String),
-    listMode: (json['listMode'] as List)?.map((e) => e as String)?.toList(),
+    listMode: (json['listMode'] as List)
+        ?.map((e) => _$enumDecodeNullable(_$TargetListModeEnumMap, e))
+        ?.toList(),
     listRuleId: json['listRuleId'] == null
         ? null
         : Id.fromJson(json['listRuleId'] as String),
-    transform: _$enumDecodeNullable(
-        _$StructureMapTargetTransformEnumMap, json['transform']),
+    transform: _$enumDecodeNullable(_$TargetTransformEnumMap, json['transform'],
+        unknownValue: TargetTransform.unknown),
     parameter: (json['parameter'] as List)
         ?.map((e) => e == null
             ? null
-            : StructureMapParameter.fromJson(e as Map<String, dynamic>))
+            : TargetParameter.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
 
-Map<String, dynamic> _$_$_StructureMapTargetToJson(
-    _$_StructureMapTarget instance) {
+Map<String, dynamic> _$_$_RuleTargetToJson(_$_RuleTarget instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3053,49 +3051,55 @@ Map<String, dynamic> _$_$_StructureMapTargetToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull('contextType',
-      _$StructureMapTargetContextTypeEnumMap[instance.contextType]);
+  writeNotNull('contextType', _$TargetContextTypeEnumMap[instance.contextType]);
   writeNotNull('element', instance.element);
   writeNotNull('variable', instance.variable?.toJson());
-  writeNotNull('listMode', instance.listMode);
+  writeNotNull('listMode',
+      instance.listMode?.map((e) => _$TargetListModeEnumMap[e])?.toList());
   writeNotNull('listRuleId', instance.listRuleId?.toJson());
-  writeNotNull(
-      'transform', _$StructureMapTargetTransformEnumMap[instance.transform]);
+  writeNotNull('transform', _$TargetTransformEnumMap[instance.transform]);
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
-const _$StructureMapTargetContextTypeEnumMap = {
-  StructureMapTargetContextType.type: 'type',
-  StructureMapTargetContextType.variable: 'variable',
-  StructureMapTargetContextType.unknown: 'unknown',
+const _$TargetContextTypeEnumMap = {
+  TargetContextType.type: 'type',
+  TargetContextType.variable: 'variable',
+  TargetContextType.unknown: 'unknown',
 };
 
-const _$StructureMapTargetTransformEnumMap = {
-  StructureMapTargetTransform.create: 'create',
-  StructureMapTargetTransform.copy: 'copy',
-  StructureMapTargetTransform.truncate: 'truncate',
-  StructureMapTargetTransform.escape: 'escape',
-  StructureMapTargetTransform.cast: 'cast',
-  StructureMapTargetTransform.append: 'append',
-  StructureMapTargetTransform.translate: 'translate',
-  StructureMapTargetTransform.reference: 'reference',
-  StructureMapTargetTransform.dateOp: 'dateOp',
-  StructureMapTargetTransform.uuid: 'uuid',
-  StructureMapTargetTransform.pointer: 'pointer',
-  StructureMapTargetTransform.evaluate: 'evaluate',
-  StructureMapTargetTransform.cc: 'cc',
-  StructureMapTargetTransform.c: 'c',
-  StructureMapTargetTransform.qty: 'qty',
-  StructureMapTargetTransform.id: 'id',
-  StructureMapTargetTransform.cp: 'cp',
-  StructureMapTargetTransform.unknown: 'unknown',
+const _$TargetListModeEnumMap = {
+  TargetListMode.first: 'first',
+  TargetListMode.share: 'share',
+  TargetListMode.last: 'last',
+  TargetListMode.collate: 'collate',
+  TargetListMode.unknown: 'unknown',
 };
 
-_$_StructureMapParameter _$_$_StructureMapParameterFromJson(
-    Map<String, dynamic> json) {
-  return _$_StructureMapParameter(
+const _$TargetTransformEnumMap = {
+  TargetTransform.create: 'create',
+  TargetTransform.copy: 'copy',
+  TargetTransform.truncate: 'truncate',
+  TargetTransform.escape: 'escape',
+  TargetTransform.cast: 'cast',
+  TargetTransform.append: 'append',
+  TargetTransform.translate: 'translate',
+  TargetTransform.reference: 'reference',
+  TargetTransform.dateOp: 'dateOp',
+  TargetTransform.uuid: 'uuid',
+  TargetTransform.pointer: 'pointer',
+  TargetTransform.evaluate: 'evaluate',
+  TargetTransform.cc: 'cc',
+  TargetTransform.c: 'c',
+  TargetTransform.qty: 'qty',
+  TargetTransform.id: 'id',
+  TargetTransform.cp: 'cp',
+  TargetTransform.unknown: 'unknown',
+};
+
+_$_TargetParameter _$_$_TargetParameterFromJson(Map<String, dynamic> json) {
+  return _$_TargetParameter(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -3116,8 +3120,7 @@ _$_StructureMapParameter _$_$_StructureMapParameterFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_StructureMapParameterToJson(
-    _$_StructureMapParameter instance) {
+Map<String, dynamic> _$_$_TargetParameterToJson(_$_TargetParameter instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3139,9 +3142,8 @@ Map<String, dynamic> _$_$_StructureMapParameterToJson(
   return val;
 }
 
-_$_StructureMapDependent _$_$_StructureMapDependentFromJson(
-    Map<String, dynamic> json) {
-  return _$_StructureMapDependent(
+_$_RuleDependent _$_$_RuleDependentFromJson(Map<String, dynamic> json) {
+  return _$_RuleDependent(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -3158,8 +3160,7 @@ _$_StructureMapDependent _$_$_StructureMapDependentFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_StructureMapDependentToJson(
-    _$_StructureMapDependent instance) {
+Map<String, dynamic> _$_$_RuleDependentToJson(_$_RuleDependent instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3211,7 +3212,8 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
     name: json['name'] as String,
     title: json['title'] as String,
     status: _$enumDecodeNullable(
-        _$ImplementationGuideStatusEnumMap, json['status']),
+        _$ImplementationGuideStatusEnumMap, json['status'],
+        unknownValue: ImplementationGuideStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -3777,26 +3779,25 @@ _$_ImplementationGuideDefinition _$_$_ImplementationGuideDefinitionFromJson(
     grouping: (json['grouping'] as List)
         ?.map((e) => e == null
             ? null
-            : ImplementationGuideGrouping.fromJson(e as Map<String, dynamic>))
+            : DefinitionGrouping.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     resource: (json['resource'] as List)
         ?.map((e) => e == null
             ? null
-            : ImplementationGuideResource.fromJson(e as Map<String, dynamic>))
+            : DefinitionResource.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     page: json['page'] == null
         ? null
-        : ImplementationGuidePage.fromJson(
-            json['page'] as Map<String, dynamic>),
+        : DefinitionPage.fromJson(json['page'] as Map<String, dynamic>),
     parameter: (json['parameter'] as List)
         ?.map((e) => e == null
             ? null
-            : ImplementationGuideParameter.fromJson(e as Map<String, dynamic>))
+            : DefinitionParameter.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     template: (json['template'] as List)
         ?.map((e) => e == null
             ? null
-            : ImplementationGuideTemplate.fromJson(e as Map<String, dynamic>))
+            : DefinitionTemplate.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
@@ -3828,9 +3829,9 @@ Map<String, dynamic> _$_$_ImplementationGuideDefinitionToJson(
   return val;
 }
 
-_$_ImplementationGuideGrouping _$_$_ImplementationGuideGroupingFromJson(
+_$_DefinitionGrouping _$_$_DefinitionGroupingFromJson(
     Map<String, dynamic> json) {
-  return _$_ImplementationGuideGrouping(
+  return _$_DefinitionGrouping(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -3847,8 +3848,8 @@ _$_ImplementationGuideGrouping _$_$_ImplementationGuideGroupingFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_ImplementationGuideGroupingToJson(
-    _$_ImplementationGuideGrouping instance) {
+Map<String, dynamic> _$_$_DefinitionGroupingToJson(
+    _$_DefinitionGrouping instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3867,9 +3868,9 @@ Map<String, dynamic> _$_$_ImplementationGuideGroupingToJson(
   return val;
 }
 
-_$_ImplementationGuideResource _$_$_ImplementationGuideResourceFromJson(
+_$_DefinitionResource _$_$_DefinitionResourceFromJson(
     Map<String, dynamic> json) {
-  return _$_ImplementationGuideResource(
+  return _$_DefinitionResource(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -3898,8 +3899,8 @@ _$_ImplementationGuideResource _$_$_ImplementationGuideResourceFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_ImplementationGuideResourceToJson(
-    _$_ImplementationGuideResource instance) {
+Map<String, dynamic> _$_$_DefinitionResourceToJson(
+    _$_DefinitionResource instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3923,9 +3924,8 @@ Map<String, dynamic> _$_$_ImplementationGuideResourceToJson(
   return val;
 }
 
-_$_ImplementationGuidePage _$_$_ImplementationGuidePageFromJson(
-    Map<String, dynamic> json) {
-  return _$_ImplementationGuidePage(
+_$_DefinitionPage _$_$_DefinitionPageFromJson(Map<String, dynamic> json) {
+  return _$_DefinitionPage(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -3945,17 +3945,17 @@ _$_ImplementationGuidePage _$_$_ImplementationGuidePageFromJson(
         : Reference.fromJson(json['nameReference'] as Map<String, dynamic>),
     title: json['title'] as String,
     generation: _$enumDecodeNullable(
-        _$ImplementationGuidePageGenerationEnumMap, json['generation']),
+        _$PageGenerationEnumMap, json['generation'],
+        unknownValue: PageGeneration.unknown),
     page: (json['page'] as List)
         ?.map((e) => e == null
             ? null
-            : ImplementationGuidePage.fromJson(e as Map<String, dynamic>))
+            : DefinitionPage.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
 
-Map<String, dynamic> _$_$_ImplementationGuidePageToJson(
-    _$_ImplementationGuidePage instance) {
+Map<String, dynamic> _$_$_DefinitionPageToJson(_$_DefinitionPage instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3972,23 +3972,22 @@ Map<String, dynamic> _$_$_ImplementationGuidePageToJson(
   writeNotNull('nameUrl', instance.nameUrl?.toJson());
   writeNotNull('nameReference', instance.nameReference?.toJson());
   writeNotNull('title', instance.title);
-  writeNotNull('generation',
-      _$ImplementationGuidePageGenerationEnumMap[instance.generation]);
+  writeNotNull('generation', _$PageGenerationEnumMap[instance.generation]);
   writeNotNull('page', instance.page?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
-const _$ImplementationGuidePageGenerationEnumMap = {
-  ImplementationGuidePageGeneration.html: 'html',
-  ImplementationGuidePageGeneration.markdown: 'markdown',
-  ImplementationGuidePageGeneration.xml: 'xml',
-  ImplementationGuidePageGeneration.generated: 'generated',
-  ImplementationGuidePageGeneration.unknown: 'unknown',
+const _$PageGenerationEnumMap = {
+  PageGeneration.html: 'html',
+  PageGeneration.markdown: 'markdown',
+  PageGeneration.xml: 'xml',
+  PageGeneration.generated: 'generated',
+  PageGeneration.unknown: 'unknown',
 };
 
-_$_ImplementationGuideParameter _$_$_ImplementationGuideParameterFromJson(
+_$_DefinitionParameter _$_$_DefinitionParameterFromJson(
     Map<String, dynamic> json) {
-  return _$_ImplementationGuideParameter(
+  return _$_DefinitionParameter(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -4000,14 +3999,13 @@ _$_ImplementationGuideParameter _$_$_ImplementationGuideParameterFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    code: _$enumDecodeNullable(
-        _$ImplementationGuideParameterCodeEnumMap, json['code']),
+    code: _$enumDecodeNullable(_$ParameterCodeEnumMap, json['code']),
     value: json['value'] as String,
   );
 }
 
-Map<String, dynamic> _$_$_ImplementationGuideParameterToJson(
-    _$_ImplementationGuideParameter instance) {
+Map<String, dynamic> _$_$_DefinitionParameterToJson(
+    _$_DefinitionParameter instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -4021,29 +4019,28 @@ Map<String, dynamic> _$_$_ImplementationGuideParameterToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'code', _$ImplementationGuideParameterCodeEnumMap[instance.code]);
+  writeNotNull('code', _$ParameterCodeEnumMap[instance.code]);
   writeNotNull('value', instance.value);
   return val;
 }
 
-const _$ImplementationGuideParameterCodeEnumMap = {
-  ImplementationGuideParameterCode.apply: 'apply',
-  ImplementationGuideParameterCode.path_resource: 'path-resource',
-  ImplementationGuideParameterCode.path_pages: 'path-pages',
-  ImplementationGuideParameterCode.path_tx_cache: 'path-tx-cache',
-  ImplementationGuideParameterCode.expansion_parameter: 'expansion-parameter',
-  ImplementationGuideParameterCode.rule_broken_links: 'rule-broken-links',
-  ImplementationGuideParameterCode.generate_xml: 'generate-xml',
-  ImplementationGuideParameterCode.generate_json: 'generate-json',
-  ImplementationGuideParameterCode.generate_turtle: 'generate-turtle',
-  ImplementationGuideParameterCode.html_template: 'html-template',
-  ImplementationGuideParameterCode.unknown: 'unknown',
+const _$ParameterCodeEnumMap = {
+  ParameterCode.apply: 'apply',
+  ParameterCode.path_resource: 'path-resource',
+  ParameterCode.path_pages: 'path-pages',
+  ParameterCode.path_tx_cache: 'path-tx-cache',
+  ParameterCode.expansion_parameter: 'expansion-parameter',
+  ParameterCode.rule_broken_links: 'rule-broken-links',
+  ParameterCode.generate_xml: 'generate-xml',
+  ParameterCode.generate_json: 'generate-json',
+  ParameterCode.generate_turtle: 'generate-turtle',
+  ParameterCode.html_template: 'html-template',
+  ParameterCode.unknown: 'unknown',
 };
 
-_$_ImplementationGuideTemplate _$_$_ImplementationGuideTemplateFromJson(
+_$_DefinitionTemplate _$_$_DefinitionTemplateFromJson(
     Map<String, dynamic> json) {
-  return _$_ImplementationGuideTemplate(
+  return _$_DefinitionTemplate(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -4061,8 +4058,8 @@ _$_ImplementationGuideTemplate _$_$_ImplementationGuideTemplateFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_ImplementationGuideTemplateToJson(
-    _$_ImplementationGuideTemplate instance) {
+Map<String, dynamic> _$_$_DefinitionTemplateToJson(
+    _$_DefinitionTemplate instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -4102,12 +4099,11 @@ _$_ImplementationGuideManifest _$_$_ImplementationGuideManifestFromJson(
     resource: (json['resource'] as List)
         ?.map((e) => e == null
             ? null
-            : ImplementationGuideResource1.fromJson(e as Map<String, dynamic>))
+            : ManifestResource.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     page: (json['page'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ImplementationGuidePage1.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : ManifestPage.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     image: (json['image'] as List)?.map((e) => e as String)?.toList(),
     other: (json['other'] as List)?.map((e) => e as String)?.toList(),
@@ -4138,9 +4134,8 @@ Map<String, dynamic> _$_$_ImplementationGuideManifestToJson(
   return val;
 }
 
-_$_ImplementationGuideResource1 _$_$_ImplementationGuideResource1FromJson(
-    Map<String, dynamic> json) {
-  return _$_ImplementationGuideResource1(
+_$_ManifestResource _$_$_ManifestResourceFromJson(Map<String, dynamic> json) {
+  return _$_ManifestResource(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -4165,8 +4160,7 @@ _$_ImplementationGuideResource1 _$_$_ImplementationGuideResource1FromJson(
   );
 }
 
-Map<String, dynamic> _$_$_ImplementationGuideResource1ToJson(
-    _$_ImplementationGuideResource1 instance) {
+Map<String, dynamic> _$_$_ManifestResourceToJson(_$_ManifestResource instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -4187,9 +4181,8 @@ Map<String, dynamic> _$_$_ImplementationGuideResource1ToJson(
   return val;
 }
 
-_$_ImplementationGuidePage1 _$_$_ImplementationGuidePage1FromJson(
-    Map<String, dynamic> json) {
-  return _$_ImplementationGuidePage1(
+_$_ManifestPage _$_$_ManifestPageFromJson(Map<String, dynamic> json) {
+  return _$_ManifestPage(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -4207,8 +4200,7 @@ _$_ImplementationGuidePage1 _$_$_ImplementationGuidePage1FromJson(
   );
 }
 
-Map<String, dynamic> _$_$_ImplementationGuidePage1ToJson(
-    _$_ImplementationGuidePage1 instance) {
+Map<String, dynamic> _$_$_ManifestPageToJson(_$_ManifestPage instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -4261,8 +4253,8 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     derivedFrom: json['derivedFrom'] == null
         ? null
         : Canonical.fromJson(json['derivedFrom'] as String),
-    status:
-        _$enumDecodeNullable(_$SearchParameterStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$SearchParameterStatusEnumMap, json['status'],
+        unknownValue: SearchParameterStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -4292,7 +4284,8 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     base: (json['base'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    type: _$enumDecodeNullable(_$SearchParameterTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$SearchParameterTypeEnumMap, json['type'],
+        unknownValue: SearchParameterType.unknown),
     expression: json['expression'] as String,
     xpath: json['xpath'] as String,
     xpathUsage: _$enumDecodeNullable(
@@ -4302,7 +4295,10 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
         ?.toList(),
     multipleOr: json['multipleOr'] as bool,
     multipleAnd: json['multipleAnd'] as bool,
-    comparator: (json['comparator'] as List)?.map((e) => e as String)?.toList(),
+    comparator: (json['comparator'] as List)
+        ?.map(
+            (e) => _$enumDecodeNullable(_$SearchParameterComparatorEnumMap, e))
+        ?.toList(),
     modifier: (json['modifier'] as List)?.map((e) => e as String)?.toList(),
     chain: (json['chain'] as List)?.map((e) => e as String)?.toList(),
     component: (json['component'] as List)
@@ -4358,7 +4354,11 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
   writeNotNull('multipleOr', instance.multipleOr);
   writeNotNull('multipleAnd', instance.multipleAnd);
-  writeNotNull('comparator', instance.comparator);
+  writeNotNull(
+      'comparator',
+      instance.comparator
+          ?.map((e) => _$SearchParameterComparatorEnumMap[e])
+          ?.toList());
   writeNotNull('modifier', instance.modifier);
   writeNotNull('chain', instance.chain);
   writeNotNull(
@@ -4393,6 +4393,19 @@ const _$SearchParameterXpathUsageEnumMap = {
   SearchParameterXpathUsage.distance: 'distance',
   SearchParameterXpathUsage.other: 'other',
   SearchParameterXpathUsage.unknown: 'unknown',
+};
+
+const _$SearchParameterComparatorEnumMap = {
+  SearchParameterComparator.eq: 'eq',
+  SearchParameterComparator.ne: 'ne',
+  SearchParameterComparator.gt: 'gt',
+  SearchParameterComparator.lt: 'lt',
+  SearchParameterComparator.ge: 'ge',
+  SearchParameterComparator.le: 'le',
+  SearchParameterComparator.sa: 'sa',
+  SearchParameterComparator.eb: 'eb',
+  SearchParameterComparator.ap: 'ap',
+  SearchParameterComparator.unknown: 'unknown',
 };
 
 _$_SearchParameterComponent _$_$_SearchParameterComponentFromJson(
@@ -4466,8 +4479,8 @@ _$_GraphDefinition _$_$_GraphDefinitionFromJson(Map<String, dynamic> json) {
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     version: json['version'] as String,
     name: json['name'] as String,
-    status:
-        _$enumDecodeNullable(_$GraphDefinitionStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$GraphDefinitionStatusEnumMap, json['status'],
+        unknownValue: GraphDefinitionStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -4573,9 +4586,8 @@ _$_GraphDefinitionLink _$_$_GraphDefinitionLinkFromJson(
     max: json['max'] as String,
     description: json['description'] as String,
     target: (json['target'] as List)
-        ?.map((e) => e == null
-            ? null
-            : GraphDefinitionTarget.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : LinkTarget.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
@@ -4604,9 +4616,8 @@ Map<String, dynamic> _$_$_GraphDefinitionLinkToJson(
   return val;
 }
 
-_$_GraphDefinitionTarget _$_$_GraphDefinitionTargetFromJson(
-    Map<String, dynamic> json) {
-  return _$_GraphDefinitionTarget(
+_$_LinkTarget _$_$_LinkTargetFromJson(Map<String, dynamic> json) {
+  return _$_LinkTarget(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -4626,18 +4637,13 @@ _$_GraphDefinitionTarget _$_$_GraphDefinitionTargetFromJson(
     compartment: (json['compartment'] as List)
         ?.map((e) => e == null
             ? null
-            : GraphDefinitionCompartment.fromJson(e as Map<String, dynamic>))
+            : TargetCompartment.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    link: (json['link'] as List)
-        ?.map((e) => e == null
-            ? null
-            : GraphDefinitionLink.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    link: json['link'] as List,
   );
 }
 
-Map<String, dynamic> _$_$_GraphDefinitionTargetToJson(
-    _$_GraphDefinitionTarget instance) {
+Map<String, dynamic> _$_$_LinkTargetToJson(_$_LinkTarget instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -4656,13 +4662,12 @@ Map<String, dynamic> _$_$_GraphDefinitionTargetToJson(
   writeNotNull('profile', instance.profile?.toJson());
   writeNotNull(
       'compartment', instance.compartment?.map((e) => e?.toJson())?.toList());
-  writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
+  writeNotNull('link', instance.link);
   return val;
 }
 
-_$_GraphDefinitionCompartment _$_$_GraphDefinitionCompartmentFromJson(
-    Map<String, dynamic> json) {
-  return _$_GraphDefinitionCompartment(
+_$_TargetCompartment _$_$_TargetCompartmentFromJson(Map<String, dynamic> json) {
+  return _$_TargetCompartment(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -4674,18 +4679,19 @@ _$_GraphDefinitionCompartment _$_$_GraphDefinitionCompartmentFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    use: _$enumDecodeNullable(
-        _$GraphDefinitionCompartmentUseEnumMap, json['use']),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
-    rule: _$enumDecodeNullable(
-        _$GraphDefinitionCompartmentRuleEnumMap, json['rule']),
+    use: _$enumDecodeNullable(_$CompartmentUseEnumMap, json['use'],
+        unknownValue: CompartmentUse.unknown),
+    code: _$enumDecodeNullable(_$CompartmentCodeEnumMap, json['code'],
+        unknownValue: CompartmentCode.unknown),
+    rule: _$enumDecodeNullable(_$CompartmentRuleEnumMap, json['rule'],
+        unknownValue: CompartmentRule.unknown),
     expression: json['expression'] as String,
     description: json['description'] as String,
   );
 }
 
-Map<String, dynamic> _$_$_GraphDefinitionCompartmentToJson(
-    _$_GraphDefinitionCompartment instance) {
+Map<String, dynamic> _$_$_TargetCompartmentToJson(
+    _$_TargetCompartment instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -4699,26 +4705,35 @@ Map<String, dynamic> _$_$_GraphDefinitionCompartmentToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('use', _$GraphDefinitionCompartmentUseEnumMap[instance.use]);
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('rule', _$GraphDefinitionCompartmentRuleEnumMap[instance.rule]);
+  writeNotNull('use', _$CompartmentUseEnumMap[instance.use]);
+  writeNotNull('code', _$CompartmentCodeEnumMap[instance.code]);
+  writeNotNull('rule', _$CompartmentRuleEnumMap[instance.rule]);
   writeNotNull('expression', instance.expression);
   writeNotNull('description', instance.description);
   return val;
 }
 
-const _$GraphDefinitionCompartmentUseEnumMap = {
-  GraphDefinitionCompartmentUse.condition: 'condition',
-  GraphDefinitionCompartmentUse.requirement: 'requirement',
-  GraphDefinitionCompartmentUse.unknown: 'unknown',
+const _$CompartmentUseEnumMap = {
+  CompartmentUse.condition: 'condition',
+  CompartmentUse.requirement: 'requirement',
+  CompartmentUse.unknown: 'unknown',
 };
 
-const _$GraphDefinitionCompartmentRuleEnumMap = {
-  GraphDefinitionCompartmentRule.identical: 'identical',
-  GraphDefinitionCompartmentRule.matching: 'matching',
-  GraphDefinitionCompartmentRule.different: 'different',
-  GraphDefinitionCompartmentRule.custom: 'custom',
-  GraphDefinitionCompartmentRule.unknown: 'unknown',
+const _$CompartmentCodeEnumMap = {
+  CompartmentCode.patient: 'Patient',
+  CompartmentCode.encounter: 'Encounter',
+  CompartmentCode.relatedPerson: 'RelatedPerson',
+  CompartmentCode.practitioner: 'Practitioner',
+  CompartmentCode.device: 'Device',
+  CompartmentCode.unknown: 'unknown',
+};
+
+const _$CompartmentRuleEnumMap = {
+  CompartmentRule.identical: 'identical',
+  CompartmentRule.matching: 'matching',
+  CompartmentRule.different: 'different',
+  CompartmentRule.custom: 'custom',
+  CompartmentRule.unknown: 'unknown',
 };
 
 _$_StructureDefinition _$_$_StructureDefinitionFromJson(
@@ -4758,7 +4773,8 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     name: json['name'] as String,
     title: json['title'] as String,
     status: _$enumDecodeNullable(
-        _$StructureDefinitionStatusEnumMap, json['status']),
+        _$StructureDefinitionStatusEnumMap, json['status'],
+        unknownValue: StructureDefinitionStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -4798,7 +4814,8 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
             ? null
             : StructureDefinitionMapping.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    kind: _$enumDecodeNullable(_$StructureDefinitionKindEnumMap, json['kind']),
+    kind: _$enumDecodeNullable(_$StructureDefinitionKindEnumMap, json['kind'],
+        unknownValue: StructureDefinitionKind.unknown),
     abstract: json['abstract'] as bool,
     context: (json['context'] as List)
         ?.map((e) => e == null
@@ -4987,8 +5004,8 @@ _$_StructureDefinitionContext _$_$_StructureDefinitionContextFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(
-        _$StructureDefinitionContextTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$ContextTypeEnumMap, json['type'],
+        unknownValue: ContextType.unknown),
     expression: json['expression'] as String,
   );
 }
@@ -5008,16 +5025,16 @@ Map<String, dynamic> _$_$_StructureDefinitionContextToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', _$StructureDefinitionContextTypeEnumMap[instance.type]);
+  writeNotNull('type', _$ContextTypeEnumMap[instance.type]);
   writeNotNull('expression', instance.expression);
   return val;
 }
 
-const _$StructureDefinitionContextTypeEnumMap = {
-  StructureDefinitionContextType.fhirpath: 'fhirpath',
-  StructureDefinitionContextType.element: 'element',
-  StructureDefinitionContextType.extension: 'extension',
-  StructureDefinitionContextType.unknown: 'unknown',
+const _$ContextTypeEnumMap = {
+  ContextType.fhirpath: 'fhirpath',
+  ContextType.element: 'element',
+  ContextType.extension: 'extension',
+  ContextType.unknown: 'unknown',
 };
 
 _$_StructureDefinitionSnapshot _$_$_StructureDefinitionSnapshotFromJson(

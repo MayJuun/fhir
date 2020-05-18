@@ -464,7 +464,8 @@ _$_Consent _$_$_ConsentFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$ConsentStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$ConsentStatusEnumMap, json['status'],
+        unknownValue: ConsentStatus.unknown),
     scope: json['scope'] == null
         ? null
         : CodeableConcept.fromJson(json['scope'] as Map<String, dynamic>),
@@ -661,13 +662,15 @@ _$_ConsentProvision _$_$_ConsentProvisionFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(_$ConsentProvisionTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$ProvisionTypeEnumMap, json['type'],
+        unknownValue: ProvisionType.unknown),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
     actor: (json['actor'] as List)
-        ?.map((e) =>
-            e == null ? null : ConsentActor.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => e == null
+            ? null
+            : ProvisionActor.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     action: (json['action'] as List)
         ?.map((e) => e == null
@@ -695,8 +698,9 @@ _$_ConsentProvision _$_$_ConsentProvisionFromJson(Map<String, dynamic> json) {
         ? null
         : Period.fromJson(json['dataPeriod'] as Map<String, dynamic>),
     data: (json['data'] as List)
-        ?.map((e) =>
-            e == null ? null : ConsentData.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => e == null
+            ? null
+            : ProvisionData.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     provision: (json['provision'] as List)
         ?.map((e) => e == null
@@ -720,7 +724,7 @@ Map<String, dynamic> _$_$_ConsentProvisionToJson(_$_ConsentProvision instance) {
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', _$ConsentProvisionTypeEnumMap[instance.type]);
+  writeNotNull('type', _$ProvisionTypeEnumMap[instance.type]);
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('actor', instance.actor?.map((e) => e?.toJson())?.toList());
   writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
@@ -736,14 +740,14 @@ Map<String, dynamic> _$_$_ConsentProvisionToJson(_$_ConsentProvision instance) {
   return val;
 }
 
-const _$ConsentProvisionTypeEnumMap = {
-  ConsentProvisionType.deny: 'deny',
-  ConsentProvisionType.permit: 'permit',
-  ConsentProvisionType.unknown: 'unknown',
+const _$ProvisionTypeEnumMap = {
+  ProvisionType.deny: 'deny',
+  ProvisionType.permit: 'permit',
+  ProvisionType.unknown: 'unknown',
 };
 
-_$_ConsentActor _$_$_ConsentActorFromJson(Map<String, dynamic> json) {
-  return _$_ConsentActor(
+_$_ProvisionActor _$_$_ProvisionActorFromJson(Map<String, dynamic> json) {
+  return _$_ProvisionActor(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -764,7 +768,7 @@ _$_ConsentActor _$_$_ConsentActorFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ConsentActorToJson(_$_ConsentActor instance) {
+Map<String, dynamic> _$_$_ProvisionActorToJson(_$_ProvisionActor instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -783,8 +787,8 @@ Map<String, dynamic> _$_$_ConsentActorToJson(_$_ConsentActor instance) {
   return val;
 }
 
-_$_ConsentData _$_$_ConsentDataFromJson(Map<String, dynamic> json) {
-  return _$_ConsentData(
+_$_ProvisionData _$_$_ProvisionDataFromJson(Map<String, dynamic> json) {
+  return _$_ProvisionData(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -796,14 +800,14 @@ _$_ConsentData _$_$_ConsentDataFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    meaning: _$enumDecodeNullable(_$ConsentDataMeaningEnumMap, json['meaning']),
+    meaning: _$enumDecodeNullable(_$DataMeaningEnumMap, json['meaning']),
     reference: json['reference'] == null
         ? null
         : Reference.fromJson(json['reference'] as Map<String, dynamic>),
   );
 }
 
-Map<String, dynamic> _$_$_ConsentDataToJson(_$_ConsentData instance) {
+Map<String, dynamic> _$_$_ProvisionDataToJson(_$_ProvisionData instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -817,17 +821,17 @@ Map<String, dynamic> _$_$_ConsentDataToJson(_$_ConsentData instance) {
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('meaning', _$ConsentDataMeaningEnumMap[instance.meaning]);
+  writeNotNull('meaning', _$DataMeaningEnumMap[instance.meaning]);
   writeNotNull('reference', instance.reference?.toJson());
   return val;
 }
 
-const _$ConsentDataMeaningEnumMap = {
-  ConsentDataMeaning.instance: 'instance',
-  ConsentDataMeaning.related: 'related',
-  ConsentDataMeaning.dependents: 'dependents',
-  ConsentDataMeaning.authoredby: 'authoredby',
-  ConsentDataMeaning.unknown: 'unknown',
+const _$DataMeaningEnumMap = {
+  DataMeaning.instance: 'instance',
+  DataMeaning.related: 'related',
+  DataMeaning.dependents: 'dependents',
+  DataMeaning.authoredby: 'authoredby',
+  DataMeaning.unknown: 'unknown',
 };
 
 _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
@@ -1000,7 +1004,8 @@ _$_ProvenanceEntity _$_$_ProvenanceEntityFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    role: _$enumDecodeNullable(_$ProvenanceEntityRoleEnumMap, json['role']),
+    role: _$enumDecodeNullable(_$EntityRoleEnumMap, json['role'],
+        unknownValue: EntityRole.unknown),
     what: json['what'] == null
         ? null
         : Reference.fromJson(json['what'] as Map<String, dynamic>),
@@ -1026,17 +1031,17 @@ Map<String, dynamic> _$_$_ProvenanceEntityToJson(_$_ProvenanceEntity instance) {
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('role', _$ProvenanceEntityRoleEnumMap[instance.role]);
+  writeNotNull('role', _$EntityRoleEnumMap[instance.role]);
   writeNotNull('what', instance.what?.toJson());
   writeNotNull('agent', instance.agent?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
-const _$ProvenanceEntityRoleEnumMap = {
-  ProvenanceEntityRole.derivation: 'derivation',
-  ProvenanceEntityRole.revision: 'revision',
-  ProvenanceEntityRole.quotation: 'quotation',
-  ProvenanceEntityRole.source: 'source',
-  ProvenanceEntityRole.removal: 'removal',
-  ProvenanceEntityRole.unknown: 'unknown',
+const _$EntityRoleEnumMap = {
+  EntityRole.derivation: 'derivation',
+  EntityRole.revision: 'revision',
+  EntityRole.quotation: 'quotation',
+  EntityRole.source: 'source',
+  EntityRole.removal: 'removal',
+  EntityRole.unknown: 'unknown',
 };

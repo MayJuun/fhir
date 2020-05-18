@@ -24,7 +24,8 @@ abstract class CatalogEntry with _$CatalogEntry {
     Reference referencedItem,
     List<Identifier> additionalIdentifier,
     List<CodeableConcept> classification,
-    CatalogEntryStatus status,
+    @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+        CatalogEntryStatus status,
     Period validityPeriod,
     FhirDateTime validTo,
     FhirDateTime lastUpdated,
@@ -42,7 +43,8 @@ abstract class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    CatalogEntryRelatedEntryRelationtype relationtype,
+    @JsonKey(unknownEnumValue: RelatedEntryRelationType.unknown)
+        RelatedEntryRelationtype relationtype,
     Reference item,
   }) = _CatalogEntryRelatedEntry;
   factory CatalogEntryRelatedEntry.fromJson(Map<String, dynamic> json) =>
@@ -62,7 +64,8 @@ abstract class Composition with _$Composition {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
-    CompositionStatus status,
+    @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+        CompositionStatus status,
     CodeableConcept type,
     List<CodeableConcept> category,
     Reference subject,
@@ -87,7 +90,7 @@ abstract class CompositionAttester with _$CompositionAttester {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    CompositionAttesterMode mode,
+    @JsonKey(unknownEnumValue: AttesterMode.unknown) AttesterMode mode,
     FhirDateTime time,
     Reference party,
   }) = _CompositionAttester;
@@ -101,7 +104,7 @@ abstract class CompositionRelatesTo with _$CompositionRelatesTo {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    Code code,
+    @JsonKey(unknownEnumValue: RelatesToCode.unknown) RelatesToCode code,
     Identifier targetIdentifier,
     Reference targetReference,
   }) = _CompositionRelatesTo;
@@ -134,7 +137,7 @@ abstract class CompositionSection with _$CompositionSection {
     List<Reference> author,
     Reference focus,
     Narrative text,
-    Code mode,
+    @JsonKey(unknownEnumValue: SectionMode.unknown) SectionMode mode,
     CodeableConcept orderedBy,
     CodeableConcept emptyReason,
     List<CompositionSection> section,
@@ -157,7 +160,8 @@ abstract class DocumentManifest with _$DocumentManifest {
     List<FhirExtension> modifierExtension,
     Identifier masterIdentifier,
     List<Identifier> identifier,
-    DocumentManifestStatus status,
+    @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+        DocumentManifestStatus status,
     CodeableConcept type,
     Reference subject,
     FhirDateTime created,
@@ -198,8 +202,10 @@ abstract class DocumentReference with _$DocumentReference {
     List<FhirExtension> modifierExtension,
     Identifier masterIdentifier,
     List<Identifier> identifier,
-    DocumentReferenceStatus status,
-    Code docStatus,
+    @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+        DocumentReferenceStatus status,
+    @JsonKey(unknownEnumValue: DocumentReferenceDocStatus.unknown)
+        DocumentReferenceDocStatus docStatus,
     CodeableConcept type,
     List<CodeableConcept> category,
     Reference subject,
@@ -222,7 +228,7 @@ abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    DocumentReferenceRelatesToCode code,
+    RelatesToCode code,
     Reference target,
   }) = _DocumentReferenceRelatesTo;
   factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>

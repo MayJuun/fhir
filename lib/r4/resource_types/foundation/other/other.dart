@@ -30,8 +30,8 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    OperationOutcomeIssueSeverity severity,
-    OperationOutcomeIssueCode code,
+    @JsonKey(unknownEnumValue: IssueSeverity.unknown) IssueSeverity severity,
+    @JsonKey(unknownEnumValue: IssueCode.unknown) IssueCode code,
     CodeableConcept details,
     String diagnostics,
     List<String> location,
@@ -220,7 +220,8 @@ abstract class Subscription with _$Subscription {
     List<dynamic> contained,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    SubscriptionStatus status,
+    @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
+        SubscriptionStatus status,
     List<ContactPoint> contact,
     Instant end,
     String reason,
@@ -238,7 +239,7 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    SubscriptionChannelType type,
+    @JsonKey(unknownEnumValue: ChannelType.unknown) ChannelType type,
     FhirUrl endpoint,
     Code payload,
     List<String> header,
@@ -273,7 +274,7 @@ abstract class LinkageItem with _$LinkageItem {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    LinkageItemType type,
+    @JsonKey(unknownEnumValue: ItemType.unknown) ItemType type,
     Reference resource,
   }) = _LinkageItem;
   factory LinkageItem.fromJson(Map<String, dynamic> json) =>
@@ -289,7 +290,7 @@ abstract class Bundle with _$Bundle {
     FhirUri implicitRules,
     Code language,
     Identifier identifier,
-    BundleType type,
+    @JsonKey(unknownEnumValue: BundleType.unknown) BundleType type,
     Instant timestamp,
     int total,
     List<BundleLink> link,
@@ -321,47 +322,47 @@ abstract class BundleEntry with _$BundleEntry {
     List<BundleLink> link,
     FhirUri fullUrl,
     dynamic resource,
-    BundleSearch search,
-    BundleRequest request,
-    BundleResponse response,
+    EntrySearch search,
+    EntryRequest request,
+    EntryResponse response,
   }) = _BundleEntry;
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryFromJson(json);
 }
 
 @freezed
-abstract class BundleSearch with _$BundleSearch {
-  const factory BundleSearch({
+abstract class EntrySearch with _$EntrySearch {
+  const factory EntrySearch({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    BundleSearchMode mode,
+    @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
     double score,
-  }) = _BundleSearch;
-  factory BundleSearch.fromJson(Map<String, dynamic> json) =>
-      _$BundleSearchFromJson(json);
+  }) = _EntrySearch;
+  factory EntrySearch.fromJson(Map<String, dynamic> json) =>
+      _$EntrySearchFromJson(json);
 }
 
 @freezed
-abstract class BundleRequest with _$BundleRequest {
-  const factory BundleRequest({
+abstract class EntryRequest with _$EntryRequest {
+  const factory EntryRequest({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    BundleRequestMethod method,
+    @JsonKey(unknownEnumValue: RequestMethod.unknown) RequestMethod method,
     FhirUri url,
     String ifNoneMatch,
     Instant ifModifiedSince,
     String ifMatch,
     String ifNoneExist,
-  }) = _BundleRequest;
-  factory BundleRequest.fromJson(Map<String, dynamic> json) =>
-      _$BundleRequestFromJson(json);
+  }) = _EntryRequest;
+  factory EntryRequest.fromJson(Map<String, dynamic> json) =>
+      _$EntryRequestFromJson(json);
 }
 
 @freezed
-abstract class BundleResponse with _$BundleResponse {
-  const factory BundleResponse({
+abstract class EntryResponse with _$EntryResponse {
+  const factory EntryResponse({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -370,9 +371,9 @@ abstract class BundleResponse with _$BundleResponse {
     String etag,
     Instant lastModified,
     dynamic outcome,
-  }) = _BundleResponse;
-  factory BundleResponse.fromJson(Map<String, dynamic> json) =>
-      _$BundleResponseFromJson(json);
+  }) = _EntryResponse;
+  factory EntryResponse.fromJson(Map<String, dynamic> json) =>
+      _$EntryResponseFromJson(json);
 }
 
 @freezed

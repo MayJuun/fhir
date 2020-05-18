@@ -41,7 +41,8 @@ _$_CodeSystem _$_$_CodeSystemFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(_$CodeSystemStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$CodeSystemStatusEnumMap, json['status'],
+        unknownValue: CodeSystemStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -74,7 +75,8 @@ _$_CodeSystem _$_$_CodeSystemFromJson(Map<String, dynamic> json) {
         _$CodeSystemHierarchyMeaningEnumMap, json['hierarchyMeaning']),
     compositional: json['compositional'] as bool,
     versionNeeded: json['versionNeeded'] as bool,
-    content: _$enumDecodeNullable(_$CodeSystemContentEnumMap, json['content']),
+    content: _$enumDecodeNullable(_$CodeSystemContentEnumMap, json['content'],
+        unknownValue: CodeSystemContent.unknown),
     supplements: json['supplements'] == null
         ? null
         : Canonical.fromJson(json['supplements'] as String),
@@ -221,7 +223,7 @@ _$_CodeSystemFilter _$_$_CodeSystemFilterFromJson(Map<String, dynamic> json) {
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     description: json['description'] as String,
     operator: (json['operator'] as List)
-        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.map((e) => _$enumDecodeNullable(_$FilterOperatorEnumMap, e))
         ?.toList(),
     value: json['value'] as String,
   );
@@ -243,11 +245,23 @@ Map<String, dynamic> _$_$_CodeSystemFilterToJson(_$_CodeSystemFilter instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('description', instance.description);
-  writeNotNull(
-      'operator', instance.operator?.map((e) => e?.toJson())?.toList());
+  writeNotNull('operator',
+      instance.operator?.map((e) => _$FilterOperatorEnumMap[e])?.toList());
   writeNotNull('value', instance.value);
   return val;
 }
+
+const _$FilterOperatorEnumMap = {
+  FilterOperator.is_a: 'is-a',
+  FilterOperator.descendent_of: 'descendent-of',
+  FilterOperator.is_not_a: 'is-not-a',
+  FilterOperator.regex: 'regex',
+  FilterOperator.in_: 'in',
+  FilterOperator.not_in: 'not-in',
+  FilterOperator.generalizes: 'generalizes',
+  FilterOperator.exists: 'exists',
+  FilterOperator.unknown: 'unknown',
+};
 
 _$_CodeSystemProperty _$_$_CodeSystemPropertyFromJson(
     Map<String, dynamic> json) {
@@ -266,7 +280,7 @@ _$_CodeSystemProperty _$_$_CodeSystemPropertyFromJson(
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri'] as String),
     description: json['description'] as String,
-    type: _$enumDecodeNullable(_$CodeSystemPropertyTypeEnumMap, json['type']),
+    type: json['type'],
   );
 }
 
@@ -288,20 +302,9 @@ Map<String, dynamic> _$_$_CodeSystemPropertyToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('uri', instance.uri?.toJson());
   writeNotNull('description', instance.description);
-  writeNotNull('type', _$CodeSystemPropertyTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type);
   return val;
 }
-
-const _$CodeSystemPropertyTypeEnumMap = {
-  CodeSystemPropertyType.code: 'code',
-  CodeSystemPropertyType.Coding: 'Coding',
-  CodeSystemPropertyType.string: 'string',
-  CodeSystemPropertyType.integer: 'integer',
-  CodeSystemPropertyType.boolean: 'boolean',
-  CodeSystemPropertyType.dateTime: 'dateTime',
-  CodeSystemPropertyType.decimal: 'decimal',
-  CodeSystemPropertyType.unknown: 'unknown',
-};
 
 _$_CodeSystemConcept _$_$_CodeSystemConceptFromJson(Map<String, dynamic> json) {
   return _$_CodeSystemConcept(
@@ -322,12 +325,12 @@ _$_CodeSystemConcept _$_$_CodeSystemConceptFromJson(Map<String, dynamic> json) {
     designation: (json['designation'] as List)
         ?.map((e) => e == null
             ? null
-            : CodeSystemDesignation.fromJson(e as Map<String, dynamic>))
+            : ConceptDesignation.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     property: (json['property'] as List)
         ?.map((e) => e == null
             ? null
-            : CodeSystemProperty1.fromJson(e as Map<String, dynamic>))
+            : ConceptProperty.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     concept: (json['concept'] as List)
         ?.map((e) => e == null
@@ -363,9 +366,9 @@ Map<String, dynamic> _$_$_CodeSystemConceptToJson(
   return val;
 }
 
-_$_CodeSystemDesignation _$_$_CodeSystemDesignationFromJson(
+_$_ConceptDesignation _$_$_ConceptDesignationFromJson(
     Map<String, dynamic> json) {
-  return _$_CodeSystemDesignation(
+  return _$_ConceptDesignation(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -387,8 +390,8 @@ _$_CodeSystemDesignation _$_$_CodeSystemDesignationFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_CodeSystemDesignationToJson(
-    _$_CodeSystemDesignation instance) {
+Map<String, dynamic> _$_$_ConceptDesignationToJson(
+    _$_ConceptDesignation instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -408,9 +411,8 @@ Map<String, dynamic> _$_$_CodeSystemDesignationToJson(
   return val;
 }
 
-_$_CodeSystemProperty1 _$_$_CodeSystemProperty1FromJson(
-    Map<String, dynamic> json) {
-  return _$_CodeSystemProperty1(
+_$_ConceptProperty _$_$_ConceptPropertyFromJson(Map<String, dynamic> json) {
+  return _$_ConceptProperty(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -439,8 +441,7 @@ _$_CodeSystemProperty1 _$_$_CodeSystemProperty1FromJson(
   );
 }
 
-Map<String, dynamic> _$_$_CodeSystemProperty1ToJson(
-    _$_CodeSystemProperty1 instance) {
+Map<String, dynamic> _$_$_ConceptPropertyToJson(_$_ConceptProperty instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -499,7 +500,8 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
         ?.toList(),
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(_$ValueSetStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$ValueSetStatusEnumMap, json['status'],
+        unknownValue: ValueSetStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -602,12 +604,12 @@ _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
     include: (json['include'] as List)
         ?.map((e) => e == null
             ? null
-            : ValueSetInclude.fromJson(e as Map<String, dynamic>))
+            : ComposeIncludeExclude.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     exclude: (json['exclude'] as List)
         ?.map((e) => e == null
             ? null
-            : ValueSetInclude.fromJson(e as Map<String, dynamic>))
+            : ComposeIncludeExclude.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
@@ -633,8 +635,9 @@ Map<String, dynamic> _$_$_ValueSetComposeToJson(_$_ValueSetCompose instance) {
   return val;
 }
 
-_$_ValueSetInclude _$_$_ValueSetIncludeFromJson(Map<String, dynamic> json) {
-  return _$_ValueSetInclude(
+_$_ComposeIncludeExclude _$_$_ComposeIncludeExcludeFromJson(
+    Map<String, dynamic> json) {
+  return _$_ComposeIncludeExclude(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -653,7 +656,7 @@ _$_ValueSetInclude _$_$_ValueSetIncludeFromJson(Map<String, dynamic> json) {
     concept: (json['concept'] as List)
         ?.map((e) => e == null
             ? null
-            : ValueSetConcept.fromJson(e as Map<String, dynamic>))
+            : IncludeExcludeConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     valueSet: (json['valueSet'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
@@ -661,7 +664,8 @@ _$_ValueSetInclude _$_$_ValueSetIncludeFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ValueSetIncludeToJson(_$_ValueSetInclude instance) {
+Map<String, dynamic> _$_$_ComposeIncludeExcludeToJson(
+    _$_ComposeIncludeExclude instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -683,8 +687,9 @@ Map<String, dynamic> _$_$_ValueSetIncludeToJson(_$_ValueSetInclude instance) {
   return val;
 }
 
-_$_ValueSetConcept _$_$_ValueSetConceptFromJson(Map<String, dynamic> json) {
-  return _$_ValueSetConcept(
+_$_IncludeExcludeConcept _$_$_IncludeExcludeConceptFromJson(
+    Map<String, dynamic> json) {
+  return _$_IncludeExcludeConcept(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -700,12 +705,13 @@ _$_ValueSetConcept _$_$_ValueSetConceptFromJson(Map<String, dynamic> json) {
     designation: (json['designation'] as List)
         ?.map((e) => e == null
             ? null
-            : ValueSetDesignation.fromJson(e as Map<String, dynamic>))
+            : ConceptDesignation.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
 
-Map<String, dynamic> _$_$_ValueSetConceptToJson(_$_ValueSetConcept instance) {
+Map<String, dynamic> _$_$_IncludeExcludeConceptToJson(
+    _$_IncludeExcludeConcept instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -725,9 +731,9 @@ Map<String, dynamic> _$_$_ValueSetConceptToJson(_$_ValueSetConcept instance) {
   return val;
 }
 
-_$_ValueSetDesignation _$_$_ValueSetDesignationFromJson(
+_$_ConceptDesignation _$_$_ConceptDesignationFromJson(
     Map<String, dynamic> json) {
-  return _$_ValueSetDesignation(
+  return _$_ConceptDesignation(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -744,8 +750,8 @@ _$_ValueSetDesignation _$_$_ValueSetDesignationFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_ValueSetDesignationToJson(
-    _$_ValueSetDesignation instance) {
+Map<String, dynamic> _$_$_ConceptDesignationToJson(
+    _$_ConceptDesignation instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -763,8 +769,9 @@ Map<String, dynamic> _$_$_ValueSetDesignationToJson(
   return val;
 }
 
-_$_ValueSetFilter _$_$_ValueSetFilterFromJson(Map<String, dynamic> json) {
-  return _$_ValueSetFilter(
+_$_IncludeExcludeFilter _$_$_IncludeExcludeFilterFromJson(
+    Map<String, dynamic> json) {
+  return _$_IncludeExcludeFilter(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -779,12 +786,13 @@ _$_ValueSetFilter _$_$_ValueSetFilterFromJson(Map<String, dynamic> json) {
     property: json['property'] == null
         ? null
         : Code.fromJson(json['property'] as String),
-    op: _$enumDecodeNullable(_$ValueSetFilterOpEnumMap, json['op']),
+    op: json['op'],
     value: json['value'] as String,
   );
 }
 
-Map<String, dynamic> _$_$_ValueSetFilterToJson(_$_ValueSetFilter instance) {
+Map<String, dynamic> _$_$_IncludeExcludeFilterToJson(
+    _$_IncludeExcludeFilter instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -799,23 +807,10 @@ Map<String, dynamic> _$_$_ValueSetFilterToJson(_$_ValueSetFilter instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('property', instance.property?.toJson());
-  writeNotNull('op', _$ValueSetFilterOpEnumMap[instance.op]);
+  writeNotNull('op', instance.op);
   writeNotNull('value', instance.value);
   return val;
 }
-
-const _$ValueSetFilterOpEnumMap = {
-  ValueSetFilterOp.equal: '=',
-  ValueSetFilterOp.is_a: 'is-a',
-  ValueSetFilterOp.descendent_of: 'descendent-of',
-  ValueSetFilterOp.is_not_a: 'is-not-a',
-  ValueSetFilterOp.regex: 'regex',
-  ValueSetFilterOp.in_: 'in',
-  ValueSetFilterOp.not_in: 'not-in',
-  ValueSetFilterOp.generalizes: 'generalizes',
-  ValueSetFilterOp.exists: 'exists',
-  ValueSetFilterOp.unknown: 'unknown',
-};
 
 _$_ValueSetExpansion _$_$_ValueSetExpansionFromJson(Map<String, dynamic> json) {
   return _$_ValueSetExpansion(
@@ -840,12 +835,12 @@ _$_ValueSetExpansion _$_$_ValueSetExpansionFromJson(Map<String, dynamic> json) {
     parameter: (json['parameter'] as List)
         ?.map((e) => e == null
             ? null
-            : ValueSetParameter.fromJson(e as Map<String, dynamic>))
+            : ExpansionParameter.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     contains: (json['contains'] as List)
         ?.map((e) => e == null
             ? null
-            : ValueSetContains.fromJson(e as Map<String, dynamic>))
+            : ExpansionContains.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
@@ -875,8 +870,9 @@ Map<String, dynamic> _$_$_ValueSetExpansionToJson(
   return val;
 }
 
-_$_ValueSetParameter _$_$_ValueSetParameterFromJson(Map<String, dynamic> json) {
-  return _$_ValueSetParameter(
+_$_ExpansionParameter _$_$_ExpansionParameterFromJson(
+    Map<String, dynamic> json) {
+  return _$_ExpansionParameter(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -904,8 +900,8 @@ _$_ValueSetParameter _$_$_ValueSetParameterFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ValueSetParameterToJson(
-    _$_ValueSetParameter instance) {
+Map<String, dynamic> _$_$_ExpansionParameterToJson(
+    _$_ExpansionParameter instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -929,8 +925,8 @@ Map<String, dynamic> _$_$_ValueSetParameterToJson(
   return val;
 }
 
-_$_ValueSetContains _$_$_ValueSetContainsFromJson(Map<String, dynamic> json) {
-  return _$_ValueSetContains(
+_$_ExpansionContains _$_$_ExpansionContainsFromJson(Map<String, dynamic> json) {
+  return _$_ExpansionContains(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -953,17 +949,18 @@ _$_ValueSetContains _$_$_ValueSetContainsFromJson(Map<String, dynamic> json) {
     designation: (json['designation'] as List)
         ?.map((e) => e == null
             ? null
-            : ValueSetDesignation.fromJson(e as Map<String, dynamic>))
+            : ConceptDesignation.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     contains: (json['contains'] as List)
         ?.map((e) => e == null
             ? null
-            : ValueSetContains.fromJson(e as Map<String, dynamic>))
+            : ExpansionContains.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
 
-Map<String, dynamic> _$_$_ValueSetContainsToJson(_$_ValueSetContains instance) {
+Map<String, dynamic> _$_$_ExpansionContainsToJson(
+    _$_ExpansionContains instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1023,7 +1020,8 @@ _$_TerminologyCapabilities _$_$_TerminologyCapabilitiesFromJson(
     name: json['name'] as String,
     title: json['title'] as String,
     status: _$enumDecodeNullable(
-        _$TerminologyCapabilitiesStatusEnumMap, json['status']),
+        _$TerminologyCapabilitiesStatusEnumMap, json['status'],
+        unknownValue: TerminologyCapabilitiesStatus.unknown),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -1073,7 +1071,8 @@ _$_TerminologyCapabilities _$_$_TerminologyCapabilitiesFromJson(
         : TerminologyCapabilitiesExpansion.fromJson(
             json['expansion'] as Map<String, dynamic>),
     codeSearch: _$enumDecodeNullable(
-        _$TerminologyCapabilitiesCodeSearchEnumMap, json['codeSearch']),
+        _$TerminologyCapabilitiesCodeSearchEnumMap, json['codeSearch'],
+        unknownValue: TerminologyCapabilitiesCodeSearch.unknown),
     validateCode: json['validateCode'] == null
         ? null
         : TerminologyCapabilitiesValidateCode.fromJson(

@@ -1411,7 +1411,9 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
     claimResponse: json['claimResponse'] == null
         ? null
         : Reference.fromJson(json['claimResponse'] as Map<String, dynamic>),
-    outcome: json['outcome'],
+    outcome: _$enumDecodeNullable(
+        _$ExplanationOfBenefitOutcomeEnumMap, json['outcome'],
+        unknownValue: ExplanationOfBenefitOutcome.unknown),
     disposition: json['disposition'] as String,
     preAuthRef: (json['preAuthRef'] as List)?.map((e) => e as String)?.toList(),
     preAuthRefPeriod: (json['preAuthRefPeriod'] as List)
@@ -1533,7 +1535,8 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
   writeNotNull('facility', instance.facility?.toJson());
   writeNotNull('claim', instance.claim?.toJson());
   writeNotNull('claimResponse', instance.claimResponse?.toJson());
-  writeNotNull('outcome', instance.outcome);
+  writeNotNull(
+      'outcome', _$ExplanationOfBenefitOutcomeEnumMap[instance.outcome]);
   writeNotNull('disposition', instance.disposition);
   writeNotNull('preAuthRef', instance.preAuthRef);
   writeNotNull('preAuthRefPeriod',
@@ -1576,6 +1579,14 @@ const _$ExplanationOfBenefitUseEnumMap = {
   ExplanationOfBenefitUse.preauthorization: 'preauthorization',
   ExplanationOfBenefitUse.predeterminzation: 'predetermination',
   ExplanationOfBenefitUse.unknown: 'unknown',
+};
+
+const _$ExplanationOfBenefitOutcomeEnumMap = {
+  ExplanationOfBenefitOutcome.queued: 'queued',
+  ExplanationOfBenefitOutcome.complete: 'complete',
+  ExplanationOfBenefitOutcome.error: 'error',
+  ExplanationOfBenefitOutcome.partial: 'partial',
+  ExplanationOfBenefitOutcome.unknown: 'unknown',
 };
 
 _$_ExplanationOfBenefitRelated _$_$_ExplanationOfBenefitRelatedFromJson(

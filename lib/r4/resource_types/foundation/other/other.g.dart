@@ -79,10 +79,10 @@ _$_OperationOutcomeIssue _$_$_OperationOutcomeIssueFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    severity: _$enumDecodeNullable(
-        _$OperationOutcomeIssueSeverityEnumMap, json['severity']),
-    code:
-        _$enumDecodeNullable(_$OperationOutcomeIssueCodeEnumMap, json['code']),
+    severity: _$enumDecodeNullable(_$IssueSeverityEnumMap, json['severity'],
+        unknownValue: IssueSeverity.unknown),
+    code: _$enumDecodeNullable(_$IssueCodeEnumMap, json['code'],
+        unknownValue: IssueCode.unknown),
     details: json['details'] == null
         ? null
         : CodeableConcept.fromJson(json['details'] as Map<String, dynamic>),
@@ -107,9 +107,8 @@ Map<String, dynamic> _$_$_OperationOutcomeIssueToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'severity', _$OperationOutcomeIssueSeverityEnumMap[instance.severity]);
-  writeNotNull('code', _$OperationOutcomeIssueCodeEnumMap[instance.code]);
+  writeNotNull('severity', _$IssueSeverityEnumMap[instance.severity]);
+  writeNotNull('code', _$IssueCodeEnumMap[instance.code]);
   writeNotNull('details', instance.details?.toJson());
   writeNotNull('diagnostics', instance.diagnostics);
   writeNotNull('location', instance.location);
@@ -149,46 +148,46 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
-const _$OperationOutcomeIssueSeverityEnumMap = {
-  OperationOutcomeIssueSeverity.fatal: 'fatal',
-  OperationOutcomeIssueSeverity.error: 'error',
-  OperationOutcomeIssueSeverity.warning: 'warning',
-  OperationOutcomeIssueSeverity.information: 'information',
-  OperationOutcomeIssueSeverity.unknown: 'unknown',
+const _$IssueSeverityEnumMap = {
+  IssueSeverity.fatal: 'fatal',
+  IssueSeverity.error: 'error',
+  IssueSeverity.warning: 'warning',
+  IssueSeverity.information: 'information',
+  IssueSeverity.unknown: 'unknown',
 };
 
-const _$OperationOutcomeIssueCodeEnumMap = {
-  OperationOutcomeIssueCode.invalid: 'invalid',
-  OperationOutcomeIssueCode.structure: 'structure',
-  OperationOutcomeIssueCode.required: 'required',
-  OperationOutcomeIssueCode.value: 'value',
-  OperationOutcomeIssueCode.invariant: 'invariant',
-  OperationOutcomeIssueCode.security: 'security',
-  OperationOutcomeIssueCode.login: 'login',
-  OperationOutcomeIssueCode.expired: 'expired',
-  OperationOutcomeIssueCode.forbidden: 'forbidden',
-  OperationOutcomeIssueCode.suppressed: 'suppressed',
-  OperationOutcomeIssueCode.processing: 'processing',
-  OperationOutcomeIssueCode.not_supported: 'not-supported',
-  OperationOutcomeIssueCode.duplicate: 'duplicate',
-  OperationOutcomeIssueCode.multiple_matches: 'multiple-matches',
-  OperationOutcomeIssueCode.not_found: 'not-found',
-  OperationOutcomeIssueCode.deleted: 'deleted',
-  OperationOutcomeIssueCode.too_long: 'too-long',
-  OperationOutcomeIssueCode.code_invalid: 'code-invalid',
-  OperationOutcomeIssueCode.extension: 'extension',
-  OperationOutcomeIssueCode.too_costly: 'too-costly',
-  OperationOutcomeIssueCode.business_rule: 'business-rule',
-  OperationOutcomeIssueCode.conflict: 'conflict',
-  OperationOutcomeIssueCode.transient: 'transient',
-  OperationOutcomeIssueCode.lock_error: 'lock-error',
-  OperationOutcomeIssueCode.no_store: 'no-store',
-  OperationOutcomeIssueCode.exception: 'exception',
-  OperationOutcomeIssueCode.timeout: 'timeout',
-  OperationOutcomeIssueCode.incomplete: 'incomplete',
-  OperationOutcomeIssueCode.throttled: 'throttled',
-  OperationOutcomeIssueCode.informational: 'informational',
-  OperationOutcomeIssueCode.unknown: 'unknown',
+const _$IssueCodeEnumMap = {
+  IssueCode.invalid: 'invalid',
+  IssueCode.structure: 'structure',
+  IssueCode.required: 'required',
+  IssueCode.value: 'value',
+  IssueCode.invariant: 'invariant',
+  IssueCode.security: 'security',
+  IssueCode.login: 'login',
+  IssueCode.expired: 'expired',
+  IssueCode.forbidden: 'forbidden',
+  IssueCode.suppressed: 'suppressed',
+  IssueCode.processing: 'processing',
+  IssueCode.not_supported: 'not-supported',
+  IssueCode.duplicate: 'duplicate',
+  IssueCode.multiple_matches: 'multiple-matches',
+  IssueCode.not_found: 'not-found',
+  IssueCode.deleted: 'deleted',
+  IssueCode.too_long: 'too-long',
+  IssueCode.code_invalid: 'code-invalid',
+  IssueCode.extension: 'extension',
+  IssueCode.too_costly: 'too-costly',
+  IssueCode.business_rule: 'business-rule',
+  IssueCode.conflict: 'conflict',
+  IssueCode.transient: 'transient',
+  IssueCode.lock_error: 'lock-error',
+  IssueCode.no_store: 'no-store',
+  IssueCode.exception: 'exception',
+  IssueCode.timeout: 'timeout',
+  IssueCode.incomplete: 'incomplete',
+  IssueCode.throttled: 'throttled',
+  IssueCode.informational: 'informational',
+  IssueCode.unknown: 'unknown',
 };
 
 _$_MessageHeader _$_$_MessageHeaderFromJson(Map<String, dynamic> json) {
@@ -804,7 +803,8 @@ _$_Subscription _$_$_SubscriptionFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$SubscriptionStatusEnumMap, json['status']),
+    status: _$enumDecodeNullable(_$SubscriptionStatusEnumMap, json['status'],
+        unknownValue: SubscriptionStatus.unknown),
     contact: (json['contact'] as List)
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
@@ -871,7 +871,8 @@ _$_SubscriptionChannel _$_$_SubscriptionChannelFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(_$SubscriptionChannelTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$ChannelTypeEnumMap, json['type'],
+        unknownValue: ChannelType.unknown),
     endpoint: json['endpoint'] == null
         ? null
         : FhirUrl.fromJson(json['endpoint'] as String),
@@ -897,20 +898,20 @@ Map<String, dynamic> _$_$_SubscriptionChannelToJson(
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', _$SubscriptionChannelTypeEnumMap[instance.type]);
+  writeNotNull('type', _$ChannelTypeEnumMap[instance.type]);
   writeNotNull('endpoint', instance.endpoint?.toJson());
   writeNotNull('payload', instance.payload?.toJson());
   writeNotNull('header', instance.header);
   return val;
 }
 
-const _$SubscriptionChannelTypeEnumMap = {
-  SubscriptionChannelType.rest_hook: 'rest-hook',
-  SubscriptionChannelType.websocket: 'websocket',
-  SubscriptionChannelType.email: 'email',
-  SubscriptionChannelType.sms: 'sms',
-  SubscriptionChannelType.message: 'message',
-  SubscriptionChannelType.unknown: 'unknown',
+const _$ChannelTypeEnumMap = {
+  ChannelType.rest_hook: 'rest-hook',
+  ChannelType.websocket: 'websocket',
+  ChannelType.email: 'email',
+  ChannelType.sms: 'sms',
+  ChannelType.message: 'message',
+  ChannelType.unknown: 'unknown',
 };
 
 _$_Linkage _$_$_LinkageFromJson(Map<String, dynamic> json) {
@@ -990,7 +991,8 @@ _$_LinkageItem _$_$_LinkageItemFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(_$LinkageItemTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$ItemTypeEnumMap, json['type'],
+        unknownValue: ItemType.unknown),
     resource: json['resource'] == null
         ? null
         : Reference.fromJson(json['resource'] as Map<String, dynamic>),
@@ -1011,16 +1013,16 @@ Map<String, dynamic> _$_$_LinkageItemToJson(_$_LinkageItem instance) {
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', _$LinkageItemTypeEnumMap[instance.type]);
+  writeNotNull('type', _$ItemTypeEnumMap[instance.type]);
   writeNotNull('resource', instance.resource?.toJson());
   return val;
 }
 
-const _$LinkageItemTypeEnumMap = {
-  LinkageItemType.source: 'source',
-  LinkageItemType.alternate: 'alternate',
-  LinkageItemType.historical: 'historical',
-  LinkageItemType.unknown: 'unknown',
+const _$ItemTypeEnumMap = {
+  ItemType.source: 'source',
+  ItemType.alternate: 'alternate',
+  ItemType.historical: 'historical',
+  ItemType.unknown: 'unknown',
 };
 
 _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
@@ -1039,7 +1041,8 @@ _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    type: _$enumDecodeNullable(_$BundleTypeEnumMap, json['type']),
+    type: _$enumDecodeNullable(_$BundleTypeEnumMap, json['type'],
+        unknownValue: BundleType.unknown),
     timestamp: json['timestamp'] == null
         ? null
         : Instant.fromJson(json['timestamp'] as String),
@@ -1155,13 +1158,13 @@ _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
     resource: json['resource'],
     search: json['search'] == null
         ? null
-        : BundleSearch.fromJson(json['search'] as Map<String, dynamic>),
+        : EntrySearch.fromJson(json['search'] as Map<String, dynamic>),
     request: json['request'] == null
         ? null
-        : BundleRequest.fromJson(json['request'] as Map<String, dynamic>),
+        : EntryRequest.fromJson(json['request'] as Map<String, dynamic>),
     response: json['response'] == null
         ? null
-        : BundleResponse.fromJson(json['response'] as Map<String, dynamic>),
+        : EntryResponse.fromJson(json['response'] as Map<String, dynamic>),
   );
 }
 
@@ -1188,8 +1191,8 @@ Map<String, dynamic> _$_$_BundleEntryToJson(_$_BundleEntry instance) {
   return val;
 }
 
-_$_BundleSearch _$_$_BundleSearchFromJson(Map<String, dynamic> json) {
-  return _$_BundleSearch(
+_$_EntrySearch _$_$_EntrySearchFromJson(Map<String, dynamic> json) {
+  return _$_EntrySearch(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -1201,12 +1204,13 @@ _$_BundleSearch _$_$_BundleSearchFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    mode: _$enumDecodeNullable(_$BundleSearchModeEnumMap, json['mode']),
+    mode: _$enumDecodeNullable(_$SearchModeEnumMap, json['mode'],
+        unknownValue: SearchMode.unknown),
     score: (json['score'] as num)?.toDouble(),
   );
 }
 
-Map<String, dynamic> _$_$_BundleSearchToJson(_$_BundleSearch instance) {
+Map<String, dynamic> _$_$_EntrySearchToJson(_$_EntrySearch instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1220,20 +1224,20 @@ Map<String, dynamic> _$_$_BundleSearchToJson(_$_BundleSearch instance) {
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('mode', _$BundleSearchModeEnumMap[instance.mode]);
+  writeNotNull('mode', _$SearchModeEnumMap[instance.mode]);
   writeNotNull('score', instance.score);
   return val;
 }
 
-const _$BundleSearchModeEnumMap = {
-  BundleSearchMode.match: 'match',
-  BundleSearchMode.include: 'include',
-  BundleSearchMode.outcome: 'outcome',
-  BundleSearchMode.unknown: 'unknown',
+const _$SearchModeEnumMap = {
+  SearchMode.match: 'match',
+  SearchMode.include: 'include',
+  SearchMode.outcome: 'outcome',
+  SearchMode.unknown: 'unknown',
 };
 
-_$_BundleRequest _$_$_BundleRequestFromJson(Map<String, dynamic> json) {
-  return _$_BundleRequest(
+_$_EntryRequest _$_$_EntryRequestFromJson(Map<String, dynamic> json) {
+  return _$_EntryRequest(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -1245,7 +1249,8 @@ _$_BundleRequest _$_$_BundleRequestFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    method: _$enumDecodeNullable(_$BundleRequestMethodEnumMap, json['method']),
+    method: _$enumDecodeNullable(_$RequestMethodEnumMap, json['method'],
+        unknownValue: RequestMethod.unknown),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     ifNoneMatch: json['ifNoneMatch'] as String,
     ifModifiedSince: json['ifModifiedSince'] == null
@@ -1256,7 +1261,7 @@ _$_BundleRequest _$_$_BundleRequestFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_BundleRequestToJson(_$_BundleRequest instance) {
+Map<String, dynamic> _$_$_EntryRequestToJson(_$_EntryRequest instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1270,7 +1275,7 @@ Map<String, dynamic> _$_$_BundleRequestToJson(_$_BundleRequest instance) {
       'extension', instance.fhirExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('method', _$BundleRequestMethodEnumMap[instance.method]);
+  writeNotNull('method', _$RequestMethodEnumMap[instance.method]);
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('ifNoneMatch', instance.ifNoneMatch);
   writeNotNull('ifModifiedSince', instance.ifModifiedSince?.toJson());
@@ -1279,18 +1284,18 @@ Map<String, dynamic> _$_$_BundleRequestToJson(_$_BundleRequest instance) {
   return val;
 }
 
-const _$BundleRequestMethodEnumMap = {
-  BundleRequestMethod.GET: 'GET',
-  BundleRequestMethod.HEAD: 'HEAD',
-  BundleRequestMethod.POST: 'POST',
-  BundleRequestMethod.PUT: 'PUT',
-  BundleRequestMethod.DELETE: 'DELETE',
-  BundleRequestMethod.PATCH: 'PATCH',
-  BundleRequestMethod.unknown: 'unknown',
+const _$RequestMethodEnumMap = {
+  RequestMethod.GET: 'GET',
+  RequestMethod.HEAD: 'HEAD',
+  RequestMethod.POST: 'POST',
+  RequestMethod.PUT: 'PUT',
+  RequestMethod.DELETE: 'DELETE',
+  RequestMethod.PATCH: 'PATCH',
+  RequestMethod.unknown: 'unknown',
 };
 
-_$_BundleResponse _$_$_BundleResponseFromJson(Map<String, dynamic> json) {
-  return _$_BundleResponse(
+_$_EntryResponse _$_$_EntryResponseFromJson(Map<String, dynamic> json) {
+  return _$_EntryResponse(
     id: json['id'] as String,
     fhirExtension: (json['extension'] as List)
         ?.map((e) => e == null
@@ -1314,7 +1319,7 @@ _$_BundleResponse _$_$_BundleResponseFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_BundleResponseToJson(_$_BundleResponse instance) {
+Map<String, dynamic> _$_$_EntryResponseToJson(_$_EntryResponse instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

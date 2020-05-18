@@ -23,7 +23,8 @@ abstract class CodeSystem with _$CodeSystem {
     String version,
     String name,
     String title,
-    CodeSystemStatus status,
+    @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
+        CodeSystemStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -37,7 +38,8 @@ abstract class CodeSystem with _$CodeSystem {
     CodeSystemHierarchyMeaning hierarchyMeaning,
     bool compositional,
     bool versionNeeded,
-    CodeSystemContent content,
+    @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
+        CodeSystemContent content,
     Canonical supplements,
     int count,
     List<CodeSystemFilter> filter,
@@ -56,7 +58,7 @@ abstract class CodeSystemFilter with _$CodeSystemFilter {
     List<FhirExtension> modifierExtension,
     Code code,
     String description,
-    List<Code> operator,
+    List<FilterOperator> operator,
     String value,
   }) = _CodeSystemFilter;
   factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
@@ -72,7 +74,7 @@ abstract class CodeSystemProperty with _$CodeSystemProperty {
     Code code,
     FhirUri uri,
     String description,
-    CodeSystemPropertyType type,
+    @JsonKey(unknownEnumValue: PropertyType.unknown) PropertyType type,
   }) = _CodeSystemProperty;
   factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemPropertyFromJson(json);
@@ -87,8 +89,8 @@ abstract class CodeSystemConcept with _$CodeSystemConcept {
     Code code,
     String display,
     String definition,
-    List<CodeSystemDesignation> designation,
-    List<CodeSystemProperty1> property,
+    List<ConceptDesignation> designation,
+    List<ConceptProperty> property,
     List<CodeSystemConcept> concept,
   }) = _CodeSystemConcept;
   factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
@@ -96,22 +98,22 @@ abstract class CodeSystemConcept with _$CodeSystemConcept {
 }
 
 @freezed
-abstract class CodeSystemDesignation with _$CodeSystemDesignation {
-  const factory CodeSystemDesignation({
+abstract class ConceptDesignation with _$ConceptDesignation {
+  const factory ConceptDesignation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code language,
     Coding use,
     String value,
-  }) = _CodeSystemDesignation;
-  factory CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystemDesignationFromJson(json);
+  }) = _ConceptDesignation;
+  factory ConceptDesignation.fromJson(Map<String, dynamic> json) =>
+      _$ConceptDesignationFromJson(json);
 }
 
 @freezed
-abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
-  const factory CodeSystemProperty1({
+abstract class ConceptProperty with _$ConceptProperty {
+  const factory ConceptProperty({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -123,9 +125,9 @@ abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
     bool valueBoolean,
     FhirDateTime valueDateTime,
     double valueDecimal,
-  }) = _CodeSystemProperty1;
-  factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystemProperty1FromJson(json);
+  }) = _ConceptProperty;
+  factory ConceptProperty.fromJson(Map<String, dynamic> json) =>
+      _$ConceptPropertyFromJson(json);
 }
 
 @freezed
@@ -144,7 +146,7 @@ abstract class ValueSet with _$ValueSet {
     List<Identifier> identifier,
     String name,
     String title,
-    ValueSetStatus status,
+    @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -169,66 +171,66 @@ abstract class ValueSetCompose with _$ValueSetCompose {
     List<FhirExtension> modifierExtension,
     Date lockedDate,
     bool inactive,
-    List<ValueSetInclude> include,
-    List<ValueSetInclude> exclude,
+    List<ComposeIncludeExclude> include,
+    List<ComposeIncludeExclude> exclude,
   }) = _ValueSetCompose;
   factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeFromJson(json);
 }
 
 @freezed
-abstract class ValueSetInclude with _$ValueSetInclude {
-  const factory ValueSetInclude({
+abstract class ComposeIncludeExclude with _$ComposeIncludeExclude {
+  const factory ComposeIncludeExclude({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri system,
     String version,
-    List<ValueSetConcept> concept,
+    List<IncludeExcludeConcept> concept,
     List<Canonical> valueSet,
-  }) = _ValueSetInclude;
-  factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetIncludeFromJson(json);
+  }) = _ComposeIncludeExclude;
+  factory ComposeIncludeExclude.fromJson(Map<String, dynamic> json) =>
+      _$ComposeIncludeExcludeFromJson(json);
 }
 
 @freezed
-abstract class ValueSetConcept with _$ValueSetConcept {
-  const factory ValueSetConcept({
+abstract class IncludeExcludeConcept with _$IncludeExcludeConcept {
+  const factory IncludeExcludeConcept({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String display,
-    List<ValueSetDesignation> designation,
-  }) = _ValueSetConcept;
-  factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetConceptFromJson(json);
+    List<ConceptDesignation> designation,
+  }) = _IncludeExcludeConcept;
+  factory IncludeExcludeConcept.fromJson(Map<String, dynamic> json) =>
+      _$IncludeExcludeConceptFromJson(json);
 }
 
 @freezed
-abstract class ValueSetDesignation with _$ValueSetDesignation {
-  const factory ValueSetDesignation({
+abstract class ConceptDesignation with _$ConceptDesignation {
+  const factory ConceptDesignation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code language,
     Coding use,
     String value,
-  }) = _ValueSetDesignation;
-  factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetDesignationFromJson(json);
+  }) = _ConceptDesignation;
+  factory ConceptDesignation.fromJson(Map<String, dynamic> json) =>
+      _$ConceptDesignationFromJson(json);
 }
 
 @freezed
-abstract class ValueSetFilter with _$ValueSetFilter {
-  const factory ValueSetFilter({
+abstract class IncludeExcludeFilter with _$IncludeExcludeFilter {
+  const factory IncludeExcludeFilter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code property,
-    ValueSetFilterOp op,
+    FilterOp op,
     String value,
-  }) = _ValueSetFilter;
-  factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetFilterFromJson(json);
+  }) = _IncludeExcludeFilter;
+  factory IncludeExcludeFilter.fromJson(Map<String, dynamic> json) =>
+      _$IncludeExcludeFilterFromJson(json);
 }
 
 @freezed
@@ -240,16 +242,16 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
     FhirUri identifier,
     FhirDateTime timestamp,
     int total,
-    List<ValueSetParameter> parameter,
-    List<ValueSetContains> contains,
+    List<ExpansionParameter> parameter,
+    List<ExpansionContains> contains,
   }) = _ValueSetExpansion;
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionFromJson(json);
 }
 
 @freezed
-abstract class ValueSetParameter with _$ValueSetParameter {
-  const factory ValueSetParameter({
+abstract class ExpansionParameter with _$ExpansionParameter {
+  const factory ExpansionParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -260,14 +262,14 @@ abstract class ValueSetParameter with _$ValueSetParameter {
     FhirUri valueUri,
     Code valueCode,
     FhirDateTime valueDateTime,
-  }) = _ValueSetParameter;
-  factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetParameterFromJson(json);
+  }) = _ExpansionParameter;
+  factory ExpansionParameter.fromJson(Map<String, dynamic> json) =>
+      _$ExpansionParameterFromJson(json);
 }
 
 @freezed
-abstract class ValueSetContains with _$ValueSetContains {
-  const factory ValueSetContains({
+abstract class ExpansionContains with _$ExpansionContains {
+  const factory ExpansionContains({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -277,11 +279,11 @@ abstract class ValueSetContains with _$ValueSetContains {
     String version,
     Code code,
     String display,
-    List<ValueSetDesignation> designation,
-    List<ValueSetContains> contains,
-  }) = _ValueSetContains;
-  factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetContainsFromJson(json);
+    List<ConceptDesignation> designation,
+    List<ExpansionContains> contains,
+  }) = _ExpansionContains;
+  factory ExpansionContains.fromJson(Map<String, dynamic> json) =>
+      _$ExpansionContainsFromJson(json);
 }
 
 @freezed
@@ -300,7 +302,8 @@ abstract class TerminologyCapabilities with _$TerminologyCapabilities {
     String version,
     String name,
     String title,
-    TerminologyCapabilitiesStatus status,
+    @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
+        TerminologyCapabilitiesStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -316,7 +319,8 @@ abstract class TerminologyCapabilities with _$TerminologyCapabilities {
     bool lockedDate,
     List<TerminologyCapabilitiesCodeSystem> codeSystem,
     TerminologyCapabilitiesExpansion expansion,
-    TerminologyCapabilitiesCodeSearch codeSearch,
+    @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
+        TerminologyCapabilitiesCodeSearch codeSearch,
     TerminologyCapabilitiesValidateCode validateCode,
     TerminologyCapabilitiesTranslation translation,
     TerminologyCapabilitiesClosure closure,
@@ -489,8 +493,9 @@ abstract class NamingSystem with _$NamingSystem {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
-    NamingSystemStatus status,
-    NamingSystemKind kind,
+    @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+        NamingSystemStatus status,
+    @JsonKey(unknownEnumValue: NamingSystemKind.unknown) NamingSystemKind kind,
     FhirDateTime date,
     String publisher,
     List<ContactDetail> contact,
@@ -512,7 +517,7 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    NamingSystemUniqueIdType type,
+    @JsonKey(unknownEnumValue: UniqueIdType.unknown) UniqueIdType type,
     String value,
     bool preferred,
     String comment,
@@ -539,7 +544,8 @@ abstract class ConceptMap with _$ConceptMap {
     String version,
     String name,
     String title,
-    ConceptMapStatus status,
+    @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+        ConceptMapStatus status,
     bool experimental,
     FhirDateTime date,
     String publisher,
@@ -569,47 +575,48 @@ abstract class ConceptMapGroup with _$ConceptMapGroup {
     String sourceVersion,
     FhirUri target,
     String targetVersion,
-    List<ConceptMapElement> element,
-    ConceptMapUnmapped unmapped,
+    List<GroupElement> element,
+    GroupUnmapped unmapped,
   }) = _ConceptMapGroup;
   factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapGroupFromJson(json);
 }
 
 @freezed
-abstract class ConceptMapElement with _$ConceptMapElement {
-  const factory ConceptMapElement({
+abstract class GroupElement with _$GroupElement {
+  const factory GroupElement({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     String display,
-    List<ConceptMapTarget> target,
-  }) = _ConceptMapElement;
-  factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMapElementFromJson(json);
+    List<ElementTarget> target,
+  }) = _GroupElement;
+  factory GroupElement.fromJson(Map<String, dynamic> json) =>
+      _$GroupElementFromJson(json);
 }
 
 @freezed
-abstract class ConceptMapTarget with _$ConceptMapTarget {
-  const factory ConceptMapTarget({
+abstract class ElementTarget with _$ElementTarget {
+  const factory ElementTarget({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     String display,
-    ConceptMapTargetEquivalence equivalence,
+    @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
+        TargetEquivalence equivalence,
     String comment,
-    List<ConceptMapDependsOn> dependsOn,
-    List<ConceptMapDependsOn> product,
-  }) = _ConceptMapTarget;
-  factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMapTargetFromJson(json);
+    List<TargetDependsOn> dependsOn,
+    List<TargetDependsOn> product,
+  }) = _ElementTarget;
+  factory ElementTarget.fromJson(Map<String, dynamic> json) =>
+      _$ElementTargetFromJson(json);
 }
 
 @freezed
-abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
-  const factory ConceptMapDependsOn({
+abstract class TargetDependsOn with _$TargetDependsOn {
+  const factory TargetDependsOn({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -617,22 +624,22 @@ abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
     Canonical system,
     String value,
     String display,
-  }) = _ConceptMapDependsOn;
-  factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMapDependsOnFromJson(json);
+  }) = _TargetDependsOn;
+  factory TargetDependsOn.fromJson(Map<String, dynamic> json) =>
+      _$TargetDependsOnFromJson(json);
 }
 
 @freezed
-abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
-  const factory ConceptMapUnmapped({
+abstract class GroupUnmapped with _$GroupUnmapped {
+  const factory GroupUnmapped({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
-    ConceptMapUnmappedMode mode,
+    @JsonKey(unknownEnumValue: UnmappedMode.unknown) UnmappedMode mode,
     Code code,
     String display,
     Canonical url,
-  }) = _ConceptMapUnmapped;
-  factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMapUnmappedFromJson(json);
+  }) = _GroupUnmapped;
+  factory GroupUnmapped.fromJson(Map<String, dynamic> json) =>
+      _$GroupUnmappedFromJson(json);
 }

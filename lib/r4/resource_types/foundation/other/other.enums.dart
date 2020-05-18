@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-enum OperationOutcomeIssueSeverity {
+enum IssueSeverity {
   @JsonValue('fatal')
   fatal,
   @JsonValue('error')
@@ -13,7 +13,7 @@ enum OperationOutcomeIssueSeverity {
   unknown,
 }
 
-enum OperationOutcomeIssueCode {
+enum IssueCode {
   @JsonValue('invalid')
   invalid,
   @JsonValue('structure')
@@ -102,7 +102,7 @@ enum SubscriptionStatus {
   unknown,
 }
 
-enum SubscriptionChannelType {
+enum ChannelType {
   @JsonValue('rest-hook')
   rest_hook,
   @JsonValue('websocket')
@@ -117,7 +117,7 @@ enum SubscriptionChannelType {
   unknown,
 }
 
-enum LinkageItemType {
+enum ItemType {
   @JsonValue('source')
   source,
   @JsonValue('alternate')
@@ -151,7 +151,7 @@ enum BundleType {
   unknown,
 }
 
-enum BundleSearchMode {
+enum SearchMode {
   @JsonValue('match')
   match,
   @JsonValue('include')
@@ -162,7 +162,7 @@ enum BundleSearchMode {
   unknown,
 }
 
-enum BundleRequestMethod {
+enum RequestMethod {
   @JsonValue('GET')
   GET,
   @JsonValue('HEAD')
