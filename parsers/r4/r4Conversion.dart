@@ -7,7 +7,7 @@ void main() async {
   //location of fhir schema
   var file = File('./parsers/r4/fhir.schema.r4.json');
   var contents = await file.readAsString();
-
+  var enums = <List<String>>[];
   var text = '';
   Map schema = json.decode(contents);
   for (var obj in schema['definitions'].keys) {
@@ -48,12 +48,19 @@ void main() async {
                   } else {
                     var otherObj = obj.split('_');
                     if (otherObj.length > 1) {
+                      enums.add(<String>[]);
+                      enums[enums.length].add(
+                          '${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}');
                       text +=
                           '\n$require List<${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}> $fields,';
                     } else {
+                      enums.add(<String>[]);
+                      enums[enums.length].add(
+                          '${otherObj[0]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}');
                       text +=
                           '\n$require List<${otherObj[0]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}> $fields,';
                     }
+                    enums[enums.length].add(fields['items']['enum']);
                   }
                 } else {
                   if (fields.contains('Boolean')) {
@@ -102,17 +109,30 @@ void main() async {
                   if (require != '') {
                     require =
                         '@JsonKey(required: true, unknownEnumValue: ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}.unknown) @required';
+                  } else {
+                    require =
+                        '@JsonKey(unknownEnumValue: ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}.unknown) ';
                   }
+                  enums.add(<String>[]);
+                  enums[enums.length].add(
+                      '${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}');
                   text +=
                       '\n$require ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)} $fields,';
                 } else {
                   if (require != '') {
                     require =
-                        '@JsonKey(required: true, unknownEnumValue: ${otherObj[0]}$fields.unknown) @required';
+                        '@JsonKey(required: true, unknownEnumValue: ${otherObj[0]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}.unknown) @required';
+                  } else {
+                    require =
+                        '@JsonKey(unknownEnumValue: ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}.unknown) ';
                   }
+                  enums.add(<String>[]);
+                  enums[enums.length].add(
+                      '${otherObj[0]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}');
                   text +=
                       '\n$require ${otherObj[0]}${fields[0].toUpperCase() + fields.substring(0, fields.length)} $fields,';
                 }
+                enums[enums.length].add(field['enum']);
               }
             }
           }
@@ -122,19 +142,35 @@ void main() async {
         if (GetDataType(obj.split('_')[0]) == 'draft') {
           dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.dart';
           await writeFile(dir, text, newObj);
+          dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.enums.dart';
+          await writeEnums(dir, enums);
         } else if (GetDataType(obj.split('_')[0]) == 'general') {
           dir = '/home/grey/dev/fhir/lib/r4/general_types/general_types.dart';
           await writeFile(dir, text, newObj);
+          dir =
+              '/home/grey/dev/fhir/lib/r4/general_types/general_types.enums.dart';
+          await writeEnums(dir, enums);
         } else if (GetDataType(obj.split('_')[0]) == 'metadata') {
           dir = '/home/grey/dev/fhir/lib/r4/metadata_types/metadata_types.dart';
           await writeFile(dir, text, newObj);
+          dir =
+              '/home/grey/dev/fhir/lib/r4/metadata_types/metadata_types.enums.dart';
+          await writeEnums(dir, enums);
         } else if (GetDataType(obj.split('_')[0]) == 'special') {
           dir = '/home/grey/dev/fhir/lib/r4/special_types/special_types.dart';
+
           await writeFile(dir, text, newObj);
+          dir =
+              '/home/grey/dev/fhir/lib/r4/special_types/special_types.enums.dart';
+          await writeEnums(dir, enums);
         } else if (GetDataType(obj.split('_')[0]) == 'resource') {
           dir = '/home/grey/dev/fhir/lib/r4/resource_types/resource_types.dart';
           await writeFile(dir, text, newObj);
+          dir =
+              '/home/grey/dev/fhir/lib/r4/resource_types/resource_types.enums.dart';
+          await writeEnums(dir, enums);
         }
+        enums = <List<String>>[];
       }
     }
   }
@@ -148,6 +184,18 @@ Future<void> writeFile(String dir, String text, String newObj) async {
       ' _\$${newObj}FromJson(json);}\n\n';
   await File(dir).writeAsString(file);
   // print(file);
+}
+
+Future<void> writeEnums(String dir, List<List<String>> enums) async {
+  var file = await File(dir).readAsString();
+  for (var item in enums) {
+    file += '\nenum ${item[0]}{\n';
+    for (var i = 1; i < item.length; i++) {
+      file += "@JsonValue('${item[i]}')\n${item[i].replaceAll('-', '_')},";
+    }
+    file += '}\n\n';
+  }
+  await File(dir).writeAsString(file);
 }
 
 String whatType(String field) {
