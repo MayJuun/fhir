@@ -34,7 +34,8 @@ void main() async {
             var type;
             if (field != null) {
               if (field.keys.contains('const')) {
-                text += '$require String $fields,';
+                text +=
+                    "@JsonKey(required: true, defaultValue: '$field') @required String $fields,";
               } else if (field.keys.contains('\$ref')) {
                 type = field['\$ref'].split('/definitions/')[1];
                 var newType = whatType(type).replaceAll('_', '');
@@ -49,18 +50,22 @@ void main() async {
                     var otherObj = obj.split('_');
                     if (otherObj.length > 1) {
                       enums.add(<String>[]);
-                      enums[enums.length].add(
-                          '${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}');
+                      enums[enums.length - 1].add(
+                          '${otherObj[1]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}');
                       text +=
-                          '\n$require List<${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}> $fields,';
+                          '\n$require List<${otherObj[1]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}> $fields,';
                     } else {
                       enums.add(<String>[]);
-                      enums[enums.length].add(
-                          '${otherObj[0]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}');
+                      enums[enums.length - 1].add(
+                          '${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}');
                       text +=
-                          '\n$require List<${otherObj[0]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}> $fields,';
+                          '\n$require List<${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}> $fields,';
                     }
-                    enums[enums.length].add(fields['items']['enum']);
+                    field['items']['enum']
+                        .forEach((field) => enums[enums.length - 1].add(field));
+                    if (!field['items']['enum'].contains('unknown')) {
+                      enums[enums.length - 1].add('unknown');
+                    }
                   }
                 } else {
                   if (fields.contains('Boolean')) {
@@ -108,31 +113,35 @@ void main() async {
                 if (otherObj.length > 1) {
                   if (require != '') {
                     require =
-                        '@JsonKey(required: true, unknownEnumValue: ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}.unknown) @required';
+                        '@JsonKey(required: true, unknownEnumValue: ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}.unknown) @required';
                   } else {
                     require =
-                        '@JsonKey(unknownEnumValue: ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}.unknown) ';
+                        '@JsonKey(unknownEnumValue: ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}.unknown) ';
                   }
                   enums.add(<String>[]);
-                  enums[enums.length].add(
-                      '${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}');
+                  enums[enums.length - 1].add(
+                      '${otherObj[1]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}');
                   text +=
-                      '\n$require ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)} $fields,';
+                      '\n$require ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(1, fields.length)} $fields,';
                 } else {
                   if (require != '') {
                     require =
-                        '@JsonKey(required: true, unknownEnumValue: ${otherObj[0]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}.unknown) @required';
+                        '@JsonKey(required: true, unknownEnumValue: ${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}.unknown) @required';
                   } else {
                     require =
-                        '@JsonKey(unknownEnumValue: ${otherObj[1]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}.unknown) ';
+                        '@JsonKey(unknownEnumValue: ${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}.unknown) ';
                   }
                   enums.add(<String>[]);
-                  enums[enums.length].add(
-                      '${otherObj[0]}${fields[0].toUpperCase() + fields.substring(0, fields.length)}');
+                  enums[enums.length - 1].add(
+                      '${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}');
                   text +=
-                      '\n$require ${otherObj[0]}${fields[0].toUpperCase() + fields.substring(0, fields.length)} $fields,';
+                      '\n$require ${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)} $fields,';
                 }
-                enums[enums.length].add(field['enum']);
+                field['enum']
+                    .forEach((field) => enums[enums.length - 1].add(field));
+                if (!field['enum'].contains('unknown')) {
+                  enums[enums.length - 1].add('unknown');
+                }
               }
             }
           }
@@ -142,8 +151,6 @@ void main() async {
         if (GetDataType(obj.split('_')[0]) == 'draft') {
           dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.dart';
           await writeFile(dir, text, newObj);
-          dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.enums.dart';
-          await writeEnums(dir, enums);
         } else if (GetDataType(obj.split('_')[0]) == 'general') {
           dir = '/home/grey/dev/fhir/lib/r4/general_types/general_types.dart';
           await writeFile(dir, text, newObj);
@@ -183,7 +190,7 @@ Future<void> writeFile(String dir, String text, String newObj) async {
       '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) =>'
       ' _\$${newObj}FromJson(json);}\n\n';
   await File(dir).writeAsString(file);
-  // print(file);
+  print(file);
 }
 
 Future<void> writeEnums(String dir, List<List<String>> enums) async {
@@ -195,6 +202,7 @@ Future<void> writeEnums(String dir, List<List<String>> enums) async {
     }
     file += '}\n\n';
   }
+  // print(file);
   await File(dir).writeAsString(file);
 }
 
