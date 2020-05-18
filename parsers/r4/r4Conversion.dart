@@ -13,7 +13,7 @@ void main() async {
   for (var obj in schema['definitions'].keys) {
     if (obj != 'ResourceList' && obj != 'Element') {
       var newObj = obj.replaceAll('_', '');
-      text = '@freezed\nabstract class $obj '
+      text = '@freezed\nabstract class $newObj '
           '${ResourceTypes().contains(obj.toLowerCase()) ? 'extends DomainResource' : 'extends Element'}'
           ' with _\$$newObj {'
           '\nconst factory $newObj ({';
@@ -24,19 +24,24 @@ void main() async {
       }
       if (schema['definitions'][obj]['properties'] != null) {
         for (final fields in schema['definitions'][obj]['properties'].keys) {
+          var require = '';
           if (fields[0] != '_') {
+            if(required.contains(fields)){ 
+              require = '@JsonKey(required: true) @required';
+            }
+          }
             var field = schema['definitions'][obj]['properties'][fields];
             var type;
             if (field != null) {
               if (field.keys.contains('const')) {
-                text += '@JsonKey(required: true) @required String $fields,';
+                text += '$require String $fields,';
               } else if (field.keys.contains('\$ref')) {
                 type = field['\$ref'].split('/definitions/')[1];
                 var newType = whatType(type).replaceAll('_', '');
                 if (field.keys.contains('items')) {
-                  text += '\nList<$newType> $fields,';
+                  text += '\n$require List<$newType> $fields,';
                 } else {
-                  text += '\n$newType $fields,';
+                  text += '\n$require $newType $fields,';
                 }
               }
             }
@@ -70,7 +75,7 @@ Future<void> writeFile(String dir, String text, String newObj) async {
   file +=
       '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) => _\$${newObj}FromJson(json);'
       '\nMap<String, dynamic> toJson() => _\$${newObj}ToJson(this);}\n\n';
-  await File(dir).writeAsString(file);
+  // await File(dir).writeAsString(file);
   // print(file);
 }
 
