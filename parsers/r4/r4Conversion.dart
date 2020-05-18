@@ -248,6 +248,8 @@ String whatType(String field) {
       return 'String';
     case 'ResourceList':
       return 'Resource';
+    case 'Extension':
+      return 'FhirExtension';
   }
   return field;
 }
