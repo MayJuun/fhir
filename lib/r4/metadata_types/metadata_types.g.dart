@@ -35,7 +35,8 @@ _$_Contributor _$_$_ContributorFromJson(Map<String, dynamic> json) {
   return _$_Contributor(
     id: json['id'] as String,
     extension: json['extension'] as List,
-    type: json['type'],
+    type: _$enumDecodeNullable(_$ContributorTypeEnumMap, json['type'],
+        unknownValue: ContributorType.unknown),
     name: json['name'] as String,
     contact: json['contact'] as List,
   );
@@ -52,11 +53,51 @@ Map<String, dynamic> _$_$_ContributorToJson(_$_Contributor instance) {
 
   writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', _$ContributorTypeEnumMap[instance.type]);
   writeNotNull('name', instance.name);
   writeNotNull('contact', instance.contact);
   return val;
 }
+
+T _$enumDecode<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError('A value must be provided. Supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+
+  final value = enumValues.entries
+      .singleWhere((e) => e.value == source, orElse: () => null)
+      ?.key;
+
+  if (value == null && unknownValue == null) {
+    throw ArgumentError('`$source` is not one of the supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+  return value ?? unknownValue;
+}
+
+T _$enumDecodeNullable<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$ContributorTypeEnumMap = {
+  ContributorType.author: 'author',
+  ContributorType.editor: 'editor',
+  ContributorType.reviewer: 'reviewer',
+  ContributorType.endorser: 'endorser',
+  ContributorType.unknown: 'unknown',
+};
 
 _$_DataRequirement _$_$_DataRequirementFromJson(Map<String, dynamic> json) {
   return _$_DataRequirement(
@@ -183,7 +224,8 @@ _$_DataRequirementSort _$_$_DataRequirementSortFromJson(
     extension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     path: json['path'] as String,
-    direction: json['direction'],
+    direction: _$enumDecodeNullable(_$SortDirectionEnumMap, json['direction'],
+        unknownValue: SortDirection.unknown),
   );
 }
 
@@ -201,9 +243,15 @@ Map<String, dynamic> _$_$_DataRequirementSortToJson(
   writeNotNull('extension', instance.extension);
   writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('path', instance.path);
-  writeNotNull('direction', instance.direction);
+  writeNotNull('direction', _$SortDirectionEnumMap[instance.direction]);
   return val;
 }
+
+const _$SortDirectionEnumMap = {
+  SortDirection.ascending: 'ascending',
+  SortDirection.descending: 'descending',
+  SortDirection.unknown: 'unknown',
+};
 
 _$_ParameterDefinition _$_$_ParameterDefinitionFromJson(
     Map<String, dynamic> json) {
@@ -248,7 +296,8 @@ _$_RelatedArtifact _$_$_RelatedArtifactFromJson(Map<String, dynamic> json) {
   return _$_RelatedArtifact(
     id: json['id'] as String,
     extension: json['extension'] as List,
-    type: json['type'],
+    type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type'],
+        unknownValue: RelatedArtifactType.unknown),
     label: json['label'] as String,
     display: json['display'] as String,
     citation: json['citation'] == null
@@ -273,7 +322,7 @@ Map<String, dynamic> _$_$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
 
   writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', _$RelatedArtifactTypeEnumMap[instance.type]);
   writeNotNull('label', instance.label);
   writeNotNull('display', instance.display);
   writeNotNull('citation', instance.citation?.toJson());
@@ -283,11 +332,24 @@ Map<String, dynamic> _$_$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
   return val;
 }
 
+const _$RelatedArtifactTypeEnumMap = {
+  RelatedArtifactType.documentation: 'documentation',
+  RelatedArtifactType.justification: 'justification',
+  RelatedArtifactType.citation: 'citation',
+  RelatedArtifactType.predecessor: 'predecessor',
+  RelatedArtifactType.successor: 'successor',
+  RelatedArtifactType.derived_from: 'derived-from',
+  RelatedArtifactType.depends_on: 'depends-on',
+  RelatedArtifactType.composed_of: 'composed-of',
+  RelatedArtifactType.unknown: 'unknown',
+};
+
 _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
   return _$_TriggerDefinition(
     id: json['id'] as String,
     extension: json['extension'] as List,
-    type: json['type'],
+    type: _$enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type'],
+        unknownValue: TriggerDefinitionType.unknown),
     name: json['name'] as String,
     timingTiming: json['timingTiming'],
     timingReference: json['timingReference'],
@@ -314,7 +376,7 @@ Map<String, dynamic> _$_$_TriggerDefinitionToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', _$TriggerDefinitionTypeEnumMap[instance.type]);
   writeNotNull('name', instance.name);
   writeNotNull('timingTiming', instance.timingTiming);
   writeNotNull('timingReference', instance.timingReference);
@@ -324,6 +386,18 @@ Map<String, dynamic> _$_$_TriggerDefinitionToJson(
   writeNotNull('condition', instance.condition);
   return val;
 }
+
+const _$TriggerDefinitionTypeEnumMap = {
+  TriggerDefinitionType.named_event: 'named-event',
+  TriggerDefinitionType.periodic: 'periodic',
+  TriggerDefinitionType.data_changed: 'data-changed',
+  TriggerDefinitionType.data_added: 'data-added',
+  TriggerDefinitionType.data_modified: 'data-modified',
+  TriggerDefinitionType.data_removed: 'data-removed',
+  TriggerDefinitionType.data_accessed: 'data-accessed',
+  TriggerDefinitionType.data_access_ended: 'data-access-ended',
+  TriggerDefinitionType.unknown: 'unknown',
+};
 
 _$_UsageContext _$_$_UsageContextFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
@@ -363,7 +437,9 @@ _$_Expression _$_$_ExpressionFromJson(Map<String, dynamic> json) {
     extension: json['extension'] as List,
     description: json['description'] as String,
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
-    language: json['language'],
+    language: _$enumDecodeNullable(
+        _$ExpressionLanguageEnumMap, json['language'],
+        unknownValue: ExpressionLanguage.unknown),
     expression: json['expression'] as String,
     reference: json['reference'] == null
         ? null
@@ -384,8 +460,15 @@ Map<String, dynamic> _$_$_ExpressionToJson(_$_Expression instance) {
   writeNotNull('extension', instance.extension);
   writeNotNull('description', instance.description);
   writeNotNull('name', instance.name?.toJson());
-  writeNotNull('language', instance.language);
+  writeNotNull('language', _$ExpressionLanguageEnumMap[instance.language]);
   writeNotNull('expression', instance.expression);
   writeNotNull('reference', instance.reference?.toJson());
   return val;
 }
+
+const _$ExpressionLanguageEnumMap = {
+  ExpressionLanguage.text_cql: 'text/cql',
+  ExpressionLanguage.text_fhirpath: 'text/fhirpath',
+  ExpressionLanguage.application_x_fhir_query: 'application/x-fhir-query',
+  ExpressionLanguage.unknown: 'unknown',
+};

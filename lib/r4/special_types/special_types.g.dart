@@ -169,7 +169,8 @@ _$_Narrative _$_$_NarrativeFromJson(Map<String, dynamic> json) {
   return _$_Narrative(
     id: json['id'] as String,
     extension: json['extension'] as List,
-    status: json['status'],
+    status: _$enumDecodeNullable(_$NarrativeStatusEnumMap, json['status'],
+        unknownValue: NarrativeStatus.unknown),
     div: json['div'],
   );
 }
@@ -185,10 +186,50 @@ Map<String, dynamic> _$_$_NarrativeToJson(_$_Narrative instance) {
 
   writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', _$NarrativeStatusEnumMap[instance.status]);
   writeNotNull('div', instance.div);
   return val;
 }
+
+T _$enumDecode<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError('A value must be provided. Supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+
+  final value = enumValues.entries
+      .singleWhere((e) => e.value == source, orElse: () => null)
+      ?.key;
+
+  if (value == null && unknownValue == null) {
+    throw ArgumentError('`$source` is not one of the supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+  return value ?? unknownValue;
+}
+
+T _$enumDecodeNullable<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$NarrativeStatusEnumMap = {
+  NarrativeStatus.generated: 'generated',
+  NarrativeStatus.extensions: 'extensions',
+  NarrativeStatus.additional: 'additional',
+  NarrativeStatus.empty: 'empty',
+  NarrativeStatus.unknown: 'unknown',
+};
 
 _$_Reference _$_$_ReferenceFromJson(Map<String, dynamic> json) {
   return _$_Reference(
@@ -358,7 +399,10 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
     extension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     path: json['path'] as String,
-    representation: json['representation'] as List,
+    representation: (json['representation'] as List)
+        ?.map((e) =>
+            _$enumDecodeNullable(_$ElementDefinitionRepresentationEnumMap, e))
+        ?.toList(),
     sliceName: json['sliceName'] as String,
     sliceIsConstraining: json['sliceIsConstraining'] == null
         ? null
@@ -734,7 +778,11 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('extension', instance.extension);
   writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('path', instance.path);
-  writeNotNull('representation', instance.representation);
+  writeNotNull(
+      'representation',
+      instance.representation
+          ?.map((e) => _$ElementDefinitionRepresentationEnumMap[e])
+          ?.toList());
   writeNotNull('sliceName', instance.sliceName);
   writeNotNull('sliceIsConstraining', instance.sliceIsConstraining?.toJson());
   writeNotNull('label', instance.label);
@@ -945,6 +993,15 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   return val;
 }
 
+const _$ElementDefinitionRepresentationEnumMap = {
+  ElementDefinitionRepresentation.xmlAttr: 'xmlAttr',
+  ElementDefinitionRepresentation.xmlText: 'xmlText',
+  ElementDefinitionRepresentation.typeAttr: 'typeAttr',
+  ElementDefinitionRepresentation.cdaText: 'cdaText',
+  ElementDefinitionRepresentation.xhtml: 'xhtml',
+  ElementDefinitionRepresentation.unknown: 'unknown',
+};
+
 _$_ElementDefinitionSlicing _$_$_ElementDefinitionSlicingFromJson(
     Map<String, dynamic> json) {
   return _$_ElementDefinitionSlicing(
@@ -956,7 +1013,8 @@ _$_ElementDefinitionSlicing _$_$_ElementDefinitionSlicingFromJson(
     ordered: json['ordered'] == null
         ? null
         : Boolean.fromJson(json['ordered'] as String),
-    rules: json['rules'],
+    rules: _$enumDecodeNullable(_$SlicingRulesEnumMap, json['rules'],
+        unknownValue: SlicingRules.unknown),
   );
 }
 
@@ -976,9 +1034,16 @@ Map<String, dynamic> _$_$_ElementDefinitionSlicingToJson(
   writeNotNull('discriminator', instance.discriminator);
   writeNotNull('description', instance.description);
   writeNotNull('ordered', instance.ordered?.toJson());
-  writeNotNull('rules', instance.rules);
+  writeNotNull('rules', _$SlicingRulesEnumMap[instance.rules]);
   return val;
 }
+
+const _$SlicingRulesEnumMap = {
+  SlicingRules.closed: 'closed',
+  SlicingRules.open: 'open',
+  SlicingRules.openAtEnd: 'openAtEnd',
+  SlicingRules.unknown: 'unknown',
+};
 
 _$_ElementDefinitionDiscriminator _$_$_ElementDefinitionDiscriminatorFromJson(
     Map<String, dynamic> json) {
@@ -986,7 +1051,8 @@ _$_ElementDefinitionDiscriminator _$_$_ElementDefinitionDiscriminatorFromJson(
     id: json['id'] as String,
     extension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    type: json['type'],
+    type: _$enumDecodeNullable(_$DiscriminatorTypeEnumMap, json['type'],
+        unknownValue: DiscriminatorType.unknown),
     path: json['path'] as String,
   );
 }
@@ -1004,10 +1070,19 @@ Map<String, dynamic> _$_$_ElementDefinitionDiscriminatorToJson(
   writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension);
   writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', _$DiscriminatorTypeEnumMap[instance.type]);
   writeNotNull('path', instance.path);
   return val;
 }
+
+const _$DiscriminatorTypeEnumMap = {
+  DiscriminatorType.value: 'value',
+  DiscriminatorType.exists: 'exists',
+  DiscriminatorType.pattern: 'pattern',
+  DiscriminatorType.type: 'type',
+  DiscriminatorType.profile: 'profile',
+  DiscriminatorType.unknown: 'unknown',
+};
 
 _$_ElementDefinitionBase _$_$_ElementDefinitionBaseFromJson(
     Map<String, dynamic> json) {
@@ -1056,8 +1131,12 @@ _$_ElementDefinitionType _$_$_ElementDefinitionTypeFromJson(
     targetProfile: (json['targetProfile'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    aggregation: json['aggregation'] as List,
-    versioning: json['versioning'],
+    aggregation: (json['aggregation'] as List)
+        ?.map((e) => _$enumDecodeNullable(_$TypeAggregationEnumMap, e))
+        ?.toList(),
+    versioning: _$enumDecodeNullable(
+        _$TypeVersioningEnumMap, json['versioning'],
+        unknownValue: TypeVersioning.unknown),
   );
 }
 
@@ -1078,10 +1157,25 @@ Map<String, dynamic> _$_$_ElementDefinitionTypeToJson(
   writeNotNull('profile', instance.profile?.map((e) => e?.toJson())?.toList());
   writeNotNull('targetProfile',
       instance.targetProfile?.map((e) => e?.toJson())?.toList());
-  writeNotNull('aggregation', instance.aggregation);
-  writeNotNull('versioning', instance.versioning);
+  writeNotNull('aggregation',
+      instance.aggregation?.map((e) => _$TypeAggregationEnumMap[e])?.toList());
+  writeNotNull('versioning', _$TypeVersioningEnumMap[instance.versioning]);
   return val;
 }
+
+const _$TypeAggregationEnumMap = {
+  TypeAggregation.contained: 'contained',
+  TypeAggregation.referenced: 'referenced',
+  TypeAggregation.bundled: 'bundled',
+  TypeAggregation.unknown: 'unknown',
+};
+
+const _$TypeVersioningEnumMap = {
+  TypeVersioning.either: 'either',
+  TypeVersioning.independent: 'independent',
+  TypeVersioning.specific: 'specific',
+  TypeVersioning.unknown: 'unknown',
+};
 
 _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
     Map<String, dynamic> json) {
@@ -1253,7 +1347,9 @@ _$_ElementDefinitionConstraint _$_$_ElementDefinitionConstraintFromJson(
     modifierExtension: json['modifierExtension'] as List,
     key: json['key'] == null ? null : Id.fromJson(json['key'] as String),
     requirements: json['requirements'] as String,
-    severity: json['severity'],
+    severity: _$enumDecodeNullable(
+        _$ConstraintSeverityEnumMap, json['severity'],
+        unknownValue: ConstraintSeverity.unknown),
     human: json['human'] as String,
     expression: json['expression'] as String,
     xpath: json['xpath'] as String,
@@ -1278,7 +1374,7 @@ Map<String, dynamic> _$_$_ElementDefinitionConstraintToJson(
   writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('key', instance.key?.toJson());
   writeNotNull('requirements', instance.requirements);
-  writeNotNull('severity', instance.severity);
+  writeNotNull('severity', _$ConstraintSeverityEnumMap[instance.severity]);
   writeNotNull('human', instance.human);
   writeNotNull('expression', instance.expression);
   writeNotNull('xpath', instance.xpath);
@@ -1286,13 +1382,20 @@ Map<String, dynamic> _$_$_ElementDefinitionConstraintToJson(
   return val;
 }
 
+const _$ConstraintSeverityEnumMap = {
+  ConstraintSeverity.error: 'error',
+  ConstraintSeverity.warning: 'warning',
+  ConstraintSeverity.unknown: 'unknown',
+};
+
 _$_ElementDefinitionBinding _$_$_ElementDefinitionBindingFromJson(
     Map<String, dynamic> json) {
   return _$_ElementDefinitionBinding(
     id: json['id'] as String,
     extension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    strength: json['strength'],
+    strength: _$enumDecodeNullable(_$BindingStrengthEnumMap, json['strength'],
+        unknownValue: BindingStrength.unknown),
     description: json['description'] as String,
     valueSet: json['valueSet'] == null
         ? null
@@ -1313,11 +1416,19 @@ Map<String, dynamic> _$_$_ElementDefinitionBindingToJson(
   writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension);
   writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('strength', instance.strength);
+  writeNotNull('strength', _$BindingStrengthEnumMap[instance.strength]);
   writeNotNull('description', instance.description);
   writeNotNull('valueSet', instance.valueSet?.toJson());
   return val;
 }
+
+const _$BindingStrengthEnumMap = {
+  BindingStrength.isRequired: 'required',
+  BindingStrength.extensible: 'extensible',
+  BindingStrength.preferred: 'preferred',
+  BindingStrength.example: 'example',
+  BindingStrength.unknown: 'unknown',
+};
 
 _$_ElementDefinitionMapping _$_$_ElementDefinitionMappingFromJson(
     Map<String, dynamic> json) {

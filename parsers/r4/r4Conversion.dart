@@ -190,7 +190,7 @@ Future<void> writeFile(String dir, String text, String newObj) async {
       '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) =>'
       ' _\$${newObj}FromJson(json);}\n\n';
   await File(dir).writeAsString(file);
-  print(file);
+  // print(file);
 }
 
 Future<void> writeEnums(String dir, List<List<String>> enums) async {

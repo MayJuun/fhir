@@ -91,7 +91,8 @@ _$_Identifier _$_$_IdentifierFromJson(Map<String, dynamic> json) {
   return _$_Identifier(
     id: json['id'] as String,
     extension: json['extension'] as List,
-    use: json['use'],
+    use: _$enumDecodeNullable(_$IdentifierUseEnumMap, json['use'],
+        unknownValue: IdentifierUse.unknown),
     type: json['type'],
     system: json['system'] == null
         ? null
@@ -113,7 +114,7 @@ Map<String, dynamic> _$_$_IdentifierToJson(_$_Identifier instance) {
 
   writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension);
-  writeNotNull('use', instance.use);
+  writeNotNull('use', _$IdentifierUseEnumMap[instance.use]);
   writeNotNull('type', instance.type);
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('value', instance.value);
@@ -121,6 +122,47 @@ Map<String, dynamic> _$_$_IdentifierToJson(_$_Identifier instance) {
   writeNotNull('assigner', instance.assigner);
   return val;
 }
+
+T _$enumDecode<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError('A value must be provided. Supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+
+  final value = enumValues.entries
+      .singleWhere((e) => e.value == source, orElse: () => null)
+      ?.key;
+
+  if (value == null && unknownValue == null) {
+    throw ArgumentError('`$source` is not one of the supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+  return value ?? unknownValue;
+}
+
+T _$enumDecodeNullable<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$IdentifierUseEnumMap = {
+  IdentifierUse.usual: 'usual',
+  IdentifierUse.official: 'official',
+  IdentifierUse.temp: 'temp',
+  IdentifierUse.secondary: 'secondary',
+  IdentifierUse.old: 'old',
+  IdentifierUse.unknown: 'unknown',
+};
 
 _$_CodeableConcept _$_$_CodeableConceptFromJson(Map<String, dynamic> json) {
   return _$_CodeableConcept(
@@ -558,7 +600,8 @@ _$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
   return _$_HumanName(
     id: json['id'] as String,
     extension: json['extension'] as List,
-    use: json['use'],
+    use: _$enumDecodeNullable(_$HumanNameUseEnumMap, json['use'],
+        unknownValue: HumanNameUse.unknown),
     text: json['text'] as String,
     family: json['family'] as String,
     given: (json['given'] as List)?.map((e) => e as String)?.toList(),
@@ -579,7 +622,7 @@ Map<String, dynamic> _$_$_HumanNameToJson(_$_HumanName instance) {
 
   writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension);
-  writeNotNull('use', instance.use);
+  writeNotNull('use', _$HumanNameUseEnumMap[instance.use]);
   writeNotNull('text', instance.text);
   writeNotNull('family', instance.family);
   writeNotNull('given', instance.given);
@@ -589,12 +632,25 @@ Map<String, dynamic> _$_$_HumanNameToJson(_$_HumanName instance) {
   return val;
 }
 
+const _$HumanNameUseEnumMap = {
+  HumanNameUse.usual: 'usual',
+  HumanNameUse.official: 'official',
+  HumanNameUse.temp: 'temp',
+  HumanNameUse.nickname: 'nickname',
+  HumanNameUse.anonymous: 'anonymous',
+  HumanNameUse.old: 'old',
+  HumanNameUse.maiden: 'maiden',
+  HumanNameUse.unknown: 'unknown',
+};
+
 _$_Address _$_$_AddressFromJson(Map<String, dynamic> json) {
   return _$_Address(
     id: json['id'] as String,
     extension: json['extension'] as List,
-    use: json['use'],
-    type: json['type'],
+    use: _$enumDecodeNullable(_$AddressUseEnumMap, json['use'],
+        unknownValue: AddressUse.unknown),
+    type: _$enumDecodeNullable(_$AddressTypeEnumMap, json['type'],
+        unknownValue: AddressType.unknown),
     text: json['text'] as String,
     line: (json['line'] as List)?.map((e) => e as String)?.toList(),
     city: json['city'] as String,
@@ -617,8 +673,8 @@ Map<String, dynamic> _$_$_AddressToJson(_$_Address instance) {
 
   writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension);
-  writeNotNull('use', instance.use);
-  writeNotNull('type', instance.type);
+  writeNotNull('use', _$AddressUseEnumMap[instance.use]);
+  writeNotNull('type', _$AddressTypeEnumMap[instance.type]);
   writeNotNull('text', instance.text);
   writeNotNull('line', instance.line);
   writeNotNull('city', instance.city);
@@ -630,13 +686,31 @@ Map<String, dynamic> _$_$_AddressToJson(_$_Address instance) {
   return val;
 }
 
+const _$AddressUseEnumMap = {
+  AddressUse.home: 'home',
+  AddressUse.work: 'work',
+  AddressUse.temp: 'temp',
+  AddressUse.old: 'old',
+  AddressUse.billing: 'billing',
+  AddressUse.unknown: 'unknown',
+};
+
+const _$AddressTypeEnumMap = {
+  AddressType.postal: 'postal',
+  AddressType.physical: 'physical',
+  AddressType.both: 'both',
+  AddressType.unknown: 'unknown',
+};
+
 _$_ContactPoint _$_$_ContactPointFromJson(Map<String, dynamic> json) {
   return _$_ContactPoint(
     id: json['id'] as String,
     extension: json['extension'] as List,
-    system: json['system'],
+    system: _$enumDecodeNullable(_$ContactPointSystemEnumMap, json['system'],
+        unknownValue: ContactPointSystem.unknown),
     value: json['value'] as String,
-    use: json['use'],
+    use: _$enumDecodeNullable(_$ContactPointUseEnumMap, json['use'],
+        unknownValue: ContactPointUse.unknown),
     rank: json['rank'] == null
         ? null
         : PositiveInt.fromJson(json['rank'] as String),
@@ -655,13 +729,33 @@ Map<String, dynamic> _$_$_ContactPointToJson(_$_ContactPoint instance) {
 
   writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension);
-  writeNotNull('system', instance.system);
+  writeNotNull('system', _$ContactPointSystemEnumMap[instance.system]);
   writeNotNull('value', instance.value);
-  writeNotNull('use', instance.use);
+  writeNotNull('use', _$ContactPointUseEnumMap[instance.use]);
   writeNotNull('rank', instance.rank?.toJson());
   writeNotNull('period', instance.period);
   return val;
 }
+
+const _$ContactPointSystemEnumMap = {
+  ContactPointSystem.phone: 'phone',
+  ContactPointSystem.fax: 'fax',
+  ContactPointSystem.email: 'email',
+  ContactPointSystem.pager: 'pager',
+  ContactPointSystem.url: 'url',
+  ContactPointSystem.sms: 'sms',
+  ContactPointSystem.other: 'other',
+  ContactPointSystem.unknown: 'unknown',
+};
+
+const _$ContactPointUseEnumMap = {
+  ContactPointUse.home: 'home',
+  ContactPointUse.work: 'work',
+  ContactPointUse.temp: 'temp',
+  ContactPointUse.old: 'old',
+  ContactPointUse.mobile: 'mobile',
+  ContactPointUse.unknown: 'unknown',
+};
 
 _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
   return _$_Timing(
