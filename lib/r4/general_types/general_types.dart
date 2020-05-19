@@ -8,7 +8,7 @@ part 'general_types.freezed.dart';
 part 'general_types.g.dart';
 
 @freezed
-abstract class Annotation extends Element with _$Annotation {
+abstract class Annotation with _$Annotation {
   const factory Annotation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -22,7 +22,7 @@ abstract class Annotation extends Element with _$Annotation {
 }
 
 @freezed
-abstract class Attachment extends Element with _$Attachment {
+abstract class Attachment with _$Attachment {
   const factory Attachment({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -40,7 +40,7 @@ abstract class Attachment extends Element with _$Attachment {
 }
 
 @freezed
-abstract class Identifier extends Element with _$Identifier {
+abstract class Identifier with _$Identifier {
   const factory Identifier({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -56,7 +56,7 @@ abstract class Identifier extends Element with _$Identifier {
 }
 
 @freezed
-abstract class CodeableConcept extends Element with _$CodeableConcept {
+abstract class CodeableConcept with _$CodeableConcept {
   const factory CodeableConcept({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -68,7 +68,7 @@ abstract class CodeableConcept extends Element with _$CodeableConcept {
 }
 
 @freezed
-abstract class Coding extends Element with _$Coding {
+abstract class Coding with _$Coding {
   const factory Coding({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -82,7 +82,7 @@ abstract class Coding extends Element with _$Coding {
 }
 
 @freezed
-abstract class Quantity extends Element with _$Quantity {
+abstract class Quantity with _$Quantity {
   const factory Quantity({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -97,7 +97,7 @@ abstract class Quantity extends Element with _$Quantity {
 }
 
 @freezed
-abstract class Duration extends Element with _$Duration {
+abstract class Duration with _$Duration {
   const factory Duration({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -112,7 +112,7 @@ abstract class Duration extends Element with _$Duration {
 }
 
 @freezed
-abstract class Distance extends Element with _$Distance {
+abstract class Distance with _$Distance {
   const factory Distance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -127,7 +127,7 @@ abstract class Distance extends Element with _$Distance {
 }
 
 @freezed
-abstract class Count extends Element with _$Count {
+abstract class Count with _$Count {
   const factory Count({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -141,7 +141,7 @@ abstract class Count extends Element with _$Count {
 }
 
 @freezed
-abstract class Money extends Element with _$Money {
+abstract class Money with _$Money {
   const factory Money({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -152,7 +152,7 @@ abstract class Money extends Element with _$Money {
 }
 
 @freezed
-abstract class Age extends Element with _$Age {
+abstract class Age with _$Age {
   const factory Age({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -166,7 +166,7 @@ abstract class Age extends Element with _$Age {
 }
 
 @freezed
-abstract class Range extends Element with _$Range {
+abstract class Range with _$Range {
   const factory Range({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -177,7 +177,7 @@ abstract class Range extends Element with _$Range {
 }
 
 @freezed
-abstract class Period extends Element with _$Period {
+abstract class Period with _$Period {
   const factory Period({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -188,7 +188,7 @@ abstract class Period extends Element with _$Period {
 }
 
 @freezed
-abstract class Ratio extends Element with _$Ratio {
+abstract class Ratio with _$Ratio {
   const factory Ratio({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -199,7 +199,7 @@ abstract class Ratio extends Element with _$Ratio {
 }
 
 @freezed
-abstract class SampledData extends Element with _$SampledData {
+abstract class SampledData with _$SampledData {
   const factory SampledData({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -216,7 +216,7 @@ abstract class SampledData extends Element with _$SampledData {
 }
 
 @freezed
-abstract class Signature extends Element with _$Signature {
+abstract class Signature with _$Signature {
   const factory Signature({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -233,7 +233,7 @@ abstract class Signature extends Element with _$Signature {
 }
 
 @freezed
-abstract class HumanName extends Element with _$HumanName {
+abstract class HumanName with _$HumanName {
   const factory HumanName({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -250,7 +250,7 @@ abstract class HumanName extends Element with _$HumanName {
 }
 
 @freezed
-abstract class Address extends Element with _$Address {
+abstract class Address with _$Address {
   const factory Address({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -270,7 +270,7 @@ abstract class Address extends Element with _$Address {
 }
 
 @freezed
-abstract class ContactPoint extends Element with _$ContactPoint {
+abstract class ContactPoint with _$ContactPoint {
   const factory ContactPoint({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -286,7 +286,7 @@ abstract class ContactPoint extends Element with _$ContactPoint {
 }
 
 @freezed
-abstract class Timing extends Element with _$Timing {
+abstract class Timing with _$Timing {
   const factory Timing({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -299,7 +299,7 @@ abstract class Timing extends Element with _$Timing {
 }
 
 @freezed
-abstract class TimingRepeat extends Element with _$TimingRepeat {
+abstract class TimingRepeat with _$TimingRepeat {
   const factory TimingRepeat({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,

@@ -8,7 +8,7 @@ part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
 @freezed
-abstract class Narrative extends Element with _$Narrative {
+abstract class Narrative with _$Narrative {
   const factory Narrative({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -20,7 +20,7 @@ abstract class Narrative extends Element with _$Narrative {
 }
 
 @freezed
-abstract class Reference extends Element with _$Reference {
+abstract class Reference with _$Reference {
   const factory Reference({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -34,7 +34,7 @@ abstract class Reference extends Element with _$Reference {
 }
 
 @freezed
-abstract class Meta extends Element with _$Meta {
+abstract class Meta with _$Meta {
   const factory Meta({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -49,7 +49,7 @@ abstract class Meta extends Element with _$Meta {
 }
 
 @freezed
-abstract class Dosage extends Element with _$Dosage {
+abstract class Dosage with _$Dosage {
   const factory Dosage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -73,7 +73,7 @@ abstract class Dosage extends Element with _$Dosage {
 }
 
 @freezed
-abstract class DosageDoseAndRate extends Element with _$DosageDoseAndRate {
+abstract class DosageDoseAndRate with _$DosageDoseAndRate {
   const factory DosageDoseAndRate({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -90,7 +90,7 @@ abstract class DosageDoseAndRate extends Element with _$DosageDoseAndRate {
 }
 
 @freezed
-abstract class ElementDefinition extends Element with _$ElementDefinition {
+abstract class ElementDefinition with _$ElementDefinition {
   const factory ElementDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -298,8 +298,7 @@ abstract class ElementDefinition extends Element with _$ElementDefinition {
 }
 
 @freezed
-abstract class ElementDefinitionSlicing extends Element
-    with _$ElementDefinitionSlicing {
+abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   const factory ElementDefinitionSlicing({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -314,7 +313,7 @@ abstract class ElementDefinitionSlicing extends Element
 }
 
 @freezed
-abstract class ElementDefinitionDiscriminator extends Element
+abstract class ElementDefinitionDiscriminator
     with _$ElementDefinitionDiscriminator {
   const factory ElementDefinitionDiscriminator({
     String id,
@@ -329,8 +328,7 @@ abstract class ElementDefinitionDiscriminator extends Element
 }
 
 @freezed
-abstract class ElementDefinitionBase extends Element
-    with _$ElementDefinitionBase {
+abstract class ElementDefinitionBase with _$ElementDefinitionBase {
   const factory ElementDefinitionBase({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -344,8 +342,7 @@ abstract class ElementDefinitionBase extends Element
 }
 
 @freezed
-abstract class ElementDefinitionType extends Element
-    with _$ElementDefinitionType {
+abstract class ElementDefinitionType with _$ElementDefinitionType {
   const factory ElementDefinitionType({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -362,8 +359,7 @@ abstract class ElementDefinitionType extends Element
 }
 
 @freezed
-abstract class ElementDefinitionExample extends Element
-    with _$ElementDefinitionExample {
+abstract class ElementDefinitionExample with _$ElementDefinitionExample {
   const factory ElementDefinitionExample({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -425,8 +421,7 @@ abstract class ElementDefinitionExample extends Element
 }
 
 @freezed
-abstract class ElementDefinitionConstraint extends Element
-    with _$ElementDefinitionConstraint {
+abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   const factory ElementDefinitionConstraint({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -445,8 +440,7 @@ abstract class ElementDefinitionConstraint extends Element
 }
 
 @freezed
-abstract class ElementDefinitionBinding extends Element
-    with _$ElementDefinitionBinding {
+abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
   const factory ElementDefinitionBinding({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -461,8 +455,7 @@ abstract class ElementDefinitionBinding extends Element
 }
 
 @freezed
-abstract class ElementDefinitionMapping extends Element
-    with _$ElementDefinitionMapping {
+abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
   const factory ElementDefinitionMapping({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,

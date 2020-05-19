@@ -6,11 +6,28 @@ part of 'element.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Element _$ElementFromJson(Map<String, dynamic> json) {
-  return Element();
+_$_Element _$_$_ElementFromJson(Map<String, dynamic> json) {
+  return _$_Element(
+    id: json['id'] as String,
+    extension_: json['extension'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+  );
 }
 
-Map<String, dynamic> _$ElementToJson(Element instance) => <String, dynamic>{};
+Map<String, dynamic> _$_$_ElementToJson(_$_Element instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('extension', instance.extension_?.toJson());
+  return val;
+}
 
 _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
   return _$_FhirExtension(

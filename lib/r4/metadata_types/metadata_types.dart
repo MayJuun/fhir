@@ -8,7 +8,7 @@ part 'metadata_types.freezed.dart';
 part 'metadata_types.g.dart';
 
 @freezed
-abstract class ContactDetail extends Element with _$ContactDetail {
+abstract class ContactDetail with _$ContactDetail {
   const factory ContactDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -20,7 +20,7 @@ abstract class ContactDetail extends Element with _$ContactDetail {
 }
 
 @freezed
-abstract class Contributor extends Element with _$Contributor {
+abstract class Contributor with _$Contributor {
   const factory Contributor({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -33,7 +33,7 @@ abstract class Contributor extends Element with _$Contributor {
 }
 
 @freezed
-abstract class DataRequirement extends Element with _$DataRequirement {
+abstract class DataRequirement with _$DataRequirement {
   const factory DataRequirement({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -52,8 +52,7 @@ abstract class DataRequirement extends Element with _$DataRequirement {
 }
 
 @freezed
-abstract class DataRequirementCodeFilter extends Element
-    with _$DataRequirementCodeFilter {
+abstract class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   const factory DataRequirementCodeFilter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -68,8 +67,7 @@ abstract class DataRequirementCodeFilter extends Element
 }
 
 @freezed
-abstract class DataRequirementDateFilter extends Element
-    with _$DataRequirementDateFilter {
+abstract class DataRequirementDateFilter with _$DataRequirementDateFilter {
   const factory DataRequirementDateFilter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -85,7 +83,7 @@ abstract class DataRequirementDateFilter extends Element
 }
 
 @freezed
-abstract class DataRequirementSort extends Element with _$DataRequirementSort {
+abstract class DataRequirementSort with _$DataRequirementSort {
   const factory DataRequirementSort({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -98,7 +96,7 @@ abstract class DataRequirementSort extends Element with _$DataRequirementSort {
 }
 
 @freezed
-abstract class ParameterDefinition extends Element with _$ParameterDefinition {
+abstract class ParameterDefinition with _$ParameterDefinition {
   const factory ParameterDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -115,7 +113,7 @@ abstract class ParameterDefinition extends Element with _$ParameterDefinition {
 }
 
 @freezed
-abstract class RelatedArtifact extends Element with _$RelatedArtifact {
+abstract class RelatedArtifact with _$RelatedArtifact {
   const factory RelatedArtifact({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -133,7 +131,7 @@ abstract class RelatedArtifact extends Element with _$RelatedArtifact {
 }
 
 @freezed
-abstract class TriggerDefinition extends Element with _$TriggerDefinition {
+abstract class TriggerDefinition with _$TriggerDefinition {
   const factory TriggerDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -152,7 +150,7 @@ abstract class TriggerDefinition extends Element with _$TriggerDefinition {
 }
 
 @freezed
-abstract class UsageContext extends Element with _$UsageContext {
+abstract class UsageContext with _$UsageContext {
   const factory UsageContext({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -167,7 +165,7 @@ abstract class UsageContext extends Element with _$UsageContext {
 }
 
 @freezed
-abstract class Expression extends Element with _$Expression {
+abstract class Expression with _$Expression {
   const factory Expression({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,

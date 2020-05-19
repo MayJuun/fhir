@@ -3,36 +3,29 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../fhir_r4.dart';
 
+part 'resource.freezed.dart';
 part 'resource.g.dart';
 
-@JsonSerializable()
-abstract class DomainResource extends Resource {
-  DomainResource({
+@freezed
+abstract class DomainResource with _$DomainResource implements Resource {
+  const factory DomainResource({
     @JsonKey(required: true) @required Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-  });
+    List<Resource> contained,
+  }) = _DomainResource;
 
   factory DomainResource.fromJson(Map<String, dynamic> json) =>
       _$DomainResourceFromJson(json);
-  Map<String, dynamic> toJson() => this.toJson();
 }
 
 @JsonSerializable()
-abstract class Resource {
-  Resource({
-    @JsonKey(required: true) @required Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-  });
+class Resource {
+  dynamic toJson() => this.toJson();
 
-  Map<String, dynamic> toJson() => this.toJson();
-
-  Resource.fromJson(Map<String, dynamic> json) {
+  static dynamic fromJson(Map<String, dynamic> json) {
     switch (json['resourceType']) {
       case 'Account':
         return Account.fromJson(json);

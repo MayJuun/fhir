@@ -7,7 +7,7 @@ part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
 
 @freezed
-abstract class Population extends Element with _$Population {
+abstract class Population with _$Population {
   const factory Population({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -23,7 +23,7 @@ abstract class Population extends Element with _$Population {
 }
 
 @freezed
-abstract class ProductShelfLife extends Element with _$ProductShelfLife {
+abstract class ProductShelfLife with _$ProductShelfLife {
   const factory ProductShelfLife({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -38,7 +38,7 @@ abstract class ProductShelfLife extends Element with _$ProductShelfLife {
 }
 
 @freezed
-abstract class ProdCharacteristic extends Element with _$ProdCharacteristic {
+abstract class ProdCharacteristic with _$ProdCharacteristic {
   const factory ProdCharacteristic({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -60,7 +60,7 @@ abstract class ProdCharacteristic extends Element with _$ProdCharacteristic {
 }
 
 @freezed
-abstract class MarketingStatus extends Element with _$MarketingStatus {
+abstract class MarketingStatus with _$MarketingStatus {
   const factory MarketingStatus({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -76,7 +76,7 @@ abstract class MarketingStatus extends Element with _$MarketingStatus {
 }
 
 @freezed
-abstract class SubstanceAmount extends Element with _$SubstanceAmount {
+abstract class SubstanceAmount with _$SubstanceAmount {
   const factory SubstanceAmount({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -93,7 +93,7 @@ abstract class SubstanceAmount extends Element with _$SubstanceAmount {
 }
 
 @freezed
-abstract class SubstanceAmountReferenceRange extends Element
+abstract class SubstanceAmountReferenceRange
     with _$SubstanceAmountReferenceRange {
   const factory SubstanceAmountReferenceRange({
     String id,

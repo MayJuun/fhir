@@ -6,16 +6,19 @@ import '../../fhir_r4.dart';
 part 'element.freezed.dart';
 part 'element.g.dart';
 
-@JsonSerializable()
-abstract class Element {
-  Element({
+@freezed
+abstract class Element with _$Element {
+  const factory Element({
     String id,
     @JsonKey(name: 'extension') FhirExtension extension_,
-  });
+  }) = _Element;
+
+  factory Element.fromJson(Map<String, dynamic> json) =>
+      _$ElementFromJson(json);
 }
 
 @freezed
-abstract class FhirExtension extends Element with _$FhirExtension {
+abstract class FhirExtension with _$FhirExtension {
   const factory FhirExtension({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
