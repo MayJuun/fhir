@@ -573,9 +573,7 @@ _$_BodyStructure _$_$_BodyStructureFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     morphology: json['morphology'] == null
         ? null
         : CodeableConcept.fromJson(json['morphology'] as Map<String, dynamic>),
@@ -904,7 +902,7 @@ _$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
             json['statusReason'] as Map<String, dynamic>),
     doNotPerform: json['doNotPerform'] == null
         ? null
-        : Boolean.fromJson(json['doNotPerform'] as String),
+        : Boolean.fromJson(json['doNotPerform']),
     scheduledTiming: json['scheduledTiming'] == null
         ? null
         : Timing.fromJson(json['scheduledTiming'] as Map<String, dynamic>),
@@ -1709,7 +1707,7 @@ _$_CommunicationRequest _$_$_CommunicationRequestFromJson(
         : Code.fromJson(json['priority'] as String),
     doNotPerform: json['doNotPerform'] == null
         ? null
-        : Boolean.fromJson(json['doNotPerform'] as String),
+        : Boolean.fromJson(json['doNotPerform']),
     medium: (json['medium'] as List)
         ?.map((e) => e == null
             ? null
@@ -2562,7 +2560,7 @@ _$_DeviceRequestParameter _$_$_DeviceRequestParameterFromJson(
         : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
   );
 }
 
@@ -3019,10 +3017,10 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     ageString: json['ageString'] as String,
     estimatedAge: json['estimatedAge'] == null
         ? null
-        : Boolean.fromJson(json['estimatedAge'] as String),
+        : Boolean.fromJson(json['estimatedAge']),
     deceasedBoolean: json['deceasedBoolean'] == null
         ? null
-        : Boolean.fromJson(json['deceasedBoolean'] as String),
+        : Boolean.fromJson(json['deceasedBoolean']),
     deceasedAge: json['deceasedAge'] == null
         ? null
         : Age.fromJson(json['deceasedAge'] as Map<String, dynamic>),
@@ -3142,7 +3140,7 @@ _$_FamilyMemberHistoryCondition _$_$_FamilyMemberHistoryConditionFromJson(
         : CodeableConcept.fromJson(json['outcome'] as Map<String, dynamic>),
     contributedToDeath: json['contributedToDeath'] == null
         ? null
-        : Boolean.fromJson(json['contributedToDeath'] as String),
+        : Boolean.fromJson(json['contributedToDeath']),
     onsetAge: json['onsetAge'] == null
         ? null
         : Age.fromJson(json['onsetAge'] as Map<String, dynamic>),
@@ -3370,10 +3368,10 @@ _$_GoalTarget _$_$_GoalTargetFromJson(Map<String, dynamic> json) {
     detailString: json['detailString'] as String,
     detailBoolean: json['detailBoolean'] == null
         ? null
-        : Boolean.fromJson(json['detailBoolean'] as String),
+        : Boolean.fromJson(json['detailBoolean']),
     detailInteger: json['detailInteger'] == null
         ? null
-        : Integer.fromJson(json['detailInteger'] as String),
+        : Integer.fromJson(json['detailInteger']),
     detailRatio: json['detailRatio'] == null
         ? null
         : Ratio.fromJson(json['detailRatio'] as Map<String, dynamic>),
@@ -3633,10 +3631,10 @@ _$_ImagingStudy _$_$_ImagingStudyFromJson(Map<String, dynamic> json) {
         ?.toList(),
     numberOfSeries: json['numberOfSeries'] == null
         ? null
-        : UnsignedInt.fromJson(json['numberOfSeries'] as String),
+        : UnsignedInt.fromJson(json['numberOfSeries']),
     numberOfInstances: json['numberOfInstances'] == null
         ? null
-        : UnsignedInt.fromJson(json['numberOfInstances'] as String),
+        : UnsignedInt.fromJson(json['numberOfInstances']),
     procedureReference: json['procedureReference'] == null
         ? null
         : Reference.fromJson(
@@ -3746,16 +3744,15 @@ _$_ImagingStudySeries _$_$_ImagingStudySeriesFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     uid: json['uid'] == null ? null : Id.fromJson(json['uid'] as String),
-    number: json['number'] == null
-        ? null
-        : UnsignedInt.fromJson(json['number'] as String),
+    number:
+        json['number'] == null ? null : UnsignedInt.fromJson(json['number']),
     modality: json['modality'] == null
         ? null
         : Coding.fromJson(json['modality'] as Map<String, dynamic>),
     description: json['description'] as String,
     numberOfInstances: json['numberOfInstances'] == null
         ? null
-        : UnsignedInt.fromJson(json['numberOfInstances'] as String),
+        : UnsignedInt.fromJson(json['numberOfInstances']),
     endpoint: (json['endpoint'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -3883,9 +3880,8 @@ _$_ImagingStudyInstance _$_$_ImagingStudyInstanceFromJson(
     sopClass: json['sopClass'] == null
         ? null
         : Coding.fromJson(json['sopClass'] as Map<String, dynamic>),
-    number: json['number'] == null
-        ? null
-        : UnsignedInt.fromJson(json['number'] as String),
+    number:
+        json['number'] == null ? null : UnsignedInt.fromJson(json['number']),
     title: json['title'] as String,
   );
 }
@@ -3972,7 +3968,7 @@ _$_Immunization _$_$_ImmunizationFromJson(Map<String, dynamic> json) {
         : FhirDateTime.fromJson(json['recorded'] as String),
     primarySource: json['primarySource'] == null
         ? null
-        : Boolean.fromJson(json['primarySource'] as String),
+        : Boolean.fromJson(json['primarySource']),
     reportOrigin: json['reportOrigin'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -4016,7 +4012,7 @@ _$_Immunization _$_$_ImmunizationFromJson(Map<String, dynamic> json) {
         ?.toList(),
     isSubpotent: json['isSubpotent'] == null
         ? null
-        : Boolean.fromJson(json['isSubpotent'] as String),
+        : Boolean.fromJson(json['isSubpotent']),
     subpotentReason: (json['subpotentReason'] as List)
         ?.map((e) => e == null
             ? null
@@ -4224,9 +4220,8 @@ _$_ImmunizationReaction _$_$_ImmunizationReactionFromJson(
     detail: json['detail'] == null
         ? null
         : Reference.fromJson(json['detail'] as Map<String, dynamic>),
-    reported: json['reported'] == null
-        ? null
-        : Boolean.fromJson(json['reported'] as String),
+    reported:
+        json['reported'] == null ? null : Boolean.fromJson(json['reported']),
   );
 }
 
@@ -4276,11 +4271,11 @@ _$_ImmunizationProtocolApplied _$_$_ImmunizationProtocolAppliedFromJson(
         ?.toList(),
     doseNumberPositiveInt: json['doseNumberPositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['doseNumberPositiveInt'] as String),
+        : PositiveInt.fromJson(json['doseNumberPositiveInt']),
     doseNumberString: json['doseNumberString'] as String,
     seriesDosesPositiveInt: json['seriesDosesPositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['seriesDosesPositiveInt'] as String),
+        : PositiveInt.fromJson(json['seriesDosesPositiveInt']),
     seriesDosesString: json['seriesDosesString'] as String,
   );
 }
@@ -4385,11 +4380,11 @@ _$_ImmunizationEvaluation _$_$_ImmunizationEvaluationFromJson(
     series: json['series'] as String,
     doseNumberPositiveInt: json['doseNumberPositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['doseNumberPositiveInt'] as String),
+        : PositiveInt.fromJson(json['doseNumberPositiveInt']),
     doseNumberString: json['doseNumberString'] as String,
     seriesDosesPositiveInt: json['seriesDosesPositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['seriesDosesPositiveInt'] as String),
+        : PositiveInt.fromJson(json['seriesDosesPositiveInt']),
     seriesDosesString: json['seriesDosesString'] as String,
   );
 }
@@ -4575,11 +4570,11 @@ _$_ImmunizationRecommendationRecommendation
     series: json['series'] as String,
     doseNumberPositiveInt: json['doseNumberPositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['doseNumberPositiveInt'] as String),
+        : PositiveInt.fromJson(json['doseNumberPositiveInt']),
     doseNumberString: json['doseNumberString'] as String,
     seriesDosesPositiveInt: json['seriesDosesPositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['seriesDosesPositiveInt'] as String),
+        : PositiveInt.fromJson(json['seriesDosesPositiveInt']),
     seriesDosesString: json['seriesDosesString'] as String,
     supportingImmunization: (json['supportingImmunization'] as List)
         ?.map((e) =>
@@ -4761,18 +4756,13 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     device: json['device'] == null
         ? null
         : Reference.fromJson(json['device'] as Map<String, dynamic>),
-    height: json['height'] == null
-        ? null
-        : PositiveInt.fromJson(json['height'] as String),
-    width: json['width'] == null
-        ? null
-        : PositiveInt.fromJson(json['width'] as String),
-    frames: json['frames'] == null
-        ? null
-        : PositiveInt.fromJson(json['frames'] as String),
-    duration: json['duration'] == null
-        ? null
-        : Decimal.fromJson(json['duration'] as String),
+    height:
+        json['height'] == null ? null : PositiveInt.fromJson(json['height']),
+    width: json['width'] == null ? null : PositiveInt.fromJson(json['width']),
+    frames:
+        json['frames'] == null ? null : PositiveInt.fromJson(json['frames']),
+    duration:
+        json['duration'] == null ? null : Decimal.fromJson(json['duration']),
     content: json['content'] == null
         ? null
         : Attachment.fromJson(json['content'] as Map<String, dynamic>),
@@ -4947,9 +4937,8 @@ _$_MedicationIngredient _$_$_MedicationIngredientFromJson(
     itemReference: json['itemReference'] == null
         ? null
         : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
-    isActive: json['isActive'] == null
-        ? null
-        : Boolean.fromJson(json['isActive'] as String),
+    isActive:
+        json['isActive'] == null ? null : Boolean.fromJson(json['isActive']),
     strength: json['strength'] == null
         ? null
         : Ratio.fromJson(json['strength'] as Map<String, dynamic>),
@@ -5541,7 +5530,7 @@ _$_MedicationDispenseSubstitution _$_$_MedicationDispenseSubstitutionFromJson(
         ?.toList(),
     wasSubstituted: json['wasSubstituted'] == null
         ? null
-        : Boolean.fromJson(json['wasSubstituted'] as String),
+        : Boolean.fromJson(json['wasSubstituted']),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -5882,9 +5871,8 @@ _$_MedicationKnowledgeIngredient _$_$_MedicationKnowledgeIngredientFromJson(
     itemReference: json['itemReference'] == null
         ? null
         : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
-    isActive: json['isActive'] == null
-        ? null
-        : Boolean.fromJson(json['isActive'] as String),
+    isActive:
+        json['isActive'] == null ? null : Boolean.fromJson(json['isActive']),
     strength: json['strength'] == null
         ? null
         : Ratio.fromJson(json['strength'] as Map<String, dynamic>),
@@ -6382,9 +6370,7 @@ _$_MedicationKnowledgeSubstitution _$_$_MedicationKnowledgeSubstitutionFromJson(
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    allowed: json['allowed'] == null
-        ? null
-        : Boolean.fromJson(json['allowed'] as String),
+    allowed: json['allowed'] == null ? null : Boolean.fromJson(json['allowed']),
   );
 }
 
@@ -6596,10 +6582,10 @@ _$_MedicationRequest _$_$_MedicationRequestFromJson(Map<String, dynamic> json) {
         : Code.fromJson(json['priority'] as String),
     doNotPerform: json['doNotPerform'] == null
         ? null
-        : Boolean.fromJson(json['doNotPerform'] as String),
+        : Boolean.fromJson(json['doNotPerform']),
     reportedBoolean: json['reportedBoolean'] == null
         ? null
-        : Boolean.fromJson(json['reportedBoolean'] as String),
+        : Boolean.fromJson(json['reportedBoolean']),
     reportedReference: json['reportedReference'] == null
         ? null
         : Reference.fromJson(json['reportedReference'] as Map<String, dynamic>),
@@ -6794,7 +6780,7 @@ _$_MedicationRequestDispenseRequest
         : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
     numberOfRepeatsAllowed: json['numberOfRepeatsAllowed'] == null
         ? null
-        : UnsignedInt.fromJson(json['numberOfRepeatsAllowed'] as String),
+        : UnsignedInt.fromJson(json['numberOfRepeatsAllowed']),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -6894,7 +6880,7 @@ _$_MedicationRequestSubstitution _$_$_MedicationRequestSubstitutionFromJson(
         ?.toList(),
     allowedBoolean: json['allowedBoolean'] == null
         ? null
-        : Boolean.fromJson(json['allowedBoolean'] as String),
+        : Boolean.fromJson(json['allowedBoolean']),
     allowedCodeableConcept: json['allowedCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -7120,7 +7106,7 @@ _$_MolecularSequence _$_$_MolecularSequenceFromJson(Map<String, dynamic> json) {
         unknownValue: MolecularSequenceType.unknown),
     coordinateSystem: json['coordinateSystem'] == null
         ? null
-        : Integer.fromJson(json['coordinateSystem'] as String),
+        : Integer.fromJson(json['coordinateSystem']),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -7153,7 +7139,7 @@ _$_MolecularSequence _$_$_MolecularSequenceFromJson(Map<String, dynamic> json) {
         ?.toList(),
     readCoverage: json['readCoverage'] == null
         ? null
-        : Integer.fromJson(json['readCoverage'] as String),
+        : Integer.fromJson(json['readCoverage']),
     repository: (json['repository'] as List)
         ?.map((e) => e == null
             ? null
@@ -7257,10 +7243,9 @@ _$_MolecularSequenceReferenceSeq _$_$_MolecularSequenceReferenceSeqFromJson(
         unknownValue: ReferenceSeqStrand.unknown),
     windowStart: json['windowStart'] == null
         ? null
-        : Integer.fromJson(json['windowStart'] as String),
-    windowEnd: json['windowEnd'] == null
-        ? null
-        : Integer.fromJson(json['windowEnd'] as String),
+        : Integer.fromJson(json['windowStart']),
+    windowEnd:
+        json['windowEnd'] == null ? null : Integer.fromJson(json['windowEnd']),
   );
 }
 
@@ -7318,10 +7303,8 @@ _$_MolecularSequenceVariant _$_$_MolecularSequenceVariantFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    start: json['start'] == null
-        ? null
-        : Integer.fromJson(json['start'] as String),
-    end: json['end'] == null ? null : Integer.fromJson(json['end'] as String),
+    start: json['start'] == null ? null : Integer.fromJson(json['start']),
+    end: json['end'] == null ? null : Integer.fromJson(json['end']),
     observedAllele: json['observedAllele'] as String,
     referenceAllele: json['referenceAllele'] as String,
     cigar: json['cigar'] as String,
@@ -7375,39 +7358,23 @@ _$_MolecularSequenceQuality _$_$_MolecularSequenceQualityFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['standardSequence'] as Map<String, dynamic>),
-    start: json['start'] == null
-        ? null
-        : Integer.fromJson(json['start'] as String),
-    end: json['end'] == null ? null : Integer.fromJson(json['end'] as String),
+    start: json['start'] == null ? null : Integer.fromJson(json['start']),
+    end: json['end'] == null ? null : Integer.fromJson(json['end']),
     score: json['score'] == null
         ? null
         : Quantity.fromJson(json['score'] as Map<String, dynamic>),
     method: json['method'] == null
         ? null
         : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
-    truthTP: json['truthTP'] == null
-        ? null
-        : Decimal.fromJson(json['truthTP'] as String),
-    queryTP: json['queryTP'] == null
-        ? null
-        : Decimal.fromJson(json['queryTP'] as String),
-    truthFN: json['truthFN'] == null
-        ? null
-        : Decimal.fromJson(json['truthFN'] as String),
-    queryFP: json['queryFP'] == null
-        ? null
-        : Decimal.fromJson(json['queryFP'] as String),
-    gtFP:
-        json['gtFP'] == null ? null : Decimal.fromJson(json['gtFP'] as String),
-    precision: json['precision'] == null
-        ? null
-        : Decimal.fromJson(json['precision'] as String),
-    recall: json['recall'] == null
-        ? null
-        : Decimal.fromJson(json['recall'] as String),
-    fScore: json['fScore'] == null
-        ? null
-        : Decimal.fromJson(json['fScore'] as String),
+    truthTP: json['truthTP'] == null ? null : Decimal.fromJson(json['truthTP']),
+    queryTP: json['queryTP'] == null ? null : Decimal.fromJson(json['queryTP']),
+    truthFN: json['truthFN'] == null ? null : Decimal.fromJson(json['truthFN']),
+    queryFP: json['queryFP'] == null ? null : Decimal.fromJson(json['queryFP']),
+    gtFP: json['gtFP'] == null ? null : Decimal.fromJson(json['gtFP']),
+    precision:
+        json['precision'] == null ? null : Decimal.fromJson(json['precision']),
+    recall: json['recall'] == null ? null : Decimal.fromJson(json['recall']),
+    fScore: json['fScore'] == null ? null : Decimal.fromJson(json['fScore']),
     roc: json['roc'] == null
         ? null
         : MolecularSequenceRoc.fromJson(json['roc'] as Map<String, dynamic>),
@@ -7468,25 +7435,25 @@ _$_MolecularSequenceRoc _$_$_MolecularSequenceRocFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     score: (json['score'] as List)
-        ?.map((e) => e == null ? null : Integer.fromJson(e as String))
+        ?.map((e) => e == null ? null : Integer.fromJson(e))
         ?.toList(),
     numTP: (json['numTP'] as List)
-        ?.map((e) => e == null ? null : Integer.fromJson(e as String))
+        ?.map((e) => e == null ? null : Integer.fromJson(e))
         ?.toList(),
     numFP: (json['numFP'] as List)
-        ?.map((e) => e == null ? null : Integer.fromJson(e as String))
+        ?.map((e) => e == null ? null : Integer.fromJson(e))
         ?.toList(),
     numFN: (json['numFN'] as List)
-        ?.map((e) => e == null ? null : Integer.fromJson(e as String))
+        ?.map((e) => e == null ? null : Integer.fromJson(e))
         ?.toList(),
     precision: (json['precision'] as List)
-        ?.map((e) => e == null ? null : Decimal.fromJson(e as String))
+        ?.map((e) => e == null ? null : Decimal.fromJson(e))
         ?.toList(),
     sensitivity: (json['sensitivity'] as List)
-        ?.map((e) => e == null ? null : Decimal.fromJson(e as String))
+        ?.map((e) => e == null ? null : Decimal.fromJson(e))
         ?.toList(),
     fMeasure: (json['fMeasure'] as List)
-        ?.map((e) => e == null ? null : Decimal.fromJson(e as String))
+        ?.map((e) => e == null ? null : Decimal.fromJson(e))
         ?.toList(),
   );
 }
@@ -7593,12 +7560,8 @@ _$_MolecularSequenceStructureVariant
     variantType: json['variantType'] == null
         ? null
         : CodeableConcept.fromJson(json['variantType'] as Map<String, dynamic>),
-    exact: json['exact'] == null
-        ? null
-        : Boolean.fromJson(json['exact'] as String),
-    length: json['length'] == null
-        ? null
-        : Integer.fromJson(json['length'] as String),
+    exact: json['exact'] == null ? null : Boolean.fromJson(json['exact']),
+    length: json['length'] == null ? null : Integer.fromJson(json['length']),
     outer: json['outer'] == null
         ? null
         : MolecularSequenceOuter.fromJson(
@@ -7647,10 +7610,8 @@ _$_MolecularSequenceOuter _$_$_MolecularSequenceOuterFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    start: json['start'] == null
-        ? null
-        : Integer.fromJson(json['start'] as String),
-    end: json['end'] == null ? null : Integer.fromJson(json['end'] as String),
+    start: json['start'] == null ? null : Integer.fromJson(json['start']),
+    end: json['end'] == null ? null : Integer.fromJson(json['end']),
   );
 }
 
@@ -7688,10 +7649,8 @@ _$_MolecularSequenceInner _$_$_MolecularSequenceInnerFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    start: json['start'] == null
-        ? null
-        : Integer.fromJson(json['start'] as String),
-    end: json['end'] == null ? null : Integer.fromJson(json['end'] as String),
+    start: json['start'] == null ? null : Integer.fromJson(json['start']),
+    end: json['end'] == null ? null : Integer.fromJson(json['end']),
   );
 }
 
@@ -8281,10 +8240,10 @@ _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
     valueString: json['valueString'] as String,
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueInteger: json['valueInteger'] == null
         ? null
-        : Integer.fromJson(json['valueInteger'] as String),
+        : Integer.fromJson(json['valueInteger']),
     valueRange: json['valueRange'] == null
         ? null
         : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
@@ -8518,10 +8477,10 @@ _$_ObservationComponent _$_$_ObservationComponentFromJson(
     valueString: json['valueString'] as String,
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueInteger: json['valueInteger'] == null
         ? null
-        : Integer.fromJson(json['valueInteger'] as String),
+        : Integer.fromJson(json['valueInteger']),
     valueRange: json['valueRange'] == null
         ? null
         : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
@@ -9092,13 +9051,13 @@ _$_QuestionnaireResponseAnswer _$_$_QuestionnaireResponseAnswerFromJson(
         ?.toList(),
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueDecimal: json['valueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+        : Decimal.fromJson(json['valueDecimal']),
     valueInteger: json['valueInteger'] == null
         ? null
-        : Integer.fromJson(json['valueInteger'] as String),
+        : Integer.fromJson(json['valueInteger']),
     valueDate: json['valueDate'] == null
         ? null
         : Date.fromJson(json['valueDate'] as String),
@@ -9694,7 +9653,7 @@ _$_RiskAssessmentPrediction _$_$_RiskAssessmentPredictionFromJson(
         : CodeableConcept.fromJson(json['outcome'] as Map<String, dynamic>),
     probabilityDecimal: json['probabilityDecimal'] == null
         ? null
-        : Decimal.fromJson(json['probabilityDecimal'] as String),
+        : Decimal.fromJson(json['probabilityDecimal']),
     probabilityRange: json['probabilityRange'] == null
         ? null
         : Range.fromJson(json['probabilityRange'] as Map<String, dynamic>),
@@ -9704,7 +9663,7 @@ _$_RiskAssessmentPrediction _$_$_RiskAssessmentPredictionFromJson(
             json['qualitativeRisk'] as Map<String, dynamic>),
     relativeRisk: json['relativeRisk'] == null
         ? null
-        : Decimal.fromJson(json['relativeRisk'] as String),
+        : Decimal.fromJson(json['relativeRisk']),
     whenPeriod: json['whenPeriod'] == null
         ? null
         : Period.fromJson(json['whenPeriod'] as Map<String, dynamic>),
@@ -9807,7 +9766,7 @@ _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
         : Code.fromJson(json['priority'] as String),
     doNotPerform: json['doNotPerform'] == null
         ? null
-        : Boolean.fromJson(json['doNotPerform'] as String),
+        : Boolean.fromJson(json['doNotPerform']),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -9842,7 +9801,7 @@ _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
         : Timing.fromJson(json['occurrenceTiming'] as Map<String, dynamic>),
     asNeededBoolean: json['asNeededBoolean'] == null
         ? null
-        : Boolean.fromJson(json['asNeededBoolean'] as String),
+        : Boolean.fromJson(json['asNeededBoolean']),
     asNeededCodeableConcept: json['asNeededCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -10667,7 +10626,7 @@ _$_SupplyRequestParameter _$_$_SupplyRequestParameterFromJson(
         : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
   );
 }
 
@@ -10817,29 +10776,21 @@ _$_VisionPrescriptionLensSpecification
         : CodeableConcept.fromJson(json['product'] as Map<String, dynamic>),
     eye: _$enumDecodeNullable(_$LensSpecificationEyeEnumMap, json['eye'],
         unknownValue: LensSpecificationEye.unknown),
-    sphere: json['sphere'] == null
-        ? null
-        : Decimal.fromJson(json['sphere'] as String),
-    cylinder: json['cylinder'] == null
-        ? null
-        : Decimal.fromJson(json['cylinder'] as String),
-    axis:
-        json['axis'] == null ? null : Integer.fromJson(json['axis'] as String),
+    sphere: json['sphere'] == null ? null : Decimal.fromJson(json['sphere']),
+    cylinder:
+        json['cylinder'] == null ? null : Decimal.fromJson(json['cylinder']),
+    axis: json['axis'] == null ? null : Integer.fromJson(json['axis']),
     prism: (json['prism'] as List)
         ?.map((e) => e == null
             ? null
             : VisionPrescriptionPrism.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    add: json['add'] == null ? null : Decimal.fromJson(json['add'] as String),
-    power: json['power'] == null
-        ? null
-        : Decimal.fromJson(json['power'] as String),
-    backCurve: json['backCurve'] == null
-        ? null
-        : Decimal.fromJson(json['backCurve'] as String),
-    diameter: json['diameter'] == null
-        ? null
-        : Decimal.fromJson(json['diameter'] as String),
+    add: json['add'] == null ? null : Decimal.fromJson(json['add']),
+    power: json['power'] == null ? null : Decimal.fromJson(json['power']),
+    backCurve:
+        json['backCurve'] == null ? null : Decimal.fromJson(json['backCurve']),
+    diameter:
+        json['diameter'] == null ? null : Decimal.fromJson(json['diameter']),
     duration: json['duration'] == null
         ? null
         : Quantity.fromJson(json['duration'] as Map<String, dynamic>),
@@ -10904,9 +10855,7 @@ _$_VisionPrescriptionPrism _$_$_VisionPrescriptionPrismFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    amount: json['amount'] == null
-        ? null
-        : Decimal.fromJson(json['amount'] as String),
+    amount: json['amount'] == null ? null : Decimal.fromJson(json['amount']),
     base: _$enumDecodeNullable(_$PrismBaseEnumMap, json['base'],
         unknownValue: PrismBase.unknown),
   );

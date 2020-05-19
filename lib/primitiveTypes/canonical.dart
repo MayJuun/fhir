@@ -1,11 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'primitiveObjects.dart';
 import 'primitiveFailures.dart';
 
-@immutable
 class Canonical extends PrimitiveObject<String> {
+  @override
   final Either<PrimitiveFailure<String>, String> value;
 
   factory Canonical(String value) {

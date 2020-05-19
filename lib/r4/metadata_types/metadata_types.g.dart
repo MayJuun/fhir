@@ -147,9 +147,7 @@ _$_DataRequirement _$_$_DataRequirementFromJson(Map<String, dynamic> json) {
             ? null
             : DataRequirementDateFilter.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    limit: json['limit'] == null
-        ? null
-        : PositiveInt.fromJson(json['limit'] as String),
+    limit: json['limit'] == null ? null : PositiveInt.fromJson(json['limit']),
     sort: (json['sort'] as List)
         ?.map((e) => e == null
             ? null
@@ -341,7 +339,7 @@ _$_ParameterDefinition _$_$_ParameterDefinitionFromJson(
         ?.toList(),
     name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
     use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
-    min: json['min'] == null ? null : Integer.fromJson(json['min'] as String),
+    min: json['min'] == null ? null : Integer.fromJson(json['min']),
     max: json['max'] as String,
     documentation: json['documentation'] as String,
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),

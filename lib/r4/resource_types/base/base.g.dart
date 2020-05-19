@@ -77,7 +77,7 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
         ?.toList(),
     priority: json['priority'] == null
         ? null
-        : UnsignedInt.fromJson(json['priority'] as String),
+        : UnsignedInt.fromJson(json['priority']),
     description: json['description'] as String,
     supportingInformation: (json['supportingInformation'] as List)
         ?.map((e) =>
@@ -89,7 +89,7 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
     end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
     minutesDuration: json['minutesDuration'] == null
         ? null
-        : PositiveInt.fromJson(json['minutesDuration'] as String),
+        : PositiveInt.fromJson(json['minutesDuration']),
     slot: (json['slot'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -431,9 +431,8 @@ _$_BiologicallyDerivedProduct _$_$_BiologicallyDerivedProductFromJson(
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    quantity: json['quantity'] == null
-        ? null
-        : Integer.fromJson(json['quantity'] as String),
+    quantity:
+        json['quantity'] == null ? null : Integer.fromJson(json['quantity']),
     parent: (json['parent'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -687,7 +686,7 @@ _$_BiologicallyDerivedProductStorage
     description: json['description'] as String,
     temperature: json['temperature'] == null
         ? null
-        : Decimal.fromJson(json['temperature'] as String),
+        : Decimal.fromJson(json['temperature']),
     scale: _$enumDecodeNullable(_$StorageScaleEnumMap, json['scale'],
         unknownValue: StorageScale.unknown),
     duration: json['duration'] == null
@@ -1702,9 +1701,7 @@ _$_EncounterDiagnosis _$_$_EncounterDiagnosisFromJson(
     use: json['use'] == null
         ? null
         : CodeableConcept.fromJson(json['use'] as Map<String, dynamic>),
-    rank: json['rank'] == null
-        ? null
-        : PositiveInt.fromJson(json['rank'] as String),
+    rank: json['rank'] == null ? null : PositiveInt.fromJson(json['rank']),
   );
 }
 
@@ -2194,9 +2191,7 @@ _$_EpisodeOfCareDiagnosis _$_$_EpisodeOfCareDiagnosisFromJson(
     role: json['role'] == null
         ? null
         : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
-    rank: json['rank'] == null
-        ? null
-        : PositiveInt.fromJson(json['rank'] as String),
+    rank: json['rank'] == null ? null : PositiveInt.fromJson(json['rank']),
   );
 }
 
@@ -2357,21 +2352,17 @@ _$_Group _$_$_GroupFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     type: _$enumDecodeNullable(_$GroupTypeEnumMap, json['type'],
         unknownValue: GroupType.unknown),
-    actual: json['actual'] == null
-        ? null
-        : Boolean.fromJson(json['actual'] as String),
+    actual: json['actual'] == null ? null : Boolean.fromJson(json['actual']),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     name: json['name'] as String,
     quantity: json['quantity'] == null
         ? null
-        : UnsignedInt.fromJson(json['quantity'] as String),
+        : UnsignedInt.fromJson(json['quantity']),
     managingEntity: json['managingEntity'] == null
         ? null
         : Reference.fromJson(json['managingEntity'] as Map<String, dynamic>),
@@ -2457,7 +2448,7 @@ _$_GroupCharacteristic _$_$_GroupCharacteristicFromJson(
             json['valueCodeableConcept'] as Map<String, dynamic>),
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueQuantity: json['valueQuantity'] == null
         ? null
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
@@ -2467,9 +2458,7 @@ _$_GroupCharacteristic _$_$_GroupCharacteristicFromJson(
     valueReference: json['valueReference'] == null
         ? null
         : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
-    exclude: json['exclude'] == null
-        ? null
-        : Boolean.fromJson(json['exclude'] as String),
+    exclude: json['exclude'] == null ? null : Boolean.fromJson(json['exclude']),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -2522,9 +2511,8 @@ _$_GroupMember _$_$_GroupMemberFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
-    inactive: json['inactive'] == null
-        ? null
-        : Boolean.fromJson(json['inactive'] as String),
+    inactive:
+        json['inactive'] == null ? null : Boolean.fromJson(json['inactive']),
   );
 }
 
@@ -2583,9 +2571,7 @@ _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     providedBy: json['providedBy'] == null
         ? null
         : Reference.fromJson(json['providedBy'] as Map<String, dynamic>),
@@ -2656,7 +2642,7 @@ _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
         ?.toList(),
     appointmentRequired: json['appointmentRequired'] == null
         ? null
-        : Boolean.fromJson(json['appointmentRequired'] as String),
+        : Boolean.fromJson(json['appointmentRequired']),
     availableTime: (json['availableTime'] as List)
         ?.map((e) => e == null
             ? null
@@ -2798,9 +2784,7 @@ _$_HealthcareServiceAvailableTime _$_$_HealthcareServiceAvailableTimeFromJson(
     daysOfWeek: (json['daysOfWeek'] as List)
         ?.map((e) => _$enumDecodeNullable(_$AvailableTimeDaysOfWeekEnumMap, e))
         ?.toList(),
-    allDay: json['allDay'] == null
-        ? null
-        : Boolean.fromJson(json['allDay'] as String),
+    allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
     availableStartTime: json['availableStartTime'] == null
         ? null
         : Time.fromJson(json['availableStartTime'] as String),
@@ -2932,7 +2916,7 @@ _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
         unknownValue: LibraryStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -3116,9 +3100,7 @@ _$_ListEntry _$_$_ListEntryFromJson(Map<String, dynamic> json) {
     flag: json['flag'] == null
         ? null
         : CodeableConcept.fromJson(json['flag'] as Map<String, dynamic>),
-    deleted: json['deleted'] == null
-        ? null
-        : Boolean.fromJson(json['deleted'] as String),
+    deleted: json['deleted'] == null ? null : Boolean.fromJson(json['deleted']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -3303,15 +3285,12 @@ _$_LocationPosition _$_$_LocationPositionFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    longitude: json['longitude'] == null
-        ? null
-        : Decimal.fromJson(json['longitude'] as String),
-    latitude: json['latitude'] == null
-        ? null
-        : Decimal.fromJson(json['latitude'] as String),
-    altitude: json['altitude'] == null
-        ? null
-        : Decimal.fromJson(json['altitude'] as String),
+    longitude:
+        json['longitude'] == null ? null : Decimal.fromJson(json['longitude']),
+    latitude:
+        json['latitude'] == null ? null : Decimal.fromJson(json['latitude']),
+    altitude:
+        json['altitude'] == null ? null : Decimal.fromJson(json['altitude']),
   );
 }
 
@@ -3352,9 +3331,7 @@ _$_LocationHoursOfOperation _$_$_LocationHoursOfOperationFromJson(
     daysOfWeek: (json['daysOfWeek'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    allDay: json['allDay'] == null
-        ? null
-        : Boolean.fromJson(json['allDay'] as String),
+    allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
     openingTime: json['openingTime'] == null
         ? null
         : Time.fromJson(json['openingTime'] as String),
@@ -3422,9 +3399,7 @@ _$_Organization _$_$_OrganizationFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     type: (json['type'] as List)
         ?.map((e) => e == null
             ? null
@@ -3579,9 +3554,7 @@ _$_OrganizationAffiliation _$_$_OrganizationAffiliationFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -3703,9 +3676,7 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     name: (json['name'] as List)
         ?.map((e) =>
             e == null ? null : HumanName.fromJson(e as Map<String, dynamic>))
@@ -3721,7 +3692,7 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['birthDate'] as String),
     deceasedBoolean: json['deceasedBoolean'] == null
         ? null
-        : Boolean.fromJson(json['deceasedBoolean'] as String),
+        : Boolean.fromJson(json['deceasedBoolean']),
     deceasedDateTime: json['deceasedDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['deceasedDateTime'] as String),
@@ -3735,10 +3706,10 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
             json['maritalStatus'] as Map<String, dynamic>),
     multipleBirthBoolean: json['multipleBirthBoolean'] == null
         ? null
-        : Boolean.fromJson(json['multipleBirthBoolean'] as String),
+        : Boolean.fromJson(json['multipleBirthBoolean']),
     multipleBirthInteger: json['multipleBirthInteger'] == null
         ? null
-        : Integer.fromJson(json['multipleBirthInteger'] as String),
+        : Integer.fromJson(json['multipleBirthInteger']),
     photo: (json['photo'] as List)
         ?.map((e) =>
             e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
@@ -3909,9 +3880,8 @@ _$_PatientCommunication _$_$_PatientCommunicationFromJson(
     language: json['language'] == null
         ? null
         : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
-    preferred: json['preferred'] == null
-        ? null
-        : Boolean.fromJson(json['preferred'] as String),
+    preferred:
+        json['preferred'] == null ? null : Boolean.fromJson(json['preferred']),
   );
 }
 
@@ -4043,9 +4013,7 @@ _$_Person _$_$_PersonFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(
             json['managingOrganization'] as Map<String, dynamic>),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     link: (json['link'] as List)
         ?.map((e) =>
             e == null ? null : PersonLink.fromJson(e as Map<String, dynamic>))
@@ -4179,9 +4147,7 @@ _$_Practitioner _$_$_PractitionerFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     name: (json['name'] as List)
         ?.map((e) =>
             e == null ? null : HumanName.fromJson(e as Map<String, dynamic>))
@@ -4349,9 +4315,7 @@ _$_PractitionerRole _$_$_PractitionerRoleFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -4463,9 +4427,7 @@ _$_PractitionerRoleAvailableTime _$_$_PractitionerRoleAvailableTimeFromJson(
     daysOfWeek: (json['daysOfWeek'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    allDay: json['allDay'] == null
-        ? null
-        : Boolean.fromJson(json['allDay'] as String),
+    allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
     availableStartTime: json['availableStartTime'] == null
         ? null
         : Time.fromJson(json['availableStartTime'] as String),
@@ -4574,9 +4536,7 @@ _$_RelatedPerson _$_$_RelatedPersonFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -4681,9 +4641,8 @@ _$_RelatedPersonCommunication _$_$_RelatedPersonCommunicationFromJson(
     language: json['language'] == null
         ? null
         : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
-    preferred: json['preferred'] == null
-        ? null
-        : Boolean.fromJson(json['preferred'] as String),
+    preferred:
+        json['preferred'] == null ? null : Boolean.fromJson(json['preferred']),
   );
 }
 
@@ -4742,9 +4701,7 @@ _$_Schedule _$_$_ScheduleFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     serviceCategory: (json['serviceCategory'] as List)
         ?.map((e) => e == null
             ? null
@@ -4872,7 +4829,7 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
     end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
     overbooked: json['overbooked'] == null
         ? null
-        : Boolean.fromJson(json['overbooked'] as String),
+        : Boolean.fromJson(json['overbooked']),
     comment: json['comment'] as String,
   );
 }
@@ -5360,7 +5317,7 @@ _$_TaskRestriction _$_$_TaskRestrictionFromJson(Map<String, dynamic> json) {
         ?.toList(),
     repetitions: json['repetitions'] == null
         ? null
-        : PositiveInt.fromJson(json['repetitions'] as String),
+        : PositiveInt.fromJson(json['repetitions']),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -5414,7 +5371,7 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : Base64Binary.fromJson(json['valueBase64Binary'] as String),
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueCanonical: json['valueCanonical'] == null
         ? null
         : Canonical.fromJson(json['valueCanonical'] as String),
@@ -5429,7 +5386,7 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueDecimal: json['valueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+        : Decimal.fromJson(json['valueDecimal']),
     valueId:
         json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
     valueInstant: json['valueInstant'] == null
@@ -5437,7 +5394,7 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : Instant.fromJson(json['valueInstant'] as String),
     valueInteger: json['valueInteger'] == null
         ? null
-        : Integer.fromJson(json['valueInteger'] as String),
+        : Integer.fromJson(json['valueInteger']),
     valueMarkdown: json['valueMarkdown'] == null
         ? null
         : Markdown.fromJson(json['valueMarkdown'] as String),
@@ -5446,14 +5403,14 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : Oid.fromJson(json['valueOid'] as String),
     valuePositiveInt: json['valuePositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['valuePositiveInt'] as String),
+        : PositiveInt.fromJson(json['valuePositiveInt']),
     valueString: json['valueString'] as String,
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
     valueUnsignedInt: json['valueUnsignedInt'] == null
         ? null
-        : UnsignedInt.fromJson(json['valueUnsignedInt'] as String),
+        : UnsignedInt.fromJson(json['valueUnsignedInt']),
     valueUri: json['valueUri'] == null
         ? null
         : FhirUri.fromJson(json['valueUri'] as String),
@@ -5661,7 +5618,7 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : Base64Binary.fromJson(json['valueBase64Binary'] as String),
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueCanonical: json['valueCanonical'] == null
         ? null
         : Canonical.fromJson(json['valueCanonical'] as String),
@@ -5676,7 +5633,7 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueDecimal: json['valueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+        : Decimal.fromJson(json['valueDecimal']),
     valueId:
         json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
     valueInstant: json['valueInstant'] == null
@@ -5684,7 +5641,7 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : Instant.fromJson(json['valueInstant'] as String),
     valueInteger: json['valueInteger'] == null
         ? null
-        : Integer.fromJson(json['valueInteger'] as String),
+        : Integer.fromJson(json['valueInteger']),
     valueMarkdown: json['valueMarkdown'] == null
         ? null
         : Markdown.fromJson(json['valueMarkdown'] as String),
@@ -5693,14 +5650,14 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : Oid.fromJson(json['valueOid'] as String),
     valuePositiveInt: json['valuePositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['valuePositiveInt'] as String),
+        : PositiveInt.fromJson(json['valuePositiveInt']),
     valueString: json['valueString'] as String,
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
     valueUnsignedInt: json['valueUnsignedInt'] == null
         ? null
-        : UnsignedInt.fromJson(json['valueUnsignedInt'] as String),
+        : UnsignedInt.fromJson(json['valueUnsignedInt']),
     valueUri: json['valueUri'] == null
         ? null
         : FhirUri.fromJson(json['valueUri'] as String),

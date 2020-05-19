@@ -3,23 +3,22 @@ import 'dart:convert';
 import 'package:fhir/fhir_r4.dart' as fhir_r4;
 import 'package:http/http.dart';
 
-// void main() async {
-//   var server = 'http://hapi.fhir.org/baseR4';
-//   var headers = {'Content-type': 'application/json'};
+void main() async {
+  var server = 'http://hapi.fhir.org/baseR4';
+  var headers = {'Content-type': 'application/json'};
 
-//   var response = await get('$server/Patient', headers: headers);
-//   var newBundle = fhir_r4.Bundle.fromJson(json.decode(response.body));
-//   for (var resource in resourceTypes) {
-//     var response = await get('$server/$resource', headers: headers);
-//     var newBundle = fhir_r4.Bundle.fromJson(json.decode(response.body));
-//     if (newBundle.toJson().toString().contains('Invalid')) {
-//       var temp = newBundle.toJson().toString().split('Invalid');
-//       for (var i = 1; i < temp.length; i++) {
-//         print(temp[i].substring(0, 50));
-//       }
-//     }
-//   }
-// }
+  for (var resource in resourceTypes) {
+    var response = await get('$server/$resource', headers: headers);
+    var newBundle = fhir_r4.Bundle.fromJson(json.decode(response.body));
+    print(newBundle.toJson().toString());
+    // if (newBundle.toJson().toString().contains('Invalid')) {
+    //   var temp = newBundle.toJson().toString().split('Invalid');
+    //   for (var i = 1; i < temp.length; i++) {
+    //     print(temp[i].substring(0, 50));
+    //   }
+    // }
+  }
+}
 
 var resourceTypes = [
   'Account',

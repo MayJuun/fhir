@@ -188,9 +188,8 @@ _$_AuditEventAgent _$_$_AuditEventAgentFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['who'] as Map<String, dynamic>),
     altId: json['altId'] as String,
     name: json['name'] as String,
-    requestor: json['requestor'] == null
-        ? null
-        : Boolean.fromJson(json['requestor'] as String),
+    requestor:
+        json['requestor'] == null ? null : Boolean.fromJson(json['requestor']),
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
@@ -591,9 +590,7 @@ _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
     timestamp: json['timestamp'] == null
         ? null
         : Instant.fromJson(json['timestamp'] as String),
-    total: json['total'] == null
-        ? null
-        : UnsignedInt.fromJson(json['total'] as String),
+    total: json['total'] == null ? null : UnsignedInt.fromJson(json['total']),
     link: (json['link'] as List)
         ?.map((e) =>
             e == null ? null : BundleLink.fromJson(e as Map<String, dynamic>))
@@ -755,9 +752,7 @@ _$_BundleSearch _$_$_BundleSearchFromJson(Map<String, dynamic> json) {
         ?.toList(),
     mode: _$enumDecodeNullable(_$SearchModeEnumMap, json['mode'],
         unknownValue: SearchMode.unknown),
-    score: json['score'] == null
-        ? null
-        : Decimal.fromJson(json['score'] as String),
+    score: json['score'] == null ? null : Decimal.fromJson(json['score']),
   );
 }
 
@@ -935,7 +930,7 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
         unknownValue: CapabilityStatementStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -1296,8 +1291,7 @@ _$_CapabilityStatementSecurity _$_$_CapabilityStatementSecurityFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    cors:
-        json['cors'] == null ? null : Boolean.fromJson(json['cors'] as String),
+    cors: json['cors'] == null ? null : Boolean.fromJson(json['cors']),
     service: (json['service'] as List)
         ?.map((e) => e == null
             ? null
@@ -1365,19 +1359,19 @@ _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
         unknownValue: ResourceVersioning.unknown),
     readHistory: json['readHistory'] == null
         ? null
-        : Boolean.fromJson(json['readHistory'] as String),
+        : Boolean.fromJson(json['readHistory']),
     updateCreate: json['updateCreate'] == null
         ? null
-        : Boolean.fromJson(json['updateCreate'] as String),
+        : Boolean.fromJson(json['updateCreate']),
     conditionalCreate: json['conditionalCreate'] == null
         ? null
-        : Boolean.fromJson(json['conditionalCreate'] as String),
+        : Boolean.fromJson(json['conditionalCreate']),
     conditionalRead: _$enumDecodeNullable(
         _$ResourceConditionalReadEnumMap, json['conditionalRead'],
         unknownValue: ResourceConditionalRead.unknown),
     conditionalUpdate: json['conditionalUpdate'] == null
         ? null
-        : Boolean.fromJson(json['conditionalUpdate'] as String),
+        : Boolean.fromJson(json['conditionalUpdate']),
     conditionalDelete: _$enumDecodeNullable(
         _$ResourceConditionalDeleteEnumMap, json['conditionalDelete'],
         unknownValue: ResourceConditionalDelete.unknown),
@@ -1711,7 +1705,7 @@ _$_CapabilityStatementMessaging _$_$_CapabilityStatementMessagingFromJson(
         ?.toList(),
     reliableCache: json['reliableCache'] == null
         ? null
-        : UnsignedInt.fromJson(json['reliableCache'] as String),
+        : UnsignedInt.fromJson(json['reliableCache']),
     documentation: json['documentation'] == null
         ? null
         : Markdown.fromJson(json['documentation'] as String),
@@ -1933,9 +1927,8 @@ _$_CatalogEntry _$_$_CatalogEntryFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    orderable: json['orderable'] == null
-        ? null
-        : Boolean.fromJson(json['orderable'] as String),
+    orderable:
+        json['orderable'] == null ? null : Boolean.fromJson(json['orderable']),
     referencedItem: json['referencedItem'] == null
         ? null
         : Reference.fromJson(json['referencedItem'] as Map<String, dynamic>),
@@ -2121,7 +2114,7 @@ _$_CodeSystem _$_$_CodeSystemFromJson(Map<String, dynamic> json) {
         unknownValue: CodeSystemStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -2151,7 +2144,7 @@ _$_CodeSystem _$_$_CodeSystemFromJson(Map<String, dynamic> json) {
         : Markdown.fromJson(json['copyright'] as String),
     caseSensitive: json['caseSensitive'] == null
         ? null
-        : Boolean.fromJson(json['caseSensitive'] as String),
+        : Boolean.fromJson(json['caseSensitive']),
     valueSet: json['valueSet'] == null
         ? null
         : Canonical.fromJson(json['valueSet'] as String),
@@ -2160,18 +2153,16 @@ _$_CodeSystem _$_$_CodeSystemFromJson(Map<String, dynamic> json) {
         unknownValue: CodeSystemHierarchyMeaning.unknown),
     compositional: json['compositional'] == null
         ? null
-        : Boolean.fromJson(json['compositional'] as String),
+        : Boolean.fromJson(json['compositional']),
     versionNeeded: json['versionNeeded'] == null
         ? null
-        : Boolean.fromJson(json['versionNeeded'] as String),
+        : Boolean.fromJson(json['versionNeeded']),
     content: _$enumDecodeNullable(_$CodeSystemContentEnumMap, json['content'],
         unknownValue: CodeSystemContent.unknown),
     supplements: json['supplements'] == null
         ? null
         : Canonical.fromJson(json['supplements'] as String),
-    count: json['count'] == null
-        ? null
-        : UnsignedInt.fromJson(json['count'] as String),
+    count: json['count'] == null ? null : UnsignedInt.fromJson(json['count']),
     filter: (json['filter'] as List)
         ?.map((e) => e == null
             ? null
@@ -2497,16 +2488,16 @@ _$_CodeSystemProperty1 _$_$_CodeSystemProperty1FromJson(
     valueString: json['valueString'] as String,
     valueInteger: json['valueInteger'] == null
         ? null
-        : Integer.fromJson(json['valueInteger'] as String),
+        : Integer.fromJson(json['valueInteger']),
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueDateTime: json['valueDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueDecimal: json['valueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+        : Decimal.fromJson(json['valueDecimal']),
   );
 }
 
@@ -2576,7 +2567,7 @@ _$_CompartmentDefinition _$_$_CompartmentDefinitionFromJson(
         unknownValue: CompartmentDefinitionStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -2598,9 +2589,7 @@ _$_CompartmentDefinition _$_$_CompartmentDefinitionFromJson(
         : Markdown.fromJson(json['purpose'] as String),
     code: _$enumDecodeNullable(_$CompartmentDefinitionCodeEnumMap, json['code'],
         unknownValue: CompartmentDefinitionCode.unknown),
-    search: json['search'] == null
-        ? null
-        : Boolean.fromJson(json['search'] as String),
+    search: json['search'] == null ? null : Boolean.fromJson(json['search']),
     resource: (json['resource'] as List)
         ?.map((e) => e == null
             ? null
@@ -3108,7 +3097,7 @@ _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
         unknownValue: ConceptMapStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -3667,9 +3656,8 @@ _$_ConsentVerification _$_$_ConsentVerificationFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    verified: json['verified'] == null
-        ? null
-        : Boolean.fromJson(json['verified'] as String),
+    verified:
+        json['verified'] == null ? null : Boolean.fromJson(json['verified']),
     verifiedWith: json['verifiedWith'] == null
         ? null
         : Reference.fromJson(json['verifiedWith'] as Map<String, dynamic>),
@@ -4397,7 +4385,7 @@ _$_ExampleScenario _$_$_ExampleScenarioFromJson(Map<String, dynamic> json) {
         unknownValue: ExampleScenarioStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -4763,9 +4751,7 @@ _$_ExampleScenarioStep _$_$_ExampleScenarioStepFromJson(
             ? null
             : ExampleScenarioProcess.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    pause: json['pause'] == null
-        ? null
-        : Boolean.fromJson(json['pause'] as String),
+    pause: json['pause'] == null ? null : Boolean.fromJson(json['pause']),
     operation: json['operation'] == null
         ? null
         : ExampleScenarioOperation.fromJson(
@@ -4825,10 +4811,10 @@ _$_ExampleScenarioOperation _$_$_ExampleScenarioOperationFromJson(
         : Markdown.fromJson(json['description'] as String),
     initiatorActive: json['initiatorActive'] == null
         ? null
-        : Boolean.fromJson(json['initiatorActive'] as String),
+        : Boolean.fromJson(json['initiatorActive']),
     receiverActive: json['receiverActive'] == null
         ? null
-        : Boolean.fromJson(json['receiverActive'] as String),
+        : Boolean.fromJson(json['receiverActive']),
     request: json['request'] == null
         ? null
         : ExampleScenarioContainedInstance.fromJson(
@@ -4953,7 +4939,7 @@ _$_GraphDefinition _$_$_GraphDefinitionFromJson(Map<String, dynamic> json) {
         unknownValue: GraphDefinitionStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -5055,7 +5041,7 @@ _$_GraphDefinitionLink _$_$_GraphDefinitionLinkFromJson(
         ?.toList(),
     path: json['path'] as String,
     sliceName: json['sliceName'] as String,
-    min: json['min'] == null ? null : Integer.fromJson(json['min'] as String),
+    min: json['min'] == null ? null : Integer.fromJson(json['min']),
     max: json['max'] as String,
     description: json['description'] as String,
     target: (json['target'] as List)
@@ -5248,7 +5234,7 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
         unknownValue: ImplementationGuideStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -5965,7 +5951,7 @@ _$_ImplementationGuideResource _$_$_ImplementationGuideResourceFromJson(
     description: json['description'] as String,
     exampleBoolean: json['exampleBoolean'] == null
         ? null
-        : Boolean.fromJson(json['exampleBoolean'] as String),
+        : Boolean.fromJson(json['exampleBoolean']),
     exampleCanonical: json['exampleCanonical'] == null
         ? null
         : Canonical.fromJson(json['exampleCanonical'] as String),
@@ -6265,7 +6251,7 @@ _$_ImplementationGuideResource1 _$_$_ImplementationGuideResource1FromJson(
         : Reference.fromJson(json['reference'] as Map<String, dynamic>),
     exampleBoolean: json['exampleBoolean'] == null
         ? null
-        : Boolean.fromJson(json['exampleBoolean'] as String),
+        : Boolean.fromJson(json['exampleBoolean']),
     exampleCanonical: json['exampleCanonical'] == null
         ? null
         : Canonical.fromJson(json['exampleCanonical'] as String),
@@ -6369,9 +6355,7 @@ _$_Linkage _$_$_LinkageFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    active: json['active'] == null
-        ? null
-        : Boolean.fromJson(json['active'] as String),
+    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     author: json['author'] == null
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
@@ -6628,7 +6612,7 @@ _$_MessageDefinition _$_$_MessageDefinitionFromJson(Map<String, dynamic> json) {
         unknownValue: MessageDefinitionStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -6788,9 +6772,7 @@ _$_MessageDefinitionFocus _$_$_MessageDefinitionFocusFromJson(
     profile: json['profile'] == null
         ? null
         : Canonical.fromJson(json['profile'] as String),
-    min: json['min'] == null
-        ? null
-        : UnsignedInt.fromJson(json['min'] as String),
+    min: json['min'] == null ? null : UnsignedInt.fromJson(json['min']),
     max: json['max'] as String,
   );
 }
@@ -7264,9 +7246,8 @@ _$_NamingSystemUniqueId _$_$_NamingSystemUniqueIdFromJson(
     type: _$enumDecodeNullable(_$UniqueIdTypeEnumMap, json['type'],
         unknownValue: UniqueIdType.unknown),
     value: json['value'] as String,
-    preferred: json['preferred'] == null
-        ? null
-        : Boolean.fromJson(json['preferred'] as String),
+    preferred:
+        json['preferred'] == null ? null : Boolean.fromJson(json['preferred']),
     comment: json['comment'] as String,
     period: json['period'] == null
         ? null
@@ -7348,7 +7329,7 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
         unknownValue: OperationDefinitionKind.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -7375,7 +7356,7 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
         : Markdown.fromJson(json['purpose'] as String),
     affectsState: json['affectsState'] == null
         ? null
-        : Boolean.fromJson(json['affectsState'] as String),
+        : Boolean.fromJson(json['affectsState']),
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     comment: json['comment'] == null
         ? null
@@ -7386,14 +7367,10 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
     resource: (json['resource'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    system: json['system'] == null
-        ? null
-        : Boolean.fromJson(json['system'] as String),
-    type:
-        json['type'] == null ? null : Boolean.fromJson(json['type'] as String),
-    instance: json['instance'] == null
-        ? null
-        : Boolean.fromJson(json['instance'] as String),
+    system: json['system'] == null ? null : Boolean.fromJson(json['system']),
+    type: json['type'] == null ? null : Boolean.fromJson(json['type']),
+    instance:
+        json['instance'] == null ? null : Boolean.fromJson(json['instance']),
     inputProfile: json['inputProfile'] == null
         ? null
         : Canonical.fromJson(json['inputProfile'] as String),
@@ -7499,7 +7476,7 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
     name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
     use: _$enumDecodeNullable(_$ParameterUseEnumMap, json['use'],
         unknownValue: ParameterUse.unknown),
-    min: json['min'] == null ? null : Integer.fromJson(json['min'] as String),
+    min: json['min'] == null ? null : Integer.fromJson(json['min']),
     max: json['max'] as String,
     documentation: json['documentation'] as String,
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
@@ -7925,7 +7902,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
         : Base64Binary.fromJson(json['valueBase64Binary'] as String),
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueCanonical: json['valueCanonical'] == null
         ? null
         : Canonical.fromJson(json['valueCanonical'] as String),
@@ -7940,7 +7917,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueDecimal: json['valueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+        : Decimal.fromJson(json['valueDecimal']),
     valueId:
         json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
     valueInstant: json['valueInstant'] == null
@@ -7948,7 +7925,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
         : Instant.fromJson(json['valueInstant'] as String),
     valueInteger: json['valueInteger'] == null
         ? null
-        : Integer.fromJson(json['valueInteger'] as String),
+        : Integer.fromJson(json['valueInteger']),
     valueMarkdown: json['valueMarkdown'] == null
         ? null
         : Markdown.fromJson(json['valueMarkdown'] as String),
@@ -7957,14 +7934,14 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
         : Oid.fromJson(json['valueOid'] as String),
     valuePositiveInt: json['valuePositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['valuePositiveInt'] as String),
+        : PositiveInt.fromJson(json['valuePositiveInt']),
     valueString: json['valueString'] as String,
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
     valueUnsignedInt: json['valueUnsignedInt'] == null
         ? null
-        : UnsignedInt.fromJson(json['valueUnsignedInt'] as String),
+        : UnsignedInt.fromJson(json['valueUnsignedInt']),
     valueUri: json['valueUri'] == null
         ? null
         : FhirUri.fromJson(json['valueUri'] as String),
@@ -8421,7 +8398,7 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
         unknownValue: SearchParameterStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -8462,10 +8439,10 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
         ?.toList(),
     multipleOr: json['multipleOr'] == null
         ? null
-        : Boolean.fromJson(json['multipleOr'] as String),
+        : Boolean.fromJson(json['multipleOr']),
     multipleAnd: json['multipleAnd'] == null
         ? null
-        : Boolean.fromJson(json['multipleAnd'] as String),
+        : Boolean.fromJson(json['multipleAnd']),
     comparator: (json['comparator'] as List)
         ?.map(
             (e) => _$enumDecodeNullable(_$SearchParameterComparatorEnumMap, e))
@@ -8689,7 +8666,7 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
         unknownValue: StructureDefinitionStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -8731,9 +8708,8 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
         ?.toList(),
     kind: _$enumDecodeNullable(_$StructureDefinitionKindEnumMap, json['kind'],
         unknownValue: StructureDefinitionKind.unknown),
-    abstract: json['abstract'] == null
-        ? null
-        : Boolean.fromJson(json['abstract'] as String),
+    abstract:
+        json['abstract'] == null ? null : Boolean.fromJson(json['abstract']),
     context: (json['context'] as List)
         ?.map((e) => e == null
             ? null
@@ -9083,7 +9059,7 @@ _$_StructureMap _$_$_StructureMapFromJson(Map<String, dynamic> json) {
         unknownValue: StructureMapStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -9425,7 +9401,7 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
         ?.toList(),
     context:
         json['context'] == null ? null : Id.fromJson(json['context'] as String),
-    min: json['min'] == null ? null : Integer.fromJson(json['min'] as String),
+    min: json['min'] == null ? null : Integer.fromJson(json['min']),
     max: json['max'] as String,
     type: json['type'] as String,
     defaultValueBase64Binary: json['defaultValueBase64Binary'] == null
@@ -9433,7 +9409,7 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
         : Base64Binary.fromJson(json['defaultValueBase64Binary'] as String),
     defaultValueBoolean: json['defaultValueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['defaultValueBoolean'] as String),
+        : Boolean.fromJson(json['defaultValueBoolean']),
     defaultValueCanonical: json['defaultValueCanonical'] == null
         ? null
         : Canonical.fromJson(json['defaultValueCanonical'] as String),
@@ -9448,7 +9424,7 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
         : FhirDateTime.fromJson(json['defaultValueDateTime'] as String),
     defaultValueDecimal: json['defaultValueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['defaultValueDecimal'] as String),
+        : Decimal.fromJson(json['defaultValueDecimal']),
     defaultValueId: json['defaultValueId'] == null
         ? null
         : Id.fromJson(json['defaultValueId'] as String),
@@ -9457,7 +9433,7 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
         : Instant.fromJson(json['defaultValueInstant'] as String),
     defaultValueInteger: json['defaultValueInteger'] == null
         ? null
-        : Integer.fromJson(json['defaultValueInteger'] as String),
+        : Integer.fromJson(json['defaultValueInteger']),
     defaultValueMarkdown: json['defaultValueMarkdown'] == null
         ? null
         : Markdown.fromJson(json['defaultValueMarkdown'] as String),
@@ -9466,14 +9442,14 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
         : Oid.fromJson(json['defaultValueOid'] as String),
     defaultValuePositiveInt: json['defaultValuePositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['defaultValuePositiveInt'] as String),
+        : PositiveInt.fromJson(json['defaultValuePositiveInt']),
     defaultValueString: json['defaultValueString'] as String,
     defaultValueTime: json['defaultValueTime'] == null
         ? null
         : Time.fromJson(json['defaultValueTime'] as String),
     defaultValueUnsignedInt: json['defaultValueUnsignedInt'] == null
         ? null
-        : UnsignedInt.fromJson(json['defaultValueUnsignedInt'] as String),
+        : UnsignedInt.fromJson(json['defaultValueUnsignedInt']),
     defaultValueUri: json['defaultValueUri'] == null
         ? null
         : FhirUri.fromJson(json['defaultValueUri'] as String),
@@ -9838,13 +9814,13 @@ _$_StructureMapParameter _$_$_StructureMapParameterFromJson(
     valueString: json['valueString'] as String,
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueInteger: json['valueInteger'] == null
         ? null
-        : Integer.fromJson(json['valueInteger'] as String),
+        : Integer.fromJson(json['valueInteger']),
     valueDecimal: json['valueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+        : Decimal.fromJson(json['valueDecimal']),
   );
 }
 
@@ -10094,7 +10070,7 @@ _$_TerminologyCapabilities _$_$_TerminologyCapabilitiesFromJson(
         unknownValue: TerminologyCapabilitiesStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -10133,7 +10109,7 @@ _$_TerminologyCapabilities _$_$_TerminologyCapabilitiesFromJson(
             json['implementation'] as Map<String, dynamic>),
     lockedDate: json['lockedDate'] == null
         ? null
-        : Boolean.fromJson(json['lockedDate'] as String),
+        : Boolean.fromJson(json['lockedDate']),
     codeSystem: (json['codeSystem'] as List)
         ?.map((e) => e == null
             ? null
@@ -10331,7 +10307,7 @@ _$_TerminologyCapabilitiesCodeSystem
         ?.toList(),
     subsumption: json['subsumption'] == null
         ? null
-        : Boolean.fromJson(json['subsumption'] as String),
+        : Boolean.fromJson(json['subsumption']),
   );
 }
 
@@ -10371,12 +10347,11 @@ _$_TerminologyCapabilitiesVersion _$_$_TerminologyCapabilitiesVersionFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     code: json['code'] as String,
-    isDefault: json['isDefault'] == null
-        ? null
-        : Boolean.fromJson(json['isDefault'] as String),
+    isDefault:
+        json['isDefault'] == null ? null : Boolean.fromJson(json['isDefault']),
     compositional: json['compositional'] == null
         ? null
-        : Boolean.fromJson(json['compositional'] as String),
+        : Boolean.fromJson(json['compositional']),
     language: (json['language'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
@@ -10474,13 +10449,11 @@ _$_TerminologyCapabilitiesExpansion
         ?.toList(),
     hierarchical: json['hierarchical'] == null
         ? null
-        : Boolean.fromJson(json['hierarchical'] as String),
-    paging: json['paging'] == null
-        ? null
-        : Boolean.fromJson(json['paging'] as String),
+        : Boolean.fromJson(json['hierarchical']),
+    paging: json['paging'] == null ? null : Boolean.fromJson(json['paging']),
     incomplete: json['incomplete'] == null
         ? null
-        : Boolean.fromJson(json['incomplete'] as String),
+        : Boolean.fromJson(json['incomplete']),
     parameter: (json['parameter'] as List)
         ?.map((e) => e == null
             ? null
@@ -10573,7 +10546,7 @@ _$_TerminologyCapabilitiesValidateCode
         ?.toList(),
     translations: json['translations'] == null
         ? null
-        : Boolean.fromJson(json['translations'] as String),
+        : Boolean.fromJson(json['translations']),
   );
 }
 
@@ -10610,9 +10583,8 @@ _$_TerminologyCapabilitiesTranslation
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    needsMap: json['needsMap'] == null
-        ? null
-        : Boolean.fromJson(json['needsMap'] as String),
+    needsMap:
+        json['needsMap'] == null ? null : Boolean.fromJson(json['needsMap']),
   );
 }
 
@@ -10651,7 +10623,7 @@ _$_TerminologyCapabilitiesClosure _$_$_TerminologyCapabilitiesClosureFromJson(
         ?.toList(),
     translation: json['translation'] == null
         ? null
-        : Boolean.fromJson(json['translation'] as String),
+        : Boolean.fromJson(json['translation']),
   );
 }
 
@@ -10717,7 +10689,7 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
         unknownValue: ValueSetStatus.unknown),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental'] as String),
+        : Boolean.fromJson(json['experimental']),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -10739,9 +10711,8 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    immutable: json['immutable'] == null
-        ? null
-        : Boolean.fromJson(json['immutable'] as String),
+    immutable:
+        json['immutable'] == null ? null : Boolean.fromJson(json['immutable']),
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -10826,9 +10797,8 @@ _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
     lockedDate: json['lockedDate'] == null
         ? null
         : Date.fromJson(json['lockedDate'] as String),
-    inactive: json['inactive'] == null
-        ? null
-        : Boolean.fromJson(json['inactive'] as String),
+    inactive:
+        json['inactive'] == null ? null : Boolean.fromJson(json['inactive']),
     include: (json['include'] as List)
         ?.map((e) => e == null
             ? null
@@ -11082,12 +11052,8 @@ _$_ValueSetExpansion _$_$_ValueSetExpansionFromJson(Map<String, dynamic> json) {
     timestamp: json['timestamp'] == null
         ? null
         : FhirDateTime.fromJson(json['timestamp'] as String),
-    total: json['total'] == null
-        ? null
-        : Integer.fromJson(json['total'] as String),
-    offset: json['offset'] == null
-        ? null
-        : Integer.fromJson(json['offset'] as String),
+    total: json['total'] == null ? null : Integer.fromJson(json['total']),
+    offset: json['offset'] == null ? null : Integer.fromJson(json['offset']),
     parameter: (json['parameter'] as List)
         ?.map((e) => e == null
             ? null
@@ -11144,13 +11110,13 @@ _$_ValueSetParameter _$_$_ValueSetParameterFromJson(Map<String, dynamic> json) {
     valueString: json['valueString'] as String,
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueInteger: json['valueInteger'] == null
         ? null
-        : Integer.fromJson(json['valueInteger'] as String),
+        : Integer.fromJson(json['valueInteger']),
     valueDecimal: json['valueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+        : Decimal.fromJson(json['valueDecimal']),
     valueUri: json['valueUri'] == null
         ? null
         : FhirUri.fromJson(json['valueUri'] as String),
@@ -11205,12 +11171,10 @@ _$_ValueSetContains _$_$_ValueSetContainsFromJson(Map<String, dynamic> json) {
     system: json['system'] == null
         ? null
         : FhirUri.fromJson(json['system'] as String),
-    abstract: json['abstract'] == null
-        ? null
-        : Boolean.fromJson(json['abstract'] as String),
-    inactive: json['inactive'] == null
-        ? null
-        : Boolean.fromJson(json['inactive'] as String),
+    abstract:
+        json['abstract'] == null ? null : Boolean.fromJson(json['abstract']),
+    inactive:
+        json['inactive'] == null ? null : Boolean.fromJson(json['inactive']),
     version: json['version'] as String,
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     display: json['display'] as String,

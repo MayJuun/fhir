@@ -63,9 +63,7 @@ _$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
         ? null
         : Base64Binary.fromJson(json['data'] as String),
     url: json['url'] == null ? null : FhirUrl.fromJson(json['url'] as String),
-    size: json['size'] == null
-        ? null
-        : UnsignedInt.fromJson(json['size'] as String),
+    size: json['size'] == null ? null : UnsignedInt.fromJson(json['size']),
     hash: json['hash'] == null
         ? null
         : Base64Binary.fromJson(json['hash'] as String),
@@ -236,7 +234,7 @@ _$_Coding _$_$_CodingFromJson(Map<String, dynamic> json) {
     display: json['display'] as String,
     userSelected: json['userSelected'] == null
         ? null
-        : Boolean.fromJson(json['userSelected'] as String),
+        : Boolean.fromJson(json['userSelected']),
   );
 }
 
@@ -268,9 +266,7 @@ _$_Quantity _$_$_QuantityFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    value: json['value'] == null
-        ? null
-        : Decimal.fromJson(json['value'] as String),
+    value: json['value'] == null ? null : Decimal.fromJson(json['value']),
     comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator'],
         unknownValue: Comparator.unknown),
     unit: json['unit'] as String,
@@ -317,9 +313,7 @@ _$_Duration _$_$_DurationFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    value: json['value'] == null
-        ? null
-        : Decimal.fromJson(json['value'] as String),
+    value: json['value'] == null ? null : Decimal.fromJson(json['value']),
     comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator'],
         unknownValue: Comparator.unknown),
     unit: json['unit'] as String,
@@ -358,9 +352,7 @@ _$_Distance _$_$_DistanceFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    value: json['value'] == null
-        ? null
-        : Decimal.fromJson(json['value'] as String),
+    value: json['value'] == null ? null : Decimal.fromJson(json['value']),
     comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator'],
         unknownValue: Comparator.unknown),
     unit: json['unit'] as String,
@@ -399,9 +391,7 @@ _$_Count _$_$_CountFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    value: json['value'] == null
-        ? null
-        : Decimal.fromJson(json['value'] as String),
+    value: json['value'] == null ? null : Decimal.fromJson(json['value']),
     comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator'],
         unknownValue: Comparator.unknown),
     unit: json['unit'] as String,
@@ -440,9 +430,7 @@ _$_Money _$_$_MoneyFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    value: json['value'] == null
-        ? null
-        : Decimal.fromJson(json['value'] as String),
+    value: json['value'] == null ? null : Decimal.fromJson(json['value']),
     currency: json['currency'] == null
         ? null
         : Code.fromJson(json['currency'] as String),
@@ -474,9 +462,7 @@ _$_Age _$_$_AgeFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    value: json['value'] == null
-        ? null
-        : Decimal.fromJson(json['value'] as String),
+    value: json['value'] == null ? null : Decimal.fromJson(json['value']),
     comparator: _$enumDecodeNullable(_$ComparatorEnumMap, json['comparator'],
         unknownValue: Comparator.unknown),
     unit: json['unit'] as String,
@@ -621,21 +607,17 @@ _$_SampledData _$_$_SampledDataFromJson(Map<String, dynamic> json) {
     origin: json['origin'] == null
         ? null
         : Quantity.fromJson(json['origin'] as Map<String, dynamic>),
-    period: json['period'] == null
-        ? null
-        : Decimal.fromJson(json['period'] as String),
-    factor: json['factor'] == null
-        ? null
-        : Decimal.fromJson(json['factor'] as String),
+    period: json['period'] == null ? null : Decimal.fromJson(json['period']),
+    factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
     lowerLimit: json['lowerLimit'] == null
         ? null
-        : Decimal.fromJson(json['lowerLimit'] as String),
+        : Decimal.fromJson(json['lowerLimit']),
     upperLimit: json['upperLimit'] == null
         ? null
-        : Decimal.fromJson(json['upperLimit'] as String),
+        : Decimal.fromJson(json['upperLimit']),
     dimensions: json['dimensions'] == null
         ? null
-        : PositiveInt.fromJson(json['dimensions'] as String),
+        : PositiveInt.fromJson(json['dimensions']),
     data: json['data'] as String,
   );
 }
@@ -850,9 +832,7 @@ _$_ContactPoint _$_$_ContactPointFromJson(Map<String, dynamic> json) {
     value: json['value'] as String,
     use: _$enumDecodeNullable(_$ContactPointUseEnumMap, json['use'],
         unknownValue: ContactPointUse.unknown),
-    rank: json['rank'] == null
-        ? null
-        : PositiveInt.fromJson(json['rank'] as String),
+    rank: json['rank'] == null ? null : PositiveInt.fromJson(json['rank']),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -966,33 +946,27 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
     boundsPeriod: json['boundsPeriod'] == null
         ? null
         : Period.fromJson(json['boundsPeriod'] as Map<String, dynamic>),
-    count: json['count'] == null
-        ? null
-        : PositiveInt.fromJson(json['count'] as String),
+    count: json['count'] == null ? null : PositiveInt.fromJson(json['count']),
     countMax: json['countMax'] == null
         ? null
-        : PositiveInt.fromJson(json['countMax'] as String),
-    duration: json['duration'] == null
-        ? null
-        : Decimal.fromJson(json['duration'] as String),
+        : PositiveInt.fromJson(json['countMax']),
+    duration:
+        json['duration'] == null ? null : Decimal.fromJson(json['duration']),
     durationMax: json['durationMax'] == null
         ? null
-        : Decimal.fromJson(json['durationMax'] as String),
+        : Decimal.fromJson(json['durationMax']),
     durationUnit: _$enumDecodeNullable(
         _$RepeatDurationUnitEnumMap, json['durationUnit'],
         unknownValue: RepeatDurationUnit.unknown),
     frequency: json['frequency'] == null
         ? null
-        : PositiveInt.fromJson(json['frequency'] as String),
+        : PositiveInt.fromJson(json['frequency']),
     frequencyMax: json['frequencyMax'] == null
         ? null
-        : PositiveInt.fromJson(json['frequencyMax'] as String),
-    period: json['period'] == null
-        ? null
-        : Decimal.fromJson(json['period'] as String),
-    periodMax: json['periodMax'] == null
-        ? null
-        : Decimal.fromJson(json['periodMax'] as String),
+        : PositiveInt.fromJson(json['frequencyMax']),
+    period: json['period'] == null ? null : Decimal.fromJson(json['period']),
+    periodMax:
+        json['periodMax'] == null ? null : Decimal.fromJson(json['periodMax']),
     periodUnit: _$enumDecodeNullable(
         _$RepeatPeriodUnitEnumMap, json['periodUnit'],
         unknownValue: RepeatPeriodUnit.unknown),
@@ -1005,9 +979,8 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
     when: (json['when'] as List)
         ?.map((e) => _$enumDecodeNullable(_$RepeatWhenEnumMap, e))
         ?.toList(),
-    offset: json['offset'] == null
-        ? null
-        : UnsignedInt.fromJson(json['offset'] as String),
+    offset:
+        json['offset'] == null ? null : UnsignedInt.fromJson(json['offset']),
   );
 }
 

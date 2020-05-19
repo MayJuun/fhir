@@ -181,9 +181,8 @@ _$_Dosage _$_$_DosageFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    sequence: json['sequence'] == null
-        ? null
-        : Integer.fromJson(json['sequence'] as String),
+    sequence:
+        json['sequence'] == null ? null : Integer.fromJson(json['sequence']),
     text: json['text'] as String,
     additionalInstruction: (json['additionalInstruction'] as List)
         ?.map((e) => e == null
@@ -196,7 +195,7 @@ _$_Dosage _$_$_DosageFromJson(Map<String, dynamic> json) {
         : Timing.fromJson(json['timing'] as Map<String, dynamic>),
     asNeededBoolean: json['asNeededBoolean'] == null
         ? null
-        : Boolean.fromJson(json['asNeededBoolean'] as String),
+        : Boolean.fromJson(json['asNeededBoolean']),
     asNeededCodeableConcept: json['asNeededCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -342,7 +341,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
     sliceName: json['sliceName'] as String,
     sliceIsConstraining: json['sliceIsConstraining'] == null
         ? null
-        : Boolean.fromJson(json['sliceIsConstraining'] as String),
+        : Boolean.fromJson(json['sliceIsConstraining']),
     label: json['label'] as String,
     code: (json['code'] as List)
         ?.map((e) =>
@@ -363,9 +362,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : Markdown.fromJson(json['requirements'] as String),
     alias: (json['alias'] as List)?.map((e) => e as String)?.toList(),
-    min: json['min'] == null
-        ? null
-        : UnsignedInt.fromJson(json['min'] as String),
+    min: json['min'] == null ? null : UnsignedInt.fromJson(json['min']),
     max: json['max'] as String,
     base: json['base'] == null
         ? null
@@ -383,7 +380,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Base64Binary.fromJson(json['defaultValueBase64Binary'] as String),
     defaultValueBoolean: json['defaultValueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['defaultValueBoolean'] as String),
+        : Boolean.fromJson(json['defaultValueBoolean']),
     defaultValueCanonical: json['defaultValueCanonical'] == null
         ? null
         : Canonical.fromJson(json['defaultValueCanonical'] as String),
@@ -398,7 +395,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : FhirDateTime.fromJson(json['defaultValueDateTime'] as String),
     defaultValueDecimal: json['defaultValueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['defaultValueDecimal'] as String),
+        : Decimal.fromJson(json['defaultValueDecimal']),
     defaultValueId: json['defaultValueId'] == null
         ? null
         : Id.fromJson(json['defaultValueId'] as String),
@@ -407,7 +404,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Instant.fromJson(json['defaultValueInstant'] as String),
     defaultValueInteger: json['defaultValueInteger'] == null
         ? null
-        : Integer.fromJson(json['defaultValueInteger'] as String),
+        : Integer.fromJson(json['defaultValueInteger']),
     defaultValueMarkdown: json['defaultValueMarkdown'] == null
         ? null
         : Markdown.fromJson(json['defaultValueMarkdown'] as String),
@@ -416,14 +413,14 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Oid.fromJson(json['defaultValueOid'] as String),
     defaultValuePositiveInt: json['defaultValuePositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['defaultValuePositiveInt'] as String),
+        : PositiveInt.fromJson(json['defaultValuePositiveInt']),
     defaultValueString: json['defaultValueString'] as String,
     defaultValueTime: json['defaultValueTime'] == null
         ? null
         : Time.fromJson(json['defaultValueTime'] as String),
     defaultValueUnsignedInt: json['defaultValueUnsignedInt'] == null
         ? null
-        : UnsignedInt.fromJson(json['defaultValueUnsignedInt'] as String),
+        : UnsignedInt.fromJson(json['defaultValueUnsignedInt']),
     defaultValueUri: json['defaultValueUri'] == null
         ? null
         : FhirUri.fromJson(json['defaultValueUri'] as String),
@@ -556,7 +553,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Base64Binary.fromJson(json['fixedBase64Binary'] as String),
     fixedBoolean: json['fixedBoolean'] == null
         ? null
-        : Boolean.fromJson(json['fixedBoolean'] as String),
+        : Boolean.fromJson(json['fixedBoolean']),
     fixedCanonical: json['fixedCanonical'] == null
         ? null
         : Canonical.fromJson(json['fixedCanonical'] as String),
@@ -571,7 +568,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : FhirDateTime.fromJson(json['fixedDateTime'] as String),
     fixedDecimal: json['fixedDecimal'] == null
         ? null
-        : Decimal.fromJson(json['fixedDecimal'] as String),
+        : Decimal.fromJson(json['fixedDecimal']),
     fixedId:
         json['fixedId'] == null ? null : Id.fromJson(json['fixedId'] as String),
     fixedInstant: json['fixedInstant'] == null
@@ -579,7 +576,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Instant.fromJson(json['fixedInstant'] as String),
     fixedInteger: json['fixedInteger'] == null
         ? null
-        : Integer.fromJson(json['fixedInteger'] as String),
+        : Integer.fromJson(json['fixedInteger']),
     fixedMarkdown: json['fixedMarkdown'] == null
         ? null
         : Markdown.fromJson(json['fixedMarkdown'] as String),
@@ -588,14 +585,14 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Oid.fromJson(json['fixedOid'] as String),
     fixedPositiveInt: json['fixedPositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['fixedPositiveInt'] as String),
+        : PositiveInt.fromJson(json['fixedPositiveInt']),
     fixedString: json['fixedString'] as String,
     fixedTime: json['fixedTime'] == null
         ? null
         : Time.fromJson(json['fixedTime'] as String),
     fixedUnsignedInt: json['fixedUnsignedInt'] == null
         ? null
-        : UnsignedInt.fromJson(json['fixedUnsignedInt'] as String),
+        : UnsignedInt.fromJson(json['fixedUnsignedInt']),
     fixedUri: json['fixedUri'] == null
         ? null
         : FhirUri.fromJson(json['fixedUri'] as String),
@@ -713,7 +710,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Base64Binary.fromJson(json['patternBase64Binary'] as String),
     patternBoolean: json['patternBoolean'] == null
         ? null
-        : Boolean.fromJson(json['patternBoolean'] as String),
+        : Boolean.fromJson(json['patternBoolean']),
     patternCanonical: json['patternCanonical'] == null
         ? null
         : Canonical.fromJson(json['patternCanonical'] as String),
@@ -728,7 +725,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : FhirDateTime.fromJson(json['patternDateTime'] as String),
     patternDecimal: json['patternDecimal'] == null
         ? null
-        : Decimal.fromJson(json['patternDecimal'] as String),
+        : Decimal.fromJson(json['patternDecimal']),
     patternId: json['patternId'] == null
         ? null
         : Id.fromJson(json['patternId'] as String),
@@ -737,7 +734,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Instant.fromJson(json['patternInstant'] as String),
     patternInteger: json['patternInteger'] == null
         ? null
-        : Integer.fromJson(json['patternInteger'] as String),
+        : Integer.fromJson(json['patternInteger']),
     patternMarkdown: json['patternMarkdown'] == null
         ? null
         : Markdown.fromJson(json['patternMarkdown'] as String),
@@ -746,14 +743,14 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Oid.fromJson(json['patternOid'] as String),
     patternPositiveInt: json['patternPositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['patternPositiveInt'] as String),
+        : PositiveInt.fromJson(json['patternPositiveInt']),
     patternString: json['patternString'] as String,
     patternTime: json['patternTime'] == null
         ? null
         : Time.fromJson(json['patternTime'] as String),
     patternUnsignedInt: json['patternUnsignedInt'] == null
         ? null
-        : UnsignedInt.fromJson(json['patternUnsignedInt'] as String),
+        : UnsignedInt.fromJson(json['patternUnsignedInt']),
     patternUri: json['patternUri'] == null
         ? null
         : FhirUri.fromJson(json['patternUri'] as String),
@@ -889,16 +886,16 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Time.fromJson(json['minValueTime'] as String),
     minValueDecimal: json['minValueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['minValueDecimal'] as String),
+        : Decimal.fromJson(json['minValueDecimal']),
     minValueInteger: json['minValueInteger'] == null
         ? null
-        : Integer.fromJson(json['minValueInteger'] as String),
+        : Integer.fromJson(json['minValueInteger']),
     minValuePositiveInt: json['minValuePositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['minValuePositiveInt'] as String),
+        : PositiveInt.fromJson(json['minValuePositiveInt']),
     minValueUnsignedInt: json['minValueUnsignedInt'] == null
         ? null
-        : UnsignedInt.fromJson(json['minValueUnsignedInt'] as String),
+        : UnsignedInt.fromJson(json['minValueUnsignedInt']),
     minValueQuantity: json['minValueQuantity'] == null
         ? null
         : Quantity.fromJson(json['minValueQuantity'] as Map<String, dynamic>),
@@ -916,22 +913,21 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Time.fromJson(json['maxValueTime'] as String),
     maxValueDecimal: json['maxValueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['maxValueDecimal'] as String),
+        : Decimal.fromJson(json['maxValueDecimal']),
     maxValueInteger: json['maxValueInteger'] == null
         ? null
-        : Integer.fromJson(json['maxValueInteger'] as String),
+        : Integer.fromJson(json['maxValueInteger']),
     maxValuePositiveInt: json['maxValuePositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['maxValuePositiveInt'] as String),
+        : PositiveInt.fromJson(json['maxValuePositiveInt']),
     maxValueUnsignedInt: json['maxValueUnsignedInt'] == null
         ? null
-        : UnsignedInt.fromJson(json['maxValueUnsignedInt'] as String),
+        : UnsignedInt.fromJson(json['maxValueUnsignedInt']),
     maxValueQuantity: json['maxValueQuantity'] == null
         ? null
         : Quantity.fromJson(json['maxValueQuantity'] as Map<String, dynamic>),
-    maxLength: json['maxLength'] == null
-        ? null
-        : Integer.fromJson(json['maxLength'] as String),
+    maxLength:
+        json['maxLength'] == null ? null : Integer.fromJson(json['maxLength']),
     condition: (json['condition'] as List)
         ?.map((e) => e == null ? null : Id.fromJson(e as String))
         ?.toList(),
@@ -942,14 +938,13 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ?.toList(),
     mustSupport: json['mustSupport'] == null
         ? null
-        : Boolean.fromJson(json['mustSupport'] as String),
+        : Boolean.fromJson(json['mustSupport']),
     isModifier: json['isModifier'] == null
         ? null
-        : Boolean.fromJson(json['isModifier'] as String),
+        : Boolean.fromJson(json['isModifier']),
     isModifierReason: json['isModifierReason'] as String,
-    isSummary: json['isSummary'] == null
-        ? null
-        : Boolean.fromJson(json['isSummary'] as String),
+    isSummary:
+        json['isSummary'] == null ? null : Boolean.fromJson(json['isSummary']),
     binding: json['binding'] == null
         ? null
         : ElementDefinitionBinding.fromJson(
@@ -1241,9 +1236,7 @@ _$_ElementDefinitionSlicing _$_$_ElementDefinitionSlicingFromJson(
                 e as Map<String, dynamic>))
         ?.toList(),
     description: json['description'] as String,
-    ordered: json['ordered'] == null
-        ? null
-        : Boolean.fromJson(json['ordered'] as String),
+    ordered: json['ordered'] == null ? null : Boolean.fromJson(json['ordered']),
     rules: _$enumDecodeNullable(_$SlicingRulesEnumMap, json['rules'],
         unknownValue: SlicingRules.unknown),
   );
@@ -1343,9 +1336,7 @@ _$_ElementDefinitionBase _$_$_ElementDefinitionBaseFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     path: json['path'] as String,
-    min: json['min'] == null
-        ? null
-        : UnsignedInt.fromJson(json['min'] as String),
+    min: json['min'] == null ? null : UnsignedInt.fromJson(json['min']),
     max: json['max'] as String,
   );
 }
@@ -1461,7 +1452,7 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
         : Base64Binary.fromJson(json['valueBase64Binary'] as String),
     valueBoolean: json['valueBoolean'] == null
         ? null
-        : Boolean.fromJson(json['valueBoolean'] as String),
+        : Boolean.fromJson(json['valueBoolean']),
     valueCanonical: json['valueCanonical'] == null
         ? null
         : Canonical.fromJson(json['valueCanonical'] as String),
@@ -1476,7 +1467,7 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueDecimal: json['valueDecimal'] == null
         ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+        : Decimal.fromJson(json['valueDecimal']),
     valueId:
         json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
     valueInstant: json['valueInstant'] == null
@@ -1484,7 +1475,7 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
         : Instant.fromJson(json['valueInstant'] as String),
     valueInteger: json['valueInteger'] == null
         ? null
-        : Integer.fromJson(json['valueInteger'] as String),
+        : Integer.fromJson(json['valueInteger']),
     valueMarkdown: json['valueMarkdown'] == null
         ? null
         : Markdown.fromJson(json['valueMarkdown'] as String),
@@ -1493,14 +1484,14 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
         : Oid.fromJson(json['valueOid'] as String),
     valuePositiveInt: json['valuePositiveInt'] == null
         ? null
-        : PositiveInt.fromJson(json['valuePositiveInt'] as String),
+        : PositiveInt.fromJson(json['valuePositiveInt']),
     valueString: json['valueString'] as String,
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
     valueUnsignedInt: json['valueUnsignedInt'] == null
         ? null
-        : UnsignedInt.fromJson(json['valueUnsignedInt'] as String),
+        : UnsignedInt.fromJson(json['valueUnsignedInt']),
     valueUri: json['valueUri'] == null
         ? null
         : FhirUri.fromJson(json['valueUri'] as String),
