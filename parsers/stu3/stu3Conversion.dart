@@ -85,8 +85,8 @@ Future<void> writeFile(String text, String obj) async {
   if (fileName != null) {
     var file = await File(fileName).readAsString();
     file += text;
-    // await File(dir).writeAsString(file);
-    print(file);
+    await File(fileName).writeAsString(file);
+    // print(file);
   }
 }
 
