@@ -1,5 +1,7 @@
-export 'conformance/conformance.dart';
-export 'documents/documents.dart';
-export 'other/other.dart';
-export 'security/security.dart';
-export 'terminology/terminology.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
+
+import '../../../../fhir_stu3.dart';
+
+part 'foundation.freezed.dart';
+part 'foundation.g.dart';

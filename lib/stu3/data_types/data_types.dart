@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../fhir_r4.dart';
+import '../../fhir_stu3.dart';
 
 part 'resource.freezed.dart';
 part 'resource.g.dart';
@@ -27,6 +27,76 @@ class Resource {
 
   static dynamic fromJson(Map<String, dynamic> json) {
     switch (json['resourceType']) {
+      case 'Element':
+        return Element.fromJson(json);
+      case 'Extension':
+        return Extension.fromJson(json);
+      case 'BackboneElement':
+        return BackboneElement.fromJson(json);
+      case 'Narrative':
+        return Narrative.fromJson(json);
+      case 'Annotation':
+        return Annotation.fromJson(json);
+      case 'Attachment':
+        return Attachment.fromJson(json);
+      case 'Identifier':
+        return Identifier.fromJson(json);
+      case 'CodeableConcept':
+        return CodeableConcept.fromJson(json);
+      case 'Coding':
+        return Coding.fromJson(json);
+      case 'Quantity':
+        return Quantity.fromJson(json);
+      case 'Duration':
+        return Duration.fromJson(json);
+      case 'Distance':
+        return Distance.fromJson(json);
+      case 'Count':
+        return Count.fromJson(json);
+      case 'Money':
+        return Money.fromJson(json);
+      case 'Age':
+        return Age.fromJson(json);
+      case 'Range':
+        return Range.fromJson(json);
+      case 'Period':
+        return Period.fromJson(json);
+      case 'Ratio':
+        return Ratio.fromJson(json);
+      case 'Reference':
+        return Reference.fromJson(json);
+      case 'SampledData':
+        return SampledData.fromJson(json);
+      case 'Signature':
+        return Signature.fromJson(json);
+      case 'HumanName':
+        return HumanName.fromJson(json);
+      case 'Address':
+        return Address.fromJson(json);
+      case 'ContactPoint':
+        return ContactPoint.fromJson(json);
+      case 'Timing':
+        return Timing.fromJson(json);
+      case 'Meta':
+        return Meta.fromJson(json);
+      case 'ElementDefinition':
+        return ElementDefinition.fromJson(json);
+      case 'ContactDetail':
+        return ContactDetail.fromJson(json);
+      case 'Contributor':
+        return Contributor.fromJson(json);
+      case 'Dosage':
+        return Dosage.fromJson(json);
+      case 'RelatedArtifact':
+        return RelatedArtifact.fromJson(json);
+      case 'UsageContext':
+        return UsageContext.fromJson(json);
+      case 'DataRequirement':
+        return DataRequirement.fromJson(json);
+      case 'ParameterDefinition':
+        return ParameterDefinition.fromJson(json);
+      case 'TriggerDefinition':
+        return TriggerDefinition.fromJson(json);
       case 'Account':
         return Account.fromJson(json);
       case 'ActivityDefinition':
@@ -45,10 +115,8 @@ class Resource {
         return Basic.fromJson(json);
       case 'Binary':
         return Binary.fromJson(json);
-      case 'BiologicallyDerivedProduct':
-        return BiologicallyDerivedProduct.fromJson(json);
-      case 'BodyStructure':
-        return BodyStructure.fromJson(json);
+      case 'BodySite':
+        return BodySite.fromJson(json);
       case 'Bundle':
         return Bundle.fromJson(json);
       case 'CapabilityStatement':
@@ -57,12 +125,8 @@ class Resource {
         return CarePlan.fromJson(json);
       case 'CareTeam':
         return CareTeam.fromJson(json);
-      case 'CatalogEntry':
-        return CatalogEntry.fromJson(json);
       case 'ChargeItem':
         return ChargeItem.fromJson(json);
-      case 'ChargeItemDefinition':
-        return ChargeItemDefinition.fromJson(json);
       case 'Claim':
         return Claim.fromJson(json);
       case 'ClaimResponse':
@@ -89,16 +153,14 @@ class Resource {
         return Contract.fromJson(json);
       case 'Coverage':
         return Coverage.fromJson(json);
-      case 'CoverageEligibilityRequest':
-        return CoverageEligibilityRequest.fromJson(json);
-      case 'CoverageEligibilityResponse':
-        return CoverageEligibilityResponse.fromJson(json);
+      case 'DataElement':
+        return DataElement.fromJson(json);
       case 'DetectedIssue':
         return DetectedIssue.fromJson(json);
       case 'Device':
         return Device.fromJson(json);
-      case 'DeviceDefinition':
-        return DeviceDefinition.fromJson(json);
+      case 'DeviceComponent':
+        return DeviceComponent.fromJson(json);
       case 'DeviceMetric':
         return DeviceMetric.fromJson(json);
       case 'DeviceRequest':
@@ -111,8 +173,12 @@ class Resource {
         return DocumentManifest.fromJson(json);
       case 'DocumentReference':
         return DocumentReference.fromJson(json);
-      case 'EffectEvidenceSynthesis':
-        return EffectEvidenceSynthesis.fromJson(json);
+      case 'DomainResource':
+        return DomainResource.fromJson(json);
+      case 'EligibilityRequest':
+        return EligibilityRequest.fromJson(json);
+      case 'EligibilityResponse':
+        return EligibilityResponse.fromJson(json);
       case 'Encounter':
         return Encounter.fromJson(json);
       case 'Endpoint':
@@ -123,14 +189,8 @@ class Resource {
         return EnrollmentResponse.fromJson(json);
       case 'EpisodeOfCare':
         return EpisodeOfCare.fromJson(json);
-      case 'EventDefinition':
-        return EventDefinition.fromJson(json);
-      case 'Evidence':
-        return Evidence.fromJson(json);
-      case 'EvidenceVariable':
-        return EvidenceVariable.fromJson(json);
-      case 'ExampleScenario':
-        return ExampleScenario.fromJson(json);
+      case 'ExpansionProfile':
+        return ExpansionProfile.fromJson(json);
       case 'ExplanationOfBenefit':
         return ExplanationOfBenefit.fromJson(json);
       case 'FamilyMemberHistory':
@@ -147,20 +207,16 @@ class Resource {
         return GuidanceResponse.fromJson(json);
       case 'HealthcareService':
         return HealthcareService.fromJson(json);
+      case 'ImagingManifest':
+        return ImagingManifest.fromJson(json);
       case 'ImagingStudy':
         return ImagingStudy.fromJson(json);
       case 'Immunization':
         return Immunization.fromJson(json);
-      case 'ImmunizationEvaluation':
-        return ImmunizationEvaluation.fromJson(json);
       case 'ImmunizationRecommendation':
         return ImmunizationRecommendation.fromJson(json);
       case 'ImplementationGuide':
         return ImplementationGuide.fromJson(json);
-      case 'InsurancePlan':
-        return InsurancePlan.fromJson(json);
-      case 'Invoice':
-        return Invoice.fromJson(json);
       case 'Library':
         return Library.fromJson(json);
       case 'Linkage':
@@ -181,54 +237,26 @@ class Resource {
         return MedicationAdministration.fromJson(json);
       case 'MedicationDispense':
         return MedicationDispense.fromJson(json);
-      case 'MedicationKnowledge':
-        return MedicationKnowledge.fromJson(json);
       case 'MedicationRequest':
         return MedicationRequest.fromJson(json);
       case 'MedicationStatement':
         return MedicationStatement.fromJson(json);
-      case 'MedicinalProduct':
-        return MedicinalProduct.fromJson(json);
-      case 'MedicinalProductAuthorization':
-        return MedicinalProductAuthorization.fromJson(json);
-      case 'MedicinalProductContraindication':
-        return MedicinalProductContraindication.fromJson(json);
-      case 'MedicinalProductIndication':
-        return MedicinalProductIndication.fromJson(json);
-      case 'MedicinalProductIngredient':
-        return MedicinalProductIngredient.fromJson(json);
-      case 'MedicinalProductInteraction':
-        return MedicinalProductInteraction.fromJson(json);
-      case 'MedicinalProductManufactured':
-        return MedicinalProductManufactured.fromJson(json);
-      case 'MedicinalProductPackaged':
-        return MedicinalProductPackaged.fromJson(json);
-      case 'MedicinalProductPharmaceutical':
-        return MedicinalProductPharmaceutical.fromJson(json);
-      case 'MedicinalProductUndesirableEffect':
-        return MedicinalProductUndesirableEffect.fromJson(json);
       case 'MessageDefinition':
         return MessageDefinition.fromJson(json);
       case 'MessageHeader':
         return MessageHeader.fromJson(json);
-      case 'MolecularSequence':
-        return MolecularSequence.fromJson(json);
       case 'NamingSystem':
         return NamingSystem.fromJson(json);
       case 'NutritionOrder':
         return NutritionOrder.fromJson(json);
       case 'Observation':
         return Observation.fromJson(json);
-      case 'ObservationDefinition':
-        return ObservationDefinition.fromJson(json);
       case 'OperationDefinition':
         return OperationDefinition.fromJson(json);
       case 'OperationOutcome':
         return OperationOutcome.fromJson(json);
       case 'Organization':
         return Organization.fromJson(json);
-      case 'OrganizationAffiliation':
-        return OrganizationAffiliation.fromJson(json);
       case 'Parameters':
         return Parameters.fromJson(json);
       case 'Patient':
@@ -247,40 +275,42 @@ class Resource {
         return PractitionerRole.fromJson(json);
       case 'Procedure':
         return Procedure.fromJson(json);
+      case 'ProcedureRequest':
+        return ProcedureRequest.fromJson(json);
+      case 'ProcessRequest':
+        return ProcessRequest.fromJson(json);
+      case 'ProcessResponse':
+        return ProcessResponse.fromJson(json);
       case 'Provenance':
         return Provenance.fromJson(json);
       case 'Questionnaire':
         return Questionnaire.fromJson(json);
       case 'QuestionnaireResponse':
         return QuestionnaireResponse.fromJson(json);
+      case 'ReferralRequest':
+        return ReferralRequest.fromJson(json);
       case 'RelatedPerson':
         return RelatedPerson.fromJson(json);
       case 'RequestGroup':
         return RequestGroup.fromJson(json);
-      case 'ResearchDefinition':
-        return ResearchDefinition.fromJson(json);
-      case 'ResearchElementDefinition':
-        return ResearchElementDefinition.fromJson(json);
       case 'ResearchStudy':
         return ResearchStudy.fromJson(json);
       case 'ResearchSubject':
         return ResearchSubject.fromJson(json);
       case 'RiskAssessment':
         return RiskAssessment.fromJson(json);
-      case 'RiskEvidenceSynthesis':
-        return RiskEvidenceSynthesis.fromJson(json);
       case 'Schedule':
         return Schedule.fromJson(json);
       case 'SearchParameter':
         return SearchParameter.fromJson(json);
-      case 'ServiceRequest':
-        return ServiceRequest.fromJson(json);
+      case 'Sequence':
+        return Sequence.fromJson(json);
+      case 'ServiceDefinition':
+        return ServiceDefinition.fromJson(json);
       case 'Slot':
         return Slot.fromJson(json);
       case 'Specimen':
         return Specimen.fromJson(json);
-      case 'SpecimenDefinition':
-        return SpecimenDefinition.fromJson(json);
       case 'StructureDefinition':
         return StructureDefinition.fromJson(json);
       case 'StructureMap':
@@ -289,46 +319,20 @@ class Resource {
         return Subscription.fromJson(json);
       case 'Substance':
         return Substance.fromJson(json);
-      case 'SubstanceNucleicAcid':
-        return SubstanceNucleicAcid.fromJson(json);
-      case 'SubstancePolymer':
-        return SubstancePolymer.fromJson(json);
-      case 'SubstanceProtein':
-        return SubstanceProtein.fromJson(json);
-      case 'SubstanceReferenceInformation':
-        return SubstanceReferenceInformation.fromJson(json);
-      case 'SubstanceSourceMaterial':
-        return SubstanceSourceMaterial.fromJson(json);
-      case 'SubstanceSpecification':
-        return SubstanceSpecification.fromJson(json);
       case 'SupplyDelivery':
         return SupplyDelivery.fromJson(json);
       case 'SupplyRequest':
         return SupplyRequest.fromJson(json);
       case 'Task':
         return Task.fromJson(json);
-      case 'TerminologyCapabilities':
-        return TerminologyCapabilities.fromJson(json);
       case 'TestReport':
         return TestReport.fromJson(json);
       case 'TestScript':
         return TestScript.fromJson(json);
       case 'ValueSet':
         return ValueSet.fromJson(json);
-      case 'VerificationResult':
-        return VerificationResult.fromJson(json);
       case 'VisionPrescription':
         return VisionPrescription.fromJson(json);
-      case 'MarketingStatus':
-        return MarketingStatus.fromJson(json);
-      case 'Population':
-        return Population.fromJson(json);
-      case 'ProdCharacteristic':
-        return ProdCharacteristic.fromJson(json);
-      case 'ProductShelfLife':
-        return ProductShelfLife.fromJson(json);
-      case 'SubstanceAmount':
-        return SubstanceAmount.fromJson(json);
     }
     return null;
   }
