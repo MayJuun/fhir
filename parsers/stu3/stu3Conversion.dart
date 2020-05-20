@@ -73,7 +73,8 @@ void main() async {
       text +=
           '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) =>'
           ' _\$${newObj}FromJson(json);}\n\n';
-      await writeFile(text, obj);
+      // await writeFile(text, obj);
+      await writeEnums(enums, obj);
       text = '';
       require = <String>[];
     }
@@ -85,7 +86,7 @@ Future<void> writeFile(String text, String obj) async {
   if (fileName != null) {
     var file = await File(fileName).readAsString();
     file = file + text;
-    await File(fileName).writeAsString(file);
+    // await File(fileName).writeAsString(file);
     // print(file);
   }
 }
@@ -99,7 +100,7 @@ String getFileName(String tempObj) {
     return ('/home/grey/dev/fhir/lib/stu3/metadata_types/metadata_types.dart');
   }
   if (datas.contains(obj.toLowerCase())) {
-    print(tempObj);
+    // print(tempObj);
     return null;
   }
   if (specials.contains(obj.toLowerCase())) {
@@ -122,23 +123,42 @@ String getFileName(String tempObj) {
   }
 }
 
-Future<void> writeEnums(String dir, List<List<String>> enums) async {
-  var file = await File(dir).readAsString();
-  for (var item in enums) {
-    file += '\nenum ${item[0]}{\n';
-    for (var i = 1; i < item.length; i++) {
-      var newItem = item[i].replaceAll('-', '_').toLowerCase();
-      var reg = RegExp(r'(?=[0-9]\.)');
-      if (newItem.contains(reg)) {
-        newItem = newItem.replaceFirst(reg, 'v');
+Future<void> writeEnums(List<List<String>> enums, String obj) async {
+  var fileName = await getFileNamed(obj);
+  if (fileName != null && enums.length > 0) {
+    var file = await File(fileName).readAsString();
+    for (var item in enums) {
+      file += '\nenum ${item[0]}{\n';
+      for (var i = 1; i < item.length; i++) {
+        var newItem = item[i].replaceAll('-', '_').toLowerCase();
+        var reg = RegExp(r'(?=[0-9]\.)');
+        if (newItem.contains(reg)) {
+          newItem = newItem.replaceFirst(reg, 'v');
+        }
+        newItem = newItem.replaceAll('.', '_');
+        file += "@JsonValue('${item[i]}')\n$newItem,";
       }
-      newItem = newItem.replaceAll('.', '_');
-      file += "@JsonValue('${item[i]}')\n$newItem,";
+      file += '}\n\n';
     }
-    file += '}\n\n';
+    // print(file);
+    await File(fileName).writeAsString(file);
   }
-  // print(file);
-  // await File(dir).writeAsString(file);
+}
+
+String getFileNamed(String tempObj) {
+  var obj = tempObj.split('_').first;
+  if (generals.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/general_types/general_types.enums.dart');
+  } else if (metadatas.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/metadata_types/metadata_types.enums.dart');
+  } else if (datas.contains(obj.toLowerCase())) {
+    // print(tempObj);
+    return null;
+  } else if (specials.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/special_types/special_types.enums.dart');
+  } else {
+    return ('/home/grey/dev/fhir/lib/stu3/resource_types/resource_types.enums.dart');
+  }
 }
 
 String whatPattern(String pattern) {
