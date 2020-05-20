@@ -42,7 +42,7 @@ void main() async {
             text +=
                 """${isRequired ? "@JsonKey(required: true, unknownEnumValue: $enumName.unknown) @required ') " : '@JsonKey(unknownEnumValue: $enumName.unknown) '}""";
             if (v['type'] == 'array') {
-              text += "List<${whatType(v['type'])}> $k,\n";
+              text += "List<${whatType(v['items']['type'])}> $k,\n";
             } else {
               text += "${whatType(v['type'])} $k,\n";
             }
@@ -73,7 +73,10 @@ void main() async {
       text +=
           '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) =>'
           ' _\$${newObj}FromJson(json);}\n\n';
-      await writeFile(text, obj);
+      // await writeFile(text, obj);
+      if (text.contains('array')) {
+        print(text);
+      }
       text = '';
       require = <String>[];
     }
