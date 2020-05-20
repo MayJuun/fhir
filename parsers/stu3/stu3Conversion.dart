@@ -7,266 +7,119 @@ void main() async {
   //location of fhir schema
   var file = File('./parsers/stu3/fhir.schema.stu3.json');
   var contents = await file.readAsString();
-
-  var fou = <String>[];
-  var bas = <String>[];
-  var cli = <String>[];
-  var fin = <String>[];
-  var spe = <String>[];
-  var comp = <String>[];
-  var data = <String>[];
-  var prim = <String>[];
+  var text;
+  var newObj;
+  var require = <String>[];
+  var isRequired;
 
   Map schema = json.decode(contents);
   for (var obj in schema['definitions'].keys) {
-    var name = obj.split('_')[0].toLowerCase();
-    if (foundation.contains(name)) {
-      fou.add(obj);
-    } else if (base.contains(name)) {
-      bas.add(obj);
-    } else if (clinical.contains(name)) {
-      cli.add(obj);
-    } else if (financial.contains(name)) {
-      fin.add(obj);
-    } else if (specialized.contains(name)) {
-      spe.add(obj);
-    } else if (complex.contains(name)) {
-      comp.add(obj);
-    } else if (data.contains(name)) {
-      data.add(obj);
-    } else if (primitive.contains(name)) {
-      prim.add(obj);
-    } else {
-      print(obj);
+    if (obj != 'ResourceList' && obj != 'Element') {
+      var enums = <List<String>>[];
+      newObj = obj.replaceAll('_', '');
+      text = '@freezed\nabstract class $newObj with _\$$newObj '
+          '${domainTypes(obj.toLowerCase()) ? 'implementsResource' : ''}{'
+          '\nconst factory $newObj ({\n';
+      if (schema['definitions'][obj]['allOf'][1].keys.contains('required')) {
+        schema['definitions'][obj]['allOf'][1]['required']
+            .forEach((type) => require.add(type));
+      }
+      schema['definitions'][obj]['allOf'][1]['properties'].forEach((k, v) {
+        if (k[0] != '_') {
+          isRequired = require.contains(k);
+          if (k == 'resourceType') {
+            text += "@JsonKey(required: true, defaultValue: '$newObj') "
+                '@required String resourceType,\n';
+          } else if (v.keys.contains('enum')) {
+            var enumName = obj.split('_').length == 1
+                ? obj + k[0].toUpperCase() + k.substring(1, k.length)
+                : obj.split('_')[obj.split('_').length - 2] +
+                    obj.split('_')[obj.split('_').length - 1];
+            enums.add(<String>[]);
+            enums[enums.length - 1].add(enumName);
+            v['enum']
+                .forEach((enummed) => enums[enums.length - 1].add(enummed));
+            text +=
+                """${isRequired ? "@JsonKey(required: true, unknownEnumValue: $enumName.unknown) @required ') " : '@JsonKey(unknownEnumValue: $enumName.unknown) '}""";
+            if (v['type'] == 'array') {
+              text += "List<${whatType(v['type'])}> $k,\n";
+            } else {
+              text += "${whatType(v['type'])} $k,\n";
+            }
+          } else if (v['type'] == 'array') {
+            if (v['items'].keys.contains('pattern')) {
+              text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+              text += "List<${whatPattern(v['items']['pattern'])}> $k,\n";
+            } else if (v['items'].keys.contains('\$ref')) {
+              text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+              text +=
+                  "List<${whatType(v['items']['\$ref'].split('/').last)}> $k,\n";
+            } else {
+              text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+              text += "List<${whatType(v['items']['type'])}> $k,\n";
+            }
+          } else if (v.keys.contains('pattern')) {
+            text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+            text += "${whatPattern(v['pattern'])} $k,\n";
+          } else if (v.keys.contains('\$ref')) {
+            text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+            text += "${whatType(v['\$ref'].split('/').last)} $k,\n";
+          } else {
+            text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+            text += "${whatType(v['type'])} $k,\n";
+          }
+        }
+      });
+      text +=
+          '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) =>'
+          ' _\$${newObj}FromJson(json);}\n\n';
+      writeFile(text, obj);
+      text = '';
+      require = <String>[];
     }
   }
 }
-//     var newObj = obj.split('_')[0];
-//     if (group_specialized.contains(newObj)) {
-//       specialized.add(obj.replaceAll('_', ''));
-//     } else if (group_base.contains(newObj)) {
-//       base.add(obj.replaceAll('_', ''));
-//     } else if (group_clinical.contains(newObj)) {
-//       clinical.add(obj.replaceAll('_', ''));
-//     } else if (group_financial.contains(newObj)) {
-//       financial.add(obj.replaceAll('_', ''));
-//     } else if (group_foundation.contains(newObj)) {
-//       foundation.add(obj.replaceAll('_', ''));
-//     }
-//   }
-// print('var class_specialized = [');
-// specialized.forEach(
-//   (element) {
-//     print("'$element',");
-//   },
-// );
 
-// print('\n];\nvar class_foundation = [');
-// foundation.forEach(
-//   (element) {
-//     print("'$element',");
-//   },
-// );
-// print('\n];\nvar class_financial = [');
-// financial.forEach(
-//   (element) {
-//     print("'$element',");
-//   },
-// );
-// print('\n];\nvar class_clinical = [');
-// clinical.forEach(
-//   (element) {
-//     print("'$element',");
-//   },
-// );
-// print('\n];\nvar class_base = [');
-// base.forEach(
-//   (element) {
-//     print("'$element',");
-//   },
-// );
-// print('\n];');
+Future<void> writeFile(String text, String obj) async {
+  var fileName = getFileName(obj);
+  if (fileName != null) {
+    var file = await File(fileName).readAsString();
+    file += text;
+    // await File(dir).writeAsString(file);
+    print(file);
+  }
+}
 
-//   if (obj != 'ResourceList' && obj != 'Element') {
-//     var newObj = obj.replaceAll('_', '');
-//     text = '@freezed\nabstract class $newObj '
-//         '${ResourceTypes().contains(obj.toLowerCase()) ? 'extends DomainResource' : ''}'
-//         ' with _\$$newObj {'
-//         '\nconst factory $newObj ({';
-//     var required = [];
-
-//     if (schema['definitions'][obj].keys.contains('required')) {
-//       required = schema['definitions'][obj]['required'];
-//     }
-//     if (schema['definitions'][obj]['properties'] != null) {
-//       for (final fields in schema['definitions'][obj]['properties'].keys) {
-//         var require = '';
-//         if (fields[0] != '_') {
-//           if (required.contains(fields)) {
-//             require = '@JsonKey(required: true) @required';
-//           }
-
-//           var field = schema['definitions'][obj]['properties'][fields];
-//           var type;
-//           if (field != null) {
-//             if (field.keys.contains('const')) {
-//               text +=
-//                   "@JsonKey(required: true, defaultValue: '$field') @required String $fields,";
-//             } else if (field.keys.contains('\$ref')) {
-//               type = field['\$ref'].split('/definitions/')[1];
-//               var newType = whatType(type).replaceAll('_', '');
-//               text += '\n$require $newType $fields,';
-//             } else if (field.keys.contains('type')) {
-//               if (field['type'] == 'array') {
-//                 if (field['items']['\$ref'] != null) {
-//                   type = field['items']['\$ref'].split('/definitions/')[1];
-//                   var newType = whatType(type).replaceAll('_', '');
-//                   text += '\n$require List<$newType> $fields,';
-//                 } else {
-//                   var otherObj = obj.split('_');
-//                   if (otherObj.length > 1) {
-//                     enums.add(<String>[]);
-//                     enums[enums.length - 1].add(
-//                         '${otherObj.last}${fields[0].toUpperCase() + fields.substring(1, fields.length)}');
-//                     text +=
-//                         '\n$require List<${otherObj.last}${fields[0].toUpperCase() + fields.substring(1, fields.length)}> $fields,';
-//                   } else {
-//                     enums.add(<String>[]);
-//                     enums[enums.length - 1].add(
-//                         '${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}');
-//                     text +=
-//                         '\n$require List<${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}> $fields,';
-//                   }
-//                   field['items']['enum']
-//                       .forEach((field) => enums[enums.length - 1].add(field));
-//                   if (!field['items']['enum'].contains('unknown')) {
-//                     enums[enums.length - 1].add('unknown');
-//                   }
-//                 }
-//               } else {
-//                 if (fields.contains('Boolean')) {
-//                   text += '\n$require Boolean $fields,';
-//                 } else if (fields.contains('String')) {
-//                   text += '\n$require String $fields,';
-//                 } else if (fields.contains('Decimal')) {
-//                   text += '\n$require Decimal $fields,';
-//                 } else if (fields.contains('Integer')) {
-//                   text += '\n$require Integer $fields,';
-//                 } else if (fields.contains('Uri')) {
-//                   text += '\n$require FhirUri $fields,';
-//                 } else if (fields.contains('Code')) {
-//                   text += '\n$require Code $fields,';
-//                 } else if (fields.contains('DateTime')) {
-//                   text += '\n$require FhirDateTime $fields,';
-//                 } else if (fields.contains('PositiveInt')) {
-//                   text += '\n$require PositiveInt $fields,';
-//                 } else if (fields.contains('Oid')) {
-//                   text += '\n$require Oid $fields,';
-//                 } else if (fields.contains('Date')) {
-//                   text += '\n$require Date $fields,';
-//                 } else if (fields.contains('Time')) {
-//                   text += '\n$require Time $fields,';
-//                 } else if (fields.contains('Uuid')) {
-//                   text += '\n$require Uuid $fields,';
-//                 } else if (fields.contains('Url')) {
-//                   text += '\n$require FhirUrl $fields,';
-//                 } else if (fields.contains('Id')) {
-//                   text += '\n$require Id $fields,';
-//                 } else if (fields.contains('Canonical')) {
-//                   text += '\n$require Canonical $fields,';
-//                 } else if (fields.contains('UnsignedInt')) {
-//                   text += '\n$require UnsignedInt $fields,';
-//                 } else if (fields.contains('Base64Binary')) {
-//                   text += '\n$require Base64Binary $fields,';
-//                 } else if (fields.contains('Instant')) {
-//                   text += '\n$require Instant $fields,';
-//                 } else if (fields.contains('Markdown')) {
-//                   text += '\n$require Markdown $fields,';
-//                 }
-//               }
-//             } else if (field.keys.contains('enum')) {
-//               var otherObj = obj.split('_');
-//               if (otherObj.length > 1) {
-//                 if (require != '') {
-//                   require =
-//                       '@JsonKey(required: true, unknownEnumValue: ${otherObj.last}${fields[0].toUpperCase() + fields.substring(1, fields.length)}.unknown) @required';
-//                 } else {
-//                   require =
-//                       '@JsonKey(unknownEnumValue: ${otherObj.last}${fields[0].toUpperCase() + fields.substring(1, fields.length)}.unknown) ';
-//                 }
-//                 enums.add(<String>[]);
-//                 enums[enums.length - 1].add(
-//                     '${otherObj.last}${fields[0].toUpperCase() + fields.substring(1, fields.length)}');
-//                 text +=
-//                     '\n$require ${otherObj.last}${fields[0].toUpperCase() + fields.substring(1, fields.length)} $fields,';
-//               } else {
-//                 if (require != '') {
-//                   require =
-//                       '@JsonKey(required: true, unknownEnumValue: ${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}.unknown) @required';
-//                 } else {
-//                   require =
-//                       '@JsonKey(unknownEnumValue: ${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}.unknown) ';
-//                 }
-//                 enums.add(<String>[]);
-//                 enums[enums.length - 1].add(
-//                     '${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)}');
-//                 text +=
-//                     '\n$require ${otherObj[0]}${fields[0].toUpperCase() + fields.substring(1, fields.length)} $fields,';
-//               }
-//               field['enum']
-//                   .forEach((field) => enums[enums.length - 1].add(field));
-//               if (!field['enum'].contains('unknown')) {
-//                 enums[enums.length - 1].add('unknown');
-//               }
-//             }
-//           }
-//         }
-//       }
-
-//       var dir;
-//       if (GetDataType(obj.split('_')[0]) == 'draft') {
-//         dir = '/home/grey/dev/fhir/lib/r4/draft_types/draft_types.dart';
-//         await writeFile(dir, text, newObj);
-//       } else if (GetDataType(obj.split('_')[0]) == 'general') {
-//         dir = '/home/grey/dev/fhir/lib/r4/general_types/general_types.dart';
-//         await writeFile(dir, text, newObj);
-//         dir =
-//             '/home/grey/dev/fhir/lib/r4/general_types/general_types.enums.dart';
-//         await writeEnums(dir, enums);
-//       } else if (GetDataType(obj.split('_')[0]) == 'metadata') {
-//         dir = '/home/grey/dev/fhir/lib/r4/metadata_types/metadata_types.dart';
-//         await writeFile(dir, text, newObj);
-//         dir =
-//             '/home/grey/dev/fhir/lib/r4/metadata_types/metadata_types.enums.dart';
-//         await writeEnums(dir, enums);
-//       } else if (GetDataType(obj.split('_')[0]) == 'special') {
-//         dir = '/home/grey/dev/fhir/lib/r4/special_types/special_types.dart';
-
-//         await writeFile(dir, text, newObj);
-//         dir =
-//             '/home/grey/dev/fhir/lib/r4/special_types/special_types.enums.dart';
-//         await writeEnums(dir, enums);
-//       } else if (GetDataType(obj.split('_')[0]) == 'resource') {
-//         dir = '/home/grey/dev/fhir/lib/r4/resource_types/resource_types.dart';
-//         await writeFile(dir, text, newObj);
-//         dir =
-//             '/home/grey/dev/fhir/lib/r4/resource_types/resource_types.enums.dart';
-//         await writeEnums(dir, enums);
-//       }
-//       enums = <List<String>>[];
-//     }
-//   }
-// }
-// }
-
-Future<void> writeFile(String dir, String text, String newObj) async {
-  var file = await File(dir).readAsString();
-  file += text;
-  file +=
-      '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) =>'
-      ' _\$${newObj}FromJson(json);}\n\n';
-  // await File(dir).writeAsString(file);
-  // print(file);
+String getFileName(String tempObj) {
+  var obj = tempObj.split('_').first;
+  if (generals.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/general_types/general_types.dart');
+  }
+  if (metadatas.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/metadata_types/metadata_types.dart');
+  }
+  if (datas.contains(obj.toLowerCase())) {
+    print(tempObj);
+    return null;
+  }
+  if (specials.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/special_types/special_types.dart');
+  }
+  if (foundations.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/resource_types/foundation/foundation.dart');
+  }
+  if (bases.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/resource_types/base/base.dart');
+  }
+  if (clinicals.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/resource_types/clinical/clinical.dart');
+  }
+  if (financials.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/resource_types/financial/financial.dart');
+  }
+  if (specializeds.contains(obj.toLowerCase())) {
+    return ('/home/grey/dev/fhir/lib/stu3/resource_types/specialized/specialized.dart');
+  }
 }
 
 Future<void> writeEnums(String dir, List<List<String>> enums) async {
@@ -286,6 +139,35 @@ Future<void> writeEnums(String dir, List<List<String>> enums) async {
   }
   // print(file);
   // await File(dir).writeAsString(file);
+}
+
+String whatPattern(String pattern) {
+  switch (pattern) {
+    case '[0]|([1-9][0-9]*)':
+      return 'UnsignedInt';
+    case '[1-9][0-9]*':
+      return 'PositiveInt';
+    case '[A-Za-z0-9\\-\\.]{1,64}':
+      return 'Id';
+    case 'urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}':
+      return 'Uuid';
+    case 'urn:oid:(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*))*':
+      return 'Oid';
+    case '[^\\s]+([\\s]?[^\\s]+)*':
+      return 'Code';
+    case '([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?':
+      return 'Time';
+    case '-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?':
+      return 'DateTime';
+    case '-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?':
+      return 'Date';
+    case '-?([0]|([1-9][0-9]*))(\\.[0-9]+)?':
+      return 'Decimal';
+    case '-?([0]|([1-9][0-9]*))':
+      return 'Integer';
+  }
+  print(pattern);
+  return (pattern);
 }
 
 String whatType(String field) {

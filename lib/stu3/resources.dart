@@ -1,3 +1,9 @@
-export 'complex_types/complex_types.dart';
-export 'data_types/data_types.dart';
-export 'domain_resource/domain_resource.dart';
+export 'general_types/general_types.dart';
+export 'general_types/general_types.enums.dart';
+export 'metadata_types/metadata_types.dart';
+export 'metadata_types/metadata_types.enums.dart';
+export 'resource/resource.dart';
+export 'resource_types/resource_types.dart';
+export 'resource_types/resource_types.enums.dart';
+export 'special_types/special_types.dart';
+export 'special_types/special_types.enums.dart';

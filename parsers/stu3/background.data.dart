@@ -1,26 +1,30 @@
 String GetDataType(String obj) {
   var newObj = obj.split('_')[0].toLowerCase();
   var type;
-  primitive.contains(newObj)
+  primitives.contains(newObj)
       ? type = 'primitive'
-      : complex.contains(newObj)
-          ? type = 'complex'
-          : data.contains(newObj)
-              ? type = 'data'
-              : domainTypes(newObj)
-                  ? type = 'domain'
-                  : print('***unknown data type $newObj');
+      : generals.contains(newObj)
+          ? type = 'general'
+          : metadatas.contains(newObj)
+              ? type = 'metadata'
+              : datas.contains(newObj)
+                  ? type = 'data'
+                  : specials.contains(newObj)
+                      ? type = 'special'
+                      : domainTypes(newObj)
+                          ? type = 'domain'
+                          : print('***unknown data type $newObj');
   return type;
 }
 
 bool domainTypes(String newObj) =>
-    foundation.contains(newObj.toLowerCase()) ||
-    base.contains(newObj.toLowerCase()) ||
-    clinical.contains(newObj.toLowerCase()) ||
-    financial.contains(newObj.toLowerCase()) ||
-    specialized.contains(newObj.toLowerCase());
+    foundations.contains(newObj.toLowerCase()) ||
+    bases.contains(newObj.toLowerCase()) ||
+    clinicals.contains(newObj.toLowerCase()) ||
+    financials.contains(newObj.toLowerCase()) ||
+    specializeds.contains(newObj.toLowerCase());
 
-var primitive = [
+var primitives = [
   'instant',
   'time',
   'date',
@@ -39,7 +43,7 @@ var primitive = [
   'base64binary',
 ];
 
-var complex = [
+var generals = [
   'ratio',
   'period',
   'range',
@@ -63,14 +67,33 @@ var complex = [
   'money',
 ];
 
-var data = [
-  'domainresource',
-  'resource',
-  'element',
-  'extension',
+var metadatas = [
+  'contactdetail',
+  'contributor',
+  'datarequirement',
+  'parameterdefinition',
+  'relatedartifact',
+  'triggerdefinition',
+  'usagecontext',
 ];
 
-var foundation = [
+var specials = [
+  'reference',
+  'narrative',
+  'extension',
+  'meta',
+  'dosage',
+  'element',
+  'backboneelement',
+  'elementdefinition',
+];
+
+var datas = [
+  'domainresource',
+  'resource',
+];
+
+var foundations = [
   'capabilitystatement',
   'structuredefinition',
   'implementationguide',
@@ -103,7 +126,7 @@ var foundation = [
   'subscription',
 ];
 
-var base = [
+var bases = [
   'patient',
   'practitioner',
   'practitionerrole',
@@ -132,7 +155,7 @@ var base = [
   'library',
 ];
 
-var clinical = [
+var clinicals = [
   'allergyintolerance',
   'adverseevent',
   'condition',
@@ -172,7 +195,7 @@ var clinical = [
   'supplydelivery',
 ];
 
-var financial = [
+var financials = [
   'coverage',
   'eligibilityrequest',
   'eligibilityresponse',
@@ -188,7 +211,7 @@ var financial = [
   'chargeitem',
 ];
 
-var specialized = [
+var specializeds = [
   'researchstudy',
   'researchsubject',
   'questionnaire',
