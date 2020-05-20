@@ -73,7 +73,7 @@ void main() async {
       text +=
           '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) =>'
           ' _\$${newObj}FromJson(json);}\n\n';
-      writeFile(text, obj);
+      await writeFile(text, obj);
       text = '';
       require = <String>[];
     }
