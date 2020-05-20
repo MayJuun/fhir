@@ -138,6 +138,9 @@ Future<void> writeEnums(List<List<String>> enums, String obj) async {
         newItem = newItem.replaceAll('.', '_');
         file += "@JsonValue('${item[i]}')\n$newItem,";
       }
+      if (!item.contains('unknown')) {
+        file += "@JsonValue('unknown')\nunknown,";
+      }
       file += '}\n\n';
     }
     // print(file);
