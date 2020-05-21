@@ -13,7 +13,7 @@ enum AccountStatus {
   unknown,
 }
 
-enum ActivityDefinitionStatus {
+enum Status {
   @JsonValue('draft')
   draft,
   @JsonValue('active')
@@ -255,17 +255,6 @@ enum RequestMethod {
   unknown,
 }
 
-enum CapabilityStatementStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum CapabilityStatementKind {
   @JsonValue('instance')
   instance,
@@ -277,7 +266,7 @@ enum CapabilityStatementKind {
   unknown,
 }
 
-enum CapabilityStatementFhirVersion {
+enum FhirVersion {
   @JsonValue('0.01')
   v0_01,
   @JsonValue('0.05')
@@ -408,7 +397,7 @@ enum InteractionCode {
   unknown,
 }
 
-enum SearchParamType {
+enum SearchType {
   @JsonValue('number')
   number,
   @JsonValue('date')
@@ -498,17 +487,6 @@ enum CareTeamStatus {
   unknown,
 }
 
-enum CatalogEntryStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum RelatedEntryRelationtype {
   @JsonValue('triggers')
   triggers,
@@ -535,17 +513,6 @@ enum ChargeItemStatus {
   unknown,
 }
 
-enum ChargeItemDefinitionStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum ClaimUse {
   @JsonValue('claim')
   claim,
@@ -564,17 +531,6 @@ enum ProcessNoteType {
   print,
   @JsonValue('printoper')
   printoper,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum CodeSystemStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -626,17 +582,6 @@ enum PropertyType {
   unknown,
 }
 
-enum CompartmentDefinitionStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum CompartmentDefinitionCode {
   @JsonValue('Patient')
   patient,
@@ -674,17 +619,6 @@ enum AttesterMode {
   legal,
   @JsonValue('official')
   official,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ConceptMapStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -764,7 +698,7 @@ enum DataMeaning {
   unknown,
 }
 
-enum CoverageEligibilityRequestPurpose {
+enum RequestResponsePurpose {
   @JsonValue('auth-requirements')
   auth_requirements,
   @JsonValue('benefits')
@@ -777,20 +711,7 @@ enum CoverageEligibilityRequestPurpose {
   unknown,
 }
 
-enum CoverageEligibilityResponsePurpose {
-  @JsonValue('auth-requirements')
-  auth_requirements,
-  @JsonValue('benefits')
-  benefits,
-  @JsonValue('discovery')
-  discovery,
-  @JsonValue('validation')
-  validation,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum CoverageEligibilityResponseOutcome {
+enum Outcome {
   @JsonValue('queued')
   queued,
   @JsonValue('complete')
@@ -814,7 +735,7 @@ enum DetectedIssueSeverity {
   unknown,
 }
 
-enum DeviceStatus {
+enum ActiveInactive {
   @JsonValue('active')
   active,
   @JsonValue('inactive')
@@ -970,18 +891,8 @@ enum DiagnosticReportStatus {
   unknown,
 }
 
-enum DocumentManifestStatus {
-  @JsonValue('current')
-  current,
-  @JsonValue('superseded')
-  superseded,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum DocumentReferenceStatus {
+//*********************** */
+enum DocumentStatus {
   @JsonValue('current')
   current,
   @JsonValue('superseded')
@@ -1005,17 +916,6 @@ enum RelatesToCode {
   unknown,
 }
 
-enum EffectEvidenceSynthesisStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum ResultsByExposureExposureState {
   @JsonValue('exposure')
   exposure,
@@ -1025,28 +925,8 @@ enum ResultsByExposureExposureState {
   unknown,
 }
 
+//******************************** */
 enum EncounterStatus {
-  @JsonValue('planned')
-  planned,
-  @JsonValue('arrived')
-  arrived,
-  @JsonValue('triaged')
-  triaged,
-  @JsonValue('in-progress')
-  in_progress,
-  @JsonValue('onleave')
-  onleave,
-  @JsonValue('finished')
-  finished,
-  @JsonValue('cancelled')
-  cancelled,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum EncounterStatusHistoryStatus {
   @JsonValue('planned')
   planned,
   @JsonValue('arrived')
@@ -1097,19 +977,6 @@ enum EndpointStatus {
   unknown,
 }
 
-enum EnrollmentResponseOutcome {
-  @JsonValue('queued')
-  queued,
-  @JsonValue('complete')
-  complete,
-  @JsonValue('error')
-  error,
-  @JsonValue('partial')
-  partial,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum EpisodeOfCareStatus {
   @JsonValue('planned')
   planned,
@@ -1129,59 +996,7 @@ enum EpisodeOfCareStatus {
   unknown,
 }
 
-enum StatusHistoryStatus {
-  @JsonValue('planned')
-  planned,
-  @JsonValue('waitlist')
-  waitlist,
-  @JsonValue('active')
-  active,
-  @JsonValue('onhold')
-  onhold,
-  @JsonValue('finished')
-  finished,
-  @JsonValue('cancelled')
-  cancelled,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum EventDefinitionStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum EvidenceStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum EvidenceVariableStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum EvidenceVariableType {
+enum VariableType {
   @JsonValue('dichotomous')
   dichotomous,
   @JsonValue('continuous')
@@ -1192,7 +1007,7 @@ enum EvidenceVariableType {
   unknown,
 }
 
-enum CharacteristicGroupMeasure {
+enum GroupMeasure {
   @JsonValue('mean')
   mean,
   @JsonValue('median')
@@ -1205,17 +1020,6 @@ enum CharacteristicGroupMeasure {
   median_of_mean,
   @JsonValue('median-of-median')
   median_of_median,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ExampleScenarioStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -1255,17 +1059,6 @@ enum FamilyMemberHistoryStatus {
   unknown,
 }
 
-enum FlagStatus {
-  @JsonValue('active')
-  active,
-  @JsonValue('inactive')
-  inactive,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum GoalLifecycleStatus {
   @JsonValue('proposed')
   proposed,
@@ -1285,17 +1078,6 @@ enum GoalLifecycleStatus {
   entered_in_error,
   @JsonValue('rejected')
   rejected,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum GraphDefinitionStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -1384,17 +1166,6 @@ enum ImagingStudyStatus {
   cancelled,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ImplementationGuideStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -2096,104 +1867,6 @@ enum ImplementationGuideLicense {
   unknown,
 }
 
-enum ImplementationGuideFhirVersion {
-  @JsonValue('0.01')
-  v0_01,
-  @JsonValue('0.05')
-  v0_05,
-  @JsonValue('0.06')
-  v0_06,
-  @JsonValue('0.11')
-  v0_11,
-  @JsonValue('0.0.80')
-  v0_0_80,
-  @JsonValue('0.0.81')
-  v0_0_81,
-  @JsonValue('0.0.82')
-  v0_0_82,
-  @JsonValue('0.4.0')
-  v0_4_0,
-  @JsonValue('0.5.0')
-  v0_5_0,
-  @JsonValue('1.0.0')
-  v1_0_0,
-  @JsonValue('1.0.1')
-  v1_0_1,
-  @JsonValue('1.0.2')
-  v1_0_2,
-  @JsonValue('1.1.0')
-  v1_1_0,
-  @JsonValue('1.4.0')
-  v1_4_0,
-  @JsonValue('1.6.0')
-  v1_6_0,
-  @JsonValue('1.8.0')
-  v1_8_0,
-  @JsonValue('3.0.0')
-  v3_0_0,
-  @JsonValue('3.0.1')
-  v3_0_1,
-  @JsonValue('3.3.0')
-  v3_3_0,
-  @JsonValue('3.5.0')
-  v3_5_0,
-  @JsonValue('4.0.0')
-  v4_0_0,
-  @JsonValue('4.0.1')
-  v4_0_1,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ResourceFhirVersion {
-  @JsonValue('0.01')
-  v0_01,
-  @JsonValue('0.05')
-  v0_05,
-  @JsonValue('0.06')
-  v0_06,
-  @JsonValue('0.11')
-  v0_11,
-  @JsonValue('0.0.80')
-  v0_0_80,
-  @JsonValue('0.0.81')
-  v0_0_81,
-  @JsonValue('0.0.82')
-  v0_0_82,
-  @JsonValue('0.4.0')
-  v0_4_0,
-  @JsonValue('0.5.0')
-  v0_5_0,
-  @JsonValue('1.0.0')
-  v1_0_0,
-  @JsonValue('1.0.1')
-  v1_0_1,
-  @JsonValue('1.0.2')
-  v1_0_2,
-  @JsonValue('1.1.0')
-  v1_1_0,
-  @JsonValue('1.4.0')
-  v1_4_0,
-  @JsonValue('1.6.0')
-  v1_6_0,
-  @JsonValue('1.8.0')
-  v1_8_0,
-  @JsonValue('3.0.0')
-  v3_0_0,
-  @JsonValue('3.0.1')
-  v3_0_1,
-  @JsonValue('3.3.0')
-  v3_3_0,
-  @JsonValue('3.5.0')
-  v3_5_0,
-  @JsonValue('4.0.0')
-  v4_0_0,
-  @JsonValue('4.0.1')
-  v4_0_1,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum PageGeneration {
   @JsonValue('html')
   html,
@@ -2232,17 +1905,6 @@ enum ParameterCode {
   unknown,
 }
 
-enum InsurancePlanStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum InvoiceStatus {
   @JsonValue('draft')
   draft,
@@ -2271,17 +1933,6 @@ enum PriceComponentType {
   tax,
   @JsonValue('informational')
   informational,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum LibraryStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -2339,17 +1990,6 @@ enum LocationMode {
   unknown,
 }
 
-enum MeasureStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum MeasureReportStatus {
   @JsonValue('complete')
   complete,
@@ -2370,17 +2010,6 @@ enum MeasureReportType {
   summary,
   @JsonValue('data-collection')
   data_collection,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum MessageDefinitionStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -2473,17 +2102,6 @@ enum RepositoryType {
   unknown,
 }
 
-enum NamingSystemStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum NamingSystemKind {
   @JsonValue('codesystem')
   codesystem,
@@ -2565,24 +2183,13 @@ enum QualifiedIntervalCategory {
   unknown,
 }
 
-enum QualifiedIntervalGender {
+enum Gender {
   @JsonValue('male')
   male,
   @JsonValue('female')
   female,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum OperationDefinitionStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -2601,29 +2208,6 @@ enum ParameterUse {
   in_,
   @JsonValue('out')
   out,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ParameterSearchType {
-  @JsonValue('number')
-  number,
-  @JsonValue('date')
-  date,
-  @JsonValue('string')
-  string,
-  @JsonValue('token')
-  token,
-  @JsonValue('reference')
-  reference,
-  @JsonValue('composite')
-  composite,
-  @JsonValue('quantity')
-  quantity,
-  @JsonValue('uri')
-  uri,
-  @JsonValue('special')
-  special,
   @JsonValue('unknown')
   unknown,
 }
@@ -2719,28 +2303,6 @@ enum IssueCode {
   informational,
 }
 
-enum PatientGender {
-  @JsonValue('male')
-  male,
-  @JsonValue('female')
-  female,
-  @JsonValue('other')
-  other,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ContactGender {
-  @JsonValue('male')
-  male,
-  @JsonValue('female')
-  female,
-  @JsonValue('other')
-  other,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum LinkType {
   @JsonValue('replaced-by')
   replaced_by,
@@ -2754,30 +2316,6 @@ enum LinkType {
   unknown,
 }
 
-enum PaymentReconciliationOutcome {
-  @JsonValue('queued')
-  queued,
-  @JsonValue('complete')
-  complete,
-  @JsonValue('error')
-  error,
-  @JsonValue('partial')
-  partial,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum PersonGender {
-  @JsonValue('male')
-  male,
-  @JsonValue('female')
-  female,
-  @JsonValue('other')
-  other,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum LinkAssurance {
   @JsonValue('level1')
   level1,
@@ -2787,17 +2325,6 @@ enum LinkAssurance {
   level3,
   @JsonValue('level4')
   level4,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum PlanDefinitionStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -2906,17 +2433,6 @@ enum PlanDefinitionParticipantType {
   unknown,
 }
 
-enum PractitionerGender {
-  @JsonValue('male')
-  male,
-  @JsonValue('female')
-  female,
-  @JsonValue('other')
-  other,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum EntityRole {
   @JsonValue('derivation')
   derivation,
@@ -2928,17 +2444,6 @@ enum EntityRole {
   source,
   @JsonValue('removal')
   removal,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum QuestionnaireStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -3023,39 +2528,6 @@ enum QuestionnaireResponseStatus {
   unknown,
 }
 
-enum RelatedPersonGender {
-  @JsonValue('male')
-  male,
-  @JsonValue('female')
-  female,
-  @JsonValue('other')
-  other,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ResearchDefinitionStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ResearchElementDefinitionStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum ResearchElementDefinitionType {
   @JsonValue('population')
   population,
@@ -3063,51 +2535,6 @@ enum ResearchElementDefinitionType {
   exposure,
   @JsonValue('outcome')
   outcome,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ResearchElementDefinitionVariableType {
-  @JsonValue('dichotomous')
-  dichotomous,
-  @JsonValue('continuous')
-  continuous,
-  @JsonValue('descriptive')
-  descriptive,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum CharacteristicStudyEffectiveGroupMeasure {
-  @JsonValue('mean')
-  mean,
-  @JsonValue('median')
-  median,
-  @JsonValue('mean-of-mean')
-  mean_of_mean,
-  @JsonValue('mean-of-median')
-  mean_of_median,
-  @JsonValue('median-of-mean')
-  median_of_mean,
-  @JsonValue('median-of-median')
-  median_of_median,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum CharacteristicParticipantEffectiveGroupMeasure {
-  @JsonValue('mean')
-  mean,
-  @JsonValue('median')
-  median,
-  @JsonValue('mean-of-mean')
-  mean_of_mean,
-  @JsonValue('mean-of-median')
-  mean_of_median,
-  @JsonValue('median-of-mean')
-  median_of_mean,
-  @JsonValue('median-of-median')
-  median_of_median,
   @JsonValue('unknown')
   unknown,
 }
@@ -3166,51 +2593,6 @@ enum ResearchSubjectStatus {
   screening,
   @JsonValue('withdrawn')
   withdrawn,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum RiskEvidenceSynthesisStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum SearchParameterStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum SearchParameterType {
-  @JsonValue('number')
-  number,
-  @JsonValue('date')
-  date,
-  @JsonValue('string')
-  string,
-  @JsonValue('token')
-  token,
-  @JsonValue('reference')
-  reference,
-  @JsonValue('composite')
-  composite,
-  @JsonValue('quantity')
-  quantity,
-  @JsonValue('uri')
-  uri,
-  @JsonValue('special')
-  special,
   @JsonValue('unknown')
   unknown,
 }
@@ -3319,66 +2701,6 @@ enum TypeTestedPreference {
   unknown,
 }
 
-enum StructureDefinitionStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum StructureDefinitionFhirVersion {
-  @JsonValue('0.01')
-  v0_01,
-  @JsonValue('0.05')
-  v0_05,
-  @JsonValue('0.06')
-  v0_06,
-  @JsonValue('0.11')
-  v0_11,
-  @JsonValue('0.0.80')
-  v0_0_80,
-  @JsonValue('0.0.81')
-  v0_0_81,
-  @JsonValue('0.0.82')
-  v0_0_82,
-  @JsonValue('0.4.0')
-  v0_4_0,
-  @JsonValue('0.5.0')
-  v0_5_0,
-  @JsonValue('1.0.0')
-  v1_0_0,
-  @JsonValue('1.0.1')
-  v1_0_1,
-  @JsonValue('1.0.2')
-  v1_0_2,
-  @JsonValue('1.1.0')
-  v1_1_0,
-  @JsonValue('1.4.0')
-  v1_4_0,
-  @JsonValue('1.6.0')
-  v1_6_0,
-  @JsonValue('1.8.0')
-  v1_8_0,
-  @JsonValue('3.0.0')
-  v3_0_0,
-  @JsonValue('3.0.1')
-  v3_0_1,
-  @JsonValue('3.3.0')
-  v3_3_0,
-  @JsonValue('3.5.0')
-  v3_5_0,
-  @JsonValue('4.0.0')
-  v4_0_0,
-  @JsonValue('4.0.1')
-  v4_0_1,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum StructureDefinitionKind {
   @JsonValue('primitive-type')
   primitive_type,
@@ -3408,17 +2730,6 @@ enum ContextType {
   element,
   @JsonValue('extension')
   extension,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum StructureMapStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }
@@ -3560,17 +2871,6 @@ enum ChannelType {
   unknown,
 }
 
-enum SubstanceStatus {
-  @JsonValue('active')
-  active,
-  @JsonValue('inactive')
-  inactive,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum SupplyDeliveryStatus {
   @JsonValue('in-progress')
   in_progress,
@@ -3651,17 +2951,6 @@ enum TaskIntent {
   option,
 }
 
-enum TerminologyCapabilitiesStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum TerminologyCapabilitiesCodeSearch {
   @JsonValue('explicit')
   explicit,
@@ -3723,32 +3012,6 @@ enum OperationResult {
   unknown,
 }
 
-enum AssertResult {
-  @JsonValue('pass')
-  pass,
-  @JsonValue('skip')
-  skip,
-  @JsonValue('fail')
-  fail,
-  @JsonValue('warning')
-  warning,
-  @JsonValue('error')
-  error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum TestScriptStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum OperationMethod {
   @JsonValue('delete')
   delete,
@@ -3804,25 +3067,6 @@ enum AssertOperator {
   unknown,
 }
 
-enum AssertRequestMethod {
-  @JsonValue('delete')
-  delete,
-  @JsonValue('get')
-  get,
-  @JsonValue('options')
-  options,
-  @JsonValue('patch')
-  patch,
-  @JsonValue('post')
-  post,
-  @JsonValue('put')
-  put,
-  @JsonValue('head')
-  head,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum AssertResponse {
   @JsonValue('okay')
   okay,
@@ -3848,17 +3092,6 @@ enum AssertResponse {
   preconditionfailed,
   @JsonValue('unprocessable')
   unprocessable,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ValueSetStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
   @JsonValue('unknown')
   unknown,
 }

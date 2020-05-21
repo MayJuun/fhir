@@ -1,11 +1,3 @@
-bool resourceTypes(String newObj) =>
-    clinical_types.contains(newObj.toLowerCase()) ||
-    conformance_types.contains(newObj.toLowerCase()) ||
-    financial_types.contains(newObj.toLowerCase()) ||
-    identification_types.contains(newObj.toLowerCase()) ||
-    infrastructure_types.contains(newObj.toLowerCase()) ||
-    workflow_types.contains(newObj.toLowerCase());
-
 var primitive_types = [
   'instant',
   'time',
@@ -75,7 +67,7 @@ var data_types = [
   'resource',
 ];
 
-var clinical_types = [
+var general = [
   'allergyintolerance',
   'condition',
   'procedure',
@@ -83,12 +75,16 @@ var clinical_types = [
   'familymemberhistory',
   'riskassessment',
   'detectedissue',
+];
+var care_provision = [
   'careplan',
   'goal',
   'referralrequest',
   'procedurerequest',
   'nutritionorder',
   'visionprescription',
+];
+var medication = [
   'medication',
   'medicationorder',
   'medicationadministration',
@@ -96,6 +92,9 @@ var clinical_types = [
   'medicationstatement',
   'immunization',
   'immunizationrecommendation',
+];
+
+var diagnostics = [
   'observation',
   'diagnosticreport',
   'diagnosticorder',
@@ -105,84 +104,127 @@ var clinical_types = [
   'imagingobjectselection',
 ];
 
-var identification_types = [
+var individuals = [
   'patient',
   'practitioner',
   'relatedperson',
+];
+
+var groups = [
   'organization',
   'healthcareservice',
   'group',
+];
+
+var entities = [
   'location',
   'substance',
   'person',
   'contract',
+];
+
+var device = [
   'device',
   'devicecomponent',
   'devicemetric',
 ];
 
-var workflow_types = [
+var patient_management = [
   'encounter',
   'episodeofcare',
   'communication',
   'flag',
+];
+
+var scheduling = [
   'appointment',
   'appointmentresponse',
   'schedule',
   'slot',
+];
+
+var workflow1 = [
   'order',
   'orderresponse',
   'communicationrequest',
   'deviceuserequest',
   'deviceusestatement',
+];
+
+var workflow2 = [
   'processrequest',
   'processresponse',
   'supplyrequest',
   'supplydelivery',
 ];
 
-var infrastructure_types = [
+var information = [
   'questionnaire',
   'questionnaireresponse',
   'provenance',
   'auditevent',
+];
+
+var documents = [
   'composition',
   'documentmanifest',
   'documentreference',
   'list',
+];
+
+var structure = [
   'media',
   'binary',
   'bundle',
   'basic',
+];
+
+var exchange = [
   'messageheader',
   'operationoutcome',
   'parameters',
   'subscription',
 ];
 
-var conformance_types = [
+var terminology = [
   'valueset',
   'conceptmap',
   'namingsystem',
+];
+
+var content = [
   'structuredefinition',
   'dataelement',
+];
+
+var operations = [
   'conformance',
   'operationdefinition',
   'searchparameter',
+];
+
+var misc = [
   'implementationguide',
   'testscript',
 ];
 
-var financial_types = [
-  'account',
+var support = [
   'coverage',
   'eligibilityrequest',
   'eligibilityresponse',
   'enrollmentrequest',
   'enrollmentresponse',
+];
+
+var billing = [
   'claim',
   'claimresponse',
+  'account',
+];
+
+var payment = [
   'paymentnotice',
   'paymentreconciliation',
-  'explanationofbenefit',
 ];
+
+var other = ['explanationofbenefit'];

@@ -1,3 +1,4 @@
+import 'package:fhir/r4/resource_types/resource_types.enums.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 

@@ -243,7 +243,7 @@ enum RequestMethod {
   unknown,
 }
 
-enum CapabilityStatementStatus {
+enum Status {
   @JsonValue('draft')
   draft,
   @JsonValue('active')
@@ -535,7 +535,7 @@ enum ClinicalImpressionStatus {
   unknown,
 }
 
-enum CodeSystemStatus {
+enum Status {
   @JsonValue('draft')
   draft,
   @JsonValue('active')

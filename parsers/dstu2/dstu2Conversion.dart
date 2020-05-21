@@ -12,17 +12,21 @@ void main() async {
   var newName;
   var length = 0;
   var text = '';
-  var namingList = <String>[];
+  var fileName;
+
   for (var i = 2; i < 10; i++) {
     for (var obj in schema['entry']) {
       if (obj['resource']['element'][0].keys.contains('type')) {
+        var temp = obj['resource']['id'].split('.').first.toLowerCase();
+
         if (length > obj['resource']['id'].split('.').length) {
           text = '}) = _$newName;\n\n'
               'factory $newName.fromJson(Map<String, dynamic> json) =>'
               '_\$${newName}FromJson(json);\n}';
           length = 0;
-          // if (text != '') print(text);
+          if (fileName != null) await printToFile(text, fileName);
         }
+        fileName = getFile(temp);
         text = '';
         if (!primitive_types
             .contains(obj['resource']['id'].split('.').first.toLowerCase())) {
@@ -48,28 +52,150 @@ void main() async {
                 'const factory $newName ({';
             length = i;
           }
+          var req = false;
           if (obj['resource']['id'].split('.').length == i) {
             if (obj['resource']['element'][0]['min'] > 0) {
-              text += '@JsonKey(required: true) @required ';
+              req = true;
             }
-            text += whatType(obj['resource']['element'][0]['type'][0]['code']);
-            text += last == 'extension' ? ' extension_,' : ' $last,';
             if (obj['resource']['element'][0].keys.contains('short')) {
               if (obj['resource']['element'][0]['short'].contains('|') &&
                   obj['resource']['element'][0]['type'][0]['code'] == 'code') {
-                print(obj['resource']['element'][0]['short']);
                 var nameList = obj['resource']['id'].split('.');
+                var enumName = nameList[nameList.length - 2][0].toUpperCase() +
+                    nameList[nameList.length - 2]
+                        .substring(1, nameList[nameList.length - 2].length) +
+                    nameList[nameList.length - 1][0].toUpperCase() +
+                    nameList[nameList.length - 1]
+                        .substring(1, nameList[nameList.length - 1].length);
+                if (req) {
+                  text +=
+                      '@JsonKey(required: true, unknownEnumValue: $enumName.unknown) @required $enumName ';
+                } else {
+                  text +=
+                      '@JsonKey(unknownEnumValue: $enumName.unknown) $enumName ';
+                }
+              } else {
+                if (req) {
+                  text += '@JsonKey(required: true) @required ' +
+                      whatType(
+                          obj['resource']['element'][0]['type'][0]['code']);
+                } else {
+                  text += whatType(
+                      obj['resource']['element'][0]['type'][0]['code']);
+                }
+              }
+            } else {
+              if (req) {
+                text += '@JsonKey(required: true) @required ' +
+                    whatType(obj['resource']['element'][0]['type'][0]['code']);
+              } else {
+                text +=
+                    whatType(obj['resource']['element'][0]['type'][0]['code']);
               }
             }
+            text += last == 'extension' ? ' extension_,' : ' $last,';
           }
         }
-        // if (text != '') print(text);
+        if (text != '') await printToFile(text, fileName);
       } else {
         notypes.add(obj['resource']['id']);
       }
     }
   }
   // print(notypes);
+}
+
+Future<void> printToFile(String text, String fileName) async {
+  var temp = await File(fileName).readAsString();
+  temp += text;
+  await File(fileName).writeAsString(temp);
+}
+
+String getFile(String temp) {
+  if (general_types.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/general_types/general_types.dart';
+  }
+  if (metadata_types.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/metadata_types/metadata_types.dart';
+  }
+  if (special_types.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/special_types/special_types.dart';
+  }
+  if (data_types.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource/resource.dart';
+  }
+  if (general.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/clinical_types/general/general.dart';
+  }
+  if (care_provision.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/clinical_types/care_provision/care_provision.dart';
+  }
+  if (medication.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/clinical_types/medication_and_immunization/medication_and_immunization.dart';
+  }
+  if (diagnostics.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/clinical_types/diagnostics/diagnostics.dart';
+  }
+  if (individuals.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/identification_types/individuals/individuals.dart';
+  }
+  if (groups.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/identification_types/groups/groups.dart';
+  }
+  if (entities.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/identification_types/entities/entities.dart';
+  }
+  if (device.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/identification_types/devices/devices.dart';
+  }
+  if (patient_management.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/workflow_types/patient_management/patient_management.dart';
+  }
+  if (scheduling.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/workflow_types/scheduling/scheduling.dart';
+  }
+  if (workflow1.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/workflow_types/workflow1/workflow1.dart';
+  }
+  if (workflow2.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/workflow_types/workflow2/workflow2.dart';
+  }
+  if (information.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/infrastructure_types/information_tracking/information_tracking.dart';
+  }
+  if (documents.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/infrastructure_types/documents_and_lists/documents_and_lists.dart';
+  }
+  if (structure.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/infrastructure_types/structure/structure.dart';
+  }
+  if (exchange.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/infrastructure_types/exchange/exchange.dart';
+  }
+  if (terminology.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/terminology/terminology.dart';
+  }
+  if (content.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/content/content.dart';
+  }
+  if (operations.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/operations/operations.dart';
+  }
+  if (misc.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/misc/misc.dart';
+  }
+  if (support.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/support/support.dart';
+  }
+  if (billing.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/billing/billing.dart';
+  }
+  if (payment.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/payment/payment.dart';
+  }
+  if (other.contains(temp)) {
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/other/other.dart';
+  }
 }
 
 String whatType(String field) {
