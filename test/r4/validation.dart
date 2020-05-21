@@ -4,29 +4,28 @@ import 'dart:io';
 import 'package:fhir/fhir_r4.dart' as fhir_r4;
 import 'package:http/http.dart';
 
-void main() async {
-  var file = File('./test/r4/bundle_original.json');
-  var contents = await file.readAsString();
-  var newBundle = fhir_r4.Bundle.fromJson(json.decode(contents));
-  await File('./test/r4/bundle_test.json').writeAsString(newBundle.toString());
-}
-
 // void main() async {
-//   var server = 'http://hapi.fhir.org/baseR4';
-//   var headers = {'Content-type': 'application/json'};
-
-//   for (var resource in resourceTypes) {
-//     var response = await get('$server/$resource', headers: headers);
-//     await File('./test/r4/bundle_original.json')
-//         .writeAsString(response.body.toString());
-//     print(fhir_r4.Bundle.fromJson(jsonDecode(response.body)));
-//   }
+//   var file = File('./test/r4/bundle_original.json');
+//   var contents = await file.readAsString();
+//   var newBundle = fhir_r4.Bundle.fromJson(json.decode(contents));
+//   await File('./test/r4/bundle_test.json').writeAsString(json.encode(newBundle.toJson()));
 // }
+
+void main() async {
+  var server = 'http://hapi.fhir.org/baseR4';
+  var headers = {'Content-type': 'application/json'};
+
+  for (var resource in resourceTypes) {
+    var response = await get('$server/$resource', headers: headers);
+    // await File('./test/r4/bundle_original.json')
+    //     .writeAsString(response.body.toString());
+    print(resource);
+    print(fhir_r4.Bundle.fromJson(jsonDecode(response.body)));
+  }
+}
 
 var resourceTypes = [
   'Account',
-];
-var testTypes = [
   'ActivityDefinition',
   'AdverseEvent',
   'AllergyIntolerance',
