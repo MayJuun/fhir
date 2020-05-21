@@ -130,7 +130,7 @@ void main() async {
 // import 'package:flutter/foundation.dart';
 
 import '${name.split('/').last.split('.').first}.enums.dart';
-import '../../fhir_stu3.dart';
+import '../../fhir_dstu2.dart';
 
 part '${name.split('/').last.split('.').first}.freezed.dart';
 part '${name.split('/').last.split('.').first}.g.dart';\n\n""" +
