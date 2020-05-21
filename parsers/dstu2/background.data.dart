@@ -41,16 +41,6 @@ var general_types = [
   'money',
 ];
 
-var metadata_types = [
-  'contactdetail',
-  'contributor',
-  'datarequirement',
-  'parameterdefinition',
-  'relatedartifact',
-  'triggerdefinition',
-  'usagecontext',
-];
-
 var special_types = [
   'reference',
   'narrative',

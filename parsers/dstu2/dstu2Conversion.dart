@@ -30,13 +30,19 @@ void main() async {
         text = '';
         if (!primitive_types
             .contains(obj['resource']['id'].split('.').first.toLowerCase())) {
-          var last = obj['resource']['id'].split('.').last;
+          var last = obj['resource']['id'].split('.').last.replaceAll('.', '');
           if (obj['resource']['id'].split('.').length == i - 1 &&
               obj['resource']['element'][0]['type'][0]['code'] ==
                   'DomainResource') {
-            newName = obj['resource']['id'].split('.').first +
-                last[0].toUpperCase() +
-                last.substring(1, last.length);
+            if (obj['resource']['id'].split('.').length == 1) {
+              newName = obj['resource']['id'][0].toUpperCase() +
+                  obj['resource']['id']
+                      .substring(1, obj['resource']['id'].length);
+            } else {
+              newName = obj['resource']['id'].split('.').first +
+                  last[0].toUpperCase() +
+                  last.substring(1, last.length);
+            }
             text +=
                 '\n@freezed\nabstract class $newName with _\$$newName implements Resource {\n'
                 'const factory $newName ({';
@@ -159,9 +165,6 @@ String getFile(String temp) {
   if (general_types.contains(temp)) {
     return '/home/grey/dev/fhir/lib/dstu2/general_types/general_types.dart';
   }
-  if (metadata_types.contains(temp)) {
-    return '/home/grey/dev/fhir/lib/dstu2/metadata_types/metadata_types.dart';
-  }
   if (special_types.contains(temp)) {
     return '/home/grey/dev/fhir/lib/dstu2/special_types/special_types.dart';
   }
@@ -244,7 +247,6 @@ String getFile(String temp) {
 
 var fileNames = [
   '/home/grey/dev/fhir/lib/dstu2/general_types/general_types.dart',
-  '/home/grey/dev/fhir/lib/dstu2/metadata_types/metadata_types.dart',
   '/home/grey/dev/fhir/lib/dstu2/special_types/special_types.dart',
   '/home/grey/dev/fhir/lib/dstu2/resource/resource.dart',
   '/home/grey/dev/fhir/lib/dstu2/resource_types/clinical_types/general/general.dart',
