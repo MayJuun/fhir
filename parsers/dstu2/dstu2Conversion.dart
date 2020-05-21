@@ -109,11 +109,11 @@ void main() async {
     temp = """import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import '${temp.split('/').last.split('.').first}.enums.dart';
+import '${name.split('/').last.split('.').first}.enums.dart';
 import '../../fhir_stu3.dart';
 
-part '${temp.split('/').last.split('.').first}.freezed.dart';
-part '${temp.split('/').last.split('.').first}.g.dart';\n\n""" +
+part '${name.split('/').last.split('.').first}.freezed.dart';
+part '${name.split('/').last.split('.').first}.g.dart';\n\n""" +
         temp;
     await File(name).writeAsString(temp);
   }
