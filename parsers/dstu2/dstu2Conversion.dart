@@ -116,7 +116,7 @@ void main() async {
       }
     }
   }
-  // print(notypes);
+  print(notypes);
 
   for (var name in fileNames) {
     var temp = await File(name).readAsString();
