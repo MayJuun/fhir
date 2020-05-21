@@ -103,6 +103,20 @@ void main() async {
     }
   }
   // print(notypes);
+
+  for (var name in fileNames) {
+    var temp = await File(name).readAsString();
+    temp = """import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
+
+import '${temp.split('/').last.split('.').first}.enums.dart';
+import '../../fhir_stu3.dart';
+
+part '${temp.split('/').last.split('.').first}.freezed.dart';
+part '${temp.split('/').last.split('.').first}.g.dart';\n\n""" +
+        temp;
+    await File(name).writeAsString(temp);
+  }
 }
 
 Future<void> printToFile(String text, String fileName) async {
@@ -197,6 +211,36 @@ String getFile(String temp) {
     return '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/other/other.dart';
   }
 }
+
+var fileNames = [
+  '/home/grey/dev/fhir/lib/dstu2/metadata_types/metadata_types.dart',
+  '/home/grey/dev/fhir/lib/dstu2/special_types/special_types.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource/resource.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/clinical_types/general/general.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/clinical_types/care_provision/care_provision.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/clinical_types/medication_and_immunization/medication_and_immunization.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/clinical_types/diagnostics/diagnostics.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/identification_types/individuals/individuals.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/identification_types/groups/groups.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/identification_types/entities/entities.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/identification_types/devices/devices.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/workflow_types/patient_management/patient_management.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/workflow_types/scheduling/scheduling.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/workflow_types/workflow1/workflow1.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/workflow_types/workflow2/workflow2.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/infrastructure_types/information_tracking/information_tracking.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/infrastructure_types/documents_and_lists/documents_and_lists.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/infrastructure_types/structure/structure.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/infrastructure_types/exchange/exchange.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/terminology/terminology.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/content/content.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/operations_control/operations_control.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/misc/misc.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/support/support.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/billing/billing.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/payment/payment.dart',
+  '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/other/other.dart',
+];
 
 String whatType(String field) {
   switch (field) {
