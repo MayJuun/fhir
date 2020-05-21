@@ -13,13 +13,18 @@ enum IdentifierUse {
   unknown,
 }
 
-// enum QuantityComparator{
-// @JsonValue('<')
-// <,@JsonValue('<=')
-// <=,@JsonValue('>=')
-// >=,@JsonValue('>')
-// >,@JsonValue('unknown')
-// unknown,}
+enum Comparator {
+  @JsonValue('<')
+  less_than,
+  @JsonValue('<=')
+  less_or_equal,
+  @JsonValue('>=')
+  greater_or_equal,
+  @JsonValue('>')
+  greater_than,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum HumanNameUse {
   @JsonValue('usual')
@@ -98,7 +103,7 @@ enum ContactPointUse {
   unknown,
 }
 
-enum TimingRepeat {
+enum TimingRepeatDurationUnit {
   @JsonValue('s')
   s,
   @JsonValue('min')
@@ -117,36 +122,64 @@ enum TimingRepeat {
   unknown,
 }
 
-// enum TimingRepeat{
-// @JsonValue('s')
-// s,@JsonValue('min')
-// min,@JsonValue('h')
-// h,@JsonValue('d')
-// d,@JsonValue('wk')
-// wk,@JsonValue('mo')
-// mo,@JsonValue('a')
-// a,@JsonValue('unknown')
-// unknown,}
+enum TimingRepeatPeriodUnit {
+  @JsonValue('s')
+  s,
+  @JsonValue('min')
+  min,
+  @JsonValue('h')
+  h,
+  @JsonValue('d')
+  d,
+  @JsonValue('wk')
+  wk,
+  @JsonValue('mo')
+  mo,
+  @JsonValue('a')
+  a,
+  @JsonValue('unknown')
+  unknown,
+}
 
-// enum TimingRepeat{
-// @JsonValue('MORN')
-// morn,@JsonValue('AFT')
-// aft,@JsonValue('EVE')
-// eve,@JsonValue('NIGHT')
-// night,@JsonValue('PHS')
-// phs,@JsonValue('HS')
-// hs,@JsonValue('WAKE')
-// wake,@JsonValue('C')
-// c,@JsonValue('CM')
-// cm,@JsonValue('CD')
-// cd,@JsonValue('CV')
-// cv,@JsonValue('AC')
-// ac,@JsonValue('ACM')
-// acm,@JsonValue('ACD')
-// acd,@JsonValue('ACV')
-// acv,@JsonValue('PC')
-// pc,@JsonValue('PCM')
-// pcm,@JsonValue('PCD')
-// pcd,@JsonValue('PCV')
-// pcv,@JsonValue('unknown')
-// unknown,}
+enum TimingRepeatWhen {
+  @JsonValue('MORN')
+  morn,
+  @JsonValue('AFT')
+  aft,
+  @JsonValue('EVE')
+  eve,
+  @JsonValue('NIGHT')
+  night,
+  @JsonValue('PHS')
+  phs,
+  @JsonValue('HS')
+  hs,
+  @JsonValue('WAKE')
+  wake,
+  @JsonValue('C')
+  c,
+  @JsonValue('CM')
+  cm,
+  @JsonValue('CD')
+  cd,
+  @JsonValue('CV')
+  cv,
+  @JsonValue('AC')
+  ac,
+  @JsonValue('ACM')
+  acm,
+  @JsonValue('ACD')
+  acd,
+  @JsonValue('ACV')
+  acv,
+  @JsonValue('PC')
+  pc,
+  @JsonValue('PCM')
+  pcm,
+  @JsonValue('PCD')
+  pcd,
+  @JsonValue('PCV')
+  pcv,
+  @JsonValue('unknown')
+  unknown,
+}

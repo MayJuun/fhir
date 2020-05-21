@@ -20,7 +20,7 @@ abstract class ContactDetail with _$ContactDetail {
 @freezed
 abstract class Contributor with _$Contributor {
   const factory Contributor({
-    @JsonKey(unknownEnumValue: ContributorType.unknown) String type,
+    @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
     String name,
     List<ContactDetail> contact,
   }) = _Contributor;
@@ -31,7 +31,8 @@ abstract class Contributor with _$Contributor {
 @freezed
 abstract class RelatedArtifact with _$RelatedArtifact {
   const factory RelatedArtifact({
-    @JsonKey(unknownEnumValue: RelatedArtifactType.unknown) String type,
+    @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
+        RelatedArtifactType type,
     String display,
     String citation,
     String url,
@@ -60,8 +61,8 @@ abstract class DataRequirement with _$DataRequirement {
     Code type,
     List<String> profile,
     List<String> mustSupport,
-    List<DataRequirement_CodeFilter> codeFilter,
-    List<DataRequirement_DateFilter> dateFilter,
+    List<DataRequirementCodeFilter> codeFilter,
+    List<DataRequirementDateFilter> dateFilter,
   }) = _DataRequirement;
   factory DataRequirement.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementFromJson(json);
@@ -111,7 +112,8 @@ abstract class ParameterDefinition with _$ParameterDefinition {
 @freezed
 abstract class TriggerDefinition with _$TriggerDefinition {
   const factory TriggerDefinition({
-    @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown) String type,
+    @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
+        TriggerDefinitionType type,
     String eventName,
     Timing eventTimingTiming,
     Reference eventTimingReference,

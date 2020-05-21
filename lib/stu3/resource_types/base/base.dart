@@ -1,7 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import '../../../../fhir_stu3.dart';
+import '../../../fhir_stu3.dart';
+import '../resource_types.enums.dart';
 
 part 'base.freezed.dart';
 part 'base.g.dart';
@@ -13,7 +14,8 @@ abstract class Appointment with _$Appointment implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: AppointmentStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+        AppointmentStatus status,
     CodeableConcept serviceCategory,
     List<CodeableConcept> serviceType,
     List<CodeableConcept> specialty,
@@ -30,7 +32,7 @@ abstract class Appointment with _$Appointment implements Resource {
     DateTime created,
     String comment,
     List<Reference> incomingReferral,
-    @JsonKey(required: true) List<Appointment_Participant> participant,
+    @JsonKey(required: true) List<AppointmentParticipant> participant,
     List<Period> requestedPeriod,
   }) = _Appointment;
   factory Appointment.fromJson(Map<String, dynamic> json) =>
@@ -42,8 +44,10 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
   const factory AppointmentParticipant({
     List<CodeableConcept> type,
     Reference actor,
-    @JsonKey(unknownEnumValue: AppointmentParticipant.unknown) String required,
-    @JsonKey(unknownEnumValue: AppointmentParticipant.unknown) String status,
+    @JsonKey(name: 'required', unknownEnumValue: ParticipantRequired.unknown)
+        ParticipantRequired required_,
+    @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
+        ParticipantStatus status,
   }) = _AppointmentParticipant;
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
@@ -77,8 +81,8 @@ abstract class Device with _$Device implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    Device_Udi udi,
-    @JsonKey(unknownEnumValue: DeviceStatus.unknown) String status,
+    DeviceUdi udi,
+    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
     CodeableConcept type,
     String lotNumber,
     String manufacturer,
@@ -106,7 +110,7 @@ abstract class DeviceUdi with _$DeviceUdi {
     String carrierHRF,
     String carrierAIDC,
     String issuer,
-    @JsonKey(unknownEnumValue: DeviceUdi.unknown) String entryType,
+    @JsonKey(unknownEnumValue: UdiEntryType.unknown) UdiEntryType entryType,
   }) = _DeviceUdi;
   factory DeviceUdi.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiFromJson(json);
@@ -126,8 +130,8 @@ abstract class DeviceComponent with _$DeviceComponent implements Resource {
     List<CodeableConcept> operationalStatus,
     CodeableConcept parameterGroup,
     @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
-        String measurementPrinciple,
-    List<DeviceComponent_ProductionSpecification> productionSpecification,
+        DeviceComponentMeasurementPrinciple measurementPrinciple,
+    List<DeviceComponentProductionSpecification> productionSpecification,
     CodeableConcept languageCode,
   }) = _DeviceComponent;
   factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
@@ -159,11 +163,13 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
     Reference source,
     Reference parent,
     @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
-        String operationalStatus,
-    @JsonKey(unknownEnumValue: DeviceMetricColor.unknown) String color,
-    @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown) String category,
+        DeviceMetricOperationalStatus operationalStatus,
+    @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
+        DeviceMetricColor color,
+    @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
+        DeviceMetricCategory category,
     Timing measurementPeriod,
-    List<DeviceMetric_Calibration> calibration,
+    List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
@@ -172,8 +178,8 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
 @freezed
 abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
   const factory DeviceMetricCalibration({
-    @JsonKey(unknownEnumValue: DeviceMetricCalibration.unknown) String type,
-    @JsonKey(unknownEnumValue: DeviceMetricCalibration.unknown) String state,
+    @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType type,
+    @JsonKey(unknownEnumValue: CalibrationState.unknown) CalibrationState state,
     String time,
   }) = _DeviceMetricCalibration;
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
@@ -187,24 +193,24 @@ abstract class Encounter with _$Encounter implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: EncounterStatus.unknown) String status,
-    List<Encounter_StatusHistory> statusHistory,
+    @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus status,
+    List<EncounterStatusHistory> statusHistory,
     @JsonKey(name: 'class') Coding class_,
-    List<Encounter_ClassHistory> classHistory,
+    List<EncounterClassHistory> classHistory,
     List<CodeableConcept> type,
     CodeableConcept priority,
     Reference subject,
     List<Reference> episodeOfCare,
     List<Reference> incomingReferral,
-    List<Encounter_Participant> participant,
+    List<EncounterParticipant> participant,
     Reference appointment,
     Period period,
     Duration length,
     List<CodeableConcept> reason,
-    List<Encounter_Diagnosis> diagnosis,
+    List<EncounterDiagnosis> diagnosis,
     List<Reference> account,
-    Encounter_Hospitalization hospitalization,
-    List<Encounter_Location> location,
+    EncounterHospitalization hospitalization,
+    List<EncounterLocation> location,
     Reference serviceProvider,
     Reference partOf,
   }) = _Encounter;
@@ -215,7 +221,8 @@ abstract class Encounter with _$Encounter implements Resource {
 @freezed
 abstract class EncounterStatusHistory with _$EncounterStatusHistory {
   const factory EncounterStatusHistory({
-    @JsonKey(unknownEnumValue: EncounterStatusHistory.unknown) String status,
+    @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
+        EncounterHistoryStatus status,
     @JsonKey(required: true) Period period,
   }) = _EncounterStatusHistory;
   factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -275,7 +282,8 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
 abstract class EncounterLocation with _$EncounterLocation {
   const factory EncounterLocation({
     @JsonKey(required: true) Reference location,
-    @JsonKey(unknownEnumValue: EncounterLocation.unknown) String status,
+    @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+        EncounterLocationStatus status,
     Period period,
   }) = _EncounterLocation;
   factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
@@ -289,7 +297,7 @@ abstract class Endpoint with _$Endpoint implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: EndpointStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: EndpointStatus.unknown) EndpointStatus status,
     @JsonKey(required: true) Coding connectionType,
     String name,
     Reference managingOrganization,
@@ -311,10 +319,11 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown) String status,
-    List<EpisodeOfCare_StatusHistory> statusHistory,
+    @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+        EpisodeOfCareStatus status,
+    List<EpisodeOfCareStatusHistory> statusHistory,
     List<CodeableConcept> type,
-    List<EpisodeOfCare_Diagnosis> diagnosis,
+    List<EpisodeOfCareDiagnosis> diagnosis,
     @JsonKey(required: true) Reference patient,
     Reference managingOrganization,
     Period period,
@@ -330,8 +339,8 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
 @freezed
 abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   const factory EpisodeOfCareStatusHistory({
-    @JsonKey(unknownEnumValue: EpisodeOfCareStatusHistory.unknown)
-        String status,
+    @JsonKey(unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
+        EpisodeOfCareHistoryStatus status,
     @JsonKey(required: true) Period period,
   }) = _EpisodeOfCareStatusHistory;
   factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -356,7 +365,7 @@ abstract class Flag with _$Flag implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: FlagStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
     CodeableConcept category,
     @JsonKey(required: true) CodeableConcept code,
     @JsonKey(required: true) Reference subject,
@@ -375,13 +384,13 @@ abstract class Group with _$Group implements Resource {
         String resourceType,
     List<Identifier> identifier,
     Boolean active,
-    @JsonKey(unknownEnumValue: GroupType.unknown) String type,
+    @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
     Boolean actual,
     CodeableConcept code,
     String name,
     UnsignedInt quantity,
-    List<Group_Characteristic> characteristic,
-    List<Group_Member> member,
+    List<GroupCharacteristic> characteristic,
+    List<GroupMember> member,
   }) = _Group;
   factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
 }
@@ -438,8 +447,8 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
     List<CodeableConcept> characteristic,
     List<CodeableConcept> referralMethod,
     Boolean appointmentRequired,
-    List<HealthcareService_AvailableTime> availableTime,
-    List<HealthcareService_NotAvailable> notAvailable,
+    List<HealthcareServiceAvailableTime> availableTime,
+    List<HealthcareServiceNotAvailable> notAvailable,
     String availabilityExceptions,
     List<Reference> endpoint,
   }) = _HealthcareService;
@@ -451,8 +460,7 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
 abstract class HealthcareServiceAvailableTime
     with _$HealthcareServiceAvailableTime {
   const factory HealthcareServiceAvailableTime({
-    @JsonKey(unknownEnumValue: HealthcareServiceAvailableTime.unknown)
-        List<String> daysOfWeek,
+    List<AvailableTimeDaysOfWeek> daysOfWeek,
     Boolean allDay,
     Time availableStartTime,
     Time availableEndTime,
@@ -483,7 +491,7 @@ abstract class Library with _$Library implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: LibraryStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
     Boolean experimental,
     @JsonKey(required: true) CodeableConcept type,
     DateTime date,
@@ -510,14 +518,14 @@ abstract class Library with _$Library implements Resource {
 }
 
 @freezed
-abstract class List with _$List implements Resource {
-  const factory List({
+abstract class Lists with _$Lists implements Resource {
+  const factory Lists({
     @JsonKey(required: true, defaultValue: 'List')
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: ListStatus.unknown) String status,
-    @JsonKey(unknownEnumValue: ListMode.unknown) String mode,
+    @JsonKey(unknownEnumValue: ListStatus.unknown) ListStatus status,
+    @JsonKey(unknownEnumValue: ListMode.unknown) ListMode mode,
     String title,
     CodeableConcept code,
     Reference subject,
@@ -526,10 +534,10 @@ abstract class List with _$List implements Resource {
     Reference source,
     CodeableConcept orderedBy,
     List<Annotation> note,
-    List<List_Entry> entry,
+    List<ListEntry> entry,
     CodeableConcept emptyReason,
-  }) = _List;
-  factory List.fromJson(Map<String, dynamic> json) => _$ListFromJson(json);
+  }) = _Lists;
+  factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
 }
 
 @freezed
@@ -551,17 +559,17 @@ abstract class Location with _$Location implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: LocationStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
     Coding operationalStatus,
     String name,
     List<String> alias,
     String description,
-    @JsonKey(unknownEnumValue: LocationMode.unknown) String mode,
+    @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode mode,
     CodeableConcept type,
     List<ContactPoint> telecom,
     Address address,
     CodeableConcept physicalType,
-    Location_Position position,
+    LocationPosition position,
     Reference managingOrganization,
     Reference partOf,
     List<Reference> endpoint,
@@ -595,7 +603,7 @@ abstract class Organization with _$Organization implements Resource {
     List<ContactPoint> telecom,
     List<Address> address,
     Reference partOf,
-    List<Organization_Contact> contact,
+    List<OrganizationContact> contact,
     List<Reference> endpoint,
   }) = _Organization;
   factory Organization.fromJson(Map<String, dynamic> json) =>
@@ -624,7 +632,7 @@ abstract class Patient with _$Patient implements Resource {
     Boolean active,
     List<HumanName> name,
     List<ContactPoint> telecom,
-    @JsonKey(unknownEnumValue: PatientGender.unknown) String gender,
+    @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
     Date birthDate,
     Boolean deceasedBoolean,
     DateTime deceasedDateTime,
@@ -633,12 +641,12 @@ abstract class Patient with _$Patient implements Resource {
     Boolean multipleBirthBoolean,
     Integer multipleBirthInteger,
     List<Attachment> photo,
-    List<Patient_Contact> contact,
-    Patient_Animal animal,
-    List<Patient_Communication> communication,
+    List<PatientContact> contact,
+    PatientAnimal animal,
+    List<PatientCommunication> communication,
     List<Reference> generalPractitioner,
     Reference managingOrganization,
-    List<Patient_Link> link,
+    List<PatientLink> link,
   }) = _Patient;
   factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
@@ -651,7 +659,7 @@ abstract class PatientContact with _$PatientContact {
     HumanName name,
     List<ContactPoint> telecom,
     Address address,
-    @JsonKey(unknownEnumValue: PatientContact.unknown) String gender,
+    @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
     Reference organization,
     Period period,
   }) = _PatientContact;
@@ -684,7 +692,7 @@ abstract class PatientCommunication with _$PatientCommunication {
 abstract class PatientLink with _$PatientLink {
   const factory PatientLink({
     @JsonKey(required: true) Reference other,
-    @JsonKey(unknownEnumValue: PatientLink.unknown) String type,
+    @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType type,
   }) = _PatientLink;
   factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
@@ -699,13 +707,13 @@ abstract class Person with _$Person implements Resource {
     List<Identifier> identifier,
     List<HumanName> name,
     List<ContactPoint> telecom,
-    @JsonKey(unknownEnumValue: PersonGender.unknown) String gender,
+    @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
     Date birthDate,
     List<Address> address,
     Attachment photo,
     Reference managingOrganization,
     Boolean active,
-    List<Person_Link> link,
+    List<PersonLink> link,
   }) = _Person;
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
 }
@@ -714,7 +722,8 @@ abstract class Person with _$Person implements Resource {
 abstract class PersonLink with _$PersonLink {
   const factory PersonLink({
     @JsonKey(required: true) Reference target,
-    @JsonKey(unknownEnumValue: PersonLink.unknown) String assurance,
+    @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+        PersonLinkAssurance assurance,
   }) = _PersonLink;
   factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
@@ -731,10 +740,10 @@ abstract class Practitioner with _$Practitioner implements Resource {
     List<HumanName> name,
     List<ContactPoint> telecom,
     List<Address> address,
-    @JsonKey(unknownEnumValue: PractitionerGender.unknown) String gender,
+    @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
     Date birthDate,
     List<Attachment> photo,
-    List<Practitioner_Qualification> qualification,
+    List<PractitionerQualification> qualification,
     List<CodeableConcept> communication,
   }) = _Practitioner;
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
@@ -769,8 +778,8 @@ abstract class PractitionerRole with _$PractitionerRole implements Resource {
     List<Reference> location,
     List<Reference> healthcareService,
     List<ContactPoint> telecom,
-    List<PractitionerRole_AvailableTime> availableTime,
-    List<PractitionerRole_NotAvailable> notAvailable,
+    List<PractitionerRoleAvailableTime> availableTime,
+    List<PractitionerRoleNotAvailable> notAvailable,
     String availabilityExceptions,
     List<Reference> endpoint,
   }) = _PractitionerRole;
@@ -810,7 +819,8 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
         String resourceType,
     List<Identifier> identifier,
     Code status,
-    @JsonKey(unknownEnumValue: ProcessRequestAction.unknown) String action,
+    @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
+        ProcessRequestAction action,
     Reference target,
     DateTime created,
     Reference provider,
@@ -819,7 +829,7 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
     Reference response,
     Boolean nullify,
     String reference,
-    List<ProcessRequest_Item> item,
+    List<ProcessRequestItem> item,
     List<String> include,
     List<String> exclude,
     Period period,
@@ -853,7 +863,7 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
     Reference requestProvider,
     Reference requestOrganization,
     CodeableConcept form,
-    List<ProcessResponse_ProcessNote> processNote,
+    List<ProcessResponseProcessNote> processNote,
     List<CodeableConcept> error,
     List<Reference> communicationRequest,
   }) = _ProcessResponse;
@@ -883,7 +893,7 @@ abstract class RelatedPerson with _$RelatedPerson implements Resource {
     CodeableConcept relationship,
     List<HumanName> name,
     List<ContactPoint> telecom,
-    @JsonKey(unknownEnumValue: RelatedPersonGender.unknown) String gender,
+    @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
     Date birthDate,
     List<Address> address,
     List<Attachment> photo,
@@ -924,7 +934,7 @@ abstract class Slot with _$Slot implements Resource {
     List<CodeableConcept> specialty,
     CodeableConcept appointmentType,
     @JsonKey(required: true) Reference schedule,
-    @JsonKey(unknownEnumValue: SlotStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus status,
     String start,
     String end,
     Boolean overbooked,
@@ -940,12 +950,12 @@ abstract class Substance with _$Substance implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: SubstanceStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: SubstanceStatus.unknown) SubstanceStatus status,
     List<CodeableConcept> category,
     @JsonKey(required: true) CodeableConcept code,
     String description,
-    List<Substance_Instance> instance,
-    List<Substance_Ingredient> ingredient,
+    List<SubstanceInstance> instance,
+    List<SubstanceIngredient> ingredient,
   }) = _Substance;
   factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
@@ -985,7 +995,7 @@ abstract class Task with _$Task implements Resource {
     List<Reference> basedOn,
     Identifier groupIdentifier,
     List<Reference> partOf,
-    @JsonKey(unknownEnumValue: TaskStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus status,
     CodeableConcept statusReason,
     CodeableConcept businessStatus,
     Code intent,
@@ -998,15 +1008,15 @@ abstract class Task with _$Task implements Resource {
     Period executionPeriod,
     DateTime authoredOn,
     DateTime lastModified,
-    Task_Requester requester,
+    TaskRequester requester,
     List<CodeableConcept> performerType,
     Reference owner,
     CodeableConcept reason,
     List<Annotation> note,
     List<Reference> relevantHistory,
-    Task_Restriction restriction,
-    List<Task_Input> input,
-    List<Task_Output> output,
+    TaskRestriction restriction,
+    List<TaskInput> input,
+    List<TaskOutput> output,
   }) = _Task;
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }

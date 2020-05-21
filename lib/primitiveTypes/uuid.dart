@@ -13,7 +13,8 @@ class Uuid extends PrimitiveObject<String> {
       validateUuid(value),
     );
   }
+
   const Uuid._(this.value);
+
   factory Uuid.fromJson(String json) => Uuid(json);
-  String toJson() => result();
 }

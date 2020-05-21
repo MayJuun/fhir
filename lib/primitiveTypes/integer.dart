@@ -13,8 +13,14 @@ class Integer extends PrimitiveObject<int> {
       validateInteger(value),
     );
   }
+
   const Integer._(this.value);
 
   factory Integer.fromJson(dynamic json) => Integer(json);
-  String toJson() => result();
+
+  @override
+  dynamic toJson() => value.fold(
+        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
+        (value) => value,
+      );
 }

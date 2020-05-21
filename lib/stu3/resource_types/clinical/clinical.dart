@@ -1,7 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import '../../../../fhir_stu3.dart';
+import '../../../fhir_stu3.dart';
+import '../resource_types.enums.dart';
 
 part 'clinical.freezed.dart';
 part 'clinical.g.dart';
@@ -13,7 +14,8 @@ abstract class AdverseEvent with _$AdverseEvent implements Resource {
     @required
         String resourceType,
     Identifier identifier,
-    @JsonKey(unknownEnumValue: AdverseEventCategory.unknown) String category,
+    @JsonKey(unknownEnumValue: AdverseEventCategory.unknown)
+        AdverseEventCategory category,
     CodeableConcept type,
     Reference subject,
     DateTime date,
@@ -24,7 +26,7 @@ abstract class AdverseEvent with _$AdverseEvent implements Resource {
     Reference recorder,
     Reference eventParticipant,
     String description,
-    List<AdverseEvent_SuspectEntity> suspectEntity,
+    List<AdverseEventSuspectEntity> suspectEntity,
     List<Reference> subjectMedicalHistory,
     List<Reference> referenceDocument,
     List<Reference> study,
@@ -37,8 +39,8 @@ abstract class AdverseEvent with _$AdverseEvent implements Resource {
 abstract class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   const factory AdverseEventSuspectEntity({
     @JsonKey(required: true) Reference instance,
-    @JsonKey(unknownEnumValue: AdverseEventSuspectEntity.unknown)
-        String causality,
+    @JsonKey(unknownEnumValue: SuspectEntityCausality.unknown)
+        SuspectEntityCausality causality,
     CodeableConcept causalityAssessment,
     String causalityProductRelatedness,
     CodeableConcept causalityMethod,
@@ -59,14 +61,14 @@ abstract class AllergyIntolerance
         String resourceType,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: AllergyIntoleranceClinicalStatus.unknown)
-        String clinicalStatus,
+        AllergyIntoleranceClinicalStatus clinicalStatus,
     @JsonKey(unknownEnumValue: AllergyIntoleranceVerificationStatus.unknown)
-        String verificationStatus,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown) String type,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceCategory.unknown)
-        List<String> category,
+        AllergyIntoleranceVerificationStatus verificationStatus,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+        AllergyIntoleranceType type,
+    List<AllergyIntoleranceCategory> category,
     @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
-        String criticality,
+        AllergyIntoleranceCriticality criticality,
     CodeableConcept code,
     @JsonKey(required: true) Reference patient,
     DateTime onsetDateTime,
@@ -79,7 +81,7 @@ abstract class AllergyIntolerance
     Reference asserter,
     DateTime lastOccurrence,
     List<Annotation> note,
-    List<AllergyIntolerance_Reaction> reaction,
+    List<AllergyIntoleranceReaction> reaction,
   }) = _AllergyIntolerance;
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceFromJson(json);
@@ -92,8 +94,8 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     @JsonKey(required: true) List<CodeableConcept> manifestation,
     String description,
     DateTime onset,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceReaction.unknown)
-        String severity,
+    @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
+        ReactionSeverity severity,
     CodeableConcept exposureRoute,
     List<Annotation> note,
   }) = _AllergyIntoleranceReaction;
@@ -130,8 +132,8 @@ abstract class CarePlan with _$CarePlan implements Resource {
     List<Reference> basedOn,
     List<Reference> replaces,
     List<Reference> partOf,
-    @JsonKey(unknownEnumValue: CarePlanStatus.unknown) String status,
-    @JsonKey(unknownEnumValue: CarePlanIntent.unknown) String intent,
+    @JsonKey(unknownEnumValue: CarePlanStatus.unknown) CarePlanStatus status,
+    @JsonKey(unknownEnumValue: CarePlanIntent.unknown) CarePlanIntent intent,
     List<CodeableConcept> category,
     String title,
     String description,
@@ -143,7 +145,7 @@ abstract class CarePlan with _$CarePlan implements Resource {
     List<Reference> addresses,
     List<Reference> supportingInfo,
     List<Reference> goal,
-    List<CarePlan_Activity> activity,
+    List<CarePlanActivity> activity,
     List<Annotation> note,
   }) = _CarePlan;
   factory CarePlan.fromJson(Map<String, dynamic> json) =>
@@ -157,7 +159,7 @@ abstract class CarePlanActivity with _$CarePlanActivity {
     List<Reference> outcomeReference,
     List<Annotation> progress,
     Reference reference,
-    CarePlan_Detail detail,
+    CarePlanDetail detail,
   }) = _CarePlanActivity;
   factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
       _$CarePlanActivityFromJson(json);
@@ -172,7 +174,8 @@ abstract class CarePlanDetail with _$CarePlanDetail {
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
     List<Reference> goal,
-    @JsonKey(unknownEnumValue: CarePlanDetail.unknown) String status,
+    @JsonKey(unknownEnumValue: CarePlanDetailStatus.unknown)
+        CarePlanDetailStatus status,
     String statusReason,
     Boolean prohibited,
     Timing scheduledTiming,
@@ -197,13 +200,13 @@ abstract class CareTeam with _$CareTeam implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: CareTeamStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
     List<CodeableConcept> category,
     String name,
     Reference subject,
     Reference context,
     Period period,
-    List<CareTeam_Participant> participant,
+    List<CareTeamParticipant> participant,
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
     List<Reference> managingOrganization,
@@ -234,7 +237,8 @@ abstract class ClinicalImpression
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
+        ClinicalImpressionStatus status,
     CodeableConcept code,
     String description,
     @JsonKey(required: true) Reference subject,
@@ -245,10 +249,10 @@ abstract class ClinicalImpression
     Reference assessor,
     Reference previous,
     List<Reference> problem,
-    List<ClinicalImpression_Investigation> investigation,
+    List<ClinicalImpressionInvestigation> investigation,
     List<String> protocol,
     String summary,
-    List<ClinicalImpression_Finding> finding,
+    List<ClinicalImpressionFinding> finding,
     List<CodeableConcept> prognosisCodeableConcept,
     List<Reference> prognosisReference,
     List<Reference> action,
@@ -304,7 +308,7 @@ abstract class Communication with _$Communication implements Resource {
     Reference sender,
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
-    List<Communication_Payload> payload,
+    List<CommunicationPayload> payload,
     List<Annotation> note,
   }) = _Communication;
   factory Communication.fromJson(Map<String, dynamic> json) =>
@@ -342,12 +346,12 @@ abstract class CommunicationRequest
     List<Reference> recipient,
     List<Reference> topic,
     Reference context,
-    List<CommunicationRequest_Payload> payload,
+    List<CommunicationRequestPayload> payload,
     DateTime occurrenceDateTime,
     Period occurrencePeriod,
     DateTime authoredOn,
     Reference sender,
-    CommunicationRequest_Requester requester,
+    CommunicationRequestRequester requester,
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
     List<Annotation> note,
@@ -387,7 +391,7 @@ abstract class Condition with _$Condition implements Resource {
     List<Identifier> identifier,
     Code clinicalStatus,
     @JsonKey(unknownEnumValue: ConditionVerificationStatus.unknown)
-        String verificationStatus,
+        ConditionVerificationStatus verificationStatus,
     List<CodeableConcept> category,
     CodeableConcept severity,
     CodeableConcept code,
@@ -407,8 +411,8 @@ abstract class Condition with _$Condition implements Resource {
     String abatementString,
     DateTime assertedDate,
     Reference asserter,
-    Condition_Stage stage,
-    List<Condition_Evidence> evidence,
+    ConditionStage stage,
+    List<ConditionEvidence> evidence,
     List<Annotation> note,
   }) = _Condition;
   factory Condition.fromJson(Map<String, dynamic> json) =>
@@ -444,14 +448,15 @@ abstract class DetectedIssue with _$DetectedIssue implements Resource {
     Identifier identifier,
     Code status,
     CodeableConcept category,
-    @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown) String severity,
+    @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
+        DetectedIssueSeverity severity,
     Reference patient,
     DateTime date,
     Reference author,
     List<Reference> implicated,
     String detail,
     String reference,
-    List<DetectedIssue_Mitigation> mitigation,
+    List<DetectedIssueMitigation> mitigation,
   }) = _DetectedIssue;
   factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueFromJson(json);
@@ -490,7 +495,7 @@ abstract class DeviceRequest with _$DeviceRequest implements Resource {
     Period occurrencePeriod,
     Timing occurrenceTiming,
     DateTime authoredOn,
-    DeviceRequest_Requester requester,
+    DeviceRequestRequester requester,
     CodeableConcept performerType,
     Reference performer,
     List<CodeableConcept> reasonCode,
@@ -522,7 +527,8 @@ abstract class DeviceUseStatement
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
+        DeviceUseStatementStatus status,
     @JsonKey(required: true) Reference subject,
     Period whenUsed,
     Timing timingTiming,
@@ -547,7 +553,8 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
         String resourceType,
     List<Identifier> identifier,
     List<Reference> basedOn,
-    @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
+        DiagnosticReportStatus status,
     CodeableConcept category,
     @JsonKey(required: true) CodeableConcept code,
     Reference subject,
@@ -555,11 +562,11 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
     DateTime effectiveDateTime,
     Period effectivePeriod,
     String issued,
-    List<DiagnosticReport_Performer> performer,
+    List<DiagnosticReportPerformer> performer,
     List<Reference> specimen,
     List<Reference> result,
     List<Reference> imagingStudy,
-    List<DiagnosticReport_Image> image,
+    List<DiagnosticReportImage> image,
     String conclusion,
     List<CodeableConcept> codedDiagnosis,
     List<Attachment> presentedForm,
@@ -598,14 +605,15 @@ abstract class FamilyMemberHistory
         String resourceType,
     List<Identifier> identifier,
     List<Reference> definition,
-    @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+        FamilyMemberHistoryStatus status,
     Boolean notDone,
     CodeableConcept notDoneReason,
     @JsonKey(required: true) Reference patient,
     DateTime date,
     String name,
     @JsonKey(required: true) CodeableConcept relationship,
-    @JsonKey(unknownEnumValue: FamilyMemberHistoryGender.unknown) String gender,
+    @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
     Period bornPeriod,
     Date bornDate,
     String bornString,
@@ -621,7 +629,7 @@ abstract class FamilyMemberHistory
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
     List<Annotation> note,
-    List<FamilyMemberHistory_Condition> condition,
+    List<FamilyMemberHistoryCondition> condition,
   }) = _FamilyMemberHistory;
   factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryFromJson(json);
@@ -650,14 +658,14 @@ abstract class Goal with _$Goal implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: GoalStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: GoalStatus.unknown) GoalStatus status,
     List<CodeableConcept> category,
     CodeableConcept priority,
     @JsonKey(required: true) CodeableConcept description,
     Reference subject,
     Date startDate,
     CodeableConcept startCodeableConcept,
-    Goal_Target target,
+    GoalTarget target,
     Date statusDate,
     String statusReason,
     Reference expressedBy,
@@ -694,7 +702,7 @@ abstract class ImagingManifest with _$ImagingManifest implements Resource {
     DateTime authoringTime,
     Reference author,
     String description,
-    @JsonKey(required: true) List<ImagingManifest_Study> study,
+    @JsonKey(required: true) List<ImagingManifestStudy> study,
   }) = _ImagingManifest;
   factory ImagingManifest.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestFromJson(json);
@@ -706,7 +714,7 @@ abstract class ImagingManifestStudy with _$ImagingManifestStudy {
     Oid uid,
     Reference imagingStudy,
     List<Reference> endpoint,
-    @JsonKey(required: true) List<ImagingManifest_Series> series,
+    @JsonKey(required: true) List<ImagingManifestSeries> series,
   }) = _ImagingManifestStudy;
   factory ImagingManifestStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestStudyFromJson(json);
@@ -717,7 +725,7 @@ abstract class ImagingManifestSeries with _$ImagingManifestSeries {
   const factory ImagingManifestSeries({
     Oid uid,
     List<Reference> endpoint,
-    @JsonKey(required: true) List<ImagingManifest_Instance> instance,
+    @JsonKey(required: true) List<ImagingManifestInstance> instance,
   }) = _ImagingManifestSeries;
   factory ImagingManifestSeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestSeriesFromJson(json);
@@ -743,7 +751,7 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
     Identifier accession,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-        String availability,
+        ImagingStudyAvailability availability,
     List<Coding> modalityList,
     @JsonKey(required: true) Reference patient,
     Reference context,
@@ -758,7 +766,7 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
     List<CodeableConcept> procedureCode,
     CodeableConcept reason,
     String description,
-    List<ImagingStudy_Series> series,
+    List<ImagingStudySeries> series,
   }) = _ImagingStudy;
   factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyFromJson(json);
@@ -772,13 +780,14 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     @JsonKey(required: true) Coding modality,
     String description,
     UnsignedInt numberOfInstances,
-    @JsonKey(unknownEnumValue: ImagingStudySeries.unknown) String availability,
+    @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
+        SeriesAvailability availability,
     List<Reference> endpoint,
     Coding bodySite,
     Coding laterality,
     DateTime started,
     List<Reference> performer,
-    List<ImagingStudy_Instance> instance,
+    List<ImagingStudyInstance> instance,
   }) = _ImagingStudySeries;
   factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesFromJson(json);
@@ -818,11 +827,11 @@ abstract class Immunization with _$Immunization implements Resource {
     CodeableConcept site,
     CodeableConcept route,
     Quantity doseQuantity,
-    List<Immunization_Practitioner> practitioner,
+    List<ImmunizationPractitioner> practitioner,
     List<Annotation> note,
-    Immunization_Explanation explanation,
-    List<Immunization_Reaction> reaction,
-    List<Immunization_VaccinationProtocol> vaccinationProtocol,
+    ImmunizationExplanation explanation,
+    List<ImmunizationReaction> reaction,
+    List<ImmunizationVaccinationProtocol> vaccinationProtocol,
   }) = _Immunization;
   factory Immunization.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationFromJson(json);
@@ -887,7 +896,7 @@ abstract class ImmunizationRecommendation
     List<Identifier> identifier,
     @JsonKey(required: true) Reference patient,
     @JsonKey(required: true)
-        List<ImmunizationRecommendation_Recommendation> recommendation,
+        List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
   factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationRecommendationFromJson(json);
@@ -902,8 +911,8 @@ abstract class ImmunizationRecommendationRecommendation
     CodeableConcept targetDisease,
     PositiveInt doseNumber,
     @JsonKey(required: true) CodeableConcept forecastStatus,
-    List<ImmunizationRecommendation_DateCriterion> dateCriterion,
-    ImmunizationRecommendation_Protocol protocol,
+    List<ImmunizationRecommendationDateCriterion> dateCriterion,
+    ImmunizationRecommendationProtocol protocol,
     List<Reference> supportingImmunization,
     List<Reference> supportingPatientInformation,
   }) = _ImmunizationRecommendationRecommendation;
@@ -945,13 +954,14 @@ abstract class Medication with _$Medication implements Resource {
     @required
         String resourceType,
     CodeableConcept code,
-    @JsonKey(unknownEnumValue: MedicationStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: MedicationStatus.unknown)
+        MedicationStatus status,
     Boolean isBrand,
     Boolean isOverTheCounter,
     Reference manufacturer,
     CodeableConcept form,
-    List<Medication_Ingredient> ingredient,
-    Medication_Package package,
+    List<MedicationIngredient> ingredient,
+    MedicationPackage package,
     List<Attachment> image,
   }) = _Medication;
   factory Medication.fromJson(Map<String, dynamic> json) =>
@@ -974,8 +984,8 @@ abstract class MedicationIngredient with _$MedicationIngredient {
 abstract class MedicationPackage with _$MedicationPackage {
   const factory MedicationPackage({
     CodeableConcept container,
-    List<Medication_Content> content,
-    List<Medication_Batch> batch,
+    List<MedicationContent> content,
+    List<MedicationBatch> batch,
   }) = _MedicationPackage;
   factory MedicationPackage.fromJson(Map<String, dynamic> json) =>
       _$MedicationPackageFromJson(json);
@@ -1014,7 +1024,7 @@ abstract class MedicationAdministration
     List<Reference> definition,
     List<Reference> partOf,
     @JsonKey(unknownEnumValue: MedicationAdministrationStatus.unknown)
-        String status,
+        MedicationAdministrationStatus status,
     CodeableConcept category,
     CodeableConcept medicationCodeableConcept,
     Reference medicationReference,
@@ -1023,7 +1033,7 @@ abstract class MedicationAdministration
     List<Reference> supportingInformation,
     DateTime effectiveDateTime,
     Period effectivePeriod,
-    List<MedicationAdministration_Performer> performer,
+    List<MedicationAdministrationPerformer> performer,
     Boolean notGiven,
     List<CodeableConcept> reasonNotGiven,
     List<CodeableConcept> reasonCode,
@@ -1031,7 +1041,7 @@ abstract class MedicationAdministration
     Reference prescription,
     List<Reference> device,
     List<Annotation> note,
-    MedicationAdministration_Dosage dosage,
+    MedicationAdministrationDosage dosage,
     List<Reference> eventHistory,
   }) = _MedicationAdministration;
   factory MedicationAdministration.fromJson(Map<String, dynamic> json) =>
@@ -1076,14 +1086,15 @@ abstract class MedicationDispense
         String resourceType,
     List<Identifier> identifier,
     List<Reference> partOf,
-    @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
+        MedicationDispenseStatus status,
     CodeableConcept category,
     CodeableConcept medicationCodeableConcept,
     Reference medicationReference,
     Reference subject,
     Reference context,
     List<Reference> supportingInformation,
-    List<MedicationDispense_Performer> performer,
+    List<MedicationDispensePerformer> performer,
     List<Reference> authorizingPrescription,
     CodeableConcept type,
     Quantity quantity,
@@ -1094,7 +1105,7 @@ abstract class MedicationDispense
     List<Reference> receiver,
     List<Annotation> note,
     List<Dosage> dosageInstruction,
-    MedicationDispense_Substitution substitution,
+    MedicationDispenseSubstitution substitution,
     List<Reference> detectedIssue,
     Boolean notDone,
     CodeableConcept notDoneReasonCodeableConcept,
@@ -1138,25 +1149,27 @@ abstract class MedicationRequest with _$MedicationRequest implements Resource {
     List<Reference> definition,
     List<Reference> basedOn,
     Identifier groupIdentifier,
-    @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown) String status,
-    @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown) String intent,
+    @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+        MedicationRequestStatus status,
+    @JsonKey(unknownEnumValue: MedicationRequestIntent.unknown)
+        MedicationRequestIntent intent,
     CodeableConcept category,
     @JsonKey(unknownEnumValue: MedicationRequestPriority.unknown)
-        String priority,
+        MedicationRequestPriority priority,
     CodeableConcept medicationCodeableConcept,
     Reference medicationReference,
     @JsonKey(required: true) Reference subject,
     Reference context,
     List<Reference> supportingInformation,
     DateTime authoredOn,
-    MedicationRequest_Requester requester,
+    MedicationRequestRequester requester,
     Reference recorder,
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
     List<Annotation> note,
     List<Dosage> dosageInstruction,
-    MedicationRequest_DispenseRequest dispenseRequest,
-    MedicationRequest_Substitution substitution,
+    MedicationRequestDispenseRequest dispenseRequest,
+    MedicationRequestSubstitution substitution,
     Reference priorPrescription,
     List<Reference> detectedIssue,
     List<Reference> eventHistory,
@@ -1213,7 +1226,8 @@ abstract class MedicationStatement
     List<Reference> basedOn,
     List<Reference> partOf,
     Reference context,
-    @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
+        MedicationStatementStatus status,
     CodeableConcept category,
     CodeableConcept medicationCodeableConcept,
     Reference medicationReference,
@@ -1223,7 +1237,8 @@ abstract class MedicationStatement
     Reference informationSource,
     @JsonKey(required: true) Reference subject,
     List<Reference> derivedFrom,
-    @JsonKey(unknownEnumValue: MedicationStatementTaken.unknown) String taken,
+    @JsonKey(unknownEnumValue: MedicationStatementTaken.unknown)
+        MedicationStatementTaken taken,
     List<CodeableConcept> reasonNotTaken,
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
@@ -1241,7 +1256,8 @@ abstract class NutritionOrder with _$NutritionOrder implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: NutritionOrderStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: NutritionOrderStatus.unknown)
+        NutritionOrderStatus status,
     @JsonKey(required: true) Reference patient,
     Reference encounter,
     DateTime dateTime,
@@ -1249,9 +1265,9 @@ abstract class NutritionOrder with _$NutritionOrder implements Resource {
     List<Reference> allergyIntolerance,
     List<CodeableConcept> foodPreferenceModifier,
     List<CodeableConcept> excludeFoodModifier,
-    NutritionOrder_OralDiet oralDiet,
-    List<NutritionOrder_Supplement> supplement,
-    NutritionOrder_EnteralFormula enteralFormula,
+    NutritionOrderOralDiet oralDiet,
+    List<NutritionOrderSupplement> supplement,
+    NutritionOrderEnteralFormula enteralFormula,
   }) = _NutritionOrder;
   factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderFromJson(json);
@@ -1262,8 +1278,8 @@ abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   const factory NutritionOrderOralDiet({
     List<CodeableConcept> type,
     List<Timing> schedule,
-    List<NutritionOrder_Nutrient> nutrient,
-    List<NutritionOrder_Texture> texture,
+    List<NutritionOrderNutrient> nutrient,
+    List<NutritionOrderTexture> texture,
     List<CodeableConcept> fluidConsistencyType,
     String instruction,
   }) = _NutritionOrderOralDiet;
@@ -1314,7 +1330,7 @@ abstract class NutritionOrderEnteralFormula
     String additiveProductName,
     Quantity caloricDensity,
     CodeableConcept routeofAdministration,
-    List<NutritionOrder_Administration> administration,
+    List<NutritionOrderAdministration> administration,
     Quantity maxVolumeToDeliver,
     String administrationInstruction,
   }) = _NutritionOrderEnteralFormula;
@@ -1343,7 +1359,8 @@ abstract class Observation with _$Observation implements Resource {
         String resourceType,
     List<Identifier> identifier,
     List<Reference> basedOn,
-    @JsonKey(unknownEnumValue: ObservationStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: ObservationStatus.unknown)
+        ObservationStatus status,
     List<CodeableConcept> category,
     @JsonKey(required: true) CodeableConcept code,
     Reference subject,
@@ -1370,9 +1387,9 @@ abstract class Observation with _$Observation implements Resource {
     CodeableConcept method,
     Reference specimen,
     Reference device,
-    List<Observation_ReferenceRange> referenceRange,
-    List<Observation_Related> related,
-    List<Observation_Component> component,
+    List<ObservationReferenceRange> referenceRange,
+    List<ObservationRelated> related,
+    List<ObservationComponent> component,
   }) = _Observation;
   factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
@@ -1395,7 +1412,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
 @freezed
 abstract class ObservationRelated with _$ObservationRelated {
   const factory ObservationRelated({
-    @JsonKey(unknownEnumValue: ObservationRelated.unknown) String type,
+    @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
     @JsonKey(required: true) Reference target,
   }) = _ObservationRelated;
   factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
@@ -1418,7 +1435,7 @@ abstract class ObservationComponent with _$ObservationComponent {
     Period valuePeriod,
     CodeableConcept dataAbsentReason,
     CodeableConcept interpretation,
-    List<Observation_ReferenceRange> referenceRange,
+    List<ObservationReferenceRange> referenceRange,
   }) = _ObservationComponent;
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$ObservationComponentFromJson(json);
@@ -1443,7 +1460,7 @@ abstract class Procedure with _$Procedure implements Resource {
     Reference context,
     DateTime performedDateTime,
     Period performedPeriod,
-    List<Procedure_Performer> performer,
+    List<ProcedurePerformer> performer,
     Reference location,
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
@@ -1454,7 +1471,7 @@ abstract class Procedure with _$Procedure implements Resource {
     List<Reference> complicationDetail,
     List<CodeableConcept> followUp,
     List<Annotation> note,
-    List<Procedure_FocalDevice> focalDevice,
+    List<ProcedureFocalDevice> focalDevice,
     List<Reference> usedReference,
     List<CodeableConcept> usedCode,
   }) = _Procedure;
@@ -1508,7 +1525,7 @@ abstract class ProcedureRequest with _$ProcedureRequest implements Resource {
     Boolean asNeededBoolean,
     CodeableConcept asNeededCodeableConcept,
     DateTime authoredOn,
-    ProcedureRequest_Requester requester,
+    ProcedureRequestRequester requester,
     CodeableConcept performerType,
     Reference performer,
     List<CodeableConcept> reasonCode,
@@ -1546,13 +1563,13 @@ abstract class QuestionnaireResponse
     List<Reference> parent,
     Reference questionnaire,
     @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-        String status,
+        QuestionnaireResponseStatus status,
     Reference subject,
     Reference context,
     DateTime authored,
     Reference author,
     Reference source,
-    List<QuestionnaireResponse_Item> item,
+    List<QuestionnaireResponseItem> item,
   }) = _QuestionnaireResponse;
   factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseFromJson(json);
@@ -1565,8 +1582,8 @@ abstract class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
     String definition,
     String text,
     Reference subject,
-    List<QuestionnaireResponse_Answer> answer,
-    List<QuestionnaireResponse_Item> item,
+    List<QuestionnaireResponseAnswer> answer,
+    List<QuestionnaireResponseItem> item,
   }) = _QuestionnaireResponseItem;
   factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseItemFromJson(json);
@@ -1587,7 +1604,7 @@ abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
     Coding valueCoding,
     Quantity valueQuantity,
     Reference valueReference,
-    List<QuestionnaireResponse_Item> item,
+    List<QuestionnaireResponseItem> item,
   }) = _QuestionnaireResponseAnswer;
   factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseAnswerFromJson(json);
@@ -1614,7 +1631,7 @@ abstract class ReferralRequest with _$ReferralRequest implements Resource {
     DateTime occurrenceDateTime,
     Period occurrencePeriod,
     DateTime authoredOn,
-    ReferralRequest_Requester requester,
+    ReferralRequestRequester requester,
     CodeableConcept specialty,
     List<Reference> recipient,
     List<CodeableConcept> reasonCode,
@@ -1659,7 +1676,7 @@ abstract class RequestGroup with _$RequestGroup implements Resource {
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,
     List<Annotation> note,
-    List<RequestGroup_Action> action,
+    List<RequestGroupAction> action,
   }) = _RequestGroup;
   factory RequestGroup.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupFromJson(json);
@@ -1674,8 +1691,8 @@ abstract class RequestGroupAction with _$RequestGroupAction {
     String textEquivalent,
     List<CodeableConcept> code,
     List<RelatedArtifact> documentation,
-    List<RequestGroup_Condition> condition,
-    List<RequestGroup_RelatedAction> relatedAction,
+    List<RequestGroupCondition> condition,
+    List<RequestGroupRelatedAction> relatedAction,
     DateTime timingDateTime,
     Period timingPeriod,
     Duration timingDuration,
@@ -1689,7 +1706,7 @@ abstract class RequestGroupAction with _$RequestGroupAction {
     Code precheckBehavior,
     Code cardinalityBehavior,
     Reference resource,
-    List<RequestGroup_Action> action,
+    List<RequestGroupAction> action,
   }) = _RequestGroupAction;
   factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupActionFromJson(json);
@@ -1740,7 +1757,7 @@ abstract class RiskAssessment with _$RiskAssessment implements Resource {
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,
     List<Reference> basis,
-    List<RiskAssessment_Prediction> prediction,
+    List<RiskAssessmentPrediction> prediction,
     String mitigation,
     String comment,
   }) = _RiskAssessment;
@@ -1771,19 +1788,19 @@ abstract class Sequence with _$Sequence implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: SequenceType.unknown) String type,
+    @JsonKey(unknownEnumValue: SequenceType.unknown) SequenceType type,
     Integer coordinateSystem,
     Reference patient,
     Reference specimen,
     Reference device,
     Reference performer,
     Quantity quantity,
-    Sequence_ReferenceSeq referenceSeq,
-    List<Sequence_Variant> variant,
+    SequenceReferenceSeq referenceSeq,
+    List<SequenceVariant> variant,
     String observedSeq,
-    List<Sequence_Quality> quality,
+    List<SequenceQuality> quality,
     Integer readCoverage,
-    List<Sequence_Repository> repository,
+    List<SequenceRepository> repository,
     List<Reference> pointer,
   }) = _Sequence;
   factory Sequence.fromJson(Map<String, dynamic> json) =>
@@ -1823,7 +1840,7 @@ abstract class SequenceVariant with _$SequenceVariant {
 @freezed
 abstract class SequenceQuality with _$SequenceQuality {
   const factory SequenceQuality({
-    @JsonKey(unknownEnumValue: SequenceQuality.unknown) String type,
+    @JsonKey(unknownEnumValue: QualityType.unknown) QualityType type,
     CodeableConcept standardSequence,
     Integer start,
     Integer end,
@@ -1845,7 +1862,7 @@ abstract class SequenceQuality with _$SequenceQuality {
 @freezed
 abstract class SequenceRepository with _$SequenceRepository {
   const factory SequenceRepository({
-    @JsonKey(unknownEnumValue: SequenceRepository.unknown) String type,
+    @JsonKey(unknownEnumValue: RepositoryType.unknown) RepositoryType type,
     String url,
     String name,
     String datasetId,
@@ -1864,15 +1881,15 @@ abstract class Specimen with _$Specimen implements Resource {
         String resourceType,
     List<Identifier> identifier,
     Identifier accessionIdentifier,
-    @JsonKey(unknownEnumValue: SpecimenStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
     CodeableConcept type,
     @JsonKey(required: true) Reference subject,
     DateTime receivedTime,
     List<Reference> parent,
     List<Reference> request,
-    Specimen_Collection collection,
-    List<Specimen_Processing> processing,
-    List<Specimen_Container> container,
+    SpecimenCollection collection,
+    List<SpecimenProcessing> processing,
+    List<SpecimenContainer> container,
     List<Annotation> note,
   }) = _Specimen;
   factory Specimen.fromJson(Map<String, dynamic> json) =>
@@ -1930,10 +1947,11 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
     Identifier identifier,
     List<Reference> basedOn,
     List<Reference> partOf,
-    @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
+        SupplyDeliveryStatus status,
     Reference patient,
     CodeableConcept type,
-    SupplyDelivery_SuppliedItem suppliedItem,
+    SupplyDeliverySuppliedItem suppliedItem,
     DateTime occurrenceDateTime,
     Period occurrencePeriod,
     Timing occurrenceTiming,
@@ -1963,15 +1981,16 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
     @required
         String resourceType,
     Identifier identifier,
-    @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
+        SupplyRequestStatus status,
     CodeableConcept category,
     Code priority,
-    SupplyRequest_OrderedItem orderedItem,
+    SupplyRequestOrderedItem orderedItem,
     DateTime occurrenceDateTime,
     Period occurrencePeriod,
     Timing occurrenceTiming,
     DateTime authoredOn,
-    SupplyRequest_Requester requester,
+    SupplyRequestRequester requester,
     List<Reference> supplier,
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,
@@ -2019,7 +2038,7 @@ abstract class VisionPrescription
     Reference prescriber,
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,
-    List<VisionPrescription_Dispense> dispense,
+    List<VisionPrescriptionDispense> dispense,
   }) = _VisionPrescription;
   factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionFromJson(json);
@@ -2029,12 +2048,12 @@ abstract class VisionPrescription
 abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
   const factory VisionPrescriptionDispense({
     CodeableConcept product,
-    @JsonKey(unknownEnumValue: VisionPrescriptionDispense.unknown) String eye,
+    @JsonKey(unknownEnumValue: DispenseEye.unknown) DispenseEye eye,
     Decimal sphere,
     Decimal cylinder,
     Integer axis,
     Decimal prism,
-    @JsonKey(unknownEnumValue: VisionPrescriptionDispense.unknown) String base,
+    @JsonKey(unknownEnumValue: DispenseBase.unknown) DispenseBase base,
     Decimal add,
     Decimal power,
     Decimal backCurve,

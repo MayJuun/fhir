@@ -38,7 +38,7 @@ abstract class Attachment with _$Attachment {
 @freezed
 abstract class Identifier with _$Identifier {
   const factory Identifier({
-    @JsonKey(unknownEnumValue: IdentifierUse.unknown) String use,
+    @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
     CodeableConcept type,
     String system,
     String value,
@@ -75,7 +75,7 @@ abstract class Coding with _$Coding {
 abstract class Quantity with _$Quantity {
   const factory Quantity({
     Decimal value,
-    @JsonKey(unknownEnumValue: QuantityComparator.unknown) String comparator,
+    @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
     String system,
     Code code,
@@ -88,7 +88,7 @@ abstract class Quantity with _$Quantity {
 abstract class Duration with _$Duration {
   const factory Duration({
     Decimal value,
-    @JsonKey(unknownEnumValue: QuantityComparator.unknown) String comparator,
+    @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
     String system,
     Code code,
@@ -101,7 +101,7 @@ abstract class Duration with _$Duration {
 abstract class Distance with _$Distance {
   const factory Distance({
     Decimal value,
-    @JsonKey(unknownEnumValue: QuantityComparator.unknown) String comparator,
+    @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
     String system,
     Code code,
@@ -114,7 +114,7 @@ abstract class Distance with _$Distance {
 abstract class Count with _$Count {
   const factory Count({
     Decimal value,
-    @JsonKey(unknownEnumValue: QuantityComparator.unknown) String comparator,
+    @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
     String system,
     Code code,
@@ -126,7 +126,7 @@ abstract class Count with _$Count {
 abstract class Money with _$Money {
   const factory Money({
     Decimal value,
-    @JsonKey(unknownEnumValue: QuantityComparator.unknown) String comparator,
+    @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
     String system,
     Code code,
@@ -138,7 +138,7 @@ abstract class Money with _$Money {
 abstract class Age with _$Age {
   const factory Age({
     Decimal value,
-    @JsonKey(unknownEnumValue: QuantityComparator.unknown) String comparator,
+    @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
     String unit,
     String system,
     Code code,
@@ -207,7 +207,7 @@ abstract class Signature with _$Signature {
 @freezed
 abstract class HumanName with _$HumanName {
   const factory HumanName({
-    @JsonKey(unknownEnumValue: HumanNameUse.unknown) String use,
+    @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
     String text,
     String family,
     List<String> given,
@@ -222,8 +222,8 @@ abstract class HumanName with _$HumanName {
 @freezed
 abstract class Address with _$Address {
   const factory Address({
-    @JsonKey(unknownEnumValue: AddressUse.unknown) String use,
-    @JsonKey(unknownEnumValue: AddressType.unknown) String type,
+    @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
+    @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
     String text,
     List<String> line,
     String city,
@@ -240,9 +240,10 @@ abstract class Address with _$Address {
 @freezed
 abstract class ContactPoint with _$ContactPoint {
   const factory ContactPoint({
-    @JsonKey(unknownEnumValue: ContactPointSystem.unknown) String system,
+    @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
+        ContactPointSystem system,
     String value,
-    @JsonKey(unknownEnumValue: ContactPointUse.unknown) String use,
+    @JsonKey(unknownEnumValue: ContactPointUse.unknown) ContactPointUse use,
     PositiveInt rank,
     Period period,
   }) = _ContactPoint;
@@ -254,7 +255,7 @@ abstract class ContactPoint with _$ContactPoint {
 abstract class Timing with _$Timing {
   const factory Timing({
     List<DateTime> event,
-    Timing_Repeat repeat,
+    TimingRepeat repeat,
     CodeableConcept code,
   }) = _Timing;
   factory Timing.fromJson(Map<String, dynamic> json) => _$TimingFromJson(json);
@@ -270,15 +271,17 @@ abstract class TimingRepeat with _$TimingRepeat {
     Integer countMax,
     Decimal duration,
     Decimal durationMax,
-    @JsonKey(unknownEnumValue: TimingRepeat.unknown) String durationUnit,
+    @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
+        TimingRepeatDurationUnit durationUnit,
     Integer frequency,
     Integer frequencyMax,
     Decimal period,
     Decimal periodMax,
-    @JsonKey(unknownEnumValue: TimingRepeat.unknown) String periodUnit,
+    @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
+        TimingRepeatPeriodUnit periodUnit,
     List<Code> dayOfWeek,
     List<Time> timeOfDay,
-    @JsonKey(unknownEnumValue: TimingRepeat.unknown) List<String> when,
+    List<TimingRepeatWhen> when,
     UnsignedInt offset,
   }) = _TimingRepeat;
   factory TimingRepeat.fromJson(Map<String, dynamic> json) =>

@@ -13,8 +13,14 @@ class Decimal extends PrimitiveObject<double> {
       validateDecimal(value),
     );
   }
+
   const Decimal._(this.value);
 
   factory Decimal.fromJson(dynamic json) => Decimal(json);
-  String toJson() => result();
+
+  @override
+  dynamic toJson() => value.fold(
+        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
+        (value) => value,
+      );
 }

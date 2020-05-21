@@ -21,12 +21,12 @@ abstract class PrimitiveObject<T> {
   @override
   String toString() => result();
 
-  String result() => value.fold(
+  dynamic toJson() => result();
+
+  dynamic result() => value.fold(
         (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
         (value) => value.toString(),
       );
-
-  String toJson() => result();
 }
 
 bool hasMatch(String pattern, String input) => RegExp(pattern).hasMatch(input);

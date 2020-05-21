@@ -13,8 +13,8 @@ class Canonical extends PrimitiveObject<String> {
       validateCanonical(value),
     );
   }
+
   const Canonical._(this.value);
 
   factory Canonical.fromJson(String json) => Canonical(json);
-  String toJson() => result();
 }

@@ -13,8 +13,14 @@ class UnsignedInt extends PrimitiveObject<int> {
       validateUnsignedInt(value),
     );
   }
+
   const UnsignedInt._(this.value);
 
   factory UnsignedInt.fromJson(dynamic json) => UnsignedInt(json);
-  String toJson() => result();
+
+  @override
+  dynamic toJson() => value.fold(
+        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
+        (value) => value,
+      );
 }

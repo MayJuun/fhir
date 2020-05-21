@@ -1,7 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import '../../../../fhir_stu3.dart';
+import '../../../fhir_stu3.dart';
+import '../resource_types.enums.dart';
 
 part 'financial.freezed.dart';
 part 'financial.g.dart';
@@ -13,17 +14,17 @@ abstract class Account with _$Account implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: AccountStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
     CodeableConcept type,
     String name,
     Reference subject,
     Period period,
     Period active,
     Money balance,
-    List<Account_Coverage> coverage,
+    List<AccountCoverage> coverage,
     Reference owner,
     String description,
-    List<Account_Guarantor> guarantor,
+    List<AccountGuarantor> guarantor,
   }) = _Account;
   factory Account.fromJson(Map<String, dynamic> json) =>
       _$AccountFromJson(json);
@@ -58,7 +59,8 @@ abstract class ChargeItem with _$ChargeItem implements Resource {
         String resourceType,
     Identifier identifier,
     List<String> definition,
-    @JsonKey(unknownEnumValue: ChargeItemStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+        ChargeItemStatus status,
     List<Reference> partOf,
     @JsonKey(required: true) CodeableConcept code,
     @JsonKey(required: true) Reference subject,
@@ -66,7 +68,7 @@ abstract class ChargeItem with _$ChargeItem implements Resource {
     DateTime occurrenceDateTime,
     Period occurrencePeriod,
     Timing occurrenceTiming,
-    List<ChargeItem_Participant> participant,
+    List<ChargeItemParticipant> participant,
     Reference performingOrganization,
     Reference requestingOrganization,
     Quantity quantity,
@@ -106,7 +108,7 @@ abstract class Claim with _$Claim implements Resource {
     Code status,
     CodeableConcept type,
     List<CodeableConcept> subType,
-    @JsonKey(unknownEnumValue: ClaimUse.unknown) String use,
+    @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
     Reference patient,
     Period billablePeriod,
     DateTime created,
@@ -116,21 +118,21 @@ abstract class Claim with _$Claim implements Resource {
     Reference organization,
     CodeableConcept priority,
     CodeableConcept fundsReserve,
-    List<Claim_Related> related,
+    List<ClaimRelated> related,
     Reference prescription,
     Reference originalPrescription,
-    Claim_Payee payee,
+    ClaimPayee payee,
     Reference referral,
     Reference facility,
-    List<Claim_CareTeam> careTeam,
-    List<Claim_Information> information,
-    List<Claim_Diagnosis> diagnosis,
-    List<Claim_Procedure> procedure,
-    List<Claim_Insurance> insurance,
-    Claim_Accident accident,
+    List<ClaimCareTeam> careTeam,
+    List<ClaimInformation> information,
+    List<ClaimDiagnosis> diagnosis,
+    List<ClaimProcedure> procedure,
+    List<ClaimInsurance> insurance,
+    ClaimAccident accident,
     Period employmentImpacted,
     Period hospitalization,
-    List<Claim_Item> item,
+    List<ClaimItem> item,
     Money total,
   }) = _Claim;
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
@@ -268,7 +270,7 @@ abstract class ClaimItem with _$ClaimItem {
     CodeableConcept bodySite,
     List<CodeableConcept> subSite,
     List<Reference> encounter,
-    List<Claim_Detail> detail,
+    List<ClaimDetail> detail,
   }) = _ClaimItem;
   factory ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemFromJson(json);
@@ -288,7 +290,7 @@ abstract class ClaimDetail with _$ClaimDetail {
     Decimal factor,
     Money net,
     List<Reference> udi,
-    List<Claim_SubDetail> subDetail,
+    List<ClaimSubDetail> subDetail,
   }) = _ClaimDetail;
   factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimDetailFromJson(json);
@@ -330,18 +332,18 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
     CodeableConcept outcome,
     String disposition,
     CodeableConcept payeeType,
-    List<ClaimResponse_Item> item,
-    List<ClaimResponse_AddItem> addItem,
-    List<ClaimResponse_Error> error,
+    List<ClaimResponseItem> item,
+    List<ClaimResponseAddItem> addItem,
+    List<ClaimResponseError> error,
     Money totalCost,
     Money unallocDeductable,
     Money totalBenefit,
-    ClaimResponse_Payment payment,
+    ClaimResponsePayment payment,
     Coding reserved,
     CodeableConcept form,
-    List<ClaimResponse_ProcessNote> processNote,
+    List<ClaimResponseProcessNote> processNote,
     List<Reference> communicationRequest,
-    List<ClaimResponse_Insurance> insurance,
+    List<ClaimResponseInsurance> insurance,
   }) = _ClaimResponse;
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseFromJson(json);
@@ -352,8 +354,8 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
   const factory ClaimResponseItem({
     PositiveInt sequenceLinkId,
     List<PositiveInt> noteNumber,
-    List<ClaimResponse_Adjudication> adjudication,
-    List<ClaimResponse_Detail> detail,
+    List<ClaimResponseAdjudication> adjudication,
+    List<ClaimResponseDetail> detail,
   }) = _ClaimResponseItem;
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemFromJson(json);
@@ -376,8 +378,8 @@ abstract class ClaimResponseDetail with _$ClaimResponseDetail {
   const factory ClaimResponseDetail({
     PositiveInt sequenceLinkId,
     List<PositiveInt> noteNumber,
-    List<ClaimResponse_Adjudication> adjudication,
-    List<ClaimResponse_SubDetail> subDetail,
+    List<ClaimResponseAdjudication> adjudication,
+    List<ClaimResponseSubDetail> subDetail,
   }) = _ClaimResponseDetail;
   factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetailFromJson(json);
@@ -388,7 +390,7 @@ abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   const factory ClaimResponseSubDetail({
     PositiveInt sequenceLinkId,
     List<PositiveInt> noteNumber,
-    List<ClaimResponse_Adjudication> adjudication,
+    List<ClaimResponseAdjudication> adjudication,
   }) = _ClaimResponseSubDetail;
   factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseSubDetailFromJson(json);
@@ -404,8 +406,8 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
     List<CodeableConcept> modifier,
     Money fee,
     List<PositiveInt> noteNumber,
-    List<ClaimResponse_Adjudication> adjudication,
-    List<ClaimResponse_Detail1> detail,
+    List<ClaimResponseAdjudication> adjudication,
+    List<ClaimResponseDetail1> detail,
   }) = _ClaimResponseAddItem;
   factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemFromJson(json);
@@ -420,7 +422,7 @@ abstract class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
     List<CodeableConcept> modifier,
     Money fee,
     List<PositiveInt> noteNumber,
-    List<ClaimResponse_Adjudication> adjudication,
+    List<ClaimResponseAdjudication> adjudication,
   }) = _ClaimResponseDetail1;
   factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetail1FromJson(json);
@@ -499,15 +501,15 @@ abstract class Contract with _$Contract implements Resource {
     CodeableConcept decisionType,
     CodeableConcept contentDerivative,
     List<Coding> securityLabel,
-    List<Contract_Agent> agent,
-    List<Contract_Signer> signer,
-    List<Contract_ValuedItem> valuedItem,
-    List<Contract_Term> term,
+    List<ContractAgent> agent,
+    List<ContractSigner> signer,
+    List<ContractValuedItem> valuedItem,
+    List<ContractTerm> term,
     Attachment bindingAttachment,
     Reference bindingReference,
-    List<Contract_Friendly> friendly,
-    List<Contract_Legal> legal,
-    List<Contract_Rule> rule,
+    List<ContractFriendly> friendly,
+    List<ContractLegal> legal,
+    List<ContractRule> rule,
   }) = _Contract;
   factory Contract.fromJson(Map<String, dynamic> json) =>
       _$ContractFromJson(json);
@@ -563,10 +565,10 @@ abstract class ContractTerm with _$ContractTerm {
     List<CodeableConcept> action,
     List<CodeableConcept> actionReason,
     List<Coding> securityLabel,
-    List<Contract_Agent1> agent,
+    List<ContractAgent1> agent,
     String text,
-    List<Contract_ValuedItem1> valuedItem,
-    List<Contract_Term> group,
+    List<ContractValuedItem1> valuedItem,
+    List<ContractTerm> group,
   }) = _ContractTerm;
   factory ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$ContractTermFromJson(json);
@@ -645,7 +647,7 @@ abstract class Coverage with _$Coverage implements Resource {
     CodeableConcept relationship,
     Period period,
     List<Reference> payor,
-    Coverage_Grouping grouping,
+    CoverageGrouping grouping,
     String dependent,
     String sequence,
     PositiveInt order,
@@ -723,9 +725,9 @@ abstract class EligibilityResponse
     String disposition,
     Reference insurer,
     Boolean inforce,
-    List<EligibilityResponse_Insurance> insurance,
+    List<EligibilityResponseInsurance> insurance,
     CodeableConcept form,
-    List<EligibilityResponse_Error> error,
+    List<EligibilityResponseError> error,
   }) = _EligibilityResponse;
   factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFromJson(json);
@@ -737,7 +739,7 @@ abstract class EligibilityResponseInsurance
   const factory EligibilityResponseInsurance({
     Reference coverage,
     Reference contract,
-    List<EligibilityResponse_BenefitBalance> benefitBalance,
+    List<EligibilityResponseBenefitBalance> benefitBalance,
   }) = _EligibilityResponseInsurance;
   factory EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseInsuranceFromJson(json);
@@ -755,7 +757,7 @@ abstract class EligibilityResponseBenefitBalance
     CodeableConcept network,
     CodeableConcept unit,
     CodeableConcept term,
-    List<EligibilityResponse_Financial> financial,
+    List<EligibilityResponseFinancial> financial,
   }) = _EligibilityResponseBenefitBalance;
   factory EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
@@ -837,7 +839,7 @@ abstract class ExplanationOfBenefit
         String resourceType,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
-        String status,
+        ExplanationOfBenefitStatus status,
     CodeableConcept type,
     List<CodeableConcept> subType,
     Reference patient,
@@ -853,28 +855,28 @@ abstract class ExplanationOfBenefit
     Reference claimResponse,
     CodeableConcept outcome,
     String disposition,
-    List<ExplanationOfBenefit_Related> related,
+    List<ExplanationOfBenefitRelated> related,
     Reference prescription,
     Reference originalPrescription,
-    ExplanationOfBenefit_Payee payee,
-    List<ExplanationOfBenefit_Information> information,
-    List<ExplanationOfBenefit_CareTeam> careTeam,
-    List<ExplanationOfBenefit_Diagnosis> diagnosis,
-    List<ExplanationOfBenefit_Procedure> procedure,
+    ExplanationOfBenefitPayee payee,
+    List<ExplanationOfBenefitInformation> information,
+    List<ExplanationOfBenefitCareTeam> careTeam,
+    List<ExplanationOfBenefitDiagnosis> diagnosis,
+    List<ExplanationOfBenefitProcedure> procedure,
     PositiveInt precedence,
-    ExplanationOfBenefit_Insurance insurance,
-    ExplanationOfBenefit_Accident accident,
+    ExplanationOfBenefitInsurance insurance,
+    ExplanationOfBenefitAccident accident,
     Period employmentImpacted,
     Period hospitalization,
-    List<ExplanationOfBenefit_Item> item,
-    List<ExplanationOfBenefit_AddItem> addItem,
+    List<ExplanationOfBenefitItem> item,
+    List<ExplanationOfBenefitAddItem> addItem,
     Money totalCost,
     Money unallocDeductable,
     Money totalBenefit,
-    ExplanationOfBenefit_Payment payment,
+    ExplanationOfBenefitPayment payment,
     CodeableConcept form,
-    List<ExplanationOfBenefit_ProcessNote> processNote,
-    List<ExplanationOfBenefit_BenefitBalance> benefitBalance,
+    List<ExplanationOfBenefitProcessNote> processNote,
+    List<ExplanationOfBenefitBenefitBalance> benefitBalance,
   }) = _ExplanationOfBenefit;
   factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFromJson(json);
@@ -1015,8 +1017,8 @@ abstract class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     List<CodeableConcept> subSite,
     List<Reference> encounter,
     List<PositiveInt> noteNumber,
-    List<ExplanationOfBenefit_Adjudication> adjudication,
-    List<ExplanationOfBenefit_Detail> detail,
+    List<ExplanationOfBenefitAdjudication> adjudication,
+    List<ExplanationOfBenefitDetail> detail,
   }) = _ExplanationOfBenefitItem;
   factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitItemFromJson(json);
@@ -1052,8 +1054,8 @@ abstract class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
     Money net,
     List<Reference> udi,
     List<PositiveInt> noteNumber,
-    List<ExplanationOfBenefit_Adjudication> adjudication,
-    List<ExplanationOfBenefit_SubDetail> subDetail,
+    List<ExplanationOfBenefitAdjudication> adjudication,
+    List<ExplanationOfBenefitSubDetail> subDetail,
   }) = _ExplanationOfBenefitDetail;
   factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetailFromJson(json);
@@ -1076,7 +1078,7 @@ abstract class ExplanationOfBenefitSubDetail
     Money net,
     List<Reference> udi,
     List<PositiveInt> noteNumber,
-    List<ExplanationOfBenefit_Adjudication> adjudication,
+    List<ExplanationOfBenefitAdjudication> adjudication,
   }) = _ExplanationOfBenefitSubDetail;
   factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitSubDetailFromJson(json);
@@ -1092,8 +1094,8 @@ abstract class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     List<CodeableConcept> modifier,
     Money fee,
     List<PositiveInt> noteNumber,
-    List<ExplanationOfBenefit_Adjudication> adjudication,
-    List<ExplanationOfBenefit_Detail1> detail,
+    List<ExplanationOfBenefitAdjudication> adjudication,
+    List<ExplanationOfBenefitDetail1> detail,
   }) = _ExplanationOfBenefitAddItem;
   factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAddItemFromJson(json);
@@ -1108,7 +1110,7 @@ abstract class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
     List<CodeableConcept> modifier,
     Money fee,
     List<PositiveInt> noteNumber,
-    List<ExplanationOfBenefit_Adjudication> adjudication,
+    List<ExplanationOfBenefitAdjudication> adjudication,
   }) = _ExplanationOfBenefitDetail1;
   factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetail1FromJson(json);
@@ -1153,7 +1155,7 @@ abstract class ExplanationOfBenefitBenefitBalance
     CodeableConcept network,
     CodeableConcept unit,
     CodeableConcept term,
-    List<ExplanationOfBenefit_Financial> financial,
+    List<ExplanationOfBenefitFinancial> financial,
   }) = _ExplanationOfBenefitBenefitBalance;
   factory ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
@@ -1214,10 +1216,10 @@ abstract class PaymentReconciliation
     String disposition,
     Reference requestProvider,
     Reference requestOrganization,
-    List<PaymentReconciliation_Detail> detail,
+    List<PaymentReconciliationDetail> detail,
     CodeableConcept form,
     Money total,
-    List<PaymentReconciliation_ProcessNote> processNote,
+    List<PaymentReconciliationProcessNote> processNote,
   }) = _PaymentReconciliation;
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);

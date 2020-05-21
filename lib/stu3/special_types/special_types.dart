@@ -8,8 +8,8 @@ part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
 @freezed
-abstract class Extension with _$Extension {
-  const factory Extension({
+abstract class FhirExtension with _$FhirExtension {
+  const factory FhirExtension({
     String url,
     Boolean valueBoolean,
     Integer valueInteger,
@@ -64,9 +64,9 @@ abstract class Extension with _$Extension {
     DataRequirement valueDataRequirement,
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
-  }) = _Extension;
-  factory Extension.fromJson(Map<String, dynamic> json) =>
-      _$ExtensionFromJson(json);
+  }) = _FhirExtension;
+  factory FhirExtension.fromJson(Map<String, dynamic> json) =>
+      _$FhirExtensionFromJson(json);
 }
 
 @freezed
@@ -81,7 +81,7 @@ abstract class BackboneElement with _$BackboneElement {
 @freezed
 abstract class Narrative with _$Narrative {
   const factory Narrative({
-    @JsonKey(unknownEnumValue: NarrativeStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus status,
     @JsonKey(required: true) String div,
   }) = _Narrative;
   factory Narrative.fromJson(Map<String, dynamic> json) =>
@@ -112,15 +112,24 @@ abstract class Meta with _$Meta {
 }
 
 @freezed
+abstract class Element with _$Element {
+  const factory Element({
+    String id,
+    @JsonKey(name: 'extension') FhirExtension extension_,
+  }) = _Element;
+  factory Element.fromJson(Map<String, dynamic> json) =>
+      _$ElementFromJson(json);
+}
+
+@freezed
 abstract class ElementDefinition with _$ElementDefinition {
   const factory ElementDefinition({
     String path,
-    @JsonKey(unknownEnumValue: ElementDefinitionRepresentation.unknown)
-        List<String> representation,
+    List<ElementDefinitionRepresentation> representation,
     String sliceName,
     String label,
     List<Coding> code,
-    ElementDefinition_Slicing slicing,
+    ElementDefinitionSlicing slicing,
     String short,
     String definition,
     String comment,
@@ -128,9 +137,9 @@ abstract class ElementDefinition with _$ElementDefinition {
     List<String> alias,
     UnsignedInt min,
     String max,
-    ElementDefinition_Base base,
+    ElementDefinitionBase base,
     String contentReference,
-    List<ElementDefinition_Type> type,
+    List<ElementDefinitionType> type,
     Boolean defaultValueBoolean,
     Integer defaultValueInteger,
     Decimal defaultValueDecimal,
@@ -292,7 +301,7 @@ abstract class ElementDefinition with _$ElementDefinition {
     DataRequirement patternDataRequirement,
     ParameterDefinition patternParameterDefinition,
     TriggerDefinition patternTriggerDefinition,
-    List<ElementDefinition_Example> example,
+    List<ElementDefinitionExample> example,
     Date minValueDate,
     DateTime minValueDateTime,
     String minValueInstant,
@@ -313,12 +322,12 @@ abstract class ElementDefinition with _$ElementDefinition {
     Quantity maxValueQuantity,
     Integer maxLength,
     List<Id> condition,
-    List<ElementDefinition_Constraint> constraint,
+    List<ElementDefinitionConstraint> constraint,
     Boolean mustSupport,
     Boolean isModifier,
     Boolean isSummary,
-    ElementDefinition_Binding binding,
-    List<ElementDefinition_Mapping> mapping,
+    ElementDefinitionBinding binding,
+    List<ElementDefinitionMapping> mapping,
   }) = _ElementDefinition;
   factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionFromJson(json);
@@ -327,10 +336,10 @@ abstract class ElementDefinition with _$ElementDefinition {
 @freezed
 abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   const factory ElementDefinitionSlicing({
-    List<ElementDefinition_Discriminator> discriminator,
+    List<ElementDefinitionDiscriminator> discriminator,
     String description,
     Boolean ordered,
-    @JsonKey(unknownEnumValue: ElementDefinitionSlicing.unknown) String rules,
+    @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules,
   }) = _ElementDefinitionSlicing;
   factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionSlicingFromJson(json);
@@ -340,8 +349,8 @@ abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 abstract class ElementDefinitionDiscriminator
     with _$ElementDefinitionDiscriminator {
   const factory ElementDefinitionDiscriminator({
-    @JsonKey(unknownEnumValue: ElementDefinitionDiscriminator.unknown)
-        String type,
+    @JsonKey(unknownEnumValue: DiscriminatorType.unknown)
+        DiscriminatorType type,
     String path,
   }) = _ElementDefinitionDiscriminator;
   factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =>
@@ -365,9 +374,9 @@ abstract class ElementDefinitionType with _$ElementDefinitionType {
     String code,
     String profile,
     String targetProfile,
-    @JsonKey(unknownEnumValue: ElementDefinitionType.unknown)
-        List<String> aggregation,
-    @JsonKey(unknownEnumValue: ElementDefinitionType.unknown) String versioning,
+    List<TypeAggregation> aggregation,
+    @JsonKey(unknownEnumValue: TypeVersioning.unknown)
+        TypeVersioning versioning,
   }) = _ElementDefinitionType;
   factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionTypeFromJson(json);
@@ -440,8 +449,8 @@ abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   const factory ElementDefinitionConstraint({
     Id key,
     String requirements,
-    @JsonKey(unknownEnumValue: ElementDefinitionConstraint.unknown)
-        String severity,
+    @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
+        ConstraintSeverity severity,
     String human,
     String expression,
     String xpath,
@@ -454,8 +463,8 @@ abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 @freezed
 abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
   const factory ElementDefinitionBinding({
-    @JsonKey(unknownEnumValue: ElementDefinitionBinding.unknown)
-        String strength,
+    @JsonKey(unknownEnumValue: BindingStrength.unknown)
+        BindingStrength strength,
     String description,
     String valueSetUri,
     Reference valueSetReference,

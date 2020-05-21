@@ -13,8 +13,8 @@ class Code extends PrimitiveObject<String> {
       validateCode(value),
     );
   }
+
   const Code._(this.value);
 
   factory Code.fromJson(String json) => Code(json);
-  String toJson() => result();
 }

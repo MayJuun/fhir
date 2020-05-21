@@ -16,5 +16,10 @@ class Boolean extends PrimitiveObject<bool> {
   const Boolean._(this.value);
 
   factory Boolean.fromJson(dynamic json) => Boolean(json);
-  String toJson() => result();
+
+  @override
+  dynamic toJson() => value.fold(
+        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
+        (value) => value,
+      );
 }

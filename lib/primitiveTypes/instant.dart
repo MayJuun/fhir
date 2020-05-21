@@ -13,7 +13,14 @@ class Instant extends PrimitiveObject<DateTime> {
       validateInstant(value),
     );
   }
+
   const Instant._(this.value);
+
   factory Instant.fromJson(String json) => Instant(json);
-  String toJson() => result();
+
+  @override
+  String toString() => value.fold(
+        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
+        (value) => value.toIso8601String(),
+      );
 }

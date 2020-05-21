@@ -27,10 +27,8 @@ class Resource {
 
   static dynamic fromJson(Map<String, dynamic> json) {
     switch (json['resourceType']) {
-      case 'Element':
-        return Element.fromJson(json);
       case 'Extension':
-        return Extension.fromJson(json);
+        return FhirExtension.fromJson(json);
       case 'BackboneElement':
         return BackboneElement.fromJson(json);
       case 'Narrative':

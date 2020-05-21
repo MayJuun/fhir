@@ -13,7 +13,8 @@ class Time extends PrimitiveObject<Duration> {
       validateTime(value),
     );
   }
+
   const Time._(this.value);
+
   factory Time.fromJson(String json) => Time(json);
-  String toJson() => result();
 }

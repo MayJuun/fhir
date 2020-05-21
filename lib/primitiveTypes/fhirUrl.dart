@@ -13,7 +13,8 @@ class FhirUrl extends PrimitiveObject<Uri> {
       validateFhirUrl(value),
     );
   }
+
   const FhirUrl._(this.value);
+
   factory FhirUrl.fromJson(String json) => FhirUrl(json);
-  String toJson() => result();
 }

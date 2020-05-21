@@ -13,11 +13,17 @@ class FhirDateTime extends PrimitiveObject<DateTime> {
       validateFhirDateTime(value),
     );
   }
+
   const FhirDateTime._(this.value);
 
   factory FhirDateTime.fromDateTime(DateTime value) =>
       FhirDateTime(value.toIso8601String());
 
   factory FhirDateTime.fromJson(String json) => FhirDateTime(json);
-  String toJson() => result();
+
+  @override
+  String toString() => value.fold(
+        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
+        (value) => value.toIso8601String(),
+      );
 }

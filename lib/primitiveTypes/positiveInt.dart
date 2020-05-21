@@ -13,8 +13,14 @@ class PositiveInt extends PrimitiveObject<int> {
       validatePositiveInt(value),
     );
   }
+
   const PositiveInt._(this.value);
 
   factory PositiveInt.fromJson(dynamic json) => PositiveInt(json);
-  String toJson() => result();
+
+  @override
+  dynamic toJson() => value.fold(
+        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
+        (value) => value,
+      );
 }

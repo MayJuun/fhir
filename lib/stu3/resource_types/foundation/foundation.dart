@@ -1,7 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
-import '../../../../fhir_stu3.dart';
+import '../../../fhir_stu3.dart';
+import '../resource_types.enums.dart';
 
 part 'foundation.freezed.dart';
 part 'foundation.g.dart';
@@ -14,14 +15,16 @@ abstract class AuditEvent with _$AuditEvent implements Resource {
         String resourceType,
     @JsonKey(required: true) Coding type,
     List<Coding> subtype,
-    @JsonKey(unknownEnumValue: AuditEventAction.unknown) String action,
+    @JsonKey(unknownEnumValue: AuditEventAction.unknown)
+        AuditEventAction action,
     String recorded,
-    @JsonKey(unknownEnumValue: AuditEventOutcome.unknown) String outcome,
+    @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
+        AuditEventOutcome outcome,
     String outcomeDesc,
     List<CodeableConcept> purposeOfEvent,
-    @JsonKey(required: true) List<AuditEvent_Agent> agent,
-    @JsonKey(required: true) AuditEvent_Source source,
-    List<AuditEvent_Entity> entity,
+    @JsonKey(required: true) List<AuditEventAgent> agent,
+    @JsonKey(required: true) AuditEventSource source,
+    List<AuditEventEntity> entity,
   }) = _AuditEvent;
   factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
@@ -39,7 +42,7 @@ abstract class AuditEventAgent with _$AuditEventAgent {
     Reference location,
     List<String> policy,
     Coding media,
-    AuditEvent_Network network,
+    AuditEventNetwork network,
     List<CodeableConcept> purposeOfUse,
   }) = _AuditEventAgent;
   factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
@@ -50,7 +53,7 @@ abstract class AuditEventAgent with _$AuditEventAgent {
 abstract class AuditEventNetwork with _$AuditEventNetwork {
   const factory AuditEventNetwork({
     String address,
-    @JsonKey(unknownEnumValue: AuditEventNetwork.unknown) String type,
+    @JsonKey(unknownEnumValue: NetworkType.unknown) NetworkType type,
   }) = _AuditEventNetwork;
   factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
       _$AuditEventNetworkFromJson(json);
@@ -79,7 +82,7 @@ abstract class AuditEventEntity with _$AuditEventEntity {
     String name,
     String description,
     String query,
-    List<AuditEvent_Detail> detail,
+    List<AuditEventDetail> detail,
   }) = _AuditEventEntity;
   factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
       _$AuditEventEntityFromJson(json);
@@ -130,10 +133,10 @@ abstract class Bundle with _$Bundle implements Resource {
     @required
         String resourceType,
     Identifier identifier,
-    @JsonKey(unknownEnumValue: BundleType.unknown) String type,
+    @JsonKey(unknownEnumValue: BundleType.unknown) BundleType type,
     UnsignedInt total,
-    List<Bundle_Link> link,
-    List<Bundle_Entry> entry,
+    List<BundleLink> link,
+    List<BundleEntry> entry,
     Signature signature,
   }) = _Bundle;
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
@@ -152,12 +155,12 @@ abstract class BundleLink with _$BundleLink {
 @freezed
 abstract class BundleEntry with _$BundleEntry {
   const factory BundleEntry({
-    List<Bundle_Link> link,
+    List<BundleLink> link,
     String fullUrl,
     Resource resource,
-    Bundle_Search search,
-    Bundle_Request request,
-    Bundle_Response response,
+    BundleSearch search,
+    BundleRequest request,
+    BundleResponse response,
   }) = _BundleEntry;
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryFromJson(json);
@@ -166,7 +169,7 @@ abstract class BundleEntry with _$BundleEntry {
 @freezed
 abstract class BundleSearch with _$BundleSearch {
   const factory BundleSearch({
-    @JsonKey(unknownEnumValue: BundleSearch.unknown) String mode,
+    @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
     Decimal score,
   }) = _BundleSearch;
   factory BundleSearch.fromJson(Map<String, dynamic> json) =>
@@ -176,7 +179,7 @@ abstract class BundleSearch with _$BundleSearch {
 @freezed
 abstract class BundleRequest with _$BundleRequest {
   const factory BundleRequest({
-    @JsonKey(unknownEnumValue: BundleRequest.unknown) String method,
+    @JsonKey(unknownEnumValue: RequestMethod.unknown) RequestMethod method,
     String url,
     String ifNoneMatch,
     String ifModifiedSince,
@@ -212,7 +215,8 @@ abstract class CapabilityStatement
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+        CapabilityStatementStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -222,20 +226,21 @@ abstract class CapabilityStatement
     List<CodeableConcept> jurisdiction,
     String purpose,
     String copyright,
-    @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown) String kind,
+    @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+        CapabilityStatementKind kind,
     List<String> instantiates,
-    CapabilityStatement_Software software,
-    CapabilityStatement_Implementation implementation,
+    CapabilityStatementSoftware software,
+    CapabilityStatementImplementation implementation,
     Id fhirVersion,
     @JsonKey(unknownEnumValue: CapabilityStatementAcceptUnknown.unknown)
-        String acceptUnknown,
+        CapabilityStatementAcceptUnknown acceptUnknown,
     List<Code> format,
     List<Code> patchFormat,
     List<String> implementationGuide,
     List<Reference> profile,
-    List<CapabilityStatement_Rest> rest,
-    List<CapabilityStatement_Messaging> messaging,
-    List<CapabilityStatement_Document> document,
+    List<CapabilityStatementRest> rest,
+    List<CapabilityStatementMessaging> messaging,
+    List<CapabilityStatementDocument> document,
   }) = _CapabilityStatement;
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
@@ -267,13 +272,13 @@ abstract class CapabilityStatementImplementation
 @freezed
 abstract class CapabilityStatementRest with _$CapabilityStatementRest {
   const factory CapabilityStatementRest({
-    @JsonKey(unknownEnumValue: CapabilityStatementRest.unknown) String mode,
+    @JsonKey(unknownEnumValue: RestMode.unknown) RestMode mode,
     String documentation,
-    CapabilityStatement_Security security,
-    List<CapabilityStatement_Resource> resource,
-    List<CapabilityStatement_Interaction1> interaction,
-    List<CapabilityStatement_SearchParam> searchParam,
-    List<CapabilityStatement_Operation> operation,
+    CapabilityStatementSecurity security,
+    List<CapabilityStatementResource> resource,
+    List<CapabilityStatementInteraction1> interaction,
+    List<CapabilityStatementSearchParam> searchParam,
+    List<CapabilityStatementOperation> operation,
     List<String> compartment,
   }) = _CapabilityStatementRest;
   factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
@@ -286,7 +291,7 @@ abstract class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
     Boolean cors,
     List<CodeableConcept> service,
     String description,
-    List<CapabilityStatement_Certificate> certificate,
+    List<CapabilityStatementCertificate> certificate,
   }) = _CapabilityStatementSecurity;
   factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSecurityFromJson(json);
@@ -309,22 +314,21 @@ abstract class CapabilityStatementResource with _$CapabilityStatementResource {
     Code type,
     Reference profile,
     String documentation,
-    @JsonKey(required: true) List<CapabilityStatement_Interaction> interaction,
-    @JsonKey(unknownEnumValue: CapabilityStatementResource.unknown)
-        String versioning,
+    @JsonKey(required: true) List<CapabilityStatementInteraction> interaction,
+    @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
+        ResourceVersioning versioning,
     Boolean readHistory,
     Boolean updateCreate,
     Boolean conditionalCreate,
-    @JsonKey(unknownEnumValue: CapabilityStatementResource.unknown)
-        String conditionalRead,
+    @JsonKey(unknownEnumValue: ResourceConditionalRead.unknown)
+        ResourceConditionalRead conditionalRead,
     Boolean conditionalUpdate,
-    @JsonKey(unknownEnumValue: CapabilityStatementResource.unknown)
-        String conditionalDelete,
-    @JsonKey(unknownEnumValue: CapabilityStatementResource.unknown)
-        List<String> referencePolicy,
+    @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
+        ResourceConditionalDelete conditionalDelete,
+    List<ResourceReferencePolicy> referencePolicy,
     List<String> searchInclude,
     List<String> searchRevInclude,
-    List<CapabilityStatement_SearchParam> searchParam,
+    List<CapabilityStatementSearchParam> searchParam,
   }) = _CapabilityStatementResource;
   factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementResourceFromJson(json);
@@ -334,8 +338,7 @@ abstract class CapabilityStatementResource with _$CapabilityStatementResource {
 abstract class CapabilityStatementInteraction
     with _$CapabilityStatementInteraction {
   const factory CapabilityStatementInteraction({
-    @JsonKey(unknownEnumValue: CapabilityStatementInteraction.unknown)
-        String code,
+    @JsonKey(unknownEnumValue: InteractionCode.unknown) InteractionCode code,
     String documentation,
   }) = _CapabilityStatementInteraction;
   factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
@@ -348,8 +351,7 @@ abstract class CapabilityStatementSearchParam
   const factory CapabilityStatementSearchParam({
     String name,
     String definition,
-    @JsonKey(unknownEnumValue: CapabilityStatementSearchParam.unknown)
-        String type,
+    @JsonKey(unknownEnumValue: SearchParamType.unknown) SearchParamType type,
     String documentation,
   }) = _CapabilityStatementSearchParam;
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
@@ -360,8 +362,7 @@ abstract class CapabilityStatementSearchParam
 abstract class CapabilityStatementInteraction1
     with _$CapabilityStatementInteraction1 {
   const factory CapabilityStatementInteraction1({
-    @JsonKey(unknownEnumValue: CapabilityStatementInteraction1.unknown)
-        String code,
+    @JsonKey(unknownEnumValue: Interaction1Code.unknown) Interaction1Code code,
     String documentation,
   }) = _CapabilityStatementInteraction1;
   factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
@@ -383,11 +384,11 @@ abstract class CapabilityStatementOperation
 abstract class CapabilityStatementMessaging
     with _$CapabilityStatementMessaging {
   const factory CapabilityStatementMessaging({
-    List<CapabilityStatement_Endpoint> endpoint,
+    List<CapabilityStatementEndpoint> endpoint,
     UnsignedInt reliableCache,
     String documentation,
-    List<CapabilityStatement_SupportedMessage> supportedMessage,
-    List<CapabilityStatement_Event> event,
+    List<CapabilityStatementSupportedMessage> supportedMessage,
+    List<CapabilityStatementEvent> event,
   }) = _CapabilityStatementMessaging;
   factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementMessagingFromJson(json);
@@ -407,8 +408,8 @@ abstract class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
 abstract class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
   const factory CapabilityStatementSupportedMessage({
-    @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessage.unknown)
-        String mode,
+    @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
+        SupportedMessageMode mode,
     @JsonKey(required: true) Reference definition,
   }) = _CapabilityStatementSupportedMessage;
   factory CapabilityStatementSupportedMessage.fromJson(
@@ -420,9 +421,8 @@ abstract class CapabilityStatementSupportedMessage
 abstract class CapabilityStatementEvent with _$CapabilityStatementEvent {
   const factory CapabilityStatementEvent({
     @JsonKey(required: true) Coding code,
-    @JsonKey(unknownEnumValue: CapabilityStatementEvent.unknown)
-        String category,
-    @JsonKey(unknownEnumValue: CapabilityStatementEvent.unknown) String mode,
+    @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
+    @JsonKey(unknownEnumValue: EventMode.unknown) EventMode mode,
     Code focus,
     @JsonKey(required: true) Reference request,
     @JsonKey(required: true) Reference response,
@@ -435,7 +435,7 @@ abstract class CapabilityStatementEvent with _$CapabilityStatementEvent {
 @freezed
 abstract class CapabilityStatementDocument with _$CapabilityStatementDocument {
   const factory CapabilityStatementDocument({
-    @JsonKey(unknownEnumValue: CapabilityStatementDocument.unknown) String mode,
+    @JsonKey(unknownEnumValue: DocumentMode.unknown) DocumentMode mode,
     String documentation,
     @JsonKey(required: true) Reference profile,
   }) = _CapabilityStatementDocument;
@@ -454,7 +454,8 @@ abstract class CodeSystem with _$CodeSystem implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: CodeSystemStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
+        CodeSystemStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -467,14 +468,15 @@ abstract class CodeSystem with _$CodeSystem implements Resource {
     Boolean caseSensitive,
     String valueSet,
     @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-        String hierarchyMeaning,
+        CodeSystemHierarchyMeaning hierarchyMeaning,
     Boolean compositional,
     Boolean versionNeeded,
-    @JsonKey(unknownEnumValue: CodeSystemContent.unknown) String content,
+    @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
+        CodeSystemContent content,
     UnsignedInt count,
-    List<CodeSystem_Filter> filter,
-    List<CodeSystem_Property> property,
-    List<CodeSystem_Concept> concept,
+    List<CodeSystemFilter> filter,
+    List<CodeSystemProperty> property,
+    List<CodeSystemConcept> concept,
   }) = _CodeSystem;
   factory CodeSystem.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemFromJson(json);
@@ -498,7 +500,7 @@ abstract class CodeSystemProperty with _$CodeSystemProperty {
     Code code,
     String uri,
     String description,
-    @JsonKey(unknownEnumValue: CodeSystemProperty.unknown) String type,
+    @JsonKey(unknownEnumValue: PropertyType.unknown) PropertyType type,
   }) = _CodeSystemProperty;
   factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemPropertyFromJson(json);
@@ -510,9 +512,9 @@ abstract class CodeSystemConcept with _$CodeSystemConcept {
     Code code,
     String display,
     String definition,
-    List<CodeSystem_Designation> designation,
-    List<CodeSystem_Property1> property,
-    List<CodeSystem_Concept> concept,
+    List<CodeSystemDesignation> designation,
+    List<CodeSystemProperty1> property,
+    List<CodeSystemConcept> concept,
   }) = _CodeSystemConcept;
   factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemConceptFromJson(json);
@@ -556,7 +558,7 @@ abstract class CompartmentDefinition
     String name,
     String title,
     @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-        String status,
+        CompartmentDefinitionStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -565,9 +567,10 @@ abstract class CompartmentDefinition
     String purpose,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
-    @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown) String code,
+    @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
+        CompartmentDefinitionCode code,
     Boolean search,
-    List<CompartmentDefinition_Resource> resource,
+    List<CompartmentDefinitionResource> resource,
   }) = _CompartmentDefinition;
   factory CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionFromJson(json);
@@ -592,7 +595,8 @@ abstract class Composition with _$Composition implements Resource {
     @required
         String resourceType,
     Identifier identifier,
-    @JsonKey(unknownEnumValue: CompositionStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+        CompositionStatus status,
     @JsonKey(required: true) CodeableConcept type,
     @JsonKey(name: 'class') CodeableConcept class_,
     @JsonKey(required: true) Reference subject,
@@ -601,11 +605,11 @@ abstract class Composition with _$Composition implements Resource {
     @JsonKey(required: true) List<Reference> author,
     String title,
     Code confidentiality,
-    List<Composition_Attester> attester,
+    List<CompositionAttester> attester,
     Reference custodian,
-    List<Composition_RelatesTo> relatesTo,
-    List<Composition_Event> event,
-    List<Composition_Section> section,
+    List<CompositionRelatesTo> relatesTo,
+    List<CompositionEvent> event,
+    List<CompositionSection> section,
   }) = _Composition;
   factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
@@ -614,7 +618,7 @@ abstract class Composition with _$Composition implements Resource {
 @freezed
 abstract class CompositionAttester with _$CompositionAttester {
   const factory CompositionAttester({
-    @JsonKey(unknownEnumValue: CompositionAttester.unknown) List<String> mode,
+    List<AttesterMode> mode,
     DateTime time,
     Reference party,
   }) = _CompositionAttester;
@@ -654,7 +658,7 @@ abstract class CompositionSection with _$CompositionSection {
     CodeableConcept orderedBy,
     List<Reference> entry,
     CodeableConcept emptyReason,
-    List<Composition_Section> section,
+    List<CompositionSection> section,
   }) = _CompositionSection;
   factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);
@@ -671,7 +675,8 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: ConceptMapStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+        ConceptMapStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -685,7 +690,7 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
     Reference sourceReference,
     String targetUri,
     Reference targetReference,
-    List<ConceptMap_Group> group,
+    List<ConceptMapGroup> group,
   }) = _ConceptMap;
   factory ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapFromJson(json);
@@ -698,8 +703,8 @@ abstract class ConceptMapGroup with _$ConceptMapGroup {
     String sourceVersion,
     String target,
     String targetVersion,
-    @JsonKey(required: true) List<ConceptMap_Element> element,
-    ConceptMap_Unmapped unmapped,
+    @JsonKey(required: true) List<ConceptMapElement> element,
+    ConceptMapUnmapped unmapped,
   }) = _ConceptMapGroup;
   factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapGroupFromJson(json);
@@ -710,7 +715,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
   const factory ConceptMapElement({
     Code code,
     String display,
-    List<ConceptMap_Target> target,
+    List<ConceptMapTarget> target,
   }) = _ConceptMapElement;
   factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapElementFromJson(json);
@@ -721,10 +726,11 @@ abstract class ConceptMapTarget with _$ConceptMapTarget {
   const factory ConceptMapTarget({
     Code code,
     String display,
-    @JsonKey(unknownEnumValue: ConceptMapTarget.unknown) String equivalence,
+    @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
+        TargetEquivalence equivalence,
     String comment,
-    List<ConceptMap_DependsOn> dependsOn,
-    List<ConceptMap_DependsOn> product,
+    List<ConceptMapDependsOn> dependsOn,
+    List<ConceptMapDependsOn> product,
   }) = _ConceptMapTarget;
   factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapTargetFromJson(json);
@@ -745,7 +751,7 @@ abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
 @freezed
 abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
   const factory ConceptMapUnmapped({
-    @JsonKey(unknownEnumValue: ConceptMapUnmapped.unknown) String mode,
+    @JsonKey(unknownEnumValue: UnmappedMode.unknown) UnmappedMode mode,
     Code code,
     String display,
     String url,
@@ -761,25 +767,25 @@ abstract class Consent with _$Consent implements Resource {
     @required
         String resourceType,
     Identifier identifier,
-    @JsonKey(unknownEnumValue: ConsentStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus status,
     List<CodeableConcept> category,
     @JsonKey(required: true) Reference patient,
     Period period,
     DateTime dateTime,
     List<Reference> consentingParty,
-    List<Consent_Actor> actor,
+    List<ConsentActor> actor,
     List<CodeableConcept> action,
     List<Reference> organization,
     Attachment sourceAttachment,
     Identifier sourceIdentifier,
     Reference sourceReference,
-    List<Consent_Policy> policy,
+    List<ConsentPolicy> policy,
     String policyRule,
     List<Coding> securityLabel,
     List<Coding> purpose,
     Period dataPeriod,
-    List<Consent_Data> data,
-    List<Consent_Except> except,
+    List<ConsentData> data,
+    List<ConsentExcept> except,
   }) = _Consent;
   factory Consent.fromJson(Map<String, dynamic> json) =>
       _$ConsentFromJson(json);
@@ -808,7 +814,7 @@ abstract class ConsentPolicy with _$ConsentPolicy {
 @freezed
 abstract class ConsentData with _$ConsentData {
   const factory ConsentData({
-    @JsonKey(unknownEnumValue: ConsentData.unknown) String meaning,
+    @JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
     @JsonKey(required: true) Reference reference,
   }) = _ConsentData;
   factory ConsentData.fromJson(Map<String, dynamic> json) =>
@@ -818,16 +824,16 @@ abstract class ConsentData with _$ConsentData {
 @freezed
 abstract class ConsentExcept with _$ConsentExcept {
   const factory ConsentExcept({
-    @JsonKey(unknownEnumValue: ConsentExcept.unknown) String type,
+    @JsonKey(unknownEnumValue: ExceptType.unknown) ExceptType type,
     Period period,
-    List<Consent_Actor1> actor,
+    List<ConsentActor1> actor,
     List<CodeableConcept> action,
     List<Coding> securityLabel,
     List<Coding> purpose,
     @JsonKey(name: 'class') List<Coding> class_,
     List<Coding> code,
     Period dataPeriod,
-    List<Consent_Data1> data,
+    List<ConsentData1> data,
   }) = _ConsentExcept;
   factory ConsentExcept.fromJson(Map<String, dynamic> json) =>
       _$ConsentExceptFromJson(json);
@@ -846,7 +852,7 @@ abstract class ConsentActor1 with _$ConsentActor1 {
 @freezed
 abstract class ConsentData1 with _$ConsentData1 {
   const factory ConsentData1({
-    @JsonKey(unknownEnumValue: ConsentData1.unknown) String meaning,
+    @JsonKey(unknownEnumValue: Data1Meaning.unknown) Data1Meaning meaning,
     @JsonKey(required: true) Reference reference,
   }) = _ConsentData1;
   factory ConsentData1.fromJson(Map<String, dynamic> json) =>
@@ -862,7 +868,8 @@ abstract class DataElement with _$DataElement implements Resource {
     String url,
     List<Identifier> identifier,
     String version,
-    @JsonKey(unknownEnumValue: DataElementStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: DataElementStatus.unknown)
+        DataElementStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -872,8 +879,9 @@ abstract class DataElement with _$DataElement implements Resource {
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String copyright,
-    @JsonKey(unknownEnumValue: DataElementStringency.unknown) String stringency,
-    List<DataElement_Mapping> mapping,
+    @JsonKey(unknownEnumValue: DataElementStringency.unknown)
+        DataElementStringency stringency,
+    List<DataElementMapping> mapping,
     @JsonKey(required: true) List<ElementDefinition> element,
   }) = _DataElement;
   factory DataElement.fromJson(Map<String, dynamic> json) =>
@@ -900,7 +908,8 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
         String resourceType,
     Identifier masterIdentifier,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+        DocumentManifestStatus status,
     CodeableConcept type,
     Reference subject,
     DateTime created,
@@ -908,8 +917,8 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
     List<Reference> recipient,
     String source,
     String description,
-    @JsonKey(required: true) List<DocumentManifest_Content> content,
-    List<DocumentManifest_Related> related,
+    @JsonKey(required: true) List<DocumentManifestContent> content,
+    List<DocumentManifestRelated> related,
   }) = _DocumentManifest;
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
@@ -943,7 +952,8 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
         String resourceType,
     Identifier masterIdentifier,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+        DocumentReferenceStatus status,
     Code docStatus,
     @JsonKey(required: true) CodeableConcept type,
     @JsonKey(name: 'class') CodeableConcept class_,
@@ -953,11 +963,11 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
     List<Reference> author,
     Reference authenticator,
     Reference custodian,
-    List<DocumentReference_RelatesTo> relatesTo,
+    List<DocumentReferenceRelatesTo> relatesTo,
     String description,
     List<CodeableConcept> securityLabel,
-    @JsonKey(required: true) List<DocumentReference_Content> content,
-    DocumentReference_Context context,
+    @JsonKey(required: true) List<DocumentReferenceContent> content,
+    DocumentReferenceContext context,
   }) = _DocumentReference;
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
@@ -966,7 +976,7 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
 @freezed
 abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   const factory DocumentReferenceRelatesTo({
-    @JsonKey(unknownEnumValue: DocumentReferenceRelatesTo.unknown) String code,
+    @JsonKey(unknownEnumValue: RelatesToCode.unknown) RelatesToCode code,
     @JsonKey(required: true) Reference target,
   }) = _DocumentReferenceRelatesTo;
   factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
@@ -992,7 +1002,7 @@ abstract class DocumentReferenceContext with _$DocumentReferenceContext {
     CodeableConcept facilityType,
     CodeableConcept practiceSetting,
     Reference sourcePatientInfo,
-    List<DocumentReference_Related> related,
+    List<DocumentReferenceRelated> related,
   }) = _DocumentReferenceContext;
   factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextFromJson(json);
@@ -1018,7 +1028,8 @@ abstract class ExpansionProfile with _$ExpansionProfile implements Resource {
     Identifier identifier,
     String version,
     String name,
-    @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown)
+        ExpansionProfileStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -1026,10 +1037,10 @@ abstract class ExpansionProfile with _$ExpansionProfile implements Resource {
     String description,
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
-    List<ExpansionProfile_FixedVersion> fixedVersion,
-    ExpansionProfile_ExcludedSystem excludedSystem,
+    List<ExpansionProfileFixedVersion> fixedVersion,
+    ExpansionProfileExcludedSystem excludedSystem,
     Boolean includeDesignations,
-    ExpansionProfile_Designation designation,
+    ExpansionProfileDesignation designation,
     Boolean includeDefinition,
     Boolean activeOnly,
     Boolean excludeNested,
@@ -1048,8 +1059,7 @@ abstract class ExpansionProfileFixedVersion
   const factory ExpansionProfileFixedVersion({
     String system,
     String version,
-    @JsonKey(unknownEnumValue: ExpansionProfileFixedVersion.unknown)
-        String mode,
+    @JsonKey(unknownEnumValue: FixedVersionMode.unknown) FixedVersionMode mode,
   }) = _ExpansionProfileFixedVersion;
   factory ExpansionProfileFixedVersion.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileFixedVersionFromJson(json);
@@ -1069,8 +1079,8 @@ abstract class ExpansionProfileExcludedSystem
 @freezed
 abstract class ExpansionProfileDesignation with _$ExpansionProfileDesignation {
   const factory ExpansionProfileDesignation({
-    ExpansionProfile_Include include,
-    ExpansionProfile_Exclude exclude,
+    ExpansionProfileInclude include,
+    ExpansionProfileExclude exclude,
   }) = _ExpansionProfileDesignation;
   factory ExpansionProfileDesignation.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileDesignationFromJson(json);
@@ -1079,7 +1089,7 @@ abstract class ExpansionProfileDesignation with _$ExpansionProfileDesignation {
 @freezed
 abstract class ExpansionProfileInclude with _$ExpansionProfileInclude {
   const factory ExpansionProfileInclude({
-    List<ExpansionProfile_Designation1> designation,
+    List<ExpansionProfileDesignation1> designation,
   }) = _ExpansionProfileInclude;
   factory ExpansionProfileInclude.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileIncludeFromJson(json);
@@ -1099,7 +1109,7 @@ abstract class ExpansionProfileDesignation1
 @freezed
 abstract class ExpansionProfileExclude with _$ExpansionProfileExclude {
   const factory ExpansionProfileExclude({
-    List<ExpansionProfile_Designation2> designation,
+    List<ExpansionProfileDesignation2> designation,
   }) = _ExpansionProfileExclude;
   factory ExpansionProfileExclude.fromJson(Map<String, dynamic> json) =>
       _$ExpansionProfileExcludeFromJson(json);
@@ -1125,7 +1135,8 @@ abstract class GraphDefinition with _$GraphDefinition implements Resource {
     String url,
     String version,
     String name,
-    @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+        GraphDefinitionStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -1136,7 +1147,7 @@ abstract class GraphDefinition with _$GraphDefinition implements Resource {
     String purpose,
     Code start,
     String profile,
-    List<GraphDefinition_Link> link,
+    List<GraphDefinitionLink> link,
   }) = _GraphDefinition;
   factory GraphDefinition.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionFromJson(json);
@@ -1150,7 +1161,7 @@ abstract class GraphDefinitionLink with _$GraphDefinitionLink {
     Integer min,
     String max,
     String description,
-    @JsonKey(required: true) List<GraphDefinition_Target> target,
+    @JsonKey(required: true) List<GraphDefinitionTarget> target,
   }) = _GraphDefinitionLink;
   factory GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionLinkFromJson(json);
@@ -1161,8 +1172,8 @@ abstract class GraphDefinitionTarget with _$GraphDefinitionTarget {
   const factory GraphDefinitionTarget({
     Code type,
     String profile,
-    List<GraphDefinition_Compartment> compartment,
-    List<GraphDefinition_Link> link,
+    List<GraphDefinitionCompartment> compartment,
+    List<GraphDefinitionLink> link,
   }) = _GraphDefinitionTarget;
   factory GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionTargetFromJson(json);
@@ -1172,7 +1183,7 @@ abstract class GraphDefinitionTarget with _$GraphDefinitionTarget {
 abstract class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   const factory GraphDefinitionCompartment({
     Code code,
-    @JsonKey(unknownEnumValue: GraphDefinitionCompartment.unknown) String rule,
+    @JsonKey(unknownEnumValue: CompartmentRule.unknown) CompartmentRule rule,
     String expression,
     String description,
   }) = _GraphDefinitionCompartment;
@@ -1191,7 +1202,8 @@ abstract class ImplementationGuide
     String url,
     String version,
     String name,
-    @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+        ImplementationGuideStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -1201,11 +1213,11 @@ abstract class ImplementationGuide
     List<CodeableConcept> jurisdiction,
     String copyright,
     Id fhirVersion,
-    List<ImplementationGuide_Dependency> dependency,
-    List<ImplementationGuide_Package> package,
-    List<ImplementationGuide_Global> global,
+    List<ImplementationGuideDependency> dependency,
+    List<ImplementationGuidePackage> package,
+    List<ImplementationGuideGlobal> global,
     List<String> binary,
-    ImplementationGuide_Page page,
+    ImplementationGuidePage page,
   }) = _ImplementationGuide;
   factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideFromJson(json);
@@ -1215,8 +1227,7 @@ abstract class ImplementationGuide
 abstract class ImplementationGuideDependency
     with _$ImplementationGuideDependency {
   const factory ImplementationGuideDependency({
-    @JsonKey(unknownEnumValue: ImplementationGuideDependency.unknown)
-        String type,
+    @JsonKey(unknownEnumValue: DependencyType.unknown) DependencyType type,
     String uri,
   }) = _ImplementationGuideDependency;
   factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
@@ -1228,7 +1239,7 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
   const factory ImplementationGuidePackage({
     String name,
     String description,
-    @JsonKey(required: true) List<ImplementationGuide_Resource> resource,
+    @JsonKey(required: true) List<ImplementationGuideResource> resource,
   }) = _ImplementationGuidePackage;
   factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePackageFromJson(json);
@@ -1264,11 +1275,11 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
   const factory ImplementationGuidePage({
     String source,
     String title,
-    @JsonKey(unknownEnumValue: ImplementationGuidePage.unknown) String kind,
+    @JsonKey(unknownEnumValue: PageKind.unknown) PageKind kind,
     List<Code> type,
     List<String> package,
     Code format,
-    List<ImplementationGuide_Page> page,
+    List<ImplementationGuidePage> page,
   }) = _ImplementationGuidePage;
   factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePageFromJson(json);
@@ -1282,7 +1293,7 @@ abstract class Linkage with _$Linkage implements Resource {
         String resourceType,
     Boolean active,
     Reference author,
-    @JsonKey(required: true) List<Linkage_Item> item,
+    @JsonKey(required: true) List<LinkageItem> item,
   }) = _Linkage;
   factory Linkage.fromJson(Map<String, dynamic> json) =>
       _$LinkageFromJson(json);
@@ -1291,7 +1302,7 @@ abstract class Linkage with _$Linkage implements Resource {
 @freezed
 abstract class LinkageItem with _$LinkageItem {
   const factory LinkageItem({
-    @JsonKey(unknownEnumValue: LinkageItem.unknown) String type,
+    @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType type,
     @JsonKey(required: true) Reference resource,
   }) = _LinkageItem;
   factory LinkageItem.fromJson(Map<String, dynamic> json) =>
@@ -1306,7 +1317,7 @@ abstract class Media with _$Media implements Resource {
         String resourceType,
     List<Identifier> identifier,
     List<Reference> basedOn,
-    @JsonKey(unknownEnumValue: MediaType.unknown) String type,
+    @JsonKey(unknownEnumValue: MediaType.unknown) MediaType type,
     CodeableConcept subtype,
     CodeableConcept view,
     Reference subject,
@@ -1338,7 +1349,8 @@ abstract class MessageDefinition with _$MessageDefinition implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+        MessageDefinitionStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -1353,9 +1365,9 @@ abstract class MessageDefinition with _$MessageDefinition implements Resource {
     List<Reference> replaces,
     @JsonKey(required: true) Coding event,
     Code category,
-    List<MessageDefinition_Focus> focus,
+    List<MessageDefinitionFocus> focus,
     Boolean responseRequired,
-    List<MessageDefinition_AllowedResponse> allowedResponse,
+    List<MessageDefinitionAllowedResponse> allowedResponse,
   }) = _MessageDefinition;
   factory MessageDefinition.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFromJson(json);
@@ -1392,16 +1404,16 @@ abstract class MessageHeader with _$MessageHeader implements Resource {
     @required
         String resourceType,
     @JsonKey(required: true) Coding event,
-    List<MessageHeader_Destination> destination,
+    List<MessageHeaderDestination> destination,
     Reference receiver,
     Reference sender,
     String timestamp,
     Reference enterer,
     Reference author,
-    @JsonKey(required: true) MessageHeader_Source source,
+    @JsonKey(required: true) MessageHeaderSource source,
     Reference responsible,
     CodeableConcept reason,
-    MessageHeader_Response response,
+    MessageHeaderResponse response,
     List<Reference> focus,
   }) = _MessageHeader;
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
@@ -1436,7 +1448,7 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
 abstract class MessageHeaderResponse with _$MessageHeaderResponse {
   const factory MessageHeaderResponse({
     Id identifier,
-    @JsonKey(unknownEnumValue: MessageHeaderResponse.unknown) String code,
+    @JsonKey(unknownEnumValue: ResponseCode.unknown) ResponseCode code,
     Reference details,
   }) = _MessageHeaderResponse;
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
@@ -1450,8 +1462,9 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
     @required
         String resourceType,
     String name,
-    @JsonKey(unknownEnumValue: NamingSystemStatus.unknown) String status,
-    @JsonKey(unknownEnumValue: NamingSystemKind.unknown) String kind,
+    @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+        NamingSystemStatus status,
+    @JsonKey(unknownEnumValue: NamingSystemKind.unknown) NamingSystemKind kind,
     DateTime date,
     String publisher,
     List<ContactDetail> contact,
@@ -1461,7 +1474,7 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
     List<UsageContext> useContext,
     List<CodeableConcept> jurisdiction,
     String usage,
-    @JsonKey(required: true) List<NamingSystem_UniqueId> uniqueId,
+    @JsonKey(required: true) List<NamingSystemUniqueId> uniqueId,
     Reference replacedBy,
   }) = _NamingSystem;
   factory NamingSystem.fromJson(Map<String, dynamic> json) =>
@@ -1471,7 +1484,7 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
 @freezed
 abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
   const factory NamingSystemUniqueId({
-    @JsonKey(unknownEnumValue: NamingSystemUniqueId.unknown) String type,
+    @JsonKey(unknownEnumValue: UniqueIdType.unknown) UniqueIdType type,
     String value,
     Boolean preferred,
     String comment,
@@ -1492,8 +1505,10 @@ abstract class OperationDefinition
     String url,
     String version,
     String name,
-    @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown) String status,
-    @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown) String kind,
+    @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+        OperationDefinitionStatus status,
+    @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+        OperationDefinitionKind kind,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -1510,8 +1525,8 @@ abstract class OperationDefinition
     Boolean system,
     Boolean type,
     Boolean instance,
-    List<OperationDefinition_Parameter> parameter,
-    List<OperationDefinition_Overload> overload,
+    List<OperationDefinitionParameter> parameter,
+    List<OperationDefinitionOverload> overload,
   }) = _OperationDefinition;
   factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
@@ -1522,16 +1537,16 @@ abstract class OperationDefinitionParameter
     with _$OperationDefinitionParameter {
   const factory OperationDefinitionParameter({
     Code name,
-    @JsonKey(unknownEnumValue: OperationDefinitionParameter.unknown) String use,
+    @JsonKey(unknownEnumValue: ParameterUse.unknown) ParameterUse use,
     Integer min,
     String max,
     String documentation,
     Code type,
-    @JsonKey(unknownEnumValue: OperationDefinitionParameter.unknown)
-        String searchType,
+    @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+        ParameterSearchType searchType,
     Reference profile,
-    OperationDefinition_Binding binding,
-    List<OperationDefinition_Parameter> part,
+    OperationDefinitionBinding binding,
+    List<OperationDefinitionParameter> part,
   }) = _OperationDefinitionParameter;
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
@@ -1540,8 +1555,8 @@ abstract class OperationDefinitionParameter
 @freezed
 abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
   const factory OperationDefinitionBinding({
-    @JsonKey(unknownEnumValue: OperationDefinitionBinding.unknown)
-        String strength,
+    @JsonKey(unknownEnumValue: BindingStrength.unknown)
+        BindingStrength strength,
     String valueSetUri,
     Reference valueSetReference,
   }) = _OperationDefinitionBinding;
@@ -1565,7 +1580,7 @@ abstract class OperationOutcome with _$OperationOutcome implements Resource {
     @JsonKey(required: true, defaultValue: 'OperationOutcome')
     @required
         String resourceType,
-    @JsonKey(required: true) List<OperationOutcome_Issue> issue,
+    @JsonKey(required: true) List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeFromJson(json);
@@ -1574,8 +1589,8 @@ abstract class OperationOutcome with _$OperationOutcome implements Resource {
 @freezed
 abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
   const factory OperationOutcomeIssue({
-    @JsonKey(unknownEnumValue: OperationOutcomeIssue.unknown) String severity,
-    @JsonKey(unknownEnumValue: OperationOutcomeIssue.unknown) String code,
+    @JsonKey(unknownEnumValue: IssueSeverity.unknown) IssueSeverity severity,
+    @JsonKey(unknownEnumValue: IssueCode.unknown) IssueCode code,
     CodeableConcept details,
     String diagnostics,
     List<String> location,
@@ -1588,7 +1603,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 @freezed
 abstract class Parameters with _$Parameters implements Resource {
   const factory Parameters({
-    List<Parameters_Parameter> parameter,
+    List<ParametersParameter> parameter,
   }) = _Parameters;
   factory Parameters.fromJson(Map<String, dynamic> json) =>
       _$ParametersFromJson(json);
@@ -1652,7 +1667,7 @@ abstract class ParametersParameter with _$ParametersParameter {
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
     Resource resource,
-    List<Parameters_Parameter> part,
+    List<ParametersParameter> part,
   }) = _ParametersParameter;
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$ParametersParameterFromJson(json);
@@ -1671,8 +1686,8 @@ abstract class Provenance with _$Provenance implements Resource {
     Reference location,
     List<Coding> reason,
     Coding activity,
-    @JsonKey(required: true) List<Provenance_Agent> agent,
-    List<Provenance_Entity> entity,
+    @JsonKey(required: true) List<ProvenanceAgent> agent,
+    List<ProvenanceEntity> entity,
     List<Signature> signature,
   }) = _Provenance;
   factory Provenance.fromJson(Map<String, dynamic> json) =>
@@ -1696,11 +1711,11 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
 @freezed
 abstract class ProvenanceEntity with _$ProvenanceEntity {
   const factory ProvenanceEntity({
-    @JsonKey(unknownEnumValue: ProvenanceEntity.unknown) String role,
+    @JsonKey(unknownEnumValue: EntityRole.unknown) EntityRole role,
     String whatUri,
     Reference whatReference,
     Identifier whatIdentifier,
-    List<Provenance_Agent> agent,
+    List<ProvenanceAgent> agent,
   }) = _ProvenanceEntity;
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);
@@ -1715,7 +1730,8 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
     String url,
     String version,
     String name,
-    @JsonKey(unknownEnumValue: SearchParameterStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+        SearchParameterStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -1725,20 +1741,19 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
     String purpose,
     Code code,
     List<Code> base,
-    @JsonKey(unknownEnumValue: SearchParameterType.unknown) String type,
+    @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+        SearchParameterType type,
     String derivedFrom,
     String description,
     String expression,
     String xpath,
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-        String xpathUsage,
+        SearchParameterXpathUsage xpathUsage,
     List<Code> target,
-    @JsonKey(unknownEnumValue: SearchParameterComparator.unknown)
-        List<String> comparator,
-    @JsonKey(unknownEnumValue: SearchParameterModifier.unknown)
-        List<String> modifier,
+    List<SearchParameterComparator> comparator,
+    List<SearchParameterModifier> modifier,
     List<String> chain,
-    List<SearchParameter_Component> component,
+    List<SearchParameterComponent> component,
   }) = _SearchParameter;
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
@@ -1767,7 +1782,8 @@ abstract class StructureDefinition
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+        StructureDefinitionStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -1779,19 +1795,20 @@ abstract class StructureDefinition
     String copyright,
     List<Coding> keyword,
     Id fhirVersion,
-    List<StructureDefinition_Mapping> mapping,
-    @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown) String kind,
+    List<StructureDefinitionMapping> mapping,
+    @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
+        StructureDefinitionKind kind,
     @JsonKey(name: 'abstract') Boolean abstract_,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-        String contextType,
+        StructureDefinitionContextType contextType,
     List<String> context,
     List<String> contextInvariant,
     Code type,
     String baseDefinition,
     @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
-        String derivation,
-    StructureDefinition_Snapshot snapshot,
-    StructureDefinition_Differential differential,
+        StructureDefinitionDerivation derivation,
+    StructureDefinitionSnapshot snapshot,
+    StructureDefinitionDifferential differential,
   }) = _StructureDefinition;
   factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
@@ -1839,7 +1856,8 @@ abstract class StructureMap with _$StructureMap implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: StructureMapStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+        StructureMapStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -1849,9 +1867,9 @@ abstract class StructureMap with _$StructureMap implements Resource {
     List<CodeableConcept> jurisdiction,
     String purpose,
     String copyright,
-    List<StructureMap_Structure> structure,
+    List<StructureMapStructure> structure,
     List<String> import,
-    @JsonKey(required: true) List<StructureMap_Group> group,
+    @JsonKey(required: true) List<StructureMapGroup> group,
   }) = _StructureMap;
   factory StructureMap.fromJson(Map<String, dynamic> json) =>
       _$StructureMapFromJson(json);
@@ -1861,7 +1879,7 @@ abstract class StructureMap with _$StructureMap implements Resource {
 abstract class StructureMapStructure with _$StructureMapStructure {
   const factory StructureMapStructure({
     String url,
-    @JsonKey(unknownEnumValue: StructureMapStructure.unknown) String mode,
+    @JsonKey(unknownEnumValue: StructureMode.unknown) StructureMode mode,
     String alias,
     String documentation,
   }) = _StructureMapStructure;
@@ -1874,10 +1892,10 @@ abstract class StructureMapGroup with _$StructureMapGroup {
   const factory StructureMapGroup({
     Id name,
     @JsonKey(name: 'extends') Id extends_,
-    @JsonKey(unknownEnumValue: StructureMapGroup.unknown) String typeMode,
+    @JsonKey(unknownEnumValue: GroupTypeMode.unknown) GroupTypeMode typeMode,
     String documentation,
-    @JsonKey(required: true) List<StructureMap_Input> input,
-    @JsonKey(required: true) List<StructureMap_Rule> rule,
+    @JsonKey(required: true) List<StructureMapInput> input,
+    @JsonKey(required: true) List<StructureMapRule> rule,
   }) = _StructureMapGroup;
   factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>
       _$StructureMapGroupFromJson(json);
@@ -1888,7 +1906,7 @@ abstract class StructureMapInput with _$StructureMapInput {
   const factory StructureMapInput({
     Id name,
     String type,
-    @JsonKey(unknownEnumValue: StructureMapInput.unknown) String mode,
+    @JsonKey(unknownEnumValue: InputMode.unknown) InputMode mode,
     String documentation,
   }) = _StructureMapInput;
   factory StructureMapInput.fromJson(Map<String, dynamic> json) =>
@@ -1899,10 +1917,10 @@ abstract class StructureMapInput with _$StructureMapInput {
 abstract class StructureMapRule with _$StructureMapRule {
   const factory StructureMapRule({
     Id name,
-    @JsonKey(required: true) List<StructureMap_Source> source,
-    List<StructureMap_Target> target,
-    List<StructureMap_Rule> rule,
-    List<StructureMap_Dependent> dependent,
+    @JsonKey(required: true) List<StructureMapSource> source,
+    List<StructureMapTarget> target,
+    List<StructureMapRule> rule,
+    List<StructureMapDependent> dependent,
     String documentation,
   }) = _StructureMapRule;
   factory StructureMapRule.fromJson(Map<String, dynamic> json) =>
@@ -1970,7 +1988,7 @@ abstract class StructureMapSource with _$StructureMapSource {
     ParameterDefinition defaultValueParameterDefinition,
     TriggerDefinition defaultValueTriggerDefinition,
     String element,
-    @JsonKey(unknownEnumValue: StructureMapSource.unknown) String listMode,
+    @JsonKey(unknownEnumValue: SourceListMode.unknown) SourceListMode listMode,
     Id variable,
     String condition,
     String check,
@@ -1983,14 +2001,15 @@ abstract class StructureMapSource with _$StructureMapSource {
 abstract class StructureMapTarget with _$StructureMapTarget {
   const factory StructureMapTarget({
     Id context,
-    @JsonKey(unknownEnumValue: StructureMapTarget.unknown) String contextType,
+    @JsonKey(unknownEnumValue: TargetContextType.unknown)
+        TargetContextType contextType,
     String element,
     Id variable,
-    @JsonKey(unknownEnumValue: StructureMapTarget.unknown)
-        List<String> listMode,
+    List<TargetListMode> listMode,
     Id listRuleId,
-    @JsonKey(unknownEnumValue: StructureMapTarget.unknown) String transform,
-    List<StructureMap_Parameter> parameter,
+    @JsonKey(unknownEnumValue: TargetTransform.unknown)
+        TargetTransform transform,
+    List<StructureMapParameter> parameter,
   }) = _StructureMapTarget;
   factory StructureMapTarget.fromJson(Map<String, dynamic> json) =>
       _$StructureMapTargetFromJson(json);
@@ -2025,13 +2044,14 @@ abstract class Subscription with _$Subscription implements Resource {
     @JsonKey(required: true, defaultValue: 'Subscription')
     @required
         String resourceType,
-    @JsonKey(unknownEnumValue: SubscriptionStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
+        SubscriptionStatus status,
     List<ContactPoint> contact,
     String end,
     String reason,
     String criteria,
     String error,
-    @JsonKey(required: true) Subscription_Channel channel,
+    @JsonKey(required: true) SubscriptionChannel channel,
     List<Coding> tag,
   }) = _Subscription;
   factory Subscription.fromJson(Map<String, dynamic> json) =>
@@ -2041,7 +2061,7 @@ abstract class Subscription with _$Subscription implements Resource {
 @freezed
 abstract class SubscriptionChannel with _$SubscriptionChannel {
   const factory SubscriptionChannel({
-    @JsonKey(unknownEnumValue: SubscriptionChannel.unknown) String type,
+    @JsonKey(unknownEnumValue: ChannelType.unknown) ChannelType type,
     String endpoint,
     String payload,
     List<String> header,
@@ -2061,7 +2081,7 @@ abstract class ValueSet with _$ValueSet implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: ValueSetStatus.unknown) String status,
+    @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -2073,8 +2093,8 @@ abstract class ValueSet with _$ValueSet implements Resource {
     String purpose,
     String copyright,
     Boolean extensible,
-    ValueSet_Compose compose,
-    ValueSet_Expansion expansion,
+    ValueSetCompose compose,
+    ValueSetExpansion expansion,
   }) = _ValueSet;
   factory ValueSet.fromJson(Map<String, dynamic> json) =>
       _$ValueSetFromJson(json);
@@ -2085,8 +2105,8 @@ abstract class ValueSetCompose with _$ValueSetCompose {
   const factory ValueSetCompose({
     Date lockedDate,
     Boolean inactive,
-    @JsonKey(required: true) List<ValueSet_Include> include,
-    List<ValueSet_Include> exclude,
+    @JsonKey(required: true) List<ValueSetInclude> include,
+    List<ValueSetInclude> exclude,
   }) = _ValueSetCompose;
   factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeFromJson(json);
@@ -2097,8 +2117,8 @@ abstract class ValueSetInclude with _$ValueSetInclude {
   const factory ValueSetInclude({
     String system,
     String version,
-    List<ValueSet_Concept> concept,
-    List<ValueSet_Filter> filter,
+    List<ValueSetConcept> concept,
+    List<ValueSetFilter> filter,
     List<String> valueSet,
   }) = _ValueSetInclude;
   factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
@@ -2110,7 +2130,7 @@ abstract class ValueSetConcept with _$ValueSetConcept {
   const factory ValueSetConcept({
     Code code,
     String display,
-    List<ValueSet_Designation> designation,
+    List<ValueSetDesignation> designation,
   }) = _ValueSetConcept;
   factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
       _$ValueSetConceptFromJson(json);
@@ -2131,7 +2151,7 @@ abstract class ValueSetDesignation with _$ValueSetDesignation {
 abstract class ValueSetFilter with _$ValueSetFilter {
   const factory ValueSetFilter({
     Code property,
-    @JsonKey(unknownEnumValue: ValueSetFilter.unknown) String op,
+    @JsonKey(unknownEnumValue: FilterOp.unknown) FilterOp op,
     Code value,
   }) = _ValueSetFilter;
   factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
@@ -2145,8 +2165,8 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
     DateTime timestamp,
     Integer total,
     Integer offset,
-    List<ValueSet_Parameter> parameter,
-    List<ValueSet_Contains> contains,
+    List<ValueSetParameter> parameter,
+    List<ValueSetContains> contains,
   }) = _ValueSetExpansion;
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionFromJson(json);
@@ -2176,8 +2196,8 @@ abstract class ValueSetContains with _$ValueSetContains {
     String version,
     Code code,
     String display,
-    List<ValueSet_Designation> designation,
-    List<ValueSet_Contains> contains,
+    List<ValueSetDesignation> designation,
+    List<ValueSetContains> contains,
   }) = _ValueSetContains;
   factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
       _$ValueSetContainsFromJson(json);

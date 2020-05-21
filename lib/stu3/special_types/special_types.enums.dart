@@ -28,7 +28,7 @@ enum ElementDefinitionRepresentation {
   unknown,
 }
 
-enum ElementDefinitionSlicing {
+enum SlicingRules {
   @JsonValue('closed')
   closed,
   @JsonValue('open')
@@ -39,7 +39,7 @@ enum ElementDefinitionSlicing {
   unknown,
 }
 
-enum ElementDefinitionDiscriminator {
+enum DiscriminatorType {
   @JsonValue('value')
   value,
   @JsonValue('exists')
@@ -54,7 +54,7 @@ enum ElementDefinitionDiscriminator {
   unknown,
 }
 
-enum ElementDefinitionType {
+enum TypeAggregation {
   @JsonValue('contained')
   contained,
   @JsonValue('referenced')
@@ -65,7 +65,7 @@ enum ElementDefinitionType {
   unknown,
 }
 
-enum ElementDefinitionType {
+enum TypeVersioning {
   @JsonValue('either')
   either,
   @JsonValue('independent')
@@ -76,24 +76,11 @@ enum ElementDefinitionType {
   unknown,
 }
 
-enum ElementDefinitionConstraint {
+enum ConstraintSeverity {
   @JsonValue('error')
   error,
   @JsonValue('warning')
   warning,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ElementDefinitionBinding {
-  @JsonValue('required')
-  required,
-  @JsonValue('extensible')
-  extensible,
-  @JsonValue('preferred')
-  preferred,
-  @JsonValue('example')
-  example,
   @JsonValue('unknown')
   unknown,
 }

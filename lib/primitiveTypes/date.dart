@@ -16,5 +16,4 @@ class Date extends PrimitiveObject<String> {
   const Date._(this.value);
 
   factory Date.fromJson(String json) => Date(json);
-  String toJson() => result();
 }
