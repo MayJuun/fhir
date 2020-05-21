@@ -52,6 +52,15 @@ void main() async {
                 'const factory $newName ({';
             length = i;
           }
+          if (obj['resource']['id'].split('.').length == i - 1 &&
+              obj['resource']['element'][0]['type'][0]['code'] == 'Element') {
+            newName = obj['resource']['id'][0].toUpperCase() +
+                obj['resource']['id'][0]
+                    .substring(1, obj['resource']['id'][0].length);
+            text += '\n@freezed\nabstract class $newName with _\$$newName {\n'
+                'const factory $newName ({';
+            length = i;
+          }
           var req = false;
           if (obj['resource']['id'].split('.').length == i) {
             if (obj['resource']['element'][0]['min'] > 0) {
@@ -213,6 +222,7 @@ String getFile(String temp) {
 }
 
 var fileNames = [
+  '/home/grey/dev/fhir/lib/dstu2/general_types/general_types.dart',
   '/home/grey/dev/fhir/lib/dstu2/metadata_types/metadata_types.dart',
   '/home/grey/dev/fhir/lib/dstu2/special_types/special_types.dart',
   '/home/grey/dev/fhir/lib/dstu2/resource/resource.dart',
