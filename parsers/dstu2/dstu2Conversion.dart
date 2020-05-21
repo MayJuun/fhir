@@ -76,6 +76,11 @@ void main() async {
                     nameList[nameList.length - 1][0].toUpperCase() +
                     nameList[nameList.length - 1]
                         .substring(1, nameList[nameList.length - 1].length);
+                if (fileName != null) {
+                  await writeEnum(fileName, enumName,
+                      obj['resource']['element'][0]['short']);
+                }
+
                 if (req) {
                   text +=
                       '@JsonKey(required: true, unknownEnumValue: $enumName.unknown) @required $enumName ';
@@ -126,6 +131,22 @@ part '${name.split('/').last.split('.').first}.g.dart';\n\n""" +
         temp;
     await File(name).writeAsString(temp);
   }
+}
+
+Future<void> writeEnum(String file, String enumName, String enumValues) async {
+  file = file.replaceFirst('.dart', '.enums.dart');
+  var temp = await File(file).readAsString();
+  temp += 'enum $enumName {';
+  var values = enumValues.replaceAll(' ', '').split('|');
+  for (var val in values) {
+    temp += "@JsonValue('$val')\n"
+        '${val.toLowerCase().replaceAll('-', '_')},\n';
+  }
+  if (!values.contains('unknown')) {
+    temp += "@JsonValue('unknown') unknown,";
+  }
+  temp += '}\n';
+  await File(file).writeAsString(temp);
 }
 
 Future<void> printToFile(String text, String fileName) async {
