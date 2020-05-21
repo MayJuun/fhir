@@ -179,7 +179,7 @@ String getFile(String temp) {
     return '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/content/content.dart';
   }
   if (operations.contains(temp)) {
-    return '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/operations/operations.dart';
+    return '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/operations_control/operations_control.dart';
   }
   if (misc.contains(temp)) {
     return '/home/grey/dev/fhir/lib/dstu2/resource_types/conformance_types/misc/misc.dart';
