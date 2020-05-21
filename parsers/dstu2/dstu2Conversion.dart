@@ -55,8 +55,8 @@ void main() async {
           if (obj['resource']['id'].split('.').length == i - 1 &&
               obj['resource']['element'][0]['type'][0]['code'] == 'Element') {
             newName = obj['resource']['id'][0].toUpperCase() +
-                obj['resource']['id'][0]
-                    .substring(1, obj['resource']['id'][0].length);
+                obj['resource']['id']
+                    .substring(1, obj['resource']['id'].length);
             text += '\n@freezed\nabstract class $newName with _\$$newName {\n'
                 'const factory $newName ({';
             length = i;
