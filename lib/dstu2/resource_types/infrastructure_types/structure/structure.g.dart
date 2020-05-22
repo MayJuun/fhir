@@ -10,24 +10,45 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'content']);
   return _$_Media(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     type: _$enumDecodeNullable(_$MediaTypeEnumMap, json['type'],
         unknownValue: MediaType.unknown),
-    subtype: json['subtype'],
-    identifier: json['identifier'],
-    subject: json['subject'],
-    operator: json['operator'],
-    view: json['view'],
+    subtype: json['subtype'] == null
+        ? null
+        : CodeableConcept.fromJson(json['subtype'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    subject: json['subject'] == null
+        ? null
+        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    operator: json['operator'] == null
+        ? null
+        : Reference.fromJson(json['operator'] as Map<String, dynamic>),
+    view: json['view'] == null
+        ? null
+        : CodeableConcept.fromJson(json['view'] as Map<String, dynamic>),
     deviceName: json['deviceName'] as String,
     height:
         json['height'] == null ? null : PositiveInt.fromJson(json['height']),
@@ -37,7 +58,9 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     duration: json['duration'] == null
         ? null
         : UnsignedInt.fromJson(json['duration']),
-    content: json['content'],
+    content: json['content'] == null
+        ? null
+        : Attachment.fromJson(json['content'] as Map<String, dynamic>),
   );
 }
 
@@ -51,25 +74,25 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', _$MediaTypeEnumMap[instance.type]);
-  writeNotNull('subtype', instance.subtype);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('subject', instance.subject);
-  writeNotNull('operator', instance.operator);
-  writeNotNull('view', instance.view);
+  writeNotNull('subtype', instance.subtype?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('operator', instance.operator?.toJson());
+  writeNotNull('view', instance.view?.toJson());
   writeNotNull('deviceName', instance.deviceName);
   writeNotNull('height', instance.height?.toJson());
   writeNotNull('width', instance.width?.toJson());
   writeNotNull('frames', instance.frames?.toJson());
   writeNotNull('duration', instance.duration?.toJson());
-  writeNotNull('content', instance.content);
+  writeNotNull('content', instance.content?.toJson());
   return val;
 }
 
@@ -116,21 +139,40 @@ _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_Basic(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
-    code: json['code'],
-    subject: json['subject'],
-    author: json['author'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    code: json['code'] == null
+        ? null
+        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    subject: json['subject'] == null
+        ? null
+        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    author: json['author'] == null
+        ? null
+        : Reference.fromJson(json['author'] as Map<String, dynamic>),
     created: json['created'] == null
         ? null
         : Date.fromJson(json['created'] as String),
@@ -147,17 +189,17 @@ Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('code', instance.code);
-  writeNotNull('subject', instance.subject);
-  writeNotNull('author', instance.author);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('author', instance.author?.toJson());
   writeNotNull('created', instance.created?.toJson());
   return val;
 }
@@ -166,8 +208,13 @@ _$_BundleLink _$_$_BundleLinkFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['relation', 'url']);
   return _$_BundleLink(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     relation: json['relation'] as String,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
   );
@@ -183,8 +230,8 @@ Map<String, dynamic> _$_$_BundleLinkToJson(_$_BundleLink instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('relation', instance.relation);
   writeNotNull('url', instance.url?.toJson());
   return val;
@@ -193,15 +240,28 @@ Map<String, dynamic> _$_$_BundleLinkToJson(_$_BundleLink instance) {
 _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
   return _$_BundleEntry(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     fullUrl: json['fullUrl'] == null
         ? null
         : FhirUri.fromJson(json['fullUrl'] as String),
-    resource: json['resource'],
-    search: json['search'],
-    request: json['request'],
-    response: json['response'],
+    resource: json['resource'] == null
+        ? null
+        : Resource.fromJson(json['resource'] as Map<String, dynamic>),
+    search: json['search'] == null
+        ? null
+        : BackboneElement.fromJson(json['search'] as Map<String, dynamic>),
+    request: json['request'] == null
+        ? null
+        : BackboneElement.fromJson(json['request'] as Map<String, dynamic>),
+    response: json['response'] == null
+        ? null
+        : BackboneElement.fromJson(json['response'] as Map<String, dynamic>),
   );
 }
 
@@ -215,21 +275,26 @@ Map<String, dynamic> _$_$_BundleEntryToJson(_$_BundleEntry instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('fullUrl', instance.fullUrl?.toJson());
-  writeNotNull('resource', instance.resource);
-  writeNotNull('search', instance.search);
-  writeNotNull('request', instance.request);
-  writeNotNull('response', instance.response);
+  writeNotNull('resource', instance.resource?.toJson());
+  writeNotNull('search', instance.search?.toJson());
+  writeNotNull('request', instance.request?.toJson());
+  writeNotNull('response', instance.response?.toJson());
   return val;
 }
 
 _$_BundleSearch _$_$_BundleSearchFromJson(Map<String, dynamic> json) {
   return _$_BundleSearch(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     mode: _$enumDecodeNullable(_$SearchModeEnumMap, json['mode'],
         unknownValue: SearchMode.unknown),
     score: json['score'] == null ? null : Decimal.fromJson(json['score']),
@@ -246,8 +311,8 @@ Map<String, dynamic> _$_$_BundleSearchToJson(_$_BundleSearch instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('mode', _$SearchModeEnumMap[instance.mode]);
   writeNotNull('score', instance.score?.toJson());
   return val;
@@ -264,8 +329,13 @@ _$_BundleRequest _$_$_BundleRequestFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['method', 'url']);
   return _$_BundleRequest(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     method: _$enumDecodeNullable(_$RequestMethodEnumMap, json['method'],
         unknownValue: RequestMethod.unknown),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
@@ -288,8 +358,8 @@ Map<String, dynamic> _$_$_BundleRequestToJson(_$_BundleRequest instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('method', _$RequestMethodEnumMap[instance.method]);
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('ifNoneMatch', instance.ifNoneMatch);
@@ -311,8 +381,13 @@ _$_BundleResponse _$_$_BundleResponseFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['status']);
   return _$_BundleResponse(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     status: json['status'] as String,
     location: json['location'] == null
         ? null
@@ -334,8 +409,8 @@ Map<String, dynamic> _$_$_BundleResponseToJson(_$_BundleResponse instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('status', instance.status);
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('etag', instance.etag);

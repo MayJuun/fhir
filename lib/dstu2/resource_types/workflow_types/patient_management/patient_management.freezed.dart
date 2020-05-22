@@ -122,6 +122,21 @@ abstract class $CommunicationCopyWith<$Res> {
       CodeableConcept reason,
       Reference subject,
       Reference requestDetail});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get category;
+  $ReferenceCopyWith<$Res> get sender;
+  $ReferenceCopyWith<$Res> get recipient;
+  $BackboneElementCopyWith<$Res> get payload;
+  $CodeableConceptCopyWith<$Res> get medium;
+  $ReferenceCopyWith<$Res> get encounter;
+  $CodeableConceptCopyWith<$Res> get reason;
+  $ReferenceCopyWith<$Res> get subject;
+  $ReferenceCopyWith<$Res> get requestDetail;
 }
 
 class _$CommunicationCopyWithImpl<$Res>
@@ -194,6 +209,146 @@ class _$CommunicationCopyWithImpl<$Res>
           : requestDetail as Reference,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get sender {
+    if (_value.sender == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.sender, (value) {
+      return _then(_value.copyWith(sender: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get recipient {
+    if (_value.recipient == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.recipient, (value) {
+      return _then(_value.copyWith(recipient: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get payload {
+    if (_value.payload == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.payload, (value) {
+      return _then(_value.copyWith(payload: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get medium {
+    if (_value.medium == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.medium, (value) {
+      return _then(_value.copyWith(medium: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get encounter {
+    if (_value.encounter == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.encounter, (value) {
+      return _then(_value.copyWith(encounter: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reason {
+    if (_value.reason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
+      return _then(_value.copyWith(reason: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get requestDetail {
+    if (_value.requestDetail == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.requestDetail, (value) {
+      return _then(_value.copyWith(requestDetail: value));
+    });
+  }
 }
 
 abstract class _$CommunicationCopyWith<$Res>
@@ -225,6 +380,35 @@ abstract class _$CommunicationCopyWith<$Res>
       CodeableConcept reason,
       Reference subject,
       Reference requestDetail});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get category;
+  @override
+  $ReferenceCopyWith<$Res> get sender;
+  @override
+  $ReferenceCopyWith<$Res> get recipient;
+  @override
+  $BackboneElementCopyWith<$Res> get payload;
+  @override
+  $CodeableConceptCopyWith<$Res> get medium;
+  @override
+  $ReferenceCopyWith<$Res> get encounter;
+  @override
+  $CodeableConceptCopyWith<$Res> get reason;
+  @override
+  $ReferenceCopyWith<$Res> get subject;
+  @override
+  $ReferenceCopyWith<$Res> get requestDetail;
 }
 
 class __$CommunicationCopyWithImpl<$Res>
@@ -660,6 +844,21 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       Reference referralRequest,
       Reference careManager,
       BackboneElement careTeam});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $BackboneElementCopyWith<$Res> get statusHistory;
+  $CodeableConceptCopyWith<$Res> get type;
+  $ReferenceCopyWith<$Res> get condition;
+  $ReferenceCopyWith<$Res> get patient;
+  $ReferenceCopyWith<$Res> get managingOrganization;
+  $PeriodCopyWith<$Res> get period;
+  $ReferenceCopyWith<$Res> get referralRequest;
+  $ReferenceCopyWith<$Res> get careManager;
+  $BackboneElementCopyWith<$Res> get careTeam;
 }
 
 class _$EpisodeOfCareCopyWithImpl<$Res>
@@ -732,6 +931,146 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
           careTeam == freezed ? _value.careTeam : careTeam as BackboneElement,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get statusHistory {
+    if (_value.statusHistory == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.statusHistory, (value) {
+      return _then(_value.copyWith(statusHistory: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get condition {
+    if (_value.condition == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.condition, (value) {
+      return _then(_value.copyWith(condition: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get patient {
+    if (_value.patient == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.patient, (value) {
+      return _then(_value.copyWith(patient: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get managingOrganization {
+    if (_value.managingOrganization == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.managingOrganization, (value) {
+      return _then(_value.copyWith(managingOrganization: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get referralRequest {
+    if (_value.referralRequest == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.referralRequest, (value) {
+      return _then(_value.copyWith(referralRequest: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get careManager {
+    if (_value.careManager == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.careManager, (value) {
+      return _then(_value.copyWith(careManager: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get careTeam {
+    if (_value.careTeam == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.careTeam, (value) {
+      return _then(_value.copyWith(careTeam: value));
+    });
+  }
 }
 
 abstract class _$EpisodeOfCareCopyWith<$Res>
@@ -762,6 +1101,35 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
       Reference referralRequest,
       Reference careManager,
       BackboneElement careTeam});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $BackboneElementCopyWith<$Res> get statusHistory;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $ReferenceCopyWith<$Res> get condition;
+  @override
+  $ReferenceCopyWith<$Res> get patient;
+  @override
+  $ReferenceCopyWith<$Res> get managingOrganization;
+  @override
+  $PeriodCopyWith<$Res> get period;
+  @override
+  $ReferenceCopyWith<$Res> get referralRequest;
+  @override
+  $ReferenceCopyWith<$Res> get careManager;
+  @override
+  $BackboneElementCopyWith<$Res> get careTeam;
 }
 
 class __$EpisodeOfCareCopyWithImpl<$Res>
@@ -1220,6 +1588,28 @@ abstract class $EncounterCopyWith<$Res> {
       BackboneElement location,
       Reference serviceProvider,
       Reference partOf});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $BackboneElementCopyWith<$Res> get statusHistory;
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get priority;
+  $ReferenceCopyWith<$Res> get patient;
+  $ReferenceCopyWith<$Res> get episodeOfCare;
+  $ReferenceCopyWith<$Res> get incomingReferral;
+  $BackboneElementCopyWith<$Res> get participant;
+  $ReferenceCopyWith<$Res> get appointment;
+  $PeriodCopyWith<$Res> get period;
+  $QuantityCopyWith<$Res> get length;
+  $CodeableConceptCopyWith<$Res> get reason;
+  $ReferenceCopyWith<$Res> get indication;
+  $BackboneElementCopyWith<$Res> get hospitalization;
+  $BackboneElementCopyWith<$Res> get location;
+  $ReferenceCopyWith<$Res> get serviceProvider;
+  $ReferenceCopyWith<$Res> get partOf;
 }
 
 class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
@@ -1314,6 +1704,216 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
       partOf: partOf == freezed ? _value.partOf : partOf as Reference,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get statusHistory {
+    if (_value.statusHistory == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.statusHistory, (value) {
+      return _then(_value.copyWith(statusHistory: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get priority {
+    if (_value.priority == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.priority, (value) {
+      return _then(_value.copyWith(priority: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get patient {
+    if (_value.patient == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.patient, (value) {
+      return _then(_value.copyWith(patient: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get episodeOfCare {
+    if (_value.episodeOfCare == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.episodeOfCare, (value) {
+      return _then(_value.copyWith(episodeOfCare: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get incomingReferral {
+    if (_value.incomingReferral == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.incomingReferral, (value) {
+      return _then(_value.copyWith(incomingReferral: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get participant {
+    if (_value.participant == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.participant, (value) {
+      return _then(_value.copyWith(participant: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get appointment {
+    if (_value.appointment == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.appointment, (value) {
+      return _then(_value.copyWith(appointment: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get length {
+    if (_value.length == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.length, (value) {
+      return _then(_value.copyWith(length: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reason {
+    if (_value.reason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
+      return _then(_value.copyWith(reason: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get indication {
+    if (_value.indication == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.indication, (value) {
+      return _then(_value.copyWith(indication: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get hospitalization {
+    if (_value.hospitalization == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.hospitalization, (value) {
+      return _then(_value.copyWith(hospitalization: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get location {
+    if (_value.location == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.location, (value) {
+      return _then(_value.copyWith(location: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get serviceProvider {
+    if (_value.serviceProvider == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.serviceProvider, (value) {
+      return _then(_value.copyWith(serviceProvider: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get partOf {
+    if (_value.partOf == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.partOf, (value) {
+      return _then(_value.copyWith(partOf: value));
+    });
+  }
 }
 
 abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
@@ -1351,6 +1951,49 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       BackboneElement location,
       Reference serviceProvider,
       Reference partOf});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $BackboneElementCopyWith<$Res> get statusHistory;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $CodeableConceptCopyWith<$Res> get priority;
+  @override
+  $ReferenceCopyWith<$Res> get patient;
+  @override
+  $ReferenceCopyWith<$Res> get episodeOfCare;
+  @override
+  $ReferenceCopyWith<$Res> get incomingReferral;
+  @override
+  $BackboneElementCopyWith<$Res> get participant;
+  @override
+  $ReferenceCopyWith<$Res> get appointment;
+  @override
+  $PeriodCopyWith<$Res> get period;
+  @override
+  $QuantityCopyWith<$Res> get length;
+  @override
+  $CodeableConceptCopyWith<$Res> get reason;
+  @override
+  $ReferenceCopyWith<$Res> get indication;
+  @override
+  $BackboneElementCopyWith<$Res> get hospitalization;
+  @override
+  $BackboneElementCopyWith<$Res> get location;
+  @override
+  $ReferenceCopyWith<$Res> get serviceProvider;
+  @override
+  $ReferenceCopyWith<$Res> get partOf;
 }
 
 class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
@@ -1863,6 +2506,18 @@ abstract class $FlagCopyWith<$Res> {
       Reference author,
       @JsonKey(required: true)
           CodeableConcept code});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get category;
+  $PeriodCopyWith<$Res> get period;
+  $ReferenceCopyWith<$Res> get subject;
+  $ReferenceCopyWith<$Res> get encounter;
+  $ReferenceCopyWith<$Res> get author;
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
@@ -1920,6 +2575,116 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
       code: code == freezed ? _value.code : code as CodeableConcept,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get encounter {
+    if (_value.encounter == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.encounter, (value) {
+      return _then(_value.copyWith(encounter: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get author {
+    if (_value.author == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.author, (value) {
+      return _then(_value.copyWith(author: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
 }
 
 abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
@@ -1946,6 +2711,29 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       Reference author,
       @JsonKey(required: true)
           CodeableConcept code});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get category;
+  @override
+  $PeriodCopyWith<$Res> get period;
+  @override
+  $ReferenceCopyWith<$Res> get subject;
+  @override
+  $ReferenceCopyWith<$Res> get encounter;
+  @override
+  $ReferenceCopyWith<$Res> get author;
+  @override
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
@@ -2266,6 +3054,9 @@ abstract class $CommunicationPayloadCopyWith<$Res> {
       FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String contentX});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class _$CommunicationPayloadCopyWithImpl<$Res>
@@ -2294,6 +3085,26 @@ class _$CommunicationPayloadCopyWithImpl<$Res>
       contentX: contentX == freezed ? _value.contentX : contentX as String,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
 }
 
 abstract class _$CommunicationPayloadCopyWith<$Res>
@@ -2307,6 +3118,11 @@ abstract class _$CommunicationPayloadCopyWith<$Res>
       FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String contentX});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class __$CommunicationPayloadCopyWithImpl<$Res>
@@ -2482,6 +3298,10 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
           EpisodeOfCareHistoryStatus status,
       @JsonKey(required: true)
           Period period});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
@@ -2514,6 +3334,36 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
 }
 
 abstract class _$EpisodeOfCareStatusHistoryCopyWith<$Res>
@@ -2531,6 +3381,13 @@ abstract class _$EpisodeOfCareStatusHistoryCopyWith<$Res>
           EpisodeOfCareHistoryStatus status,
       @JsonKey(required: true)
           Period period});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $PeriodCopyWith<$Res> get period;
 }
 
 class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
@@ -2727,6 +3584,12 @@ abstract class $EpisodeOfCareCareTeamCopyWith<$Res> {
       CodeableConcept role,
       Period period,
       Reference member});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get role;
+  $PeriodCopyWith<$Res> get period;
+  $ReferenceCopyWith<$Res> get member;
 }
 
 class _$EpisodeOfCareCareTeamCopyWithImpl<$Res>
@@ -2759,6 +3622,56 @@ class _$EpisodeOfCareCareTeamCopyWithImpl<$Res>
       member: member == freezed ? _value.member : member as Reference,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get role {
+    if (_value.role == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get member {
+    if (_value.member == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.member, (value) {
+      return _then(_value.copyWith(member: value));
+    });
+  }
 }
 
 abstract class _$EpisodeOfCareCareTeamCopyWith<$Res>
@@ -2774,6 +3687,17 @@ abstract class _$EpisodeOfCareCareTeamCopyWith<$Res>
       CodeableConcept role,
       Period period,
       Reference member});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get role;
+  @override
+  $PeriodCopyWith<$Res> get period;
+  @override
+  $ReferenceCopyWith<$Res> get member;
 }
 
 class __$EpisodeOfCareCareTeamCopyWithImpl<$Res>
@@ -2966,6 +3890,10 @@ abstract class $EncounterStatusHistoryCopyWith<$Res> {
           EncounterHistoryStatus status,
       @JsonKey(required: true)
           Period period});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$EncounterStatusHistoryCopyWithImpl<$Res>
@@ -2997,6 +3925,36 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
 }
 
 abstract class _$EncounterStatusHistoryCopyWith<$Res>
@@ -3013,6 +3971,13 @@ abstract class _$EncounterStatusHistoryCopyWith<$Res>
           EncounterHistoryStatus status,
       @JsonKey(required: true)
           Period period});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $PeriodCopyWith<$Res> get period;
 }
 
 class __$EncounterStatusHistoryCopyWithImpl<$Res>
@@ -3204,6 +4169,12 @@ abstract class $EncounterParticipantCopyWith<$Res> {
       CodeableConcept type,
       Period period,
       Reference individual});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get type;
+  $PeriodCopyWith<$Res> get period;
+  $ReferenceCopyWith<$Res> get individual;
 }
 
 class _$EncounterParticipantCopyWithImpl<$Res>
@@ -3237,6 +4208,56 @@ class _$EncounterParticipantCopyWithImpl<$Res>
           individual == freezed ? _value.individual : individual as Reference,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get individual {
+    if (_value.individual == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.individual, (value) {
+      return _then(_value.copyWith(individual: value));
+    });
+  }
 }
 
 abstract class _$EncounterParticipantCopyWith<$Res>
@@ -3252,6 +4273,17 @@ abstract class _$EncounterParticipantCopyWith<$Res>
       CodeableConcept type,
       Period period,
       Reference individual});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $PeriodCopyWith<$Res> get period;
+  @override
+  $ReferenceCopyWith<$Res> get individual;
 }
 
 class __$EncounterParticipantCopyWithImpl<$Res>
@@ -3474,6 +4506,20 @@ abstract class $EncounterHospitalizationCopyWith<$Res> {
       Reference destination,
       CodeableConcept dischargeDisposition,
       Reference dischargeDiagnosis});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get preAdmissionIdentifier;
+  $ReferenceCopyWith<$Res> get origin;
+  $CodeableConceptCopyWith<$Res> get admitSource;
+  $ReferenceCopyWith<$Res> get admittingDiagnosis;
+  $CodeableConceptCopyWith<$Res> get reAdmission;
+  $CodeableConceptCopyWith<$Res> get dietPreference;
+  $CodeableConceptCopyWith<$Res> get specialCourtesy;
+  $CodeableConceptCopyWith<$Res> get specialArrangement;
+  $ReferenceCopyWith<$Res> get destination;
+  $CodeableConceptCopyWith<$Res> get dischargeDisposition;
+  $ReferenceCopyWith<$Res> get dischargeDiagnosis;
 }
 
 class _$EncounterHospitalizationCopyWithImpl<$Res>
@@ -3542,6 +4588,136 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
           : dischargeDiagnosis as Reference,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get preAdmissionIdentifier {
+    if (_value.preAdmissionIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.preAdmissionIdentifier, (value) {
+      return _then(_value.copyWith(preAdmissionIdentifier: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get origin {
+    if (_value.origin == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.origin, (value) {
+      return _then(_value.copyWith(origin: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get admitSource {
+    if (_value.admitSource == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.admitSource, (value) {
+      return _then(_value.copyWith(admitSource: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get admittingDiagnosis {
+    if (_value.admittingDiagnosis == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.admittingDiagnosis, (value) {
+      return _then(_value.copyWith(admittingDiagnosis: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reAdmission {
+    if (_value.reAdmission == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reAdmission, (value) {
+      return _then(_value.copyWith(reAdmission: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get dietPreference {
+    if (_value.dietPreference == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.dietPreference, (value) {
+      return _then(_value.copyWith(dietPreference: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get specialCourtesy {
+    if (_value.specialCourtesy == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.specialCourtesy, (value) {
+      return _then(_value.copyWith(specialCourtesy: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get specialArrangement {
+    if (_value.specialArrangement == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.specialArrangement, (value) {
+      return _then(_value.copyWith(specialArrangement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get destination {
+    if (_value.destination == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.destination, (value) {
+      return _then(_value.copyWith(destination: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get dischargeDisposition {
+    if (_value.dischargeDisposition == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.dischargeDisposition, (value) {
+      return _then(_value.copyWith(dischargeDisposition: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get dischargeDiagnosis {
+    if (_value.dischargeDiagnosis == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.dischargeDiagnosis, (value) {
+      return _then(_value.copyWith(dischargeDiagnosis: value));
+    });
+  }
 }
 
 abstract class _$EncounterHospitalizationCopyWith<$Res>
@@ -3565,6 +4741,33 @@ abstract class _$EncounterHospitalizationCopyWith<$Res>
       Reference destination,
       CodeableConcept dischargeDisposition,
       Reference dischargeDiagnosis});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get preAdmissionIdentifier;
+  @override
+  $ReferenceCopyWith<$Res> get origin;
+  @override
+  $CodeableConceptCopyWith<$Res> get admitSource;
+  @override
+  $ReferenceCopyWith<$Res> get admittingDiagnosis;
+  @override
+  $CodeableConceptCopyWith<$Res> get reAdmission;
+  @override
+  $CodeableConceptCopyWith<$Res> get dietPreference;
+  @override
+  $CodeableConceptCopyWith<$Res> get specialCourtesy;
+  @override
+  $CodeableConceptCopyWith<$Res> get specialArrangement;
+  @override
+  $ReferenceCopyWith<$Res> get destination;
+  @override
+  $CodeableConceptCopyWith<$Res> get dischargeDisposition;
+  @override
+  $ReferenceCopyWith<$Res> get dischargeDiagnosis;
 }
 
 class __$EncounterHospitalizationCopyWithImpl<$Res>
@@ -3873,6 +5076,11 @@ abstract class $EncounterLocationCopyWith<$Res> {
       @JsonKey(required: true) Reference location,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
       Period period});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ReferenceCopyWith<$Res> get location;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$EncounterLocationCopyWithImpl<$Res>
@@ -3905,6 +5113,46 @@ class _$EncounterLocationCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get location {
+    if (_value.location == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.location, (value) {
+      return _then(_value.copyWith(location: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
 }
 
 abstract class _$EncounterLocationCopyWith<$Res>
@@ -3920,6 +5168,15 @@ abstract class _$EncounterLocationCopyWith<$Res>
       @JsonKey(required: true) Reference location,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
       Period period});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ReferenceCopyWith<$Res> get location;
+  @override
+  $PeriodCopyWith<$Res> get period;
 }
 
 class __$EncounterLocationCopyWithImpl<$Res>

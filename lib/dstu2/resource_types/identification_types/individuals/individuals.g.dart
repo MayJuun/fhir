@@ -9,31 +9,61 @@ part of 'individuals.dart';
 _$_Practitioner _$_$_PractitionerFromJson(Map<String, dynamic> json) {
   return _$_Practitioner(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     active: json['active'] == null ? null : Boolean.fromJson(json['active']),
-    name: json['name'],
-    telecom: json['telecom'],
-    address: json['address'],
+    name: json['name'] == null
+        ? null
+        : HumanName.fromJson(json['name'] as Map<String, dynamic>),
+    telecom: json['telecom'] == null
+        ? null
+        : ContactPoint.fromJson(json['telecom'] as Map<String, dynamic>),
+    address: json['address'] == null
+        ? null
+        : Address.fromJson(json['address'] as Map<String, dynamic>),
     gender: _$enumDecodeNullable(_$PractitionerGenderEnumMap, json['gender'],
         unknownValue: PractitionerGender.unknown),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
-    photo: json['photo'],
-    practitionerRole: json['practitionerRole'],
-    qualification: json['qualification'],
-    communication: json['communication'],
+    photo: json['photo'] == null
+        ? null
+        : Attachment.fromJson(json['photo'] as Map<String, dynamic>),
+    practitionerRole: json['practitionerRole'] == null
+        ? null
+        : BackboneElement.fromJson(
+            json['practitionerRole'] as Map<String, dynamic>),
+    qualification: json['qualification'] == null
+        ? null
+        : BackboneElement.fromJson(
+            json['qualification'] as Map<String, dynamic>),
+    communication: json['communication'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['communication'] as Map<String, dynamic>),
   );
 }
 
@@ -47,24 +77,24 @@ Map<String, dynamic> _$_$_PractitionerToJson(_$_Practitioner instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('active', instance.active?.toJson());
-  writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom);
-  writeNotNull('address', instance.address);
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('telecom', instance.telecom?.toJson());
+  writeNotNull('address', instance.address?.toJson());
   writeNotNull('gender', _$PractitionerGenderEnumMap[instance.gender]);
   writeNotNull('birthDate', instance.birthDate?.toJson());
-  writeNotNull('photo', instance.photo);
-  writeNotNull('practitionerRole', instance.practitionerRole);
-  writeNotNull('qualification', instance.qualification);
-  writeNotNull('communication', instance.communication);
+  writeNotNull('photo', instance.photo?.toJson());
+  writeNotNull('practitionerRole', instance.practitionerRole?.toJson());
+  writeNotNull('qualification', instance.qualification?.toJson());
+  writeNotNull('communication', instance.communication?.toJson());
   return val;
 }
 
@@ -111,30 +141,58 @@ _$_RelatedPerson _$_$_RelatedPersonFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['patient']);
   return _$_RelatedPerson(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
-    patient: json['patient'],
-    relationship: json['relationship'],
-    name: json['name'],
-    telecom: json['telecom'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    patient: json['patient'] == null
+        ? null
+        : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+    relationship: json['relationship'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['relationship'] as Map<String, dynamic>),
+    name: json['name'] == null
+        ? null
+        : HumanName.fromJson(json['name'] as Map<String, dynamic>),
+    telecom: json['telecom'] == null
+        ? null
+        : ContactPoint.fromJson(json['telecom'] as Map<String, dynamic>),
     gender: _$enumDecodeNullable(_$RelatedPersonGenderEnumMap, json['gender'],
         unknownValue: RelatedPersonGender.unknown),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
-    address: json['address'],
-    photo: json['photo'],
-    period: json['period'],
+    address: json['address'] == null
+        ? null
+        : Address.fromJson(json['address'] as Map<String, dynamic>),
+    photo: json['photo'] == null
+        ? null
+        : Attachment.fromJson(json['photo'] as Map<String, dynamic>),
+    period: json['period'] == null
+        ? null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
   );
 }
 
@@ -148,23 +206,23 @@ Map<String, dynamic> _$_$_RelatedPersonToJson(_$_RelatedPerson instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('patient', instance.patient);
-  writeNotNull('relationship', instance.relationship);
-  writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('relationship', instance.relationship?.toJson());
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('telecom', instance.telecom?.toJson());
   writeNotNull('gender', _$RelatedPersonGenderEnumMap[instance.gender]);
   writeNotNull('birthDate', instance.birthDate?.toJson());
-  writeNotNull('address', instance.address);
-  writeNotNull('photo', instance.photo);
-  writeNotNull('period', instance.period);
+  writeNotNull('address', instance.address?.toJson());
+  writeNotNull('photo', instance.photo?.toJson());
+  writeNotNull('period', instance.period?.toJson());
   return val;
 }
 
@@ -178,21 +236,38 @@ const _$RelatedPersonGenderEnumMap = {
 _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
   return _$_Patient(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     active: json['active'] == null ? null : Boolean.fromJson(json['active']),
-    name: json['name'],
-    telecom: json['telecom'],
+    name: json['name'] == null
+        ? null
+        : HumanName.fromJson(json['name'] as Map<String, dynamic>),
+    telecom: json['telecom'] == null
+        ? null
+        : ContactPoint.fromJson(json['telecom'] as Map<String, dynamic>),
     gender: _$enumDecodeNullable(_$PatientGenderEnumMap, json['gender'],
         unknownValue: PatientGender.unknown),
     birthDate: json['birthDate'] == null
@@ -200,18 +275,39 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['birthDate'] as String),
     deceasedX:
         json['deceasedX'] == null ? null : Boolean.fromJson(json['deceasedX']),
-    address: json['address'],
-    maritalStatus: json['maritalStatus'],
+    address: json['address'] == null
+        ? null
+        : Address.fromJson(json['address'] as Map<String, dynamic>),
+    maritalStatus: json['maritalStatus'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['maritalStatus'] as Map<String, dynamic>),
     multipleBirthX: json['multipleBirthX'] == null
         ? null
         : Boolean.fromJson(json['multipleBirthX']),
-    photo: json['photo'],
-    contact: json['contact'],
-    animal: json['animal'],
-    communication: json['communication'],
-    careProvider: json['careProvider'],
-    managingOrganization: json['managingOrganization'],
-    link: json['link'],
+    photo: json['photo'] == null
+        ? null
+        : Attachment.fromJson(json['photo'] as Map<String, dynamic>),
+    contact: json['contact'] == null
+        ? null
+        : BackboneElement.fromJson(json['contact'] as Map<String, dynamic>),
+    animal: json['animal'] == null
+        ? null
+        : BackboneElement.fromJson(json['animal'] as Map<String, dynamic>),
+    communication: json['communication'] == null
+        ? null
+        : BackboneElement.fromJson(
+            json['communication'] as Map<String, dynamic>),
+    careProvider: json['careProvider'] == null
+        ? null
+        : Reference.fromJson(json['careProvider'] as Map<String, dynamic>),
+    managingOrganization: json['managingOrganization'] == null
+        ? null
+        : Reference.fromJson(
+            json['managingOrganization'] as Map<String, dynamic>),
+    link: json['link'] == null
+        ? null
+        : BackboneElement.fromJson(json['link'] as Map<String, dynamic>),
   );
 }
 
@@ -225,30 +321,30 @@ Map<String, dynamic> _$_$_PatientToJson(_$_Patient instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('active', instance.active?.toJson());
-  writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom);
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('telecom', instance.telecom?.toJson());
   writeNotNull('gender', _$PatientGenderEnumMap[instance.gender]);
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('deceasedX', instance.deceasedX?.toJson());
-  writeNotNull('address', instance.address);
-  writeNotNull('maritalStatus', instance.maritalStatus);
+  writeNotNull('address', instance.address?.toJson());
+  writeNotNull('maritalStatus', instance.maritalStatus?.toJson());
   writeNotNull('multipleBirthX', instance.multipleBirthX?.toJson());
-  writeNotNull('photo', instance.photo);
-  writeNotNull('contact', instance.contact);
-  writeNotNull('animal', instance.animal);
-  writeNotNull('communication', instance.communication);
-  writeNotNull('careProvider', instance.careProvider);
-  writeNotNull('managingOrganization', instance.managingOrganization);
-  writeNotNull('link', instance.link);
+  writeNotNull('photo', instance.photo?.toJson());
+  writeNotNull('contact', instance.contact?.toJson());
+  writeNotNull('animal', instance.animal?.toJson());
+  writeNotNull('communication', instance.communication?.toJson());
+  writeNotNull('careProvider', instance.careProvider?.toJson());
+  writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
+  writeNotNull('link', instance.link?.toJson());
   return val;
 }
 
@@ -263,14 +359,32 @@ _$_PractitionerPractitionerRole _$_$_PractitionerPractitionerRoleFromJson(
     Map<String, dynamic> json) {
   return _$_PractitionerPractitionerRole(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    managingOrganization: json['managingOrganization'],
-    role: json['role'],
-    specialty: json['specialty'],
-    period: json['period'],
-    location: json['location'],
-    healthcareService: json['healthcareService'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    managingOrganization: json['managingOrganization'] == null
+        ? null
+        : Reference.fromJson(
+            json['managingOrganization'] as Map<String, dynamic>),
+    role: json['role'] == null
+        ? null
+        : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
+    specialty: json['specialty'] == null
+        ? null
+        : CodeableConcept.fromJson(json['specialty'] as Map<String, dynamic>),
+    period: json['period'] == null
+        ? null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    location: json['location'] == null
+        ? null
+        : Reference.fromJson(json['location'] as Map<String, dynamic>),
+    healthcareService: json['healthcareService'] == null
+        ? null
+        : Reference.fromJson(json['healthcareService'] as Map<String, dynamic>),
   );
 }
 
@@ -285,14 +399,14 @@ Map<String, dynamic> _$_$_PractitionerPractitionerRoleToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('managingOrganization', instance.managingOrganization);
-  writeNotNull('role', instance.role);
-  writeNotNull('specialty', instance.specialty);
-  writeNotNull('period', instance.period);
-  writeNotNull('location', instance.location);
-  writeNotNull('healthcareService', instance.healthcareService);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
+  writeNotNull('role', instance.role?.toJson());
+  writeNotNull('specialty', instance.specialty?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('healthcareService', instance.healthcareService?.toJson());
   return val;
 }
 
@@ -301,12 +415,25 @@ _$_PractitionerQualification _$_$_PractitionerQualificationFromJson(
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_PractitionerQualification(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
-    code: json['code'],
-    period: json['period'],
-    issuer: json['issuer'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    code: json['code'] == null
+        ? null
+        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    period: json['period'] == null
+        ? null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    issuer: json['issuer'] == null
+        ? null
+        : Reference.fromJson(json['issuer'] as Map<String, dynamic>),
   );
 }
 
@@ -321,28 +448,46 @@ Map<String, dynamic> _$_$_PractitionerQualificationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('code', instance.code);
-  writeNotNull('period', instance.period);
-  writeNotNull('issuer', instance.issuer);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('issuer', instance.issuer?.toJson());
   return val;
 }
 
 _$_PatientContact _$_$_PatientContactFromJson(Map<String, dynamic> json) {
   return _$_PatientContact(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    relationship: json['relationship'],
-    name: json['name'],
-    telecom: json['telecom'],
-    address: json['address'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    relationship: json['relationship'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['relationship'] as Map<String, dynamic>),
+    name: json['name'] == null
+        ? null
+        : HumanName.fromJson(json['name'] as Map<String, dynamic>),
+    telecom: json['telecom'] == null
+        ? null
+        : ContactPoint.fromJson(json['telecom'] as Map<String, dynamic>),
+    address: json['address'] == null
+        ? null
+        : Address.fromJson(json['address'] as Map<String, dynamic>),
     gender: _$enumDecodeNullable(_$ContactGenderEnumMap, json['gender'],
         unknownValue: ContactGender.unknown),
-    organization: json['organization'],
-    period: json['period'],
+    organization: json['organization'] == null
+        ? null
+        : Reference.fromJson(json['organization'] as Map<String, dynamic>),
+    period: json['period'] == null
+        ? null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
   );
 }
 
@@ -356,15 +501,15 @@ Map<String, dynamic> _$_$_PatientContactToJson(_$_PatientContact instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('relationship', instance.relationship);
-  writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom);
-  writeNotNull('address', instance.address);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('relationship', instance.relationship?.toJson());
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('telecom', instance.telecom?.toJson());
+  writeNotNull('address', instance.address?.toJson());
   writeNotNull('gender', _$ContactGenderEnumMap[instance.gender]);
-  writeNotNull('organization', instance.organization);
-  writeNotNull('period', instance.period);
+  writeNotNull('organization', instance.organization?.toJson());
+  writeNotNull('period', instance.period?.toJson());
   return val;
 }
 
@@ -379,11 +524,23 @@ _$_PatientAnimal _$_$_PatientAnimalFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['species']);
   return _$_PatientAnimal(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    species: json['species'],
-    breed: json['breed'],
-    genderStatus: json['genderStatus'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    species: json['species'] == null
+        ? null
+        : CodeableConcept.fromJson(json['species'] as Map<String, dynamic>),
+    breed: json['breed'] == null
+        ? null
+        : CodeableConcept.fromJson(json['breed'] as Map<String, dynamic>),
+    genderStatus: json['genderStatus'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['genderStatus'] as Map<String, dynamic>),
   );
 }
 
@@ -397,11 +554,11 @@ Map<String, dynamic> _$_$_PatientAnimalToJson(_$_PatientAnimal instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('species', instance.species);
-  writeNotNull('breed', instance.breed);
-  writeNotNull('genderStatus', instance.genderStatus);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('species', instance.species?.toJson());
+  writeNotNull('breed', instance.breed?.toJson());
+  writeNotNull('genderStatus', instance.genderStatus?.toJson());
   return val;
 }
 
@@ -410,9 +567,16 @@ _$_PatientCommunication _$_$_PatientCommunicationFromJson(
   $checkKeys(json, requiredKeys: const ['language']);
   return _$_PatientCommunication(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    language: json['language'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    language: json['language'] == null
+        ? null
+        : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
     preferred:
         json['preferred'] == null ? null : Boolean.fromJson(json['preferred']),
   );
@@ -429,9 +593,9 @@ Map<String, dynamic> _$_$_PatientCommunicationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('language', instance.language);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('preferred', instance.preferred?.toJson());
   return val;
 }
@@ -440,9 +604,16 @@ _$_PatientLink _$_$_PatientLinkFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['other', 'type']);
   return _$_PatientLink(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    other: json['other'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    other: json['other'] == null
+        ? null
+        : Reference.fromJson(json['other'] as Map<String, dynamic>),
     type: _$enumDecodeNullable(_$LinkTypeEnumMap, json['type'],
         unknownValue: LinkType.unknown),
   );
@@ -458,9 +629,9 @@ Map<String, dynamic> _$_$_PatientLinkToJson(_$_PatientLink instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('other', instance.other);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('other', instance.other?.toJson());
   writeNotNull('type', _$LinkTypeEnumMap[instance.type]);
   return val;
 }

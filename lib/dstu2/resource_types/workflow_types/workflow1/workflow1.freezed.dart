@@ -103,6 +103,15 @@ abstract class $OrderResponseCopyWith<$Res> {
           OrderResponseOrderStatus orderStatus,
       String description,
       Reference fulfillment});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $ReferenceCopyWith<$Res> get request;
+  $ReferenceCopyWith<$Res> get who;
+  $ReferenceCopyWith<$Res> get fulfillment;
 }
 
 class _$OrderResponseCopyWithImpl<$Res>
@@ -162,6 +171,86 @@ class _$OrderResponseCopyWithImpl<$Res>
           : fulfillment as Reference,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get request {
+    if (_value.request == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.request, (value) {
+      return _then(_value.copyWith(request: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get who {
+    if (_value.who == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.who, (value) {
+      return _then(_value.copyWith(who: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get fulfillment {
+    if (_value.fulfillment == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.fulfillment, (value) {
+      return _then(_value.copyWith(fulfillment: value));
+    });
+  }
 }
 
 abstract class _$OrderResponseCopyWith<$Res>
@@ -188,6 +277,23 @@ abstract class _$OrderResponseCopyWith<$Res>
           OrderResponseOrderStatus orderStatus,
       String description,
       Reference fulfillment});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ReferenceCopyWith<$Res> get request;
+  @override
+  $ReferenceCopyWith<$Res> get who;
+  @override
+  $ReferenceCopyWith<$Res> get fulfillment;
 }
 
 class __$OrderResponseCopyWithImpl<$Res>
@@ -544,6 +650,18 @@ abstract class $OrderCopyWith<$Res> {
       CodeableConcept reasonX,
       BackboneElement when,
       @JsonKey(required: true) Reference detail});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $ReferenceCopyWith<$Res> get subject;
+  $ReferenceCopyWith<$Res> get source;
+  $ReferenceCopyWith<$Res> get target;
+  $CodeableConceptCopyWith<$Res> get reasonX;
+  $BackboneElementCopyWith<$Res> get when;
+  $ReferenceCopyWith<$Res> get detail;
 }
 
 class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
@@ -599,6 +717,116 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
       detail: detail == freezed ? _value.detail : detail as Reference,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get source {
+    if (_value.source == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.source, (value) {
+      return _then(_value.copyWith(source: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get target {
+    if (_value.target == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.target, (value) {
+      return _then(_value.copyWith(target: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reasonX {
+    if (_value.reasonX == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reasonX, (value) {
+      return _then(_value.copyWith(reasonX: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get when {
+    if (_value.when == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.when, (value) {
+      return _then(_value.copyWith(when: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get detail {
+    if (_value.detail == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.detail, (value) {
+      return _then(_value.copyWith(detail: value));
+    });
+  }
 }
 
 abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
@@ -622,6 +850,29 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
       CodeableConcept reasonX,
       BackboneElement when,
       @JsonKey(required: true) Reference detail});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ReferenceCopyWith<$Res> get subject;
+  @override
+  $ReferenceCopyWith<$Res> get source;
+  @override
+  $ReferenceCopyWith<$Res> get target;
+  @override
+  $CodeableConceptCopyWith<$Res> get reasonX;
+  @override
+  $BackboneElementCopyWith<$Res> get when;
+  @override
+  $ReferenceCopyWith<$Res> get detail;
 }
 
 class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
@@ -1002,6 +1253,19 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
       Timing timingX,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
           DeviceUseRequestPriority priority});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get bodySiteX;
+  $ReferenceCopyWith<$Res> get device;
+  $ReferenceCopyWith<$Res> get encounter;
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get indication;
+  $CodeableConceptCopyWith<$Res> get prnReason;
+  $ReferenceCopyWith<$Res> get subject;
+  $TimingCopyWith<$Res> get timingX;
 }
 
 class _$DeviceUseRequestCopyWithImpl<$Res>
@@ -1081,6 +1345,126 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
           : priority as DeviceUseRequestPriority,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySiteX {
+    if (_value.bodySiteX == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.bodySiteX, (value) {
+      return _then(_value.copyWith(bodySiteX: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get device {
+    if (_value.device == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.device, (value) {
+      return _then(_value.copyWith(device: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get encounter {
+    if (_value.encounter == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.encounter, (value) {
+      return _then(_value.copyWith(encounter: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get indication {
+    if (_value.indication == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.indication, (value) {
+      return _then(_value.copyWith(indication: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get prnReason {
+    if (_value.prnReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.prnReason, (value) {
+      return _then(_value.copyWith(prnReason: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get timingX {
+    if (_value.timingX == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.timingX, (value) {
+      return _then(_value.copyWith(timingX: value));
+    });
+  }
 }
 
 abstract class _$DeviceUseRequestCopyWith<$Res>
@@ -1115,6 +1499,31 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
       Timing timingX,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
           DeviceUseRequestPriority priority});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySiteX;
+  @override
+  $ReferenceCopyWith<$Res> get device;
+  @override
+  $ReferenceCopyWith<$Res> get encounter;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get indication;
+  @override
+  $CodeableConceptCopyWith<$Res> get prnReason;
+  @override
+  $ReferenceCopyWith<$Res> get subject;
+  @override
+  $TimingCopyWith<$Res> get timingX;
 }
 
 class __$DeviceUseRequestCopyWithImpl<$Res>
@@ -1564,6 +1973,18 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       FhirDateTime recordedOn,
       @JsonKey(required: true) Reference subject,
       Timing timingX});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get bodySiteX;
+  $PeriodCopyWith<$Res> get whenUsed;
+  $ReferenceCopyWith<$Res> get device;
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get indication;
+  $ReferenceCopyWith<$Res> get subject;
+  $TimingCopyWith<$Res> get timingX;
 }
 
 class _$DeviceUseStatementCopyWithImpl<$Res>
@@ -1628,6 +2049,116 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
       timingX: timingX == freezed ? _value.timingX : timingX as Timing,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySiteX {
+    if (_value.bodySiteX == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.bodySiteX, (value) {
+      return _then(_value.copyWith(bodySiteX: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get whenUsed {
+    if (_value.whenUsed == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.whenUsed, (value) {
+      return _then(_value.copyWith(whenUsed: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get device {
+    if (_value.device == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.device, (value) {
+      return _then(_value.copyWith(device: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get indication {
+    if (_value.indication == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.indication, (value) {
+      return _then(_value.copyWith(indication: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get timingX {
+    if (_value.timingX == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.timingX, (value) {
+      return _then(_value.copyWith(timingX: value));
+    });
+  }
 }
 
 abstract class _$DeviceUseStatementCopyWith<$Res>
@@ -1654,6 +2185,29 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       FhirDateTime recordedOn,
       @JsonKey(required: true) Reference subject,
       Timing timingX});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySiteX;
+  @override
+  $PeriodCopyWith<$Res> get whenUsed;
+  @override
+  $ReferenceCopyWith<$Res> get device;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get indication;
+  @override
+  $ReferenceCopyWith<$Res> get subject;
+  @override
+  $TimingCopyWith<$Res> get timingX;
 }
 
 class __$DeviceUseStatementCopyWithImpl<$Res>
@@ -2053,6 +2607,22 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       FhirDateTime requestedOn,
       Reference subject,
       CodeableConcept priority});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get category;
+  $ReferenceCopyWith<$Res> get sender;
+  $ReferenceCopyWith<$Res> get recipient;
+  $BackboneElementCopyWith<$Res> get payload;
+  $CodeableConceptCopyWith<$Res> get medium;
+  $ReferenceCopyWith<$Res> get requester;
+  $ReferenceCopyWith<$Res> get encounter;
+  $CodeableConceptCopyWith<$Res> get reason;
+  $ReferenceCopyWith<$Res> get subject;
+  $CodeableConceptCopyWith<$Res> get priority;
 }
 
 class _$CommunicationRequestCopyWithImpl<$Res>
@@ -2132,6 +2702,156 @@ class _$CommunicationRequestCopyWithImpl<$Res>
           priority == freezed ? _value.priority : priority as CodeableConcept,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get sender {
+    if (_value.sender == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.sender, (value) {
+      return _then(_value.copyWith(sender: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get recipient {
+    if (_value.recipient == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.recipient, (value) {
+      return _then(_value.copyWith(recipient: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get payload {
+    if (_value.payload == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.payload, (value) {
+      return _then(_value.copyWith(payload: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get medium {
+    if (_value.medium == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.medium, (value) {
+      return _then(_value.copyWith(medium: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get requester {
+    if (_value.requester == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.requester, (value) {
+      return _then(_value.copyWith(requester: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get encounter {
+    if (_value.encounter == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.encounter, (value) {
+      return _then(_value.copyWith(encounter: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reason {
+    if (_value.reason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
+      return _then(_value.copyWith(reason: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get priority {
+    if (_value.priority == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.priority, (value) {
+      return _then(_value.copyWith(priority: value));
+    });
+  }
 }
 
 abstract class _$CommunicationRequestCopyWith<$Res>
@@ -2164,6 +2884,37 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       FhirDateTime requestedOn,
       Reference subject,
       CodeableConcept priority});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get category;
+  @override
+  $ReferenceCopyWith<$Res> get sender;
+  @override
+  $ReferenceCopyWith<$Res> get recipient;
+  @override
+  $BackboneElementCopyWith<$Res> get payload;
+  @override
+  $CodeableConceptCopyWith<$Res> get medium;
+  @override
+  $ReferenceCopyWith<$Res> get requester;
+  @override
+  $ReferenceCopyWith<$Res> get encounter;
+  @override
+  $CodeableConceptCopyWith<$Res> get reason;
+  @override
+  $ReferenceCopyWith<$Res> get subject;
+  @override
+  $CodeableConceptCopyWith<$Res> get priority;
 }
 
 class __$CommunicationRequestCopyWithImpl<$Res>
@@ -2554,6 +3305,11 @@ abstract class $OrderWhenCopyWith<$Res> {
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get code;
+  $TimingCopyWith<$Res> get schedule;
 }
 
 class _$OrderWhenCopyWithImpl<$Res> implements $OrderWhenCopyWith<$Res> {
@@ -2583,6 +3339,46 @@ class _$OrderWhenCopyWithImpl<$Res> implements $OrderWhenCopyWith<$Res> {
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get schedule {
+    if (_value.schedule == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.schedule, (value) {
+      return _then(_value.copyWith(schedule: value));
+    });
+  }
 }
 
 abstract class _$OrderWhenCopyWith<$Res> implements $OrderWhenCopyWith<$Res> {
@@ -2596,6 +3392,15 @@ abstract class _$OrderWhenCopyWith<$Res> implements $OrderWhenCopyWith<$Res> {
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $TimingCopyWith<$Res> get schedule;
 }
 
 class __$OrderWhenCopyWithImpl<$Res> extends _$OrderWhenCopyWithImpl<$Res>
@@ -2766,6 +3571,9 @@ abstract class $CommunicationRequestPayloadCopyWith<$Res> {
       FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String contentX});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class _$CommunicationRequestPayloadCopyWithImpl<$Res>
@@ -2794,6 +3602,26 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
       contentX: contentX == freezed ? _value.contentX : contentX as String,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
 }
 
 abstract class _$CommunicationRequestPayloadCopyWith<$Res>
@@ -2808,6 +3636,11 @@ abstract class _$CommunicationRequestPayloadCopyWith<$Res>
       FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String contentX});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class __$CommunicationRequestPayloadCopyWithImpl<$Res>

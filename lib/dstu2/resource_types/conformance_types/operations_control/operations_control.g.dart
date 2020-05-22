@@ -16,17 +16,28 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
   ]);
   return _$_Conformance(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     version: json['version'] as String,
     name: json['name'] as String,
@@ -36,7 +47,9 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
         ? null
         : Boolean.fromJson(json['experimental']),
     publisher: json['publisher'] as String,
-    contact: json['contact'],
+    contact: json['contact'] == null
+        ? null
+        : BackboneElement.fromJson(json['contact'] as Map<String, dynamic>),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -45,8 +58,13 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
     copyright: json['copyright'] as String,
     kind: _$enumDecodeNullable(_$ConformanceKindEnumMap, json['kind'],
         unknownValue: ConformanceKind.unknown),
-    software: json['software'],
-    implementation: json['implementation'],
+    software: json['software'] == null
+        ? null
+        : BackboneElement.fromJson(json['software'] as Map<String, dynamic>),
+    implementation: json['implementation'] == null
+        ? null
+        : BackboneElement.fromJson(
+            json['implementation'] as Map<String, dynamic>),
     fhirVersion: json['fhirVersion'] == null
         ? null
         : Id.fromJson(json['fhirVersion'] as String),
@@ -55,10 +73,18 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
         unknownValue: ConformanceAcceptUnknown.unknown),
     format: _$enumDecodeNullable(_$ConformanceFormatEnumMap, json['format'],
         unknownValue: ConformanceFormat.unknown),
-    profile: json['profile'],
-    rest: json['rest'],
-    messaging: json['messaging'],
-    document: json['document'],
+    profile: json['profile'] == null
+        ? null
+        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
+    rest: json['rest'] == null
+        ? null
+        : BackboneElement.fromJson(json['rest'] as Map<String, dynamic>),
+    messaging: json['messaging'] == null
+        ? null
+        : BackboneElement.fromJson(json['messaging'] as Map<String, dynamic>),
+    document: json['document'] == null
+        ? null
+        : BackboneElement.fromJson(json['document'] as Map<String, dynamic>),
   );
 }
 
@@ -72,35 +98,35 @@ Map<String, dynamic> _$_$_ConformanceToJson(_$_Conformance instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('status', _$ConformanceStatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('publisher', instance.publisher);
-  writeNotNull('contact', instance.contact);
+  writeNotNull('contact', instance.contact?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('requirements', instance.requirements);
   writeNotNull('copyright', instance.copyright);
   writeNotNull('kind', _$ConformanceKindEnumMap[instance.kind]);
-  writeNotNull('software', instance.software);
-  writeNotNull('implementation', instance.implementation);
+  writeNotNull('software', instance.software?.toJson());
+  writeNotNull('implementation', instance.implementation?.toJson());
   writeNotNull('fhirVersion', instance.fhirVersion?.toJson());
   writeNotNull('acceptUnknown',
       _$ConformanceAcceptUnknownEnumMap[instance.acceptUnknown]);
   writeNotNull('format', _$ConformanceFormatEnumMap[instance.format]);
-  writeNotNull('profile', instance.profile);
-  writeNotNull('rest', instance.rest);
-  writeNotNull('messaging', instance.messaging);
-  writeNotNull('document', instance.document);
+  writeNotNull('profile', instance.profile?.toJson());
+  writeNotNull('rest', instance.rest?.toJson());
+  writeNotNull('messaging', instance.messaging?.toJson());
+  writeNotNull('document', instance.document?.toJson());
   return val;
 }
 
@@ -177,17 +203,28 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
   ]);
   return _$_OperationDefinition(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     version: json['version'] as String,
     name: json['name'] as String,
@@ -200,7 +237,9 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
         ? null
         : Boolean.fromJson(json['experimental']),
     publisher: json['publisher'] as String,
-    contact: json['contact'],
+    contact: json['contact'] == null
+        ? null
+        : BackboneElement.fromJson(json['contact'] as Map<String, dynamic>),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -211,12 +250,16 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
         : Boolean.fromJson(json['idempotent']),
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     notes: json['notes'] as String,
-    base: json['base'],
+    base: json['base'] == null
+        ? null
+        : Reference.fromJson(json['base'] as Map<String, dynamic>),
     system: json['system'] == null ? null : Boolean.fromJson(json['system']),
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     instance:
         json['instance'] == null ? null : Boolean.fromJson(json['instance']),
-    parameter: json['parameter'],
+    parameter: json['parameter'] == null
+        ? null
+        : BackboneElement.fromJson(json['parameter'] as Map<String, dynamic>),
   );
 }
 
@@ -231,13 +274,13 @@ Map<String, dynamic> _$_$_OperationDefinitionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
@@ -245,18 +288,18 @@ Map<String, dynamic> _$_$_OperationDefinitionToJson(
   writeNotNull('kind', _$OperationDefinitionKindEnumMap[instance.kind]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('publisher', instance.publisher);
-  writeNotNull('contact', instance.contact);
+  writeNotNull('contact', instance.contact?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('requirements', instance.requirements);
   writeNotNull('idempotent', instance.idempotent?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('notes', instance.notes);
-  writeNotNull('base', instance.base);
+  writeNotNull('base', instance.base?.toJson());
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('instance', instance.instance?.toJson());
-  writeNotNull('parameter', instance.parameter);
+  writeNotNull('parameter', instance.parameter?.toJson());
   return val;
 }
 
@@ -284,17 +327,28 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
   ]);
   return _$_SearchParameter(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     name: json['name'] as String,
     status: _$enumDecodeNullable(_$SearchParameterStatusEnumMap, json['status'],
@@ -303,7 +357,9 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
         ? null
         : Boolean.fromJson(json['experimental']),
     publisher: json['publisher'] as String,
-    contact: json['contact'],
+    contact: json['contact'] == null
+        ? null
+        : BackboneElement.fromJson(json['contact'] as Map<String, dynamic>),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -332,19 +388,19 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('status', _$SearchParameterStatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('publisher', instance.publisher);
-  writeNotNull('contact', instance.contact);
+  writeNotNull('contact', instance.contact?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('requirements', instance.requirements);
   writeNotNull('code', instance.code?.toJson());
@@ -390,10 +446,17 @@ _$_ConformanceContact _$_$_ConformanceContactFromJson(
     Map<String, dynamic> json) {
   return _$_ConformanceContact(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     name: json['name'] as String,
-    telecom: json['telecom'],
+    telecom: json['telecom'] == null
+        ? null
+        : ContactPoint.fromJson(json['telecom'] as Map<String, dynamic>),
   );
 }
 
@@ -408,10 +471,10 @@ Map<String, dynamic> _$_$_ConformanceContactToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom);
+  writeNotNull('telecom', instance.telecom?.toJson());
   return val;
 }
 
@@ -420,8 +483,13 @@ _$_ConformanceSoftware _$_$_ConformanceSoftwareFromJson(
   $checkKeys(json, requiredKeys: const ['name']);
   return _$_ConformanceSoftware(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     name: json['name'] as String,
     version: json['version'] as String,
     releaseDate: json['releaseDate'] == null
@@ -441,8 +509,8 @@ Map<String, dynamic> _$_$_ConformanceSoftwareToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('version', instance.version);
   writeNotNull('releaseDate', instance.releaseDate?.toJson());
@@ -454,8 +522,13 @@ _$_ConformanceImplementation _$_$_ConformanceImplementationFromJson(
   $checkKeys(json, requiredKeys: const ['description']);
   return _$_ConformanceImplementation(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     description: json['description'] as String,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
   );
@@ -472,8 +545,8 @@ Map<String, dynamic> _$_$_ConformanceImplementationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('url', instance.url?.toJson());
   return val;
@@ -483,18 +556,31 @@ _$_ConformanceRest _$_$_ConformanceRestFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['mode', 'resource']);
   return _$_ConformanceRest(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     mode: _$enumDecodeNullable(_$RestModeEnumMap, json['mode'],
         unknownValue: RestMode.unknown),
     documentation: json['documentation'] as String,
-    security: json['security'],
-    resource: json['resource'],
-    interaction: json['interaction'],
+    security: json['security'] == null
+        ? null
+        : BackboneElement.fromJson(json['security'] as Map<String, dynamic>),
+    resource: json['resource'] == null
+        ? null
+        : BackboneElement.fromJson(json['resource'] as Map<String, dynamic>),
+    interaction: json['interaction'] == null
+        ? null
+        : BackboneElement.fromJson(json['interaction'] as Map<String, dynamic>),
     transactionMode: _$enumDecodeNullable(
         _$RestTransactionModeEnumMap, json['transactionMode'],
         unknownValue: RestTransactionMode.unknown),
-    operation: json['operation'],
+    operation: json['operation'] == null
+        ? null
+        : BackboneElement.fromJson(json['operation'] as Map<String, dynamic>),
     compartment: json['compartment'] == null
         ? null
         : FhirUri.fromJson(json['compartment'] as String),
@@ -511,16 +597,16 @@ Map<String, dynamic> _$_$_ConformanceRestToJson(_$_ConformanceRest instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('mode', _$RestModeEnumMap[instance.mode]);
   writeNotNull('documentation', instance.documentation);
-  writeNotNull('security', instance.security);
-  writeNotNull('resource', instance.resource);
-  writeNotNull('interaction', instance.interaction);
+  writeNotNull('security', instance.security?.toJson());
+  writeNotNull('resource', instance.resource?.toJson());
+  writeNotNull('interaction', instance.interaction?.toJson());
   writeNotNull('transactionMode',
       _$RestTransactionModeEnumMap[instance.transactionMode]);
-  writeNotNull('operation', instance.operation);
+  writeNotNull('operation', instance.operation?.toJson());
   writeNotNull('compartment', instance.compartment?.toJson());
   return val;
 }
@@ -544,14 +630,23 @@ _$_ConformanceMessaging _$_$_ConformanceMessagingFromJson(
   $checkKeys(json, requiredKeys: const ['event']);
   return _$_ConformanceMessaging(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    endpoint: json['endpoint'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    endpoint: json['endpoint'] == null
+        ? null
+        : BackboneElement.fromJson(json['endpoint'] as Map<String, dynamic>),
     reliableCache: json['reliableCache'] == null
         ? null
         : UnsignedInt.fromJson(json['reliableCache']),
     documentation: json['documentation'] as String,
-    event: json['event'],
+    event: json['event'] == null
+        ? null
+        : BackboneElement.fromJson(json['event'] as Map<String, dynamic>),
   );
 }
 
@@ -566,12 +661,12 @@ Map<String, dynamic> _$_$_ConformanceMessagingToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('endpoint', instance.endpoint);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('endpoint', instance.endpoint?.toJson());
   writeNotNull('reliableCache', instance.reliableCache?.toJson());
   writeNotNull('documentation', instance.documentation);
-  writeNotNull('event', instance.event);
+  writeNotNull('event', instance.event?.toJson());
   return val;
 }
 
@@ -580,12 +675,19 @@ _$_ConformanceDocument _$_$_ConformanceDocumentFromJson(
   $checkKeys(json, requiredKeys: const ['mode', 'profile']);
   return _$_ConformanceDocument(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     mode: _$enumDecodeNullable(_$DocumentModeEnumMap, json['mode'],
         unknownValue: DocumentMode.unknown),
     documentation: json['documentation'] as String,
-    profile: json['profile'],
+    profile: json['profile'] == null
+        ? null
+        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
   );
 }
 
@@ -600,11 +702,11 @@ Map<String, dynamic> _$_$_ConformanceDocumentToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('mode', _$DocumentModeEnumMap[instance.mode]);
   writeNotNull('documentation', instance.documentation);
-  writeNotNull('profile', instance.profile);
+  writeNotNull('profile', instance.profile?.toJson());
   return val;
 }
 
@@ -618,10 +720,17 @@ _$_OperationDefinitionContact _$_$_OperationDefinitionContactFromJson(
     Map<String, dynamic> json) {
   return _$_OperationDefinitionContact(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     name: json['name'] as String,
-    telecom: json['telecom'],
+    telecom: json['telecom'] == null
+        ? null
+        : ContactPoint.fromJson(json['telecom'] as Map<String, dynamic>),
   );
 }
 
@@ -636,10 +745,10 @@ Map<String, dynamic> _$_$_OperationDefinitionContactToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom);
+  writeNotNull('telecom', instance.telecom?.toJson());
   return val;
 }
 
@@ -648,8 +757,13 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
   $checkKeys(json, requiredKeys: const ['name', 'use', 'min', 'max']);
   return _$_OperationDefinitionParameter(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
     use: _$enumDecodeNullable(_$ParameterUseEnumMap, json['use'],
         unknownValue: ParameterUse.unknown),
@@ -657,8 +771,12 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
     max: json['max'] as String,
     documentation: json['documentation'] as String,
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
-    profile: json['profile'],
-    binding: json['binding'],
+    profile: json['profile'] == null
+        ? null
+        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
+    binding: json['binding'] == null
+        ? null
+        : BackboneElement.fromJson(json['binding'] as Map<String, dynamic>),
   );
 }
 
@@ -673,16 +791,16 @@ Map<String, dynamic> _$_$_OperationDefinitionParameterToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('use', _$ParameterUseEnumMap[instance.use]);
   writeNotNull('min', instance.min?.toJson());
   writeNotNull('max', instance.max);
   writeNotNull('documentation', instance.documentation);
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('profile', instance.profile);
-  writeNotNull('binding', instance.binding);
+  writeNotNull('profile', instance.profile?.toJson());
+  writeNotNull('binding', instance.binding?.toJson());
   return val;
 }
 
@@ -696,10 +814,17 @@ _$_SearchParameterContact _$_$_SearchParameterContactFromJson(
     Map<String, dynamic> json) {
   return _$_SearchParameterContact(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     name: json['name'] as String,
-    telecom: json['telecom'],
+    telecom: json['telecom'] == null
+        ? null
+        : ContactPoint.fromJson(json['telecom'] as Map<String, dynamic>),
   );
 }
 
@@ -714,10 +839,10 @@ Map<String, dynamic> _$_$_SearchParameterContactToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom);
+  writeNotNull('telecom', instance.telecom?.toJson());
   return val;
 }
 
@@ -725,12 +850,21 @@ _$_ConformanceSecurity _$_$_ConformanceSecurityFromJson(
     Map<String, dynamic> json) {
   return _$_ConformanceSecurity(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     cors: json['cors'] == null ? null : Boolean.fromJson(json['cors']),
-    service: json['service'],
+    service: json['service'] == null
+        ? null
+        : CodeableConcept.fromJson(json['service'] as Map<String, dynamic>),
     description: json['description'] as String,
-    certificate: json['certificate'],
+    certificate: json['certificate'] == null
+        ? null
+        : BackboneElement.fromJson(json['certificate'] as Map<String, dynamic>),
   );
 }
 
@@ -745,12 +879,12 @@ Map<String, dynamic> _$_$_ConformanceSecurityToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('cors', instance.cors?.toJson());
-  writeNotNull('service', instance.service);
+  writeNotNull('service', instance.service?.toJson());
   writeNotNull('description', instance.description);
-  writeNotNull('certificate', instance.certificate);
+  writeNotNull('certificate', instance.certificate?.toJson());
   return val;
 }
 
@@ -759,11 +893,21 @@ _$_ConformanceResource _$_$_ConformanceResourceFromJson(
   $checkKeys(json, requiredKeys: const ['type', 'interaction']);
   return _$_ConformanceResource(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
-    profile: json['profile'],
-    interaction: json['interaction'],
+    profile: json['profile'] == null
+        ? null
+        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
+    interaction: json['interaction'] == null
+        ? null
+        : ResourceInteraction.fromJson(
+            json['interaction'] as Map<String, dynamic>),
     versioning: _$enumDecodeNullable(
         _$ResourceVersioningEnumMap, json['versioning'],
         unknownValue: ResourceVersioning.unknown),
@@ -784,7 +928,9 @@ _$_ConformanceResource _$_$_ConformanceResourceFromJson(
         unknownValue: ResourceConditionalDelete.unknown),
     searchInclude: json['searchInclude'] as String,
     searchRevInclude: json['searchRevInclude'] as String,
-    searchParam: json['searchParam'],
+    searchParam: json['searchParam'] == null
+        ? null
+        : BackboneElement.fromJson(json['searchParam'] as Map<String, dynamic>),
   );
 }
 
@@ -799,11 +945,11 @@ Map<String, dynamic> _$_$_ConformanceResourceToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('profile', instance.profile);
-  writeNotNull('interaction', instance.interaction);
+  writeNotNull('profile', instance.profile?.toJson());
+  writeNotNull('interaction', instance.interaction?.toJson());
   writeNotNull('versioning', _$ResourceVersioningEnumMap[instance.versioning]);
   writeNotNull('readHistory', instance.readHistory?.toJson());
   writeNotNull('updateCreate', instance.updateCreate?.toJson());
@@ -813,7 +959,7 @@ Map<String, dynamic> _$_$_ConformanceResourceToJson(
       _$ResourceConditionalDeleteEnumMap[instance.conditionalDelete]);
   writeNotNull('searchInclude', instance.searchInclude);
   writeNotNull('searchRevInclude', instance.searchRevInclude);
-  writeNotNull('searchParam', instance.searchParam);
+  writeNotNull('searchParam', instance.searchParam?.toJson());
   return val;
 }
 
@@ -832,22 +978,25 @@ const _$ResourceConditionalDeleteEnumMap = {
   ResourceConditionalDelete.unknown: 'unknown',
 };
 
-_$_ConformanceInteraction _$_$_ConformanceInteractionFromJson(
+_$_ResourceInteraction _$_$_ResourceInteractionFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
-  return _$_ConformanceInteraction(
+  return _$_ResourceInteraction(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    code: _$enumDecodeNullable(
-        _$ConformanceInteractionCodeEnumMap, json['code'],
-        unknownValue: ConformanceInteractionCode.unknown),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    code: json['code'],
     documentation: json['documentation'] as String,
   );
 }
 
-Map<String, dynamic> _$_$_ConformanceInteractionToJson(
-    _$_ConformanceInteraction instance) {
+Map<String, dynamic> _$_$_ResourceInteractionToJson(
+    _$_ResourceInteraction instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -857,35 +1006,29 @@ Map<String, dynamic> _$_$_ConformanceInteractionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('code', _$ConformanceInteractionCodeEnumMap[instance.code]);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('code', instance.code);
   writeNotNull('documentation', instance.documentation);
   return val;
 }
-
-const _$ConformanceInteractionCodeEnumMap = {
-  ConformanceInteractionCode.read: 'read',
-  ConformanceInteractionCode.vread: 'vread',
-  ConformanceInteractionCode.update: 'update',
-  ConformanceInteractionCode.delete: 'delete',
-  ConformanceInteractionCode.history_instance: 'history-instance',
-  ConformanceInteractionCode.validate: 'validate',
-  ConformanceInteractionCode.history_type: 'history-type',
-  ConformanceInteractionCode.create: 'create',
-  ConformanceInteractionCode.search_type: 'search-type',
-  ConformanceInteractionCode.unknown: 'unknown',
-};
 
 _$_ConformanceOperation _$_$_ConformanceOperationFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['name', 'definition']);
   return _$_ConformanceOperation(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     name: json['name'] as String,
-    definition: json['definition'],
+    definition: json['definition'] == null
+        ? null
+        : Reference.fromJson(json['definition'] as Map<String, dynamic>),
   );
 }
 
@@ -900,10 +1043,10 @@ Map<String, dynamic> _$_$_ConformanceOperationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
-  writeNotNull('definition', instance.definition);
+  writeNotNull('definition', instance.definition?.toJson());
   return val;
 }
 
@@ -912,9 +1055,16 @@ _$_ConformanceEndpoint _$_$_ConformanceEndpointFromJson(
   $checkKeys(json, requiredKeys: const ['protocol', 'address']);
   return _$_ConformanceEndpoint(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    protocol: json['protocol'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    protocol: json['protocol'] == null
+        ? null
+        : Coding.fromJson(json['protocol'] as Map<String, dynamic>),
     address: json['address'] == null
         ? null
         : FhirUri.fromJson(json['address'] as String),
@@ -932,9 +1082,9 @@ Map<String, dynamic> _$_$_ConformanceEndpointToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('protocol', instance.protocol);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('protocol', instance.protocol?.toJson());
   writeNotNull('address', instance.address?.toJson());
   return val;
 }
@@ -944,17 +1094,28 @@ _$_ConformanceEvent _$_$_ConformanceEventFromJson(Map<String, dynamic> json) {
       requiredKeys: const ['code', 'mode', 'focus', 'request', 'response']);
   return _$_ConformanceEvent(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    code: json['code'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    code: json['code'] == null
+        ? null
+        : Coding.fromJson(json['code'] as Map<String, dynamic>),
     category: _$enumDecodeNullable(_$EventCategoryEnumMap, json['category'],
         unknownValue: EventCategory.unknown),
     mode: _$enumDecodeNullable(_$EventModeEnumMap, json['mode'],
         unknownValue: EventMode.unknown),
     focus:
         json['focus'] == null ? null : Code.fromJson(json['focus'] as String),
-    request: json['request'],
-    response: json['response'],
+    request: json['request'] == null
+        ? null
+        : Reference.fromJson(json['request'] as Map<String, dynamic>),
+    response: json['response'] == null
+        ? null
+        : Reference.fromJson(json['response'] as Map<String, dynamic>),
     documentation: json['documentation'] as String,
   );
 }
@@ -969,14 +1130,14 @@ Map<String, dynamic> _$_$_ConformanceEventToJson(_$_ConformanceEvent instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('code', instance.code);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull('category', _$EventCategoryEnumMap[instance.category]);
   writeNotNull('mode', _$EventModeEnumMap[instance.mode]);
   writeNotNull('focus', instance.focus?.toJson());
-  writeNotNull('request', instance.request);
-  writeNotNull('response', instance.response);
+  writeNotNull('request', instance.request?.toJson());
+  writeNotNull('response', instance.response?.toJson());
   writeNotNull('documentation', instance.documentation);
   return val;
 }
@@ -999,8 +1160,13 @@ _$_OperationDefinitionBinding _$_$_OperationDefinitionBindingFromJson(
   $checkKeys(json, requiredKeys: const ['strength', 'valueSetX']);
   return _$_OperationDefinitionBinding(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     strength: _$enumDecodeNullable(_$BindingStrengthEnumMap, json['strength'],
         unknownValue: BindingStrength.unknown),
     valueSetX: json['valueSetX'] == null
@@ -1020,8 +1186,8 @@ Map<String, dynamic> _$_$_OperationDefinitionBindingToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('strength', _$BindingStrengthEnumMap[instance.strength]);
   writeNotNull('valueSetX', instance.valueSetX?.toJson());
   return val;
@@ -1039,8 +1205,13 @@ _$_ConformanceCertificate _$_$_ConformanceCertificateFromJson(
     Map<String, dynamic> json) {
   return _$_ConformanceCertificate(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     blob: json['blob'] == null
         ? null
@@ -1059,8 +1230,8 @@ Map<String, dynamic> _$_$_ConformanceCertificateToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('blob', instance.blob?.toJson());
   return val;
@@ -1071,8 +1242,13 @@ _$_ConformanceInteraction _$_$_ConformanceInteractionFromJson(
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ConformanceInteraction(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     code: _$enumDecodeNullable(_$InteractionCodeEnumMap, json['code'],
         unknownValue: InteractionCode.unknown),
     documentation: json['documentation'] as String,
@@ -1090,8 +1266,8 @@ Map<String, dynamic> _$_$_ConformanceInteractionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', _$InteractionCodeEnumMap[instance.code]);
   writeNotNull('documentation', instance.documentation);
   return val;
@@ -1109,8 +1285,13 @@ _$_ConformanceSearchParam _$_$_ConformanceSearchParamFromJson(
   $checkKeys(json, requiredKeys: const ['name', 'type']);
   return _$_ConformanceSearchParam(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     name: json['name'] as String,
     definition: json['definition'] == null
         ? null
@@ -1138,8 +1319,8 @@ Map<String, dynamic> _$_$_ConformanceSearchParamToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull('type', _$SearchParamTypeEnumMap[instance.type]);

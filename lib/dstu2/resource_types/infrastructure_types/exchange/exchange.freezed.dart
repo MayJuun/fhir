@@ -72,6 +72,12 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) BackboneElement issue});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $BackboneElementCopyWith<$Res> get issue;
 }
 
 class _$OperationOutcomeCopyWithImpl<$Res>
@@ -113,6 +119,56 @@ class _$OperationOutcomeCopyWithImpl<$Res>
       issue: issue == freezed ? _value.issue : issue as BackboneElement,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get issue {
+    if (_value.issue == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.issue, (value) {
+      return _then(_value.copyWith(issue: value));
+    });
+  }
 }
 
 abstract class _$OperationOutcomeCopyWith<$Res>
@@ -131,6 +187,17 @@ abstract class _$OperationOutcomeCopyWith<$Res>
       FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) BackboneElement issue});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $BackboneElementCopyWith<$Res> get issue;
 }
 
 class __$OperationOutcomeCopyWithImpl<$Res>
@@ -416,6 +483,14 @@ abstract class $SubscriptionCopyWith<$Res> {
           BackboneElement channel,
       Instant end,
       Coding tag});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ContactPointCopyWith<$Res> get contact;
+  $BackboneElementCopyWith<$Res> get channel;
+  $CodingCopyWith<$Res> get tag;
 }
 
 class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
@@ -470,6 +545,76 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
       tag: tag == freezed ? _value.tag : tag as Coding,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get contact {
+    if (_value.contact == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.contact, (value) {
+      return _then(_value.copyWith(contact: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get channel {
+    if (_value.channel == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.channel, (value) {
+      return _then(_value.copyWith(channel: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get tag {
+    if (_value.tag == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.tag, (value) {
+      return _then(_value.copyWith(tag: value));
+    });
+  }
 }
 
 abstract class _$SubscriptionCopyWith<$Res>
@@ -499,6 +644,21 @@ abstract class _$SubscriptionCopyWith<$Res>
           BackboneElement channel,
       Instant end,
       Coding tag});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ContactPointCopyWith<$Res> get contact;
+  @override
+  $BackboneElementCopyWith<$Res> get channel;
+  @override
+  $CodingCopyWith<$Res> get tag;
 }
 
 class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
@@ -886,6 +1046,21 @@ abstract class $MessageHeaderCopyWith<$Res> {
       Reference responsible,
       CodeableConcept reason,
       Reference data});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodingCopyWith<$Res> get event;
+  $BackboneElementCopyWith<$Res> get response;
+  $BackboneElementCopyWith<$Res> get source;
+  $BackboneElementCopyWith<$Res> get destination;
+  $ReferenceCopyWith<$Res> get enterer;
+  $ReferenceCopyWith<$Res> get author;
+  $ReferenceCopyWith<$Res> get receiver;
+  $ReferenceCopyWith<$Res> get responsible;
+  $CodeableConceptCopyWith<$Res> get reason;
+  $ReferenceCopyWith<$Res> get data;
 }
 
 class _$MessageHeaderCopyWithImpl<$Res>
@@ -952,6 +1127,146 @@ class _$MessageHeaderCopyWithImpl<$Res>
       data: data == freezed ? _value.data : data as Reference,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get event {
+    if (_value.event == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.event, (value) {
+      return _then(_value.copyWith(event: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get response {
+    if (_value.response == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.response, (value) {
+      return _then(_value.copyWith(response: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get source {
+    if (_value.source == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.source, (value) {
+      return _then(_value.copyWith(source: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get destination {
+    if (_value.destination == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.destination, (value) {
+      return _then(_value.copyWith(destination: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get enterer {
+    if (_value.enterer == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.enterer, (value) {
+      return _then(_value.copyWith(enterer: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get author {
+    if (_value.author == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.author, (value) {
+      return _then(_value.copyWith(author: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get receiver {
+    if (_value.receiver == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.receiver, (value) {
+      return _then(_value.copyWith(receiver: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get responsible {
+    if (_value.responsible == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.responsible, (value) {
+      return _then(_value.copyWith(responsible: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reason {
+    if (_value.reason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
+      return _then(_value.copyWith(reason: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get data {
+    if (_value.data == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
+  }
 }
 
 abstract class _$MessageHeaderCopyWith<$Res>
@@ -980,6 +1295,35 @@ abstract class _$MessageHeaderCopyWith<$Res>
       Reference responsible,
       CodeableConcept reason,
       Reference data});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodingCopyWith<$Res> get event;
+  @override
+  $BackboneElementCopyWith<$Res> get response;
+  @override
+  $BackboneElementCopyWith<$Res> get source;
+  @override
+  $BackboneElementCopyWith<$Res> get destination;
+  @override
+  $ReferenceCopyWith<$Res> get enterer;
+  @override
+  $ReferenceCopyWith<$Res> get author;
+  @override
+  $ReferenceCopyWith<$Res> get receiver;
+  @override
+  $ReferenceCopyWith<$Res> get responsible;
+  @override
+  $CodeableConceptCopyWith<$Res> get reason;
+  @override
+  $ReferenceCopyWith<$Res> get data;
 }
 
 class __$MessageHeaderCopyWithImpl<$Res>
@@ -1331,6 +1675,8 @@ abstract class $ParametersCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       List<ParametersParameter> parameter});
+
+  $MetaCopyWith<$Res> get meta;
 }
 
 class _$ParametersCopyWithImpl<$Res> implements $ParametersCopyWith<$Res> {
@@ -1360,6 +1706,16 @@ class _$ParametersCopyWithImpl<$Res> implements $ParametersCopyWith<$Res> {
           : parameter as List<ParametersParameter>,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
 }
 
 abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
@@ -1373,6 +1729,9 @@ abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       List<ParametersParameter> parameter});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
 }
 
 class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
@@ -1625,6 +1984,20 @@ abstract class $ParametersParameterCopyWith<$Res> {
       Reference valueReference,
       Resource resource,
       List<ParametersParameter> part});
+
+  $CodingCopyWith<$Res> get valueCoding;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $IdentifierCopyWith<$Res> get valueIdentifier;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
+  $PeriodCopyWith<$Res> get valuePeriod;
+  $RatioCopyWith<$Res> get valueRatio;
+  $HumanNameCopyWith<$Res> get valueHumanName;
+  $AddressCopyWith<$Res> get valueAddress;
+  $ContactPointCopyWith<$Res> get valueContactPoint;
+  $ScheduleCopyWith<$Res> get valueSchedule;
+  $ReferenceCopyWith<$Res> get valueReference;
 }
 
 class _$ParametersParameterCopyWithImpl<$Res>
@@ -1728,6 +2101,136 @@ class _$ParametersParameterCopyWithImpl<$Res>
       part: part == freezed ? _value.part : part as List<ParametersParameter>,
     ));
   }
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get valueIdentifier {
+    if (_value.valueIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier, (value) {
+      return _then(_value.copyWith(valueIdentifier: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get valueHumanName {
+    if (_value.valueHumanName == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName, (value) {
+      return _then(_value.copyWith(valueHumanName: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res> get valueAddress {
+    if (_value.valueAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.valueAddress, (value) {
+      return _then(_value.copyWith(valueAddress: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get valueContactPoint {
+    if (_value.valueContactPoint == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint, (value) {
+      return _then(_value.copyWith(valueContactPoint: value));
+    });
+  }
+
+  @override
+  $ScheduleCopyWith<$Res> get valueSchedule {
+    if (_value.valueSchedule == null) {
+      return null;
+    }
+    return $ScheduleCopyWith<$Res>(_value.valueSchedule, (value) {
+      return _then(_value.copyWith(valueSchedule: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get valueReference {
+    if (_value.valueReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.valueReference, (value) {
+      return _then(_value.copyWith(valueReference: value));
+    });
+  }
 }
 
 abstract class _$ParametersParameterCopyWith<$Res>
@@ -1763,6 +2266,33 @@ abstract class _$ParametersParameterCopyWith<$Res>
       Reference valueReference,
       Resource resource,
       List<ParametersParameter> part});
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding;
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  @override
+  $IdentifierCopyWith<$Res> get valueIdentifier;
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity;
+  @override
+  $RangeCopyWith<$Res> get valueRange;
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod;
+  @override
+  $RatioCopyWith<$Res> get valueRatio;
+  @override
+  $HumanNameCopyWith<$Res> get valueHumanName;
+  @override
+  $AddressCopyWith<$Res> get valueAddress;
+  @override
+  $ContactPointCopyWith<$Res> get valueContactPoint;
+  @override
+  $ScheduleCopyWith<$Res> get valueSchedule;
+  @override
+  $ReferenceCopyWith<$Res> get valueReference;
 }
 
 class __$ParametersParameterCopyWithImpl<$Res>
@@ -2236,6 +2766,10 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
       CodeableConcept details,
       String diagnostics,
       String location});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get details;
 }
 
 class _$OperationOutcomeIssueCopyWithImpl<$Res>
@@ -2274,6 +2808,36 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
       location: location == freezed ? _value.location : location as String,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get details {
+    if (_value.details == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.details, (value) {
+      return _then(_value.copyWith(details: value));
+    });
+  }
 }
 
 abstract class _$OperationOutcomeIssueCopyWith<$Res>
@@ -2293,6 +2857,13 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
       CodeableConcept details,
       String diagnostics,
       String location});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get details;
 }
 
 class __$OperationOutcomeIssueCopyWithImpl<$Res>
@@ -2534,6 +3105,9 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
       @JsonKey(required: true)
           String payload,
       String header});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class _$SubscriptionChannelCopyWithImpl<$Res>
@@ -2568,6 +3142,26 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as String,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
 }
 
 abstract class _$SubscriptionChannelCopyWith<$Res>
@@ -2586,6 +3180,11 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
       @JsonKey(required: true)
           String payload,
       String header});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class __$SubscriptionChannelCopyWithImpl<$Res>
@@ -2809,6 +3408,10 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
           ResponseCode code,
       Reference details});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ReferenceCopyWith<$Res> get details;
 }
 
 class _$MessageHeaderResponseCopyWithImpl<$Res>
@@ -2841,6 +3444,36 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
       details: details == freezed ? _value.details : details as Reference,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get details {
+    if (_value.details == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.details, (value) {
+      return _then(_value.copyWith(details: value));
+    });
+  }
 }
 
 abstract class _$MessageHeaderResponseCopyWith<$Res>
@@ -2858,6 +3491,13 @@ abstract class _$MessageHeaderResponseCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
           ResponseCode code,
       Reference details});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ReferenceCopyWith<$Res> get details;
 }
 
 class __$MessageHeaderResponseCopyWithImpl<$Res>
@@ -3069,6 +3709,10 @@ abstract class $MessageHeaderSourceCopyWith<$Res> {
       String version,
       ContactPoint contact,
       @JsonKey(required: true) FhirUri endpoint});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ContactPointCopyWith<$Res> get contact;
 }
 
 class _$MessageHeaderSourceCopyWithImpl<$Res>
@@ -3105,6 +3749,36 @@ class _$MessageHeaderSourceCopyWithImpl<$Res>
       endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUri,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get contact {
+    if (_value.contact == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.contact, (value) {
+      return _then(_value.copyWith(contact: value));
+    });
+  }
 }
 
 abstract class _$MessageHeaderSourceCopyWith<$Res>
@@ -3122,6 +3796,13 @@ abstract class _$MessageHeaderSourceCopyWith<$Res>
       String version,
       ContactPoint contact,
       @JsonKey(required: true) FhirUri endpoint});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ContactPointCopyWith<$Res> get contact;
 }
 
 class __$MessageHeaderSourceCopyWithImpl<$Res>
@@ -3341,6 +4022,10 @@ abstract class $MessageHeaderDestinationCopyWith<$Res> {
       String name,
       Reference target,
       @JsonKey(required: true) FhirUri endpoint});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ReferenceCopyWith<$Res> get target;
 }
 
 class _$MessageHeaderDestinationCopyWithImpl<$Res>
@@ -3373,6 +4058,36 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
       endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUri,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get target {
+    if (_value.target == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.target, (value) {
+      return _then(_value.copyWith(target: value));
+    });
+  }
 }
 
 abstract class _$MessageHeaderDestinationCopyWith<$Res>
@@ -3388,6 +4103,13 @@ abstract class _$MessageHeaderDestinationCopyWith<$Res>
       String name,
       Reference target,
       @JsonKey(required: true) FhirUri endpoint});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ReferenceCopyWith<$Res> get target;
 }
 
 class __$MessageHeaderDestinationCopyWithImpl<$Res>

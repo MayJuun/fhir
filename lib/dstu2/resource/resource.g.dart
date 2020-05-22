@@ -16,14 +16,18 @@ _$_DomainResource _$_$_DomainResourceFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['id']);
   return _$_DomainResource(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List)
         ?.map((e) =>
             e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
@@ -41,10 +45,10 @@ Map<String, dynamic> _$_$_DomainResourceToJson(_$_DomainResource instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
+  writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
   return val;

@@ -535,17 +535,6 @@ enum ClinicalImpressionStatus {
   unknown,
 }
 
-enum Status {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('active')
-  active,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum CodeSystemHierarchyMeaning {
   @JsonValue('grouped-by')
   grouped_by,

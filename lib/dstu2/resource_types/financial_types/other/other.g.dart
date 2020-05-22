@@ -10,31 +10,57 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
     Map<String, dynamic> json) {
   return _$_ExplanationOfBenefit(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
-    request: json['request'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    request: json['request'] == null
+        ? null
+        : Reference.fromJson(json['request'] as Map<String, dynamic>),
     outcome: _$enumDecodeNullable(
         _$ExplanationOfBenefitOutcomeEnumMap, json['outcome'],
         unknownValue: ExplanationOfBenefitOutcome.unknown),
     disposition: json['disposition'] as String,
-    ruleset: json['ruleset'],
-    originalRuleset: json['originalRuleset'],
+    ruleset: json['ruleset'] == null
+        ? null
+        : Coding.fromJson(json['ruleset'] as Map<String, dynamic>),
+    originalRuleset: json['originalRuleset'] == null
+        ? null
+        : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
     created: json['created'] == null
         ? null
         : FhirDateTime.fromJson(json['created'] as String),
-    organization: json['organization'],
-    requestProvider: json['requestProvider'],
-    requestOrganization: json['requestOrganization'],
+    organization: json['organization'] == null
+        ? null
+        : Reference.fromJson(json['organization'] as Map<String, dynamic>),
+    requestProvider: json['requestProvider'] == null
+        ? null
+        : Reference.fromJson(json['requestProvider'] as Map<String, dynamic>),
+    requestOrganization: json['requestOrganization'] == null
+        ? null
+        : Reference.fromJson(
+            json['requestOrganization'] as Map<String, dynamic>),
   );
 }
 
@@ -49,24 +75,24 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('request', instance.request);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('request', instance.request?.toJson());
   writeNotNull(
       'outcome', _$ExplanationOfBenefitOutcomeEnumMap[instance.outcome]);
   writeNotNull('disposition', instance.disposition);
-  writeNotNull('ruleset', instance.ruleset);
-  writeNotNull('originalRuleset', instance.originalRuleset);
+  writeNotNull('ruleset', instance.ruleset?.toJson());
+  writeNotNull('originalRuleset', instance.originalRuleset?.toJson());
   writeNotNull('created', instance.created?.toJson());
-  writeNotNull('organization', instance.organization);
-  writeNotNull('requestProvider', instance.requestProvider);
-  writeNotNull('requestOrganization', instance.requestOrganization);
+  writeNotNull('organization', instance.organization?.toJson());
+  writeNotNull('requestProvider', instance.requestProvider?.toJson());
+  writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
   return val;
 }
 

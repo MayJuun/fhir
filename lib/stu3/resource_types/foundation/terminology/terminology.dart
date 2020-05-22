@@ -17,8 +17,7 @@ abstract class CodeSystem with _$CodeSystem implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-        CodeSystemStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,

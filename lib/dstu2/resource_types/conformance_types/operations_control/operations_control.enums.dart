@@ -200,7 +200,7 @@ enum BindingStrength {
   @JsonValue('unknown')
   unknown,
 }
-enum ConformanceInteractionCode {
+enum ResourceInteractionCode {
   @JsonValue('read')
   read,
   @JsonValue('vread')

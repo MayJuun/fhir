@@ -18,8 +18,7 @@ abstract class CapabilityStatement
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
-        CapabilityStatementStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,

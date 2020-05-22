@@ -24,8 +24,8 @@ class _$CodeSystemTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-          CodeSystemStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -89,8 +89,8 @@ mixin _$CodeSystem {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-  CodeSystemStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -129,8 +129,8 @@ abstract class $CodeSystemCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-          CodeSystemStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -202,7 +202,7 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as CodeSystemStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -271,8 +271,8 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-          CodeSystemStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -347,7 +347,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as CodeSystemStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -404,7 +404,7 @@ class _$_CodeSystem implements _CodeSystem {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -446,8 +446,8 @@ class _$_CodeSystem implements _CodeSystem {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-  final CodeSystemStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -619,8 +619,8 @@ abstract class _CodeSystem implements CodeSystem {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-          CodeSystemStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -660,8 +660,8 @@ abstract class _CodeSystem implements CodeSystem {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-  CodeSystemStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override

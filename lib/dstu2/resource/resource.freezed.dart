@@ -60,6 +60,9 @@ abstract class $DomainResourceCopyWith<$Res> {
       Code language,
       Narrative text,
       List<Resource> contained});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
 }
 
 class _$DomainResourceCopyWithImpl<$Res>
@@ -91,6 +94,26 @@ class _$DomainResourceCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as List<Resource>,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
 }
 
 abstract class _$DomainResourceCopyWith<$Res>
@@ -106,6 +129,11 @@ abstract class _$DomainResourceCopyWith<$Res>
       Code language,
       Narrative text,
       List<Resource> contained});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
 }
 
 class __$DomainResourceCopyWithImpl<$Res>

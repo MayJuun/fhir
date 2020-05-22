@@ -123,6 +123,16 @@ abstract class $AppointmentCopyWith<$Res> {
       String comment,
       @JsonKey(required: true)
           BackboneElement participant});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get reason;
+  $ReferenceCopyWith<$Res> get slot;
+  $BackboneElementCopyWith<$Res> get participant;
 }
 
 class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
@@ -191,6 +201,96 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
           : participant as BackboneElement,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reason {
+    if (_value.reason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
+      return _then(_value.copyWith(reason: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get slot {
+    if (_value.slot == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.slot, (value) {
+      return _then(_value.copyWith(slot: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get participant {
+    if (_value.participant == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.participant, (value) {
+      return _then(_value.copyWith(participant: value));
+    });
+  }
 }
 
 abstract class _$AppointmentCopyWith<$Res>
@@ -222,6 +322,25 @@ abstract class _$AppointmentCopyWith<$Res>
       String comment,
       @JsonKey(required: true)
           BackboneElement participant});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $CodeableConceptCopyWith<$Res> get reason;
+  @override
+  $ReferenceCopyWith<$Res> get slot;
+  @override
+  $BackboneElementCopyWith<$Res> get participant;
 }
 
 class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
@@ -648,6 +767,14 @@ abstract class $SlotCopyWith<$Res> {
           Instant end,
       Boolean overbooked,
       String comment});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get type;
+  $ReferenceCopyWith<$Res> get schedule;
 }
 
 class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
@@ -706,6 +833,76 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
       comment: comment == freezed ? _value.comment : comment as String,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get schedule {
+    if (_value.schedule == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.schedule, (value) {
+      return _then(_value.copyWith(schedule: value));
+    });
+  }
 }
 
 abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
@@ -733,6 +930,21 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
           Instant end,
       Boolean overbooked,
       String comment});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $ReferenceCopyWith<$Res> get schedule;
 }
 
 class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
@@ -1118,6 +1330,15 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
           AppointmentResponseParticipantStatus participantStatus,
       String comment});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $ReferenceCopyWith<$Res> get appointment;
+  $CodeableConceptCopyWith<$Res> get participantType;
+  $ReferenceCopyWith<$Res> get actor;
 }
 
 class _$AppointmentResponseCopyWithImpl<$Res>
@@ -1180,6 +1401,86 @@ class _$AppointmentResponseCopyWithImpl<$Res>
       comment: comment == freezed ? _value.comment : comment as String,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get appointment {
+    if (_value.appointment == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.appointment, (value) {
+      return _then(_value.copyWith(appointment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get participantType {
+    if (_value.participantType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.participantType, (value) {
+      return _then(_value.copyWith(participantType: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get actor {
+    if (_value.actor == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+      return _then(_value.copyWith(actor: value));
+    });
+  }
 }
 
 abstract class _$AppointmentResponseCopyWith<$Res>
@@ -1207,6 +1508,23 @@ abstract class _$AppointmentResponseCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
           AppointmentResponseParticipantStatus participantStatus,
       String comment});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ReferenceCopyWith<$Res> get appointment;
+  @override
+  $CodeableConceptCopyWith<$Res> get participantType;
+  @override
+  $ReferenceCopyWith<$Res> get actor;
 }
 
 class __$AppointmentResponseCopyWithImpl<$Res>
@@ -1567,6 +1885,15 @@ abstract class $ScheduleCopyWith<$Res> {
       @JsonKey(required: true) Reference actor,
       Period planningHorizon,
       String comment});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get type;
+  $ReferenceCopyWith<$Res> get actor;
+  $PeriodCopyWith<$Res> get planningHorizon;
 }
 
 class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
@@ -1618,6 +1945,86 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
       comment: comment == freezed ? _value.comment : comment as String,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get actor {
+    if (_value.actor == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+      return _then(_value.copyWith(actor: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get planningHorizon {
+    if (_value.planningHorizon == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.planningHorizon, (value) {
+      return _then(_value.copyWith(planningHorizon: value));
+    });
+  }
 }
 
 abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
@@ -1638,6 +2045,23 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       @JsonKey(required: true) Reference actor,
       Period planningHorizon,
       String comment});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $ReferenceCopyWith<$Res> get actor;
+  @override
+  $PeriodCopyWith<$Res> get planningHorizon;
 }
 
 class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
@@ -1875,8 +2299,8 @@ class _$AppointmentParticipantTearOff {
       FhirExtension modifierExtension,
       CodeableConcept type,
       Reference actor,
-      @JsonKey(unknownEnumValue: ParticipantRequired.unknown)
-          ParticipantRequired required,
+      @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
+          ParticipantRequired required_,
       @required
       @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
           ParticipantStatus status}) {
@@ -1886,7 +2310,7 @@ class _$AppointmentParticipantTearOff {
       modifierExtension: modifierExtension,
       type: type,
       actor: actor,
-      required: required,
+      required_: required_,
       status: status,
     );
   }
@@ -1901,8 +2325,8 @@ mixin _$AppointmentParticipant {
   FhirExtension get modifierExtension;
   CodeableConcept get type;
   Reference get actor;
-  @JsonKey(unknownEnumValue: ParticipantRequired.unknown)
-  ParticipantRequired get required;
+  @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
+  ParticipantRequired get required_;
   @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
   ParticipantStatus get status;
 
@@ -1920,10 +2344,15 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       FhirExtension modifierExtension,
       CodeableConcept type,
       Reference actor,
-      @JsonKey(unknownEnumValue: ParticipantRequired.unknown)
-          ParticipantRequired required,
+      @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
+          ParticipantRequired required_,
       @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
           ParticipantStatus status});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get type;
+  $ReferenceCopyWith<$Res> get actor;
 }
 
 class _$AppointmentParticipantCopyWithImpl<$Res>
@@ -1941,7 +2370,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object actor = freezed,
-    Object required = freezed,
+    Object required_ = freezed,
     Object status = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1954,11 +2383,51 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as CodeableConcept,
       actor: actor == freezed ? _value.actor : actor as Reference,
-      required: required == freezed
-          ? _value.required
-          : required as ParticipantRequired,
+      required_: required_ == freezed
+          ? _value.required_
+          : required_ as ParticipantRequired,
       status: status == freezed ? _value.status : status as ParticipantStatus,
     ));
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get actor {
+    if (_value.actor == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+      return _then(_value.copyWith(actor: value));
+    });
   }
 }
 
@@ -1974,10 +2443,19 @@ abstract class _$AppointmentParticipantCopyWith<$Res>
       FhirExtension modifierExtension,
       CodeableConcept type,
       Reference actor,
-      @JsonKey(unknownEnumValue: ParticipantRequired.unknown)
-          ParticipantRequired required,
+      @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
+          ParticipantRequired required_,
       @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
           ParticipantStatus status});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $ReferenceCopyWith<$Res> get actor;
 }
 
 class __$AppointmentParticipantCopyWithImpl<$Res>
@@ -1997,7 +2475,7 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object actor = freezed,
-    Object required = freezed,
+    Object required_ = freezed,
     Object status = freezed,
   }) {
     return _then(_AppointmentParticipant(
@@ -2010,9 +2488,9 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as CodeableConcept,
       actor: actor == freezed ? _value.actor : actor as Reference,
-      required: required == freezed
-          ? _value.required
-          : required as ParticipantRequired,
+      required_: required_ == freezed
+          ? _value.required_
+          : required_ as ParticipantRequired,
       status: status == freezed ? _value.status : status as ParticipantStatus,
     ));
   }
@@ -2026,8 +2504,8 @@ class _$_AppointmentParticipant implements _AppointmentParticipant {
       this.modifierExtension,
       this.type,
       this.actor,
-      @JsonKey(unknownEnumValue: ParticipantRequired.unknown)
-          this.required,
+      @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
+          this.required_,
       @required
       @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
           this.status})
@@ -2047,15 +2525,15 @@ class _$_AppointmentParticipant implements _AppointmentParticipant {
   @override
   final Reference actor;
   @override
-  @JsonKey(unknownEnumValue: ParticipantRequired.unknown)
-  final ParticipantRequired required;
+  @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
+  final ParticipantRequired required_;
   @override
   @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
   final ParticipantStatus status;
 
   @override
   String toString() {
-    return 'AppointmentParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, actor: $actor, required: $required, status: $status)';
+    return 'AppointmentParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, actor: $actor, required_: $required_, status: $status)';
   }
 
   @override
@@ -2074,9 +2552,9 @@ class _$_AppointmentParticipant implements _AppointmentParticipant {
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.actor, actor) ||
                 const DeepCollectionEquality().equals(other.actor, actor)) &&
-            (identical(other.required, required) ||
+            (identical(other.required_, required_) ||
                 const DeepCollectionEquality()
-                    .equals(other.required, required)) &&
+                    .equals(other.required_, required_)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)));
   }
@@ -2089,7 +2567,7 @@ class _$_AppointmentParticipant implements _AppointmentParticipant {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(actor) ^
-      const DeepCollectionEquality().hash(required) ^
+      const DeepCollectionEquality().hash(required_) ^
       const DeepCollectionEquality().hash(status);
 
   @override
@@ -2110,8 +2588,8 @@ abstract class _AppointmentParticipant implements AppointmentParticipant {
       FhirExtension modifierExtension,
       CodeableConcept type,
       Reference actor,
-      @JsonKey(unknownEnumValue: ParticipantRequired.unknown)
-          ParticipantRequired required,
+      @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
+          ParticipantRequired required_,
       @required
       @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
           ParticipantStatus status}) = _$_AppointmentParticipant;
@@ -2130,8 +2608,8 @@ abstract class _AppointmentParticipant implements AppointmentParticipant {
   @override
   Reference get actor;
   @override
-  @JsonKey(unknownEnumValue: ParticipantRequired.unknown)
-  ParticipantRequired get required;
+  @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
+  ParticipantRequired get required_;
   @override
   @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
   ParticipantStatus get status;

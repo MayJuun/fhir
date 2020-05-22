@@ -3,71 +3,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'special_types.enums.dart';
 import '../../fhir_stu3.dart';
+import '../resource_types/resource_types.enums.dart';
 
 part 'special_types.freezed.dart';
 part 'special_types.g.dart';
-
-@freezed
-abstract class FhirExtension with _$FhirExtension {
-  const factory FhirExtension({
-    String url,
-    Boolean valueBoolean,
-    Integer valueInteger,
-    Decimal valueDecimal,
-    String valueBase64Binary,
-    String valueInstant,
-    String valueString,
-    String valueUri,
-    Date valueDate,
-    DateTime valueDateTime,
-    Time valueTime,
-    Code valueCode,
-    Oid valueOid,
-    Uuid valueUuid,
-    Id valueId,
-    UnsignedInt valueUnsignedInt,
-    PositiveInt valuePositiveInt,
-    String valueMarkdown,
-    Element valueElement,
-    FhirExtension valueExtension,
-    BackboneElement valueBackboneElement,
-    Narrative valueNarrative,
-    Annotation valueAnnotation,
-    Attachment valueAttachment,
-    Identifier valueIdentifier,
-    CodeableConcept valueCodeableConcept,
-    Coding valueCoding,
-    Quantity valueQuantity,
-    Duration valueDuration,
-    Quantity valueSimpleQuantity,
-    Distance valueDistance,
-    Count valueCount,
-    Money valueMoney,
-    Age valueAge,
-    Range valueRange,
-    Period valuePeriod,
-    Ratio valueRatio,
-    Reference valueReference,
-    SampledData valueSampledData,
-    Signature valueSignature,
-    HumanName valueHumanName,
-    Address valueAddress,
-    ContactPoint valueContactPoint,
-    Timing valueTiming,
-    Meta valueMeta,
-    ElementDefinition valueElementDefinition,
-    ContactDetail valueContactDetail,
-    Contributor valueContributor,
-    Dosage valueDosage,
-    RelatedArtifact valueRelatedArtifact,
-    UsageContext valueUsageContext,
-    DataRequirement valueDataRequirement,
-    ParameterDefinition valueParameterDefinition,
-    TriggerDefinition valueTriggerDefinition,
-  }) = _FhirExtension;
-  factory FhirExtension.fromJson(Map<String, dynamic> json) =>
-      _$FhirExtensionFromJson(json);
-}
 
 @freezed
 abstract class BackboneElement with _$BackboneElement {

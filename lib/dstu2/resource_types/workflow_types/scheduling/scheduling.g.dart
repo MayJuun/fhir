@@ -10,22 +10,39 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['status', 'participant']);
   return _$_Appointment(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     status: _$enumDecodeNullable(_$AppointmentStatusEnumMap, json['status'],
         unknownValue: AppointmentStatus.unknown),
-    type: json['type'],
-    reason: json['reason'],
+    type: json['type'] == null
+        ? null
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    reason: json['reason'] == null
+        ? null
+        : CodeableConcept.fromJson(json['reason'] as Map<String, dynamic>),
     priority: json['priority'] == null
         ? null
         : UnsignedInt.fromJson(json['priority']),
@@ -37,9 +54,13 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
     minutesDuration: json['minutesDuration'] == null
         ? null
         : PositiveInt.fromJson(json['minutesDuration']),
-    slot: json['slot'],
+    slot: json['slot'] == null
+        ? null
+        : Reference.fromJson(json['slot'] as Map<String, dynamic>),
     comment: json['comment'] as String,
-    participant: json['participant'],
+    participant: json['participant'] == null
+        ? null
+        : BackboneElement.fromJson(json['participant'] as Map<String, dynamic>),
   );
 }
 
@@ -53,25 +74,25 @@ Map<String, dynamic> _$_$_AppointmentToJson(_$_Appointment instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('status', _$AppointmentStatusEnumMap[instance.status]);
-  writeNotNull('type', instance.type);
-  writeNotNull('reason', instance.reason);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('reason', instance.reason?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('start', instance.start?.toJson());
   writeNotNull('end', instance.end?.toJson());
   writeNotNull('minutesDuration', instance.minutesDuration?.toJson());
-  writeNotNull('slot', instance.slot);
+  writeNotNull('slot', instance.slot?.toJson());
   writeNotNull('comment', instance.comment);
-  writeNotNull('participant', instance.participant);
+  writeNotNull('participant', instance.participant?.toJson());
   return val;
 }
 
@@ -123,20 +144,37 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
       requiredKeys: const ['schedule', 'freeBusyType', 'start', 'end']);
   return _$_Slot(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
-    type: json['type'],
-    schedule: json['schedule'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    type: json['type'] == null
+        ? null
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    schedule: json['schedule'] == null
+        ? null
+        : Reference.fromJson(json['schedule'] as Map<String, dynamic>),
     freeBusyType: _$enumDecodeNullable(
         _$SlotFreeBusyTypeEnumMap, json['freeBusyType'],
         unknownValue: SlotFreeBusyType.unknown),
@@ -161,16 +199,16 @@ Map<String, dynamic> _$_$_SlotToJson(_$_Slot instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('type', instance.type);
-  writeNotNull('schedule', instance.schedule);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('schedule', instance.schedule?.toJson());
   writeNotNull(
       'freeBusyType', _$SlotFreeBusyTypeEnumMap[instance.freeBusyType]);
   writeNotNull('start', instance.start?.toJson());
@@ -193,25 +231,45 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
   $checkKeys(json, requiredKeys: const ['appointment', 'participantStatus']);
   return _$_AppointmentResponse(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
-    appointment: json['appointment'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    appointment: json['appointment'] == null
+        ? null
+        : Reference.fromJson(json['appointment'] as Map<String, dynamic>),
     start: json['start'] == null
         ? null
         : Instant.fromJson(json['start'] as String),
     end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
-    participantType: json['participantType'],
-    actor: json['actor'],
+    participantType: json['participantType'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['participantType'] as Map<String, dynamic>),
+    actor: json['actor'] == null
+        ? null
+        : Reference.fromJson(json['actor'] as Map<String, dynamic>),
     participantStatus: _$enumDecodeNullable(
         _$AppointmentResponseParticipantStatusEnumMap,
         json['participantStatus'],
@@ -231,19 +289,19 @@ Map<String, dynamic> _$_$_AppointmentResponseToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('appointment', instance.appointment);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('appointment', instance.appointment?.toJson());
   writeNotNull('start', instance.start?.toJson());
   writeNotNull('end', instance.end?.toJson());
-  writeNotNull('participantType', instance.participantType);
-  writeNotNull('actor', instance.actor);
+  writeNotNull('participantType', instance.participantType?.toJson());
+  writeNotNull('actor', instance.actor?.toJson());
   writeNotNull(
       'participantStatus',
       _$AppointmentResponseParticipantStatusEnumMap[
@@ -266,21 +324,40 @@ _$_Schedule _$_$_ScheduleFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['actor']);
   return _$_Schedule(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
-    type: json['type'],
-    actor: json['actor'],
-    planningHorizon: json['planningHorizon'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    type: json['type'] == null
+        ? null
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    actor: json['actor'] == null
+        ? null
+        : Reference.fromJson(json['actor'] as Map<String, dynamic>),
+    planningHorizon: json['planningHorizon'] == null
+        ? null
+        : Period.fromJson(json['planningHorizon'] as Map<String, dynamic>),
     comment: json['comment'] as String,
   );
 }
@@ -295,17 +372,17 @@ Map<String, dynamic> _$_$_ScheduleToJson(_$_Schedule instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('type', instance.type);
-  writeNotNull('actor', instance.actor);
-  writeNotNull('planningHorizon', instance.planningHorizon);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('actor', instance.actor?.toJson());
+  writeNotNull('planningHorizon', instance.planningHorizon?.toJson());
   writeNotNull('comment', instance.comment);
   return val;
 }
@@ -315,11 +392,20 @@ _$_AppointmentParticipant _$_$_AppointmentParticipantFromJson(
   $checkKeys(json, requiredKeys: const ['status']);
   return _$_AppointmentParticipant(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    type: json['type'],
-    actor: json['actor'],
-    required: _$enumDecodeNullable(
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    type: json['type'] == null
+        ? null
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    actor: json['actor'] == null
+        ? null
+        : Reference.fromJson(json['actor'] as Map<String, dynamic>),
+    required_: _$enumDecodeNullable(
         _$ParticipantRequiredEnumMap, json['required'],
         unknownValue: ParticipantRequired.unknown),
     status: _$enumDecodeNullable(_$ParticipantStatusEnumMap, json['status'],
@@ -338,11 +424,11 @@ Map<String, dynamic> _$_$_AppointmentParticipantToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('type', instance.type);
-  writeNotNull('actor', instance.actor);
-  writeNotNull('required', _$ParticipantRequiredEnumMap[instance.required]);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('actor', instance.actor?.toJson());
+  writeNotNull('required', _$ParticipantRequiredEnumMap[instance.required_]);
   writeNotNull('status', _$ParticipantStatusEnumMap[instance.status]);
   return val;
 }

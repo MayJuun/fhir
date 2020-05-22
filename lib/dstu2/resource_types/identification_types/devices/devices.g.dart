@@ -11,32 +11,63 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
       requiredKeys: const ['type', 'identifier', 'lastSystemChange']);
   return _$_DeviceComponent(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    type: json['type'],
-    identifier: json['identifier'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    type: json['type'] == null
+        ? null
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     lastSystemChange: json['lastSystemChange'] == null
         ? null
         : Instant.fromJson(json['lastSystemChange'] as String),
-    source: json['source'],
-    parent: json['parent'],
-    operationalStatus: json['operationalStatus'],
-    parameterGroup: json['parameterGroup'],
+    source: json['source'] == null
+        ? null
+        : Reference.fromJson(json['source'] as Map<String, dynamic>),
+    parent: json['parent'] == null
+        ? null
+        : Reference.fromJson(json['parent'] as Map<String, dynamic>),
+    operationalStatus: json['operationalStatus'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['operationalStatus'] as Map<String, dynamic>),
+    parameterGroup: json['parameterGroup'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['parameterGroup'] as Map<String, dynamic>),
     measurementPrinciple: _$enumDecodeNullable(
         _$DeviceComponentMeasurementPrincipleEnumMap,
         json['measurementPrinciple'],
         unknownValue: DeviceComponentMeasurementPrinciple.unknown),
-    productionSpecification: json['productionSpecification'],
-    languageCode: json['languageCode'],
+    productionSpecification: json['productionSpecification'] == null
+        ? null
+        : BackboneElement.fromJson(
+            json['productionSpecification'] as Map<String, dynamic>),
+    languageCode: json['languageCode'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['languageCode'] as Map<String, dynamic>),
   );
 }
 
@@ -50,26 +81,27 @@ Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('type', instance.type);
-  writeNotNull('identifier', instance.identifier);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('lastSystemChange', instance.lastSystemChange?.toJson());
-  writeNotNull('source', instance.source);
-  writeNotNull('parent', instance.parent);
-  writeNotNull('operationalStatus', instance.operationalStatus);
-  writeNotNull('parameterGroup', instance.parameterGroup);
+  writeNotNull('source', instance.source?.toJson());
+  writeNotNull('parent', instance.parent?.toJson());
+  writeNotNull('operationalStatus', instance.operationalStatus?.toJson());
+  writeNotNull('parameterGroup', instance.parameterGroup?.toJson());
   writeNotNull(
       'measurementPrinciple',
       _$DeviceComponentMeasurementPrincipleEnumMap[
           instance.measurementPrinciple]);
-  writeNotNull('productionSpecification', instance.productionSpecification);
-  writeNotNull('languageCode', instance.languageCode);
+  writeNotNull(
+      'productionSpecification', instance.productionSpecification?.toJson());
+  writeNotNull('languageCode', instance.languageCode?.toJson());
   return val;
 }
 
@@ -124,22 +156,43 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'identifier', 'category']);
   return _$_DeviceMetric(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    type: json['type'],
-    identifier: json['identifier'],
-    unit: json['unit'],
-    source: json['source'],
-    parent: json['parent'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    type: json['type'] == null
+        ? null
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    unit: json['unit'] == null
+        ? null
+        : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
+    source: json['source'] == null
+        ? null
+        : Reference.fromJson(json['source'] as Map<String, dynamic>),
+    parent: json['parent'] == null
+        ? null
+        : Reference.fromJson(json['parent'] as Map<String, dynamic>),
     operationalStatus: _$enumDecodeNullable(
         _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus'],
         unknownValue: DeviceMetricOperationalStatus.unknown),
@@ -148,8 +201,12 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
     category: _$enumDecodeNullable(
         _$DeviceMetricCategoryEnumMap, json['category'],
         unknownValue: DeviceMetricCategory.unknown),
-    measurementPeriod: json['measurementPeriod'],
-    calibration: json['calibration'],
+    measurementPeriod: json['measurementPeriod'] == null
+        ? null
+        : Timing.fromJson(json['measurementPeriod'] as Map<String, dynamic>),
+    calibration: json['calibration'] == null
+        ? null
+        : BackboneElement.fromJson(json['calibration'] as Map<String, dynamic>),
   );
 }
 
@@ -163,24 +220,24 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('type', instance.type);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('unit', instance.unit);
-  writeNotNull('source', instance.source);
-  writeNotNull('parent', instance.parent);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('unit', instance.unit?.toJson());
+  writeNotNull('source', instance.source?.toJson());
+  writeNotNull('parent', instance.parent?.toJson());
   writeNotNull('operationalStatus',
       _$DeviceMetricOperationalStatusEnumMap[instance.operationalStatus]);
   writeNotNull('color', _$DeviceMetricColorEnumMap[instance.color]);
   writeNotNull('category', _$DeviceMetricCategoryEnumMap[instance.category]);
-  writeNotNull('measurementPeriod', instance.measurementPeriod);
-  writeNotNull('calibration', instance.calibration);
+  writeNotNull('measurementPeriod', instance.measurementPeriod?.toJson());
+  writeNotNull('calibration', instance.calibration?.toJson());
   return val;
 }
 
@@ -215,20 +272,37 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type']);
   return _$_Device(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    meta: json['meta'],
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
-    text: json['text'],
-    contained: json['contained'],
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    identifier: json['identifier'],
-    type: json['type'],
-    note: json['note'],
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: json['contained'] == null
+        ? null
+        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    identifier: json['identifier'] == null
+        ? null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    type: json['type'] == null
+        ? null
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    note: json['note'] == null
+        ? null
+        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
     status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
         unknownValue: DeviceStatus.unknown),
     manufacturer: json['manufacturer'] as String,
@@ -242,10 +316,18 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
         : FhirDateTime.fromJson(json['expiry'] as String),
     udi: json['udi'] as String,
     lotNumber: json['lotNumber'] as String,
-    owner: json['owner'],
-    location: json['location'],
-    patient: json['patient'],
-    contact: json['contact'],
+    owner: json['owner'] == null
+        ? null
+        : Reference.fromJson(json['owner'] as Map<String, dynamic>),
+    location: json['location'] == null
+        ? null
+        : Reference.fromJson(json['location'] as Map<String, dynamic>),
+    patient: json['patient'] == null
+        ? null
+        : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+    contact: json['contact'] == null
+        ? null
+        : ContactPoint.fromJson(json['contact'] as Map<String, dynamic>),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
   );
 }
@@ -260,16 +342,16 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta);
+  writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('contained', instance.contained);
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('identifier', instance.identifier);
-  writeNotNull('type', instance.type);
-  writeNotNull('note', instance.note);
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('contained', instance.contained?.toJson());
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('note', instance.note?.toJson());
   writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
   writeNotNull('manufacturer', instance.manufacturer);
   writeNotNull('model', instance.model);
@@ -278,10 +360,10 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull('expiry', instance.expiry?.toJson());
   writeNotNull('udi', instance.udi);
   writeNotNull('lotNumber', instance.lotNumber);
-  writeNotNull('owner', instance.owner);
-  writeNotNull('location', instance.location);
-  writeNotNull('patient', instance.patient);
-  writeNotNull('contact', instance.contact);
+  writeNotNull('owner', instance.owner?.toJson());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('contact', instance.contact?.toJson());
   writeNotNull('url', instance.url?.toJson());
   return val;
 }
@@ -298,10 +380,19 @@ _$_DeviceComponentProductionSpecification
         Map<String, dynamic> json) {
   return _$_DeviceComponentProductionSpecification(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
-    specType: json['specType'],
-    componentId: json['componentId'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
+    specType: json['specType'] == null
+        ? null
+        : CodeableConcept.fromJson(json['specType'] as Map<String, dynamic>),
+    componentId: json['componentId'] == null
+        ? null
+        : Identifier.fromJson(json['componentId'] as Map<String, dynamic>),
     productionSpec: json['productionSpec'] as String,
   );
 }
@@ -317,10 +408,10 @@ Map<String, dynamic> _$_$_DeviceComponentProductionSpecificationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
-  writeNotNull('specType', instance.specType);
-  writeNotNull('componentId', instance.componentId);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('specType', instance.specType?.toJson());
+  writeNotNull('componentId', instance.componentId?.toJson());
   writeNotNull('productionSpec', instance.productionSpec);
   return val;
 }
@@ -329,8 +420,13 @@ _$_DeviceMetricCalibration _$_$_DeviceMetricCalibrationFromJson(
     Map<String, dynamic> json) {
   return _$_DeviceMetricCalibration(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'],
-    modifierExtension: json['modifierExtension'],
+    extension_: json['extension_'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+    modifierExtension: json['modifierExtension'] == null
+        ? null
+        : FhirExtension.fromJson(
+            json['modifierExtension'] as Map<String, dynamic>),
     type: _$enumDecodeNullable(_$CalibrationTypeEnumMap, json['type'],
         unknownValue: CalibrationType.unknown),
     state: _$enumDecodeNullable(_$CalibrationStateEnumMap, json['state'],
@@ -351,8 +447,8 @@ Map<String, dynamic> _$_$_DeviceMetricCalibrationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_);
-  writeNotNull('modifierExtension', instance.modifierExtension);
+  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', _$CalibrationTypeEnumMap[instance.type]);
   writeNotNull('state', _$CalibrationStateEnumMap[instance.state]);
   writeNotNull('time', instance.time?.toJson());

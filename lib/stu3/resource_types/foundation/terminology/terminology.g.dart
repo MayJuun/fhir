@@ -17,7 +17,8 @@ _$_CodeSystem _$_$_CodeSystemFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'],
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -89,7 +90,7 @@ Map<String, dynamic> _$_$_CodeSystemToJson(_$_CodeSystem instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -147,6 +148,13 @@ T _$enumDecodeNullable<T>(
   }
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
+
+const _$StatusEnumMap = {
+  Status.draft: 'draft',
+  Status.active: 'active',
+  Status.retired: 'retired',
+  Status.unknown: 'unknown',
+};
 
 const _$CodeSystemHierarchyMeaningEnumMap = {
   CodeSystemHierarchyMeaning.grouped_by: 'grouped-by',

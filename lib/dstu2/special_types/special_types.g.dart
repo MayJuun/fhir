@@ -69,7 +69,9 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Code.fromJson(json['representation'] as String),
     name: json['name'] as String,
     label: json['label'] as String,
-    code: json['code'],
+    code: json['code'] == null
+        ? null
+        : Coding.fromJson(json['code'] as Map<String, dynamic>),
     slicing: json['slicing'] == null
         ? null
         : Element.fromJson(json['slicing'] as Map<String, dynamic>),
@@ -149,7 +151,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('representation', instance.representation?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('label', instance.label);
-  writeNotNull('code', instance.code);
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull('slicing', instance.slicing?.toJson());
   writeNotNull('short', instance.short);
   writeNotNull('definition', instance.definition?.toJson());
@@ -194,8 +196,12 @@ _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
     profile: json['profile'] == null
         ? null
         : FhirUri.fromJson(json['profile'] as String),
-    security: json['security'],
-    tag: json['tag'],
+    security: json['security'] == null
+        ? null
+        : Coding.fromJson(json['security'] as Map<String, dynamic>),
+    tag: json['tag'] == null
+        ? null
+        : Coding.fromJson(json['tag'] as Map<String, dynamic>),
   );
 }
 
@@ -213,8 +219,8 @@ Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) {
   writeNotNull('versionId', instance.versionId?.toJson());
   writeNotNull('lastUpdated', instance.lastUpdated?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
-  writeNotNull('security', instance.security);
-  writeNotNull('tag', instance.tag);
+  writeNotNull('security', instance.security?.toJson());
+  writeNotNull('tag', instance.tag?.toJson());
   return val;
 }
 

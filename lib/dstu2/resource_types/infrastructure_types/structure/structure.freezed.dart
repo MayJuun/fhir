@@ -122,6 +122,17 @@ abstract class $MediaCopyWith<$Res> {
       UnsignedInt duration,
       @JsonKey(required: true)
           Attachment content});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get subtype;
+  $IdentifierCopyWith<$Res> get identifier;
+  $ReferenceCopyWith<$Res> get subject;
+  $ReferenceCopyWith<$Res> get operator;
+  $CodeableConceptCopyWith<$Res> get view;
+  $AttachmentCopyWith<$Res> get content;
 }
 
 class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
@@ -186,6 +197,106 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
       content: content == freezed ? _value.content : content as Attachment,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get subtype {
+    if (_value.subtype == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.subtype, (value) {
+      return _then(_value.copyWith(subtype: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get operator {
+    if (_value.operator == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.operator, (value) {
+      return _then(_value.copyWith(operator: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get view {
+    if (_value.view == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.view, (value) {
+      return _then(_value.copyWith(view: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get content {
+    if (_value.content == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.content, (value) {
+      return _then(_value.copyWith(content: value));
+    });
+  }
 }
 
 abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
@@ -215,6 +326,27 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       UnsignedInt duration,
       @JsonKey(required: true)
           Attachment content});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get subtype;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ReferenceCopyWith<$Res> get subject;
+  @override
+  $ReferenceCopyWith<$Res> get operator;
+  @override
+  $CodeableConceptCopyWith<$Res> get view;
+  @override
+  $AttachmentCopyWith<$Res> get content;
 }
 
 class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
@@ -608,6 +740,15 @@ abstract class $BasicCopyWith<$Res> {
       Reference subject,
       Reference author,
       Date created});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get code;
+  $ReferenceCopyWith<$Res> get subject;
+  $ReferenceCopyWith<$Res> get author;
 }
 
 class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
@@ -657,6 +798,86 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
       created: created == freezed ? _value.created : created as Date,
     ));
   }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get author {
+    if (_value.author == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.author, (value) {
+      return _then(_value.copyWith(author: value));
+    });
+  }
 }
 
 abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
@@ -677,6 +898,23 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       Reference subject,
       Reference author,
       Date created});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $ReferenceCopyWith<$Res> get subject;
+  @override
+  $ReferenceCopyWith<$Res> get author;
 }
 
 class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
@@ -947,6 +1185,9 @@ abstract class $BundleLinkCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true) String relation,
       @JsonKey(required: true) FhirUri url});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
@@ -976,6 +1217,26 @@ class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
       url: url == freezed ? _value.url : url as FhirUri,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
 }
 
 abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
@@ -989,6 +1250,11 @@ abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true) String relation,
       @JsonKey(required: true) FhirUri url});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
@@ -1178,6 +1444,12 @@ abstract class $BundleEntryCopyWith<$Res> {
       BackboneElement search,
       BackboneElement request,
       BackboneElement response});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $BackboneElementCopyWith<$Res> get search;
+  $BackboneElementCopyWith<$Res> get request;
+  $BackboneElementCopyWith<$Res> get response;
 }
 
 class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
@@ -1214,6 +1486,56 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
           response == freezed ? _value.response : response as BackboneElement,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get search {
+    if (_value.search == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.search, (value) {
+      return _then(_value.copyWith(search: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get request {
+    if (_value.request == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.request, (value) {
+      return _then(_value.copyWith(request: value));
+    });
+  }
+
+  @override
+  $BackboneElementCopyWith<$Res> get response {
+    if (_value.response == null) {
+      return null;
+    }
+    return $BackboneElementCopyWith<$Res>(_value.response, (value) {
+      return _then(_value.copyWith(response: value));
+    });
+  }
 }
 
 abstract class _$BundleEntryCopyWith<$Res>
@@ -1231,6 +1553,17 @@ abstract class _$BundleEntryCopyWith<$Res>
       BackboneElement search,
       BackboneElement request,
       BackboneElement response});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $BackboneElementCopyWith<$Res> get search;
+  @override
+  $BackboneElementCopyWith<$Res> get request;
+  @override
+  $BackboneElementCopyWith<$Res> get response;
 }
 
 class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
@@ -1440,6 +1773,9 @@ abstract class $BundleSearchCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
@@ -1469,6 +1805,26 @@ class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
       score: score == freezed ? _value.score : score as Decimal,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
 }
 
 abstract class _$BundleSearchCopyWith<$Res>
@@ -1483,6 +1839,11 @@ abstract class _$BundleSearchCopyWith<$Res>
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
@@ -1679,6 +2040,9 @@ abstract class $BundleRequestCopyWith<$Res> {
       Instant ifModifiedSince,
       String ifMatch,
       String ifNoneExist});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class _$BundleRequestCopyWithImpl<$Res>
@@ -1721,6 +2085,26 @@ class _$BundleRequestCopyWithImpl<$Res>
           ifNoneExist == freezed ? _value.ifNoneExist : ifNoneExist as String,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
 }
 
 abstract class _$BundleRequestCopyWith<$Res>
@@ -1741,6 +2125,11 @@ abstract class _$BundleRequestCopyWith<$Res>
       Instant ifModifiedSince,
       String ifMatch,
       String ifNoneExist});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class __$BundleRequestCopyWithImpl<$Res>
@@ -1987,6 +2376,9 @@ abstract class $BundleResponseCopyWith<$Res> {
       FhirUri location,
       String etag,
       Instant lastModified});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class _$BundleResponseCopyWithImpl<$Res>
@@ -2023,6 +2415,26 @@ class _$BundleResponseCopyWithImpl<$Res>
           : lastModified as Instant,
     ));
   }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
 }
 
 abstract class _$BundleResponseCopyWith<$Res>
@@ -2039,6 +2451,11 @@ abstract class _$BundleResponseCopyWith<$Res>
       FhirUri location,
       String etag,
       Instant lastModified});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class __$BundleResponseCopyWithImpl<$Res>
