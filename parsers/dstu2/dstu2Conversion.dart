@@ -22,7 +22,7 @@ void main() async {
         if (length > obj['resource']['id'].split('.').length) {
           text = '}) = _$newName;\n\n'
               'factory $newName.fromJson(Map<String, dynamic> json) =>'
-              '_\$${newName}FromJson(json);\n}';
+              '_\$${newName}FromJson(json);\n}\n';
           length = 0;
           if (fileName != null) await printToFile(text, fileName);
         }
@@ -45,7 +45,7 @@ void main() async {
             }
             text +=
                 '\n@freezed\nabstract class $newName with _\$$newName implements Resource {\n'
-                'const factory $newName ({';
+                'const factory $newName ({\n';
             length = i;
           }
           if (obj['resource']['id'].split('.').length == i - 1 &&
@@ -116,7 +116,7 @@ void main() async {
                     obj['resource']['id']);
               }
             }
-            text += last == 'extension' ? ' extension_,' : ' $last,';
+            text += last == 'extension' ? ' extension_,' : ' $last,\n';
           }
         }
         if (text != '') await printToFile(text, fileName);
