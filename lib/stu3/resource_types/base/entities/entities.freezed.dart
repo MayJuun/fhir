@@ -3323,7 +3323,7 @@ class _$HealthcareServiceAvailableTimeTearOff {
   const _$HealthcareServiceAvailableTimeTearOff();
 
   _HealthcareServiceAvailableTime call(
-      {List<dynamic> daysOfWeek,
+      {List<AvailableTimeDaysOfWeek> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
       Time availableEndTime}) {
@@ -3341,7 +3341,7 @@ const $HealthcareServiceAvailableTime =
     _$HealthcareServiceAvailableTimeTearOff();
 
 mixin _$HealthcareServiceAvailableTime {
-  List<dynamic> get daysOfWeek;
+  List<AvailableTimeDaysOfWeek> get daysOfWeek;
   Boolean get allDay;
   Time get availableStartTime;
   Time get availableEndTime;
@@ -3357,7 +3357,7 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
           $Res Function(HealthcareServiceAvailableTime) then) =
       _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>;
   $Res call(
-      {List<dynamic> daysOfWeek,
+      {List<AvailableTimeDaysOfWeek> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
       Time availableEndTime});
@@ -3381,7 +3381,7 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
     return _then(_value.copyWith(
       daysOfWeek: daysOfWeek == freezed
           ? _value.daysOfWeek
-          : daysOfWeek as List<dynamic>,
+          : daysOfWeek as List<AvailableTimeDaysOfWeek>,
       allDay: allDay == freezed ? _value.allDay : allDay as Boolean,
       availableStartTime: availableStartTime == freezed
           ? _value.availableStartTime
@@ -3401,7 +3401,7 @@ abstract class _$HealthcareServiceAvailableTimeCopyWith<$Res>
       __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<dynamic> daysOfWeek,
+      {List<AvailableTimeDaysOfWeek> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
       Time availableEndTime});
@@ -3429,7 +3429,7 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
     return _then(_HealthcareServiceAvailableTime(
       daysOfWeek: daysOfWeek == freezed
           ? _value.daysOfWeek
-          : daysOfWeek as List<dynamic>,
+          : daysOfWeek as List<AvailableTimeDaysOfWeek>,
       allDay: allDay == freezed ? _value.allDay : allDay as Boolean,
       availableStartTime: availableStartTime == freezed
           ? _value.availableStartTime
@@ -3455,7 +3455,7 @@ class _$_HealthcareServiceAvailableTime
       _$_$_HealthcareServiceAvailableTimeFromJson(json);
 
   @override
-  final List<dynamic> daysOfWeek;
+  final List<AvailableTimeDaysOfWeek> daysOfWeek;
   @override
   final Boolean allDay;
   @override
@@ -3507,7 +3507,7 @@ class _$_HealthcareServiceAvailableTime
 abstract class _HealthcareServiceAvailableTime
     implements HealthcareServiceAvailableTime {
   const factory _HealthcareServiceAvailableTime(
-      {List<dynamic> daysOfWeek,
+      {List<AvailableTimeDaysOfWeek> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
       Time availableEndTime}) = _$_HealthcareServiceAvailableTime;
@@ -3516,7 +3516,7 @@ abstract class _HealthcareServiceAvailableTime
       _$_HealthcareServiceAvailableTime.fromJson;
 
   @override
-  List<dynamic> get daysOfWeek;
+  List<AvailableTimeDaysOfWeek> get daysOfWeek;
   @override
   Boolean get allDay;
   @override

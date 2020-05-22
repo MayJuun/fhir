@@ -978,7 +978,7 @@ class _$AllergyIntoleranceTearOff {
           AllergyIntoleranceVerificationStatus verificationStatus,
       @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
           AllergyIntoleranceType type,
-      List<dynamic> category,
+      List<AllergyIntoleranceCategory> category,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
@@ -1033,7 +1033,7 @@ mixin _$AllergyIntolerance {
   AllergyIntoleranceVerificationStatus get verificationStatus;
   @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
   AllergyIntoleranceType get type;
-  List<dynamic> get category;
+  List<AllergyIntoleranceCategory> get category;
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   AllergyIntoleranceCriticality get criticality;
   CodeableConcept get code;
@@ -1069,7 +1069,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
           AllergyIntoleranceVerificationStatus verificationStatus,
       @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
           AllergyIntoleranceType type,
-      List<dynamic> category,
+      List<AllergyIntoleranceCategory> category,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
@@ -1141,8 +1141,9 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
           ? _value.verificationStatus
           : verificationStatus as AllergyIntoleranceVerificationStatus,
       type: type == freezed ? _value.type : type as AllergyIntoleranceType,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<AllergyIntoleranceCategory>,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality,
@@ -1260,7 +1261,7 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
           AllergyIntoleranceVerificationStatus verificationStatus,
       @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
           AllergyIntoleranceType type,
-      List<dynamic> category,
+      List<AllergyIntoleranceCategory> category,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
@@ -1341,8 +1342,9 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
           ? _value.verificationStatus
           : verificationStatus as AllergyIntoleranceVerificationStatus,
       type: type == freezed ? _value.type : type as AllergyIntoleranceType,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<AllergyIntoleranceCategory>,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality,
@@ -1424,7 +1426,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
   final AllergyIntoleranceType type;
   @override
-  final List<dynamic> category;
+  final List<AllergyIntoleranceCategory> category;
   @override
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   final AllergyIntoleranceCriticality criticality;
@@ -1570,7 +1572,7 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
           AllergyIntoleranceVerificationStatus verificationStatus,
       @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
           AllergyIntoleranceType type,
-      List<dynamic> category,
+      List<AllergyIntoleranceCategory> category,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
@@ -1606,7 +1608,7 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
   @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
   AllergyIntoleranceType get type;
   @override
-  List<dynamic> get category;
+  List<AllergyIntoleranceCategory> get category;
   @override
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   AllergyIntoleranceCriticality get criticality;

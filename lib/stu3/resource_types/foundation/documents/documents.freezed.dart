@@ -583,7 +583,7 @@ class _$CompositionAttesterTearOff {
   const _$CompositionAttesterTearOff();
 
   _CompositionAttester call(
-      {List<dynamic> mode, DateTime time, Reference party}) {
+      {List<AttesterMode> mode, DateTime time, Reference party}) {
     return _CompositionAttester(
       mode: mode,
       time: time,
@@ -596,7 +596,7 @@ class _$CompositionAttesterTearOff {
 const $CompositionAttester = _$CompositionAttesterTearOff();
 
 mixin _$CompositionAttester {
-  List<dynamic> get mode;
+  List<AttesterMode> get mode;
   DateTime get time;
   Reference get party;
 
@@ -608,7 +608,7 @@ abstract class $CompositionAttesterCopyWith<$Res> {
   factory $CompositionAttesterCopyWith(
           CompositionAttester value, $Res Function(CompositionAttester) then) =
       _$CompositionAttesterCopyWithImpl<$Res>;
-  $Res call({List<dynamic> mode, DateTime time, Reference party});
+  $Res call({List<AttesterMode> mode, DateTime time, Reference party});
 
   $ReferenceCopyWith<$Res> get party;
 }
@@ -628,7 +628,7 @@ class _$CompositionAttesterCopyWithImpl<$Res>
     Object party = freezed,
   }) {
     return _then(_value.copyWith(
-      mode: mode == freezed ? _value.mode : mode as List<dynamic>,
+      mode: mode == freezed ? _value.mode : mode as List<AttesterMode>,
       time: time == freezed ? _value.time : time as DateTime,
       party: party == freezed ? _value.party : party as Reference,
     ));
@@ -651,7 +651,7 @@ abstract class _$CompositionAttesterCopyWith<$Res>
           $Res Function(_CompositionAttester) then) =
       __$CompositionAttesterCopyWithImpl<$Res>;
   @override
-  $Res call({List<dynamic> mode, DateTime time, Reference party});
+  $Res call({List<AttesterMode> mode, DateTime time, Reference party});
 
   @override
   $ReferenceCopyWith<$Res> get party;
@@ -674,7 +674,7 @@ class __$CompositionAttesterCopyWithImpl<$Res>
     Object party = freezed,
   }) {
     return _then(_CompositionAttester(
-      mode: mode == freezed ? _value.mode : mode as List<dynamic>,
+      mode: mode == freezed ? _value.mode : mode as List<AttesterMode>,
       time: time == freezed ? _value.time : time as DateTime,
       party: party == freezed ? _value.party : party as Reference,
     ));
@@ -689,7 +689,7 @@ class _$_CompositionAttester implements _CompositionAttester {
       _$_$_CompositionAttesterFromJson(json);
 
   @override
-  final List<dynamic> mode;
+  final List<AttesterMode> mode;
   @override
   final DateTime time;
   @override
@@ -732,7 +732,7 @@ class _$_CompositionAttester implements _CompositionAttester {
 
 abstract class _CompositionAttester implements CompositionAttester {
   const factory _CompositionAttester(
-      {List<dynamic> mode,
+      {List<AttesterMode> mode,
       DateTime time,
       Reference party}) = _$_CompositionAttester;
 
@@ -740,7 +740,7 @@ abstract class _CompositionAttester implements CompositionAttester {
       _$_CompositionAttester.fromJson;
 
   @override
-  List<dynamic> get mode;
+  List<AttesterMode> get mode;
   @override
   DateTime get time;
   @override

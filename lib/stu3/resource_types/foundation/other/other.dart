@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
+import '../../resource_types.enums.dart';
 
 part 'other.freezed.dart';
 part 'other.g.dart';
@@ -250,6 +251,10 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 @freezed
 abstract class Parameters with _$Parameters implements Resource {
   const factory Parameters({
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
     List<ParametersParameter> parameter,
   }) = _Parameters;
   factory Parameters.fromJson(Map<String, dynamic> json) =>

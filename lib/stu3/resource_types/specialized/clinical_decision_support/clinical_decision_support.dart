@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
+import '../../resource_types.enums.dart';
 
 part 'clinical_decision_support.freezed.dart';
 part 'clinical_decision_support.g.dart';

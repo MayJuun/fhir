@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
+import '../../resource_types.enums.dart';
 
 part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';
