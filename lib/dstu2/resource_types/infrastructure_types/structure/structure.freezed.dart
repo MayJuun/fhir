@@ -22,7 +22,8 @@ class _$MediaTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
@@ -30,7 +31,8 @@ class _$MediaTearOff {
       CodeableConcept subtype,
       Identifier identifier,
       Reference subject,
-      Reference operator,
+      @JsonKey(name: 'operator')
+          Reference operator_,
       CodeableConcept view,
       String deviceName,
       PositiveInt height,
@@ -53,7 +55,7 @@ class _$MediaTearOff {
       subtype: subtype,
       identifier: identifier,
       subject: subject,
-      operator: operator,
+      operator_: operator_,
       view: view,
       deviceName: deviceName,
       height: height,
@@ -75,6 +77,7 @@ mixin _$Media {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
@@ -82,7 +85,8 @@ mixin _$Media {
   CodeableConcept get subtype;
   Identifier get identifier;
   Reference get subject;
-  Reference get operator;
+  @JsonKey(name: 'operator')
+  Reference get operator_;
   CodeableConcept get view;
   String get deviceName;
   PositiveInt get height;
@@ -106,14 +110,16 @@ abstract class $MediaCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
           MediaType type,
       CodeableConcept subtype,
       Identifier identifier,
       Reference subject,
-      Reference operator,
+      @JsonKey(name: 'operator')
+          Reference operator_,
       CodeableConcept view,
       String deviceName,
       PositiveInt height,
@@ -130,7 +136,7 @@ abstract class $MediaCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get subtype;
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get subject;
-  $ReferenceCopyWith<$Res> get operator;
+  $ReferenceCopyWith<$Res> get operator_;
   $CodeableConceptCopyWith<$Res> get view;
   $AttachmentCopyWith<$Res> get content;
 }
@@ -156,7 +162,7 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
     Object subtype = freezed,
     Object identifier = freezed,
     Object subject = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object view = freezed,
     Object deviceName = freezed,
     Object height = freezed,
@@ -186,7 +192,8 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      operator: operator == freezed ? _value.operator : operator as Reference,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as Reference,
       view: view == freezed ? _value.view : view as CodeableConcept,
       deviceName:
           deviceName == freezed ? _value.deviceName : deviceName as String,
@@ -269,12 +276,12 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res> get operator {
-    if (_value.operator == null) {
+  $ReferenceCopyWith<$Res> get operator_ {
+    if (_value.operator_ == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.operator, (value) {
-      return _then(_value.copyWith(operator: value));
+    return $ReferenceCopyWith<$Res>(_value.operator_, (value) {
+      return _then(_value.copyWith(operator_: value));
     });
   }
 
@@ -310,14 +317,16 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
           MediaType type,
       CodeableConcept subtype,
       Identifier identifier,
       Reference subject,
-      Reference operator,
+      @JsonKey(name: 'operator')
+          Reference operator_,
       CodeableConcept view,
       String deviceName,
       PositiveInt height,
@@ -342,7 +351,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   @override
   $ReferenceCopyWith<$Res> get subject;
   @override
-  $ReferenceCopyWith<$Res> get operator;
+  $ReferenceCopyWith<$Res> get operator_;
   @override
   $CodeableConceptCopyWith<$Res> get view;
   @override
@@ -371,7 +380,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
     Object subtype = freezed,
     Object identifier = freezed,
     Object subject = freezed,
-    Object operator = freezed,
+    Object operator_ = freezed,
     Object view = freezed,
     Object deviceName = freezed,
     Object height = freezed,
@@ -401,7 +410,8 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      operator: operator == freezed ? _value.operator : operator as Reference,
+      operator_:
+          operator_ == freezed ? _value.operator_ : operator_ as Reference,
       view: view == freezed ? _value.view : view as CodeableConcept,
       deviceName:
           deviceName == freezed ? _value.deviceName : deviceName as String,
@@ -423,7 +433,8 @@ class _$_Media implements _Media {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
@@ -431,7 +442,8 @@ class _$_Media implements _Media {
       this.subtype,
       this.identifier,
       this.subject,
-      this.operator,
+      @JsonKey(name: 'operator')
+          this.operator_,
       this.view,
       this.deviceName,
       this.height,
@@ -460,6 +472,7 @@ class _$_Media implements _Media {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -473,7 +486,8 @@ class _$_Media implements _Media {
   @override
   final Reference subject;
   @override
-  final Reference operator;
+  @JsonKey(name: 'operator')
+  final Reference operator_;
   @override
   final CodeableConcept view;
   @override
@@ -492,7 +506,7 @@ class _$_Media implements _Media {
 
   @override
   String toString() {
-    return 'Media(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, subtype: $subtype, identifier: $identifier, subject: $subject, operator: $operator, view: $view, deviceName: $deviceName, height: $height, width: $width, frames: $frames, duration: $duration, content: $content)';
+    return 'Media(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, subtype: $subtype, identifier: $identifier, subject: $subject, operator_: $operator_, view: $view, deviceName: $deviceName, height: $height, width: $width, frames: $frames, duration: $duration, content: $content)';
   }
 
   @override
@@ -531,9 +545,9 @@ class _$_Media implements _Media {
             (identical(other.subject, subject) ||
                 const DeepCollectionEquality()
                     .equals(other.subject, subject)) &&
-            (identical(other.operator, operator) ||
+            (identical(other.operator_, operator_) ||
                 const DeepCollectionEquality()
-                    .equals(other.operator, operator)) &&
+                    .equals(other.operator_, operator_)) &&
             (identical(other.view, view) ||
                 const DeepCollectionEquality().equals(other.view, view)) &&
             (identical(other.deviceName, deviceName) ||
@@ -567,7 +581,7 @@ class _$_Media implements _Media {
       const DeepCollectionEquality().hash(subtype) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(operator) ^
+      const DeepCollectionEquality().hash(operator_) ^
       const DeepCollectionEquality().hash(view) ^
       const DeepCollectionEquality().hash(deviceName) ^
       const DeepCollectionEquality().hash(height) ^
@@ -594,7 +608,8 @@ abstract class _Media implements Media {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
@@ -602,7 +617,8 @@ abstract class _Media implements Media {
       CodeableConcept subtype,
       Identifier identifier,
       Reference subject,
-      Reference operator,
+      @JsonKey(name: 'operator')
+          Reference operator_,
       CodeableConcept view,
       String deviceName,
       PositiveInt height,
@@ -628,6 +644,7 @@ abstract class _Media implements Media {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -641,7 +658,8 @@ abstract class _Media implements Media {
   @override
   Reference get subject;
   @override
-  Reference get operator;
+  @JsonKey(name: 'operator')
+  Reference get operator_;
   @override
   CodeableConcept get view;
   @override
@@ -675,7 +693,7 @@ class _$BasicTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required @JsonKey(required: true) CodeableConcept code,
@@ -710,6 +728,7 @@ mixin _$Basic {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -733,7 +752,7 @@ abstract class $BasicCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true) CodeableConcept code,
@@ -891,7 +910,7 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true) CodeableConcept code,
@@ -976,7 +995,7 @@ class _$_Basic implements _Basic {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       @required @JsonKey(required: true) this.code,
@@ -1001,6 +1020,7 @@ class _$_Basic implements _Basic {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1095,7 +1115,7 @@ abstract class _Basic implements Basic {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required @JsonKey(required: true) CodeableConcept code,
@@ -1118,6 +1138,7 @@ abstract class _Basic implements Basic {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1136,6 +1157,577 @@ abstract class _Basic implements Basic {
   _$BasicCopyWith<_Basic> get copyWith;
 }
 
+Binary _$BinaryFromJson(Map<String, dynamic> json) {
+  return _Binary.fromJson(json);
+}
+
+class _$BinaryTearOff {
+  const _$BinaryTearOff();
+
+  _Binary call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Code contentType,
+      Base64Binary content}) {
+    return _Binary(
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      contentType: contentType,
+      content: content,
+    );
+  }
+}
+
+// ignore: unused_element
+const $Binary = _$BinaryTearOff();
+
+mixin _$Binary {
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Code get contentType;
+  Base64Binary get content;
+
+  Map<String, dynamic> toJson();
+  $BinaryCopyWith<Binary> get copyWith;
+}
+
+abstract class $BinaryCopyWith<$Res> {
+  factory $BinaryCopyWith(Binary value, $Res Function(Binary) then) =
+      _$BinaryCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Code contentType,
+      Base64Binary content});
+
+  $MetaCopyWith<$Res> get meta;
+}
+
+class _$BinaryCopyWithImpl<$Res> implements $BinaryCopyWith<$Res> {
+  _$BinaryCopyWithImpl(this._value, this._then);
+
+  final Binary _value;
+  // ignore: unused_field
+  final $Res Function(Binary) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object contentType = freezed,
+    Object content = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      contentType:
+          contentType == freezed ? _value.contentType : contentType as Code,
+      content: content == freezed ? _value.content : content as Base64Binary,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+}
+
+abstract class _$BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
+  factory _$BinaryCopyWith(_Binary value, $Res Function(_Binary) then) =
+      __$BinaryCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Code contentType,
+      Base64Binary content});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+}
+
+class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
+    implements _$BinaryCopyWith<$Res> {
+  __$BinaryCopyWithImpl(_Binary _value, $Res Function(_Binary) _then)
+      : super(_value, (v) => _then(v as _Binary));
+
+  @override
+  _Binary get _value => super._value as _Binary;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object contentType = freezed,
+    Object content = freezed,
+  }) {
+    return _then(_Binary(
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      contentType:
+          contentType == freezed ? _value.contentType : contentType as Code,
+      content: content == freezed ? _value.content : content as Base64Binary,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_Binary implements _Binary {
+  const _$_Binary(
+      {this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.contentType,
+      this.content});
+
+  factory _$_Binary.fromJson(Map<String, dynamic> json) =>
+      _$_$_BinaryFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Code contentType;
+  @override
+  final Base64Binary content;
+
+  @override
+  String toString() {
+    return 'Binary(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, contentType: $contentType, content: $content)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Binary &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.contentType, contentType) ||
+                const DeepCollectionEquality()
+                    .equals(other.contentType, contentType)) &&
+            (identical(other.content, content) ||
+                const DeepCollectionEquality().equals(other.content, content)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(contentType) ^
+      const DeepCollectionEquality().hash(content);
+
+  @override
+  _$BinaryCopyWith<_Binary> get copyWith =>
+      __$BinaryCopyWithImpl<_Binary>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_BinaryToJson(this);
+  }
+}
+
+abstract class _Binary implements Binary {
+  const factory _Binary(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Code contentType,
+      Base64Binary content}) = _$_Binary;
+
+  factory _Binary.fromJson(Map<String, dynamic> json) = _$_Binary.fromJson;
+
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Code get contentType;
+  @override
+  Base64Binary get content;
+  @override
+  _$BinaryCopyWith<_Binary> get copyWith;
+}
+
+Bundle _$BundleFromJson(Map<String, dynamic> json) {
+  return _Bundle.fromJson(json);
+}
+
+class _$BundleTearOff {
+  const _$BundleTearOff();
+
+  _Bundle call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      @required
+      @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
+          BundleType type,
+      UnsignedInt total,
+      @required
+      @JsonKey(required: true)
+          List<BundleLink> link,
+      List<BundleEntry> entry,
+      Signature signature}) {
+    return _Bundle(
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      type: type,
+      total: total,
+      link: link,
+      entry: entry,
+      signature: signature,
+    );
+  }
+}
+
+// ignore: unused_element
+const $Bundle = _$BundleTearOff();
+
+mixin _$Bundle {
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
+  BundleType get type;
+  UnsignedInt get total;
+  @JsonKey(required: true)
+  List<BundleLink> get link;
+  List<BundleEntry> get entry;
+  Signature get signature;
+
+  Map<String, dynamic> toJson();
+  $BundleCopyWith<Bundle> get copyWith;
+}
+
+abstract class $BundleCopyWith<$Res> {
+  factory $BundleCopyWith(Bundle value, $Res Function(Bundle) then) =
+      _$BundleCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
+          BundleType type,
+      UnsignedInt total,
+      @JsonKey(required: true)
+          List<BundleLink> link,
+      List<BundleEntry> entry,
+      Signature signature});
+
+  $MetaCopyWith<$Res> get meta;
+  $SignatureCopyWith<$Res> get signature;
+}
+
+class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
+  _$BundleCopyWithImpl(this._value, this._then);
+
+  final Bundle _value;
+  // ignore: unused_field
+  final $Res Function(Bundle) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object type = freezed,
+    Object total = freezed,
+    Object link = freezed,
+    Object entry = freezed,
+    Object signature = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      type: type == freezed ? _value.type : type as BundleType,
+      total: total == freezed ? _value.total : total as UnsignedInt,
+      link: link == freezed ? _value.link : link as List<BundleLink>,
+      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>,
+      signature:
+          signature == freezed ? _value.signature : signature as Signature,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get signature {
+    if (_value.signature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.signature, (value) {
+      return _then(_value.copyWith(signature: value));
+    });
+  }
+}
+
+abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
+  factory _$BundleCopyWith(_Bundle value, $Res Function(_Bundle) then) =
+      __$BundleCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
+          BundleType type,
+      UnsignedInt total,
+      @JsonKey(required: true)
+          List<BundleLink> link,
+      List<BundleEntry> entry,
+      Signature signature});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $SignatureCopyWith<$Res> get signature;
+}
+
+class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
+    implements _$BundleCopyWith<$Res> {
+  __$BundleCopyWithImpl(_Bundle _value, $Res Function(_Bundle) _then)
+      : super(_value, (v) => _then(v as _Bundle));
+
+  @override
+  _Bundle get _value => super._value as _Bundle;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object type = freezed,
+    Object total = freezed,
+    Object link = freezed,
+    Object entry = freezed,
+    Object signature = freezed,
+  }) {
+    return _then(_Bundle(
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      type: type == freezed ? _value.type : type as BundleType,
+      total: total == freezed ? _value.total : total as UnsignedInt,
+      link: link == freezed ? _value.link : link as List<BundleLink>,
+      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>,
+      signature:
+          signature == freezed ? _value.signature : signature as Signature,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_Bundle implements _Bundle {
+  const _$_Bundle(
+      {this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      @required
+      @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
+          this.type,
+      this.total,
+      @required
+      @JsonKey(required: true)
+          this.link,
+      this.entry,
+      this.signature})
+      : assert(type != null),
+        assert(link != null);
+
+  factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
+      _$_$_BundleFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
+  final BundleType type;
+  @override
+  final UnsignedInt total;
+  @override
+  @JsonKey(required: true)
+  final List<BundleLink> link;
+  @override
+  final List<BundleEntry> entry;
+  @override
+  final Signature signature;
+
+  @override
+  String toString() {
+    return 'Bundle(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, type: $type, total: $total, link: $link, entry: $entry, signature: $signature)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Bundle &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.total, total) ||
+                const DeepCollectionEquality().equals(other.total, total)) &&
+            (identical(other.link, link) ||
+                const DeepCollectionEquality().equals(other.link, link)) &&
+            (identical(other.entry, entry) ||
+                const DeepCollectionEquality().equals(other.entry, entry)) &&
+            (identical(other.signature, signature) ||
+                const DeepCollectionEquality()
+                    .equals(other.signature, signature)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(total) ^
+      const DeepCollectionEquality().hash(link) ^
+      const DeepCollectionEquality().hash(entry) ^
+      const DeepCollectionEquality().hash(signature);
+
+  @override
+  _$BundleCopyWith<_Bundle> get copyWith =>
+      __$BundleCopyWithImpl<_Bundle>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_BundleToJson(this);
+  }
+}
+
+abstract class _Bundle implements Bundle {
+  const factory _Bundle(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      @required
+      @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
+          BundleType type,
+      UnsignedInt total,
+      @required
+      @JsonKey(required: true)
+          List<BundleLink> link,
+      List<BundleEntry> entry,
+      Signature signature}) = _$_Bundle;
+
+  factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
+
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
+  BundleType get type;
+  @override
+  UnsignedInt get total;
+  @override
+  @JsonKey(required: true)
+  List<BundleLink> get link;
+  @override
+  List<BundleEntry> get entry;
+  @override
+  Signature get signature;
+  @override
+  _$BundleCopyWith<_Bundle> get copyWith;
+}
+
 BundleLink _$BundleLinkFromJson(Map<String, dynamic> json) {
   return _BundleLink.fromJson(json);
 }
@@ -1145,7 +1737,7 @@ class _$BundleLinkTearOff {
 
   _BundleLink call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String relation,
       @required @JsonKey(required: true) FhirUri url}) {
@@ -1164,6 +1756,7 @@ const $BundleLink = _$BundleLinkTearOff();
 
 mixin _$BundleLink {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -1181,7 +1774,7 @@ abstract class $BundleLinkCopyWith<$Res> {
       _$BundleLinkCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String relation,
       @JsonKey(required: true) FhirUri url});
@@ -1246,7 +1839,7 @@ abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String relation,
       @JsonKey(required: true) FhirUri url});
@@ -1292,7 +1885,7 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
 class _$_BundleLink implements _BundleLink {
   const _$_BundleLink(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.relation,
       @required @JsonKey(required: true) this.url})
@@ -1305,6 +1898,7 @@ class _$_BundleLink implements _BundleLink {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1361,7 +1955,7 @@ class _$_BundleLink implements _BundleLink {
 abstract class _BundleLink implements BundleLink {
   const factory _BundleLink(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String relation,
       @required @JsonKey(required: true) FhirUri url}) = _$_BundleLink;
@@ -1372,6 +1966,7 @@ abstract class _BundleLink implements BundleLink {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1394,17 +1989,19 @@ class _$BundleEntryTearOff {
 
   _BundleEntry call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
+      List<BundleLink> link,
       FhirUri fullUrl,
       Resource resource,
-      BackboneElement search,
-      BackboneElement request,
-      BackboneElement response}) {
+      BundleSearch search,
+      BundleRequest request,
+      BundleResponse response}) {
     return _BundleEntry(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      link: link,
       fullUrl: fullUrl,
       resource: resource,
       search: search,
@@ -1419,13 +2016,15 @@ const $BundleEntry = _$BundleEntryTearOff();
 
 mixin _$BundleEntry {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
+  List<BundleLink> get link;
   FhirUri get fullUrl;
   Resource get resource;
-  BackboneElement get search;
-  BackboneElement get request;
-  BackboneElement get response;
+  BundleSearch get search;
+  BundleRequest get request;
+  BundleResponse get response;
 
   Map<String, dynamic> toJson();
   $BundleEntryCopyWith<BundleEntry> get copyWith;
@@ -1437,19 +2036,20 @@ abstract class $BundleEntryCopyWith<$Res> {
       _$BundleEntryCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
+      List<BundleLink> link,
       FhirUri fullUrl,
       Resource resource,
-      BackboneElement search,
-      BackboneElement request,
-      BackboneElement response});
+      BundleSearch search,
+      BundleRequest request,
+      BundleResponse response});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $BackboneElementCopyWith<$Res> get search;
-  $BackboneElementCopyWith<$Res> get request;
-  $BackboneElementCopyWith<$Res> get response;
+  $BundleSearchCopyWith<$Res> get search;
+  $BundleRequestCopyWith<$Res> get request;
+  $BundleResponseCopyWith<$Res> get response;
 }
 
 class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
@@ -1464,6 +2064,7 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object link = freezed,
     Object fullUrl = freezed,
     Object resource = freezed,
     Object search = freezed,
@@ -1478,12 +2079,13 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      link: link == freezed ? _value.link : link as List<BundleLink>,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri,
       resource: resource == freezed ? _value.resource : resource as Resource,
-      search: search == freezed ? _value.search : search as BackboneElement,
-      request: request == freezed ? _value.request : request as BackboneElement,
+      search: search == freezed ? _value.search : search as BundleSearch,
+      request: request == freezed ? _value.request : request as BundleRequest,
       response:
-          response == freezed ? _value.response : response as BackboneElement,
+          response == freezed ? _value.response : response as BundleResponse,
     ));
   }
 
@@ -1508,31 +2110,31 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get search {
+  $BundleSearchCopyWith<$Res> get search {
     if (_value.search == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.search, (value) {
+    return $BundleSearchCopyWith<$Res>(_value.search, (value) {
       return _then(_value.copyWith(search: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get request {
+  $BundleRequestCopyWith<$Res> get request {
     if (_value.request == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.request, (value) {
+    return $BundleRequestCopyWith<$Res>(_value.request, (value) {
       return _then(_value.copyWith(request: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get response {
+  $BundleResponseCopyWith<$Res> get response {
     if (_value.response == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.response, (value) {
+    return $BundleResponseCopyWith<$Res>(_value.response, (value) {
       return _then(_value.copyWith(response: value));
     });
   }
@@ -1546,24 +2148,25 @@ abstract class _$BundleEntryCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
+      List<BundleLink> link,
       FhirUri fullUrl,
       Resource resource,
-      BackboneElement search,
-      BackboneElement request,
-      BackboneElement response});
+      BundleSearch search,
+      BundleRequest request,
+      BundleResponse response});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $BackboneElementCopyWith<$Res> get search;
+  $BundleSearchCopyWith<$Res> get search;
   @override
-  $BackboneElementCopyWith<$Res> get request;
+  $BundleRequestCopyWith<$Res> get request;
   @override
-  $BackboneElementCopyWith<$Res> get response;
+  $BundleResponseCopyWith<$Res> get response;
 }
 
 class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
@@ -1580,6 +2183,7 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object link = freezed,
     Object fullUrl = freezed,
     Object resource = freezed,
     Object search = freezed,
@@ -1594,12 +2198,13 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      link: link == freezed ? _value.link : link as List<BundleLink>,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri,
       resource: resource == freezed ? _value.resource : resource as Resource,
-      search: search == freezed ? _value.search : search as BackboneElement,
-      request: request == freezed ? _value.request : request as BackboneElement,
+      search: search == freezed ? _value.search : search as BundleSearch,
+      request: request == freezed ? _value.request : request as BundleRequest,
       response:
-          response == freezed ? _value.response : response as BackboneElement,
+          response == freezed ? _value.response : response as BundleResponse,
     ));
   }
 }
@@ -1608,8 +2213,9 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
 class _$_BundleEntry implements _BundleEntry {
   const _$_BundleEntry(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      this.link,
       this.fullUrl,
       this.resource,
       this.search,
@@ -1622,23 +2228,26 @@ class _$_BundleEntry implements _BundleEntry {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
+  @override
+  final List<BundleLink> link;
   @override
   final FhirUri fullUrl;
   @override
   final Resource resource;
   @override
-  final BackboneElement search;
+  final BundleSearch search;
   @override
-  final BackboneElement request;
+  final BundleRequest request;
   @override
-  final BackboneElement response;
+  final BundleResponse response;
 
   @override
   String toString() {
-    return 'BundleEntry(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fullUrl: $fullUrl, resource: $resource, search: $search, request: $request, response: $response)';
+    return 'BundleEntry(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, link: $link, fullUrl: $fullUrl, resource: $resource, search: $search, request: $request, response: $response)';
   }
 
   @override
@@ -1653,6 +2262,8 @@ class _$_BundleEntry implements _BundleEntry {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.link, link) ||
+                const DeepCollectionEquality().equals(other.link, link)) &&
             (identical(other.fullUrl, fullUrl) ||
                 const DeepCollectionEquality()
                     .equals(other.fullUrl, fullUrl)) &&
@@ -1675,6 +2286,7 @@ class _$_BundleEntry implements _BundleEntry {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(link) ^
       const DeepCollectionEquality().hash(fullUrl) ^
       const DeepCollectionEquality().hash(resource) ^
       const DeepCollectionEquality().hash(search) ^
@@ -1694,13 +2306,14 @@ class _$_BundleEntry implements _BundleEntry {
 abstract class _BundleEntry implements BundleEntry {
   const factory _BundleEntry(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
+      List<BundleLink> link,
       FhirUri fullUrl,
       Resource resource,
-      BackboneElement search,
-      BackboneElement request,
-      BackboneElement response}) = _$_BundleEntry;
+      BundleSearch search,
+      BundleRequest request,
+      BundleResponse response}) = _$_BundleEntry;
 
   factory _BundleEntry.fromJson(Map<String, dynamic> json) =
       _$_BundleEntry.fromJson;
@@ -1708,19 +2321,22 @@ abstract class _BundleEntry implements BundleEntry {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  List<BundleLink> get link;
   @override
   FhirUri get fullUrl;
   @override
   Resource get resource;
   @override
-  BackboneElement get search;
+  BundleSearch get search;
   @override
-  BackboneElement get request;
+  BundleRequest get request;
   @override
-  BackboneElement get response;
+  BundleResponse get response;
   @override
   _$BundleEntryCopyWith<_BundleEntry> get copyWith;
 }
@@ -1734,7 +2350,7 @@ class _$BundleSearchTearOff {
 
   _BundleSearch call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score}) {
@@ -1753,6 +2369,7 @@ const $BundleSearch = _$BundleSearchTearOff();
 
 mixin _$BundleSearch {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(unknownEnumValue: SearchMode.unknown)
@@ -1769,7 +2386,7 @@ abstract class $BundleSearchCopyWith<$Res> {
       _$BundleSearchCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score});
@@ -1835,7 +2452,7 @@ abstract class _$BundleSearchCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score});
@@ -1881,7 +2498,7 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
 class _$_BundleSearch implements _BundleSearch {
   const _$_BundleSearch(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) this.mode,
       this.score});
@@ -1892,6 +2509,7 @@ class _$_BundleSearch implements _BundleSearch {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1946,7 +2564,7 @@ class _$_BundleSearch implements _BundleSearch {
 abstract class _BundleSearch implements BundleSearch {
   const factory _BundleSearch(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score}) = _$_BundleSearch;
@@ -1957,6 +2575,7 @@ abstract class _BundleSearch implements BundleSearch {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1978,7 +2597,8 @@ class _$BundleRequestTearOff {
 
   _BundleRequest call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
@@ -2009,6 +2629,7 @@ const $BundleRequest = _$BundleRequestTearOff();
 
 mixin _$BundleRequest {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
@@ -2030,7 +2651,8 @@ abstract class $BundleRequestCopyWith<$Res> {
       _$BundleRequestCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
           RequestMethod method,
@@ -2115,7 +2737,8 @@ abstract class _$BundleRequestCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
           RequestMethod method,
@@ -2180,7 +2803,8 @@ class __$BundleRequestCopyWithImpl<$Res>
 class _$_BundleRequest implements _BundleRequest {
   const _$_BundleRequest(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
@@ -2201,6 +2825,7 @@ class _$_BundleRequest implements _BundleRequest {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2280,7 +2905,8 @@ class _$_BundleRequest implements _BundleRequest {
 abstract class _BundleRequest implements BundleRequest {
   const factory _BundleRequest(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
@@ -2299,6 +2925,7 @@ abstract class _BundleRequest implements BundleRequest {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -2329,7 +2956,7 @@ class _$BundleResponseTearOff {
 
   _BundleResponse call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String status,
       FhirUri location,
@@ -2352,6 +2979,7 @@ const $BundleResponse = _$BundleResponseTearOff();
 
 mixin _$BundleResponse {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -2370,7 +2998,7 @@ abstract class $BundleResponseCopyWith<$Res> {
       _$BundleResponseCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String status,
       FhirUri location,
@@ -2445,7 +3073,7 @@ abstract class _$BundleResponseCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String status,
       FhirUri location,
@@ -2500,7 +3128,7 @@ class __$BundleResponseCopyWithImpl<$Res>
 class _$_BundleResponse implements _BundleResponse {
   const _$_BundleResponse(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.status,
       this.location,
@@ -2514,6 +3142,7 @@ class _$_BundleResponse implements _BundleResponse {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2580,7 +3209,7 @@ class _$_BundleResponse implements _BundleResponse {
 abstract class _BundleResponse implements BundleResponse {
   const factory _BundleResponse(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String status,
       FhirUri location,
@@ -2593,6 +3222,7 @@ abstract class _BundleResponse implements BundleResponse {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;

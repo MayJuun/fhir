@@ -24,9 +24,9 @@ _$_Coverage _$_$_CoverageFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -85,7 +85,7 @@ Map<String, dynamic> _$_$_CoverageToJson(_$_Coverage instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('issuer', instance.issuer?.toJson());
   writeNotNull('bin', instance.bin?.toJson());
@@ -123,9 +123,9 @@ _$_EligibilityRequest _$_$_EligibilityRequestFromJson(
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -170,7 +170,7 @@ Map<String, dynamic> _$_$_EligibilityRequestToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('ruleset', instance.ruleset?.toJson());
@@ -201,9 +201,9 @@ _$_EnrollmentRequest _$_$_EnrollmentRequestFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -257,7 +257,7 @@ Map<String, dynamic> _$_$_EnrollmentRequestToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('ruleset', instance.ruleset?.toJson());
@@ -291,9 +291,9 @@ _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -346,7 +346,7 @@ Map<String, dynamic> _$_$_EnrollmentResponseToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('request', instance.request?.toJson());
@@ -418,9 +418,9 @@ _$_EligibilityResponse _$_$_EligibilityResponseFromJson(
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -473,7 +473,7 @@ Map<String, dynamic> _$_$_EligibilityResponseToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('request', instance.request?.toJson());

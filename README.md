@@ -1,3 +1,9 @@
+# ToDos
+1. Order of classes in files
+2. Structure of folders (enums?)
+3. How to name subclasses (mostly for dstu2 & stu3)
+4. Ensure lists in dstu2
+
 # FHIR
 
 A Dart/Flutter package for working with FHIR R4 resources.

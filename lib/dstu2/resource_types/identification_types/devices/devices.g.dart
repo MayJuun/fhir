@@ -26,9 +26,9 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -62,7 +62,7 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
         unknownValue: DeviceComponentMeasurementPrinciple.unknown),
     productionSpecification: json['productionSpecification'] == null
         ? null
-        : BackboneElement.fromJson(
+        : DeviceComponentProductionSpecification.fromJson(
             json['productionSpecification'] as Map<String, dynamic>),
     languageCode: json['languageCode'] == null
         ? null
@@ -86,7 +86,7 @@ Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
@@ -171,9 +171,9 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -206,7 +206,8 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
         : Timing.fromJson(json['measurementPeriod'] as Map<String, dynamic>),
     calibration: json['calibration'] == null
         ? null
-        : BackboneElement.fromJson(json['calibration'] as Map<String, dynamic>),
+        : DeviceMetricCalibration.fromJson(
+            json['calibration'] as Map<String, dynamic>),
   );
 }
 
@@ -225,7 +226,7 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
@@ -287,9 +288,9 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -347,7 +348,7 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('type', instance.type?.toJson());
@@ -380,9 +381,9 @@ _$_DeviceComponentProductionSpecification
         Map<String, dynamic> json) {
   return _$_DeviceComponentProductionSpecification(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -408,7 +409,7 @@ Map<String, dynamic> _$_$_DeviceComponentProductionSpecificationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('specType', instance.specType?.toJson());
   writeNotNull('componentId', instance.componentId?.toJson());
@@ -420,9 +421,9 @@ _$_DeviceMetricCalibration _$_$_DeviceMetricCalibrationFromJson(
     Map<String, dynamic> json) {
   return _$_DeviceMetricCalibration(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -447,7 +448,7 @@ Map<String, dynamic> _$_$_DeviceMetricCalibrationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', _$CalibrationTypeEnumMap[instance.type]);
   writeNotNull('state', _$CalibrationStateEnumMap[instance.state]);

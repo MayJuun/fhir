@@ -26,9 +26,9 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -71,10 +71,10 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
         : FhirDateTime.fromJson(json['abatementX'] as String),
     stage: json['stage'] == null
         ? null
-        : BackboneElement.fromJson(json['stage'] as Map<String, dynamic>),
+        : ConditionStage.fromJson(json['stage'] as Map<String, dynamic>),
     evidence: json['evidence'] == null
         ? null
-        : BackboneElement.fromJson(json['evidence'] as Map<String, dynamic>),
+        : ConditionEvidence.fromJson(json['evidence'] as Map<String, dynamic>),
     bodySite: json['bodySite'] == null
         ? null
         : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
@@ -97,7 +97,7 @@ Map<String, dynamic> _$_$_ConditionToJson(_$_Condition instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
@@ -187,9 +187,9 @@ _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -221,7 +221,8 @@ _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
         : FhirUri.fromJson(json['reference'] as String),
     mitigation: json['mitigation'] == null
         ? null
-        : BackboneElement.fromJson(json['mitigation'] as Map<String, dynamic>),
+        : DetectedIssueMitigation.fromJson(
+            json['mitigation'] as Map<String, dynamic>),
   );
 }
 
@@ -240,7 +241,7 @@ Map<String, dynamic> _$_$_DetectedIssueToJson(_$_DetectedIssue instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('category', instance.category?.toJson());
@@ -282,9 +283,9 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -322,7 +323,8 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
         : Annotation.fromJson(json['note'] as Map<String, dynamic>),
     condition: json['condition'] == null
         ? null
-        : BackboneElement.fromJson(json['condition'] as Map<String, dynamic>),
+        : FamilyMemberHistoryCondition.fromJson(
+            json['condition'] as Map<String, dynamic>),
   );
 }
 
@@ -342,7 +344,7 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
@@ -393,9 +395,9 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -429,7 +431,8 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
         : CodeableConcept.fromJson(json['reasonX'] as Map<String, dynamic>),
     performer: json['performer'] == null
         ? null
-        : BackboneElement.fromJson(json['performer'] as Map<String, dynamic>),
+        : ProcedurePerformer.fromJson(
+            json['performer'] as Map<String, dynamic>),
     performedX: json['performedX'] == null
         ? null
         : FhirDateTime.fromJson(json['performedX'] as String),
@@ -460,7 +463,8 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
         : Annotation.fromJson(json['notes'] as Map<String, dynamic>),
     focalDevice: json['focalDevice'] == null
         ? null
-        : BackboneElement.fromJson(json['focalDevice'] as Map<String, dynamic>),
+        : ProcedureFocalDevice.fromJson(
+            json['focalDevice'] as Map<String, dynamic>),
     used: json['used'] == null
         ? null
         : Reference.fromJson(json['used'] as Map<String, dynamic>),
@@ -482,7 +486,7 @@ Map<String, dynamic> _$_$_ProcedureToJson(_$_Procedure instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
@@ -536,9 +540,9 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -567,7 +571,7 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
         : CodeableConcept.fromJson(json['triggerX'] as Map<String, dynamic>),
     investigations: json['investigations'] == null
         ? null
-        : BackboneElement.fromJson(
+        : ClinicalImpressionInvestigations.fromJson(
             json['investigations'] as Map<String, dynamic>),
     protocol: json['protocol'] == null
         ? null
@@ -575,13 +579,15 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
     summary: json['summary'] as String,
     finding: json['finding'] == null
         ? null
-        : BackboneElement.fromJson(json['finding'] as Map<String, dynamic>),
+        : ClinicalImpressionFinding.fromJson(
+            json['finding'] as Map<String, dynamic>),
     resolved: json['resolved'] == null
         ? null
         : CodeableConcept.fromJson(json['resolved'] as Map<String, dynamic>),
     ruledOut: json['ruledOut'] == null
         ? null
-        : BackboneElement.fromJson(json['ruledOut'] as Map<String, dynamic>),
+        : ClinicalImpressionRuledOut.fromJson(
+            json['ruledOut'] as Map<String, dynamic>),
     prognosis: json['prognosis'] as String,
     plan: json['plan'] == null
         ? null
@@ -608,7 +614,7 @@ Map<String, dynamic> _$_$_ClinicalImpressionToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('assessor', instance.assessor?.toJson());
@@ -655,9 +661,9 @@ _$_RiskAssessment _$_$_RiskAssessmentFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -688,7 +694,8 @@ _$_RiskAssessment _$_$_RiskAssessmentFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['basis'] as Map<String, dynamic>),
     prediction: json['prediction'] == null
         ? null
-        : BackboneElement.fromJson(json['prediction'] as Map<String, dynamic>),
+        : RiskAssessmentPrediction.fromJson(
+            json['prediction'] as Map<String, dynamic>),
     mitigation: json['mitigation'] as String,
   );
 }
@@ -708,7 +715,7 @@ Map<String, dynamic> _$_$_RiskAssessmentToJson(_$_RiskAssessment instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('date', instance.date?.toJson());
@@ -743,9 +750,9 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -790,7 +797,8 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
         : Annotation.fromJson(json['note'] as Map<String, dynamic>),
     reaction: json['reaction'] == null
         ? null
-        : BackboneElement.fromJson(json['reaction'] as Map<String, dynamic>),
+        : AllergyIntoleranceReaction.fromJson(
+            json['reaction'] as Map<String, dynamic>),
   );
 }
 
@@ -810,7 +818,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('onset', instance.onset?.toJson());
@@ -867,9 +875,9 @@ const _$AllergyIntoleranceCategoryEnumMap = {
 _$_ConditionStage _$_$_ConditionStageFromJson(Map<String, dynamic> json) {
   return _$_ConditionStage(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -893,7 +901,7 @@ Map<String, dynamic> _$_$_ConditionStageToJson(_$_ConditionStage instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('summary', instance.summary?.toJson());
   writeNotNull('assessment', instance.assessment?.toJson());
@@ -903,9 +911,9 @@ Map<String, dynamic> _$_$_ConditionStageToJson(_$_ConditionStage instance) {
 _$_ConditionEvidence _$_$_ConditionEvidenceFromJson(Map<String, dynamic> json) {
   return _$_ConditionEvidence(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -930,7 +938,7 @@ Map<String, dynamic> _$_$_ConditionEvidenceToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('detail', instance.detail?.toJson());
@@ -942,9 +950,9 @@ _$_DetectedIssueMitigation _$_$_DetectedIssueMitigationFromJson(
   $checkKeys(json, requiredKeys: const ['action']);
   return _$_DetectedIssueMitigation(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -972,7 +980,7 @@ Map<String, dynamic> _$_$_DetectedIssueMitigationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('action', instance.action?.toJson());
   writeNotNull('date', instance.date?.toJson());
@@ -985,9 +993,9 @@ _$_FamilyMemberHistoryCondition _$_$_FamilyMemberHistoryConditionFromJson(
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_FamilyMemberHistoryCondition(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1018,7 +1026,7 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryConditionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('outcome', instance.outcome?.toJson());
@@ -1031,9 +1039,9 @@ _$_ProcedurePerformer _$_$_ProcedurePerformerFromJson(
     Map<String, dynamic> json) {
   return _$_ProcedurePerformer(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1058,7 +1066,7 @@ Map<String, dynamic> _$_$_ProcedurePerformerToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('actor', instance.actor?.toJson());
   writeNotNull('role', instance.role?.toJson());
@@ -1070,9 +1078,9 @@ _$_ProcedureFocalDevice _$_$_ProcedureFocalDeviceFromJson(
   $checkKeys(json, requiredKeys: const ['manipulated']);
   return _$_ProcedureFocalDevice(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1097,7 +1105,7 @@ Map<String, dynamic> _$_$_ProcedureFocalDeviceToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('action', instance.action?.toJson());
   writeNotNull('manipulated', instance.manipulated?.toJson());
@@ -1109,9 +1117,9 @@ _$_ClinicalImpressionInvestigations
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ClinicalImpressionInvestigations(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1136,7 +1144,7 @@ Map<String, dynamic> _$_$_ClinicalImpressionInvestigationsToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('item', instance.item?.toJson());
@@ -1148,9 +1156,9 @@ _$_ClinicalImpressionFinding _$_$_ClinicalImpressionFindingFromJson(
   $checkKeys(json, requiredKeys: const ['item']);
   return _$_ClinicalImpressionFinding(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1173,7 +1181,7 @@ Map<String, dynamic> _$_$_ClinicalImpressionFindingToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('item', instance.item?.toJson());
   writeNotNull('cause', instance.cause);
@@ -1185,9 +1193,9 @@ _$_ClinicalImpressionRuledOut _$_$_ClinicalImpressionRuledOutFromJson(
   $checkKeys(json, requiredKeys: const ['item']);
   return _$_ClinicalImpressionRuledOut(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1210,7 +1218,7 @@ Map<String, dynamic> _$_$_ClinicalImpressionRuledOutToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('item', instance.item?.toJson());
   writeNotNull('reason', instance.reason);
@@ -1222,9 +1230,9 @@ _$_RiskAssessmentPrediction _$_$_RiskAssessmentPredictionFromJson(
   $checkKeys(json, requiredKeys: const ['outcome']);
   return _$_RiskAssessmentPrediction(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1256,7 +1264,7 @@ Map<String, dynamic> _$_$_RiskAssessmentPredictionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('probabilityX', instance.probabilityX?.toJson());
@@ -1271,9 +1279,9 @@ _$_AllergyIntoleranceReaction _$_$_AllergyIntoleranceReactionFromJson(
   $checkKeys(json, requiredKeys: const ['manifestation']);
   return _$_AllergyIntoleranceReaction(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1315,7 +1323,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceReactionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('substance', instance.substance?.toJson());
   writeNotNull('certainty', _$ReactionCertaintyEnumMap[instance.certainty]);

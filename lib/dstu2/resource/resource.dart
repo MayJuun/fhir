@@ -156,7 +156,7 @@ class Resource {
       case 'DocumentReference':
         return DocumentReference.fromJson(json);
       case 'Lists':
-        return Lists.fromJson(json);
+        return List_.fromJson(json);
       case 'Media':
         return Media.fromJson(json);
       case 'Binary':

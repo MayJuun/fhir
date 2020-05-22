@@ -20,6 +20,7 @@ void main() async {
       text = '@freezed\nabstract class $newObj with _\$$newObj '
           '${domainTypes(obj.toLowerCase()) ? 'implements Resource' : ''}{'
           '\nconst factory $newObj ({\n';
+      print(text);
       if (schema['definitions'][obj]['allOf'][1].keys.contains('required')) {
         schema['definitions'][obj]['allOf'][1]['required']
             .forEach((type) => require.add(type));
@@ -121,6 +122,7 @@ String getFileName(String tempObj) {
   if (specializeds.contains(obj.toLowerCase())) {
     return ('/home/grey/dev/fhir/lib/stu3/resource_types/specialized/specialized.dart');
   }
+  return tempObj;
 }
 
 Future<void> writeEnums(List<List<String>> enums, String obj) async {

@@ -22,7 +22,8 @@ class _$PractitionerTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       Boolean active,
@@ -33,8 +34,8 @@ class _$PractitionerTearOff {
           PractitionerGender gender,
       Date birthDate,
       Attachment photo,
-      BackboneElement practitionerRole,
-      BackboneElement qualification,
+      PractitionerPractitionerRole practitionerRole,
+      PractitionerQualification qualification,
       CodeableConcept communication}) {
     return _Practitioner(
       id: id,
@@ -70,6 +71,7 @@ mixin _$Practitioner {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -81,8 +83,8 @@ mixin _$Practitioner {
   PractitionerGender get gender;
   Date get birthDate;
   Attachment get photo;
-  BackboneElement get practitionerRole;
-  BackboneElement get qualification;
+  PractitionerPractitionerRole get practitionerRole;
+  PractitionerQualification get qualification;
   CodeableConcept get communication;
 
   Map<String, dynamic> toJson();
@@ -100,7 +102,8 @@ abstract class $PractitionerCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       Boolean active,
@@ -111,8 +114,8 @@ abstract class $PractitionerCopyWith<$Res> {
           PractitionerGender gender,
       Date birthDate,
       Attachment photo,
-      BackboneElement practitionerRole,
-      BackboneElement qualification,
+      PractitionerPractitionerRole practitionerRole,
+      PractitionerQualification qualification,
       CodeableConcept communication});
 
   $MetaCopyWith<$Res> get meta;
@@ -124,8 +127,8 @@ abstract class $PractitionerCopyWith<$Res> {
   $ContactPointCopyWith<$Res> get telecom;
   $AddressCopyWith<$Res> get address;
   $AttachmentCopyWith<$Res> get photo;
-  $BackboneElementCopyWith<$Res> get practitionerRole;
-  $BackboneElementCopyWith<$Res> get qualification;
+  $PractitionerPractitionerRoleCopyWith<$Res> get practitionerRole;
+  $PractitionerQualificationCopyWith<$Res> get qualification;
   $CodeableConceptCopyWith<$Res> get communication;
 }
 
@@ -185,10 +188,10 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
       photo: photo == freezed ? _value.photo : photo as Attachment,
       practitionerRole: practitionerRole == freezed
           ? _value.practitionerRole
-          : practitionerRole as BackboneElement,
+          : practitionerRole as PractitionerPractitionerRole,
       qualification: qualification == freezed
           ? _value.qualification
-          : qualification as BackboneElement,
+          : qualification as PractitionerQualification,
       communication: communication == freezed
           ? _value.communication
           : communication as CodeableConcept,
@@ -286,21 +289,23 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get practitionerRole {
+  $PractitionerPractitionerRoleCopyWith<$Res> get practitionerRole {
     if (_value.practitionerRole == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.practitionerRole, (value) {
+    return $PractitionerPractitionerRoleCopyWith<$Res>(_value.practitionerRole,
+        (value) {
       return _then(_value.copyWith(practitionerRole: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get qualification {
+  $PractitionerQualificationCopyWith<$Res> get qualification {
     if (_value.qualification == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.qualification, (value) {
+    return $PractitionerQualificationCopyWith<$Res>(_value.qualification,
+        (value) {
       return _then(_value.copyWith(qualification: value));
     });
   }
@@ -329,7 +334,8 @@ abstract class _$PractitionerCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       Boolean active,
@@ -340,8 +346,8 @@ abstract class _$PractitionerCopyWith<$Res>
           PractitionerGender gender,
       Date birthDate,
       Attachment photo,
-      BackboneElement practitionerRole,
-      BackboneElement qualification,
+      PractitionerPractitionerRole practitionerRole,
+      PractitionerQualification qualification,
       CodeableConcept communication});
 
   @override
@@ -363,9 +369,9 @@ abstract class _$PractitionerCopyWith<$Res>
   @override
   $AttachmentCopyWith<$Res> get photo;
   @override
-  $BackboneElementCopyWith<$Res> get practitionerRole;
+  $PractitionerPractitionerRoleCopyWith<$Res> get practitionerRole;
   @override
-  $BackboneElementCopyWith<$Res> get qualification;
+  $PractitionerQualificationCopyWith<$Res> get qualification;
   @override
   $CodeableConceptCopyWith<$Res> get communication;
 }
@@ -428,10 +434,10 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
       photo: photo == freezed ? _value.photo : photo as Attachment,
       practitionerRole: practitionerRole == freezed
           ? _value.practitionerRole
-          : practitionerRole as BackboneElement,
+          : practitionerRole as PractitionerPractitionerRole,
       qualification: qualification == freezed
           ? _value.qualification
-          : qualification as BackboneElement,
+          : qualification as PractitionerQualification,
       communication: communication == freezed
           ? _value.communication
           : communication as CodeableConcept,
@@ -448,7 +454,7 @@ class _$_Practitioner implements _Practitioner {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
@@ -478,6 +484,7 @@ class _$_Practitioner implements _Practitioner {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -499,9 +506,9 @@ class _$_Practitioner implements _Practitioner {
   @override
   final Attachment photo;
   @override
-  final BackboneElement practitionerRole;
+  final PractitionerPractitionerRole practitionerRole;
   @override
-  final BackboneElement qualification;
+  final PractitionerQualification qualification;
   @override
   final CodeableConcept communication;
 
@@ -607,7 +614,8 @@ abstract class _Practitioner implements Practitioner {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       Boolean active,
@@ -618,8 +626,8 @@ abstract class _Practitioner implements Practitioner {
           PractitionerGender gender,
       Date birthDate,
       Attachment photo,
-      BackboneElement practitionerRole,
-      BackboneElement qualification,
+      PractitionerPractitionerRole practitionerRole,
+      PractitionerQualification qualification,
       CodeableConcept communication}) = _$_Practitioner;
 
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
@@ -638,6 +646,7 @@ abstract class _Practitioner implements Practitioner {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -659,9 +668,9 @@ abstract class _Practitioner implements Practitioner {
   @override
   Attachment get photo;
   @override
-  BackboneElement get practitionerRole;
+  PractitionerPractitionerRole get practitionerRole;
   @override
-  BackboneElement get qualification;
+  PractitionerQualification get qualification;
   @override
   CodeableConcept get communication;
   @override
@@ -682,7 +691,8 @@ class _$RelatedPersonTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
@@ -730,6 +740,7 @@ mixin _$RelatedPerson {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -760,7 +771,8 @@ abstract class $RelatedPersonCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true)
@@ -984,7 +996,8 @@ abstract class _$RelatedPersonCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true)
@@ -1098,7 +1111,7 @@ class _$_RelatedPerson implements _RelatedPerson {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       @required @JsonKey(required: true) this.patient,
@@ -1128,6 +1141,7 @@ class _$_RelatedPerson implements _RelatedPerson {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1252,7 +1266,8 @@ abstract class _RelatedPerson implements RelatedPerson {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
@@ -1284,6 +1299,7 @@ abstract class _RelatedPerson implements RelatedPerson {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1327,7 +1343,7 @@ class _$PatientTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       Boolean active,
@@ -1340,12 +1356,12 @@ class _$PatientTearOff {
       CodeableConcept maritalStatus,
       Boolean multipleBirthX,
       Attachment photo,
-      BackboneElement contact,
-      BackboneElement animal,
-      BackboneElement communication,
+      PatientContact contact,
+      PatientAnimal animal,
+      PatientCommunication communication,
       Reference careProvider,
       Reference managingOrganization,
-      BackboneElement link}) {
+      PatientLink link}) {
     return _Patient(
       id: id,
       meta: meta,
@@ -1386,6 +1402,7 @@ mixin _$Patient {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -1400,12 +1417,12 @@ mixin _$Patient {
   CodeableConcept get maritalStatus;
   Boolean get multipleBirthX;
   Attachment get photo;
-  BackboneElement get contact;
-  BackboneElement get animal;
-  BackboneElement get communication;
+  PatientContact get contact;
+  PatientAnimal get animal;
+  PatientCommunication get communication;
   Reference get careProvider;
   Reference get managingOrganization;
-  BackboneElement get link;
+  PatientLink get link;
 
   Map<String, dynamic> toJson();
   $PatientCopyWith<Patient> get copyWith;
@@ -1421,7 +1438,7 @@ abstract class $PatientCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       Boolean active,
@@ -1434,12 +1451,12 @@ abstract class $PatientCopyWith<$Res> {
       CodeableConcept maritalStatus,
       Boolean multipleBirthX,
       Attachment photo,
-      BackboneElement contact,
-      BackboneElement animal,
-      BackboneElement communication,
+      PatientContact contact,
+      PatientAnimal animal,
+      PatientCommunication communication,
       Reference careProvider,
       Reference managingOrganization,
-      BackboneElement link});
+      PatientLink link});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -1451,12 +1468,12 @@ abstract class $PatientCopyWith<$Res> {
   $AddressCopyWith<$Res> get address;
   $CodeableConceptCopyWith<$Res> get maritalStatus;
   $AttachmentCopyWith<$Res> get photo;
-  $BackboneElementCopyWith<$Res> get contact;
-  $BackboneElementCopyWith<$Res> get animal;
-  $BackboneElementCopyWith<$Res> get communication;
+  $PatientContactCopyWith<$Res> get contact;
+  $PatientAnimalCopyWith<$Res> get animal;
+  $PatientCommunicationCopyWith<$Res> get communication;
   $ReferenceCopyWith<$Res> get careProvider;
   $ReferenceCopyWith<$Res> get managingOrganization;
-  $BackboneElementCopyWith<$Res> get link;
+  $PatientLinkCopyWith<$Res> get link;
 }
 
 class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
@@ -1526,18 +1543,18 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
           ? _value.multipleBirthX
           : multipleBirthX as Boolean,
       photo: photo == freezed ? _value.photo : photo as Attachment,
-      contact: contact == freezed ? _value.contact : contact as BackboneElement,
-      animal: animal == freezed ? _value.animal : animal as BackboneElement,
+      contact: contact == freezed ? _value.contact : contact as PatientContact,
+      animal: animal == freezed ? _value.animal : animal as PatientAnimal,
       communication: communication == freezed
           ? _value.communication
-          : communication as BackboneElement,
+          : communication as PatientCommunication,
       careProvider: careProvider == freezed
           ? _value.careProvider
           : careProvider as Reference,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
-      link: link == freezed ? _value.link : link as BackboneElement,
+      link: link == freezed ? _value.link : link as PatientLink,
     ));
   }
 
@@ -1642,31 +1659,31 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get contact {
+  $PatientContactCopyWith<$Res> get contact {
     if (_value.contact == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.contact, (value) {
+    return $PatientContactCopyWith<$Res>(_value.contact, (value) {
       return _then(_value.copyWith(contact: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get animal {
+  $PatientAnimalCopyWith<$Res> get animal {
     if (_value.animal == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.animal, (value) {
+    return $PatientAnimalCopyWith<$Res>(_value.animal, (value) {
       return _then(_value.copyWith(animal: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get communication {
+  $PatientCommunicationCopyWith<$Res> get communication {
     if (_value.communication == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.communication, (value) {
+    return $PatientCommunicationCopyWith<$Res>(_value.communication, (value) {
       return _then(_value.copyWith(communication: value));
     });
   }
@@ -1692,11 +1709,11 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get link {
+  $PatientLinkCopyWith<$Res> get link {
     if (_value.link == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.link, (value) {
+    return $PatientLinkCopyWith<$Res>(_value.link, (value) {
       return _then(_value.copyWith(link: value));
     });
   }
@@ -1713,7 +1730,7 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       Boolean active,
@@ -1726,12 +1743,12 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       CodeableConcept maritalStatus,
       Boolean multipleBirthX,
       Attachment photo,
-      BackboneElement contact,
-      BackboneElement animal,
-      BackboneElement communication,
+      PatientContact contact,
+      PatientAnimal animal,
+      PatientCommunication communication,
       Reference careProvider,
       Reference managingOrganization,
-      BackboneElement link});
+      PatientLink link});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1754,17 +1771,17 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
   @override
   $AttachmentCopyWith<$Res> get photo;
   @override
-  $BackboneElementCopyWith<$Res> get contact;
+  $PatientContactCopyWith<$Res> get contact;
   @override
-  $BackboneElementCopyWith<$Res> get animal;
+  $PatientAnimalCopyWith<$Res> get animal;
   @override
-  $BackboneElementCopyWith<$Res> get communication;
+  $PatientCommunicationCopyWith<$Res> get communication;
   @override
   $ReferenceCopyWith<$Res> get careProvider;
   @override
   $ReferenceCopyWith<$Res> get managingOrganization;
   @override
-  $BackboneElementCopyWith<$Res> get link;
+  $PatientLinkCopyWith<$Res> get link;
 }
 
 class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
@@ -1835,18 +1852,18 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
           ? _value.multipleBirthX
           : multipleBirthX as Boolean,
       photo: photo == freezed ? _value.photo : photo as Attachment,
-      contact: contact == freezed ? _value.contact : contact as BackboneElement,
-      animal: animal == freezed ? _value.animal : animal as BackboneElement,
+      contact: contact == freezed ? _value.contact : contact as PatientContact,
+      animal: animal == freezed ? _value.animal : animal as PatientAnimal,
       communication: communication == freezed
           ? _value.communication
-          : communication as BackboneElement,
+          : communication as PatientCommunication,
       careProvider: careProvider == freezed
           ? _value.careProvider
           : careProvider as Reference,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
-      link: link == freezed ? _value.link : link as BackboneElement,
+      link: link == freezed ? _value.link : link as PatientLink,
     ));
   }
 }
@@ -1860,7 +1877,7 @@ class _$_Patient implements _Patient {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
@@ -1896,6 +1913,7 @@ class _$_Patient implements _Patient {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1923,17 +1941,17 @@ class _$_Patient implements _Patient {
   @override
   final Attachment photo;
   @override
-  final BackboneElement contact;
+  final PatientContact contact;
   @override
-  final BackboneElement animal;
+  final PatientAnimal animal;
   @override
-  final BackboneElement communication;
+  final PatientCommunication communication;
   @override
   final Reference careProvider;
   @override
   final Reference managingOrganization;
   @override
-  final BackboneElement link;
+  final PatientLink link;
 
   @override
   String toString() {
@@ -2059,7 +2077,7 @@ abstract class _Patient implements Patient {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       Boolean active,
@@ -2072,12 +2090,12 @@ abstract class _Patient implements Patient {
       CodeableConcept maritalStatus,
       Boolean multipleBirthX,
       Attachment photo,
-      BackboneElement contact,
-      BackboneElement animal,
-      BackboneElement communication,
+      PatientContact contact,
+      PatientAnimal animal,
+      PatientCommunication communication,
       Reference careProvider,
       Reference managingOrganization,
-      BackboneElement link}) = _$_Patient;
+      PatientLink link}) = _$_Patient;
 
   factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
 
@@ -2094,6 +2112,7 @@ abstract class _Patient implements Patient {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -2121,17 +2140,17 @@ abstract class _Patient implements Patient {
   @override
   Attachment get photo;
   @override
-  BackboneElement get contact;
+  PatientContact get contact;
   @override
-  BackboneElement get animal;
+  PatientAnimal get animal;
   @override
-  BackboneElement get communication;
+  PatientCommunication get communication;
   @override
   Reference get careProvider;
   @override
   Reference get managingOrganization;
   @override
-  BackboneElement get link;
+  PatientLink get link;
   @override
   _$PatientCopyWith<_Patient> get copyWith;
 }
@@ -2146,7 +2165,7 @@ class _$PractitionerPractitionerRoleTearOff {
 
   _PractitionerPractitionerRole call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
@@ -2173,6 +2192,7 @@ const $PractitionerPractitionerRole = _$PractitionerPractitionerRoleTearOff();
 
 mixin _$PractitionerPractitionerRole {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Reference get managingOrganization;
@@ -2194,7 +2214,7 @@ abstract class $PractitionerPractitionerRoleCopyWith<$Res> {
       _$PractitionerPractitionerRoleCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
@@ -2346,7 +2366,7 @@ abstract class _$PractitionerPractitionerRoleCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
@@ -2425,7 +2445,7 @@ class __$PractitionerPractitionerRoleCopyWithImpl<$Res>
 class _$_PractitionerPractitionerRole implements _PractitionerPractitionerRole {
   const _$_PractitionerPractitionerRole(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.managingOrganization,
       this.role,
@@ -2440,6 +2460,7 @@ class _$_PractitionerPractitionerRole implements _PractitionerPractitionerRole {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2519,7 +2540,7 @@ abstract class _PractitionerPractitionerRole
     implements PractitionerPractitionerRole {
   const factory _PractitionerPractitionerRole(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
@@ -2534,6 +2555,7 @@ abstract class _PractitionerPractitionerRole
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -2564,7 +2586,7 @@ class _$PractitionerQualificationTearOff {
 
   _PractitionerQualification call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required @JsonKey(required: true) CodeableConcept code,
@@ -2587,6 +2609,7 @@ const $PractitionerQualification = _$PractitionerQualificationTearOff();
 
 mixin _$PractitionerQualification {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -2605,7 +2628,7 @@ abstract class $PractitionerQualificationCopyWith<$Res> {
       _$PractitionerQualificationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true) CodeableConcept code,
@@ -2723,7 +2746,7 @@ abstract class _$PractitionerQualificationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true) CodeableConcept code,
@@ -2786,7 +2809,7 @@ class __$PractitionerQualificationCopyWithImpl<$Res>
 class _$_PractitionerQualification implements _PractitionerQualification {
   const _$_PractitionerQualification(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       @required @JsonKey(required: true) this.code,
@@ -2800,6 +2823,7 @@ class _$_PractitionerQualification implements _PractitionerQualification {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2867,7 +2891,7 @@ class _$_PractitionerQualification implements _PractitionerQualification {
 abstract class _PractitionerQualification implements PractitionerQualification {
   const factory _PractitionerQualification(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required @JsonKey(required: true) CodeableConcept code,
@@ -2880,6 +2904,7 @@ abstract class _PractitionerQualification implements PractitionerQualification {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -2905,7 +2930,7 @@ class _$PatientContactTearOff {
 
   _PatientContact call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept relationship,
       HumanName name,
@@ -2934,6 +2959,7 @@ const $PatientContact = _$PatientContactTearOff();
 
 mixin _$PatientContact {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get relationship;
@@ -2955,7 +2981,7 @@ abstract class $PatientContactCopyWith<$Res> {
       _$PatientContactCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept relationship,
       HumanName name,
@@ -3107,7 +3133,7 @@ abstract class _$PatientContactCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept relationship,
       HumanName name,
@@ -3185,7 +3211,7 @@ class __$PatientContactCopyWithImpl<$Res>
 class _$_PatientContact implements _PatientContact {
   const _$_PatientContact(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.relationship,
       this.name,
@@ -3201,6 +3227,7 @@ class _$_PatientContact implements _PatientContact {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3284,7 +3311,7 @@ class _$_PatientContact implements _PatientContact {
 abstract class _PatientContact implements PatientContact {
   const factory _PatientContact(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept relationship,
       HumanName name,
@@ -3300,6 +3327,7 @@ abstract class _PatientContact implements PatientContact {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3331,7 +3359,7 @@ class _$PatientAnimalTearOff {
 
   _PatientAnimal call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) CodeableConcept species,
       CodeableConcept breed,
@@ -3352,6 +3380,7 @@ const $PatientAnimal = _$PatientAnimalTearOff();
 
 mixin _$PatientAnimal {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -3369,7 +3398,7 @@ abstract class $PatientAnimalCopyWith<$Res> {
       _$PatientAnimalCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) CodeableConcept species,
       CodeableConcept breed,
@@ -3474,7 +3503,7 @@ abstract class _$PatientAnimalCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) CodeableConcept species,
       CodeableConcept breed,
@@ -3532,7 +3561,7 @@ class __$PatientAnimalCopyWithImpl<$Res>
 class _$_PatientAnimal implements _PatientAnimal {
   const _$_PatientAnimal(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.species,
       this.breed,
@@ -3545,6 +3574,7 @@ class _$_PatientAnimal implements _PatientAnimal {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3606,7 +3636,7 @@ class _$_PatientAnimal implements _PatientAnimal {
 abstract class _PatientAnimal implements PatientAnimal {
   const factory _PatientAnimal(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) CodeableConcept species,
       CodeableConcept breed,
@@ -3618,6 +3648,7 @@ abstract class _PatientAnimal implements PatientAnimal {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3641,7 +3672,7 @@ class _$PatientCommunicationTearOff {
 
   _PatientCommunication call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) CodeableConcept language,
       Boolean preferred}) {
@@ -3660,6 +3691,7 @@ const $PatientCommunication = _$PatientCommunicationTearOff();
 
 mixin _$PatientCommunication {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -3676,7 +3708,7 @@ abstract class $PatientCommunicationCopyWith<$Res> {
       _$PatientCommunicationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) CodeableConcept language,
       Boolean preferred});
@@ -3755,7 +3787,7 @@ abstract class _$PatientCommunicationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) CodeableConcept language,
       Boolean preferred});
@@ -3805,7 +3837,7 @@ class __$PatientCommunicationCopyWithImpl<$Res>
 class _$_PatientCommunication implements _PatientCommunication {
   const _$_PatientCommunication(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.language,
       this.preferred})
@@ -3817,6 +3849,7 @@ class _$_PatientCommunication implements _PatientCommunication {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3874,7 +3907,7 @@ class _$_PatientCommunication implements _PatientCommunication {
 abstract class _PatientCommunication implements PatientCommunication {
   const factory _PatientCommunication(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) CodeableConcept language,
       Boolean preferred}) = _$_PatientCommunication;
@@ -3885,6 +3918,7 @@ abstract class _PatientCommunication implements PatientCommunication {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3906,7 +3940,8 @@ class _$PatientLinkTearOff {
 
   _PatientLink call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -3929,6 +3964,7 @@ const $PatientLink = _$PatientLinkTearOff();
 
 mixin _$PatientLink {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -3946,7 +3982,8 @@ abstract class $PatientLinkCopyWith<$Res> {
       _$PatientLinkCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           Reference other,
@@ -4025,7 +4062,8 @@ abstract class _$PatientLinkCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           Reference other,
@@ -4075,7 +4113,8 @@ class __$PatientLinkCopyWithImpl<$Res> extends _$PatientLinkCopyWithImpl<$Res>
 class _$_PatientLink implements _PatientLink {
   const _$_PatientLink(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true)
@@ -4092,6 +4131,7 @@ class _$_PatientLink implements _PatientLink {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -4148,7 +4188,8 @@ class _$_PatientLink implements _PatientLink {
 abstract class _PatientLink implements PatientLink {
   const factory _PatientLink(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -4163,6 +4204,7 @@ abstract class _PatientLink implements PatientLink {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;

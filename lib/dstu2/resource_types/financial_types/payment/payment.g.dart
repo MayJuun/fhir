@@ -25,9 +25,9 @@ _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -80,7 +80,7 @@ Map<String, dynamic> _$_$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('ruleset', instance.ruleset?.toJson());
@@ -115,9 +115,9 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -156,7 +156,8 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
             json['requestOrganization'] as Map<String, dynamic>),
     detail: json['detail'] == null
         ? null
-        : BackboneElement.fromJson(json['detail'] as Map<String, dynamic>),
+        : PaymentReconciliationDetail.fromJson(
+            json['detail'] as Map<String, dynamic>),
     form: json['form'] == null
         ? null
         : Coding.fromJson(json['form'] as Map<String, dynamic>),
@@ -165,7 +166,8 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
         : Quantity.fromJson(json['total'] as Map<String, dynamic>),
     note: json['note'] == null
         ? null
-        : BackboneElement.fromJson(json['note'] as Map<String, dynamic>),
+        : PaymentReconciliationNote.fromJson(
+            json['note'] as Map<String, dynamic>),
   );
 }
 
@@ -185,7 +187,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('request', instance.request?.toJson());
@@ -249,9 +251,9 @@ _$_PaymentReconciliationDetail _$_$_PaymentReconciliationDetailFromJson(
   $checkKeys(json, requiredKeys: const ['type']);
   return _$_PaymentReconciliationDetail(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -289,7 +291,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationDetailToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('request', instance.request?.toJson());
@@ -305,9 +307,9 @@ _$_PaymentReconciliationNote _$_$_PaymentReconciliationNoteFromJson(
     Map<String, dynamic> json) {
   return _$_PaymentReconciliationNote(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -330,7 +332,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationNoteToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('text', instance.text);

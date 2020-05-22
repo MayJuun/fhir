@@ -22,7 +22,8 @@ class _$OrderResponseTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
@@ -65,6 +66,7 @@ mixin _$OrderResponse {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -92,7 +94,8 @@ abstract class $OrderResponseCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true)
@@ -266,7 +269,8 @@ abstract class _$OrderResponseCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true)
@@ -366,7 +370,8 @@ class _$_OrderResponse implements _OrderResponse {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       @required
@@ -398,6 +403,7 @@ class _$_OrderResponse implements _OrderResponse {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -506,7 +512,8 @@ abstract class _OrderResponse implements OrderResponse {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
@@ -536,6 +543,7 @@ abstract class _OrderResponse implements OrderResponse {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -573,7 +581,7 @@ class _$OrderTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime date,
@@ -581,7 +589,7 @@ class _$OrderTearOff {
       Reference source,
       Reference target,
       CodeableConcept reasonX,
-      BackboneElement when,
+      OrderWhen when,
       @required @JsonKey(required: true) Reference detail}) {
     return _Order(
       id: id,
@@ -614,6 +622,7 @@ mixin _$Order {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -622,7 +631,7 @@ mixin _$Order {
   Reference get source;
   Reference get target;
   CodeableConcept get reasonX;
-  BackboneElement get when;
+  OrderWhen get when;
   @JsonKey(required: true)
   Reference get detail;
 
@@ -640,7 +649,7 @@ abstract class $OrderCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime date,
@@ -648,7 +657,7 @@ abstract class $OrderCopyWith<$Res> {
       Reference source,
       Reference target,
       CodeableConcept reasonX,
-      BackboneElement when,
+      OrderWhen when,
       @JsonKey(required: true) Reference detail});
 
   $MetaCopyWith<$Res> get meta;
@@ -660,7 +669,7 @@ abstract class $OrderCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get source;
   $ReferenceCopyWith<$Res> get target;
   $CodeableConceptCopyWith<$Res> get reasonX;
-  $BackboneElementCopyWith<$Res> get when;
+  $OrderWhenCopyWith<$Res> get when;
   $ReferenceCopyWith<$Res> get detail;
 }
 
@@ -713,7 +722,7 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
       source: source == freezed ? _value.source : source as Reference,
       target: target == freezed ? _value.target : target as Reference,
       reasonX: reasonX == freezed ? _value.reasonX : reasonX as CodeableConcept,
-      when: when == freezed ? _value.when : when as BackboneElement,
+      when: when == freezed ? _value.when : when as OrderWhen,
       detail: detail == freezed ? _value.detail : detail as Reference,
     ));
   }
@@ -809,11 +818,11 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get when {
+  $OrderWhenCopyWith<$Res> get when {
     if (_value.when == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.when, (value) {
+    return $OrderWhenCopyWith<$Res>(_value.when, (value) {
       return _then(_value.copyWith(when: value));
     });
   }
@@ -840,7 +849,7 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime date,
@@ -848,7 +857,7 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
       Reference source,
       Reference target,
       CodeableConcept reasonX,
-      BackboneElement when,
+      OrderWhen when,
       @JsonKey(required: true) Reference detail});
 
   @override
@@ -870,7 +879,7 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
   @override
   $CodeableConceptCopyWith<$Res> get reasonX;
   @override
-  $BackboneElementCopyWith<$Res> get when;
+  $OrderWhenCopyWith<$Res> get when;
   @override
   $ReferenceCopyWith<$Res> get detail;
 }
@@ -925,7 +934,7 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
       source: source == freezed ? _value.source : source as Reference,
       target: target == freezed ? _value.target : target as Reference,
       reasonX: reasonX == freezed ? _value.reasonX : reasonX as CodeableConcept,
-      when: when == freezed ? _value.when : when as BackboneElement,
+      when: when == freezed ? _value.when : when as OrderWhen,
       detail: detail == freezed ? _value.detail : detail as Reference,
     ));
   }
@@ -940,7 +949,7 @@ class _$_Order implements _Order {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.date,
@@ -968,6 +977,7 @@ class _$_Order implements _Order {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -984,7 +994,7 @@ class _$_Order implements _Order {
   @override
   final CodeableConcept reasonX;
   @override
-  final BackboneElement when;
+  final OrderWhen when;
   @override
   @JsonKey(required: true)
   final Reference detail;
@@ -1078,7 +1088,7 @@ abstract class _Order implements Order {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime date,
@@ -1086,7 +1096,7 @@ abstract class _Order implements Order {
       Reference source,
       Reference target,
       CodeableConcept reasonX,
-      BackboneElement when,
+      OrderWhen when,
       @required @JsonKey(required: true) Reference detail}) = _$_Order;
 
   factory _Order.fromJson(Map<String, dynamic> json) = _$_Order.fromJson;
@@ -1104,6 +1114,7 @@ abstract class _Order implements Order {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1120,7 +1131,7 @@ abstract class _Order implements Order {
   @override
   CodeableConcept get reasonX;
   @override
-  BackboneElement get when;
+  OrderWhen get when;
   @override
   @JsonKey(required: true)
   Reference get detail;
@@ -1142,7 +1153,8 @@ class _$DeviceUseRequestTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept bodySiteX,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
@@ -1199,6 +1211,7 @@ mixin _$DeviceUseRequest {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get bodySiteX;
@@ -1234,7 +1247,8 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept bodySiteX,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
@@ -1480,7 +1494,8 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept bodySiteX,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
@@ -1616,7 +1631,8 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.bodySiteX,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
@@ -1656,6 +1672,7 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1801,7 +1818,8 @@ abstract class _DeviceUseRequest implements DeviceUseRequest {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept bodySiteX,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
@@ -1839,6 +1857,7 @@ abstract class _DeviceUseRequest implements DeviceUseRequest {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1890,7 +1909,7 @@ class _$DeviceUseStatementTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept bodySiteX,
       Period whenUsed,
@@ -1933,6 +1952,7 @@ mixin _$DeviceUseStatement {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get bodySiteX;
@@ -1962,7 +1982,7 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept bodySiteX,
       Period whenUsed,
@@ -2174,7 +2194,7 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept bodySiteX,
       Period whenUsed,
@@ -2285,7 +2305,7 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.bodySiteX,
       this.whenUsed,
@@ -2315,6 +2335,7 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2434,7 +2455,7 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept bodySiteX,
       Period whenUsed,
@@ -2462,6 +2483,7 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -2503,13 +2525,14 @@ class _$CommunicationRequestTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       Reference sender,
       Reference recipient,
-      BackboneElement payload,
+      CommunicationRequestPayload payload,
       CodeableConcept medium,
       Reference requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
@@ -2557,13 +2580,14 @@ mixin _$CommunicationRequest {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
   CodeableConcept get category;
   Reference get sender;
   Reference get recipient;
-  BackboneElement get payload;
+  CommunicationRequestPayload get payload;
   CodeableConcept get medium;
   Reference get requester;
   @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
@@ -2590,13 +2614,14 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       Reference sender,
       Reference recipient,
-      BackboneElement payload,
+      CommunicationRequestPayload payload,
       CodeableConcept medium,
       Reference requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
@@ -2616,7 +2641,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get category;
   $ReferenceCopyWith<$Res> get sender;
   $ReferenceCopyWith<$Res> get recipient;
-  $BackboneElementCopyWith<$Res> get payload;
+  $CommunicationRequestPayloadCopyWith<$Res> get payload;
   $CodeableConceptCopyWith<$Res> get medium;
   $ReferenceCopyWith<$Res> get requester;
   $ReferenceCopyWith<$Res> get encounter;
@@ -2681,7 +2706,9 @@ class _$CommunicationRequestCopyWithImpl<$Res>
       sender: sender == freezed ? _value.sender : sender as Reference,
       recipient:
           recipient == freezed ? _value.recipient : recipient as Reference,
-      payload: payload == freezed ? _value.payload : payload as BackboneElement,
+      payload: payload == freezed
+          ? _value.payload
+          : payload as CommunicationRequestPayload,
       medium: medium == freezed ? _value.medium : medium as CodeableConcept,
       requester:
           requester == freezed ? _value.requester : requester as Reference,
@@ -2784,11 +2811,11 @@ class _$CommunicationRequestCopyWithImpl<$Res>
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get payload {
+  $CommunicationRequestPayloadCopyWith<$Res> get payload {
     if (_value.payload == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.payload, (value) {
+    return $CommunicationRequestPayloadCopyWith<$Res>(_value.payload, (value) {
       return _then(_value.copyWith(payload: value));
     });
   }
@@ -2867,13 +2894,14 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       Reference sender,
       Reference recipient,
-      BackboneElement payload,
+      CommunicationRequestPayload payload,
       CodeableConcept medium,
       Reference requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
@@ -2902,7 +2930,7 @@ abstract class _$CommunicationRequestCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get recipient;
   @override
-  $BackboneElementCopyWith<$Res> get payload;
+  $CommunicationRequestPayloadCopyWith<$Res> get payload;
   @override
   $CodeableConceptCopyWith<$Res> get medium;
   @override
@@ -2975,7 +3003,9 @@ class __$CommunicationRequestCopyWithImpl<$Res>
       sender: sender == freezed ? _value.sender : sender as Reference,
       recipient:
           recipient == freezed ? _value.recipient : recipient as Reference,
-      payload: payload == freezed ? _value.payload : payload as BackboneElement,
+      payload: payload == freezed
+          ? _value.payload
+          : payload as CommunicationRequestPayload,
       medium: medium == freezed ? _value.medium : medium as CodeableConcept,
       requester:
           requester == freezed ? _value.requester : requester as Reference,
@@ -3007,7 +3037,8 @@ class _$_CommunicationRequest implements _CommunicationRequest {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.category,
@@ -3041,6 +3072,7 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3053,7 +3085,7 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   @override
   final Reference recipient;
   @override
-  final BackboneElement payload;
+  final CommunicationRequestPayload payload;
   @override
   final CodeableConcept medium;
   @override
@@ -3189,13 +3221,14 @@ abstract class _CommunicationRequest implements CommunicationRequest {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       Reference sender,
       Reference recipient,
-      BackboneElement payload,
+      CommunicationRequestPayload payload,
       CodeableConcept medium,
       Reference requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
@@ -3223,6 +3256,7 @@ abstract class _CommunicationRequest implements CommunicationRequest {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3235,7 +3269,7 @@ abstract class _CommunicationRequest implements CommunicationRequest {
   @override
   Reference get recipient;
   @override
-  BackboneElement get payload;
+  CommunicationRequestPayload get payload;
   @override
   CodeableConcept get medium;
   @override
@@ -3268,7 +3302,7 @@ class _$OrderWhenTearOff {
 
   _OrderWhen call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule}) {
@@ -3287,6 +3321,7 @@ const $OrderWhen = _$OrderWhenTearOff();
 
 mixin _$OrderWhen {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get code;
@@ -3301,7 +3336,7 @@ abstract class $OrderWhenCopyWith<$Res> {
       _$OrderWhenCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule});
@@ -3388,7 +3423,7 @@ abstract class _$OrderWhenCopyWith<$Res> implements $OrderWhenCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule});
@@ -3437,7 +3472,7 @@ class __$OrderWhenCopyWithImpl<$Res> extends _$OrderWhenCopyWithImpl<$Res>
 class _$_OrderWhen implements _OrderWhen {
   const _$_OrderWhen(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
       this.schedule});
@@ -3448,6 +3483,7 @@ class _$_OrderWhen implements _OrderWhen {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3502,7 +3538,7 @@ class _$_OrderWhen implements _OrderWhen {
 abstract class _OrderWhen implements OrderWhen {
   const factory _OrderWhen(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule}) = _$_OrderWhen;
@@ -3513,6 +3549,7 @@ abstract class _OrderWhen implements OrderWhen {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3534,7 +3571,7 @@ class _$CommunicationRequestPayloadTearOff {
 
   _CommunicationRequestPayload call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String contentX}) {
     return _CommunicationRequestPayload(
@@ -3551,6 +3588,7 @@ const $CommunicationRequestPayload = _$CommunicationRequestPayloadTearOff();
 
 mixin _$CommunicationRequestPayload {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -3568,7 +3606,7 @@ abstract class $CommunicationRequestPayloadCopyWith<$Res> {
       _$CommunicationRequestPayloadCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String contentX});
 
@@ -3633,7 +3671,7 @@ abstract class _$CommunicationRequestPayloadCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String contentX});
 
@@ -3679,7 +3717,7 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
 class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
   const _$_CommunicationRequestPayload(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.contentX})
       : assert(contentX != null);
@@ -3690,6 +3728,7 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3742,7 +3781,7 @@ abstract class _CommunicationRequestPayload
     implements CommunicationRequestPayload {
   const factory _CommunicationRequestPayload(
           {Id id,
-          FhirExtension extension_,
+          @JsonKey(name: 'extension') FhirExtension extension_,
           FhirExtension modifierExtension,
           @required @JsonKey(required: true) String contentX}) =
       _$_CommunicationRequestPayload;
@@ -3753,6 +3792,7 @@ abstract class _CommunicationRequestPayload
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;

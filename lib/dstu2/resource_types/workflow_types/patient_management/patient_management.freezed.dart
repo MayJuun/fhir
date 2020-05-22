@@ -22,13 +22,14 @@ class _$CommunicationTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       Reference sender,
       Reference recipient,
-      BackboneElement payload,
+      CommunicationPayload payload,
       CodeableConcept medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus status,
@@ -74,13 +75,14 @@ mixin _$Communication {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
   CodeableConcept get category;
   Reference get sender;
   Reference get recipient;
-  BackboneElement get payload;
+  CommunicationPayload get payload;
   CodeableConcept get medium;
   @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
   CommunicationStatus get status;
@@ -106,13 +108,14 @@ abstract class $CommunicationCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       Reference sender,
       Reference recipient,
-      BackboneElement payload,
+      CommunicationPayload payload,
       CodeableConcept medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus status,
@@ -131,7 +134,7 @@ abstract class $CommunicationCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get category;
   $ReferenceCopyWith<$Res> get sender;
   $ReferenceCopyWith<$Res> get recipient;
-  $BackboneElementCopyWith<$Res> get payload;
+  $CommunicationPayloadCopyWith<$Res> get payload;
   $CodeableConceptCopyWith<$Res> get medium;
   $ReferenceCopyWith<$Res> get encounter;
   $CodeableConceptCopyWith<$Res> get reason;
@@ -194,7 +197,8 @@ class _$CommunicationCopyWithImpl<$Res>
       sender: sender == freezed ? _value.sender : sender as Reference,
       recipient:
           recipient == freezed ? _value.recipient : recipient as Reference,
-      payload: payload == freezed ? _value.payload : payload as BackboneElement,
+      payload:
+          payload == freezed ? _value.payload : payload as CommunicationPayload,
       medium: medium == freezed ? _value.medium : medium as CodeableConcept,
       status: status == freezed ? _value.status : status as CommunicationStatus,
       encounter:
@@ -291,11 +295,11 @@ class _$CommunicationCopyWithImpl<$Res>
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get payload {
+  $CommunicationPayloadCopyWith<$Res> get payload {
     if (_value.payload == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.payload, (value) {
+    return $CommunicationPayloadCopyWith<$Res>(_value.payload, (value) {
       return _then(_value.copyWith(payload: value));
     });
   }
@@ -364,13 +368,14 @@ abstract class _$CommunicationCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       Reference sender,
       Reference recipient,
-      BackboneElement payload,
+      CommunicationPayload payload,
       CodeableConcept medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus status,
@@ -398,7 +403,7 @@ abstract class _$CommunicationCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get recipient;
   @override
-  $BackboneElementCopyWith<$Res> get payload;
+  $CommunicationPayloadCopyWith<$Res> get payload;
   @override
   $CodeableConceptCopyWith<$Res> get medium;
   @override
@@ -468,7 +473,8 @@ class __$CommunicationCopyWithImpl<$Res>
       sender: sender == freezed ? _value.sender : sender as Reference,
       recipient:
           recipient == freezed ? _value.recipient : recipient as Reference,
-      payload: payload == freezed ? _value.payload : payload as BackboneElement,
+      payload:
+          payload == freezed ? _value.payload : payload as CommunicationPayload,
       medium: medium == freezed ? _value.medium : medium as CodeableConcept,
       status: status == freezed ? _value.status : status as CommunicationStatus,
       encounter:
@@ -494,7 +500,7 @@ class _$_Communication implements _Communication {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.category,
@@ -526,6 +532,7 @@ class _$_Communication implements _Communication {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -538,7 +545,7 @@ class _$_Communication implements _Communication {
   @override
   final Reference recipient;
   @override
-  final BackboneElement payload;
+  final CommunicationPayload payload;
   @override
   final CodeableConcept medium;
   @override
@@ -666,13 +673,14 @@ abstract class _Communication implements Communication {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       Reference sender,
       Reference recipient,
-      BackboneElement payload,
+      CommunicationPayload payload,
       CodeableConcept medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus status,
@@ -699,6 +707,7 @@ abstract class _Communication implements Communication {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -711,7 +720,7 @@ abstract class _Communication implements Communication {
   @override
   Reference get recipient;
   @override
-  BackboneElement get payload;
+  CommunicationPayload get payload;
   @override
   CodeableConcept get medium;
   @override
@@ -747,13 +756,14 @@ class _$EpisodeOfCareTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
-      BackboneElement statusHistory,
+      EpisodeOfCareStatusHistory statusHistory,
       CodeableConcept type,
       Reference condition,
       @required
@@ -763,7 +773,7 @@ class _$EpisodeOfCareTearOff {
       Period period,
       Reference referralRequest,
       Reference careManager,
-      BackboneElement careTeam}) {
+      EpisodeOfCareCareTeam careTeam}) {
     return _EpisodeOfCare(
       id: id,
       meta: meta,
@@ -798,12 +808,13 @@ mixin _$EpisodeOfCare {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
   @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
   EpisodeOfCareStatus get status;
-  BackboneElement get statusHistory;
+  EpisodeOfCareStatusHistory get statusHistory;
   CodeableConcept get type;
   Reference get condition;
   @JsonKey(required: true)
@@ -812,7 +823,7 @@ mixin _$EpisodeOfCare {
   Period get period;
   Reference get referralRequest;
   Reference get careManager;
-  BackboneElement get careTeam;
+  EpisodeOfCareCareTeam get careTeam;
 
   Map<String, dynamic> toJson();
   $EpisodeOfCareCopyWith<EpisodeOfCare> get copyWith;
@@ -829,12 +840,13 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
-      BackboneElement statusHistory,
+      EpisodeOfCareStatusHistory statusHistory,
       CodeableConcept type,
       Reference condition,
       @JsonKey(required: true)
@@ -843,14 +855,14 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       Period period,
       Reference referralRequest,
       Reference careManager,
-      BackboneElement careTeam});
+      EpisodeOfCareCareTeam careTeam});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $IdentifierCopyWith<$Res> get identifier;
-  $BackboneElementCopyWith<$Res> get statusHistory;
+  $EpisodeOfCareStatusHistoryCopyWith<$Res> get statusHistory;
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get condition;
   $ReferenceCopyWith<$Res> get patient;
@@ -858,7 +870,7 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get referralRequest;
   $ReferenceCopyWith<$Res> get careManager;
-  $BackboneElementCopyWith<$Res> get careTeam;
+  $EpisodeOfCareCareTeamCopyWith<$Res> get careTeam;
 }
 
 class _$EpisodeOfCareCopyWithImpl<$Res>
@@ -912,7 +924,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as BackboneElement,
+          : statusHistory as EpisodeOfCareStatusHistory,
       type: type == freezed ? _value.type : type as CodeableConcept,
       condition:
           condition == freezed ? _value.condition : condition as Reference,
@@ -927,8 +939,9 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
       careManager: careManager == freezed
           ? _value.careManager
           : careManager as Reference,
-      careTeam:
-          careTeam == freezed ? _value.careTeam : careTeam as BackboneElement,
+      careTeam: careTeam == freezed
+          ? _value.careTeam
+          : careTeam as EpisodeOfCareCareTeam,
     ));
   }
 
@@ -983,11 +996,12 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get statusHistory {
+  $EpisodeOfCareStatusHistoryCopyWith<$Res> get statusHistory {
     if (_value.statusHistory == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.statusHistory, (value) {
+    return $EpisodeOfCareStatusHistoryCopyWith<$Res>(_value.statusHistory,
+        (value) {
       return _then(_value.copyWith(statusHistory: value));
     });
   }
@@ -1063,11 +1077,11 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get careTeam {
+  $EpisodeOfCareCareTeamCopyWith<$Res> get careTeam {
     if (_value.careTeam == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.careTeam, (value) {
+    return $EpisodeOfCareCareTeamCopyWith<$Res>(_value.careTeam, (value) {
       return _then(_value.copyWith(careTeam: value));
     });
   }
@@ -1086,12 +1100,13 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
-      BackboneElement statusHistory,
+      EpisodeOfCareStatusHistory statusHistory,
       CodeableConcept type,
       Reference condition,
       @JsonKey(required: true)
@@ -1100,7 +1115,7 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
       Period period,
       Reference referralRequest,
       Reference careManager,
-      BackboneElement careTeam});
+      EpisodeOfCareCareTeam careTeam});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1113,7 +1128,7 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
-  $BackboneElementCopyWith<$Res> get statusHistory;
+  $EpisodeOfCareStatusHistoryCopyWith<$Res> get statusHistory;
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
@@ -1129,7 +1144,7 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get careManager;
   @override
-  $BackboneElementCopyWith<$Res> get careTeam;
+  $EpisodeOfCareCareTeamCopyWith<$Res> get careTeam;
 }
 
 class __$EpisodeOfCareCopyWithImpl<$Res>
@@ -1185,7 +1200,7 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as BackboneElement,
+          : statusHistory as EpisodeOfCareStatusHistory,
       type: type == freezed ? _value.type : type as CodeableConcept,
       condition:
           condition == freezed ? _value.condition : condition as Reference,
@@ -1200,8 +1215,9 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
       careManager: careManager == freezed
           ? _value.careManager
           : careManager as Reference,
-      careTeam:
-          careTeam == freezed ? _value.careTeam : careTeam as BackboneElement,
+      careTeam: careTeam == freezed
+          ? _value.careTeam
+          : careTeam as EpisodeOfCareCareTeam,
     ));
   }
 }
@@ -1215,7 +1231,8 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       @required
@@ -1251,6 +1268,7 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1260,7 +1278,7 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
   @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
   final EpisodeOfCareStatus status;
   @override
-  final BackboneElement statusHistory;
+  final EpisodeOfCareStatusHistory statusHistory;
   @override
   final CodeableConcept type;
   @override
@@ -1277,7 +1295,7 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
   @override
   final Reference careManager;
   @override
-  final BackboneElement careTeam;
+  final EpisodeOfCareCareTeam careTeam;
 
   @override
   String toString() {
@@ -1382,13 +1400,14 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
-      BackboneElement statusHistory,
+      EpisodeOfCareStatusHistory statusHistory,
       CodeableConcept type,
       Reference condition,
       @required
@@ -1398,7 +1417,7 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
       Period period,
       Reference referralRequest,
       Reference careManager,
-      BackboneElement careTeam}) = _$_EpisodeOfCare;
+      EpisodeOfCareCareTeam careTeam}) = _$_EpisodeOfCare;
 
   factory _EpisodeOfCare.fromJson(Map<String, dynamic> json) =
       _$_EpisodeOfCare.fromJson;
@@ -1416,6 +1435,7 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1425,7 +1445,7 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
   @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
   EpisodeOfCareStatus get status;
   @override
-  BackboneElement get statusHistory;
+  EpisodeOfCareStatusHistory get statusHistory;
   @override
   CodeableConcept get type;
   @override
@@ -1442,7 +1462,7 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
   @override
   Reference get careManager;
   @override
-  BackboneElement get careTeam;
+  EpisodeOfCareCareTeam get careTeam;
   @override
   _$EpisodeOfCareCopyWith<_EpisodeOfCare> get copyWith;
 }
@@ -1461,13 +1481,14 @@ class _$EncounterTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
       @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
-      BackboneElement statusHistory,
+      EncounterStatusHistory statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass class_,
       CodeableConcept type,
@@ -1475,14 +1496,14 @@ class _$EncounterTearOff {
       Reference patient,
       Reference episodeOfCare,
       Reference incomingReferral,
-      BackboneElement participant,
+      EncounterParticipant participant,
       Reference appointment,
       Period period,
       Quantity length,
       CodeableConcept reason,
       Reference indication,
-      BackboneElement hospitalization,
-      BackboneElement location,
+      EncounterHospitalization hospitalization,
+      EncounterLocation location,
       Reference serviceProvider,
       Reference partOf}) {
     return _Encounter(
@@ -1527,12 +1548,13 @@ mixin _$Encounter {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
   @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
   EncounterStatus get status;
-  BackboneElement get statusHistory;
+  EncounterStatusHistory get statusHistory;
   @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
   EncounterClass get class_;
   CodeableConcept get type;
@@ -1540,14 +1562,14 @@ mixin _$Encounter {
   Reference get patient;
   Reference get episodeOfCare;
   Reference get incomingReferral;
-  BackboneElement get participant;
+  EncounterParticipant get participant;
   Reference get appointment;
   Period get period;
   Quantity get length;
   CodeableConcept get reason;
   Reference get indication;
-  BackboneElement get hospitalization;
-  BackboneElement get location;
+  EncounterHospitalization get hospitalization;
+  EncounterLocation get location;
   Reference get serviceProvider;
   Reference get partOf;
 
@@ -1565,12 +1587,13 @@ abstract class $EncounterCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
-      BackboneElement statusHistory,
+      EncounterStatusHistory statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass class_,
       CodeableConcept type,
@@ -1578,14 +1601,14 @@ abstract class $EncounterCopyWith<$Res> {
       Reference patient,
       Reference episodeOfCare,
       Reference incomingReferral,
-      BackboneElement participant,
+      EncounterParticipant participant,
       Reference appointment,
       Period period,
       Quantity length,
       CodeableConcept reason,
       Reference indication,
-      BackboneElement hospitalization,
-      BackboneElement location,
+      EncounterHospitalization hospitalization,
+      EncounterLocation location,
       Reference serviceProvider,
       Reference partOf});
 
@@ -1594,20 +1617,20 @@ abstract class $EncounterCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $IdentifierCopyWith<$Res> get identifier;
-  $BackboneElementCopyWith<$Res> get statusHistory;
+  $EncounterStatusHistoryCopyWith<$Res> get statusHistory;
   $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res> get priority;
   $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res> get episodeOfCare;
   $ReferenceCopyWith<$Res> get incomingReferral;
-  $BackboneElementCopyWith<$Res> get participant;
+  $EncounterParticipantCopyWith<$Res> get participant;
   $ReferenceCopyWith<$Res> get appointment;
   $PeriodCopyWith<$Res> get period;
   $QuantityCopyWith<$Res> get length;
   $CodeableConceptCopyWith<$Res> get reason;
   $ReferenceCopyWith<$Res> get indication;
-  $BackboneElementCopyWith<$Res> get hospitalization;
-  $BackboneElementCopyWith<$Res> get location;
+  $EncounterHospitalizationCopyWith<$Res> get hospitalization;
+  $EncounterLocationCopyWith<$Res> get location;
   $ReferenceCopyWith<$Res> get serviceProvider;
   $ReferenceCopyWith<$Res> get partOf;
 }
@@ -1670,7 +1693,7 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
       status: status == freezed ? _value.status : status as EncounterStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as BackboneElement,
+          : statusHistory as EncounterStatusHistory,
       class_: class_ == freezed ? _value.class_ : class_ as EncounterClass,
       type: type == freezed ? _value.type : type as CodeableConcept,
       priority:
@@ -1684,7 +1707,7 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
           : incomingReferral as Reference,
       participant: participant == freezed
           ? _value.participant
-          : participant as BackboneElement,
+          : participant as EncounterParticipant,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference,
@@ -1695,9 +1718,9 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
           indication == freezed ? _value.indication : indication as Reference,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
-          : hospitalization as BackboneElement,
+          : hospitalization as EncounterHospitalization,
       location:
-          location == freezed ? _value.location : location as BackboneElement,
+          location == freezed ? _value.location : location as EncounterLocation,
       serviceProvider: serviceProvider == freezed
           ? _value.serviceProvider
           : serviceProvider as Reference,
@@ -1756,11 +1779,11 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get statusHistory {
+  $EncounterStatusHistoryCopyWith<$Res> get statusHistory {
     if (_value.statusHistory == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.statusHistory, (value) {
+    return $EncounterStatusHistoryCopyWith<$Res>(_value.statusHistory, (value) {
       return _then(_value.copyWith(statusHistory: value));
     });
   }
@@ -1816,11 +1839,11 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get participant {
+  $EncounterParticipantCopyWith<$Res> get participant {
     if (_value.participant == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.participant, (value) {
+    return $EncounterParticipantCopyWith<$Res>(_value.participant, (value) {
       return _then(_value.copyWith(participant: value));
     });
   }
@@ -1876,21 +1899,22 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get hospitalization {
+  $EncounterHospitalizationCopyWith<$Res> get hospitalization {
     if (_value.hospitalization == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.hospitalization, (value) {
+    return $EncounterHospitalizationCopyWith<$Res>(_value.hospitalization,
+        (value) {
       return _then(_value.copyWith(hospitalization: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get location {
+  $EncounterLocationCopyWith<$Res> get location {
     if (_value.location == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.location, (value) {
+    return $EncounterLocationCopyWith<$Res>(_value.location, (value) {
       return _then(_value.copyWith(location: value));
     });
   }
@@ -1928,12 +1952,13 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
-      BackboneElement statusHistory,
+      EncounterStatusHistory statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass class_,
       CodeableConcept type,
@@ -1941,14 +1966,14 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       Reference patient,
       Reference episodeOfCare,
       Reference incomingReferral,
-      BackboneElement participant,
+      EncounterParticipant participant,
       Reference appointment,
       Period period,
       Quantity length,
       CodeableConcept reason,
       Reference indication,
-      BackboneElement hospitalization,
-      BackboneElement location,
+      EncounterHospitalization hospitalization,
+      EncounterLocation location,
       Reference serviceProvider,
       Reference partOf});
 
@@ -1963,7 +1988,7 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
-  $BackboneElementCopyWith<$Res> get statusHistory;
+  $EncounterStatusHistoryCopyWith<$Res> get statusHistory;
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
@@ -1975,7 +2000,7 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   @override
   $ReferenceCopyWith<$Res> get incomingReferral;
   @override
-  $BackboneElementCopyWith<$Res> get participant;
+  $EncounterParticipantCopyWith<$Res> get participant;
   @override
   $ReferenceCopyWith<$Res> get appointment;
   @override
@@ -1987,9 +2012,9 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   @override
   $ReferenceCopyWith<$Res> get indication;
   @override
-  $BackboneElementCopyWith<$Res> get hospitalization;
+  $EncounterHospitalizationCopyWith<$Res> get hospitalization;
   @override
-  $BackboneElementCopyWith<$Res> get location;
+  $EncounterLocationCopyWith<$Res> get location;
   @override
   $ReferenceCopyWith<$Res> get serviceProvider;
   @override
@@ -2055,7 +2080,7 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as EncounterStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as BackboneElement,
+          : statusHistory as EncounterStatusHistory,
       class_: class_ == freezed ? _value.class_ : class_ as EncounterClass,
       type: type == freezed ? _value.type : type as CodeableConcept,
       priority:
@@ -2069,7 +2094,7 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
           : incomingReferral as Reference,
       participant: participant == freezed
           ? _value.participant
-          : participant as BackboneElement,
+          : participant as EncounterParticipant,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference,
@@ -2080,9 +2105,9 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
           indication == freezed ? _value.indication : indication as Reference,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
-          : hospitalization as BackboneElement,
+          : hospitalization as EncounterHospitalization,
       location:
-          location == freezed ? _value.location : location as BackboneElement,
+          location == freezed ? _value.location : location as EncounterLocation,
       serviceProvider: serviceProvider == freezed
           ? _value.serviceProvider
           : serviceProvider as Reference,
@@ -2100,7 +2125,8 @@ class _$_Encounter implements _Encounter {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       @required
@@ -2142,6 +2168,7 @@ class _$_Encounter implements _Encounter {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2151,7 +2178,7 @@ class _$_Encounter implements _Encounter {
   @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
   final EncounterStatus status;
   @override
-  final BackboneElement statusHistory;
+  final EncounterStatusHistory statusHistory;
   @override
   @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
   final EncounterClass class_;
@@ -2166,7 +2193,7 @@ class _$_Encounter implements _Encounter {
   @override
   final Reference incomingReferral;
   @override
-  final BackboneElement participant;
+  final EncounterParticipant participant;
   @override
   final Reference appointment;
   @override
@@ -2178,9 +2205,9 @@ class _$_Encounter implements _Encounter {
   @override
   final Reference indication;
   @override
-  final BackboneElement hospitalization;
+  final EncounterHospitalization hospitalization;
   @override
-  final BackboneElement location;
+  final EncounterLocation location;
   @override
   final Reference serviceProvider;
   @override
@@ -2316,13 +2343,14 @@ abstract class _Encounter implements Encounter {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
       @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
-      BackboneElement statusHistory,
+      EncounterStatusHistory statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass class_,
       CodeableConcept type,
@@ -2330,14 +2358,14 @@ abstract class _Encounter implements Encounter {
       Reference patient,
       Reference episodeOfCare,
       Reference incomingReferral,
-      BackboneElement participant,
+      EncounterParticipant participant,
       Reference appointment,
       Period period,
       Quantity length,
       CodeableConcept reason,
       Reference indication,
-      BackboneElement hospitalization,
-      BackboneElement location,
+      EncounterHospitalization hospitalization,
+      EncounterLocation location,
       Reference serviceProvider,
       Reference partOf}) = _$_Encounter;
 
@@ -2357,6 +2385,7 @@ abstract class _Encounter implements Encounter {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -2366,7 +2395,7 @@ abstract class _Encounter implements Encounter {
   @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
   EncounterStatus get status;
   @override
-  BackboneElement get statusHistory;
+  EncounterStatusHistory get statusHistory;
   @override
   @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
   EncounterClass get class_;
@@ -2381,7 +2410,7 @@ abstract class _Encounter implements Encounter {
   @override
   Reference get incomingReferral;
   @override
-  BackboneElement get participant;
+  EncounterParticipant get participant;
   @override
   Reference get appointment;
   @override
@@ -2393,9 +2422,9 @@ abstract class _Encounter implements Encounter {
   @override
   Reference get indication;
   @override
-  BackboneElement get hospitalization;
+  EncounterHospitalization get hospitalization;
   @override
-  BackboneElement get location;
+  EncounterLocation get location;
   @override
   Reference get serviceProvider;
   @override
@@ -2418,7 +2447,8 @@ class _$FlagTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
@@ -2465,6 +2495,7 @@ mixin _$Flag {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -2493,7 +2524,8 @@ abstract class $FlagCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
@@ -2698,7 +2730,8 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
@@ -2803,7 +2836,8 @@ class _$_Flag implements _Flag {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.category,
@@ -2839,6 +2873,7 @@ class _$_Flag implements _Flag {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2952,7 +2987,8 @@ abstract class _Flag implements Flag {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
@@ -2984,6 +3020,7 @@ abstract class _Flag implements Flag {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3019,7 +3056,7 @@ class _$CommunicationPayloadTearOff {
 
   _CommunicationPayload call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String contentX}) {
     return _CommunicationPayload(
@@ -3036,6 +3073,7 @@ const $CommunicationPayload = _$CommunicationPayloadTearOff();
 
 mixin _$CommunicationPayload {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -3051,7 +3089,7 @@ abstract class $CommunicationPayloadCopyWith<$Res> {
       _$CommunicationPayloadCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String contentX});
 
@@ -3115,7 +3153,7 @@ abstract class _$CommunicationPayloadCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String contentX});
 
@@ -3159,7 +3197,7 @@ class __$CommunicationPayloadCopyWithImpl<$Res>
 class _$_CommunicationPayload implements _CommunicationPayload {
   const _$_CommunicationPayload(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.contentX})
       : assert(contentX != null);
@@ -3170,6 +3208,7 @@ class _$_CommunicationPayload implements _CommunicationPayload {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3221,7 +3260,7 @@ class _$_CommunicationPayload implements _CommunicationPayload {
 abstract class _CommunicationPayload implements CommunicationPayload {
   const factory _CommunicationPayload(
           {Id id,
-          FhirExtension extension_,
+          @JsonKey(name: 'extension') FhirExtension extension_,
           FhirExtension modifierExtension,
           @required @JsonKey(required: true) String contentX}) =
       _$_CommunicationPayload;
@@ -3232,6 +3271,7 @@ abstract class _CommunicationPayload implements CommunicationPayload {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3252,7 +3292,8 @@ class _$EpisodeOfCareStatusHistoryTearOff {
 
   _EpisodeOfCareStatusHistory call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
@@ -3275,6 +3316,7 @@ const $EpisodeOfCareStatusHistory = _$EpisodeOfCareStatusHistoryTearOff();
 
 mixin _$EpisodeOfCareStatusHistory {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
@@ -3292,7 +3334,8 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
       _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
           EpisodeOfCareHistoryStatus status,
@@ -3375,7 +3418,8 @@ abstract class _$EpisodeOfCareStatusHistoryCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
           EpisodeOfCareHistoryStatus status,
@@ -3429,7 +3473,8 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
 class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
   const _$_EpisodeOfCareStatusHistory(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
@@ -3446,6 +3491,7 @@ class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3503,7 +3549,8 @@ abstract class _EpisodeOfCareStatusHistory
     implements EpisodeOfCareStatusHistory {
   const factory _EpisodeOfCareStatusHistory(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
@@ -3518,6 +3565,7 @@ abstract class _EpisodeOfCareStatusHistory
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3542,7 +3590,7 @@ class _$EpisodeOfCareCareTeamTearOff {
 
   _EpisodeOfCareCareTeam call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept role,
       Period period,
@@ -3563,6 +3611,7 @@ const $EpisodeOfCareCareTeam = _$EpisodeOfCareCareTeamTearOff();
 
 mixin _$EpisodeOfCareCareTeam {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get role;
@@ -3579,7 +3628,7 @@ abstract class $EpisodeOfCareCareTeamCopyWith<$Res> {
       _$EpisodeOfCareCareTeamCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept role,
       Period period,
@@ -3682,7 +3731,7 @@ abstract class _$EpisodeOfCareCareTeamCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept role,
       Period period,
@@ -3738,7 +3787,7 @@ class __$EpisodeOfCareCareTeamCopyWithImpl<$Res>
 class _$_EpisodeOfCareCareTeam implements _EpisodeOfCareCareTeam {
   const _$_EpisodeOfCareCareTeam(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.role,
       this.period,
@@ -3750,6 +3799,7 @@ class _$_EpisodeOfCareCareTeam implements _EpisodeOfCareCareTeam {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3809,7 +3859,7 @@ class _$_EpisodeOfCareCareTeam implements _EpisodeOfCareCareTeam {
 abstract class _EpisodeOfCareCareTeam implements EpisodeOfCareCareTeam {
   const factory _EpisodeOfCareCareTeam(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept role,
       Period period,
@@ -3821,6 +3871,7 @@ abstract class _EpisodeOfCareCareTeam implements EpisodeOfCareCareTeam {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3844,7 +3895,8 @@ class _$EncounterStatusHistoryTearOff {
 
   _EncounterStatusHistory call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
@@ -3867,6 +3919,7 @@ const $EncounterStatusHistory = _$EncounterStatusHistoryTearOff();
 
 mixin _$EncounterStatusHistory {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
@@ -3884,7 +3937,8 @@ abstract class $EncounterStatusHistoryCopyWith<$Res> {
       _$EncounterStatusHistoryCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
           EncounterHistoryStatus status,
@@ -3965,7 +4019,8 @@ abstract class _$EncounterStatusHistoryCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
           EncounterHistoryStatus status,
@@ -4017,7 +4072,8 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
 class _$_EncounterStatusHistory implements _EncounterStatusHistory {
   const _$_EncounterStatusHistory(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
@@ -4034,6 +4090,7 @@ class _$_EncounterStatusHistory implements _EncounterStatusHistory {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -4090,7 +4147,8 @@ class _$_EncounterStatusHistory implements _EncounterStatusHistory {
 abstract class _EncounterStatusHistory implements EncounterStatusHistory {
   const factory _EncounterStatusHistory(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
@@ -4105,6 +4163,7 @@ abstract class _EncounterStatusHistory implements EncounterStatusHistory {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -4127,7 +4186,7 @@ class _$EncounterParticipantTearOff {
 
   _EncounterParticipant call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept type,
       Period period,
@@ -4148,6 +4207,7 @@ const $EncounterParticipant = _$EncounterParticipantTearOff();
 
 mixin _$EncounterParticipant {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get type;
@@ -4164,7 +4224,7 @@ abstract class $EncounterParticipantCopyWith<$Res> {
       _$EncounterParticipantCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept type,
       Period period,
@@ -4268,7 +4328,7 @@ abstract class _$EncounterParticipantCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept type,
       Period period,
@@ -4325,7 +4385,7 @@ class __$EncounterParticipantCopyWithImpl<$Res>
 class _$_EncounterParticipant implements _EncounterParticipant {
   const _$_EncounterParticipant(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.type,
       this.period,
@@ -4337,6 +4397,7 @@ class _$_EncounterParticipant implements _EncounterParticipant {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -4397,7 +4458,7 @@ class _$_EncounterParticipant implements _EncounterParticipant {
 abstract class _EncounterParticipant implements EncounterParticipant {
   const factory _EncounterParticipant(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept type,
       Period period,
@@ -4409,6 +4470,7 @@ abstract class _EncounterParticipant implements EncounterParticipant {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -4432,7 +4494,7 @@ class _$EncounterHospitalizationTearOff {
 
   _EncounterHospitalization call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
@@ -4469,6 +4531,7 @@ const $EncounterHospitalization = _$EncounterHospitalizationTearOff();
 
 mixin _$EncounterHospitalization {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get preAdmissionIdentifier;
@@ -4493,7 +4556,7 @@ abstract class $EncounterHospitalizationCopyWith<$Res> {
       _$EncounterHospitalizationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
@@ -4728,7 +4791,7 @@ abstract class _$EncounterHospitalizationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
@@ -4845,7 +4908,7 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
 class _$_EncounterHospitalization implements _EncounterHospitalization {
   const _$_EncounterHospitalization(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.preAdmissionIdentifier,
       this.origin,
@@ -4865,6 +4928,7 @@ class _$_EncounterHospitalization implements _EncounterHospitalization {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -4974,7 +5038,7 @@ class _$_EncounterHospitalization implements _EncounterHospitalization {
 abstract class _EncounterHospitalization implements EncounterHospitalization {
   const factory _EncounterHospitalization(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
@@ -4994,6 +5058,7 @@ abstract class _EncounterHospitalization implements EncounterHospitalization {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -5032,7 +5097,7 @@ class _$EncounterLocationTearOff {
 
   _EncounterLocation call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Reference location,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
@@ -5053,6 +5118,7 @@ const $EncounterLocation = _$EncounterLocationTearOff();
 
 mixin _$EncounterLocation {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -5071,7 +5137,7 @@ abstract class $EncounterLocationCopyWith<$Res> {
       _$EncounterLocationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Reference location,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
@@ -5163,7 +5229,7 @@ abstract class _$EncounterLocationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Reference location,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
@@ -5217,7 +5283,7 @@ class __$EncounterLocationCopyWithImpl<$Res>
 class _$_EncounterLocation implements _EncounterLocation {
   const _$_EncounterLocation(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.location,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) this.status,
@@ -5230,6 +5296,7 @@ class _$_EncounterLocation implements _EncounterLocation {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -5291,7 +5358,7 @@ class _$_EncounterLocation implements _EncounterLocation {
 abstract class _EncounterLocation implements EncounterLocation {
   const factory _EncounterLocation(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Reference location,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
@@ -5303,6 +5370,7 @@ abstract class _EncounterLocation implements EncounterLocation {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;

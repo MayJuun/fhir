@@ -22,7 +22,8 @@ class _$AppointmentTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
@@ -39,7 +40,7 @@ class _$AppointmentTearOff {
       String comment,
       @required
       @JsonKey(required: true)
-          BackboneElement participant}) {
+          AppointmentParticipant participant}) {
     return _Appointment(
       id: id,
       meta: meta,
@@ -75,6 +76,7 @@ mixin _$Appointment {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -90,7 +92,7 @@ mixin _$Appointment {
   Reference get slot;
   String get comment;
   @JsonKey(required: true)
-  BackboneElement get participant;
+  AppointmentParticipant get participant;
 
   Map<String, dynamic> toJson();
   $AppointmentCopyWith<Appointment> get copyWith;
@@ -107,7 +109,8 @@ abstract class $AppointmentCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
@@ -122,7 +125,7 @@ abstract class $AppointmentCopyWith<$Res> {
       Reference slot,
       String comment,
       @JsonKey(required: true)
-          BackboneElement participant});
+          AppointmentParticipant participant});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -132,7 +135,7 @@ abstract class $AppointmentCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res> get reason;
   $ReferenceCopyWith<$Res> get slot;
-  $BackboneElementCopyWith<$Res> get participant;
+  $AppointmentParticipantCopyWith<$Res> get participant;
 }
 
 class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
@@ -198,7 +201,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
       comment: comment == freezed ? _value.comment : comment as String,
       participant: participant == freezed
           ? _value.participant
-          : participant as BackboneElement,
+          : participant as AppointmentParticipant,
     ));
   }
 
@@ -283,11 +286,11 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get participant {
+  $AppointmentParticipantCopyWith<$Res> get participant {
     if (_value.participant == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.participant, (value) {
+    return $AppointmentParticipantCopyWith<$Res>(_value.participant, (value) {
       return _then(_value.copyWith(participant: value));
     });
   }
@@ -306,7 +309,8 @@ abstract class _$AppointmentCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
@@ -321,7 +325,7 @@ abstract class _$AppointmentCopyWith<$Res>
       Reference slot,
       String comment,
       @JsonKey(required: true)
-          BackboneElement participant});
+          AppointmentParticipant participant});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -340,7 +344,7 @@ abstract class _$AppointmentCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get slot;
   @override
-  $BackboneElementCopyWith<$Res> get participant;
+  $AppointmentParticipantCopyWith<$Res> get participant;
 }
 
 class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
@@ -408,7 +412,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
       comment: comment == freezed ? _value.comment : comment as String,
       participant: participant == freezed
           ? _value.participant
-          : participant as BackboneElement,
+          : participant as AppointmentParticipant,
     ));
   }
 }
@@ -422,7 +426,8 @@ class _$_Appointment implements _Appointment {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       @required
@@ -459,6 +464,7 @@ class _$_Appointment implements _Appointment {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -487,7 +493,7 @@ class _$_Appointment implements _Appointment {
   final String comment;
   @override
   @JsonKey(required: true)
-  final BackboneElement participant;
+  final AppointmentParticipant participant;
 
   @override
   String toString() {
@@ -593,7 +599,8 @@ abstract class _Appointment implements Appointment {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
@@ -610,7 +617,7 @@ abstract class _Appointment implements Appointment {
       String comment,
       @required
       @JsonKey(required: true)
-          BackboneElement participant}) = _$_Appointment;
+          AppointmentParticipant participant}) = _$_Appointment;
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
@@ -628,6 +635,7 @@ abstract class _Appointment implements Appointment {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -656,7 +664,7 @@ abstract class _Appointment implements Appointment {
   String get comment;
   @override
   @JsonKey(required: true)
-  BackboneElement get participant;
+  AppointmentParticipant get participant;
   @override
   _$AppointmentCopyWith<_Appointment> get copyWith;
 }
@@ -675,7 +683,8 @@ class _$SlotTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept type,
@@ -724,6 +733,7 @@ mixin _$Slot {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -753,7 +763,8 @@ abstract class $SlotCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept type,
@@ -916,7 +927,8 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept type,
@@ -1015,7 +1027,8 @@ class _$_Slot implements _Slot {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.type,
@@ -1054,6 +1067,7 @@ class _$_Slot implements _Slot {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1168,7 +1182,8 @@ abstract class _Slot implements Slot {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept type,
@@ -1202,6 +1217,7 @@ abstract class _Slot implements Slot {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1243,7 +1259,8 @@ class _$AppointmentResponseTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
@@ -1288,6 +1305,7 @@ mixin _$AppointmentResponse {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -1318,7 +1336,8 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true)
@@ -1496,7 +1515,8 @@ abstract class _$AppointmentResponseCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true)
@@ -1600,7 +1620,8 @@ class _$_AppointmentResponse implements _AppointmentResponse {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       @required
@@ -1633,6 +1654,7 @@ class _$_AppointmentResponse implements _AppointmentResponse {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1748,7 +1770,8 @@ abstract class _AppointmentResponse implements AppointmentResponse {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
@@ -1779,6 +1802,7 @@ abstract class _AppointmentResponse implements AppointmentResponse {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1820,7 +1844,7 @@ class _$ScheduleTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept type,
@@ -1855,6 +1879,7 @@ mixin _$Schedule {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -1878,7 +1903,7 @@ abstract class $ScheduleCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept type,
@@ -2038,7 +2063,7 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept type,
@@ -2125,7 +2150,7 @@ class _$_Schedule implements _Schedule {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.type,
@@ -2150,6 +2175,7 @@ class _$_Schedule implements _Schedule {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2244,7 +2270,7 @@ abstract class _Schedule implements Schedule {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept type,
@@ -2267,6 +2293,7 @@ abstract class _Schedule implements Schedule {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -2295,7 +2322,8 @@ class _$AppointmentParticipantTearOff {
 
   _AppointmentParticipant call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept type,
       Reference actor,
@@ -2321,6 +2349,7 @@ const $AppointmentParticipant = _$AppointmentParticipantTearOff();
 
 mixin _$AppointmentParticipant {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get type;
@@ -2340,7 +2369,8 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       _$AppointmentParticipantCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept type,
       Reference actor,
@@ -2439,7 +2469,8 @@ abstract class _$AppointmentParticipantCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept type,
       Reference actor,
@@ -2500,7 +2531,8 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
 class _$_AppointmentParticipant implements _AppointmentParticipant {
   const _$_AppointmentParticipant(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.type,
       this.actor,
@@ -2517,6 +2549,7 @@ class _$_AppointmentParticipant implements _AppointmentParticipant {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2584,7 +2617,8 @@ class _$_AppointmentParticipant implements _AppointmentParticipant {
 abstract class _AppointmentParticipant implements AppointmentParticipant {
   const factory _AppointmentParticipant(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept type,
       Reference actor,
@@ -2600,6 +2634,7 @@ abstract class _AppointmentParticipant implements AppointmentParticipant {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;

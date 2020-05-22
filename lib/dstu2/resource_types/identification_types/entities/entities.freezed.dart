@@ -22,14 +22,14 @@ class _$SubstanceTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       @required @JsonKey(required: true) CodeableConcept code,
       String description,
-      BackboneElement instance,
-      BackboneElement ingredient}) {
+      SubstanceInstance instance,
+      SubstanceIngredient ingredient}) {
     return _Substance(
       id: id,
       meta: meta,
@@ -59,6 +59,7 @@ mixin _$Substance {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -66,8 +67,8 @@ mixin _$Substance {
   @JsonKey(required: true)
   CodeableConcept get code;
   String get description;
-  BackboneElement get instance;
-  BackboneElement get ingredient;
+  SubstanceInstance get instance;
+  SubstanceIngredient get ingredient;
 
   Map<String, dynamic> toJson();
   $SubstanceCopyWith<Substance> get copyWith;
@@ -83,14 +84,14 @@ abstract class $SubstanceCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       @JsonKey(required: true) CodeableConcept code,
       String description,
-      BackboneElement instance,
-      BackboneElement ingredient});
+      SubstanceInstance instance,
+      SubstanceIngredient ingredient});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -99,8 +100,8 @@ abstract class $SubstanceCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get code;
-  $BackboneElementCopyWith<$Res> get instance;
-  $BackboneElementCopyWith<$Res> get ingredient;
+  $SubstanceInstanceCopyWith<$Res> get instance;
+  $SubstanceIngredientCopyWith<$Res> get ingredient;
 }
 
 class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
@@ -151,10 +152,10 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
       description:
           description == freezed ? _value.description : description as String,
       instance:
-          instance == freezed ? _value.instance : instance as BackboneElement,
+          instance == freezed ? _value.instance : instance as SubstanceInstance,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as BackboneElement,
+          : ingredient as SubstanceIngredient,
     ));
   }
 
@@ -229,21 +230,21 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get instance {
+  $SubstanceInstanceCopyWith<$Res> get instance {
     if (_value.instance == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.instance, (value) {
+    return $SubstanceInstanceCopyWith<$Res>(_value.instance, (value) {
       return _then(_value.copyWith(instance: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get ingredient {
+  $SubstanceIngredientCopyWith<$Res> get ingredient {
     if (_value.ingredient == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.ingredient, (value) {
+    return $SubstanceIngredientCopyWith<$Res>(_value.ingredient, (value) {
       return _then(_value.copyWith(ingredient: value));
     });
   }
@@ -261,14 +262,14 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       @JsonKey(required: true) CodeableConcept code,
       String description,
-      BackboneElement instance,
-      BackboneElement ingredient});
+      SubstanceInstance instance,
+      SubstanceIngredient ingredient});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -285,9 +286,9 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
-  $BackboneElementCopyWith<$Res> get instance;
+  $SubstanceInstanceCopyWith<$Res> get instance;
   @override
-  $BackboneElementCopyWith<$Res> get ingredient;
+  $SubstanceIngredientCopyWith<$Res> get ingredient;
 }
 
 class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
@@ -339,10 +340,10 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       instance:
-          instance == freezed ? _value.instance : instance as BackboneElement,
+          instance == freezed ? _value.instance : instance as SubstanceInstance,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as BackboneElement,
+          : ingredient as SubstanceIngredient,
     ));
   }
 }
@@ -356,7 +357,7 @@ class _$_Substance implements _Substance {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.category,
@@ -382,6 +383,7 @@ class _$_Substance implements _Substance {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -395,9 +397,9 @@ class _$_Substance implements _Substance {
   @override
   final String description;
   @override
-  final BackboneElement instance;
+  final SubstanceInstance instance;
   @override
-  final BackboneElement ingredient;
+  final SubstanceIngredient ingredient;
 
   @override
   String toString() {
@@ -484,14 +486,14 @@ abstract class _Substance implements Substance {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       CodeableConcept category,
       @required @JsonKey(required: true) CodeableConcept code,
       String description,
-      BackboneElement instance,
-      BackboneElement ingredient}) = _$_Substance;
+      SubstanceInstance instance,
+      SubstanceIngredient ingredient}) = _$_Substance;
 
   factory _Substance.fromJson(Map<String, dynamic> json) =
       _$_Substance.fromJson;
@@ -509,6 +511,7 @@ abstract class _Substance implements Substance {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -522,9 +525,9 @@ abstract class _Substance implements Substance {
   @override
   String get description;
   @override
-  BackboneElement get instance;
+  SubstanceInstance get instance;
   @override
-  BackboneElement get ingredient;
+  SubstanceIngredient get ingredient;
   @override
   _$SubstanceCopyWith<_Substance> get copyWith;
 }
@@ -543,7 +546,7 @@ class _$LocationTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
@@ -554,7 +557,7 @@ class _$LocationTearOff {
       ContactPoint telecom,
       Address address,
       CodeableConcept physicalType,
-      BackboneElement position,
+      LocationPosition position,
       Reference managingOrganization,
       Reference partOf}) {
     return _Location(
@@ -592,6 +595,7 @@ mixin _$Location {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -605,7 +609,7 @@ mixin _$Location {
   ContactPoint get telecom;
   Address get address;
   CodeableConcept get physicalType;
-  BackboneElement get position;
+  LocationPosition get position;
   Reference get managingOrganization;
   Reference get partOf;
 
@@ -623,7 +627,7 @@ abstract class $LocationCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
@@ -634,7 +638,7 @@ abstract class $LocationCopyWith<$Res> {
       ContactPoint telecom,
       Address address,
       CodeableConcept physicalType,
-      BackboneElement position,
+      LocationPosition position,
       Reference managingOrganization,
       Reference partOf});
 
@@ -647,7 +651,7 @@ abstract class $LocationCopyWith<$Res> {
   $ContactPointCopyWith<$Res> get telecom;
   $AddressCopyWith<$Res> get address;
   $CodeableConceptCopyWith<$Res> get physicalType;
-  $BackboneElementCopyWith<$Res> get position;
+  $LocationPositionCopyWith<$Res> get position;
   $ReferenceCopyWith<$Res> get managingOrganization;
   $ReferenceCopyWith<$Res> get partOf;
 }
@@ -712,7 +716,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
           ? _value.physicalType
           : physicalType as CodeableConcept,
       position:
-          position == freezed ? _value.position : position as BackboneElement,
+          position == freezed ? _value.position : position as LocationPosition,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
@@ -811,11 +815,11 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get position {
+  $LocationPositionCopyWith<$Res> get position {
     if (_value.position == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.position, (value) {
+    return $LocationPositionCopyWith<$Res>(_value.position, (value) {
       return _then(_value.copyWith(position: value));
     });
   }
@@ -852,7 +856,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
@@ -863,7 +867,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       ContactPoint telecom,
       Address address,
       CodeableConcept physicalType,
-      BackboneElement position,
+      LocationPosition position,
       Reference managingOrganization,
       Reference partOf});
 
@@ -886,7 +890,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   @override
   $CodeableConceptCopyWith<$Res> get physicalType;
   @override
-  $BackboneElementCopyWith<$Res> get position;
+  $LocationPositionCopyWith<$Res> get position;
   @override
   $ReferenceCopyWith<$Res> get managingOrganization;
   @override
@@ -954,7 +958,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
           ? _value.physicalType
           : physicalType as CodeableConcept,
       position:
-          position == freezed ? _value.position : position as BackboneElement,
+          position == freezed ? _value.position : position as LocationPosition,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
@@ -972,7 +976,7 @@ class _$_Location implements _Location {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) this.status,
@@ -1003,6 +1007,7 @@ class _$_Location implements _Location {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1027,7 +1032,7 @@ class _$_Location implements _Location {
   @override
   final CodeableConcept physicalType;
   @override
-  final BackboneElement position;
+  final LocationPosition position;
   @override
   final Reference managingOrganization;
   @override
@@ -1138,7 +1143,7 @@ abstract class _Location implements Location {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
@@ -1149,7 +1154,7 @@ abstract class _Location implements Location {
       ContactPoint telecom,
       Address address,
       CodeableConcept physicalType,
-      BackboneElement position,
+      LocationPosition position,
       Reference managingOrganization,
       Reference partOf}) = _$_Location;
 
@@ -1168,6 +1173,7 @@ abstract class _Location implements Location {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1192,13 +1198,2028 @@ abstract class _Location implements Location {
   @override
   CodeableConcept get physicalType;
   @override
-  BackboneElement get position;
+  LocationPosition get position;
   @override
   Reference get managingOrganization;
   @override
   Reference get partOf;
   @override
   _$LocationCopyWith<_Location> get copyWith;
+}
+
+Person _$PersonFromJson(Map<String, dynamic> json) {
+  return _Person.fromJson(json);
+}
+
+class _$PersonTearOff {
+  const _$PersonTearOff();
+
+  _Person call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      Resource contained,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Identifier identifier,
+      HumanName name,
+      ContactPoint telecom,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
+      Date birthDate,
+      Address address,
+      Attachment photo,
+      Reference managingOrganization,
+      Boolean active,
+      PersonLink link}) {
+    return _Person(
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      name: name,
+      telecom: telecom,
+      gender: gender,
+      birthDate: birthDate,
+      address: address,
+      photo: photo,
+      managingOrganization: managingOrganization,
+      active: active,
+      link: link,
+    );
+  }
+}
+
+// ignore: unused_element
+const $Person = _$PersonTearOff();
+
+mixin _$Person {
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  Resource get contained;
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  FhirExtension get modifierExtension;
+  Identifier get identifier;
+  HumanName get name;
+  ContactPoint get telecom;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender get gender;
+  Date get birthDate;
+  Address get address;
+  Attachment get photo;
+  Reference get managingOrganization;
+  Boolean get active;
+  PersonLink get link;
+
+  Map<String, dynamic> toJson();
+  $PersonCopyWith<Person> get copyWith;
+}
+
+abstract class $PersonCopyWith<$Res> {
+  factory $PersonCopyWith(Person value, $Res Function(Person) then) =
+      _$PersonCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      Resource contained,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Identifier identifier,
+      HumanName name,
+      ContactPoint telecom,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
+      Date birthDate,
+      Address address,
+      Attachment photo,
+      Reference managingOrganization,
+      Boolean active,
+      PersonLink link});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $HumanNameCopyWith<$Res> get name;
+  $ContactPointCopyWith<$Res> get telecom;
+  $AddressCopyWith<$Res> get address;
+  $AttachmentCopyWith<$Res> get photo;
+  $ReferenceCopyWith<$Res> get managingOrganization;
+  $PersonLinkCopyWith<$Res> get link;
+}
+
+class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
+  _$PersonCopyWithImpl(this._value, this._then);
+
+  final Person _value;
+  // ignore: unused_field
+  final $Res Function(Person) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
+    Object name = freezed,
+    Object telecom = freezed,
+    Object gender = freezed,
+    Object birthDate = freezed,
+    Object address = freezed,
+    Object photo = freezed,
+    Object managingOrganization = freezed,
+    Object active = freezed,
+    Object link = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as Resource,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      identifier:
+          identifier == freezed ? _value.identifier : identifier as Identifier,
+      name: name == freezed ? _value.name : name as HumanName,
+      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      gender: gender == freezed ? _value.gender : gender as PersonGender,
+      birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
+      address: address == freezed ? _value.address : address as Address,
+      photo: photo == freezed ? _value.photo : photo as Attachment,
+      managingOrganization: managingOrganization == freezed
+          ? _value.managingOrganization
+          : managingOrganization as Reference,
+      active: active == freezed ? _value.active : active as Boolean,
+      link: link == freezed ? _value.link : link as PersonLink,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get name {
+    if (_value.name == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.name, (value) {
+      return _then(_value.copyWith(name: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get telecom {
+    if (_value.telecom == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
+      return _then(_value.copyWith(telecom: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res> get address {
+    if (_value.address == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.address, (value) {
+      return _then(_value.copyWith(address: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get photo {
+    if (_value.photo == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.photo, (value) {
+      return _then(_value.copyWith(photo: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get managingOrganization {
+    if (_value.managingOrganization == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.managingOrganization, (value) {
+      return _then(_value.copyWith(managingOrganization: value));
+    });
+  }
+
+  @override
+  $PersonLinkCopyWith<$Res> get link {
+    if (_value.link == null) {
+      return null;
+    }
+    return $PersonLinkCopyWith<$Res>(_value.link, (value) {
+      return _then(_value.copyWith(link: value));
+    });
+  }
+}
+
+abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
+  factory _$PersonCopyWith(_Person value, $Res Function(_Person) then) =
+      __$PersonCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      Resource contained,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Identifier identifier,
+      HumanName name,
+      ContactPoint telecom,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
+      Date birthDate,
+      Address address,
+      Attachment photo,
+      Reference managingOrganization,
+      Boolean active,
+      PersonLink link});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $HumanNameCopyWith<$Res> get name;
+  @override
+  $ContactPointCopyWith<$Res> get telecom;
+  @override
+  $AddressCopyWith<$Res> get address;
+  @override
+  $AttachmentCopyWith<$Res> get photo;
+  @override
+  $ReferenceCopyWith<$Res> get managingOrganization;
+  @override
+  $PersonLinkCopyWith<$Res> get link;
+}
+
+class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
+    implements _$PersonCopyWith<$Res> {
+  __$PersonCopyWithImpl(_Person _value, $Res Function(_Person) _then)
+      : super(_value, (v) => _then(v as _Person));
+
+  @override
+  _Person get _value => super._value as _Person;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
+    Object name = freezed,
+    Object telecom = freezed,
+    Object gender = freezed,
+    Object birthDate = freezed,
+    Object address = freezed,
+    Object photo = freezed,
+    Object managingOrganization = freezed,
+    Object active = freezed,
+    Object link = freezed,
+  }) {
+    return _then(_Person(
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as Resource,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      identifier:
+          identifier == freezed ? _value.identifier : identifier as Identifier,
+      name: name == freezed ? _value.name : name as HumanName,
+      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      gender: gender == freezed ? _value.gender : gender as PersonGender,
+      birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
+      address: address == freezed ? _value.address : address as Address,
+      photo: photo == freezed ? _value.photo : photo as Attachment,
+      managingOrganization: managingOrganization == freezed
+          ? _value.managingOrganization
+          : managingOrganization as Reference,
+      active: active == freezed ? _value.active : active as Boolean,
+      link: link == freezed ? _value.link : link as PersonLink,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_Person implements _Person {
+  const _$_Person(
+      {this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.name,
+      this.telecom,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) this.gender,
+      this.birthDate,
+      this.address,
+      this.photo,
+      this.managingOrganization,
+      this.active,
+      this.link});
+
+  factory _$_Person.fromJson(Map<String, dynamic> json) =>
+      _$_$_PersonFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final Resource contained;
+  @override
+  @JsonKey(name: 'extension')
+  final FhirExtension extension_;
+  @override
+  final FhirExtension modifierExtension;
+  @override
+  final Identifier identifier;
+  @override
+  final HumanName name;
+  @override
+  final ContactPoint telecom;
+  @override
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  final PersonGender gender;
+  @override
+  final Date birthDate;
+  @override
+  final Address address;
+  @override
+  final Attachment photo;
+  @override
+  final Reference managingOrganization;
+  @override
+  final Boolean active;
+  @override
+  final PersonLink link;
+
+  @override
+  String toString() {
+    return 'Person(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, managingOrganization: $managingOrganization, active: $active, link: $link)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Person &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.identifier, identifier) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifier, identifier)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.telecom, telecom) ||
+                const DeepCollectionEquality()
+                    .equals(other.telecom, telecom)) &&
+            (identical(other.gender, gender) ||
+                const DeepCollectionEquality().equals(other.gender, gender)) &&
+            (identical(other.birthDate, birthDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.birthDate, birthDate)) &&
+            (identical(other.address, address) ||
+                const DeepCollectionEquality()
+                    .equals(other.address, address)) &&
+            (identical(other.photo, photo) ||
+                const DeepCollectionEquality().equals(other.photo, photo)) &&
+            (identical(other.managingOrganization, managingOrganization) ||
+                const DeepCollectionEquality().equals(
+                    other.managingOrganization, managingOrganization)) &&
+            (identical(other.active, active) ||
+                const DeepCollectionEquality().equals(other.active, active)) &&
+            (identical(other.link, link) ||
+                const DeepCollectionEquality().equals(other.link, link)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(telecom) ^
+      const DeepCollectionEquality().hash(gender) ^
+      const DeepCollectionEquality().hash(birthDate) ^
+      const DeepCollectionEquality().hash(address) ^
+      const DeepCollectionEquality().hash(photo) ^
+      const DeepCollectionEquality().hash(managingOrganization) ^
+      const DeepCollectionEquality().hash(active) ^
+      const DeepCollectionEquality().hash(link);
+
+  @override
+  _$PersonCopyWith<_Person> get copyWith =>
+      __$PersonCopyWithImpl<_Person>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_PersonToJson(this);
+  }
+}
+
+abstract class _Person implements Person {
+  const factory _Person(
+      {Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      Resource contained,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Identifier identifier,
+      HumanName name,
+      ContactPoint telecom,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
+      Date birthDate,
+      Address address,
+      Attachment photo,
+      Reference managingOrganization,
+      Boolean active,
+      PersonLink link}) = _$_Person;
+
+  factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
+
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  Resource get contained;
+  @override
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  @override
+  FhirExtension get modifierExtension;
+  @override
+  Identifier get identifier;
+  @override
+  HumanName get name;
+  @override
+  ContactPoint get telecom;
+  @override
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender get gender;
+  @override
+  Date get birthDate;
+  @override
+  Address get address;
+  @override
+  Attachment get photo;
+  @override
+  Reference get managingOrganization;
+  @override
+  Boolean get active;
+  @override
+  PersonLink get link;
+  @override
+  _$PersonCopyWith<_Person> get copyWith;
+}
+
+SubstanceInstance _$SubstanceInstanceFromJson(Map<String, dynamic> json) {
+  return _SubstanceInstance.fromJson(json);
+}
+
+class _$SubstanceInstanceTearOff {
+  const _$SubstanceInstanceTearOff();
+
+  _SubstanceInstance call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Identifier identifier,
+      FhirDateTime expiry,
+      Quantity quantity}) {
+    return _SubstanceInstance(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      expiry: expiry,
+      quantity: quantity,
+    );
+  }
+}
+
+// ignore: unused_element
+const $SubstanceInstance = _$SubstanceInstanceTearOff();
+
+mixin _$SubstanceInstance {
+  Id get id;
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  FhirExtension get modifierExtension;
+  Identifier get identifier;
+  FhirDateTime get expiry;
+  Quantity get quantity;
+
+  Map<String, dynamic> toJson();
+  $SubstanceInstanceCopyWith<SubstanceInstance> get copyWith;
+}
+
+abstract class $SubstanceInstanceCopyWith<$Res> {
+  factory $SubstanceInstanceCopyWith(
+          SubstanceInstance value, $Res Function(SubstanceInstance) then) =
+      _$SubstanceInstanceCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Identifier identifier,
+      FhirDateTime expiry,
+      Quantity quantity});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $IdentifierCopyWith<$Res> get identifier;
+  $QuantityCopyWith<$Res> get quantity;
+}
+
+class _$SubstanceInstanceCopyWithImpl<$Res>
+    implements $SubstanceInstanceCopyWith<$Res> {
+  _$SubstanceInstanceCopyWithImpl(this._value, this._then);
+
+  final SubstanceInstance _value;
+  // ignore: unused_field
+  final $Res Function(SubstanceInstance) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
+    Object expiry = freezed,
+    Object quantity = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      identifier:
+          identifier == freezed ? _value.identifier : identifier as Identifier,
+      expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+    ));
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+}
+
+abstract class _$SubstanceInstanceCopyWith<$Res>
+    implements $SubstanceInstanceCopyWith<$Res> {
+  factory _$SubstanceInstanceCopyWith(
+          _SubstanceInstance value, $Res Function(_SubstanceInstance) then) =
+      __$SubstanceInstanceCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Identifier identifier,
+      FhirDateTime expiry,
+      Quantity quantity});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $QuantityCopyWith<$Res> get quantity;
+}
+
+class __$SubstanceInstanceCopyWithImpl<$Res>
+    extends _$SubstanceInstanceCopyWithImpl<$Res>
+    implements _$SubstanceInstanceCopyWith<$Res> {
+  __$SubstanceInstanceCopyWithImpl(
+      _SubstanceInstance _value, $Res Function(_SubstanceInstance) _then)
+      : super(_value, (v) => _then(v as _SubstanceInstance));
+
+  @override
+  _SubstanceInstance get _value => super._value as _SubstanceInstance;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
+    Object expiry = freezed,
+    Object quantity = freezed,
+  }) {
+    return _then(_SubstanceInstance(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      identifier:
+          identifier == freezed ? _value.identifier : identifier as Identifier,
+      expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_SubstanceInstance implements _SubstanceInstance {
+  const _$_SubstanceInstance(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.expiry,
+      this.quantity});
+
+  factory _$_SubstanceInstance.fromJson(Map<String, dynamic> json) =>
+      _$_$_SubstanceInstanceFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  @JsonKey(name: 'extension')
+  final FhirExtension extension_;
+  @override
+  final FhirExtension modifierExtension;
+  @override
+  final Identifier identifier;
+  @override
+  final FhirDateTime expiry;
+  @override
+  final Quantity quantity;
+
+  @override
+  String toString() {
+    return 'SubstanceInstance(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, expiry: $expiry, quantity: $quantity)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _SubstanceInstance &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.identifier, identifier) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifier, identifier)) &&
+            (identical(other.expiry, expiry) ||
+                const DeepCollectionEquality().equals(other.expiry, expiry)) &&
+            (identical(other.quantity, quantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.quantity, quantity)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(expiry) ^
+      const DeepCollectionEquality().hash(quantity);
+
+  @override
+  _$SubstanceInstanceCopyWith<_SubstanceInstance> get copyWith =>
+      __$SubstanceInstanceCopyWithImpl<_SubstanceInstance>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_SubstanceInstanceToJson(this);
+  }
+}
+
+abstract class _SubstanceInstance implements SubstanceInstance {
+  const factory _SubstanceInstance(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Identifier identifier,
+      FhirDateTime expiry,
+      Quantity quantity}) = _$_SubstanceInstance;
+
+  factory _SubstanceInstance.fromJson(Map<String, dynamic> json) =
+      _$_SubstanceInstance.fromJson;
+
+  @override
+  Id get id;
+  @override
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  @override
+  FhirExtension get modifierExtension;
+  @override
+  Identifier get identifier;
+  @override
+  FhirDateTime get expiry;
+  @override
+  Quantity get quantity;
+  @override
+  _$SubstanceInstanceCopyWith<_SubstanceInstance> get copyWith;
+}
+
+SubstanceIngredient _$SubstanceIngredientFromJson(Map<String, dynamic> json) {
+  return _SubstanceIngredient.fromJson(json);
+}
+
+class _$SubstanceIngredientTearOff {
+  const _$SubstanceIngredientTearOff();
+
+  _SubstanceIngredient call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Ratio quantity,
+      @required @JsonKey(required: true) Reference substance}) {
+    return _SubstanceIngredient(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      quantity: quantity,
+      substance: substance,
+    );
+  }
+}
+
+// ignore: unused_element
+const $SubstanceIngredient = _$SubstanceIngredientTearOff();
+
+mixin _$SubstanceIngredient {
+  Id get id;
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  FhirExtension get modifierExtension;
+  Ratio get quantity;
+  @JsonKey(required: true)
+  Reference get substance;
+
+  Map<String, dynamic> toJson();
+  $SubstanceIngredientCopyWith<SubstanceIngredient> get copyWith;
+}
+
+abstract class $SubstanceIngredientCopyWith<$Res> {
+  factory $SubstanceIngredientCopyWith(
+          SubstanceIngredient value, $Res Function(SubstanceIngredient) then) =
+      _$SubstanceIngredientCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Ratio quantity,
+      @JsonKey(required: true) Reference substance});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $RatioCopyWith<$Res> get quantity;
+  $ReferenceCopyWith<$Res> get substance;
+}
+
+class _$SubstanceIngredientCopyWithImpl<$Res>
+    implements $SubstanceIngredientCopyWith<$Res> {
+  _$SubstanceIngredientCopyWithImpl(this._value, this._then);
+
+  final SubstanceIngredient _value;
+  // ignore: unused_field
+  final $Res Function(SubstanceIngredient) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object quantity = freezed,
+    Object substance = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      quantity: quantity == freezed ? _value.quantity : quantity as Ratio,
+      substance:
+          substance == freezed ? _value.substance : substance as Reference,
+    ));
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get substance {
+    if (_value.substance == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.substance, (value) {
+      return _then(_value.copyWith(substance: value));
+    });
+  }
+}
+
+abstract class _$SubstanceIngredientCopyWith<$Res>
+    implements $SubstanceIngredientCopyWith<$Res> {
+  factory _$SubstanceIngredientCopyWith(_SubstanceIngredient value,
+          $Res Function(_SubstanceIngredient) then) =
+      __$SubstanceIngredientCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      Ratio quantity,
+      @JsonKey(required: true) Reference substance});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $RatioCopyWith<$Res> get quantity;
+  @override
+  $ReferenceCopyWith<$Res> get substance;
+}
+
+class __$SubstanceIngredientCopyWithImpl<$Res>
+    extends _$SubstanceIngredientCopyWithImpl<$Res>
+    implements _$SubstanceIngredientCopyWith<$Res> {
+  __$SubstanceIngredientCopyWithImpl(
+      _SubstanceIngredient _value, $Res Function(_SubstanceIngredient) _then)
+      : super(_value, (v) => _then(v as _SubstanceIngredient));
+
+  @override
+  _SubstanceIngredient get _value => super._value as _SubstanceIngredient;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object quantity = freezed,
+    Object substance = freezed,
+  }) {
+    return _then(_SubstanceIngredient(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      quantity: quantity == freezed ? _value.quantity : quantity as Ratio,
+      substance:
+          substance == freezed ? _value.substance : substance as Reference,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_SubstanceIngredient implements _SubstanceIngredient {
+  const _$_SubstanceIngredient(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.quantity,
+      @required @JsonKey(required: true) this.substance})
+      : assert(substance != null);
+
+  factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
+      _$_$_SubstanceIngredientFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  @JsonKey(name: 'extension')
+  final FhirExtension extension_;
+  @override
+  final FhirExtension modifierExtension;
+  @override
+  final Ratio quantity;
+  @override
+  @JsonKey(required: true)
+  final Reference substance;
+
+  @override
+  String toString() {
+    return 'SubstanceIngredient(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, quantity: $quantity, substance: $substance)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _SubstanceIngredient &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.quantity, quantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.quantity, quantity)) &&
+            (identical(other.substance, substance) ||
+                const DeepCollectionEquality()
+                    .equals(other.substance, substance)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(substance);
+
+  @override
+  _$SubstanceIngredientCopyWith<_SubstanceIngredient> get copyWith =>
+      __$SubstanceIngredientCopyWithImpl<_SubstanceIngredient>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_SubstanceIngredientToJson(this);
+  }
+}
+
+abstract class _SubstanceIngredient implements SubstanceIngredient {
+  const factory _SubstanceIngredient(
+          {Id id,
+          @JsonKey(name: 'extension') FhirExtension extension_,
+          FhirExtension modifierExtension,
+          Ratio quantity,
+          @required @JsonKey(required: true) Reference substance}) =
+      _$_SubstanceIngredient;
+
+  factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
+      _$_SubstanceIngredient.fromJson;
+
+  @override
+  Id get id;
+  @override
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  @override
+  FhirExtension get modifierExtension;
+  @override
+  Ratio get quantity;
+  @override
+  @JsonKey(required: true)
+  Reference get substance;
+  @override
+  _$SubstanceIngredientCopyWith<_SubstanceIngredient> get copyWith;
+}
+
+LocationPosition _$LocationPositionFromJson(Map<String, dynamic> json) {
+  return _LocationPosition.fromJson(json);
+}
+
+class _$LocationPositionTearOff {
+  const _$LocationPositionTearOff();
+
+  _LocationPosition call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @required @JsonKey(required: true) Decimal longitude,
+      @required @JsonKey(required: true) Decimal latitude,
+      Decimal altitude}) {
+    return _LocationPosition(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      longitude: longitude,
+      latitude: latitude,
+      altitude: altitude,
+    );
+  }
+}
+
+// ignore: unused_element
+const $LocationPosition = _$LocationPositionTearOff();
+
+mixin _$LocationPosition {
+  Id get id;
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  FhirExtension get modifierExtension;
+  @JsonKey(required: true)
+  Decimal get longitude;
+  @JsonKey(required: true)
+  Decimal get latitude;
+  Decimal get altitude;
+
+  Map<String, dynamic> toJson();
+  $LocationPositionCopyWith<LocationPosition> get copyWith;
+}
+
+abstract class $LocationPositionCopyWith<$Res> {
+  factory $LocationPositionCopyWith(
+          LocationPosition value, $Res Function(LocationPosition) then) =
+      _$LocationPositionCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @JsonKey(required: true) Decimal longitude,
+      @JsonKey(required: true) Decimal latitude,
+      Decimal altitude});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+}
+
+class _$LocationPositionCopyWithImpl<$Res>
+    implements $LocationPositionCopyWith<$Res> {
+  _$LocationPositionCopyWithImpl(this._value, this._then);
+
+  final LocationPosition _value;
+  // ignore: unused_field
+  final $Res Function(LocationPosition) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object longitude = freezed,
+    Object latitude = freezed,
+    Object altitude = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      longitude: longitude == freezed ? _value.longitude : longitude as Decimal,
+      latitude: latitude == freezed ? _value.latitude : latitude as Decimal,
+      altitude: altitude == freezed ? _value.altitude : altitude as Decimal,
+    ));
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+}
+
+abstract class _$LocationPositionCopyWith<$Res>
+    implements $LocationPositionCopyWith<$Res> {
+  factory _$LocationPositionCopyWith(
+          _LocationPosition value, $Res Function(_LocationPosition) then) =
+      __$LocationPositionCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @JsonKey(required: true) Decimal longitude,
+      @JsonKey(required: true) Decimal latitude,
+      Decimal altitude});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+}
+
+class __$LocationPositionCopyWithImpl<$Res>
+    extends _$LocationPositionCopyWithImpl<$Res>
+    implements _$LocationPositionCopyWith<$Res> {
+  __$LocationPositionCopyWithImpl(
+      _LocationPosition _value, $Res Function(_LocationPosition) _then)
+      : super(_value, (v) => _then(v as _LocationPosition));
+
+  @override
+  _LocationPosition get _value => super._value as _LocationPosition;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object longitude = freezed,
+    Object latitude = freezed,
+    Object altitude = freezed,
+  }) {
+    return _then(_LocationPosition(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      longitude: longitude == freezed ? _value.longitude : longitude as Decimal,
+      latitude: latitude == freezed ? _value.latitude : latitude as Decimal,
+      altitude: altitude == freezed ? _value.altitude : altitude as Decimal,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_LocationPosition implements _LocationPosition {
+  const _$_LocationPosition(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @required @JsonKey(required: true) this.longitude,
+      @required @JsonKey(required: true) this.latitude,
+      this.altitude})
+      : assert(longitude != null),
+        assert(latitude != null);
+
+  factory _$_LocationPosition.fromJson(Map<String, dynamic> json) =>
+      _$_$_LocationPositionFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  @JsonKey(name: 'extension')
+  final FhirExtension extension_;
+  @override
+  final FhirExtension modifierExtension;
+  @override
+  @JsonKey(required: true)
+  final Decimal longitude;
+  @override
+  @JsonKey(required: true)
+  final Decimal latitude;
+  @override
+  final Decimal altitude;
+
+  @override
+  String toString() {
+    return 'LocationPosition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, longitude: $longitude, latitude: $latitude, altitude: $altitude)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _LocationPosition &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.longitude, longitude) ||
+                const DeepCollectionEquality()
+                    .equals(other.longitude, longitude)) &&
+            (identical(other.latitude, latitude) ||
+                const DeepCollectionEquality()
+                    .equals(other.latitude, latitude)) &&
+            (identical(other.altitude, altitude) ||
+                const DeepCollectionEquality()
+                    .equals(other.altitude, altitude)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(longitude) ^
+      const DeepCollectionEquality().hash(latitude) ^
+      const DeepCollectionEquality().hash(altitude);
+
+  @override
+  _$LocationPositionCopyWith<_LocationPosition> get copyWith =>
+      __$LocationPositionCopyWithImpl<_LocationPosition>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_LocationPositionToJson(this);
+  }
+}
+
+abstract class _LocationPosition implements LocationPosition {
+  const factory _LocationPosition(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @required @JsonKey(required: true) Decimal longitude,
+      @required @JsonKey(required: true) Decimal latitude,
+      Decimal altitude}) = _$_LocationPosition;
+
+  factory _LocationPosition.fromJson(Map<String, dynamic> json) =
+      _$_LocationPosition.fromJson;
+
+  @override
+  Id get id;
+  @override
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  @override
+  FhirExtension get modifierExtension;
+  @override
+  @JsonKey(required: true)
+  Decimal get longitude;
+  @override
+  @JsonKey(required: true)
+  Decimal get latitude;
+  @override
+  Decimal get altitude;
+  @override
+  _$LocationPositionCopyWith<_LocationPosition> get copyWith;
+}
+
+PersonLink _$PersonLinkFromJson(Map<String, dynamic> json) {
+  return _PersonLink.fromJson(json);
+}
+
+class _$PersonLinkTearOff {
+  const _$PersonLinkTearOff();
+
+  _PersonLink call(
+      {Id id,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @required
+      @JsonKey(required: true)
+          Reference target,
+      @JsonKey(unknownEnumValue: LinkAssurance.unknown)
+          LinkAssurance assurance}) {
+    return _PersonLink(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      target: target,
+      assurance: assurance,
+    );
+  }
+}
+
+// ignore: unused_element
+const $PersonLink = _$PersonLinkTearOff();
+
+mixin _$PersonLink {
+  Id get id;
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  FhirExtension get modifierExtension;
+  @JsonKey(required: true)
+  Reference get target;
+  @JsonKey(unknownEnumValue: LinkAssurance.unknown)
+  LinkAssurance get assurance;
+
+  Map<String, dynamic> toJson();
+  $PersonLinkCopyWith<PersonLink> get copyWith;
+}
+
+abstract class $PersonLinkCopyWith<$Res> {
+  factory $PersonLinkCopyWith(
+          PersonLink value, $Res Function(PersonLink) then) =
+      _$PersonLinkCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @JsonKey(required: true)
+          Reference target,
+      @JsonKey(unknownEnumValue: LinkAssurance.unknown)
+          LinkAssurance assurance});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ReferenceCopyWith<$Res> get target;
+}
+
+class _$PersonLinkCopyWithImpl<$Res> implements $PersonLinkCopyWith<$Res> {
+  _$PersonLinkCopyWithImpl(this._value, this._then);
+
+  final PersonLink _value;
+  // ignore: unused_field
+  final $Res Function(PersonLink) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object target = freezed,
+    Object assurance = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      target: target == freezed ? _value.target : target as Reference,
+      assurance:
+          assurance == freezed ? _value.assurance : assurance as LinkAssurance,
+    ));
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get target {
+    if (_value.target == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.target, (value) {
+      return _then(_value.copyWith(target: value));
+    });
+  }
+}
+
+abstract class _$PersonLinkCopyWith<$Res> implements $PersonLinkCopyWith<$Res> {
+  factory _$PersonLinkCopyWith(
+          _PersonLink value, $Res Function(_PersonLink) then) =
+      __$PersonLinkCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @JsonKey(required: true)
+          Reference target,
+      @JsonKey(unknownEnumValue: LinkAssurance.unknown)
+          LinkAssurance assurance});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ReferenceCopyWith<$Res> get target;
+}
+
+class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
+    implements _$PersonLinkCopyWith<$Res> {
+  __$PersonLinkCopyWithImpl(
+      _PersonLink _value, $Res Function(_PersonLink) _then)
+      : super(_value, (v) => _then(v as _PersonLink));
+
+  @override
+  _PersonLink get _value => super._value as _PersonLink;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object target = freezed,
+    Object assurance = freezed,
+  }) {
+    return _then(_PersonLink(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      target: target == freezed ? _value.target : target as Reference,
+      assurance:
+          assurance == freezed ? _value.assurance : assurance as LinkAssurance,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_PersonLink implements _PersonLink {
+  const _$_PersonLink(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @required @JsonKey(required: true) this.target,
+      @JsonKey(unknownEnumValue: LinkAssurance.unknown) this.assurance})
+      : assert(target != null);
+
+  factory _$_PersonLink.fromJson(Map<String, dynamic> json) =>
+      _$_$_PersonLinkFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  @JsonKey(name: 'extension')
+  final FhirExtension extension_;
+  @override
+  final FhirExtension modifierExtension;
+  @override
+  @JsonKey(required: true)
+  final Reference target;
+  @override
+  @JsonKey(unknownEnumValue: LinkAssurance.unknown)
+  final LinkAssurance assurance;
+
+  @override
+  String toString() {
+    return 'PersonLink(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, assurance: $assurance)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _PersonLink &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.target, target) ||
+                const DeepCollectionEquality().equals(other.target, target)) &&
+            (identical(other.assurance, assurance) ||
+                const DeepCollectionEquality()
+                    .equals(other.assurance, assurance)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(target) ^
+      const DeepCollectionEquality().hash(assurance);
+
+  @override
+  _$PersonLinkCopyWith<_PersonLink> get copyWith =>
+      __$PersonLinkCopyWithImpl<_PersonLink>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_PersonLinkToJson(this);
+  }
+}
+
+abstract class _PersonLink implements PersonLink {
+  const factory _PersonLink(
+      {Id id,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @required
+      @JsonKey(required: true)
+          Reference target,
+      @JsonKey(unknownEnumValue: LinkAssurance.unknown)
+          LinkAssurance assurance}) = _$_PersonLink;
+
+  factory _PersonLink.fromJson(Map<String, dynamic> json) =
+      _$_PersonLink.fromJson;
+
+  @override
+  Id get id;
+  @override
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  @override
+  FhirExtension get modifierExtension;
+  @override
+  @JsonKey(required: true)
+  Reference get target;
+  @override
+  @JsonKey(unknownEnumValue: LinkAssurance.unknown)
+  LinkAssurance get assurance;
+  @override
+  _$PersonLinkCopyWith<_PersonLink> get copyWith;
+}
+
+TermActor _$TermActorFromJson(Map<String, dynamic> json) {
+  return _TermActor.fromJson(json);
+}
+
+class _$TermActorTearOff {
+  const _$TermActorTearOff();
+
+  _TermActor call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @required @JsonKey(required: true) Reference entity,
+      CodeableConcept role}) {
+    return _TermActor(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      entity: entity,
+      role: role,
+    );
+  }
+}
+
+// ignore: unused_element
+const $TermActor = _$TermActorTearOff();
+
+mixin _$TermActor {
+  Id get id;
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  FhirExtension get modifierExtension;
+  @JsonKey(required: true)
+  Reference get entity;
+  CodeableConcept get role;
+
+  Map<String, dynamic> toJson();
+  $TermActorCopyWith<TermActor> get copyWith;
+}
+
+abstract class $TermActorCopyWith<$Res> {
+  factory $TermActorCopyWith(TermActor value, $Res Function(TermActor) then) =
+      _$TermActorCopyWithImpl<$Res>;
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @JsonKey(required: true) Reference entity,
+      CodeableConcept role});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ReferenceCopyWith<$Res> get entity;
+  $CodeableConceptCopyWith<$Res> get role;
+}
+
+class _$TermActorCopyWithImpl<$Res> implements $TermActorCopyWith<$Res> {
+  _$TermActorCopyWithImpl(this._value, this._then);
+
+  final TermActor _value;
+  // ignore: unused_field
+  final $Res Function(TermActor) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object entity = freezed,
+    Object role = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      entity: entity == freezed ? _value.entity : entity as Reference,
+      role: role == freezed ? _value.role : role as CodeableConcept,
+    ));
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get entity {
+    if (_value.entity == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.entity, (value) {
+      return _then(_value.copyWith(entity: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get role {
+    if (_value.role == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value));
+    });
+  }
+}
+
+abstract class _$TermActorCopyWith<$Res> implements $TermActorCopyWith<$Res> {
+  factory _$TermActorCopyWith(
+          _TermActor value, $Res Function(_TermActor) then) =
+      __$TermActorCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @JsonKey(required: true) Reference entity,
+      CodeableConcept role});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ReferenceCopyWith<$Res> get entity;
+  @override
+  $CodeableConceptCopyWith<$Res> get role;
+}
+
+class __$TermActorCopyWithImpl<$Res> extends _$TermActorCopyWithImpl<$Res>
+    implements _$TermActorCopyWith<$Res> {
+  __$TermActorCopyWithImpl(_TermActor _value, $Res Function(_TermActor) _then)
+      : super(_value, (v) => _then(v as _TermActor));
+
+  @override
+  _TermActor get _value => super._value as _TermActor;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
+    Object entity = freezed,
+    Object role = freezed,
+  }) {
+    return _then(_TermActor(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
+      entity: entity == freezed ? _value.entity : entity as Reference,
+      role: role == freezed ? _value.role : role as CodeableConcept,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_TermActor implements _TermActor {
+  const _$_TermActor(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @required @JsonKey(required: true) this.entity,
+      this.role})
+      : assert(entity != null);
+
+  factory _$_TermActor.fromJson(Map<String, dynamic> json) =>
+      _$_$_TermActorFromJson(json);
+
+  @override
+  final Id id;
+  @override
+  @JsonKey(name: 'extension')
+  final FhirExtension extension_;
+  @override
+  final FhirExtension modifierExtension;
+  @override
+  @JsonKey(required: true)
+  final Reference entity;
+  @override
+  final CodeableConcept role;
+
+  @override
+  String toString() {
+    return 'TermActor(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, entity: $entity, role: $role)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _TermActor &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.entity, entity) ||
+                const DeepCollectionEquality().equals(other.entity, entity)) &&
+            (identical(other.role, role) ||
+                const DeepCollectionEquality().equals(other.role, role)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(entity) ^
+      const DeepCollectionEquality().hash(role);
+
+  @override
+  _$TermActorCopyWith<_TermActor> get copyWith =>
+      __$TermActorCopyWithImpl<_TermActor>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_TermActorToJson(this);
+  }
+}
+
+abstract class _TermActor implements TermActor {
+  const factory _TermActor(
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @required @JsonKey(required: true) Reference entity,
+      CodeableConcept role}) = _$_TermActor;
+
+  factory _TermActor.fromJson(Map<String, dynamic> json) =
+      _$_TermActor.fromJson;
+
+  @override
+  Id get id;
+  @override
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  @override
+  FhirExtension get modifierExtension;
+  @override
+  @JsonKey(required: true)
+  Reference get entity;
+  @override
+  CodeableConcept get role;
+  @override
+  _$TermActorCopyWith<_TermActor> get copyWith;
 }
 
 Contract _$ContractFromJson(Map<String, dynamic> json) {
@@ -1215,7 +3236,7 @@ class _$ContractTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime issued,
@@ -1227,14 +3248,14 @@ class _$ContractTearOff {
       CodeableConcept subType,
       CodeableConcept action,
       CodeableConcept actionReason,
-      BackboneElement actor,
-      BackboneElement valuedItem,
-      BackboneElement signer,
-      BackboneElement term,
+      ContractActor actor,
+      ContractValuedItem valuedItem,
+      ContractSigner signer,
+      ContractTerm term,
       Attachment bindingX,
-      BackboneElement friendly,
-      BackboneElement legal,
-      BackboneElement rule}) {
+      ContractFriendly friendly,
+      ContractLegal legal,
+      ContractRule rule}) {
     return _Contract(
       id: id,
       meta: meta,
@@ -1276,6 +3297,7 @@ mixin _$Contract {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -1288,14 +3310,14 @@ mixin _$Contract {
   CodeableConcept get subType;
   CodeableConcept get action;
   CodeableConcept get actionReason;
-  BackboneElement get actor;
-  BackboneElement get valuedItem;
-  BackboneElement get signer;
-  BackboneElement get term;
+  ContractActor get actor;
+  ContractValuedItem get valuedItem;
+  ContractSigner get signer;
+  ContractTerm get term;
   Attachment get bindingX;
-  BackboneElement get friendly;
-  BackboneElement get legal;
-  BackboneElement get rule;
+  ContractFriendly get friendly;
+  ContractLegal get legal;
+  ContractRule get rule;
 
   Map<String, dynamic> toJson();
   $ContractCopyWith<Contract> get copyWith;
@@ -1311,7 +3333,7 @@ abstract class $ContractCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime issued,
@@ -1323,14 +3345,14 @@ abstract class $ContractCopyWith<$Res> {
       CodeableConcept subType,
       CodeableConcept action,
       CodeableConcept actionReason,
-      BackboneElement actor,
-      BackboneElement valuedItem,
-      BackboneElement signer,
-      BackboneElement term,
+      ContractActor actor,
+      ContractValuedItem valuedItem,
+      ContractSigner signer,
+      ContractTerm term,
       Attachment bindingX,
-      BackboneElement friendly,
-      BackboneElement legal,
-      BackboneElement rule});
+      ContractFriendly friendly,
+      ContractLegal legal,
+      ContractRule rule});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -1345,14 +3367,14 @@ abstract class $ContractCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get subType;
   $CodeableConceptCopyWith<$Res> get action;
   $CodeableConceptCopyWith<$Res> get actionReason;
-  $BackboneElementCopyWith<$Res> get actor;
-  $BackboneElementCopyWith<$Res> get valuedItem;
-  $BackboneElementCopyWith<$Res> get signer;
-  $BackboneElementCopyWith<$Res> get term;
+  $ContractActorCopyWith<$Res> get actor;
+  $ContractValuedItemCopyWith<$Res> get valuedItem;
+  $ContractSignerCopyWith<$Res> get signer;
+  $ContractTermCopyWith<$Res> get term;
   $AttachmentCopyWith<$Res> get bindingX;
-  $BackboneElementCopyWith<$Res> get friendly;
-  $BackboneElementCopyWith<$Res> get legal;
-  $BackboneElementCopyWith<$Res> get rule;
+  $ContractFriendlyCopyWith<$Res> get friendly;
+  $ContractLegalCopyWith<$Res> get legal;
+  $ContractRuleCopyWith<$Res> get rule;
 }
 
 class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
@@ -1421,17 +3443,17 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
       actionReason: actionReason == freezed
           ? _value.actionReason
           : actionReason as CodeableConcept,
-      actor: actor == freezed ? _value.actor : actor as BackboneElement,
+      actor: actor == freezed ? _value.actor : actor as ContractActor,
       valuedItem: valuedItem == freezed
           ? _value.valuedItem
-          : valuedItem as BackboneElement,
-      signer: signer == freezed ? _value.signer : signer as BackboneElement,
-      term: term == freezed ? _value.term : term as BackboneElement,
+          : valuedItem as ContractValuedItem,
+      signer: signer == freezed ? _value.signer : signer as ContractSigner,
+      term: term == freezed ? _value.term : term as ContractTerm,
       bindingX: bindingX == freezed ? _value.bindingX : bindingX as Attachment,
       friendly:
-          friendly == freezed ? _value.friendly : friendly as BackboneElement,
-      legal: legal == freezed ? _value.legal : legal as BackboneElement,
-      rule: rule == freezed ? _value.rule : rule as BackboneElement,
+          friendly == freezed ? _value.friendly : friendly as ContractFriendly,
+      legal: legal == freezed ? _value.legal : legal as ContractLegal,
+      rule: rule == freezed ? _value.rule : rule as ContractRule,
     ));
   }
 
@@ -1566,41 +3588,41 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get actor {
+  $ContractActorCopyWith<$Res> get actor {
     if (_value.actor == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.actor, (value) {
+    return $ContractActorCopyWith<$Res>(_value.actor, (value) {
       return _then(_value.copyWith(actor: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get valuedItem {
+  $ContractValuedItemCopyWith<$Res> get valuedItem {
     if (_value.valuedItem == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.valuedItem, (value) {
+    return $ContractValuedItemCopyWith<$Res>(_value.valuedItem, (value) {
       return _then(_value.copyWith(valuedItem: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get signer {
+  $ContractSignerCopyWith<$Res> get signer {
     if (_value.signer == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.signer, (value) {
+    return $ContractSignerCopyWith<$Res>(_value.signer, (value) {
       return _then(_value.copyWith(signer: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get term {
+  $ContractTermCopyWith<$Res> get term {
     if (_value.term == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.term, (value) {
+    return $ContractTermCopyWith<$Res>(_value.term, (value) {
       return _then(_value.copyWith(term: value));
     });
   }
@@ -1616,31 +3638,31 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get friendly {
+  $ContractFriendlyCopyWith<$Res> get friendly {
     if (_value.friendly == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.friendly, (value) {
+    return $ContractFriendlyCopyWith<$Res>(_value.friendly, (value) {
       return _then(_value.copyWith(friendly: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get legal {
+  $ContractLegalCopyWith<$Res> get legal {
     if (_value.legal == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.legal, (value) {
+    return $ContractLegalCopyWith<$Res>(_value.legal, (value) {
       return _then(_value.copyWith(legal: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get rule {
+  $ContractRuleCopyWith<$Res> get rule {
     if (_value.rule == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.rule, (value) {
+    return $ContractRuleCopyWith<$Res>(_value.rule, (value) {
       return _then(_value.copyWith(rule: value));
     });
   }
@@ -1657,7 +3679,7 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime issued,
@@ -1669,14 +3691,14 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       CodeableConcept subType,
       CodeableConcept action,
       CodeableConcept actionReason,
-      BackboneElement actor,
-      BackboneElement valuedItem,
-      BackboneElement signer,
-      BackboneElement term,
+      ContractActor actor,
+      ContractValuedItem valuedItem,
+      ContractSigner signer,
+      ContractTerm term,
       Attachment bindingX,
-      BackboneElement friendly,
-      BackboneElement legal,
-      BackboneElement rule});
+      ContractFriendly friendly,
+      ContractLegal legal,
+      ContractRule rule});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1705,21 +3727,21 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
   @override
   $CodeableConceptCopyWith<$Res> get actionReason;
   @override
-  $BackboneElementCopyWith<$Res> get actor;
+  $ContractActorCopyWith<$Res> get actor;
   @override
-  $BackboneElementCopyWith<$Res> get valuedItem;
+  $ContractValuedItemCopyWith<$Res> get valuedItem;
   @override
-  $BackboneElementCopyWith<$Res> get signer;
+  $ContractSignerCopyWith<$Res> get signer;
   @override
-  $BackboneElementCopyWith<$Res> get term;
+  $ContractTermCopyWith<$Res> get term;
   @override
   $AttachmentCopyWith<$Res> get bindingX;
   @override
-  $BackboneElementCopyWith<$Res> get friendly;
+  $ContractFriendlyCopyWith<$Res> get friendly;
   @override
-  $BackboneElementCopyWith<$Res> get legal;
+  $ContractLegalCopyWith<$Res> get legal;
   @override
-  $BackboneElementCopyWith<$Res> get rule;
+  $ContractRuleCopyWith<$Res> get rule;
 }
 
 class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
@@ -1789,17 +3811,17 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
       actionReason: actionReason == freezed
           ? _value.actionReason
           : actionReason as CodeableConcept,
-      actor: actor == freezed ? _value.actor : actor as BackboneElement,
+      actor: actor == freezed ? _value.actor : actor as ContractActor,
       valuedItem: valuedItem == freezed
           ? _value.valuedItem
-          : valuedItem as BackboneElement,
-      signer: signer == freezed ? _value.signer : signer as BackboneElement,
-      term: term == freezed ? _value.term : term as BackboneElement,
+          : valuedItem as ContractValuedItem,
+      signer: signer == freezed ? _value.signer : signer as ContractSigner,
+      term: term == freezed ? _value.term : term as ContractTerm,
       bindingX: bindingX == freezed ? _value.bindingX : bindingX as Attachment,
       friendly:
-          friendly == freezed ? _value.friendly : friendly as BackboneElement,
-      legal: legal == freezed ? _value.legal : legal as BackboneElement,
-      rule: rule == freezed ? _value.rule : rule as BackboneElement,
+          friendly == freezed ? _value.friendly : friendly as ContractFriendly,
+      legal: legal == freezed ? _value.legal : legal as ContractLegal,
+      rule: rule == freezed ? _value.rule : rule as ContractRule,
     ));
   }
 }
@@ -1813,7 +3835,7 @@ class _$_Contract implements _Contract {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.issued,
@@ -1850,6 +3872,7 @@ class _$_Contract implements _Contract {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1874,21 +3897,21 @@ class _$_Contract implements _Contract {
   @override
   final CodeableConcept actionReason;
   @override
-  final BackboneElement actor;
+  final ContractActor actor;
   @override
-  final BackboneElement valuedItem;
+  final ContractValuedItem valuedItem;
   @override
-  final BackboneElement signer;
+  final ContractSigner signer;
   @override
-  final BackboneElement term;
+  final ContractTerm term;
   @override
   final Attachment bindingX;
   @override
-  final BackboneElement friendly;
+  final ContractFriendly friendly;
   @override
-  final BackboneElement legal;
+  final ContractLegal legal;
   @override
-  final BackboneElement rule;
+  final ContractRule rule;
 
   @override
   String toString() {
@@ -2015,7 +4038,7 @@ abstract class _Contract implements Contract {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime issued,
@@ -2027,14 +4050,14 @@ abstract class _Contract implements Contract {
       CodeableConcept subType,
       CodeableConcept action,
       CodeableConcept actionReason,
-      BackboneElement actor,
-      BackboneElement valuedItem,
-      BackboneElement signer,
-      BackboneElement term,
+      ContractActor actor,
+      ContractValuedItem valuedItem,
+      ContractSigner signer,
+      ContractTerm term,
       Attachment bindingX,
-      BackboneElement friendly,
-      BackboneElement legal,
-      BackboneElement rule}) = _$_Contract;
+      ContractFriendly friendly,
+      ContractLegal legal,
+      ContractRule rule}) = _$_Contract;
 
   factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
@@ -2051,6 +4074,7 @@ abstract class _Contract implements Contract {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -2075,1475 +4099,23 @@ abstract class _Contract implements Contract {
   @override
   CodeableConcept get actionReason;
   @override
-  BackboneElement get actor;
+  ContractActor get actor;
   @override
-  BackboneElement get valuedItem;
+  ContractValuedItem get valuedItem;
   @override
-  BackboneElement get signer;
+  ContractSigner get signer;
   @override
-  BackboneElement get term;
+  ContractTerm get term;
   @override
   Attachment get bindingX;
   @override
-  BackboneElement get friendly;
+  ContractFriendly get friendly;
   @override
-  BackboneElement get legal;
+  ContractLegal get legal;
   @override
-  BackboneElement get rule;
+  ContractRule get rule;
   @override
   _$ContractCopyWith<_Contract> get copyWith;
-}
-
-Person _$PersonFromJson(Map<String, dynamic> json) {
-  return _Person.fromJson(json);
-}
-
-class _$PersonTearOff {
-  const _$PersonTearOff();
-
-  _Person call(
-      {Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      Resource contained,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      HumanName name,
-      ContactPoint telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
-      Date birthDate,
-      Address address,
-      Attachment photo,
-      Reference managingOrganization,
-      Boolean active,
-      BackboneElement link}) {
-    return _Person(
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      language: language,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      name: name,
-      telecom: telecom,
-      gender: gender,
-      birthDate: birthDate,
-      address: address,
-      photo: photo,
-      managingOrganization: managingOrganization,
-      active: active,
-      link: link,
-    );
-  }
-}
-
-// ignore: unused_element
-const $Person = _$PersonTearOff();
-
-mixin _$Person {
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
-  Code get language;
-  Narrative get text;
-  Resource get contained;
-  FhirExtension get extension_;
-  FhirExtension get modifierExtension;
-  Identifier get identifier;
-  HumanName get name;
-  ContactPoint get telecom;
-  @JsonKey(unknownEnumValue: PersonGender.unknown)
-  PersonGender get gender;
-  Date get birthDate;
-  Address get address;
-  Attachment get photo;
-  Reference get managingOrganization;
-  Boolean get active;
-  BackboneElement get link;
-
-  Map<String, dynamic> toJson();
-  $PersonCopyWith<Person> get copyWith;
-}
-
-abstract class $PersonCopyWith<$Res> {
-  factory $PersonCopyWith(Person value, $Res Function(Person) then) =
-      _$PersonCopyWithImpl<$Res>;
-  $Res call(
-      {Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      Resource contained,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      HumanName name,
-      ContactPoint telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
-      Date birthDate,
-      Address address,
-      Attachment photo,
-      Reference managingOrganization,
-      Boolean active,
-      BackboneElement link});
-
-  $MetaCopyWith<$Res> get meta;
-  $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
-  $HumanNameCopyWith<$Res> get name;
-  $ContactPointCopyWith<$Res> get telecom;
-  $AddressCopyWith<$Res> get address;
-  $AttachmentCopyWith<$Res> get photo;
-  $ReferenceCopyWith<$Res> get managingOrganization;
-  $BackboneElementCopyWith<$Res> get link;
-}
-
-class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
-  _$PersonCopyWithImpl(this._value, this._then);
-
-  final Person _value;
-  // ignore: unused_field
-  final $Res Function(Person) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object language = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object name = freezed,
-    Object telecom = freezed,
-    Object gender = freezed,
-    Object birthDate = freezed,
-    Object address = freezed,
-    Object photo = freezed,
-    Object managingOrganization = freezed,
-    Object active = freezed,
-    Object link = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
-      implicitRules: implicitRules == freezed
-          ? _value.implicitRules
-          : implicitRules as FhirUri,
-      language: language == freezed ? _value.language : language as Code,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as Resource,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
-      gender: gender == freezed ? _value.gender : gender as PersonGender,
-      birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      address: address == freezed ? _value.address : address as Address,
-      photo: photo == freezed ? _value.photo : photo as Attachment,
-      managingOrganization: managingOrganization == freezed
-          ? _value.managingOrganization
-          : managingOrganization as Reference,
-      active: active == freezed ? _value.active : active as Boolean,
-      link: link == freezed ? _value.link : link as BackboneElement,
-    ));
-  }
-
-  @override
-  $MetaCopyWith<$Res> get meta {
-    if (_value.meta == null) {
-      return null;
-    }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
-      return _then(_value.copyWith(meta: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res> get text {
-    if (_value.text == null) {
-      return null;
-    }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
-      return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $HumanNameCopyWith<$Res> get name {
-    if (_value.name == null) {
-      return null;
-    }
-    return $HumanNameCopyWith<$Res>(_value.name, (value) {
-      return _then(_value.copyWith(name: value));
-    });
-  }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
-
-  @override
-  $AddressCopyWith<$Res> get address {
-    if (_value.address == null) {
-      return null;
-    }
-    return $AddressCopyWith<$Res>(_value.address, (value) {
-      return _then(_value.copyWith(address: value));
-    });
-  }
-
-  @override
-  $AttachmentCopyWith<$Res> get photo {
-    if (_value.photo == null) {
-      return null;
-    }
-    return $AttachmentCopyWith<$Res>(_value.photo, (value) {
-      return _then(_value.copyWith(photo: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get managingOrganization {
-    if (_value.managingOrganization == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.managingOrganization, (value) {
-      return _then(_value.copyWith(managingOrganization: value));
-    });
-  }
-
-  @override
-  $BackboneElementCopyWith<$Res> get link {
-    if (_value.link == null) {
-      return null;
-    }
-    return $BackboneElementCopyWith<$Res>(_value.link, (value) {
-      return _then(_value.copyWith(link: value));
-    });
-  }
-}
-
-abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
-  factory _$PersonCopyWith(_Person value, $Res Function(_Person) then) =
-      __$PersonCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      Resource contained,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      HumanName name,
-      ContactPoint telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
-      Date birthDate,
-      Address address,
-      Attachment photo,
-      Reference managingOrganization,
-      Boolean active,
-      BackboneElement link});
-
-  @override
-  $MetaCopyWith<$Res> get meta;
-  @override
-  $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $HumanNameCopyWith<$Res> get name;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
-  @override
-  $AddressCopyWith<$Res> get address;
-  @override
-  $AttachmentCopyWith<$Res> get photo;
-  @override
-  $ReferenceCopyWith<$Res> get managingOrganization;
-  @override
-  $BackboneElementCopyWith<$Res> get link;
-}
-
-class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
-    implements _$PersonCopyWith<$Res> {
-  __$PersonCopyWithImpl(_Person _value, $Res Function(_Person) _then)
-      : super(_value, (v) => _then(v as _Person));
-
-  @override
-  _Person get _value => super._value as _Person;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object language = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object name = freezed,
-    Object telecom = freezed,
-    Object gender = freezed,
-    Object birthDate = freezed,
-    Object address = freezed,
-    Object photo = freezed,
-    Object managingOrganization = freezed,
-    Object active = freezed,
-    Object link = freezed,
-  }) {
-    return _then(_Person(
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
-      implicitRules: implicitRules == freezed
-          ? _value.implicitRules
-          : implicitRules as FhirUri,
-      language: language == freezed ? _value.language : language as Code,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as Resource,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
-      gender: gender == freezed ? _value.gender : gender as PersonGender,
-      birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      address: address == freezed ? _value.address : address as Address,
-      photo: photo == freezed ? _value.photo : photo as Attachment,
-      managingOrganization: managingOrganization == freezed
-          ? _value.managingOrganization
-          : managingOrganization as Reference,
-      active: active == freezed ? _value.active : active as Boolean,
-      link: link == freezed ? _value.link : link as BackboneElement,
-    ));
-  }
-}
-
-@JsonSerializable()
-class _$_Person implements _Person {
-  const _$_Person(
-      {this.id,
-      this.meta,
-      this.implicitRules,
-      this.language,
-      this.text,
-      this.contained,
-      this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.name,
-      this.telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown) this.gender,
-      this.birthDate,
-      this.address,
-      this.photo,
-      this.managingOrganization,
-      this.active,
-      this.link});
-
-  factory _$_Person.fromJson(Map<String, dynamic> json) =>
-      _$_$_PersonFromJson(json);
-
-  @override
-  final Id id;
-  @override
-  final Meta meta;
-  @override
-  final FhirUri implicitRules;
-  @override
-  final Code language;
-  @override
-  final Narrative text;
-  @override
-  final Resource contained;
-  @override
-  final FhirExtension extension_;
-  @override
-  final FhirExtension modifierExtension;
-  @override
-  final Identifier identifier;
-  @override
-  final HumanName name;
-  @override
-  final ContactPoint telecom;
-  @override
-  @JsonKey(unknownEnumValue: PersonGender.unknown)
-  final PersonGender gender;
-  @override
-  final Date birthDate;
-  @override
-  final Address address;
-  @override
-  final Attachment photo;
-  @override
-  final Reference managingOrganization;
-  @override
-  final Boolean active;
-  @override
-  final BackboneElement link;
-
-  @override
-  String toString() {
-    return 'Person(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, managingOrganization: $managingOrganization, active: $active, link: $link)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _Person &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.telecom, telecom) ||
-                const DeepCollectionEquality()
-                    .equals(other.telecom, telecom)) &&
-            (identical(other.gender, gender) ||
-                const DeepCollectionEquality().equals(other.gender, gender)) &&
-            (identical(other.birthDate, birthDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.birthDate, birthDate)) &&
-            (identical(other.address, address) ||
-                const DeepCollectionEquality()
-                    .equals(other.address, address)) &&
-            (identical(other.photo, photo) ||
-                const DeepCollectionEquality().equals(other.photo, photo)) &&
-            (identical(other.managingOrganization, managingOrganization) ||
-                const DeepCollectionEquality().equals(
-                    other.managingOrganization, managingOrganization)) &&
-            (identical(other.active, active) ||
-                const DeepCollectionEquality().equals(other.active, active)) &&
-            (identical(other.link, link) ||
-                const DeepCollectionEquality().equals(other.link, link)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(telecom) ^
-      const DeepCollectionEquality().hash(gender) ^
-      const DeepCollectionEquality().hash(birthDate) ^
-      const DeepCollectionEquality().hash(address) ^
-      const DeepCollectionEquality().hash(photo) ^
-      const DeepCollectionEquality().hash(managingOrganization) ^
-      const DeepCollectionEquality().hash(active) ^
-      const DeepCollectionEquality().hash(link);
-
-  @override
-  _$PersonCopyWith<_Person> get copyWith =>
-      __$PersonCopyWithImpl<_Person>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_PersonToJson(this);
-  }
-}
-
-abstract class _Person implements Person {
-  const factory _Person(
-      {Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      Resource contained,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      HumanName name,
-      ContactPoint telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
-      Date birthDate,
-      Address address,
-      Attachment photo,
-      Reference managingOrganization,
-      Boolean active,
-      BackboneElement link}) = _$_Person;
-
-  factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
-
-  @override
-  Id get id;
-  @override
-  Meta get meta;
-  @override
-  FhirUri get implicitRules;
-  @override
-  Code get language;
-  @override
-  Narrative get text;
-  @override
-  Resource get contained;
-  @override
-  FhirExtension get extension_;
-  @override
-  FhirExtension get modifierExtension;
-  @override
-  Identifier get identifier;
-  @override
-  HumanName get name;
-  @override
-  ContactPoint get telecom;
-  @override
-  @JsonKey(unknownEnumValue: PersonGender.unknown)
-  PersonGender get gender;
-  @override
-  Date get birthDate;
-  @override
-  Address get address;
-  @override
-  Attachment get photo;
-  @override
-  Reference get managingOrganization;
-  @override
-  Boolean get active;
-  @override
-  BackboneElement get link;
-  @override
-  _$PersonCopyWith<_Person> get copyWith;
-}
-
-SubstanceInstance _$SubstanceInstanceFromJson(Map<String, dynamic> json) {
-  return _SubstanceInstance.fromJson(json);
-}
-
-class _$SubstanceInstanceTearOff {
-  const _$SubstanceInstanceTearOff();
-
-  _SubstanceInstance call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      FhirDateTime expiry,
-      Quantity quantity}) {
-    return _SubstanceInstance(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      expiry: expiry,
-      quantity: quantity,
-    );
-  }
-}
-
-// ignore: unused_element
-const $SubstanceInstance = _$SubstanceInstanceTearOff();
-
-mixin _$SubstanceInstance {
-  Id get id;
-  FhirExtension get extension_;
-  FhirExtension get modifierExtension;
-  Identifier get identifier;
-  FhirDateTime get expiry;
-  Quantity get quantity;
-
-  Map<String, dynamic> toJson();
-  $SubstanceInstanceCopyWith<SubstanceInstance> get copyWith;
-}
-
-abstract class $SubstanceInstanceCopyWith<$Res> {
-  factory $SubstanceInstanceCopyWith(
-          SubstanceInstance value, $Res Function(SubstanceInstance) then) =
-      _$SubstanceInstanceCopyWithImpl<$Res>;
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      FhirDateTime expiry,
-      Quantity quantity});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
-  $QuantityCopyWith<$Res> get quantity;
-}
-
-class _$SubstanceInstanceCopyWithImpl<$Res>
-    implements $SubstanceInstanceCopyWith<$Res> {
-  _$SubstanceInstanceCopyWithImpl(this._value, this._then);
-
-  final SubstanceInstance _value;
-  // ignore: unused_field
-  final $Res Function(SubstanceInstance) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object expiry = freezed,
-    Object quantity = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-    ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res> get quantity {
-    if (_value.quantity == null) {
-      return null;
-    }
-    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
-      return _then(_value.copyWith(quantity: value));
-    });
-  }
-}
-
-abstract class _$SubstanceInstanceCopyWith<$Res>
-    implements $SubstanceInstanceCopyWith<$Res> {
-  factory _$SubstanceInstanceCopyWith(
-          _SubstanceInstance value, $Res Function(_SubstanceInstance) then) =
-      __$SubstanceInstanceCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      FhirDateTime expiry,
-      Quantity quantity});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $QuantityCopyWith<$Res> get quantity;
-}
-
-class __$SubstanceInstanceCopyWithImpl<$Res>
-    extends _$SubstanceInstanceCopyWithImpl<$Res>
-    implements _$SubstanceInstanceCopyWith<$Res> {
-  __$SubstanceInstanceCopyWithImpl(
-      _SubstanceInstance _value, $Res Function(_SubstanceInstance) _then)
-      : super(_value, (v) => _then(v as _SubstanceInstance));
-
-  @override
-  _SubstanceInstance get _value => super._value as _SubstanceInstance;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object expiry = freezed,
-    Object quantity = freezed,
-  }) {
-    return _then(_SubstanceInstance(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-    ));
-  }
-}
-
-@JsonSerializable()
-class _$_SubstanceInstance implements _SubstanceInstance {
-  const _$_SubstanceInstance(
-      {this.id,
-      this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.expiry,
-      this.quantity});
-
-  factory _$_SubstanceInstance.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceInstanceFromJson(json);
-
-  @override
-  final Id id;
-  @override
-  final FhirExtension extension_;
-  @override
-  final FhirExtension modifierExtension;
-  @override
-  final Identifier identifier;
-  @override
-  final FhirDateTime expiry;
-  @override
-  final Quantity quantity;
-
-  @override
-  String toString() {
-    return 'SubstanceInstance(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, expiry: $expiry, quantity: $quantity)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _SubstanceInstance &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.expiry, expiry) ||
-                const DeepCollectionEquality().equals(other.expiry, expiry)) &&
-            (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(expiry) ^
-      const DeepCollectionEquality().hash(quantity);
-
-  @override
-  _$SubstanceInstanceCopyWith<_SubstanceInstance> get copyWith =>
-      __$SubstanceInstanceCopyWithImpl<_SubstanceInstance>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_SubstanceInstanceToJson(this);
-  }
-}
-
-abstract class _SubstanceInstance implements SubstanceInstance {
-  const factory _SubstanceInstance(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Identifier identifier,
-      FhirDateTime expiry,
-      Quantity quantity}) = _$_SubstanceInstance;
-
-  factory _SubstanceInstance.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceInstance.fromJson;
-
-  @override
-  Id get id;
-  @override
-  FhirExtension get extension_;
-  @override
-  FhirExtension get modifierExtension;
-  @override
-  Identifier get identifier;
-  @override
-  FhirDateTime get expiry;
-  @override
-  Quantity get quantity;
-  @override
-  _$SubstanceInstanceCopyWith<_SubstanceInstance> get copyWith;
-}
-
-SubstanceIngredient _$SubstanceIngredientFromJson(Map<String, dynamic> json) {
-  return _SubstanceIngredient.fromJson(json);
-}
-
-class _$SubstanceIngredientTearOff {
-  const _$SubstanceIngredientTearOff();
-
-  _SubstanceIngredient call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Ratio quantity,
-      @required @JsonKey(required: true) Reference substance}) {
-    return _SubstanceIngredient(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      quantity: quantity,
-      substance: substance,
-    );
-  }
-}
-
-// ignore: unused_element
-const $SubstanceIngredient = _$SubstanceIngredientTearOff();
-
-mixin _$SubstanceIngredient {
-  Id get id;
-  FhirExtension get extension_;
-  FhirExtension get modifierExtension;
-  Ratio get quantity;
-  @JsonKey(required: true)
-  Reference get substance;
-
-  Map<String, dynamic> toJson();
-  $SubstanceIngredientCopyWith<SubstanceIngredient> get copyWith;
-}
-
-abstract class $SubstanceIngredientCopyWith<$Res> {
-  factory $SubstanceIngredientCopyWith(
-          SubstanceIngredient value, $Res Function(SubstanceIngredient) then) =
-      _$SubstanceIngredientCopyWithImpl<$Res>;
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Ratio quantity,
-      @JsonKey(required: true) Reference substance});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $RatioCopyWith<$Res> get quantity;
-  $ReferenceCopyWith<$Res> get substance;
-}
-
-class _$SubstanceIngredientCopyWithImpl<$Res>
-    implements $SubstanceIngredientCopyWith<$Res> {
-  _$SubstanceIngredientCopyWithImpl(this._value, this._then);
-
-  final SubstanceIngredient _value;
-  // ignore: unused_field
-  final $Res Function(SubstanceIngredient) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object quantity = freezed,
-    Object substance = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      quantity: quantity == freezed ? _value.quantity : quantity as Ratio,
-      substance:
-          substance == freezed ? _value.substance : substance as Reference,
-    ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $RatioCopyWith<$Res> get quantity {
-    if (_value.quantity == null) {
-      return null;
-    }
-    return $RatioCopyWith<$Res>(_value.quantity, (value) {
-      return _then(_value.copyWith(quantity: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get substance {
-    if (_value.substance == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.substance, (value) {
-      return _then(_value.copyWith(substance: value));
-    });
-  }
-}
-
-abstract class _$SubstanceIngredientCopyWith<$Res>
-    implements $SubstanceIngredientCopyWith<$Res> {
-  factory _$SubstanceIngredientCopyWith(_SubstanceIngredient value,
-          $Res Function(_SubstanceIngredient) then) =
-      __$SubstanceIngredientCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      Ratio quantity,
-      @JsonKey(required: true) Reference substance});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $RatioCopyWith<$Res> get quantity;
-  @override
-  $ReferenceCopyWith<$Res> get substance;
-}
-
-class __$SubstanceIngredientCopyWithImpl<$Res>
-    extends _$SubstanceIngredientCopyWithImpl<$Res>
-    implements _$SubstanceIngredientCopyWith<$Res> {
-  __$SubstanceIngredientCopyWithImpl(
-      _SubstanceIngredient _value, $Res Function(_SubstanceIngredient) _then)
-      : super(_value, (v) => _then(v as _SubstanceIngredient));
-
-  @override
-  _SubstanceIngredient get _value => super._value as _SubstanceIngredient;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object quantity = freezed,
-    Object substance = freezed,
-  }) {
-    return _then(_SubstanceIngredient(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      quantity: quantity == freezed ? _value.quantity : quantity as Ratio,
-      substance:
-          substance == freezed ? _value.substance : substance as Reference,
-    ));
-  }
-}
-
-@JsonSerializable()
-class _$_SubstanceIngredient implements _SubstanceIngredient {
-  const _$_SubstanceIngredient(
-      {this.id,
-      this.extension_,
-      this.modifierExtension,
-      this.quantity,
-      @required @JsonKey(required: true) this.substance})
-      : assert(substance != null);
-
-  factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceIngredientFromJson(json);
-
-  @override
-  final Id id;
-  @override
-  final FhirExtension extension_;
-  @override
-  final FhirExtension modifierExtension;
-  @override
-  final Ratio quantity;
-  @override
-  @JsonKey(required: true)
-  final Reference substance;
-
-  @override
-  String toString() {
-    return 'SubstanceIngredient(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, quantity: $quantity, substance: $substance)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _SubstanceIngredient &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)) &&
-            (identical(other.substance, substance) ||
-                const DeepCollectionEquality()
-                    .equals(other.substance, substance)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(substance);
-
-  @override
-  _$SubstanceIngredientCopyWith<_SubstanceIngredient> get copyWith =>
-      __$SubstanceIngredientCopyWithImpl<_SubstanceIngredient>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_SubstanceIngredientToJson(this);
-  }
-}
-
-abstract class _SubstanceIngredient implements SubstanceIngredient {
-  const factory _SubstanceIngredient(
-          {Id id,
-          FhirExtension extension_,
-          FhirExtension modifierExtension,
-          Ratio quantity,
-          @required @JsonKey(required: true) Reference substance}) =
-      _$_SubstanceIngredient;
-
-  factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceIngredient.fromJson;
-
-  @override
-  Id get id;
-  @override
-  FhirExtension get extension_;
-  @override
-  FhirExtension get modifierExtension;
-  @override
-  Ratio get quantity;
-  @override
-  @JsonKey(required: true)
-  Reference get substance;
-  @override
-  _$SubstanceIngredientCopyWith<_SubstanceIngredient> get copyWith;
-}
-
-LocationPosition _$LocationPositionFromJson(Map<String, dynamic> json) {
-  return _LocationPosition.fromJson(json);
-}
-
-class _$LocationPositionTearOff {
-  const _$LocationPositionTearOff();
-
-  _LocationPosition call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Decimal longitude,
-      @required @JsonKey(required: true) Decimal latitude,
-      Decimal altitude}) {
-    return _LocationPosition(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      longitude: longitude,
-      latitude: latitude,
-      altitude: altitude,
-    );
-  }
-}
-
-// ignore: unused_element
-const $LocationPosition = _$LocationPositionTearOff();
-
-mixin _$LocationPosition {
-  Id get id;
-  FhirExtension get extension_;
-  FhirExtension get modifierExtension;
-  @JsonKey(required: true)
-  Decimal get longitude;
-  @JsonKey(required: true)
-  Decimal get latitude;
-  Decimal get altitude;
-
-  Map<String, dynamic> toJson();
-  $LocationPositionCopyWith<LocationPosition> get copyWith;
-}
-
-abstract class $LocationPositionCopyWith<$Res> {
-  factory $LocationPositionCopyWith(
-          LocationPosition value, $Res Function(LocationPosition) then) =
-      _$LocationPositionCopyWithImpl<$Res>;
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @JsonKey(required: true) Decimal longitude,
-      @JsonKey(required: true) Decimal latitude,
-      Decimal altitude});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-}
-
-class _$LocationPositionCopyWithImpl<$Res>
-    implements $LocationPositionCopyWith<$Res> {
-  _$LocationPositionCopyWithImpl(this._value, this._then);
-
-  final LocationPosition _value;
-  // ignore: unused_field
-  final $Res Function(LocationPosition) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object longitude = freezed,
-    Object latitude = freezed,
-    Object altitude = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      longitude: longitude == freezed ? _value.longitude : longitude as Decimal,
-      latitude: latitude == freezed ? _value.latitude : latitude as Decimal,
-      altitude: altitude == freezed ? _value.altitude : altitude as Decimal,
-    ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-}
-
-abstract class _$LocationPositionCopyWith<$Res>
-    implements $LocationPositionCopyWith<$Res> {
-  factory _$LocationPositionCopyWith(
-          _LocationPosition value, $Res Function(_LocationPosition) then) =
-      __$LocationPositionCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @JsonKey(required: true) Decimal longitude,
-      @JsonKey(required: true) Decimal latitude,
-      Decimal altitude});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-}
-
-class __$LocationPositionCopyWithImpl<$Res>
-    extends _$LocationPositionCopyWithImpl<$Res>
-    implements _$LocationPositionCopyWith<$Res> {
-  __$LocationPositionCopyWithImpl(
-      _LocationPosition _value, $Res Function(_LocationPosition) _then)
-      : super(_value, (v) => _then(v as _LocationPosition));
-
-  @override
-  _LocationPosition get _value => super._value as _LocationPosition;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object longitude = freezed,
-    Object latitude = freezed,
-    Object altitude = freezed,
-  }) {
-    return _then(_LocationPosition(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      longitude: longitude == freezed ? _value.longitude : longitude as Decimal,
-      latitude: latitude == freezed ? _value.latitude : latitude as Decimal,
-      altitude: altitude == freezed ? _value.altitude : altitude as Decimal,
-    ));
-  }
-}
-
-@JsonSerializable()
-class _$_LocationPosition implements _LocationPosition {
-  const _$_LocationPosition(
-      {this.id,
-      this.extension_,
-      this.modifierExtension,
-      @required @JsonKey(required: true) this.longitude,
-      @required @JsonKey(required: true) this.latitude,
-      this.altitude})
-      : assert(longitude != null),
-        assert(latitude != null);
-
-  factory _$_LocationPosition.fromJson(Map<String, dynamic> json) =>
-      _$_$_LocationPositionFromJson(json);
-
-  @override
-  final Id id;
-  @override
-  final FhirExtension extension_;
-  @override
-  final FhirExtension modifierExtension;
-  @override
-  @JsonKey(required: true)
-  final Decimal longitude;
-  @override
-  @JsonKey(required: true)
-  final Decimal latitude;
-  @override
-  final Decimal altitude;
-
-  @override
-  String toString() {
-    return 'LocationPosition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, longitude: $longitude, latitude: $latitude, altitude: $altitude)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _LocationPosition &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.longitude, longitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.longitude, longitude)) &&
-            (identical(other.latitude, latitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.latitude, latitude)) &&
-            (identical(other.altitude, altitude) ||
-                const DeepCollectionEquality()
-                    .equals(other.altitude, altitude)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(longitude) ^
-      const DeepCollectionEquality().hash(latitude) ^
-      const DeepCollectionEquality().hash(altitude);
-
-  @override
-  _$LocationPositionCopyWith<_LocationPosition> get copyWith =>
-      __$LocationPositionCopyWithImpl<_LocationPosition>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_LocationPositionToJson(this);
-  }
-}
-
-abstract class _LocationPosition implements LocationPosition {
-  const factory _LocationPosition(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Decimal longitude,
-      @required @JsonKey(required: true) Decimal latitude,
-      Decimal altitude}) = _$_LocationPosition;
-
-  factory _LocationPosition.fromJson(Map<String, dynamic> json) =
-      _$_LocationPosition.fromJson;
-
-  @override
-  Id get id;
-  @override
-  FhirExtension get extension_;
-  @override
-  FhirExtension get modifierExtension;
-  @override
-  @JsonKey(required: true)
-  Decimal get longitude;
-  @override
-  @JsonKey(required: true)
-  Decimal get latitude;
-  @override
-  Decimal get altitude;
-  @override
-  _$LocationPositionCopyWith<_LocationPosition> get copyWith;
 }
 
 ContractActor _$ContractActorFromJson(Map<String, dynamic> json) {
@@ -3555,7 +4127,7 @@ class _$ContractActorTearOff {
 
   _ContractActor call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Reference entity,
       CodeableConcept role}) {
@@ -3574,6 +4146,7 @@ const $ContractActor = _$ContractActorTearOff();
 
 mixin _$ContractActor {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -3590,7 +4163,7 @@ abstract class $ContractActorCopyWith<$Res> {
       _$ContractActorCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Reference entity,
       CodeableConcept role});
@@ -3679,7 +4252,7 @@ abstract class _$ContractActorCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Reference entity,
       CodeableConcept role});
@@ -3730,7 +4303,7 @@ class __$ContractActorCopyWithImpl<$Res>
 class _$_ContractActor implements _ContractActor {
   const _$_ContractActor(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.entity,
       this.role})
@@ -3742,6 +4315,7 @@ class _$_ContractActor implements _ContractActor {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3796,7 +4370,7 @@ class _$_ContractActor implements _ContractActor {
 abstract class _ContractActor implements ContractActor {
   const factory _ContractActor(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Reference entity,
       CodeableConcept role}) = _$_ContractActor;
@@ -3807,6 +4381,7 @@ abstract class _ContractActor implements ContractActor {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3828,7 +4403,7 @@ class _$ContractValuedItemTearOff {
 
   _ContractValuedItem call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept entityX,
       Identifier identifier,
@@ -3859,6 +4434,7 @@ const $ContractValuedItem = _$ContractValuedItemTearOff();
 
 mixin _$ContractValuedItem {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get entityX;
@@ -3880,7 +4456,7 @@ abstract class $ContractValuedItemCopyWith<$Res> {
       _$ContractValuedItemCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept entityX,
       Identifier identifier,
@@ -4024,7 +4600,7 @@ abstract class _$ContractValuedItemCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept entityX,
       Identifier identifier,
@@ -4103,7 +4679,7 @@ class __$ContractValuedItemCopyWithImpl<$Res>
 class _$_ContractValuedItem implements _ContractValuedItem {
   const _$_ContractValuedItem(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.entityX,
       this.identifier,
@@ -4120,6 +4696,7 @@ class _$_ContractValuedItem implements _ContractValuedItem {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -4208,7 +4785,7 @@ class _$_ContractValuedItem implements _ContractValuedItem {
 abstract class _ContractValuedItem implements ContractValuedItem {
   const factory _ContractValuedItem(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept entityX,
       Identifier identifier,
@@ -4225,6 +4802,7 @@ abstract class _ContractValuedItem implements ContractValuedItem {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -4257,7 +4835,7 @@ class _$ContractSignerTearOff {
 
   _ContractSigner call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding type,
       @required @JsonKey(required: true) Reference party,
@@ -4278,6 +4856,7 @@ const $ContractSigner = _$ContractSignerTearOff();
 
 mixin _$ContractSigner {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -4297,7 +4876,7 @@ abstract class $ContractSignerCopyWith<$Res> {
       _$ContractSignerCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding type,
       @JsonKey(required: true) Reference party,
@@ -4389,7 +4968,7 @@ abstract class _$ContractSignerCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding type,
       @JsonKey(required: true) Reference party,
@@ -4443,7 +5022,7 @@ class __$ContractSignerCopyWithImpl<$Res>
 class _$_ContractSigner implements _ContractSigner {
   const _$_ContractSigner(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.type,
       @required @JsonKey(required: true) this.party,
@@ -4458,6 +5037,7 @@ class _$_ContractSigner implements _ContractSigner {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -4520,7 +5100,7 @@ class _$_ContractSigner implements _ContractSigner {
 abstract class _ContractSigner implements ContractSigner {
   const factory _ContractSigner(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding type,
       @required @JsonKey(required: true) Reference party,
@@ -4532,6 +5112,7 @@ abstract class _ContractSigner implements ContractSigner {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -4557,7 +5138,7 @@ class _$ContractTermTearOff {
 
   _ContractTerm call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime issued,
@@ -4567,9 +5148,10 @@ class _$ContractTermTearOff {
       Reference subject,
       CodeableConcept action,
       CodeableConcept actionReason,
-      BackboneElement actor,
+      TermActor actor,
       String text,
-      BackboneElement valuedItem}) {
+      List<ContractValuedItem> valuedItem,
+      List<ContractTerm> group}) {
     return _ContractTerm(
       id: id,
       extension_: extension_,
@@ -4585,6 +5167,7 @@ class _$ContractTermTearOff {
       actor: actor,
       text: text,
       valuedItem: valuedItem,
+      group: group,
     );
   }
 }
@@ -4594,6 +5177,7 @@ const $ContractTerm = _$ContractTermTearOff();
 
 mixin _$ContractTerm {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -4604,9 +5188,10 @@ mixin _$ContractTerm {
   Reference get subject;
   CodeableConcept get action;
   CodeableConcept get actionReason;
-  BackboneElement get actor;
+  TermActor get actor;
   String get text;
-  BackboneElement get valuedItem;
+  List<ContractValuedItem> get valuedItem;
+  List<ContractTerm> get group;
 
   Map<String, dynamic> toJson();
   $ContractTermCopyWith<ContractTerm> get copyWith;
@@ -4618,7 +5203,7 @@ abstract class $ContractTermCopyWith<$Res> {
       _$ContractTermCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime issued,
@@ -4628,9 +5213,10 @@ abstract class $ContractTermCopyWith<$Res> {
       Reference subject,
       CodeableConcept action,
       CodeableConcept actionReason,
-      BackboneElement actor,
+      TermActor actor,
       String text,
-      BackboneElement valuedItem});
+      List<ContractValuedItem> valuedItem,
+      List<ContractTerm> group});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -4641,8 +5227,7 @@ abstract class $ContractTermCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get subject;
   $CodeableConceptCopyWith<$Res> get action;
   $CodeableConceptCopyWith<$Res> get actionReason;
-  $BackboneElementCopyWith<$Res> get actor;
-  $BackboneElementCopyWith<$Res> get valuedItem;
+  $TermActorCopyWith<$Res> get actor;
 }
 
 class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
@@ -4668,6 +5253,7 @@ class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
     Object actor = freezed,
     Object text = freezed,
     Object valuedItem = freezed,
+    Object group = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -4688,11 +5274,12 @@ class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
       actionReason: actionReason == freezed
           ? _value.actionReason
           : actionReason as CodeableConcept,
-      actor: actor == freezed ? _value.actor : actor as BackboneElement,
+      actor: actor == freezed ? _value.actor : actor as TermActor,
       text: text == freezed ? _value.text : text as String,
       valuedItem: valuedItem == freezed
           ? _value.valuedItem
-          : valuedItem as BackboneElement,
+          : valuedItem as List<ContractValuedItem>,
+      group: group == freezed ? _value.group : group as List<ContractTerm>,
     ));
   }
 
@@ -4787,22 +5374,12 @@ class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get actor {
+  $TermActorCopyWith<$Res> get actor {
     if (_value.actor == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.actor, (value) {
+    return $TermActorCopyWith<$Res>(_value.actor, (value) {
       return _then(_value.copyWith(actor: value));
-    });
-  }
-
-  @override
-  $BackboneElementCopyWith<$Res> get valuedItem {
-    if (_value.valuedItem == null) {
-      return null;
-    }
-    return $BackboneElementCopyWith<$Res>(_value.valuedItem, (value) {
-      return _then(_value.copyWith(valuedItem: value));
     });
   }
 }
@@ -4815,7 +5392,7 @@ abstract class _$ContractTermCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime issued,
@@ -4825,9 +5402,10 @@ abstract class _$ContractTermCopyWith<$Res>
       Reference subject,
       CodeableConcept action,
       CodeableConcept actionReason,
-      BackboneElement actor,
+      TermActor actor,
       String text,
-      BackboneElement valuedItem});
+      List<ContractValuedItem> valuedItem,
+      List<ContractTerm> group});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -4848,9 +5426,7 @@ abstract class _$ContractTermCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get actionReason;
   @override
-  $BackboneElementCopyWith<$Res> get actor;
-  @override
-  $BackboneElementCopyWith<$Res> get valuedItem;
+  $TermActorCopyWith<$Res> get actor;
 }
 
 class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
@@ -4878,6 +5454,7 @@ class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
     Object actor = freezed,
     Object text = freezed,
     Object valuedItem = freezed,
+    Object group = freezed,
   }) {
     return _then(_ContractTerm(
       id: id == freezed ? _value.id : id as Id,
@@ -4898,11 +5475,12 @@ class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
       actionReason: actionReason == freezed
           ? _value.actionReason
           : actionReason as CodeableConcept,
-      actor: actor == freezed ? _value.actor : actor as BackboneElement,
+      actor: actor == freezed ? _value.actor : actor as TermActor,
       text: text == freezed ? _value.text : text as String,
       valuedItem: valuedItem == freezed
           ? _value.valuedItem
-          : valuedItem as BackboneElement,
+          : valuedItem as List<ContractValuedItem>,
+      group: group == freezed ? _value.group : group as List<ContractTerm>,
     ));
   }
 }
@@ -4911,7 +5489,7 @@ class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
 class _$_ContractTerm implements _ContractTerm {
   const _$_ContractTerm(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.issued,
@@ -4923,7 +5501,8 @@ class _$_ContractTerm implements _ContractTerm {
       this.actionReason,
       this.actor,
       this.text,
-      this.valuedItem});
+      this.valuedItem,
+      this.group});
 
   factory _$_ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractTermFromJson(json);
@@ -4931,6 +5510,7 @@ class _$_ContractTerm implements _ContractTerm {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -4951,15 +5531,17 @@ class _$_ContractTerm implements _ContractTerm {
   @override
   final CodeableConcept actionReason;
   @override
-  final BackboneElement actor;
+  final TermActor actor;
   @override
   final String text;
   @override
-  final BackboneElement valuedItem;
+  final List<ContractValuedItem> valuedItem;
+  @override
+  final List<ContractTerm> group;
 
   @override
   String toString() {
-    return 'ContractTerm(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, issued: $issued, applies: $applies, type: $type, subType: $subType, subject: $subject, action: $action, actionReason: $actionReason, actor: $actor, text: $text, valuedItem: $valuedItem)';
+    return 'ContractTerm(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, issued: $issued, applies: $applies, type: $type, subType: $subType, subject: $subject, action: $action, actionReason: $actionReason, actor: $actor, text: $text, valuedItem: $valuedItem, group: $group)';
   }
 
   @override
@@ -5001,7 +5583,9 @@ class _$_ContractTerm implements _ContractTerm {
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.valuedItem, valuedItem) ||
                 const DeepCollectionEquality()
-                    .equals(other.valuedItem, valuedItem)));
+                    .equals(other.valuedItem, valuedItem)) &&
+            (identical(other.group, group) ||
+                const DeepCollectionEquality().equals(other.group, group)));
   }
 
   @override
@@ -5020,7 +5604,8 @@ class _$_ContractTerm implements _ContractTerm {
       const DeepCollectionEquality().hash(actionReason) ^
       const DeepCollectionEquality().hash(actor) ^
       const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(valuedItem);
+      const DeepCollectionEquality().hash(valuedItem) ^
+      const DeepCollectionEquality().hash(group);
 
   @override
   _$ContractTermCopyWith<_ContractTerm> get copyWith =>
@@ -5035,7 +5620,7 @@ class _$_ContractTerm implements _ContractTerm {
 abstract class _ContractTerm implements ContractTerm {
   const factory _ContractTerm(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       FhirDateTime issued,
@@ -5045,9 +5630,10 @@ abstract class _ContractTerm implements ContractTerm {
       Reference subject,
       CodeableConcept action,
       CodeableConcept actionReason,
-      BackboneElement actor,
+      TermActor actor,
       String text,
-      BackboneElement valuedItem}) = _$_ContractTerm;
+      List<ContractValuedItem> valuedItem,
+      List<ContractTerm> group}) = _$_ContractTerm;
 
   factory _ContractTerm.fromJson(Map<String, dynamic> json) =
       _$_ContractTerm.fromJson;
@@ -5055,6 +5641,7 @@ abstract class _ContractTerm implements ContractTerm {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -5075,11 +5662,13 @@ abstract class _ContractTerm implements ContractTerm {
   @override
   CodeableConcept get actionReason;
   @override
-  BackboneElement get actor;
+  TermActor get actor;
   @override
   String get text;
   @override
-  BackboneElement get valuedItem;
+  List<ContractValuedItem> get valuedItem;
+  @override
+  List<ContractTerm> get group;
   @override
   _$ContractTermCopyWith<_ContractTerm> get copyWith;
 }
@@ -5093,7 +5682,7 @@ class _$ContractFriendlyTearOff {
 
   _ContractFriendly call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Attachment contentX}) {
     return _ContractFriendly(
@@ -5110,6 +5699,7 @@ const $ContractFriendly = _$ContractFriendlyTearOff();
 
 mixin _$ContractFriendly {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -5125,7 +5715,7 @@ abstract class $ContractFriendlyCopyWith<$Res> {
       _$ContractFriendlyCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Attachment contentX});
 
@@ -5200,7 +5790,7 @@ abstract class _$ContractFriendlyCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Attachment contentX});
 
@@ -5246,7 +5836,7 @@ class __$ContractFriendlyCopyWithImpl<$Res>
 class _$_ContractFriendly implements _ContractFriendly {
   const _$_ContractFriendly(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.contentX})
       : assert(contentX != null);
@@ -5257,6 +5847,7 @@ class _$_ContractFriendly implements _ContractFriendly {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -5307,7 +5898,7 @@ class _$_ContractFriendly implements _ContractFriendly {
 abstract class _ContractFriendly implements ContractFriendly {
   const factory _ContractFriendly(
           {Id id,
-          FhirExtension extension_,
+          @JsonKey(name: 'extension') FhirExtension extension_,
           FhirExtension modifierExtension,
           @required @JsonKey(required: true) Attachment contentX}) =
       _$_ContractFriendly;
@@ -5318,6 +5909,7 @@ abstract class _ContractFriendly implements ContractFriendly {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -5337,7 +5929,7 @@ class _$ContractLegalTearOff {
 
   _ContractLegal call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Attachment contentX}) {
     return _ContractLegal(
@@ -5354,6 +5946,7 @@ const $ContractLegal = _$ContractLegalTearOff();
 
 mixin _$ContractLegal {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -5369,7 +5962,7 @@ abstract class $ContractLegalCopyWith<$Res> {
       _$ContractLegalCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Attachment contentX});
 
@@ -5444,7 +6037,7 @@ abstract class _$ContractLegalCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Attachment contentX});
 
@@ -5490,7 +6083,7 @@ class __$ContractLegalCopyWithImpl<$Res>
 class _$_ContractLegal implements _ContractLegal {
   const _$_ContractLegal(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.contentX})
       : assert(contentX != null);
@@ -5501,6 +6094,7 @@ class _$_ContractLegal implements _ContractLegal {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -5551,7 +6145,7 @@ class _$_ContractLegal implements _ContractLegal {
 abstract class _ContractLegal implements ContractLegal {
   const factory _ContractLegal(
           {Id id,
-          FhirExtension extension_,
+          @JsonKey(name: 'extension') FhirExtension extension_,
           FhirExtension modifierExtension,
           @required @JsonKey(required: true) Attachment contentX}) =
       _$_ContractLegal;
@@ -5562,6 +6156,7 @@ abstract class _ContractLegal implements ContractLegal {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -5581,7 +6176,7 @@ class _$ContractRuleTearOff {
 
   _ContractRule call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Attachment contentX}) {
     return _ContractRule(
@@ -5598,6 +6193,7 @@ const $ContractRule = _$ContractRuleTearOff();
 
 mixin _$ContractRule {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -5613,7 +6209,7 @@ abstract class $ContractRuleCopyWith<$Res> {
       _$ContractRuleCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Attachment contentX});
 
@@ -5687,7 +6283,7 @@ abstract class _$ContractRuleCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Attachment contentX});
 
@@ -5732,7 +6328,7 @@ class __$ContractRuleCopyWithImpl<$Res> extends _$ContractRuleCopyWithImpl<$Res>
 class _$_ContractRule implements _ContractRule {
   const _$_ContractRule(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.contentX})
       : assert(contentX != null);
@@ -5743,6 +6339,7 @@ class _$_ContractRule implements _ContractRule {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -5793,7 +6390,7 @@ class _$_ContractRule implements _ContractRule {
 abstract class _ContractRule implements ContractRule {
   const factory _ContractRule(
           {Id id,
-          FhirExtension extension_,
+          @JsonKey(name: 'extension') FhirExtension extension_,
           FhirExtension modifierExtension,
           @required @JsonKey(required: true) Attachment contentX}) =
       _$_ContractRule;
@@ -5804,6 +6401,7 @@ abstract class _ContractRule implements ContractRule {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -5812,979 +6410,4 @@ abstract class _ContractRule implements ContractRule {
   Attachment get contentX;
   @override
   _$ContractRuleCopyWith<_ContractRule> get copyWith;
-}
-
-PersonLink _$PersonLinkFromJson(Map<String, dynamic> json) {
-  return _PersonLink.fromJson(json);
-}
-
-class _$PersonLinkTearOff {
-  const _$PersonLinkTearOff();
-
-  _PersonLink call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @required
-      @JsonKey(required: true)
-          Reference target,
-      @JsonKey(unknownEnumValue: LinkAssurance.unknown)
-          LinkAssurance assurance}) {
-    return _PersonLink(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      target: target,
-      assurance: assurance,
-    );
-  }
-}
-
-// ignore: unused_element
-const $PersonLink = _$PersonLinkTearOff();
-
-mixin _$PersonLink {
-  Id get id;
-  FhirExtension get extension_;
-  FhirExtension get modifierExtension;
-  @JsonKey(required: true)
-  Reference get target;
-  @JsonKey(unknownEnumValue: LinkAssurance.unknown)
-  LinkAssurance get assurance;
-
-  Map<String, dynamic> toJson();
-  $PersonLinkCopyWith<PersonLink> get copyWith;
-}
-
-abstract class $PersonLinkCopyWith<$Res> {
-  factory $PersonLinkCopyWith(
-          PersonLink value, $Res Function(PersonLink) then) =
-      _$PersonLinkCopyWithImpl<$Res>;
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @JsonKey(required: true)
-          Reference target,
-      @JsonKey(unknownEnumValue: LinkAssurance.unknown)
-          LinkAssurance assurance});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ReferenceCopyWith<$Res> get target;
-}
-
-class _$PersonLinkCopyWithImpl<$Res> implements $PersonLinkCopyWith<$Res> {
-  _$PersonLinkCopyWithImpl(this._value, this._then);
-
-  final PersonLink _value;
-  // ignore: unused_field
-  final $Res Function(PersonLink) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object target = freezed,
-    Object assurance = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      target: target == freezed ? _value.target : target as Reference,
-      assurance:
-          assurance == freezed ? _value.assurance : assurance as LinkAssurance,
-    ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get target {
-    if (_value.target == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.target, (value) {
-      return _then(_value.copyWith(target: value));
-    });
-  }
-}
-
-abstract class _$PersonLinkCopyWith<$Res> implements $PersonLinkCopyWith<$Res> {
-  factory _$PersonLinkCopyWith(
-          _PersonLink value, $Res Function(_PersonLink) then) =
-      __$PersonLinkCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @JsonKey(required: true)
-          Reference target,
-      @JsonKey(unknownEnumValue: LinkAssurance.unknown)
-          LinkAssurance assurance});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ReferenceCopyWith<$Res> get target;
-}
-
-class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
-    implements _$PersonLinkCopyWith<$Res> {
-  __$PersonLinkCopyWithImpl(
-      _PersonLink _value, $Res Function(_PersonLink) _then)
-      : super(_value, (v) => _then(v as _PersonLink));
-
-  @override
-  _PersonLink get _value => super._value as _PersonLink;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object target = freezed,
-    Object assurance = freezed,
-  }) {
-    return _then(_PersonLink(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      target: target == freezed ? _value.target : target as Reference,
-      assurance:
-          assurance == freezed ? _value.assurance : assurance as LinkAssurance,
-    ));
-  }
-}
-
-@JsonSerializable()
-class _$_PersonLink implements _PersonLink {
-  const _$_PersonLink(
-      {this.id,
-      this.extension_,
-      this.modifierExtension,
-      @required @JsonKey(required: true) this.target,
-      @JsonKey(unknownEnumValue: LinkAssurance.unknown) this.assurance})
-      : assert(target != null);
-
-  factory _$_PersonLink.fromJson(Map<String, dynamic> json) =>
-      _$_$_PersonLinkFromJson(json);
-
-  @override
-  final Id id;
-  @override
-  final FhirExtension extension_;
-  @override
-  final FhirExtension modifierExtension;
-  @override
-  @JsonKey(required: true)
-  final Reference target;
-  @override
-  @JsonKey(unknownEnumValue: LinkAssurance.unknown)
-  final LinkAssurance assurance;
-
-  @override
-  String toString() {
-    return 'PersonLink(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, assurance: $assurance)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _PersonLink &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.target, target) ||
-                const DeepCollectionEquality().equals(other.target, target)) &&
-            (identical(other.assurance, assurance) ||
-                const DeepCollectionEquality()
-                    .equals(other.assurance, assurance)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(target) ^
-      const DeepCollectionEquality().hash(assurance);
-
-  @override
-  _$PersonLinkCopyWith<_PersonLink> get copyWith =>
-      __$PersonLinkCopyWithImpl<_PersonLink>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_PersonLinkToJson(this);
-  }
-}
-
-abstract class _PersonLink implements PersonLink {
-  const factory _PersonLink(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @required
-      @JsonKey(required: true)
-          Reference target,
-      @JsonKey(unknownEnumValue: LinkAssurance.unknown)
-          LinkAssurance assurance}) = _$_PersonLink;
-
-  factory _PersonLink.fromJson(Map<String, dynamic> json) =
-      _$_PersonLink.fromJson;
-
-  @override
-  Id get id;
-  @override
-  FhirExtension get extension_;
-  @override
-  FhirExtension get modifierExtension;
-  @override
-  @JsonKey(required: true)
-  Reference get target;
-  @override
-  @JsonKey(unknownEnumValue: LinkAssurance.unknown)
-  LinkAssurance get assurance;
-  @override
-  _$PersonLinkCopyWith<_PersonLink> get copyWith;
-}
-
-ContractActor _$ContractActorFromJson(Map<String, dynamic> json) {
-  return _ContractActor.fromJson(json);
-}
-
-class _$ContractActorTearOff {
-  const _$ContractActorTearOff();
-
-  _ContractActor call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Reference entity,
-      CodeableConcept role}) {
-    return _ContractActor(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      entity: entity,
-      role: role,
-    );
-  }
-}
-
-// ignore: unused_element
-const $ContractActor = _$ContractActorTearOff();
-
-mixin _$ContractActor {
-  Id get id;
-  FhirExtension get extension_;
-  FhirExtension get modifierExtension;
-  @JsonKey(required: true)
-  Reference get entity;
-  CodeableConcept get role;
-
-  Map<String, dynamic> toJson();
-  $ContractActorCopyWith<ContractActor> get copyWith;
-}
-
-abstract class $ContractActorCopyWith<$Res> {
-  factory $ContractActorCopyWith(
-          ContractActor value, $Res Function(ContractActor) then) =
-      _$ContractActorCopyWithImpl<$Res>;
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @JsonKey(required: true) Reference entity,
-      CodeableConcept role});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ReferenceCopyWith<$Res> get entity;
-  $CodeableConceptCopyWith<$Res> get role;
-}
-
-class _$ContractActorCopyWithImpl<$Res>
-    implements $ContractActorCopyWith<$Res> {
-  _$ContractActorCopyWithImpl(this._value, this._then);
-
-  final ContractActor _value;
-  // ignore: unused_field
-  final $Res Function(ContractActor) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object entity = freezed,
-    Object role = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      entity: entity == freezed ? _value.entity : entity as Reference,
-      role: role == freezed ? _value.role : role as CodeableConcept,
-    ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get entity {
-    if (_value.entity == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.entity, (value) {
-      return _then(_value.copyWith(entity: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get role {
-    if (_value.role == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
-      return _then(_value.copyWith(role: value));
-    });
-  }
-}
-
-abstract class _$ContractActorCopyWith<$Res>
-    implements $ContractActorCopyWith<$Res> {
-  factory _$ContractActorCopyWith(
-          _ContractActor value, $Res Function(_ContractActor) then) =
-      __$ContractActorCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @JsonKey(required: true) Reference entity,
-      CodeableConcept role});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ReferenceCopyWith<$Res> get entity;
-  @override
-  $CodeableConceptCopyWith<$Res> get role;
-}
-
-class __$ContractActorCopyWithImpl<$Res>
-    extends _$ContractActorCopyWithImpl<$Res>
-    implements _$ContractActorCopyWith<$Res> {
-  __$ContractActorCopyWithImpl(
-      _ContractActor _value, $Res Function(_ContractActor) _then)
-      : super(_value, (v) => _then(v as _ContractActor));
-
-  @override
-  _ContractActor get _value => super._value as _ContractActor;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object entity = freezed,
-    Object role = freezed,
-  }) {
-    return _then(_ContractActor(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      entity: entity == freezed ? _value.entity : entity as Reference,
-      role: role == freezed ? _value.role : role as CodeableConcept,
-    ));
-  }
-}
-
-@JsonSerializable()
-class _$_ContractActor implements _ContractActor {
-  const _$_ContractActor(
-      {this.id,
-      this.extension_,
-      this.modifierExtension,
-      @required @JsonKey(required: true) this.entity,
-      this.role})
-      : assert(entity != null);
-
-  factory _$_ContractActor.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractActorFromJson(json);
-
-  @override
-  final Id id;
-  @override
-  final FhirExtension extension_;
-  @override
-  final FhirExtension modifierExtension;
-  @override
-  @JsonKey(required: true)
-  final Reference entity;
-  @override
-  final CodeableConcept role;
-
-  @override
-  String toString() {
-    return 'ContractActor(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, entity: $entity, role: $role)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _ContractActor &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.entity, entity) ||
-                const DeepCollectionEquality().equals(other.entity, entity)) &&
-            (identical(other.role, role) ||
-                const DeepCollectionEquality().equals(other.role, role)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(entity) ^
-      const DeepCollectionEquality().hash(role);
-
-  @override
-  _$ContractActorCopyWith<_ContractActor> get copyWith =>
-      __$ContractActorCopyWithImpl<_ContractActor>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_ContractActorToJson(this);
-  }
-}
-
-abstract class _ContractActor implements ContractActor {
-  const factory _ContractActor(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Reference entity,
-      CodeableConcept role}) = _$_ContractActor;
-
-  factory _ContractActor.fromJson(Map<String, dynamic> json) =
-      _$_ContractActor.fromJson;
-
-  @override
-  Id get id;
-  @override
-  FhirExtension get extension_;
-  @override
-  FhirExtension get modifierExtension;
-  @override
-  @JsonKey(required: true)
-  Reference get entity;
-  @override
-  CodeableConcept get role;
-  @override
-  _$ContractActorCopyWith<_ContractActor> get copyWith;
-}
-
-ContractValuedItem _$ContractValuedItemFromJson(Map<String, dynamic> json) {
-  return _ContractValuedItem.fromJson(json);
-}
-
-class _$ContractValuedItemTearOff {
-  const _$ContractValuedItemTearOff();
-
-  _ContractValuedItem call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      CodeableConcept entityX,
-      Identifier identifier,
-      FhirDateTime effectiveTime,
-      Quantity quantity,
-      Quantity unitPrice,
-      Decimal factor,
-      Decimal points,
-      Quantity net}) {
-    return _ContractValuedItem(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      entityX: entityX,
-      identifier: identifier,
-      effectiveTime: effectiveTime,
-      quantity: quantity,
-      unitPrice: unitPrice,
-      factor: factor,
-      points: points,
-      net: net,
-    );
-  }
-}
-
-// ignore: unused_element
-const $ContractValuedItem = _$ContractValuedItemTearOff();
-
-mixin _$ContractValuedItem {
-  Id get id;
-  FhirExtension get extension_;
-  FhirExtension get modifierExtension;
-  CodeableConcept get entityX;
-  Identifier get identifier;
-  FhirDateTime get effectiveTime;
-  Quantity get quantity;
-  Quantity get unitPrice;
-  Decimal get factor;
-  Decimal get points;
-  Quantity get net;
-
-  Map<String, dynamic> toJson();
-  $ContractValuedItemCopyWith<ContractValuedItem> get copyWith;
-}
-
-abstract class $ContractValuedItemCopyWith<$Res> {
-  factory $ContractValuedItemCopyWith(
-          ContractValuedItem value, $Res Function(ContractValuedItem) then) =
-      _$ContractValuedItemCopyWithImpl<$Res>;
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      CodeableConcept entityX,
-      Identifier identifier,
-      FhirDateTime effectiveTime,
-      Quantity quantity,
-      Quantity unitPrice,
-      Decimal factor,
-      Decimal points,
-      Quantity net});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get entityX;
-  $IdentifierCopyWith<$Res> get identifier;
-  $QuantityCopyWith<$Res> get quantity;
-  $QuantityCopyWith<$Res> get unitPrice;
-  $QuantityCopyWith<$Res> get net;
-}
-
-class _$ContractValuedItemCopyWithImpl<$Res>
-    implements $ContractValuedItemCopyWith<$Res> {
-  _$ContractValuedItemCopyWithImpl(this._value, this._then);
-
-  final ContractValuedItem _value;
-  // ignore: unused_field
-  final $Res Function(ContractValuedItem) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object entityX = freezed,
-    Object identifier = freezed,
-    Object effectiveTime = freezed,
-    Object quantity = freezed,
-    Object unitPrice = freezed,
-    Object factor = freezed,
-    Object points = freezed,
-    Object net = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      entityX: entityX == freezed ? _value.entityX : entityX as CodeableConcept,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      effectiveTime: effectiveTime == freezed
-          ? _value.effectiveTime
-          : effectiveTime as FhirDateTime,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      unitPrice:
-          unitPrice == freezed ? _value.unitPrice : unitPrice as Quantity,
-      factor: factor == freezed ? _value.factor : factor as Decimal,
-      points: points == freezed ? _value.points : points as Decimal,
-      net: net == freezed ? _value.net : net as Quantity,
-    ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get entityX {
-    if (_value.entityX == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.entityX, (value) {
-      return _then(_value.copyWith(entityX: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res> get quantity {
-    if (_value.quantity == null) {
-      return null;
-    }
-    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
-      return _then(_value.copyWith(quantity: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res> get unitPrice {
-    if (_value.unitPrice == null) {
-      return null;
-    }
-    return $QuantityCopyWith<$Res>(_value.unitPrice, (value) {
-      return _then(_value.copyWith(unitPrice: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res> get net {
-    if (_value.net == null) {
-      return null;
-    }
-    return $QuantityCopyWith<$Res>(_value.net, (value) {
-      return _then(_value.copyWith(net: value));
-    });
-  }
-}
-
-abstract class _$ContractValuedItemCopyWith<$Res>
-    implements $ContractValuedItemCopyWith<$Res> {
-  factory _$ContractValuedItemCopyWith(
-          _ContractValuedItem value, $Res Function(_ContractValuedItem) then) =
-      __$ContractValuedItemCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      CodeableConcept entityX,
-      Identifier identifier,
-      FhirDateTime effectiveTime,
-      Quantity quantity,
-      Quantity unitPrice,
-      Decimal factor,
-      Decimal points,
-      Quantity net});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $CodeableConceptCopyWith<$Res> get entityX;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $QuantityCopyWith<$Res> get quantity;
-  @override
-  $QuantityCopyWith<$Res> get unitPrice;
-  @override
-  $QuantityCopyWith<$Res> get net;
-}
-
-class __$ContractValuedItemCopyWithImpl<$Res>
-    extends _$ContractValuedItemCopyWithImpl<$Res>
-    implements _$ContractValuedItemCopyWith<$Res> {
-  __$ContractValuedItemCopyWithImpl(
-      _ContractValuedItem _value, $Res Function(_ContractValuedItem) _then)
-      : super(_value, (v) => _then(v as _ContractValuedItem));
-
-  @override
-  _ContractValuedItem get _value => super._value as _ContractValuedItem;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object entityX = freezed,
-    Object identifier = freezed,
-    Object effectiveTime = freezed,
-    Object quantity = freezed,
-    Object unitPrice = freezed,
-    Object factor = freezed,
-    Object points = freezed,
-    Object net = freezed,
-  }) {
-    return _then(_ContractValuedItem(
-      id: id == freezed ? _value.id : id as Id,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as FhirExtension,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
-      entityX: entityX == freezed ? _value.entityX : entityX as CodeableConcept,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      effectiveTime: effectiveTime == freezed
-          ? _value.effectiveTime
-          : effectiveTime as FhirDateTime,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      unitPrice:
-          unitPrice == freezed ? _value.unitPrice : unitPrice as Quantity,
-      factor: factor == freezed ? _value.factor : factor as Decimal,
-      points: points == freezed ? _value.points : points as Decimal,
-      net: net == freezed ? _value.net : net as Quantity,
-    ));
-  }
-}
-
-@JsonSerializable()
-class _$_ContractValuedItem implements _ContractValuedItem {
-  const _$_ContractValuedItem(
-      {this.id,
-      this.extension_,
-      this.modifierExtension,
-      this.entityX,
-      this.identifier,
-      this.effectiveTime,
-      this.quantity,
-      this.unitPrice,
-      this.factor,
-      this.points,
-      this.net});
-
-  factory _$_ContractValuedItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractValuedItemFromJson(json);
-
-  @override
-  final Id id;
-  @override
-  final FhirExtension extension_;
-  @override
-  final FhirExtension modifierExtension;
-  @override
-  final CodeableConcept entityX;
-  @override
-  final Identifier identifier;
-  @override
-  final FhirDateTime effectiveTime;
-  @override
-  final Quantity quantity;
-  @override
-  final Quantity unitPrice;
-  @override
-  final Decimal factor;
-  @override
-  final Decimal points;
-  @override
-  final Quantity net;
-
-  @override
-  String toString() {
-    return 'ContractValuedItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, entityX: $entityX, identifier: $identifier, effectiveTime: $effectiveTime, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, points: $points, net: $net)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _ContractValuedItem &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.entityX, entityX) ||
-                const DeepCollectionEquality()
-                    .equals(other.entityX, entityX)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.effectiveTime, effectiveTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.effectiveTime, effectiveTime)) &&
-            (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)) &&
-            (identical(other.unitPrice, unitPrice) ||
-                const DeepCollectionEquality()
-                    .equals(other.unitPrice, unitPrice)) &&
-            (identical(other.factor, factor) ||
-                const DeepCollectionEquality().equals(other.factor, factor)) &&
-            (identical(other.points, points) ||
-                const DeepCollectionEquality().equals(other.points, points)) &&
-            (identical(other.net, net) ||
-                const DeepCollectionEquality().equals(other.net, net)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(entityX) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(effectiveTime) ^
-      const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(unitPrice) ^
-      const DeepCollectionEquality().hash(factor) ^
-      const DeepCollectionEquality().hash(points) ^
-      const DeepCollectionEquality().hash(net);
-
-  @override
-  _$ContractValuedItemCopyWith<_ContractValuedItem> get copyWith =>
-      __$ContractValuedItemCopyWithImpl<_ContractValuedItem>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_ContractValuedItemToJson(this);
-  }
-}
-
-abstract class _ContractValuedItem implements ContractValuedItem {
-  const factory _ContractValuedItem(
-      {Id id,
-      FhirExtension extension_,
-      FhirExtension modifierExtension,
-      CodeableConcept entityX,
-      Identifier identifier,
-      FhirDateTime effectiveTime,
-      Quantity quantity,
-      Quantity unitPrice,
-      Decimal factor,
-      Decimal points,
-      Quantity net}) = _$_ContractValuedItem;
-
-  factory _ContractValuedItem.fromJson(Map<String, dynamic> json) =
-      _$_ContractValuedItem.fromJson;
-
-  @override
-  Id get id;
-  @override
-  FhirExtension get extension_;
-  @override
-  FhirExtension get modifierExtension;
-  @override
-  CodeableConcept get entityX;
-  @override
-  Identifier get identifier;
-  @override
-  FhirDateTime get effectiveTime;
-  @override
-  Quantity get quantity;
-  @override
-  Quantity get unitPrice;
-  @override
-  Decimal get factor;
-  @override
-  Decimal get points;
-  @override
-  Quantity get net;
-  @override
-  _$ContractValuedItemCopyWith<_ContractValuedItem> get copyWith;
 }

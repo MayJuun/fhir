@@ -25,9 +25,9 @@ _$_ProcedureRequest _$_$_ProcedureRequestFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -91,7 +91,7 @@ Map<String, dynamic> _$_$_ProcedureRequestToJson(_$_ProcedureRequest instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
@@ -184,9 +184,9 @@ _$_VisionPrescription _$_$_VisionPrescriptionFromJson(
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -211,7 +211,8 @@ _$_VisionPrescription _$_$_VisionPrescriptionFromJson(
         : CodeableConcept.fromJson(json['reasonX'] as Map<String, dynamic>),
     dispense: json['dispense'] == null
         ? null
-        : BackboneElement.fromJson(json['dispense'] as Map<String, dynamic>),
+        : VisionPrescriptionDispense.fromJson(
+            json['dispense'] as Map<String, dynamic>),
   );
 }
 
@@ -231,7 +232,7 @@ Map<String, dynamic> _$_$_VisionPrescriptionToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('dateWritten', instance.dateWritten?.toJson());
@@ -262,9 +263,9 @@ _$_CarePlan _$_$_CarePlanFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -301,16 +302,18 @@ _$_CarePlan _$_$_CarePlanFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['support'] as Map<String, dynamic>),
     relatedPlan: json['relatedPlan'] == null
         ? null
-        : BackboneElement.fromJson(json['relatedPlan'] as Map<String, dynamic>),
+        : CarePlanRelatedPlan.fromJson(
+            json['relatedPlan'] as Map<String, dynamic>),
     participant: json['participant'] == null
         ? null
-        : BackboneElement.fromJson(json['participant'] as Map<String, dynamic>),
+        : CarePlanParticipant.fromJson(
+            json['participant'] as Map<String, dynamic>),
     goal: json['goal'] == null
         ? null
         : Reference.fromJson(json['goal'] as Map<String, dynamic>),
     activity: json['activity'] == null
         ? null
-        : BackboneElement.fromJson(json['activity'] as Map<String, dynamic>),
+        : CarePlanActivity.fromJson(json['activity'] as Map<String, dynamic>),
     note: json['note'] == null
         ? null
         : Annotation.fromJson(json['note'] as Map<String, dynamic>),
@@ -332,7 +335,7 @@ Map<String, dynamic> _$_$_CarePlanToJson(_$_CarePlan instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
@@ -381,9 +384,9 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -426,7 +429,7 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
         : Annotation.fromJson(json['note'] as Map<String, dynamic>),
     outcome: json['outcome'] == null
         ? null
-        : BackboneElement.fromJson(json['outcome'] as Map<String, dynamic>),
+        : GoalOutcome.fromJson(json['outcome'] as Map<String, dynamic>),
   );
 }
 
@@ -445,7 +448,7 @@ Map<String, dynamic> _$_$_GoalToJson(_$_Goal instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
@@ -496,9 +499,9 @@ _$_NutritionOrder _$_$_NutritionOrderFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -534,13 +537,15 @@ _$_NutritionOrder _$_$_NutritionOrderFromJson(Map<String, dynamic> json) {
             json['excludeFoodModifier'] as Map<String, dynamic>),
     oralDiet: json['oralDiet'] == null
         ? null
-        : BackboneElement.fromJson(json['oralDiet'] as Map<String, dynamic>),
+        : NutritionOrderOralDiet.fromJson(
+            json['oralDiet'] as Map<String, dynamic>),
     supplement: json['supplement'] == null
         ? null
-        : BackboneElement.fromJson(json['supplement'] as Map<String, dynamic>),
+        : NutritionOrderSupplement.fromJson(
+            json['supplement'] as Map<String, dynamic>),
     enteralFormula: json['enteralFormula'] == null
         ? null
-        : BackboneElement.fromJson(
+        : NutritionOrderEnteralFormula.fromJson(
             json['enteralFormula'] as Map<String, dynamic>),
   );
 }
@@ -560,7 +565,7 @@ Map<String, dynamic> _$_$_NutritionOrderToJson(_$_NutritionOrder instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('orderer', instance.orderer?.toJson());
@@ -609,9 +614,9 @@ _$_ReferralRequest _$_$_ReferralRequestFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -681,7 +686,7 @@ Map<String, dynamic> _$_$_ReferralRequestToJson(_$_ReferralRequest instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('status', _$ReferralRequestStatusEnumMap[instance.status]);
   writeNotNull('identifier', instance.identifier?.toJson());
@@ -719,9 +724,9 @@ _$_VisionPrescriptionDispense _$_$_VisionPrescriptionDispenseFromJson(
   $checkKeys(json, requiredKeys: const ['product']);
   return _$_VisionPrescriptionDispense(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -764,7 +769,7 @@ Map<String, dynamic> _$_$_VisionPrescriptionDispenseToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('product', instance.product?.toJson());
   writeNotNull('eye', _$DispenseEyeEnumMap[instance.eye]);
@@ -803,9 +808,9 @@ _$_CarePlanRelatedPlan _$_$_CarePlanRelatedPlanFromJson(
   $checkKeys(json, requiredKeys: const ['plan']);
   return _$_CarePlanRelatedPlan(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -829,7 +834,7 @@ Map<String, dynamic> _$_$_CarePlanRelatedPlanToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', _$RelatedPlanCodeEnumMap[instance.code]);
   writeNotNull('plan', instance.plan?.toJson());
@@ -847,9 +852,9 @@ _$_CarePlanParticipant _$_$_CarePlanParticipantFromJson(
     Map<String, dynamic> json) {
   return _$_CarePlanParticipant(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -874,7 +879,7 @@ Map<String, dynamic> _$_$_CarePlanParticipantToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('role', instance.role?.toJson());
   writeNotNull('member', instance.member?.toJson());
@@ -884,9 +889,9 @@ Map<String, dynamic> _$_$_CarePlanParticipantToJson(
 _$_CarePlanActivity _$_$_CarePlanActivityFromJson(Map<String, dynamic> json) {
   return _$_CarePlanActivity(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -902,7 +907,7 @@ _$_CarePlanActivity _$_$_CarePlanActivityFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['reference'] as Map<String, dynamic>),
     detail: json['detail'] == null
         ? null
-        : BackboneElement.fromJson(json['detail'] as Map<String, dynamic>),
+        : CarePlanDetail.fromJson(json['detail'] as Map<String, dynamic>),
   );
 }
 
@@ -916,7 +921,7 @@ Map<String, dynamic> _$_$_CarePlanActivityToJson(_$_CarePlanActivity instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('actionResulting', instance.actionResulting?.toJson());
   writeNotNull('progress', instance.progress?.toJson());
@@ -928,9 +933,9 @@ Map<String, dynamic> _$_$_CarePlanActivityToJson(_$_CarePlanActivity instance) {
 _$_GoalOutcome _$_$_GoalOutcomeFromJson(Map<String, dynamic> json) {
   return _$_GoalOutcome(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -951,7 +956,7 @@ Map<String, dynamic> _$_$_GoalOutcomeToJson(_$_GoalOutcome instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('resultX', instance.resultX?.toJson());
   return val;
@@ -961,9 +966,9 @@ _$_NutritionOrderOralDiet _$_$_NutritionOrderOralDietFromJson(
     Map<String, dynamic> json) {
   return _$_NutritionOrderOralDiet(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -976,10 +981,12 @@ _$_NutritionOrderOralDiet _$_$_NutritionOrderOralDietFromJson(
         : Timing.fromJson(json['schedule'] as Map<String, dynamic>),
     nutrient: json['nutrient'] == null
         ? null
-        : BackboneElement.fromJson(json['nutrient'] as Map<String, dynamic>),
+        : NutritionOrderNutrient.fromJson(
+            json['nutrient'] as Map<String, dynamic>),
     texture: json['texture'] == null
         ? null
-        : BackboneElement.fromJson(json['texture'] as Map<String, dynamic>),
+        : NutritionOrderTexture.fromJson(
+            json['texture'] as Map<String, dynamic>),
     fluidConsistencyType: json['fluidConsistencyType'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -999,7 +1006,7 @@ Map<String, dynamic> _$_$_NutritionOrderOralDietToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('schedule', instance.schedule?.toJson());
@@ -1014,9 +1021,9 @@ _$_NutritionOrderSupplement _$_$_NutritionOrderSupplementFromJson(
     Map<String, dynamic> json) {
   return _$_NutritionOrderSupplement(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1046,7 +1053,7 @@ Map<String, dynamic> _$_$_NutritionOrderSupplementToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('productName', instance.productName);
@@ -1060,9 +1067,9 @@ _$_NutritionOrderEnteralFormula _$_$_NutritionOrderEnteralFormulaFromJson(
     Map<String, dynamic> json) {
   return _$_NutritionOrderEnteralFormula(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1086,7 +1093,7 @@ _$_NutritionOrderEnteralFormula _$_$_NutritionOrderEnteralFormulaFromJson(
             json['routeofAdministration'] as Map<String, dynamic>),
     administration: json['administration'] == null
         ? null
-        : BackboneElement.fromJson(
+        : NutritionOrderAdministration.fromJson(
             json['administration'] as Map<String, dynamic>),
     maxVolumeToDeliver: json['maxVolumeToDeliver'] == null
         ? null
@@ -1106,7 +1113,7 @@ Map<String, dynamic> _$_$_NutritionOrderEnteralFormulaToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('baseFormulaType', instance.baseFormulaType?.toJson());
   writeNotNull('baseFormulaProductName', instance.baseFormulaProductName);
@@ -1125,9 +1132,9 @@ _$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['prohibited']);
   return _$_CarePlanDetail(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1188,7 +1195,7 @@ Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('code', instance.code?.toJson());
@@ -1222,9 +1229,9 @@ _$_NutritionOrderNutrient _$_$_NutritionOrderNutrientFromJson(
     Map<String, dynamic> json) {
   return _$_NutritionOrderNutrient(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1249,7 +1256,7 @@ Map<String, dynamic> _$_$_NutritionOrderNutrientToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('modifier', instance.modifier?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
@@ -1260,9 +1267,9 @@ _$_NutritionOrderTexture _$_$_NutritionOrderTextureFromJson(
     Map<String, dynamic> json) {
   return _$_NutritionOrderTexture(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1287,7 +1294,7 @@ Map<String, dynamic> _$_$_NutritionOrderTextureToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('modifier', instance.modifier?.toJson());
   writeNotNull('foodType', instance.foodType?.toJson());
@@ -1298,9 +1305,9 @@ _$_NutritionOrderAdministration _$_$_NutritionOrderAdministrationFromJson(
     Map<String, dynamic> json) {
   return _$_NutritionOrderAdministration(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension_'] == null
+    extension_: json['extension'] == null
         ? null
-        : FhirExtension.fromJson(json['extension_'] as Map<String, dynamic>),
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1328,7 +1335,7 @@ Map<String, dynamic> _$_$_NutritionOrderAdministrationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension_', instance.extension_?.toJson());
+  writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('schedule', instance.schedule?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());

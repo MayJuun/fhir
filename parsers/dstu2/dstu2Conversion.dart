@@ -246,6 +246,7 @@ String getFile(String temp) {
   if (other.contains(temp)) {
     return '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/other/other.dart';
   }
+  return temp;
 }
 
 var fileNames = [

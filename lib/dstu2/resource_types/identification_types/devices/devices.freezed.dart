@@ -22,7 +22,8 @@ class _$DeviceComponentTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -39,7 +40,7 @@ class _$DeviceComponentTearOff {
       CodeableConcept parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
-      BackboneElement productionSpecification,
+      DeviceComponentProductionSpecification productionSpecification,
       CodeableConcept languageCode}) {
     return _DeviceComponent(
       id: id,
@@ -74,6 +75,7 @@ mixin _$DeviceComponent {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -88,7 +90,7 @@ mixin _$DeviceComponent {
   CodeableConcept get parameterGroup;
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   DeviceComponentMeasurementPrinciple get measurementPrinciple;
-  BackboneElement get productionSpecification;
+  DeviceComponentProductionSpecification get productionSpecification;
   CodeableConcept get languageCode;
 
   Map<String, dynamic> toJson();
@@ -106,7 +108,8 @@ abstract class $DeviceComponentCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           CodeableConcept type,
@@ -120,7 +123,7 @@ abstract class $DeviceComponentCopyWith<$Res> {
       CodeableConcept parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
-      BackboneElement productionSpecification,
+      DeviceComponentProductionSpecification productionSpecification,
       CodeableConcept languageCode});
 
   $MetaCopyWith<$Res> get meta;
@@ -133,7 +136,8 @@ abstract class $DeviceComponentCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get parent;
   $CodeableConceptCopyWith<$Res> get operationalStatus;
   $CodeableConceptCopyWith<$Res> get parameterGroup;
-  $BackboneElementCopyWith<$Res> get productionSpecification;
+  $DeviceComponentProductionSpecificationCopyWith<$Res>
+      get productionSpecification;
   $CodeableConceptCopyWith<$Res> get languageCode;
 }
 
@@ -201,7 +205,7 @@ class _$DeviceComponentCopyWithImpl<$Res>
           : measurementPrinciple as DeviceComponentMeasurementPrinciple,
       productionSpecification: productionSpecification == freezed
           ? _value.productionSpecification
-          : productionSpecification as BackboneElement,
+          : productionSpecification as DeviceComponentProductionSpecification,
       languageCode: languageCode == freezed
           ? _value.languageCode
           : languageCode as CodeableConcept,
@@ -309,12 +313,13 @@ class _$DeviceComponentCopyWithImpl<$Res>
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get productionSpecification {
+  $DeviceComponentProductionSpecificationCopyWith<$Res>
+      get productionSpecification {
     if (_value.productionSpecification == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.productionSpecification,
-        (value) {
+    return $DeviceComponentProductionSpecificationCopyWith<$Res>(
+        _value.productionSpecification, (value) {
       return _then(_value.copyWith(productionSpecification: value));
     });
   }
@@ -343,7 +348,8 @@ abstract class _$DeviceComponentCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           CodeableConcept type,
@@ -357,7 +363,7 @@ abstract class _$DeviceComponentCopyWith<$Res>
       CodeableConcept parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
-      BackboneElement productionSpecification,
+      DeviceComponentProductionSpecification productionSpecification,
       CodeableConcept languageCode});
 
   @override
@@ -381,7 +387,8 @@ abstract class _$DeviceComponentCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get parameterGroup;
   @override
-  $BackboneElementCopyWith<$Res> get productionSpecification;
+  $DeviceComponentProductionSpecificationCopyWith<$Res>
+      get productionSpecification;
   @override
   $CodeableConceptCopyWith<$Res> get languageCode;
 }
@@ -452,7 +459,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
           : measurementPrinciple as DeviceComponentMeasurementPrinciple,
       productionSpecification: productionSpecification == freezed
           ? _value.productionSpecification
-          : productionSpecification as BackboneElement,
+          : productionSpecification as DeviceComponentProductionSpecification,
       languageCode: languageCode == freezed
           ? _value.languageCode
           : languageCode as CodeableConcept,
@@ -469,7 +476,8 @@ class _$_DeviceComponent implements _DeviceComponent {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true)
@@ -508,6 +516,7 @@ class _$_DeviceComponent implements _DeviceComponent {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -532,7 +541,7 @@ class _$_DeviceComponent implements _DeviceComponent {
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   final DeviceComponentMeasurementPrinciple measurementPrinciple;
   @override
-  final BackboneElement productionSpecification;
+  final DeviceComponentProductionSpecification productionSpecification;
   @override
   final CodeableConcept languageCode;
 
@@ -636,7 +645,8 @@ abstract class _DeviceComponent implements DeviceComponent {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -653,7 +663,7 @@ abstract class _DeviceComponent implements DeviceComponent {
       CodeableConcept parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
-      BackboneElement productionSpecification,
+      DeviceComponentProductionSpecification productionSpecification,
       CodeableConcept languageCode}) = _$_DeviceComponent;
 
   factory _DeviceComponent.fromJson(Map<String, dynamic> json) =
@@ -672,6 +682,7 @@ abstract class _DeviceComponent implements DeviceComponent {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -696,7 +707,7 @@ abstract class _DeviceComponent implements DeviceComponent {
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   DeviceComponentMeasurementPrinciple get measurementPrinciple;
   @override
-  BackboneElement get productionSpecification;
+  DeviceComponentProductionSpecification get productionSpecification;
   @override
   CodeableConcept get languageCode;
   @override
@@ -717,7 +728,8 @@ class _$DeviceMetricTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -736,7 +748,7 @@ class _$DeviceMetricTearOff {
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      BackboneElement calibration}) {
+      DeviceMetricCalibration calibration}) {
     return _DeviceMetric(
       id: id,
       meta: meta,
@@ -770,6 +782,7 @@ mixin _$DeviceMetric {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -786,7 +799,7 @@ mixin _$DeviceMetric {
   @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
   DeviceMetricCategory get category;
   Timing get measurementPeriod;
-  BackboneElement get calibration;
+  DeviceMetricCalibration get calibration;
 
   Map<String, dynamic> toJson();
   $DeviceMetricCopyWith<DeviceMetric> get copyWith;
@@ -803,7 +816,8 @@ abstract class $DeviceMetricCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           CodeableConcept type,
@@ -819,7 +833,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      BackboneElement calibration});
+      DeviceMetricCalibration calibration});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -831,7 +845,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get source;
   $ReferenceCopyWith<$Res> get parent;
   $TimingCopyWith<$Res> get measurementPeriod;
-  $BackboneElementCopyWith<$Res> get calibration;
+  $DeviceMetricCalibrationCopyWith<$Res> get calibration;
 }
 
 class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
@@ -896,7 +910,7 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
           : measurementPeriod as Timing,
       calibration: calibration == freezed
           ? _value.calibration
-          : calibration as BackboneElement,
+          : calibration as DeviceMetricCalibration,
     ));
   }
 
@@ -1001,11 +1015,11 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get calibration {
+  $DeviceMetricCalibrationCopyWith<$Res> get calibration {
     if (_value.calibration == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.calibration, (value) {
+    return $DeviceMetricCalibrationCopyWith<$Res>(_value.calibration, (value) {
       return _then(_value.copyWith(calibration: value));
     });
   }
@@ -1024,7 +1038,8 @@ abstract class _$DeviceMetricCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           CodeableConcept type,
@@ -1040,7 +1055,7 @@ abstract class _$DeviceMetricCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      BackboneElement calibration});
+      DeviceMetricCalibration calibration});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1063,7 +1078,7 @@ abstract class _$DeviceMetricCopyWith<$Res>
   @override
   $TimingCopyWith<$Res> get measurementPeriod;
   @override
-  $BackboneElementCopyWith<$Res> get calibration;
+  $DeviceMetricCalibrationCopyWith<$Res> get calibration;
 }
 
 class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
@@ -1130,7 +1145,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
           : measurementPeriod as Timing,
       calibration: calibration == freezed
           ? _value.calibration
-          : calibration as BackboneElement,
+          : calibration as DeviceMetricCalibration,
     ));
   }
 }
@@ -1144,7 +1159,8 @@ class _$_DeviceMetric implements _DeviceMetric {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true)
@@ -1184,6 +1200,7 @@ class _$_DeviceMetric implements _DeviceMetric {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1211,7 +1228,7 @@ class _$_DeviceMetric implements _DeviceMetric {
   @override
   final Timing measurementPeriod;
   @override
-  final BackboneElement calibration;
+  final DeviceMetricCalibration calibration;
 
   @override
   String toString() {
@@ -1310,7 +1327,8 @@ abstract class _DeviceMetric implements DeviceMetric {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -1329,7 +1347,7 @@ abstract class _DeviceMetric implements DeviceMetric {
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      BackboneElement calibration}) = _$_DeviceMetric;
+      DeviceMetricCalibration calibration}) = _$_DeviceMetric;
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetric.fromJson;
@@ -1347,6 +1365,7 @@ abstract class _DeviceMetric implements DeviceMetric {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1374,7 +1393,7 @@ abstract class _DeviceMetric implements DeviceMetric {
   @override
   Timing get measurementPeriod;
   @override
-  BackboneElement get calibration;
+  DeviceMetricCalibration get calibration;
   @override
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith;
 }
@@ -1393,7 +1412,7 @@ class _$DeviceTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required @JsonKey(required: true) CodeableConcept type,
@@ -1450,6 +1469,7 @@ mixin _$Device {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
@@ -1485,7 +1505,7 @@ abstract class $DeviceCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true) CodeableConcept type,
@@ -1713,7 +1733,7 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true) CodeableConcept type,
@@ -1841,7 +1861,7 @@ class _$_Device implements _Device {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       @required @JsonKey(required: true) this.type,
@@ -1877,6 +1897,7 @@ class _$_Device implements _Device {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2033,7 +2054,7 @@ abstract class _Device implements Device {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required @JsonKey(required: true) CodeableConcept type,
@@ -2067,6 +2088,7 @@ abstract class _Device implements Device {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -2119,7 +2141,7 @@ class _$DeviceComponentProductionSpecificationTearOff {
 
   _DeviceComponentProductionSpecification call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept specType,
       Identifier componentId,
@@ -2141,6 +2163,7 @@ const $DeviceComponentProductionSpecification =
 
 mixin _$DeviceComponentProductionSpecification {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get specType;
@@ -2159,7 +2182,7 @@ abstract class $DeviceComponentProductionSpecificationCopyWith<$Res> {
       _$DeviceComponentProductionSpecificationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept specType,
       Identifier componentId,
@@ -2257,7 +2280,7 @@ abstract class _$DeviceComponentProductionSpecificationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept specType,
       Identifier componentId,
@@ -2320,7 +2343,7 @@ class _$_DeviceComponentProductionSpecification
     implements _DeviceComponentProductionSpecification {
   const _$_DeviceComponentProductionSpecification(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.specType,
       this.componentId,
@@ -2333,6 +2356,7 @@ class _$_DeviceComponentProductionSpecification
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2397,7 +2421,7 @@ abstract class _DeviceComponentProductionSpecification
     implements DeviceComponentProductionSpecification {
   const factory _DeviceComponentProductionSpecification(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       CodeableConcept specType,
       Identifier componentId,
@@ -2410,6 +2434,7 @@ abstract class _DeviceComponentProductionSpecification
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -2434,7 +2459,8 @@ class _$DeviceMetricCalibrationTearOff {
 
   _DeviceMetricCalibration call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType type,
@@ -2457,6 +2483,7 @@ const $DeviceMetricCalibration = _$DeviceMetricCalibrationTearOff();
 
 mixin _$DeviceMetricCalibration {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(unknownEnumValue: CalibrationType.unknown)
@@ -2475,7 +2502,8 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
       _$DeviceMetricCalibrationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType type,
@@ -2547,7 +2575,8 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType type,
@@ -2600,7 +2629,7 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
 class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
   const _$_DeviceMetricCalibration(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown) this.type,
       @JsonKey(unknownEnumValue: CalibrationState.unknown) this.state,
@@ -2612,6 +2641,7 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -2673,7 +2703,8 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
 abstract class _DeviceMetricCalibration implements DeviceMetricCalibration {
   const factory _DeviceMetricCalibration(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType type,
@@ -2687,6 +2718,7 @@ abstract class _DeviceMetricCalibration implements DeviceMetricCalibration {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;

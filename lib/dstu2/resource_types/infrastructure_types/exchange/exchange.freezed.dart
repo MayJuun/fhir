@@ -22,9 +22,9 @@ class _$OperationOutcomeTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @required @JsonKey(required: true) BackboneElement issue}) {
+      @required @JsonKey(required: true) OperationOutcomeIssue issue}) {
     return _OperationOutcome(
       id: id,
       meta: meta,
@@ -49,10 +49,11 @@ mixin _$OperationOutcome {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
-  BackboneElement get issue;
+  OperationOutcomeIssue get issue;
 
   Map<String, dynamic> toJson();
   $OperationOutcomeCopyWith<OperationOutcome> get copyWith;
@@ -69,15 +70,15 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) BackboneElement issue});
+      @JsonKey(required: true) OperationOutcomeIssue issue});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $BackboneElementCopyWith<$Res> get issue;
+  $OperationOutcomeIssueCopyWith<$Res> get issue;
 }
 
 class _$OperationOutcomeCopyWithImpl<$Res>
@@ -116,7 +117,7 @@ class _$OperationOutcomeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      issue: issue == freezed ? _value.issue : issue as BackboneElement,
+      issue: issue == freezed ? _value.issue : issue as OperationOutcomeIssue,
     ));
   }
 
@@ -161,11 +162,11 @@ class _$OperationOutcomeCopyWithImpl<$Res>
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get issue {
+  $OperationOutcomeIssueCopyWith<$Res> get issue {
     if (_value.issue == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.issue, (value) {
+    return $OperationOutcomeIssueCopyWith<$Res>(_value.issue, (value) {
       return _then(_value.copyWith(issue: value));
     });
   }
@@ -184,9 +185,9 @@ abstract class _$OperationOutcomeCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) BackboneElement issue});
+      @JsonKey(required: true) OperationOutcomeIssue issue});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -197,7 +198,7 @@ abstract class _$OperationOutcomeCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $BackboneElementCopyWith<$Res> get issue;
+  $OperationOutcomeIssueCopyWith<$Res> get issue;
 }
 
 class __$OperationOutcomeCopyWithImpl<$Res>
@@ -238,7 +239,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      issue: issue == freezed ? _value.issue : issue as BackboneElement,
+      issue: issue == freezed ? _value.issue : issue as OperationOutcomeIssue,
     ));
   }
 }
@@ -252,7 +253,7 @@ class _$_OperationOutcome implements _OperationOutcome {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.issue})
       : assert(issue != null);
@@ -273,12 +274,13 @@ class _$_OperationOutcome implements _OperationOutcome {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
   @override
   @JsonKey(required: true)
-  final BackboneElement issue;
+  final OperationOutcomeIssue issue;
 
   @override
   String toString() {
@@ -345,9 +347,9 @@ abstract class _OperationOutcome implements OperationOutcome {
           Code language,
           Narrative text,
           Resource contained,
-          FhirExtension extension_,
+          @JsonKey(name: 'extension') FhirExtension extension_,
           FhirExtension modifierExtension,
-          @required @JsonKey(required: true) BackboneElement issue}) =
+          @required @JsonKey(required: true) OperationOutcomeIssue issue}) =
       _$_OperationOutcome;
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
@@ -366,12 +368,13 @@ abstract class _OperationOutcome implements OperationOutcome {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
   @JsonKey(required: true)
-  BackboneElement get issue;
+  OperationOutcomeIssue get issue;
   @override
   _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith;
 }
@@ -390,7 +393,8 @@ class _$SubscriptionTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -405,7 +409,7 @@ class _$SubscriptionTearOff {
       String error,
       @required
       @JsonKey(required: true)
-          BackboneElement channel,
+          SubscriptionChannel channel,
       Instant end,
       Coding tag}) {
     return _Subscription(
@@ -439,6 +443,7 @@ mixin _$Subscription {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -450,7 +455,7 @@ mixin _$Subscription {
   SubscriptionStatus get status;
   String get error;
   @JsonKey(required: true)
-  BackboneElement get channel;
+  SubscriptionChannel get channel;
   Instant get end;
   Coding get tag;
 
@@ -469,7 +474,8 @@ abstract class $SubscriptionCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           String criteria,
@@ -480,7 +486,7 @@ abstract class $SubscriptionCopyWith<$Res> {
           SubscriptionStatus status,
       String error,
       @JsonKey(required: true)
-          BackboneElement channel,
+          SubscriptionChannel channel,
       Instant end,
       Coding tag});
 
@@ -489,7 +495,7 @@ abstract class $SubscriptionCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ContactPointCopyWith<$Res> get contact;
-  $BackboneElementCopyWith<$Res> get channel;
+  $SubscriptionChannelCopyWith<$Res> get channel;
   $CodingCopyWith<$Res> get tag;
 }
 
@@ -540,7 +546,8 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
       reason: reason == freezed ? _value.reason : reason as String,
       status: status == freezed ? _value.status : status as SubscriptionStatus,
       error: error == freezed ? _value.error : error as String,
-      channel: channel == freezed ? _value.channel : channel as BackboneElement,
+      channel:
+          channel == freezed ? _value.channel : channel as SubscriptionChannel,
       end: end == freezed ? _value.end : end as Instant,
       tag: tag == freezed ? _value.tag : tag as Coding,
     ));
@@ -597,11 +604,11 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get channel {
+  $SubscriptionChannelCopyWith<$Res> get channel {
     if (_value.channel == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.channel, (value) {
+    return $SubscriptionChannelCopyWith<$Res>(_value.channel, (value) {
       return _then(_value.copyWith(channel: value));
     });
   }
@@ -630,7 +637,8 @@ abstract class _$SubscriptionCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           String criteria,
@@ -641,7 +649,7 @@ abstract class _$SubscriptionCopyWith<$Res>
           SubscriptionStatus status,
       String error,
       @JsonKey(required: true)
-          BackboneElement channel,
+          SubscriptionChannel channel,
       Instant end,
       Coding tag});
 
@@ -656,7 +664,7 @@ abstract class _$SubscriptionCopyWith<$Res>
   @override
   $ContactPointCopyWith<$Res> get contact;
   @override
-  $BackboneElementCopyWith<$Res> get channel;
+  $SubscriptionChannelCopyWith<$Res> get channel;
   @override
   $CodingCopyWith<$Res> get tag;
 }
@@ -710,7 +718,8 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
       reason: reason == freezed ? _value.reason : reason as String,
       status: status == freezed ? _value.status : status as SubscriptionStatus,
       error: error == freezed ? _value.error : error as String,
-      channel: channel == freezed ? _value.channel : channel as BackboneElement,
+      channel:
+          channel == freezed ? _value.channel : channel as SubscriptionChannel,
       end: end == freezed ? _value.end : end as Instant,
       tag: tag == freezed ? _value.tag : tag as Coding,
     ));
@@ -726,7 +735,8 @@ class _$_Subscription implements _Subscription {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true)
@@ -765,6 +775,7 @@ class _$_Subscription implements _Subscription {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -783,7 +794,7 @@ class _$_Subscription implements _Subscription {
   final String error;
   @override
   @JsonKey(required: true)
-  final BackboneElement channel;
+  final SubscriptionChannel channel;
   @override
   final Instant end;
   @override
@@ -878,7 +889,8 @@ abstract class _Subscription implements Subscription {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -893,7 +905,7 @@ abstract class _Subscription implements Subscription {
       String error,
       @required
       @JsonKey(required: true)
-          BackboneElement channel,
+          SubscriptionChannel channel,
       Instant end,
       Coding tag}) = _$_Subscription;
 
@@ -913,6 +925,7 @@ abstract class _Subscription implements Subscription {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -931,7 +944,7 @@ abstract class _Subscription implements Subscription {
   String get error;
   @override
   @JsonKey(required: true)
-  BackboneElement get channel;
+  SubscriptionChannel get channel;
   @override
   Instant get end;
   @override
@@ -954,13 +967,13 @@ class _$MessageHeaderTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Instant timestamp,
       @required @JsonKey(required: true) Coding event,
-      BackboneElement response,
-      @required @JsonKey(required: true) BackboneElement source,
-      BackboneElement destination,
+      MessageHeaderResponse response,
+      @required @JsonKey(required: true) MessageHeaderSource source,
+      MessageHeaderDestination destination,
       Reference enterer,
       Reference author,
       Reference receiver,
@@ -1001,16 +1014,17 @@ mixin _$MessageHeader {
   Code get language;
   Narrative get text;
   Resource get contained;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   Instant get timestamp;
   @JsonKey(required: true)
   Coding get event;
-  BackboneElement get response;
+  MessageHeaderResponse get response;
   @JsonKey(required: true)
-  BackboneElement get source;
-  BackboneElement get destination;
+  MessageHeaderSource get source;
+  MessageHeaderDestination get destination;
   Reference get enterer;
   Reference get author;
   Reference get receiver;
@@ -1033,13 +1047,13 @@ abstract class $MessageHeaderCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Instant timestamp,
       @JsonKey(required: true) Coding event,
-      BackboneElement response,
-      @JsonKey(required: true) BackboneElement source,
-      BackboneElement destination,
+      MessageHeaderResponse response,
+      @JsonKey(required: true) MessageHeaderSource source,
+      MessageHeaderDestination destination,
       Reference enterer,
       Reference author,
       Reference receiver,
@@ -1052,9 +1066,9 @@ abstract class $MessageHeaderCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get event;
-  $BackboneElementCopyWith<$Res> get response;
-  $BackboneElementCopyWith<$Res> get source;
-  $BackboneElementCopyWith<$Res> get destination;
+  $MessageHeaderResponseCopyWith<$Res> get response;
+  $MessageHeaderSourceCopyWith<$Res> get source;
+  $MessageHeaderDestinationCopyWith<$Res> get destination;
   $ReferenceCopyWith<$Res> get enterer;
   $ReferenceCopyWith<$Res> get author;
   $ReferenceCopyWith<$Res> get receiver;
@@ -1111,12 +1125,13 @@ class _$MessageHeaderCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       timestamp: timestamp == freezed ? _value.timestamp : timestamp as Instant,
       event: event == freezed ? _value.event : event as Coding,
-      response:
-          response == freezed ? _value.response : response as BackboneElement,
-      source: source == freezed ? _value.source : source as BackboneElement,
+      response: response == freezed
+          ? _value.response
+          : response as MessageHeaderResponse,
+      source: source == freezed ? _value.source : source as MessageHeaderSource,
       destination: destination == freezed
           ? _value.destination
-          : destination as BackboneElement,
+          : destination as MessageHeaderDestination,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       author: author == freezed ? _value.author : author as Reference,
       receiver: receiver == freezed ? _value.receiver : receiver as Reference,
@@ -1179,31 +1194,31 @@ class _$MessageHeaderCopyWithImpl<$Res>
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get response {
+  $MessageHeaderResponseCopyWith<$Res> get response {
     if (_value.response == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.response, (value) {
+    return $MessageHeaderResponseCopyWith<$Res>(_value.response, (value) {
       return _then(_value.copyWith(response: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get source {
+  $MessageHeaderSourceCopyWith<$Res> get source {
     if (_value.source == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.source, (value) {
+    return $MessageHeaderSourceCopyWith<$Res>(_value.source, (value) {
       return _then(_value.copyWith(source: value));
     });
   }
 
   @override
-  $BackboneElementCopyWith<$Res> get destination {
+  $MessageHeaderDestinationCopyWith<$Res> get destination {
     if (_value.destination == null) {
       return null;
     }
-    return $BackboneElementCopyWith<$Res>(_value.destination, (value) {
+    return $MessageHeaderDestinationCopyWith<$Res>(_value.destination, (value) {
       return _then(_value.copyWith(destination: value));
     });
   }
@@ -1282,13 +1297,13 @@ abstract class _$MessageHeaderCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Instant timestamp,
       @JsonKey(required: true) Coding event,
-      BackboneElement response,
-      @JsonKey(required: true) BackboneElement source,
-      BackboneElement destination,
+      MessageHeaderResponse response,
+      @JsonKey(required: true) MessageHeaderSource source,
+      MessageHeaderDestination destination,
       Reference enterer,
       Reference author,
       Reference receiver,
@@ -1307,11 +1322,11 @@ abstract class _$MessageHeaderCopyWith<$Res>
   @override
   $CodingCopyWith<$Res> get event;
   @override
-  $BackboneElementCopyWith<$Res> get response;
+  $MessageHeaderResponseCopyWith<$Res> get response;
   @override
-  $BackboneElementCopyWith<$Res> get source;
+  $MessageHeaderSourceCopyWith<$Res> get source;
   @override
-  $BackboneElementCopyWith<$Res> get destination;
+  $MessageHeaderDestinationCopyWith<$Res> get destination;
   @override
   $ReferenceCopyWith<$Res> get enterer;
   @override
@@ -1376,12 +1391,13 @@ class __$MessageHeaderCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       timestamp: timestamp == freezed ? _value.timestamp : timestamp as Instant,
       event: event == freezed ? _value.event : event as Coding,
-      response:
-          response == freezed ? _value.response : response as BackboneElement,
-      source: source == freezed ? _value.source : source as BackboneElement,
+      response: response == freezed
+          ? _value.response
+          : response as MessageHeaderResponse,
+      source: source == freezed ? _value.source : source as MessageHeaderSource,
       destination: destination == freezed
           ? _value.destination
-          : destination as BackboneElement,
+          : destination as MessageHeaderDestination,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       author: author == freezed ? _value.author : author as Reference,
       receiver: receiver == freezed ? _value.receiver : receiver as Reference,
@@ -1403,7 +1419,7 @@ class _$_MessageHeader implements _MessageHeader {
       this.language,
       this.text,
       this.contained,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.timestamp,
       @required @JsonKey(required: true) this.event,
@@ -1436,6 +1452,7 @@ class _$_MessageHeader implements _MessageHeader {
   @override
   final Resource contained;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -1446,12 +1463,12 @@ class _$_MessageHeader implements _MessageHeader {
   @JsonKey(required: true)
   final Coding event;
   @override
-  final BackboneElement response;
+  final MessageHeaderResponse response;
   @override
   @JsonKey(required: true)
-  final BackboneElement source;
+  final MessageHeaderSource source;
   @override
-  final BackboneElement destination;
+  final MessageHeaderDestination destination;
   @override
   final Reference enterer;
   @override
@@ -1566,13 +1583,13 @@ abstract class _MessageHeader implements MessageHeader {
       Code language,
       Narrative text,
       Resource contained,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Instant timestamp,
       @required @JsonKey(required: true) Coding event,
-      BackboneElement response,
-      @required @JsonKey(required: true) BackboneElement source,
-      BackboneElement destination,
+      MessageHeaderResponse response,
+      @required @JsonKey(required: true) MessageHeaderSource source,
+      MessageHeaderDestination destination,
       Reference enterer,
       Reference author,
       Reference receiver,
@@ -1596,6 +1613,7 @@ abstract class _MessageHeader implements MessageHeader {
   @override
   Resource get contained;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -1606,12 +1624,12 @@ abstract class _MessageHeader implements MessageHeader {
   @JsonKey(required: true)
   Coding get event;
   @override
-  BackboneElement get response;
+  MessageHeaderResponse get response;
   @override
   @JsonKey(required: true)
-  BackboneElement get source;
+  MessageHeaderSource get source;
   @override
-  BackboneElement get destination;
+  MessageHeaderDestination get destination;
   @override
   Reference get enterer;
   @override
@@ -1860,7 +1878,10 @@ class _$ParametersParameterTearOff {
   const _$ParametersParameterTearOff();
 
   _ParametersParameter call(
-      {@required @JsonKey(required: true) String name,
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @required @JsonKey(required: true) String name,
       Integer valueInteger,
       Decimal valueDecimal,
       FhirDateTime valueDateTime,
@@ -1880,13 +1901,16 @@ class _$ParametersParameterTearOff {
       Period valuePeriod,
       Ratio valueRatio,
       HumanName valueHumanName,
-      Address valueAddress,
+      Address valueAddresss,
       ContactPoint valueContactPoint,
       Schedule valueSchedule,
       Reference valueReference,
       Resource resource,
       List<ParametersParameter> part}) {
     return _ParametersParameter(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       name: name,
       valueInteger: valueInteger,
       valueDecimal: valueDecimal,
@@ -1907,7 +1931,7 @@ class _$ParametersParameterTearOff {
       valuePeriod: valuePeriod,
       valueRatio: valueRatio,
       valueHumanName: valueHumanName,
-      valueAddress: valueAddress,
+      valueAddresss: valueAddresss,
       valueContactPoint: valueContactPoint,
       valueSchedule: valueSchedule,
       valueReference: valueReference,
@@ -1921,6 +1945,10 @@ class _$ParametersParameterTearOff {
 const $ParametersParameter = _$ParametersParameterTearOff();
 
 mixin _$ParametersParameter {
+  Id get id;
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  FhirExtension get modifierExtension;
   @JsonKey(required: true)
   String get name;
   Integer get valueInteger;
@@ -1942,7 +1970,7 @@ mixin _$ParametersParameter {
   Period get valuePeriod;
   Ratio get valueRatio;
   HumanName get valueHumanName;
-  Address get valueAddress;
+  Address get valueAddresss;
   ContactPoint get valueContactPoint;
   Schedule get valueSchedule;
   Reference get valueReference;
@@ -1958,7 +1986,10 @@ abstract class $ParametersParameterCopyWith<$Res> {
           ParametersParameter value, $Res Function(ParametersParameter) then) =
       _$ParametersParameterCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true) String name,
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @JsonKey(required: true) String name,
       Integer valueInteger,
       Decimal valueDecimal,
       FhirDateTime valueDateTime,
@@ -1978,13 +2009,15 @@ abstract class $ParametersParameterCopyWith<$Res> {
       Period valuePeriod,
       Ratio valueRatio,
       HumanName valueHumanName,
-      Address valueAddress,
+      Address valueAddresss,
       ContactPoint valueContactPoint,
       Schedule valueSchedule,
       Reference valueReference,
       Resource resource,
       List<ParametersParameter> part});
 
+  $FhirExtensionCopyWith<$Res> get extension_;
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get valueCoding;
   $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
   $AttachmentCopyWith<$Res> get valueAttachment;
@@ -1994,7 +2027,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
   $PeriodCopyWith<$Res> get valuePeriod;
   $RatioCopyWith<$Res> get valueRatio;
   $HumanNameCopyWith<$Res> get valueHumanName;
-  $AddressCopyWith<$Res> get valueAddress;
+  $AddressCopyWith<$Res> get valueAddresss;
   $ContactPointCopyWith<$Res> get valueContactPoint;
   $ScheduleCopyWith<$Res> get valueSchedule;
   $ReferenceCopyWith<$Res> get valueReference;
@@ -2010,6 +2043,9 @@ class _$ParametersParameterCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object name = freezed,
     Object valueInteger = freezed,
     Object valueDecimal = freezed,
@@ -2030,7 +2066,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
     Object valuePeriod = freezed,
     Object valueRatio = freezed,
     Object valueHumanName = freezed,
-    Object valueAddress = freezed,
+    Object valueAddresss = freezed,
     Object valueContactPoint = freezed,
     Object valueSchedule = freezed,
     Object valueReference = freezed,
@@ -2038,6 +2074,13 @@ class _$ParametersParameterCopyWithImpl<$Res>
     Object part = freezed,
   }) {
     return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
@@ -2085,9 +2128,9 @@ class _$ParametersParameterCopyWithImpl<$Res>
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName as HumanName,
-      valueAddress: valueAddress == freezed
-          ? _value.valueAddress
-          : valueAddress as Address,
+      valueAddresss: valueAddresss == freezed
+          ? _value.valueAddresss
+          : valueAddresss as Address,
       valueContactPoint: valueContactPoint == freezed
           ? _value.valueContactPoint
           : valueContactPoint as ContactPoint,
@@ -2100,6 +2143,26 @@ class _$ParametersParameterCopyWithImpl<$Res>
       resource: resource == freezed ? _value.resource : resource as Resource,
       part: part == freezed ? _value.part : part as List<ParametersParameter>,
     ));
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension {
+    if (_value.modifierExtension == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
+      return _then(_value.copyWith(modifierExtension: value));
+    });
   }
 
   @override
@@ -2193,12 +2256,12 @@ class _$ParametersParameterCopyWithImpl<$Res>
   }
 
   @override
-  $AddressCopyWith<$Res> get valueAddress {
-    if (_value.valueAddress == null) {
+  $AddressCopyWith<$Res> get valueAddresss {
+    if (_value.valueAddresss == null) {
       return null;
     }
-    return $AddressCopyWith<$Res>(_value.valueAddress, (value) {
-      return _then(_value.copyWith(valueAddress: value));
+    return $AddressCopyWith<$Res>(_value.valueAddresss, (value) {
+      return _then(_value.copyWith(valueAddresss: value));
     });
   }
 
@@ -2240,7 +2303,10 @@ abstract class _$ParametersParameterCopyWith<$Res>
       __$ParametersParameterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true) String name,
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @JsonKey(required: true) String name,
       Integer valueInteger,
       Decimal valueDecimal,
       FhirDateTime valueDateTime,
@@ -2260,13 +2326,17 @@ abstract class _$ParametersParameterCopyWith<$Res>
       Period valuePeriod,
       Ratio valueRatio,
       HumanName valueHumanName,
-      Address valueAddress,
+      Address valueAddresss,
       ContactPoint valueContactPoint,
       Schedule valueSchedule,
       Reference valueReference,
       Resource resource,
       List<ParametersParameter> part});
 
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+  @override
+  $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $CodingCopyWith<$Res> get valueCoding;
   @override
@@ -2286,7 +2356,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
   @override
   $HumanNameCopyWith<$Res> get valueHumanName;
   @override
-  $AddressCopyWith<$Res> get valueAddress;
+  $AddressCopyWith<$Res> get valueAddresss;
   @override
   $ContactPointCopyWith<$Res> get valueContactPoint;
   @override
@@ -2307,6 +2377,9 @@ class __$ParametersParameterCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object id = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object name = freezed,
     Object valueInteger = freezed,
     Object valueDecimal = freezed,
@@ -2327,7 +2400,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
     Object valuePeriod = freezed,
     Object valueRatio = freezed,
     Object valueHumanName = freezed,
-    Object valueAddress = freezed,
+    Object valueAddresss = freezed,
     Object valueContactPoint = freezed,
     Object valueSchedule = freezed,
     Object valueReference = freezed,
@@ -2335,6 +2408,13 @@ class __$ParametersParameterCopyWithImpl<$Res>
     Object part = freezed,
   }) {
     return _then(_ParametersParameter(
+      id: id == freezed ? _value.id : id as Id,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
@@ -2382,9 +2462,9 @@ class __$ParametersParameterCopyWithImpl<$Res>
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName as HumanName,
-      valueAddress: valueAddress == freezed
-          ? _value.valueAddress
-          : valueAddress as Address,
+      valueAddresss: valueAddresss == freezed
+          ? _value.valueAddresss
+          : valueAddresss as Address,
       valueContactPoint: valueContactPoint == freezed
           ? _value.valueContactPoint
           : valueContactPoint as ContactPoint,
@@ -2403,7 +2483,10 @@ class __$ParametersParameterCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ParametersParameter implements _ParametersParameter {
   const _$_ParametersParameter(
-      {@required @JsonKey(required: true) this.name,
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      @required @JsonKey(required: true) this.name,
       this.valueInteger,
       this.valueDecimal,
       this.valueDateTime,
@@ -2423,7 +2506,7 @@ class _$_ParametersParameter implements _ParametersParameter {
       this.valuePeriod,
       this.valueRatio,
       this.valueHumanName,
-      this.valueAddress,
+      this.valueAddresss,
       this.valueContactPoint,
       this.valueSchedule,
       this.valueReference,
@@ -2434,6 +2517,13 @@ class _$_ParametersParameter implements _ParametersParameter {
   factory _$_ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$_$_ParametersParameterFromJson(json);
 
+  @override
+  final Id id;
+  @override
+  @JsonKey(name: 'extension')
+  final FhirExtension extension_;
+  @override
+  final FhirExtension modifierExtension;
   @override
   @JsonKey(required: true)
   final String name;
@@ -2476,7 +2566,7 @@ class _$_ParametersParameter implements _ParametersParameter {
   @override
   final HumanName valueHumanName;
   @override
-  final Address valueAddress;
+  final Address valueAddresss;
   @override
   final ContactPoint valueContactPoint;
   @override
@@ -2490,13 +2580,21 @@ class _$_ParametersParameter implements _ParametersParameter {
 
   @override
   String toString() {
-    return 'ParametersParameter(name: $name, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueDateTime: $valueDateTime, valueDate: $valueDate, valueInstant: $valueInstant, valueString: $valueString, valueUri: $valueUri, valueBoolean: $valueBoolean, valueCode: $valueCode, valueBase64Binary: $valueBase64Binary, valueCoding: $valueCoding, valueCodeableConcept: $valueCodeableConcept, valueAttachment: $valueAttachment, valueIdentifier: $valueIdentifier, valueQuantity: $valueQuantity, valueRange: $valueRange, valuePeriod: $valuePeriod, valueRatio: $valueRatio, valueHumanName: $valueHumanName, valueAddress: $valueAddress, valueContactPoint: $valueContactPoint, valueSchedule: $valueSchedule, valueReference: $valueReference, resource: $resource, part: $part)';
+    return 'ParametersParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueDateTime: $valueDateTime, valueDate: $valueDate, valueInstant: $valueInstant, valueString: $valueString, valueUri: $valueUri, valueBoolean: $valueBoolean, valueCode: $valueCode, valueBase64Binary: $valueBase64Binary, valueCoding: $valueCoding, valueCodeableConcept: $valueCodeableConcept, valueAttachment: $valueAttachment, valueIdentifier: $valueIdentifier, valueQuantity: $valueQuantity, valueRange: $valueRange, valuePeriod: $valuePeriod, valueRatio: $valueRatio, valueHumanName: $valueHumanName, valueAddresss: $valueAddresss, valueContactPoint: $valueContactPoint, valueSchedule: $valueSchedule, valueReference: $valueReference, resource: $resource, part: $part)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ParametersParameter &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.valueInteger, valueInteger) ||
@@ -2554,14 +2652,9 @@ class _$_ParametersParameter implements _ParametersParameter {
                 const DeepCollectionEquality()
                     .equals(other.valueRatio, valueRatio)) &&
             (identical(other.valueHumanName, valueHumanName) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueHumanName, valueHumanName)) &&
-            (identical(other.valueAddress, valueAddress) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueAddress, valueAddress)) &&
-            (identical(other.valueContactPoint, valueContactPoint) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueContactPoint, valueContactPoint)) &&
+                const DeepCollectionEquality().equals(other.valueHumanName, valueHumanName)) &&
+            (identical(other.valueAddresss, valueAddresss) || const DeepCollectionEquality().equals(other.valueAddresss, valueAddresss)) &&
+            (identical(other.valueContactPoint, valueContactPoint) || const DeepCollectionEquality().equals(other.valueContactPoint, valueContactPoint)) &&
             (identical(other.valueSchedule, valueSchedule) || const DeepCollectionEquality().equals(other.valueSchedule, valueSchedule)) &&
             (identical(other.valueReference, valueReference) || const DeepCollectionEquality().equals(other.valueReference, valueReference)) &&
             (identical(other.resource, resource) || const DeepCollectionEquality().equals(other.resource, resource)) &&
@@ -2571,6 +2664,9 @@ class _$_ParametersParameter implements _ParametersParameter {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueDecimal) ^
@@ -2591,7 +2687,7 @@ class _$_ParametersParameter implements _ParametersParameter {
       const DeepCollectionEquality().hash(valuePeriod) ^
       const DeepCollectionEquality().hash(valueRatio) ^
       const DeepCollectionEquality().hash(valueHumanName) ^
-      const DeepCollectionEquality().hash(valueAddress) ^
+      const DeepCollectionEquality().hash(valueAddresss) ^
       const DeepCollectionEquality().hash(valueContactPoint) ^
       const DeepCollectionEquality().hash(valueSchedule) ^
       const DeepCollectionEquality().hash(valueReference) ^
@@ -2611,7 +2707,10 @@ class _$_ParametersParameter implements _ParametersParameter {
 
 abstract class _ParametersParameter implements ParametersParameter {
   const factory _ParametersParameter(
-      {@required @JsonKey(required: true) String name,
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @required @JsonKey(required: true) String name,
       Integer valueInteger,
       Decimal valueDecimal,
       FhirDateTime valueDateTime,
@@ -2631,7 +2730,7 @@ abstract class _ParametersParameter implements ParametersParameter {
       Period valuePeriod,
       Ratio valueRatio,
       HumanName valueHumanName,
-      Address valueAddress,
+      Address valueAddresss,
       ContactPoint valueContactPoint,
       Schedule valueSchedule,
       Reference valueReference,
@@ -2641,6 +2740,13 @@ abstract class _ParametersParameter implements ParametersParameter {
   factory _ParametersParameter.fromJson(Map<String, dynamic> json) =
       _$_ParametersParameter.fromJson;
 
+  @override
+  Id get id;
+  @override
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  @override
+  FhirExtension get modifierExtension;
   @override
   @JsonKey(required: true)
   String get name;
@@ -2683,7 +2789,7 @@ abstract class _ParametersParameter implements ParametersParameter {
   @override
   HumanName get valueHumanName;
   @override
-  Address get valueAddress;
+  Address get valueAddresss;
   @override
   ContactPoint get valueContactPoint;
   @override
@@ -2708,7 +2814,8 @@ class _$OperationOutcomeIssueTearOff {
 
   _OperationOutcomeIssue call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
@@ -2737,6 +2844,7 @@ const $OperationOutcomeIssue = _$OperationOutcomeIssueTearOff();
 
 mixin _$OperationOutcomeIssue {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
@@ -2757,7 +2865,8 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
       _$OperationOutcomeIssueCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
           IssueSeverity severity,
@@ -2848,7 +2957,8 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
           IssueSeverity severity,
@@ -2910,7 +3020,8 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
 class _$_OperationOutcomeIssue implements _OperationOutcomeIssue {
   const _$_OperationOutcomeIssue(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
@@ -2930,6 +3041,7 @@ class _$_OperationOutcomeIssue implements _OperationOutcomeIssue {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3005,7 +3117,8 @@ class _$_OperationOutcomeIssue implements _OperationOutcomeIssue {
 abstract class _OperationOutcomeIssue implements OperationOutcomeIssue {
   const factory _OperationOutcomeIssue(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
@@ -3023,6 +3136,7 @@ abstract class _OperationOutcomeIssue implements OperationOutcomeIssue {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3051,7 +3165,8 @@ class _$SubscriptionChannelTearOff {
 
   _SubscriptionChannel call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
@@ -3078,6 +3193,7 @@ const $SubscriptionChannel = _$SubscriptionChannelTearOff();
 
 mixin _$SubscriptionChannel {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
@@ -3097,7 +3213,8 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
       _$SubscriptionChannelCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
           ChannelType type,
@@ -3172,7 +3289,8 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
           ChannelType type,
@@ -3227,7 +3345,8 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
 class _$_SubscriptionChannel implements _SubscriptionChannel {
   const _$_SubscriptionChannel(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
@@ -3246,6 +3365,7 @@ class _$_SubscriptionChannel implements _SubscriptionChannel {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3314,7 +3434,8 @@ class _$_SubscriptionChannel implements _SubscriptionChannel {
 abstract class _SubscriptionChannel implements SubscriptionChannel {
   const factory _SubscriptionChannel(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
@@ -3331,6 +3452,7 @@ abstract class _SubscriptionChannel implements SubscriptionChannel {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3358,7 +3480,8 @@ class _$MessageHeaderResponseTearOff {
 
   _MessageHeaderResponse call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -3383,6 +3506,7 @@ const $MessageHeaderResponse = _$MessageHeaderResponseTearOff();
 
 mixin _$MessageHeaderResponse {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
@@ -3401,7 +3525,8 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
       _$MessageHeaderResponseCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           Id identifier,
@@ -3484,7 +3609,8 @@ abstract class _$MessageHeaderResponseCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           Id identifier,
@@ -3538,7 +3664,8 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
 class _$_MessageHeaderResponse implements _MessageHeaderResponse {
   const _$_MessageHeaderResponse(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       @required
       @JsonKey(required: true)
@@ -3556,6 +3683,7 @@ class _$_MessageHeaderResponse implements _MessageHeaderResponse {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3618,7 +3746,8 @@ class _$_MessageHeaderResponse implements _MessageHeaderResponse {
 abstract class _MessageHeaderResponse implements MessageHeaderResponse {
   const factory _MessageHeaderResponse(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -3634,6 +3763,7 @@ abstract class _MessageHeaderResponse implements MessageHeaderResponse {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3658,7 +3788,7 @@ class _$MessageHeaderSourceTearOff {
 
   _MessageHeaderSource call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
       String software,
@@ -3683,6 +3813,7 @@ const $MessageHeaderSource = _$MessageHeaderSourceTearOff();
 
 mixin _$MessageHeaderSource {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   String get name;
@@ -3702,7 +3833,7 @@ abstract class $MessageHeaderSourceCopyWith<$Res> {
       _$MessageHeaderSourceCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
       String software,
@@ -3789,7 +3920,7 @@ abstract class _$MessageHeaderSourceCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
       String software,
@@ -3847,7 +3978,7 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
 class _$_MessageHeaderSource implements _MessageHeaderSource {
   const _$_MessageHeaderSource(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.name,
       this.software,
@@ -3862,6 +3993,7 @@ class _$_MessageHeaderSource implements _MessageHeaderSource {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -3936,7 +4068,7 @@ class _$_MessageHeaderSource implements _MessageHeaderSource {
 abstract class _MessageHeaderSource implements MessageHeaderSource {
   const factory _MessageHeaderSource(
           {Id id,
-          FhirExtension extension_,
+          @JsonKey(name: 'extension') FhirExtension extension_,
           FhirExtension modifierExtension,
           String name,
           String software,
@@ -3951,6 +4083,7 @@ abstract class _MessageHeaderSource implements MessageHeaderSource {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
@@ -3979,7 +4112,7 @@ class _$MessageHeaderDestinationTearOff {
 
   _MessageHeaderDestination call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
       Reference target,
@@ -4000,6 +4133,7 @@ const $MessageHeaderDestination = _$MessageHeaderDestinationTearOff();
 
 mixin _$MessageHeaderDestination {
   Id get id;
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   String get name;
@@ -4017,7 +4151,7 @@ abstract class $MessageHeaderDestinationCopyWith<$Res> {
       _$MessageHeaderDestinationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
       Reference target,
@@ -4098,7 +4232,7 @@ abstract class _$MessageHeaderDestinationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      FhirExtension extension_,
+      @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
       Reference target,
@@ -4151,7 +4285,7 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
 class _$_MessageHeaderDestination implements _MessageHeaderDestination {
   const _$_MessageHeaderDestination(
       {this.id,
-      this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.name,
       this.target,
@@ -4164,6 +4298,7 @@ class _$_MessageHeaderDestination implements _MessageHeaderDestination {
   @override
   final Id id;
   @override
+  @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
   final FhirExtension modifierExtension;
@@ -4225,7 +4360,7 @@ class _$_MessageHeaderDestination implements _MessageHeaderDestination {
 abstract class _MessageHeaderDestination implements MessageHeaderDestination {
   const factory _MessageHeaderDestination(
           {Id id,
-          FhirExtension extension_,
+          @JsonKey(name: 'extension') FhirExtension extension_,
           FhirExtension modifierExtension,
           String name,
           Reference target,
@@ -4238,6 +4373,7 @@ abstract class _MessageHeaderDestination implements MessageHeaderDestination {
   @override
   Id get id;
   @override
+  @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
   FhirExtension get modifierExtension;
