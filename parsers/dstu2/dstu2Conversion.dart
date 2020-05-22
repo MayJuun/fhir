@@ -82,10 +82,10 @@ void main() async {
                     nameList[nameList.length - 1][0].toUpperCase() +
                     nameList[nameList.length - 1]
                         .substring(1, nameList[nameList.length - 1].length);
-                if (fileName != null) {
-                  await writeEnum(fileName, enumName,
-                      obj['resource']['element'][0]['short']);
-                }
+                // if (fileName != null) {
+                //   await writeEnum(fileName, enumName,
+                //       obj['resource']['element'][0]['short']);
+                // }
 
                 if (req) {
                   text +=
@@ -97,20 +97,23 @@ void main() async {
               } else {
                 if (req) {
                   text += '@JsonKey(required: true) @required ' +
-                      whatType(
-                          obj['resource']['element'][0]['type'][0]['code']);
+                      whatType(obj['resource']['element'][0]['type'][0]['code'],
+                          obj['resource']['id']);
                 } else {
                   text += whatType(
-                      obj['resource']['element'][0]['type'][0]['code']);
+                      obj['resource']['element'][0]['type'][0]['code'],
+                      obj['resource']['id']);
                 }
               }
             } else {
               if (req) {
                 text += '@JsonKey(required: true) @required ' +
-                    whatType(obj['resource']['element'][0]['type'][0]['code']);
+                    whatType(obj['resource']['element'][0]['type'][0]['code'],
+                        obj['resource']['id']);
               } else {
-                text +=
-                    whatType(obj['resource']['element'][0]['type'][0]['code']);
+                text += whatType(
+                    obj['resource']['element'][0]['type'][0]['code'],
+                    obj['resource']['id']);
               }
             }
             text += last == 'extension' ? ' extension_,' : ' $last,';
@@ -275,7 +278,7 @@ var fileNames = [
   '/home/grey/dev/fhir/lib/dstu2/resource_types/financial_types/other/other.dart',
 ];
 
-String whatType(String field) {
+String whatType(String field, String name) {
   switch (field) {
     case 'base64Binary':
       return 'Base64Binary';
@@ -319,6 +322,10 @@ String whatType(String field) {
       return 'Resource';
     case 'Extension':
       return 'FhirExtension';
+    case 'BackboneElement':
+      return (name.split('.').first +
+          name.split('.').last[0].toUpperCase() +
+          name.split('.').last.substring(1, name.split('.').last.length));
   }
   return field;
 }
