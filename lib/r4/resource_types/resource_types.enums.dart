@@ -1,18 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-enum AccountStatus {
-  @JsonValue('active')
-  active,
-  @JsonValue('inactive')
-  inactive,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('on-hold')
-  on_hold,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum Status {
   @JsonValue('draft')
   draft,
@@ -20,15 +7,6 @@ enum Status {
   active,
   @JsonValue('retired')
   retired,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum AdverseEventActuality {
-  @JsonValue('actual')
-  actual,
-  @JsonValue('potential')
-  potential,
   @JsonValue('unknown')
   unknown,
 }
