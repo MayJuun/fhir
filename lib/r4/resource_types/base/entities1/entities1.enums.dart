@@ -36,3 +36,22 @@ enum LocationMode {
   @JsonValue('unknown')
   unknown,
 }
+
+enum AvailableTimeDaysOfWeek {
+  @JsonValue('mon')
+  mon,
+  @JsonValue('tue')
+  tue,
+  @JsonValue('wed')
+  wed,
+  @JsonValue('thu')
+  thu,
+  @JsonValue('fri')
+  fri,
+  @JsonValue('sat')
+  sat,
+  @JsonValue('sun')
+  sun,
+  @JsonValue('unknown')
+  unknown,
+}

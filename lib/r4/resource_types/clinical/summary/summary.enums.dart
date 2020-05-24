@@ -8,3 +8,47 @@ enum AdverseEventActuality {
   @JsonValue('unknown')
   unknown,
 }
+
+enum AllergyIntoleranceType {
+  @JsonValue('allergy')
+  allergy,
+  @JsonValue('intolerance')
+  intolerance,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum AllergyIntoleranceCategory {
+  @JsonValue('food')
+  food,
+  @JsonValue('medication')
+  medication,
+  @JsonValue('environment')
+  environment,
+  @JsonValue('biologic')
+  biologic,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum AllergyIntoleranceCriticality {
+  @JsonValue('low')
+  low,
+  @JsonValue('high')
+  high,
+  @JsonValue('unable-to-assess')
+  unable_to_assess,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ReactionSeverity {
+  @JsonValue('mild')
+  mild,
+  @JsonValue('moderate')
+  moderate,
+  @JsonValue('severe')
+  severe,
+  @JsonValue('unknown')
+  unknown,
+}

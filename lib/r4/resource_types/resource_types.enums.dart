@@ -11,200 +11,6 @@ enum Status {
   unknown,
 }
 
-enum AllergyIntoleranceType {
-  @JsonValue('allergy')
-  allergy,
-  @JsonValue('intolerance')
-  intolerance,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum AllergyIntoleranceCategory {
-  @JsonValue('food')
-  food,
-  @JsonValue('medication')
-  medication,
-  @JsonValue('environment')
-  environment,
-  @JsonValue('biologic')
-  biologic,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum AllergyIntoleranceCriticality {
-  @JsonValue('low')
-  low,
-  @JsonValue('high')
-  high,
-  @JsonValue('unable-to-assess')
-  unable_to_assess,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ReactionSeverity {
-  @JsonValue('mild')
-  mild,
-  @JsonValue('moderate')
-  moderate,
-  @JsonValue('severe')
-  severe,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum AppointmentStatus {
-  @JsonValue('proposed')
-  proposed,
-  @JsonValue('pending')
-  pending,
-  @JsonValue('booked')
-  booked,
-  @JsonValue('arrived')
-  arrived,
-  @JsonValue('fulfilled')
-  fulfilled,
-  @JsonValue('cancelled')
-  cancelled,
-  @JsonValue('noshow')
-  noshow,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('checked-in')
-  checked_in,
-  @JsonValue('waitlist')
-  waitlist,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ParticipantRequired {
-  @JsonValue('required')
-  required,
-  @JsonValue('optional')
-  optional,
-  @JsonValue('information-only')
-  information_only,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ParticipantStatus {
-  @JsonValue('accepted')
-  accepted,
-  @JsonValue('declined')
-  declined,
-  @JsonValue('tentative')
-  tentative,
-  @JsonValue('needs-action')
-  needs_action,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum AuditEventAction {
-  @JsonValue('C')
-  c,
-  @JsonValue('R')
-  r,
-  @JsonValue('U')
-  u,
-  @JsonValue('D')
-  d,
-  @JsonValue('E')
-  e,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum AuditEventOutcome {
-  @JsonValue('0')
-  num_0,
-  @JsonValue('4')
-  num_4,
-  @JsonValue('8')
-  num_8,
-  @JsonValue('12')
-  num_12,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum NetworkType {
-  @JsonValue('1')
-  num_1,
-  @JsonValue('2')
-  num_2,
-  @JsonValue('3')
-  num_3,
-  @JsonValue('4')
-  num_4,
-  @JsonValue('5')
-  num_5,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum BiologicallyDerivedProductProductCategory {
-  @JsonValue('organ')
-  organ,
-  @JsonValue('tissue')
-  tissue,
-  @JsonValue('fluid')
-  fluid,
-  @JsonValue('cells')
-  cells,
-  @JsonValue('biologicalAgent')
-  biologicalagent,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum BiologicallyDerivedProductStatus {
-  @JsonValue('available')
-  available,
-  @JsonValue('unavailable')
-  unavailable,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum StorageScale {
-  @JsonValue('farenheit')
-  farenheit,
-  @JsonValue('celsius')
-  celsius,
-  @JsonValue('kelvin')
-  kelvin,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum BundleType {
-  @JsonValue('document')
-  document,
-  @JsonValue('message')
-  message,
-  @JsonValue('transaction')
-  transaction,
-  @JsonValue('transaction-response')
-  transaction_response,
-  @JsonValue('batch')
-  batch,
-  @JsonValue('batch-response')
-  batch_response,
-  @JsonValue('history')
-  history,
-  @JsonValue('searchset')
-  searchset,
-  @JsonValue('collection')
-  collection,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum SearchMode {
   @JsonValue('match')
   match,
@@ -713,32 +519,6 @@ enum DetectedIssueSeverity {
   unknown,
 }
 
-enum ActiveInactive {
-  @JsonValue('active')
-  active,
-  @JsonValue('inactive')
-  inactive,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum UdiCarrierEntryType {
-  @JsonValue('barcode')
-  barcode,
-  @JsonValue('rfid')
-  rfid,
-  @JsonValue('manual')
-  manual,
-  @JsonValue('card')
-  card,
-  @JsonValue('self-reported')
-  self_reported,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum DeviceNameType {
   @JsonValue('udi-label-name')
   udi_label_name,
@@ -752,79 +532,6 @@ enum DeviceNameType {
   model_name,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum DeviceMetricOperationalStatus {
-  @JsonValue('on')
-  on,
-  @JsonValue('off')
-  off,
-  @JsonValue('standby')
-  standby,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum DeviceMetricColor {
-  @JsonValue('black')
-  black,
-  @JsonValue('red')
-  red,
-  @JsonValue('green')
-  green,
-  @JsonValue('yellow')
-  yellow,
-  @JsonValue('blue')
-  blue,
-  @JsonValue('magenta')
-  magenta,
-  @JsonValue('cyan')
-  cyan,
-  @JsonValue('white')
-  white,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum DeviceMetricCategory {
-  @JsonValue('measurement')
-  measurement,
-  @JsonValue('setting')
-  setting,
-  @JsonValue('calculation')
-  calculation,
-  @JsonValue('unspecified')
-  unspecified,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum CalibrationType {
-  @JsonValue('unspecified')
-  unspecified,
-  @JsonValue('offset')
-  offset,
-  @JsonValue('gain')
-  gain,
-  @JsonValue('two-point')
-  two_point,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum CalibrationState {
-  @JsonValue('not-calibrated')
-  not_calibrated,
-  @JsonValue('calibration-required')
-  calibration_required,
-  @JsonValue('calibrated')
-  calibrated,
-  @JsonValue('unspecified')
-  unspecified,
   @JsonValue('unknown')
   unknown,
 }
@@ -869,7 +576,6 @@ enum DiagnosticReportStatus {
   unknown,
 }
 
-//*********************** */
 enum DocumentStatus {
   @JsonValue('current')
   current,
@@ -899,60 +605,6 @@ enum ResultsByExposureExposureState {
   exposure,
   @JsonValue('exposure-alternative')
   exposure_alternative,
-  @JsonValue('unknown')
-  unknown,
-}
-
-//******************************** */
-enum EncounterStatus {
-  @JsonValue('planned')
-  planned,
-  @JsonValue('arrived')
-  arrived,
-  @JsonValue('triaged')
-  triaged,
-  @JsonValue('in-progress')
-  in_progress,
-  @JsonValue('onleave')
-  onleave,
-  @JsonValue('finished')
-  finished,
-  @JsonValue('cancelled')
-  cancelled,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum EncounterLocationStatus {
-  @JsonValue('planned')
-  planned,
-  @JsonValue('active')
-  active,
-  @JsonValue('reserved')
-  reserved,
-  @JsonValue('completed')
-  completed,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum EpisodeOfCareStatus {
-  @JsonValue('planned')
-  planned,
-  @JsonValue('waitlist')
-  waitlist,
-  @JsonValue('active')
-  active,
-  @JsonValue('onhold')
-  onhold,
-  @JsonValue('finished')
-  finished,
-  @JsonValue('cancelled')
-  cancelled,
-  @JsonValue('entered-in-error')
-  entered_in_error,
   @JsonValue('unknown')
   unknown,
 }
@@ -1065,23 +717,6 @@ enum CompartmentRule {
   unknown,
 }
 
-enum GroupType {
-  @JsonValue('person')
-  person,
-  @JsonValue('animal')
-  animal,
-  @JsonValue('practitioner')
-  practitioner,
-  @JsonValue('device')
-  device,
-  @JsonValue('medication')
-  medication,
-  @JsonValue('substance')
-  substance,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum GuidanceResponseStatus {
   @JsonValue('success')
   success,
@@ -1095,25 +730,6 @@ enum GuidanceResponseStatus {
   failure,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum AvailableTimeDaysOfWeek {
-  @JsonValue('mon')
-  mon,
-  @JsonValue('tue')
-  tue,
-  @JsonValue('wed')
-  wed,
-  @JsonValue('thu')
-  thu,
-  @JsonValue('fri')
-  fri,
-  @JsonValue('sat')
-  sat,
-  @JsonValue('sun')
-  sun,
   @JsonValue('unknown')
   unknown,
 }
@@ -1909,28 +1525,6 @@ enum LinkageItemType {
   unknown,
 }
 
-enum ListStatus {
-  @JsonValue('current')
-  current,
-  @JsonValue('retired')
-  retired,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ListMode {
-  @JsonValue('working')
-  working,
-  @JsonValue('snapshot')
-  snapshot,
-  @JsonValue('changes')
-  changes,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum MeasureReportStatus {
   @JsonValue('complete')
   complete,
@@ -2242,32 +1836,6 @@ enum IssueCode {
   throttled,
   @JsonValue('informational')
   informational,
-}
-
-enum LinkType {
-  @JsonValue('replaced-by')
-  replaced_by,
-  @JsonValue('replaces')
-  replaces,
-  @JsonValue('refer')
-  refer,
-  @JsonValue('seealso')
-  seealso,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum LinkAssurance {
-  @JsonValue('level1')
-  level1,
-  @JsonValue('level2')
-  level2,
-  @JsonValue('level3')
-  level3,
-  @JsonValue('level4')
-  level4,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum ActionGroupingBehavior {
@@ -2605,21 +2173,6 @@ enum SearchParameterModifier {
   unknown,
 }
 
-enum SlotStatus {
-  @JsonValue('busy')
-  busy,
-  @JsonValue('free')
-  free,
-  @JsonValue('busy-unavailable')
-  busy_unavailable,
-  @JsonValue('busy-tentative')
-  busy_tentative,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum SpecimenStatus {
   @JsonValue('available')
   available,
@@ -2840,56 +2393,6 @@ enum SupplyRequestStatus {
   entered_in_error,
   @JsonValue('unknown')
   unknown,
-}
-
-enum TaskStatus {
-  @JsonValue('draft')
-  draft,
-  @JsonValue('requested')
-  requested,
-  @JsonValue('received')
-  received,
-  @JsonValue('accepted')
-  accepted,
-  @JsonValue('rejected')
-  rejected,
-  @JsonValue('ready')
-  ready,
-  @JsonValue('cancelled')
-  cancelled,
-  @JsonValue('in-progress')
-  in_progress,
-  @JsonValue('on-hold')
-  on_hold,
-  @JsonValue('failed')
-  failed,
-  @JsonValue('completed')
-  completed,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum TaskIntent {
-  @JsonValue('unknown')
-  unknown,
-  @JsonValue('proposal')
-  proposal,
-  @JsonValue('plan')
-  plan,
-  @JsonValue('order')
-  order,
-  @JsonValue('original-order')
-  original_order,
-  @JsonValue('reflex-order')
-  reflex_order,
-  @JsonValue('filler-order')
-  filler_order,
-  @JsonValue('instance-order')
-  instance_order,
-  @JsonValue('option')
-  option,
 }
 
 enum TerminologyCapabilitiesCodeSearch {

@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
 import '../../resource_types.enums.dart';
+import 'individuals.enums.dart';
 
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';
