@@ -131,7 +131,7 @@ abstract class CodeableConcept with _$CodeableConcept {
   const factory CodeableConcept({
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
-    Coding coding,
+    List<Coding> coding,
     String text,
   }) = _CodeableConcept;
 
@@ -161,7 +161,7 @@ abstract class Signature with _$Signature {
   const factory Signature({
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
-    @JsonKey(required: true) @required Coding type,
+    @JsonKey(required: true) @required List<Coding> type,
     @JsonKey(required: true) @required Instant when,
     @JsonKey(required: true) @required FhirUri whoX,
     @JsonKey(required: true) @required Code contentType,
@@ -177,7 +177,7 @@ abstract class Timing with _$Timing {
   const factory Timing({
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
-    FhirDateTime event,
+    List<FhirDateTime> event,
     Element repeat,
     CodeableConcept code,
   }) = _Timing;
@@ -193,7 +193,7 @@ abstract class Address with _$Address {
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
     @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
     String text,
-    String line,
+    List<String> line,
     String city,
     String district,
     String state,
@@ -213,10 +213,10 @@ abstract class HumanName with _$HumanName {
     @JsonKey(name: 'extension') FhirExtension extension_,
     @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
     String text,
-    String family,
-    String given,
-    String prefix,
-    String suffix,
+    List<String> family,
+    List<String> given,
+    List<String> prefix,
+    List<String> suffix,
     Period period,
   }) = _HumanName;
 
