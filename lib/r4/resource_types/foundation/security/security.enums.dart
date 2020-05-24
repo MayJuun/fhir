@@ -42,3 +42,57 @@ enum NetworkType {
   @JsonValue('unknown')
   unknown,
 }
+
+enum ConsentStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('proposed')
+  proposed,
+  @JsonValue('active')
+  active,
+  @JsonValue('rejected')
+  rejected,
+  @JsonValue('inactive')
+  inactive,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum ProvisionType {
+  @JsonValue('deny')
+  deny,
+  @JsonValue('permit')
+  permit,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum DataMeaning {
+  @JsonValue('instance')
+  instance,
+  @JsonValue('related')
+  related,
+  @JsonValue('dependents')
+  dependents,
+  @JsonValue('authoredby')
+  authoredby,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum EntityRole {
+  @JsonValue('derivation')
+  derivation,
+  @JsonValue('revision')
+  revision,
+  @JsonValue('quotation')
+  quotation,
+  @JsonValue('source')
+  source,
+  @JsonValue('removal')
+  removal,
+  @JsonValue('unknown')
+  unknown,
+}

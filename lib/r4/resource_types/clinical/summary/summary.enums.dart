@@ -52,3 +52,27 @@ enum ReactionSeverity {
   @JsonValue('unknown')
   unknown,
 }
+
+enum DetectedIssueSeverity {
+  @JsonValue('high')
+  high,
+  @JsonValue('moderate')
+  moderate,
+  @JsonValue('low')
+  low,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum FamilyMemberHistoryStatus {
+  @JsonValue('partial')
+  partial,
+  @JsonValue('completed')
+  completed,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('health-unknown')
+  health_unknown,
+  @JsonValue('unknown')
+  unknown,
+}

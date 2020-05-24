@@ -1,9 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
-import '../../resource_types.enums.dart';
-
 import 'other.enums.dart';
+
 part 'other.freezed.dart';
 part 'other.g.dart';
 

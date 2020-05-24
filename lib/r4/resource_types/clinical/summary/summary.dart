@@ -2,7 +2,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
 import 'summary.enums.dart';
-import '../../resource_types.enums.dart';
 
 part 'summary.freezed.dart';
 part 'summary.g.dart';

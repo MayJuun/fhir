@@ -1,8 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
-import 'general.enums.dart';
 import '../../resource_types.enums.dart';
+import '../financial.enums.dart';
+import 'general.enums.dart';
 
 part 'general.freezed.dart';
 part 'general.g.dart';
