@@ -1,4 +1,3 @@
-import 'package:fhir/r4/resource_types/resource_types.enums.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 // import 'package:flutter/foundation.dart';
 
@@ -518,8 +517,8 @@ abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: BindingStrength.unknown)
-        BindingStrength strength,
+    @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
+        ElementBindingStrength strength,
     String description,
     Canonical valueSet,
   }) = _ElementDefinitionBinding;

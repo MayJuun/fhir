@@ -45,7 +45,6 @@ enum GroupMeasure {
   unknown,
 }
 
-
 enum ObservationDefinitionPermittedDataType {
   @JsonValue('Quantity')
   quantity,
@@ -96,8 +95,6 @@ enum BindingStrength {
   @JsonValue('unknown')
   unknown,
 }
-
-
 
 enum SearchParameterComparator {
   @JsonValue('eq')
@@ -150,4 +147,3 @@ enum SearchParameterModifier {
   @JsonValue('unknown')
   unknown,
 }
-

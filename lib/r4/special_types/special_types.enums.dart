@@ -84,3 +84,16 @@ enum ConstraintSeverity {
   @JsonValue('unknown')
   unknown,
 }
+
+enum ElementBindingStrength {
+  @JsonValue('required')
+  required,
+  @JsonValue('extensible')
+  extensible,
+  @JsonValue('preferred')
+  preferred,
+  @JsonValue('example')
+  example,
+  @JsonValue('unknown')
+  unknown,
+}
