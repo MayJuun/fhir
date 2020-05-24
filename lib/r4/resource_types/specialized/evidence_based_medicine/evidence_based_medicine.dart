@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
 import '../../resource_types.enums.dart';
+import 'evidence_based_medicine.enums.dart';
 
 part 'evidence_based_medicine.freezed.dart';
 part 'evidence_based_medicine.g.dart';
