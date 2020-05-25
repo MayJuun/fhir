@@ -10,6 +10,7 @@ part 'diagnostics.g.dart';
 @freezed
 abstract class ImagingStudy with _$ImagingStudy implements Resource {
   const factory ImagingStudy({
+    @JsonKey(defaultValue: 'ImagingStudy') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -22,16 +23,16 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
     @JsonKey(required: true) @required Reference patient,
     @JsonKey(required: true) @required Oid uid,
     Identifier accession,
-    Identifier identifier,
-    Reference order,
-    Coding modalityList,
+    List<Identifier> identifier,
+    List<Reference> order,
+    List<Coding> modalityList,
     Reference referrer,
     @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
         ImagingStudyAvailability availability,
     FhirUri url,
     @JsonKey(required: true) @required UnsignedInt numberOfSeries,
     @JsonKey(required: true) @required UnsignedInt numberOfInstances,
-    Reference procedure,
+    List<Reference> procedure,
     Reference interpreter,
     String description,
     ImagingStudySeries series,
@@ -44,6 +45,7 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
 @freezed
 abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
   const factory DiagnosticReport({
+    @JsonKey(defaultValue: 'DiagnosticReport') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -52,7 +54,7 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: DiagnosticReportStatus.unknown)
     @required
         DiagnosticReportStatus status,
@@ -63,14 +65,14 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
     @JsonKey(required: true) @required FhirDateTime effectiveX,
     @JsonKey(required: true) @required Instant issued,
     @JsonKey(required: true) @required Reference performer,
-    Reference request,
-    Reference specimen,
-    Reference result,
-    Reference imagingStudy,
-    DiagnosticReportImage image,
+    List<Reference> request,
+    List<Reference> specimen,
+    List<Reference> result,
+    List<Reference> imagingStudy,
+    List<DiagnosticReportImage> image,
     String conclusion,
-    CodeableConcept codedDiagnosis,
-    Attachment presentedForm,
+    List<CodeableConcept> codedDiagnosis,
+    List<Attachment> presentedForm,
   }) = _DiagnosticReport;
 
   factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
@@ -82,6 +84,7 @@ abstract class ImagingObjectSelection
     with _$ImagingObjectSelection
     implements Resource {
   const factory ImagingObjectSelection({
+    @JsonKey(defaultValue: 'ImagingObjectSelection') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -96,7 +99,7 @@ abstract class ImagingObjectSelection
     String description,
     Reference author,
     FhirDateTime authoringTime,
-    @JsonKey(required: true) @required ImagingObjectSelectionStudy study,
+    @JsonKey(required: true) @required List<ImagingObjectSelectionStudy> study,
   }) = _ImagingObjectSelection;
 
   factory ImagingObjectSelection.fromJson(Map<String, dynamic> json) =>
@@ -106,6 +109,7 @@ abstract class ImagingObjectSelection
 @freezed
 abstract class BodySite with _$BodySite implements Resource {
   const factory BodySite({
+    @JsonKey(defaultValue: 'BodySite') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -115,11 +119,11 @@ abstract class BodySite with _$BodySite implements Resource {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference patient,
-    Identifier identifier,
+    List<Identifier> identifier,
     CodeableConcept code,
-    CodeableConcept modifier,
+    List<CodeableConcept> modifier,
     String description,
-    Attachment image,
+    List<Attachment> image,
   }) = _BodySite;
 
   factory BodySite.fromJson(Map<String, dynamic> json) =>
@@ -129,6 +133,7 @@ abstract class BodySite with _$BodySite implements Resource {
 @freezed
 abstract class Observation with _$Observation implements Resource {
   const factory Observation({
+    @JsonKey(defaultValue: 'Observation') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -137,7 +142,7 @@ abstract class Observation with _$Observation implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: ObservationStatus.unknown)
     @required
         ObservationStatus status,
@@ -156,9 +161,9 @@ abstract class Observation with _$Observation implements Resource {
     CodeableConcept method,
     Reference specimen,
     Reference device,
-    ObservationReferenceRange referenceRange,
-    ObservationRelated related,
-    ObservationComponent component,
+    List<ObservationReferenceRange> referenceRange,
+    List<ObservationRelated> related,
+    List<ObservationComponent> component,
   }) = _Observation;
 
   factory Observation.fromJson(Map<String, dynamic> json) =>
@@ -168,6 +173,7 @@ abstract class Observation with _$Observation implements Resource {
 @freezed
 abstract class Specimen with _$Specimen implements Resource {
   const factory Specimen({
+    @JsonKey(defaultValue: 'Specimen') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -176,16 +182,16 @@ abstract class Specimen with _$Specimen implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
     CodeableConcept type,
-    Reference parent,
+    List<Reference> parent,
     @JsonKey(required: true) @required Reference subject,
     Identifier accessionIdentifier,
     FhirDateTime receivedTime,
     SpecimenCollection collection,
-    SpecimenTreatment treatment,
-    SpecimenContainer container,
+    List<SpecimenTreatment> treatment,
+    List<SpecimenContainer> container,
   }) = _Specimen;
 
   factory Specimen.fromJson(Map<String, dynamic> json) =>
@@ -195,6 +201,7 @@ abstract class Specimen with _$Specimen implements Resource {
 @freezed
 abstract class DiagnosticOrder with _$DiagnosticOrder implements Resource {
   const factory DiagnosticOrder({
+    @JsonKey(defaultValue: 'DiagnosticOrder') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -205,18 +212,18 @@ abstract class DiagnosticOrder with _$DiagnosticOrder implements Resource {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference subject,
     Reference orderer,
-    Identifier identifier,
+    List<Identifier> identifier,
     Reference encounter,
-    CodeableConcept reason,
-    Reference supportingInformation,
-    Reference specimen,
+    List<CodeableConcept> reason,
+    List<Reference> supportingInformation,
+    List<Reference> specimen,
     @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
         DiagnosticOrderStatus status,
     @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
         DiagnosticOrderPriority priority,
-    DiagnosticOrderEvent event,
-    DiagnosticOrderItem item,
-    Annotation note,
+    List<DiagnosticOrderEvent> event,
+    List<DiagnosticOrderItem> item,
+    List<Annotation> note,
   }) = _DiagnosticOrder;
 
   factory DiagnosticOrder.fromJson(Map<String, dynamic> json) =>
@@ -240,7 +247,7 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     Coding bodySite,
     Coding laterality,
     FhirDateTime started,
-    ImagingStudyInstance instance,
+    List<ImagingStudyInstance> instance,
   }) = _ImagingStudySeries;
 
   factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
@@ -270,7 +277,7 @@ abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
     @JsonKey(required: true) @required Oid uid,
     FhirUri url,
     Reference imagingStudy,
-    @JsonKey(required: true) @required ImagingObjectSelectionSeries series,
+    @JsonKey(required: true) @required List<ImagingObjectSelectionSeries> series,
   }) = _ImagingObjectSelectionStudy;
 
   factory ImagingObjectSelectionStudy.fromJson(Map<String, dynamic> json) =>
@@ -315,7 +322,16 @@ abstract class ObservationComponent with _$ObservationComponent {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
-    Quantity valueX,
+    Quantity valueQuantity,
+    CodeableConcept valueCodeableConcept,
+    String valueString,
+    Range valueRange,
+    Ratio valueRatio,
+    SampledData valueSampledData,
+    Attachment valueAttachment,
+    Time valueTime,
+    FhirDateTime valueDateTime,
+    Period valuePeriod
     CodeableConcept dataAbsentReason,
     List<ObservationReferenceRange> referenceRange,
   }) = _ObservationComponent;
@@ -331,7 +347,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     Reference collector,
-    String comment,
+    List<String> comment,
     FhirDateTime collectedX,
     Quantity quantity,
     CodeableConcept method,
@@ -350,7 +366,7 @@ abstract class SpecimenTreatment with _$SpecimenTreatment {
     FhirExtension modifierExtension,
     String description,
     CodeableConcept procedure,
-    Reference additive,
+    List<Reference> additive,
   }) = _SpecimenTreatment;
 
   factory SpecimenTreatment.fromJson(Map<String, dynamic> json) =>
@@ -363,7 +379,7 @@ abstract class SpecimenContainer with _$SpecimenContainer {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     String description,
     CodeableConcept type,
     Quantity capacity,
@@ -400,7 +416,7 @@ abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
-    Reference specimen,
+    List<Reference> specimen,
     CodeableConcept bodySite,
     @JsonKey(unknownEnumValue: ItemStatus.unknown) ItemStatus status,
     List<DiagnosticOrderEvent> event,
@@ -421,7 +437,7 @@ abstract class ImagingStudyInstance with _$ImagingStudyInstance {
     @JsonKey(required: true) @required Oid sopClass,
     String type,
     String title,
-    Attachment content,
+    List<Attachment> content,
   }) = _ImagingStudyInstance;
 
   factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
@@ -437,7 +453,7 @@ abstract class ImagingObjectSelectionSeries
     FhirExtension modifierExtension,
     Oid uid,
     FhirUri url,
-    @JsonKey(required: true) @required ImagingObjectSelectionInstance instance,
+    @JsonKey(required: true) @required List<ImagingObjectSelectionInstance> instance,
   }) = _ImagingObjectSelectionSeries;
 
   factory ImagingObjectSelectionSeries.fromJson(Map<String, dynamic> json) =>
@@ -454,7 +470,7 @@ abstract class ImagingObjectSelectionInstance
     @JsonKey(required: true) @required Oid sopClass,
     @JsonKey(required: true) @required Oid uid,
     @JsonKey(required: true) @required FhirUri url,
-    ImagingObjectSelectionFrames frames,
+    List<ImagingObjectSelectionFrames> frames,
   }) = _ImagingObjectSelectionInstance;
 
   factory ImagingObjectSelectionInstance.fromJson(Map<String, dynamic> json) =>
@@ -468,7 +484,7 @@ abstract class ImagingObjectSelectionFrames
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExte,
-    @JsonKey(required: true) @required UnsignedInt frameNumbers,
+    @JsonKey(required: true) @required List<UnsignedInt> frameNumbers,
     @JsonKey(required: true) @required FhirUri url,
   }) = _ImagingObjectSelectionFrames;
 

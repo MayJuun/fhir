@@ -10,6 +10,7 @@ part 'general.g.dart';
 @freezed
 abstract class Condition with _$Condition implements Resource {
   const factory Condition({
+    @JsonKey(defaultValue: 'Condition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -18,7 +19,7 @@ abstract class Condition with _$Condition implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required Reference patient,
     Reference encounter,
     Reference asserter,
@@ -32,11 +33,20 @@ abstract class Condition with _$Condition implements Resource {
     @required
         ConditionVerificationStatus verificationStatus,
     CodeableConcept severity,
-    FhirDateTime onsetX,
-    FhirDateTime abatementX,
+    FhirDateTime onsetDateTime,
+    Quantity onsetQuantity,
+    Period onsetPeriod,
+    Range onsetRange,
+    String onsetString,
+    FhirDateTime abatementDateTime,
+    Quantity abatementQuantity,
+    Boolean abatementBoolean,
+    Period abatementPeriod,
+    Range abatementRange,
+    String abatementString,
     ConditionStage stage,
-    ConditionEvidence evidence,
-    CodeableConcept bodySite,
+    List<ConditionEvidence> evidence,
+    List<CodeableConcept> bodySite,
     String notes,
   }) = _Condition;
 
@@ -47,6 +57,7 @@ abstract class Condition with _$Condition implements Resource {
 @freezed
 abstract class DetectedIssue with _$DetectedIssue implements Resource {
   const factory DetectedIssue({
+    @JsonKey(defaultValue: 'DetectedIssue') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -59,13 +70,13 @@ abstract class DetectedIssue with _$DetectedIssue implements Resource {
     CodeableConcept category,
     @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
         DetectedIssueSeverity severity,
-    Reference implicated,
+    List<Reference> implicated,
     String detail,
     FhirDateTime date,
     Reference author,
     Identifier identifier,
     FhirUri reference,
-    DetectedIssueMitigation mitigation,
+    List<DetectedIssueMitigation> mitigation,
   }) = _DetectedIssue;
 
   factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
@@ -77,6 +88,7 @@ abstract class FamilyMemberHistory
     with _$FamilyMemberHistory
     implements Resource {
   const factory FamilyMemberHistory({
+    @JsonKey(defaultValue: 'FamilyMemberHistory') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -85,7 +97,7 @@ abstract class FamilyMemberHistory
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required Reference patient,
     FhirDateTime date,
     @JsonKey(
@@ -96,11 +108,19 @@ abstract class FamilyMemberHistory
     @JsonKey(required: true) @required CodeableConcept relationship,
     @JsonKey(unknownEnumValue: FamilyMemberHistoryGender.unknown)
         FamilyMemberHistoryGender gender,
-    Period bornX,
-    Quantity ageX,
-    Boolean deceasedX,
+    Period bornPeriod,
+    Date bornDate,
+    String bornString,
+    Quantity ageQuantity,
+    Range ageRange,
+    String ageString,
+    Boolean deceasedBoolean,
+    Quantity deceasedQuantity,
+    Range deceasedRange,
+    Date deceasedDate,
+    String deceasedString,
     Annotation note,
-    FamilyMemberHistoryCondition condition,
+    List<FamilyMemberHistoryCondition> condition,
   }) = _FamilyMemberHistory;
 
   factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
@@ -110,6 +130,7 @@ abstract class FamilyMemberHistory
 @freezed
 abstract class Procedure with _$Procedure implements Resource {
   const factory Procedure({
+    @JsonKey(defaultValue: 'Procedure') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -118,7 +139,7 @@ abstract class Procedure with _$Procedure implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required Reference subject,
     @JsonKey(required: true, unknownEnumValue: ProcedureStatus.unknown)
     @required
@@ -126,21 +147,23 @@ abstract class Procedure with _$Procedure implements Resource {
     CodeableConcept category,
     @JsonKey(required: true) @required CodeableConcept code,
     Boolean notPerformed,
-    CodeableConcept reasonNotPerformed,
-    CodeableConcept bodySite,
-    CodeableConcept reasonX,
-    ProcedurePerformer performer,
-    FhirDateTime performedX,
+    List<CodeableConcept> reasonNotPerformed,
+    List<CodeableConcept> bodySite,
+    CodeableConcept reasonCodeableConcept,
+    Reference reasonReference,
+    List<ProcedurePerformer> performer,
+    FhirDateTime performedDateTime,
+    Period performedPeriod,
     Reference encounter,
     Reference location,
     CodeableConcept outcome,
-    Reference report,
-    CodeableConcept complication,
-    CodeableConcept followUp,
+    List<Reference> report,
+    List<CodeableConcept> complication,
+    List<CodeableConcept> followUp,
     Reference request,
-    Annotation notes,
-    ProcedureFocalDevice focalDevice,
-    Reference used,
+    List<Annotation> notes,
+    List<ProcedureFocalDevice> focalDevice,
+    List<Reference> used,
   }) = _Procedure;
 
   factory Procedure.fromJson(Map<String, dynamic> json) =>
@@ -152,6 +175,7 @@ abstract class ClinicalImpression
     with _$ClinicalImpression
     implements Resource {
   const factory ClinicalImpression({
+    @JsonKey(defaultValue: 'ClinicalImpression') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -168,17 +192,18 @@ abstract class ClinicalImpression
     FhirDateTime date,
     String description,
     Reference previous,
-    Reference problem,
-    CodeableConcept triggerX,
-    ClinicalImpressionInvestigations investigations,
+    List<Reference> problem,
+    CodeableConcept triggerCodeableConcept,
+    Reference triggerReference,
+    List<ClinicalImpressionInvestigations> investigations,
     FhirUri protocol,
     String summary,
-    ClinicalImpressionFinding finding,
-    CodeableConcept resolved,
-    ClinicalImpressionRuledOut ruledOut,
+    List<ClinicalImpressionFinding> finding,
+    List<CodeableConcept> resolved,
+    List<ClinicalImpressionRuledOut> ruledOut,
     String prognosis,
-    Reference plan,
-    Reference action,
+    List<Reference> plan,
+    List<Reference> action,
   }) = _ClinicalImpression;
 
   factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
@@ -188,6 +213,7 @@ abstract class ClinicalImpression
 @freezed
 abstract class RiskAssessment with _$RiskAssessment implements Resource {
   const factory RiskAssessment({
+    @JsonKey(defaultValue: 'RiskAssessment') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -203,8 +229,8 @@ abstract class RiskAssessment with _$RiskAssessment implements Resource {
     Reference performer,
     Identifier identifier,
     CodeableConcept method,
-    Reference basis,
-    RiskAssessmentPrediction prediction,
+    List<Reference> basis,
+    List<RiskAssessmentPrediction> prediction,
     String mitigation,
   }) = _RiskAssessment;
 
@@ -217,6 +243,7 @@ abstract class AllergyIntolerance
     with _$AllergyIntolerance
     implements Resource {
   const factory AllergyIntolerance({
+    @JsonKey(defaultValue: 'AllergyIntolerance') String resourcetype,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -225,7 +252,7 @@ abstract class AllergyIntolerance
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     FhirDateTime onset,
     FhirDateTime recordedDate,
     Reference recorder,
@@ -242,7 +269,7 @@ abstract class AllergyIntolerance
         AllergyIntoleranceCategory category,
     FhirDateTime lastOccurence,
     Annotation note,
-    AllergyIntoleranceReaction reaction,
+    List<AllergyIntoleranceReaction> reaction,
   }) = _AllergyIntolerance;
 
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
@@ -256,7 +283,7 @@ abstract class ConditionStage with _$ConditionStage {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     CodeableConcept summary,
-    Reference assessment,
+    List<Reference> assessment,
   }) = _ConditionStage;
 
   factory ConditionStage.fromJson(Map<String, dynamic> json) =>
@@ -270,7 +297,7 @@ abstract class ConditionEvidence with _$ConditionEvidence {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     CodeableConcept code,
-    Reference detail,
+    List<Reference> detail,
   }) = _ConditionEvidence;
 
   factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
@@ -301,7 +328,10 @@ abstract class FamilyMemberHistoryCondition
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
     CodeableConcept outcome,
-    Quantity onsetX,
+    Quantity onsetQuantity,
+    Range onsetRange,
+    Period onsetPeriod,
+    String onsetString,
     Annotation note,
   }) = _FamilyMemberHistoryCondition;
 
@@ -345,7 +375,7 @@ abstract class ClinicalImpressionInvestigations
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
-    Reference item,
+    List<Reference> item,
   }) = _ClinicalImpressionInvestigations;
 
   factory ClinicalImpressionInvestigations.fromJson(
@@ -407,7 +437,7 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     CodeableConcept substance,
     @JsonKey(unknownEnumValue: ReactionCertainty.unknown)
         ReactionCertainty certainty,
-    @JsonKey(required: true) @required CodeableConcept manifestation,
+    @JsonKey(required: true) @required List<CodeableConcept> manifestation,
     String description,
     FhirDateTime onset,
     @JsonKey(unknownEnumValue: ReactionSeverity.unknown)

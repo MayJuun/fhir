@@ -12,6 +12,7 @@ abstract class ImmunizationRecommendation
     with _$ImmunizationRecommendation
     implements Resource {
   const factory ImmunizationRecommendation({
+    @JsonKey(defaultValue: 'ImmunizationRecommendation') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -20,11 +21,11 @@ abstract class ImmunizationRecommendation
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required Reference patient,
     @JsonKey(required: true)
     @required
-        ImmunizationRecommendationRecommendation recommendation,
+        List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
 
   factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
@@ -36,6 +37,7 @@ abstract class MedicationDispense
     with _$MedicationDispense
     implements Resource {
   const factory MedicationDispense({
+    @JsonKey(defaultValue: 'MedicationDispense') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -49,17 +51,18 @@ abstract class MedicationDispense
         MedicationDispenseStatus status,
     Reference patient,
     Reference dispenser,
-    Reference authorizingPrescription,
+    List<Reference> authorizingPrescription,
     CodeableConcept type,
     Quantity quantity,
     Quantity daysSupply,
-    @JsonKey(required: true) @required CodeableConcept medicationX,
+    CodeableConcept medicationCodeableConcept,
+    Reference medicationReference,
     FhirDateTime whenPrepared,
     FhirDateTime whenHandedOver,
     Reference destination,
-    Reference receiver,
+    List<Reference> receiver,
     String note,
-    MedicationDispenseDosageInstruction dosageInstruction,
+    List<MedicationDispenseDosageInstruction> dosageInstruction,
     MedicationDispenseSubstitution substitution,
   }) = _MedicationDispense;
 
@@ -72,6 +75,7 @@ abstract class MedicationStatement
     with _$MedicationStatement
     implements Resource {
   const factory MedicationStatement({
+    @JsonKey(defaultValue: 'MedicationStatement') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -80,7 +84,7 @@ abstract class MedicationStatement
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required Reference patient,
     Reference informationSource,
     FhirDateTime dateAsserted,
@@ -89,13 +93,16 @@ abstract class MedicationStatement
     @required
         MedicationStatementStatus status,
     Boolean wasNotTaken,
-    CodeableConcept reasonNotTaken,
-    CodeableConcept reasonForUseX,
-    FhirDateTime effectiveX,
+    List<CodeableConcept> reasonNotTaken,
+    CodeableConcept reasonForUseCodeableConcept,
+    Reference reasonForUseReference,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
     String note,
-    Reference supportingInformation,
-    @JsonKey(required: true) @required CodeableConcept medicationX,
-    MedicationStatementDosage dosage,
+    List<Reference> supportingInformation,
+    CodeableConcept medicationCodeableConcept,
+    Reference medicationReference,
+    List<MedicationStatementDosage> dosage,
   }) = _MedicationStatement;
 
   factory MedicationStatement.fromJson(Map<String, dynamic> json) =>
@@ -105,6 +112,7 @@ abstract class MedicationStatement
 @freezed
 abstract class Immunization with _$Immunization implements Resource {
   const factory Immunization({
+    @JsonKey(defaultValue: 'Immunization') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -132,10 +140,10 @@ abstract class Immunization with _$Immunization implements Resource {
     CodeableConcept site,
     CodeableConcept route,
     Quantity doseQuantity,
-    Annotation note,
+    List<Annotation> note,
     ImmunizationExplanation explanation,
-    ImmunizationReaction reaction,
-    ImmunizationVaccinationProtocol vaccinationProtocol,
+    List<ImmunizationReaction> reaction,
+    List<ImmunizationVaccinationProtocol> vaccinationProtocol,
   }) = _Immunization;
 
   factory Immunization.fromJson(Map<String, dynamic> json) =>
@@ -145,6 +153,7 @@ abstract class Immunization with _$Immunization implements Resource {
 @freezed
 abstract class Medication with _$Medication implements Resource {
   const factory Medication({
+    @JsonKey(defaultValue: 'Medication') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -169,7 +178,8 @@ abstract class MedicationAdministration
     with _$MedicationAdministration
     implements Resource {
   const factory MedicationAdministration({
-    Id id,
+    @JsonKey(defaultValue: 'MedicationAdministration') Sting resourceType,
+        Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
@@ -177,7 +187,7 @@ abstract class MedicationAdministration
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(
         required: true,
         unknownEnumValue: MedicationAdministrationStatus.unknown)
@@ -188,11 +198,13 @@ abstract class MedicationAdministration
     Reference encounter,
     Reference prescription,
     Boolean wasNotGiven,
-    CodeableConcept reasonNotGiven,
-    CodeableConcept reasonGiven,
-    @JsonKey(required: true) @required FhirDateTime effectiveTimeX,
-    @JsonKey(required: true) @required CodeableConcept medicationX,
-    Reference device,
+    List<CodeableConcept> reasonNotGiven,
+    List<CodeableConcept> reasonGiven,
+    FhirDateTime effectiveTimeDateTime,
+    Period effectiveTimePeriod,
+    CodeableConcept medicationCodeableConcept,
+    Reference medicationReference,
+    List<Reference> device,
     String note,
     MedicationAdministrationDosage dosage,
   }) = _MedicationAdministration;
@@ -204,6 +216,7 @@ abstract class MedicationAdministration
 @freezed
 abstract class MedicationOrder with _$MedicationOrder implements Resource {
   const factory MedicationOrder({
+    @JsonKey(defaultValue: 'MedicationOrder') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -212,7 +225,7 @@ abstract class MedicationOrder with _$MedicationOrder implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     FhirDateTime dateWritten,
     @JsonKey(unknownEnumValue: MedicationOrderStatus.unknown)
         MedicationOrderStatus status,
@@ -221,10 +234,12 @@ abstract class MedicationOrder with _$MedicationOrder implements Resource {
     Reference patient,
     Reference prescriber,
     Reference encounter,
-    CodeableConcept reasonX,
+    CodeableConcept reasonCodeableConcept,
+    Reference reasonReference,
     String note,
-    @JsonKey(required: true) @required CodeableConcept medicationX,
-    MedicationOrderDosageInstruction dosageInstruction,
+    CodeableConcept medicationCodeableConcept,
+    Reference medicationReference,
+    List<MedicationOrderDosageInstruction> dosageInstruction,
     MedicationOrderDispenseRequest dispenseRequest,
     MedicationOrderSubstitution substitution,
     Reference priorPrescription,
@@ -245,10 +260,10 @@ abstract class ImmunizationRecommendationRecommendation
     @JsonKey(required: true) @required CodeableConcept vaccineCode,
     PositiveInt doseNumber,
     @JsonKey(required: true) @required CodeableConcept forecastStatus,
-    ImmunizationRecommendationDateCriterion dateCriterion,
+    List<ImmunizationRecommendationDateCriterion> dateCriterion,
     ImmunizationRecommendationProtocol protocol,
-    Reference supportingImmunization,
-    Reference supportingPatientInfor,
+    List<Reference> supportingImmunization,
+    List<Reference> supportingPatientInfor,
   }) = _ImmunizationRecommendationRecommendation;
 
   factory ImmunizationRecommendationRecommendation.fromJson(
@@ -266,12 +281,16 @@ abstract class MedicationDispenseDosageInstruction
     String text,
     CodeableConcept additionalInstructions,
     Timing timing,
-    Boolean asNeededX,
-    CodeableConcept siteX,
+    Boolean asNeededBoolean,
+    CodeableConcept asNeededCodeableConcept,
+    CodeableConcept siteCodeableConcept,
+    Reference siteReference,
     CodeableConcept route,
     CodeableConcept method,
-    Range doseX,
-    Ratio rateX,
+    Range doseRange,
+    Quantity doseQuantity,
+    Ratio rateRatio,
+    Range rateRange,
     Ratio maxDosePerPeriod,
   }) = _MedicationDispenseDosageInstruction;
 
@@ -288,8 +307,8 @@ abstract class MedicationDispenseSubstitution
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept type,
-    CodeableConcept reason,
-    Reference responsibleParty,
+    List<CodeableConcept> reason,
+    List<Reference> responsibleParty,
   }) = _MedicationDispenseSubstitution;
 
   factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
@@ -304,12 +323,16 @@ abstract class MedicationStatementDosage with _$MedicationStatementDosage {
     FhirExtension modifierExtension,
     String text,
     Timing timing,
-    Boolean asNeededX,
-    CodeableConcept siteX,
+    Boolean asNeededBoolean,
+    CodeableConcept asNeededCodeableConcept,
+    CodeableConcept siteCodeableConcept,
+    Reference siteReference,
     CodeableConcept route,
     CodeableConcept method,
-    Quantity quantityX,
-    Ratio rateX,
+    Quantity quantityQuantity,
+    Range quantityRange,
+    Ratio rateRatio,
+    Range rateRange,
     Ratio maxDosePerPeriod,
   }) = _MedicationStatementDosage;
 
@@ -323,8 +346,8 @@ abstract class ImmunizationExplanation with _$ImmunizationExplanation {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    CodeableConcept reason,
-    CodeableConcept reasonNotGiven,
+    List<CodeableConcept> reason,
+    List<CodeableConcept> reasonNotGiven,
   }) = _ImmunizationExplanation;
 
   factory ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
@@ -358,7 +381,7 @@ abstract class ImmunizationVaccinationProtocol
     Reference authority,
     String series,
     PositiveInt seriesDoses,
-    @JsonKey(required: true) @required CodeableConcept targetDisease,
+    List<CodeableConcept> targetDisease,
     @JsonKey(required: true) @required CodeableConcept doseStatus,
     CodeableConcept doseStatusReason,
   }) = _ImmunizationVaccinationProtocol;
@@ -374,8 +397,8 @@ abstract class MedicationProduct with _$MedicationProduct {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     CodeableConcept form,
-    MedicationIngredient ingredient,
-    MedicationBatch batch,
+    List<MedicationIngredient> ingredient,
+    List<MedicationBatch> batch,
   }) = _MedicationProduct;
 
   factory MedicationProduct.fromJson(Map<String, dynamic> json) =>
@@ -389,7 +412,7 @@ abstract class MedicationPackage with _$MedicationPackage {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     CodeableConcept container,
-    MedicationContent content,
+    List<MedicationContent> content,
   }) = _MedicationPackage;
 
   factory MedicationPackage.fromJson(Map<String, dynamic> json) =>
@@ -404,11 +427,13 @@ abstract class MedicationAdministrationDosage
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     String text,
-    CodeableConcept siteX,
+    CodeableConcept siteCodeableConcept,
+    Reference siteReference,
     CodeableConcept route,
     CodeableConcept method,
     Quantity quantity,
-    Ratio rateX,
+    Ratio rateRatio,
+    Range rateRange,
   }) = _MedicationAdministrationDosage;
 
   factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
@@ -425,12 +450,16 @@ abstract class MedicationOrderDosageInstruction
     String text,
     CodeableConcept additionalInstructions,
     Timing timing,
-    Boolean asNeededX,
-    CodeableConcept siteX,
+    Boolean asNeededBoolean,
+    CodeableConcept asNeededCodeableConcept,
+    CodeableConcept siteCodeableConcept,
+    Reference siteReference,
     CodeableConcept route,
     CodeableConcept method,
-    Range doseX,
-    Ratio rateX,
+    Range doseRange,
+    Quantity doseQuantity,
+    Ratio rateRatio,
+    Range rateRange,
     Ratio maxDosePerPeriod,
   }) = _MedicationOrderDosageInstruction;
 
