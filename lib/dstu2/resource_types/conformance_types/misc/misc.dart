@@ -12,6 +12,7 @@ abstract class ImplementationGuide
     with _$ImplementationGuide
     implements Resource {
   const factory ImplementationGuide({
+    @JsonKey(defaultValue: 'ImplementationGuide') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -29,16 +30,16 @@ abstract class ImplementationGuide
         ImplementationGuideStatus status,
     Boolean experimental,
     String publisher,
-    ImplementationGuideContact contact,
+    List<ImplementationGuideContact> contact,
     FhirDateTime date,
     String description,
-    CodeableConcept useContext,
+    List<CodeableConcept> useContext,
     String copyright,
     Id fhirVersion,
-    ImplementationGuideDependency dependency,
-    @JsonKey(required: true) @required ImplementationGuidePackage package,
-    ImplementationGuideGlobal global,
-    FhirUri binary,
+    List<ImplementationGuideDependency> dependency,
+    @JsonKey(required: true) @required List<ImplementationGuidePackage> package,
+    List<ImplementationGuideGlobal> global,
+    List<FhirUri> binary,
     @JsonKey(required: true) @required ImplementationGuidePage page,
   }) = _ImplementationGuide;
 
@@ -53,7 +54,7 @@ abstract class ImplementationGuideContact with _$ImplementationGuideContact {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     String name,
-    ContactPoint telecom,
+    List<ContactPoint> telecom,
   }) = _ImplementationGuideContact;
 
   factory ImplementationGuideContact.fromJson(Map<String, dynamic> json) =>
@@ -85,7 +86,7 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     String description,
-    @JsonKey(required: true) @required ImplementationGuideResource resource,
+    @JsonKey(required: true) @required List<ImplementationGuideResource> resource,
   }) = _ImplementationGuidePackage;
 
   factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
@@ -117,8 +118,8 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
     @JsonKey(required: true, unknownEnumValue: PageKind.unknown)
     @required
         PageKind kind,
-    Code type,
-    String package,
+    List<Code> type,
+    List<String> package,
     Code format,
     List<ImplementationGuidePage> page,
   }) = _ImplementationGuidePage;
@@ -150,6 +151,7 @@ abstract class ImplementationGuideResource with _$ImplementationGuideResource {
 @freezed
 abstract class TestScript with _$TestScript implements Resource {
   const factory TestScript({
+    @JsonKey(defaultValue: 'TestScript') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -167,19 +169,19 @@ abstract class TestScript with _$TestScript implements Resource {
     Identifier identifier,
     Boolean experimental,
     String publisher,
-    TestScriptContact contact,
+    List<TestScriptContact> contact,
     FhirDateTime date,
     String description,
-    CodeableConcept useContext,
+    List<CodeableConcept> useContext,
     String requirements,
     String copyright,
     TestScriptMetadata metadata,
     Boolean multiserver,
-    TestScriptFixture fixture,
-    Reference profile,
-    TestScriptVariable variable,
+    List<TestScriptFixture> fixture,
+    List<Reference> profile,
+    List<TestScriptVariable> variable,
     TestScriptSetup setup,
-    TestScriptTest test,
+    List<TestScriptTest> test,
     TestScriptTeardown teardown,
   }) = _TestScript;
 
@@ -194,7 +196,7 @@ abstract class TestScriptContact with _$TestScriptContact {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     String name,
-    ContactPoint telecom,
+    List<ContactPoint> telecom,
   }) = _TestScriptContact;
 
   factory TestScriptContact.fromJson(Map<String, dynamic> json) =>
@@ -207,7 +209,7 @@ abstract class TestScriptMetadata with _$TestScriptMetadata {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    TestScriptLink link,
+    List<TestScriptLink> link,
     @JsonKey(required: true) @required TestScriptCapability capability,
   }) = _TestScriptMetadata;
 
@@ -239,7 +241,7 @@ abstract class TestScriptCapability with _$TestScriptCapability {
     Boolean validated,
     String description,
     Integer destination,
-    FhirUri link,
+    List<FhirUri> link,
     @JsonKey(required: true) @required Reference conformance,
   }) = _TestScriptCapability;
 
@@ -322,7 +324,7 @@ abstract class ActionOperation with _$ActionOperation {
     Integer destination,
     Boolean encodeRequestUrl,
     String params,
-    TestScriptRequestHeader requestHeader,
+    List<TestScriptRequestHeader> requestHeader,
     Id responseId,
     Id sourceId,
     Id targetId,

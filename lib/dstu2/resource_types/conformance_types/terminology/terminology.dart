@@ -10,6 +10,7 @@ part 'terminology.g.dart';
 @freezed
 abstract class ValueSet with _$ValueSet implements Resource {
   const factory ValueSet({
+    @JsonKey(defaultValue: 'ValueSet') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -27,11 +28,11 @@ abstract class ValueSet with _$ValueSet implements Resource {
         ValueSetStatus status,
     Boolean experimental,
     String publisher,
-    ValueSetContact contact,
+    List<ValueSetContact> contact,
     FhirDateTime date,
     Date lockedDate,
     String description,
-    CodeableConcept useContext,
+    List<CodeableConcept> useContext,
     Boolean immutable,
     String requirements,
     String copyright,
@@ -52,7 +53,7 @@ abstract class ValueSetContact with _$ValueSetContact {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     String name,
-    ContactPoint telecom,
+    List<ContactPoint> telecom,
   }) = _ValueSetContact;
 
   factory ValueSetContact.fromJson(Map<String, dynamic> json) =>
@@ -68,7 +69,7 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
     @JsonKey(required: true) @required FhirUri system,
     String version,
     Boolean caseSensitive,
-    @JsonKey(required: true) @required ValueSetConcept concept,
+    @JsonKey(required: true) @required List<ValueSetConcept> concept,
   }) = _ValueSetCodeSystem;
 
   factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
@@ -85,7 +86,7 @@ abstract class ValueSetConcept with _$ValueSetConcept {
     Boolean abstract,
     String display,
     String definition,
-    ValueSetDesignation designation,
+    List<ValueSetDesignation> designation,
     List<ValueSetConcept> concept,
   }) = _ValueSetConcept;
 
@@ -114,9 +115,9 @@ abstract class ValueSetCompose with _$ValueSetCompose {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    FhirUri import,
-    IncludeExclude include,
-    IncludeExclude exclude,
+    List<FhirUri> import,
+    List<IncludeExclude> include,
+    List<IncludeExclude> exclude,
   }) = _ValueSetCompose;
 
   factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
@@ -131,8 +132,8 @@ abstract class IncludeExclude with _$IncludeExclude {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri system,
     String version,
-    IncludeExcludeConcept concept,
-    IncludeExcludeFilter filter,
+    List<IncludeExcludeConcept> concept,
+    List<IncludeExcludeFilter> filter,
   }) = _IncludeExclude;
 
   factory IncludeExclude.fromJson(Map<String, dynamic> json) =>
@@ -229,6 +230,7 @@ abstract class ValueSetContains with _$ValueSetContains {
 @freezed
 abstract class NamingSystem with _$NamingSystem implements Resource {
   const factory NamingSystem({
+    @JsonKey(defaultValue: 'NamingSystem') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -245,14 +247,14 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
     @required
         NamingSystemKind kind,
     String publisher,
-    NamingSystemContact contact,
+    List<NamingSystemContact> contact,
     String responsible,
     @JsonKey(required: true) @required FhirDateTime date,
     CodeableConcept type,
     String description,
-    CodeableConcept useContext,
+    List<CodeableConcept> useContext,
     String usage,
-    @JsonKey(required: true) @required NamingSystemUniqueId uniqueId,
+    @JsonKey(required: true) @required List<NamingSystemUniqueId> uniqueId,
     Reference replacedBy,
   }) = _NamingSystem;
 
@@ -263,6 +265,7 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
 @freezed
 abstract class ConceptMap with _$ConceptMap implements Resource {
   const factory ConceptMap({
+    @JsonKey(defaultValue: 'ConceptMap') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -280,15 +283,17 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
         ConceptMapStatus status,
     Boolean experimental,
     String publisher,
-    ConceptMapContact contact,
+    List<ConceptMapContact> contact,
     FhirDateTime date,
     String description,
-    CodeableConcept useContext,
+    List<CodeableConcept> useContext,
     String requirements,
     String copyright,
-    @JsonKey(required: true) @required FhirUri sourceX,
-    @JsonKey(required: true) @required FhirUri targetX,
-    ConceptMapElement element,
+    FhirUri sourceUri,
+    Reference sourceReference,
+    FhirUri targetUri,
+    Reference targetReference,
+    List<ConceptMapElement> element,
   }) = _ConceptMap;
 
   factory ConceptMap.fromJson(Map<String, dynamic> json) =>
@@ -302,7 +307,7 @@ abstract class NamingSystemContact with _$NamingSystemContact {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     String name,
-    ContactPoint telecom,
+    List<ContactPoint> telecom,
   }) = _NamingSystemContact;
 
   factory NamingSystemContact.fromJson(Map<String, dynamic> json) =>
@@ -334,7 +339,7 @@ abstract class ConceptMapContact with _$ConceptMapContact {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     String name,
-    ContactPoint telecom,
+    List<ContactPoint> telecom,
   }) = _ConceptMapContact;
 
   factory ConceptMapContact.fromJson(Map<String, dynamic> json) =>
@@ -349,7 +354,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
     FhirExtension modifierExtension,
     FhirUri codeSystem,
     Code code,
-    ConceptMapTarget target,
+    List<ConceptMapTarget> target,
   }) = _ConceptMapElement;
 
   factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
@@ -368,7 +373,7 @@ abstract class ConceptMapTarget with _$ConceptMapTarget {
     @required
         TargetEquivalence equivalence,
     String comments,
-    ConceptMapDependsOn dependsOn,
+    List<ConceptMapDependsOn> dependsOn,
     List<ConceptMapDependsOn> product,
   }) = _ConceptMapTarget;
 
