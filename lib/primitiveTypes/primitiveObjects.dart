@@ -51,9 +51,9 @@ Either<PrimitiveFailure<String>, String> validateCode(String value) =>
         ? right(value)
         : left(PrimitiveFailure.invalidCode(failedValue: value));
 
-Either<PrimitiveFailure<String>, String> validateDate(String value) =>
+Either<PrimitiveFailure<String>, DateTime> validateDate(String value) =>
     isDate(value)
-        ? right(value)
+        ? right(DateTime.parse(value))
         : left(PrimitiveFailure.invalidDate(failedValue: value));
 
 Either<PrimitiveFailure<String>, DateTime> validateFhirDateTime(String value) =>

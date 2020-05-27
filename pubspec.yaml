@@ -13,7 +13,6 @@ dependencies:
   dartz: ^0.8.9
   string_validator: ^0.1.4
   freezed_annotation: ^0.7.1
-  
 
 dev_dependencies:
   json_serializable: ^3.3.0

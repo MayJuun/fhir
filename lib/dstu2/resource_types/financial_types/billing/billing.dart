@@ -10,6 +10,7 @@ part 'billing.g.dart';
 @freezed
 abstract class Account with _$Account implements Resource {
   const factory Account({
+    @JsonKey(defaultValue: 'Account') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -18,7 +19,7 @@ abstract class Account with _$Account implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     String name,
     CodeableConcept type,
     @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
@@ -38,6 +39,7 @@ abstract class Account with _$Account implements Resource {
 @freezed
 abstract class Claim with _$Claim implements Resource {
   const factory Claim({
+    @JsonKey(defaultValue: 'Claim') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -49,7 +51,7 @@ abstract class Claim with _$Claim implements Resource {
     @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
     @required
         ClaimType type,
-    Identifier identifier,
+    List<Identifier> identifier,
     Coding ruleset,
     Coding originalRuleset,
     FhirDateTime created,
@@ -66,17 +68,17 @@ abstract class Claim with _$Claim implements Resource {
     ClaimPayee payee,
     Reference referral,
     ClaimDiagnosis diagnosis,
-    Coding condition,
+    List<Coding> condition,
     @JsonKey(required: true) @required Reference patient,
-    ClaimCoverage coverage,
-    Coding exception,
+    List<ClaimCoverage> coverage,
+    List<Coding> exception,
     String school,
     Date accident,
     Coding accidentType,
-    Coding interventionException,
-    ClaimItem item,
-    Coding additionalMaterials,
-    ClaimMissingTeeth missingTeeth,
+    List<Coding> interventionException,
+    List<ClaimItem> item,
+    List<Coding> additionalMaterials,
+    List<ClaimMissingTeeth> missingTeeth,
   }) = _Claim;
 
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
@@ -123,7 +125,7 @@ abstract class ClaimCoverage with _$ClaimCoverage {
     @JsonKey(required: true) @required Reference coverage,
     String businessArrangement,
     @JsonKey(required: true) @required Coding relationship,
-    String preAuthRef,
+    List<String> preAuthRef,
     Reference claimResponse,
     Coding originalRuleset,
   }) = _ClaimCoverage;
@@ -141,7 +143,7 @@ abstract class ClaimItem with _$ClaimItem {
     @JsonKey(required: true) @required PositiveInt sequence,
     @JsonKey(required: true) @required Coding type,
     Reference provider,
-    PositiveInt diagnosisLinkId,
+    List<PositiveInt> diagnosisLinkId,
     @JsonKey(required: true) @required Coding service,
     Date serviceDate,
     Quantity quantity,
@@ -151,9 +153,9 @@ abstract class ClaimItem with _$ClaimItem {
     Quantity net,
     Coding udi,
     Coding bodySite,
-    Coding subSite,
-    Coding modifier,
-    ClaimDetail detail,
+    List<Coding> subSite,
+    List<Coding> modifier,
+    List<ClaimDetail> detail,
     ClaimProsthesis prosthesis,
   }) = _ClaimItem;
 
@@ -176,7 +178,7 @@ abstract class ClaimDetail with _$ClaimDetail {
     Decimal points,
     Quantity net,
     Coding udi,
-    ClaimSubDetail subDetail,
+    List<ClaimSubDetail> subDetail,
   }) = _ClaimDetail;
 
   factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
@@ -237,6 +239,7 @@ abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
 @freezed
 abstract class ClaimResponse with _$ClaimResponse implements Resource {
   const factory ClaimResponse({
+    @JsonKey(defaultValue: 'ClaimResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -245,7 +248,7 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Reference request,
     Coding ruleset,
     Coding originalRuleset,
@@ -257,9 +260,9 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
         ClaimResponseOutcome outcome,
     String disposition,
     Coding payeeType,
-    ClaimResponseItem item,
-    ClaimResponseAddItem addItem,
-    ClaimResponseError error,
+    List<ClaimResponseItem> item,
+    List<ClaimResponseAddItem> addItem,
+    List<ClaimResponseError> error,
     Quantity totalCost,
     Quantity unallocDeductable,
     Quantity totalBenefit,
@@ -270,8 +273,8 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
     Identifier paymentRef,
     Coding reserved,
     Coding form,
-    ClaimResponseNote note,
-    ClaimResponseCoverage coverage,
+    List<ClaimResponseNote> note,
+    List<ClaimResponseCoverage> coverage,
   }) = _ClaimResponse;
 
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
@@ -285,9 +288,9 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequenceLinkId,
-    PositiveInt noteNumber,
-    ClaimResponseAdjudication adjudication,
-    ItemDetail detail,
+    List<PositiveInt> noteNumber,
+    List<ClaimResponseAdjudication> adjudication,
+    List<ItemDetail> detail,
   }) = _ClaimResponseItem;
 
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -316,8 +319,8 @@ abstract class ItemDetail with _$ItemDetail {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequenceLinkId,
-    ClaimResponseAdjudication adjudication,
-    ClaimResponseSubDetail subDetail,
+    List<ClaimResponseAdjudication> adjudication,
+    List<ClaimResponseSubDetail> subDetail,
   }) = _ItemDetail;
 
   factory ItemDetail.fromJson(Map<String, dynamic> json) =>
@@ -331,7 +334,7 @@ abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequenceLinkId,
-    ClaimResponseAdjudication adjudication,
+    List<ClaimResponseAdjudication> adjudication,
   }) = _ClaimResponseSubDetail;
 
   factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
@@ -344,11 +347,11 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    PositiveInt sequenceLinkId,
+    List<PositiveInt> sequenceLinkId,
     @JsonKey(required: true) @required Coding service,
     Quantity fee,
-    PositiveInt noteNumberLinkId,
-    ClaimResponseAdjudication adjudication,
+    List<PositiveInt> noteNumberLinkId,
+    List<ClaimResponseAdjudication> adjudication,
     AddItemDetail detail,
   }) = _ClaimResponseAddItem;
 
@@ -364,7 +367,7 @@ abstract class AddItemDetail with _$AddItemDetail {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding service,
     Quantity fee,
-    ClaimResponseAdjudication adjudication,
+    List<ClaimResponseAdjudication> adjudication,
   }) = _AddItemDetail;
 
   factory AddItemDetail.fromJson(Map<String, dynamic> json) =>
@@ -413,7 +416,7 @@ abstract class ClaimResponseCoverage with _$ClaimResponseCoverage {
     @JsonKey(required: true) @required Reference coverage,
     String businessArrangement,
     @JsonKey(required: true) @required Coding relationship,
-    String preAuthRef,
+    List<String> preAuthRef,
     Reference claimResponse,
     Coding originalRuleset,
   }) = _ClaimResponseCoverage;

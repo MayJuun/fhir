@@ -1,8 +1,21 @@
-import 'dart:convert';
-import 'dart:io';
+void main() async { 
+  var y = r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$';
+  var yM = r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$';
+  var yMd = r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$';
+  var yMdutc = r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)Z$';
+  var yMdhms = r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\+|-)(0[0-9]|1[0-3]):([0-5][0-9]|14:00)$';
+  var date = '2015-02-07T13:28:17-09:00';
+  var date2 = '2017-01-01T00:00:00.000Z';
+  // print(DateFormat. DateTime.parse(date).toIso8601String());
+  print(DateTime.parse(date));
+  // print(hasMatch(y, date));
+  // print(hasMatch(yM, date));
+  // print(hasMatch(yMd, date));
+  // print(hasMatch(yMdutc, date2));
+  // print(hasMatch(yMdhms, date));
+}
 
-import 'package:fhir/fhir_r4.dart' as fhir_r4;
-import 'package:http/http.dart';
+bool hasMatch(String pattern, String input) => RegExp(pattern).hasMatch(input);
 
 // void main() async {
 //   var file = File('./test/r4/bundle_original.json');
@@ -11,18 +24,18 @@ import 'package:http/http.dart';
 //   await File('./test/r4/bundle_test.json').writeAsString(json.encode(newBundle.toJson()));
 // }
 
-void main() async {
-  var server = 'http://hapi.fhir.org/baseR4';
-  var headers = {'Content-type': 'application/json'};
+// void main() async {
+//   var server = 'http://hapi.fhir.org/baseR4';
+//   var headers = {'Content-type': 'application/json'};
 
-  for (var resource in resourceTypes) {
-    var response = await get('$server/$resource', headers: headers);
-    // await File('./test/r4/bundle_original.json')
-    //     .writeAsString(response.body.toString());
-    print(resource);
-    print(fhir_r4.Bundle.fromJson(jsonDecode(response.body)));
-  }
-}
+//   for (var resource in resourceTypes) {
+//     var response = await get('$server/$resource', headers: headers);
+//     // await File('./test/r4/bundle_original.json')
+//     //     .writeAsString(response.body.toString());
+//     print(resource);
+//     print(fhir_r4.Bundle.fromJson(jsonDecode(response.body)));
+//   }
+// }
 
 var resourceTypes = [
   'Account',
