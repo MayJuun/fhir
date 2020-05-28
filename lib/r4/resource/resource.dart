@@ -1,25 +1,8 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../fhir_r4.dart';
 
-part 'resource.freezed.dart';
 part 'resource.g.dart';
-
-@freezed
-abstract class DomainResource with _$DomainResource implements Resource {
-  const factory DomainResource({
-    @JsonKey(required: true) @required Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-  }) = _DomainResource;
-
-  factory DomainResource.fromJson(Map<String, dynamic> json) =>
-      _$DomainResourceFromJson(json);
-}
 
 @JsonSerializable()
 class Resource {

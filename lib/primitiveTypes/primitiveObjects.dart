@@ -57,9 +57,9 @@ Either<PrimitiveFailure<String>, DateTime> validateDate(String value) =>
         : left(PrimitiveFailure.invalidDate(failedValue: value));
 
 Either<PrimitiveFailure<String>, DateTime> validateFhirDateTime(String value) =>
-    isDate(value)
-        ? right(DateTime.parse(value))
-        : left(PrimitiveFailure.invalidFhirDateTime(failedValue: value));
+    isDate(value.toString())
+        ? right(DateTime.parse(value.toString()))
+        : left(PrimitiveFailure.invalidFhirDateTime(failedValue: value.toString()));
 
 Either<PrimitiveFailure<String>, double> validateDecimal(dynamic value) =>
     double.tryParse(value.toString()) != null

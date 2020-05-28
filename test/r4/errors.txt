@@ -1,0 +1,19 @@
+
+
+File: './test/r4/r4_examples/structuredefinition-example-composition.json'
+_profile:{extension: [{url: http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element, valueString: Composition.section:plan}]}:null:nullll
+
+File: './test/r4/r4_examples/compartmentdefinition.profile.json'
+extension:{url: http://hl7.org/fhir/StructureDefinition/structuredefinition-codegen-super, valueString: MetadataResource}:nulladataResource}]}:null
+
+File: './test/r4/r4_examples/bundle-search-warning.json'
+url:https://example.org/fhir/Observation?patient.identifier=http://example.com/fhir/identifier/mrn|123456:https://example.org/fhir/Observation?patient.identifier=http://example.com/fhir/identifier/mrn%7C123456
+
+File: './test/r4/r4_examples/coverageeligibilityresponse-example.json'
+system:http://www.BenefitsInc.com/fhir/coverageeligibilityresponse:http://www.benefitsinc.com/fhir/coverageeligibilityresponse
+
+File: './test/r4/r4_examples/chargeitemdefinition.profile.json'
+extension:{url: http://hl7.org/fhir/StructureDefinition/structuredefinition-codegen-super, valueString: MetadataResource}:nulladataResource}]}:null
+
+File: './test/r4/r4_examples/relatedperson-example-f002-ariadne.json'
+start:1975:_$InvalidDateTime<String>:1975
