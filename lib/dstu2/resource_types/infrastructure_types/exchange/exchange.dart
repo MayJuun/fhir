@@ -84,8 +84,9 @@ abstract class MessageHeader with _$MessageHeader implements Resource {
 }
 
 @freezed
-abstract class Parameters with _$Parameters {
+abstract class Parameters with _$Parameters implements Resource {
   const factory Parameters({
+    @JsonKey(defaultValue: 'Parameters') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

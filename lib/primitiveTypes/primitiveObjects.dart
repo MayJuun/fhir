@@ -64,7 +64,7 @@ Either<PrimitiveFailure<String>, DateTime> validateFhirDateTime(String value) =>
 Either<PrimitiveFailure<String>, double> validateDecimal(dynamic value) =>
     double.tryParse(value.toString()) != null
         ? right(double.parse(value.toString()))
-        : left(PrimitiveFailure.invalidDecimal(failedValue: value));
+        : left(PrimitiveFailure.invalidDecimal(failedValue: value.toString()));
 
 Either<PrimitiveFailure<String>, String> validateId(String value) =>
     hasMatch(r"""^[A-Za-z0-9\-\.]{1,64}$""", value)
@@ -78,8 +78,8 @@ Either<PrimitiveFailure<String>, DateTime> validateInstant(String value) =>
 
 Either<PrimitiveFailure<String>, int> validateInteger(dynamic value) =>
     int.tryParse(value.toString()) != null
-        ? right(int.parse(value))
-        : left(PrimitiveFailure.invalidInteger(failedValue: value));
+        ? right(int.parse(value.toString()))
+        : left(PrimitiveFailure.invalidInteger(failedValue: value.toString()));
 
 Either<PrimitiveFailure<String>, String> validateMarkdown(String value) =>
     hasMatch(r"""^[ \r\n\t\S]+$""", value)
@@ -96,8 +96,10 @@ Either<PrimitiveFailure<String>, int> validatePositiveInt(dynamic value) {
   return val != null
       ? val > 0
           ? right(val)
-          : left(PrimitiveFailure.invalidPositiveInt(failedValue: value))
-      : left(PrimitiveFailure.invalidPositiveInt(failedValue: value));
+          : left(PrimitiveFailure.invalidPositiveInt(
+              failedValue: value.toString()))
+      : left(
+          PrimitiveFailure.invalidPositiveInt(failedValue: value.toString()));
 }
 
 Either<PrimitiveFailure<String>, Duration> validateTime(String value) =>
@@ -111,10 +113,12 @@ Either<PrimitiveFailure<String>, Duration> validateTime(String value) =>
 Either<PrimitiveFailure<String>, int> validateUnsignedInt(dynamic value) {
   var val = int.tryParse(value.toString());
   return val != null
-      ? val > 0
+      ? val >= 0
           ? right(val)
-          : left(PrimitiveFailure.invalidUnsignedInt(failedValue: value))
-      : left(PrimitiveFailure.invalidUnsignedInt(failedValue: value));
+          : left(PrimitiveFailure.invalidUnsignedInt(
+              failedValue: value.toString()))
+      : left(
+          PrimitiveFailure.invalidUnsignedInt(failedValue: value.toString()));
 }
 
 Either<PrimitiveFailure<String>, Uri> validateFhirUri(String value) =>

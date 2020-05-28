@@ -16,3 +16,16 @@ enum GuidanceResponseStatus {
   @JsonValue('unknown')
   unknown,
 }
+
+enum ContributorType {
+  @JsonValue('author')
+  author,
+  @JsonValue('editor')
+  editor,
+  @JsonValue('reviewer')
+  reviewer,
+  @JsonValue('endorser')
+  endorser,
+  @JsonValue('unknown')
+  unknown,
+}

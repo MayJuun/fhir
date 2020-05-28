@@ -1,183 +1,54 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:string_validator/string_validator.dart';
-
 import '../../lib/fhir_r4.dart' as fhir_r4;
 
 void main() async {
   var dir = Directory('./test/r4/r4_examples');
-  for (var file in await dir.list().toList()) {
-    var contents = await File(file.path).readAsString();
-    var resource = fhir_r4.Resource.fromJson(json.decode(contents));
-    await File(file.path.replaceFirst('r4_examples', 'r4_tests'))
-        .writeAsString(json.encode(resource.toJson()));
-  }
+  var m = 0;
+  print(fhir_r4.FhirDateTime('2017-02-01T17:23:07Z'));
+  // for (var file in await dir.list().toList()) {
+  //   print('\n');
+  //   print(file);
+  //   m += 1;
+  //   if (m > 200) break;
+  //   var contents = await File(file.path).readAsString();
+  //   var resource = fhir_r4.Resource.fromJson(json.decode(contents));
+  //   // checkJsonEquality(json.decode(contents), resource.toJson());
+  //   checkJsonEquality(resource.toJson(), json.decode(contents));
+  // }
 }
 
-// void main() async {
-//   var server = 'http://hapi.fhir.org/baseR4';
-//   var headers = {'Content-type': 'application/json'};
-
-//   for (var resource in resourceTypes) {
-//     var response = await get('$server/$resource', headers: headers);
-//     // await File('./test/r4/bundle_original.json')
-//     //     .writeAsString(response.body.toString());
-//     print(resource);
-//     print(fhir_r4.Bundle.fromJson(jsonDecode(response.body)));
-//   }
-// }
-
-var resourceTypes = [
-  'Account',
-  'ActivityDefinition',
-  'AdverseEvent',
-  'AllergyIntolerance',
-  'Appointment',
-  'AppointmentResponse',
-  'AuditEvent',
-  'Basic',
-  'Binary',
-  'BiologicallyDerivedProduct',
-  'BodyStructure',
-  'Bundle',
-  'CapabilityStatement',
-  'CarePlan',
-  'CareTeam',
-  'CatalogEntry',
-  'ChargeItem',
-  'ChargeItemDefinition',
-  'Claim',
-  'ClaimResponse',
-  'ClinicalImpression',
-  'CodeSystem',
-  'Communication',
-  'CommunicationRequest',
-  'CompartmentDefinition',
-  'Composition',
-  'ConceptMap',
-  'Condition',
-  'Consent',
-  'Contract',
-  'Coverage',
-  'CoverageEligibilityRequest',
-  'CoverageEligibilityResponse',
-  'DetectedIssue',
-  'Device',
-  'DeviceDefinition',
-  'DeviceMetric',
-  'DeviceRequest',
-  'DeviceUseStatement',
-  'DiagnosticReport',
-  'DocumentManifest',
-  'DocumentReference',
-  'EffectEvidenceSynthesis',
-  'Encounter',
-  'Endpoint',
-  'EnrollmentRequest',
-  'EnrollmentResponse',
-  'EpisodeOfCare',
-  'EventDefinition',
-  'Evidence',
-  'EvidenceVariable',
-  'ExampleScenario',
-  'ExplanationOfBenefit',
-  'FamilyMemberHistory',
-  'Flag',
-  'Goal',
-  'GraphDefinition',
-  'Group',
-  'GuidanceResponse',
-  'HealthcareService',
-  'ImagingStudy',
-  'Immunization',
-  'ImmunizationEvaluation',
-  'ImmunizationRecommendation',
-  'ImplementationGuide',
-  'InsurancePlan',
-  'Invoice',
-  'Library',
-  'Linkage',
-  'List',
-  'Location',
-  'Measure',
-  'MeasureReport',
-  'Media',
-  'Medication',
-  'MedicationAdministration',
-  'MedicationDispense',
-  'MedicationKnowledge',
-  'MedicationRequest',
-  'MedicationStatement',
-  'MedicinalProduct',
-  'MedicinalProductAuthorization',
-  'MedicinalProductContraindication',
-  'MedicinalProductIndication',
-  'MedicinalProductIngredient',
-  'MedicinalProductInteraction',
-  'MedicinalProductManufactured',
-  'MedicinalProductPackaged',
-  'MedicinalProductPharmaceutical',
-  'MedicinalProductUndesirableEffect',
-  'MessageDefinition',
-  'MessageHeader',
-  'MolecularSequence',
-  'NamingSystem',
-  'NutritionOrder',
-  'Observation',
-  'ObservationDefinition',
-  'OperationDefinition',
-  'OperationOutcome',
-  'Organization',
-  'OrganizationAffiliation',
-  'Parameters',
-  'Patient',
-  'PaymentNotice',
-  'PaymentReconciliation',
-  'Person',
-  'PlanDefinition',
-  'Practitioner',
-  'PractitionerRole',
-  'Procedure',
-  'Provenance',
-  'Questionnaire',
-  'QuestionnaireResponse',
-  'RelatedPerson',
-  'RequestGroup',
-  'ResearchDefinition',
-  'ResearchElementDefinition',
-  'ResearchStudy',
-  'ResearchSubject',
-  'RiskAssessment',
-  'RiskEvidenceSynthesis',
-  'Schedule',
-  'SearchParameter',
-  'ServiceRequest',
-  'Slot',
-  'Specimen',
-  'SpecimenDefinition',
-  'StructureDefinition',
-  'StructureMap',
-  'Subscription',
-  'Substance',
-  'SubstanceNucleicAcid',
-  'SubstancePolymer',
-  'SubstanceProtein',
-  'SubstanceReferenceInformation',
-  'SubstanceSourceMaterial',
-  'SubstanceSpecification',
-  'SupplyDelivery',
-  'SupplyRequest',
-  'Task',
-  'TerminologyCapabilities',
-  'TestReport',
-  'TestScript',
-  'ValueSet',
-  'VerificationResult',
-  'VisionPrescription',
-  'MarketingStatus',
-  'Population',
-  'ProdCharacteristic',
-  'ProductShelfLife',
-  'SubstanceAmount',
-];
+void checkJsonEquality(
+    Map<String, dynamic> input, Map<String, dynamic> output) {
+  for (var k in input.keys) {
+    if (input[k].runtimeType.toString() ==
+        '_InternalLinkedHashMap<String, dynamic>') {
+      checkJsonEquality(input[k], output[k]);
+    } else if (input[k].runtimeType.toString() == 'List<dynamic>' ||
+        input[k].runtimeType.toString() == 'List<Map<String, dynamic>>') {
+      for (var j = 0; j < input[k].length; j++) {
+        if (input[k][j].runtimeType.toString() ==
+            '_InternalLinkedHashMap<String, dynamic>') {
+          checkJsonEquality(input[k][j], output[k][j]);
+        } else {
+          if (input[k][j] != output[k][j]) {
+            print('$k:${input[k][j]}:${output[k][j]}');
+          }
+        }
+      }
+    } else {
+      if (input[k].runtimeType.toString() == 'List<String>') {
+        for (var x = 0; x < input[k].length; x++) {
+          if (input[k][x] != output[k][x]) {
+            print('$k:${input[k][x]}:${output[k][x]}');
+          }
+        }
+      } else {
+        if (input[k] != output[k]) {
+          print('$k:${input[k]}:${output[k]}');
+        }
+      }
+    }
+  }
+}

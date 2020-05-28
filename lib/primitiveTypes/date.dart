@@ -53,9 +53,11 @@ class Date extends PrimitiveObject<DateTime> {
       case DateFormat.y:
         return '${value.year}';
       case DateFormat.ym:
-        return '${value.year}-${value.month}';
+        return '${value.year}-${value.month.toString().padLeft(2, '0')}';
       case DateFormat.ymd:
-        return '${value.year}-${value.month}-${value.day}';
+        return '${value.year}-'
+            '${value.month.toString().padLeft(2, '0')}-'
+            '${value.day.toString().padLeft(2, '0')}';
       case DateFormat.incorrect_format:
         return 'incorrect format';
     }

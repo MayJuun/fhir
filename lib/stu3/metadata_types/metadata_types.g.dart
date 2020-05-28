@@ -30,20 +30,23 @@ Map<String, dynamic> _$_$_ContactDetailToJson(_$_ContactDetail instance) {
   return val;
 }
 
-_$_Contributor _$_$_ContributorFromJson(Map<String, dynamic> json) {
-  return _$_Contributor(
-    type: _$enumDecodeNullable(_$ContributorTypeEnumMap, json['type'],
-        unknownValue: ContributorType.unknown),
-    name: json['name'] as String,
-    contact: (json['contact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+_$_RelatedArtifact _$_$_RelatedArtifactFromJson(Map<String, dynamic> json) {
+  return _$_RelatedArtifact(
+    type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type'],
+        unknownValue: RelatedArtifactType.unknown),
+    display: json['display'] as String,
+    citation: json['citation'] as String,
+    url: json['url'] as String,
+    document: json['document'] == null
+        ? null
+        : Attachment.fromJson(json['document'] as Map<String, dynamic>),
+    resource: json['resource'] == null
+        ? null
+        : Reference.fromJson(json['resource'] as Map<String, dynamic>),
   );
 }
 
-Map<String, dynamic> _$_$_ContributorToJson(_$_Contributor instance) {
+Map<String, dynamic> _$_$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -52,9 +55,12 @@ Map<String, dynamic> _$_$_ContributorToJson(_$_Contributor instance) {
     }
   }
 
-  writeNotNull('type', _$ContributorTypeEnumMap[instance.type]);
-  writeNotNull('name', instance.name);
-  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
+  writeNotNull('type', _$RelatedArtifactTypeEnumMap[instance.type]);
+  writeNotNull('display', instance.display);
+  writeNotNull('citation', instance.citation);
+  writeNotNull('url', instance.url);
+  writeNotNull('document', instance.document?.toJson());
+  writeNotNull('resource', instance.resource?.toJson());
   return val;
 }
 
@@ -88,48 +94,6 @@ T _$enumDecodeNullable<T>(
     return null;
   }
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$ContributorTypeEnumMap = {
-  ContributorType.author: 'author',
-  ContributorType.editor: 'editor',
-  ContributorType.reviewer: 'reviewer',
-  ContributorType.endorser: 'endorser',
-  ContributorType.unknown: 'unknown',
-};
-
-_$_RelatedArtifact _$_$_RelatedArtifactFromJson(Map<String, dynamic> json) {
-  return _$_RelatedArtifact(
-    type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type'],
-        unknownValue: RelatedArtifactType.unknown),
-    display: json['display'] as String,
-    citation: json['citation'] as String,
-    url: json['url'] as String,
-    document: json['document'] == null
-        ? null
-        : Attachment.fromJson(json['document'] as Map<String, dynamic>),
-    resource: json['resource'] == null
-        ? null
-        : Reference.fromJson(json['resource'] as Map<String, dynamic>),
-  );
-}
-
-Map<String, dynamic> _$_$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type', _$RelatedArtifactTypeEnumMap[instance.type]);
-  writeNotNull('display', instance.display);
-  writeNotNull('citation', instance.citation);
-  writeNotNull('url', instance.url);
-  writeNotNull('document', instance.document?.toJson());
-  writeNotNull('resource', instance.resource?.toJson());
-  return val;
 }
 
 const _$RelatedArtifactTypeEnumMap = {

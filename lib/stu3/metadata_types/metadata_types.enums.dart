@@ -1,18 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-enum ContributorType {
-  @JsonValue('author')
-  author,
-  @JsonValue('editor')
-  editor,
-  @JsonValue('reviewer')
-  reviewer,
-  @JsonValue('endorser')
-  endorser,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum RelatedArtifactType {
   @JsonValue('documentation')
   documentation,

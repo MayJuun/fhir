@@ -604,3 +604,273 @@ abstract class _GuidanceResponse implements GuidanceResponse {
   @override
   _$GuidanceResponseCopyWith<_GuidanceResponse> get copyWith;
 }
+
+Contributor _$ContributorFromJson(Map<String, dynamic> json) {
+  return _Contributor.fromJson(json);
+}
+
+class _$ContributorTearOff {
+  const _$ContributorTearOff();
+
+  _Contributor call(
+      {@JsonKey(defaultValue: 'Contributor')
+          String resourceType,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
+      @required
+      @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
+          ContributorType type,
+      @required
+      @JsonKey(required: true)
+          String name,
+      List<ContactDetail> contact}) {
+    return _Contributor(
+      resourceType: resourceType,
+      extension_: extension_,
+      type: type,
+      name: name,
+      contact: contact,
+    );
+  }
+}
+
+// ignore: unused_element
+const $Contributor = _$ContributorTearOff();
+
+mixin _$Contributor {
+  @JsonKey(defaultValue: 'Contributor')
+  String get resourceType;
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
+  ContributorType get type;
+  @JsonKey(required: true)
+  String get name;
+  List<ContactDetail> get contact;
+
+  Map<String, dynamic> toJson();
+  $ContributorCopyWith<Contributor> get copyWith;
+}
+
+abstract class $ContributorCopyWith<$Res> {
+  factory $ContributorCopyWith(
+          Contributor value, $Res Function(Contributor) then) =
+      _$ContributorCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(defaultValue: 'Contributor')
+          String resourceType,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
+      @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
+          ContributorType type,
+      @JsonKey(required: true)
+          String name,
+      List<ContactDetail> contact});
+
+  $FhirExtensionCopyWith<$Res> get extension_;
+}
+
+class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
+  _$ContributorCopyWithImpl(this._value, this._then);
+
+  final Contributor _value;
+  // ignore: unused_field
+  final $Res Function(Contributor) _then;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object extension_ = freezed,
+    Object type = freezed,
+    Object name = freezed,
+    Object contact = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      type: type == freezed ? _value.type : type as ContributorType,
+      name: name == freezed ? _value.name : name as String,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>,
+    ));
+  }
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_ {
+    if (_value.extension_ == null) {
+      return null;
+    }
+    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
+      return _then(_value.copyWith(extension_: value));
+    });
+  }
+}
+
+abstract class _$ContributorCopyWith<$Res>
+    implements $ContributorCopyWith<$Res> {
+  factory _$ContributorCopyWith(
+          _Contributor value, $Res Function(_Contributor) then) =
+      __$ContributorCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(defaultValue: 'Contributor')
+          String resourceType,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
+      @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
+          ContributorType type,
+      @JsonKey(required: true)
+          String name,
+      List<ContactDetail> contact});
+
+  @override
+  $FhirExtensionCopyWith<$Res> get extension_;
+}
+
+class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
+    implements _$ContributorCopyWith<$Res> {
+  __$ContributorCopyWithImpl(
+      _Contributor _value, $Res Function(_Contributor) _then)
+      : super(_value, (v) => _then(v as _Contributor));
+
+  @override
+  _Contributor get _value => super._value as _Contributor;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object extension_ = freezed,
+    Object type = freezed,
+    Object name = freezed,
+    Object contact = freezed,
+  }) {
+    return _then(_Contributor(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as FhirExtension,
+      type: type == freezed ? _value.type : type as ContributorType,
+      name: name == freezed ? _value.name : name as String,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_Contributor implements _Contributor {
+  const _$_Contributor(
+      {@JsonKey(defaultValue: 'Contributor')
+          this.resourceType,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      @required
+      @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
+          this.type,
+      @required
+      @JsonKey(required: true)
+          this.name,
+      this.contact})
+      : assert(type != null),
+        assert(name != null);
+
+  factory _$_Contributor.fromJson(Map<String, dynamic> json) =>
+      _$_$_ContributorFromJson(json);
+
+  @override
+  @JsonKey(defaultValue: 'Contributor')
+  final String resourceType;
+  @override
+  @JsonKey(name: 'extension')
+  final FhirExtension extension_;
+  @override
+  @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
+  final ContributorType type;
+  @override
+  @JsonKey(required: true)
+  final String name;
+  @override
+  final List<ContactDetail> contact;
+
+  @override
+  String toString() {
+    return 'Contributor(resourceType: $resourceType, extension_: $extension_, type: $type, name: $name, contact: $contact)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Contributor &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.contact, contact) ||
+                const DeepCollectionEquality().equals(other.contact, contact)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(contact);
+
+  @override
+  _$ContributorCopyWith<_Contributor> get copyWith =>
+      __$ContributorCopyWithImpl<_Contributor>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ContributorToJson(this);
+  }
+}
+
+abstract class _Contributor implements Contributor {
+  const factory _Contributor(
+      {@JsonKey(defaultValue: 'Contributor')
+          String resourceType,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
+      @required
+      @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
+          ContributorType type,
+      @required
+      @JsonKey(required: true)
+          String name,
+      List<ContactDetail> contact}) = _$_Contributor;
+
+  factory _Contributor.fromJson(Map<String, dynamic> json) =
+      _$_Contributor.fromJson;
+
+  @override
+  @JsonKey(defaultValue: 'Contributor')
+  String get resourceType;
+  @override
+  @JsonKey(name: 'extension')
+  FhirExtension get extension_;
+  @override
+  @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
+  ContributorType get type;
+  @override
+  @JsonKey(required: true)
+  String get name;
+  @override
+  List<ContactDetail> get contact;
+  @override
+  _$ContributorCopyWith<_Contributor> get copyWith;
+}

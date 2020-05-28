@@ -135,3 +135,46 @@ const _$GuidanceResponseStatusEnumMap = {
   GuidanceResponseStatus.entered_in_error: 'entered-in-error',
   GuidanceResponseStatus.unknown: 'unknown',
 };
+
+_$_Contributor _$_$_ContributorFromJson(Map<String, dynamic> json) {
+  $checkKeys(json, requiredKeys: const ['type', 'name']);
+  return _$_Contributor(
+    resourceType: json['resourceType'] as String ?? 'Contributor',
+    extension_: json['extension'] == null
+        ? null
+        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    type: _$enumDecodeNullable(_$ContributorTypeEnumMap, json['type'],
+        unknownValue: ContributorType.unknown),
+    name: json['name'] as String,
+    contact: (json['contact'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ContactDetail.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$_$_ContributorToJson(_$_Contributor instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull('type', _$ContributorTypeEnumMap[instance.type]);
+  writeNotNull('name', instance.name);
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
+  return val;
+}
+
+const _$ContributorTypeEnumMap = {
+  ContributorType.author: 'author',
+  ContributorType.editor: 'editor',
+  ContributorType.reviewer: 'reviewer',
+  ContributorType.endorser: 'endorser',
+  ContributorType.unknown: 'unknown',
+};

@@ -18,17 +18,6 @@ abstract class ContactDetail with _$ContactDetail {
 }
 
 @freezed
-abstract class Contributor with _$Contributor {
-  const factory Contributor({
-    @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
-    String name,
-    List<ContactDetail> contact,
-  }) = _Contributor;
-  factory Contributor.fromJson(Map<String, dynamic> json) =>
-      _$ContributorFromJson(json);
-}
-
-@freezed
 abstract class RelatedArtifact with _$RelatedArtifact {
   const factory RelatedArtifact({
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)

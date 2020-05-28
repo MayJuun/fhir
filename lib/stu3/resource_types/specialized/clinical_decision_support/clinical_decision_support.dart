@@ -32,3 +32,18 @@ abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
 }
+
+@freezed
+abstract class Contributor with _$Contributor implements Resource {
+  const factory Contributor({
+    @JsonKey(defaultValue: 'Contributor') String resourceType,
+    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
+    @required
+        ContributorType type,
+    @JsonKey(required: true) @required String name,
+    List<ContactDetail> contact,
+  }) = _Contributor;
+  factory Contributor.fromJson(Map<String, dynamic> json) =>
+      _$ContributorFromJson(json);
+}

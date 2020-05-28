@@ -25,7 +25,7 @@ abstract class DomainResource with _$DomainResource implements Resource {
 class Resource {
   dynamic toJson() => this.toJson();
 
-  static dynamic fromJson(Map<String, dynamic> json) {
+  static Resource fromJson(Map<String, dynamic> json) {
     switch (json['resourceType']) {
       case 'Account':
         return Account.fromJson(json);
@@ -319,16 +319,6 @@ class Resource {
         return VerificationResult.fromJson(json);
       case 'VisionPrescription':
         return VisionPrescription.fromJson(json);
-      case 'MarketingStatus':
-        return MarketingStatus.fromJson(json);
-      case 'Population':
-        return Population.fromJson(json);
-      case 'ProdCharacteristic':
-        return ProdCharacteristic.fromJson(json);
-      case 'ProductShelfLife':
-        return ProductShelfLife.fromJson(json);
-      case 'SubstanceAmount':
-        return SubstanceAmount.fromJson(json);
     }
     return null;
   }

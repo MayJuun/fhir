@@ -25,76 +25,10 @@ abstract class DomainResource with _$DomainResource implements Resource {
 class Resource {
   dynamic toJson() => this.toJson();
 
-  static dynamic fromJson(Map<String, dynamic> json) {
+  static Resource fromJson(Map<String, dynamic> json) {
     switch (json['resourceType']) {
-      case 'Extension':
-        return FhirExtension.fromJson(json);
-      case 'BackboneElement':
-        return BackboneElement.fromJson(json);
-      case 'Narrative':
-        return Narrative.fromJson(json);
-      case 'Annotation':
-        return Annotation.fromJson(json);
-      case 'Attachment':
-        return Attachment.fromJson(json);
-      case 'Identifier':
-        return Identifier.fromJson(json);
-      case 'CodeableConcept':
-        return CodeableConcept.fromJson(json);
-      case 'Coding':
-        return Coding.fromJson(json);
-      case 'Quantity':
-        return Quantity.fromJson(json);
-      case 'Duration':
-        return Duration.fromJson(json);
-      case 'Distance':
-        return Distance.fromJson(json);
-      case 'Count':
-        return Count.fromJson(json);
-      case 'Money':
-        return Money.fromJson(json);
-      case 'Age':
-        return Age.fromJson(json);
-      case 'Range':
-        return Range.fromJson(json);
-      case 'Period':
-        return Period.fromJson(json);
-      case 'Ratio':
-        return Ratio.fromJson(json);
-      case 'Reference':
-        return Reference.fromJson(json);
-      case 'SampledData':
-        return SampledData.fromJson(json);
-      case 'Signature':
-        return Signature.fromJson(json);
-      case 'HumanName':
-        return HumanName.fromJson(json);
-      case 'Address':
-        return Address.fromJson(json);
-      case 'ContactPoint':
-        return ContactPoint.fromJson(json);
-      case 'Timing':
-        return Timing.fromJson(json);
-      case 'Meta':
-        return Meta.fromJson(json);
-      case 'ElementDefinition':
-        return ElementDefinition.fromJson(json);
-      case 'ContactDetail':
-        return ContactDetail.fromJson(json);
       case 'Contributor':
         return Contributor.fromJson(json);
-      case 'Dosage':
-        return Dosage.fromJson(json);
-      case 'RelatedArtifact':
-        return RelatedArtifact.fromJson(json);
-      case 'UsageContext':
-        return UsageContext.fromJson(json);
-      case 'DataRequirement':
-        return DataRequirement.fromJson(json);
-      case 'ParameterDefinition':
-        return ParameterDefinition.fromJson(json);
-      case 'TriggerDefinition':
-        return TriggerDefinition.fromJson(json);
       case 'Account':
         return Account.fromJson(json);
       case 'ActivityDefinition':
